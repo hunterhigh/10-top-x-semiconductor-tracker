@@ -1,0 +1,315 @@
+{
+  "_comment": "Merged ticker reference for Serenity Tracker (price resolution + editorial). Keyed by the symbol Serenity uses. Price side: price_symbol (Yahoo-style; EODHD provider translates suffix) /exchange/currency/verified/note — only listed where it differs from the US default. Editorial side: company/industry/thesis_summary — folded into each per-stock JSON by build_db so render is self-contained. Anything not listed defaults to US (NASDAQ/NYSE, USD). build_db reads this file; meta.json is retired.",
+  "_default": {
+    "exchange": "US",
+    "currency": "USD",
+    "note": "unlisted symbols default to US"
+  },
+  "_aliases": {
+    "_comment": "variant cashtag -> canonical primary symbol. Applied in build_db BEFORE aggregation so the same company is one row. Counting merges; price still uses the canonical listing's currency.",
+    "SIVEF": "SIVE",
+    "SLOIF": "SOI",
+    "SOITEC": "SOI",
+    "LPKF": "LPK",
+    "HAMMOND": "HPS.A"
+  },
+  "_us_confirmed": "AXTI NVDA AAOI LITE COHR MRVL NBIS IREN CIFR TSM TSEM JBL POET MU AVGO AEHR AMD INTC SMCI MTSI OSS CRDO LASR ALAB FN AMKR were checked or are standard US listings (USD)",
+  "4092": {
+    "price_symbol": "4092.T",
+    "exchange": "Tokyo",
+    "currency": "JPY",
+    "verified": true,
+    "note": "Nippon Chemical Industrial (Tokyo). EODHD has no Tokyo coverage (4092.TSE 404) and akshare no Japan -> no price source; shown without price line.",
+    "no_price": true
+  },
+  "5210": {},
+  "6451": {
+    "price_symbol": "6451.TW",
+    "exchange": "Taiwan",
+    "currency": "TWD",
+    "verified": true,
+    "note": "Shunsin (Foxconn optical subsidiary) - exchange/code"
+  },
+  "AAOI": {
+    "company": "Applied Optoelectronics",
+    "industry": "Optical Modules"
+  },
+  "AEHR": {
+    "company": "Aehr Test Systems",
+    "industry": "Semiconductor Burn-in Test Equipment"
+  },
+  "AMD": {
+    "company": "AMD",
+    "industry": "GPU/AI Chips"
+  },
+  "AMZN": {
+    "company": "Amazon",
+    "industry": "Hyperscaler",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "ASST": {},
+  "AVAV": {},
+  "AVGO": {
+    "company": "Broadcom",
+    "industry": "AI ASIC/Networking Chips"
+  },
+  "AXTI": {
+    "company": "AXT Inc",
+    "industry": "InP Substrates",
+    "thesis_summary": "他看好 AXT 的磷化铟基板地位,称其为 CPO 产业链上游卡位,已有 500%+ 浮盈。"
+  },
+  "AYAR": {},
+  "COHR": {
+    "company": "Coherent",
+    "industry": "Optical Comms"
+  },
+  "COIN": {},
+  "CRCL": {
+    "company": "Circle"
+  },
+  "CVX": {},
+  "DUOL": {},
+  "EOPTOLINK": {},
+  "EWY": {
+    "company": "iShares MSCI South Korea ETF",
+    "exclude": true
+  },
+  "FN": {},
+  "GOOGL": {
+    "company": "Alphabet",
+    "industry": "Hyperscaler",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "HIMS": {
+    "company": "Hims & Hers"
+  },
+  "HOOD": {
+    "company": "Robinhood"
+  },
+  "HPS.A": {
+    "price_symbol": "HPS-A.TO",
+    "exchange": "Toronto TSX",
+    "currency": "CAD",
+    "verified": true,
+    "note": "Hammond Power Solutions, Class A; transformers. EODHD code (HPS-A.TO)"
+  },
+  "IBKR": {
+    "company": "Interactive Brokers"
+  },
+  "INFQ": {},
+  "INTC": {
+    "company": "Intel",
+    "industry": "CPU/Foundry/Glass Substrate"
+  },
+  "IQE": {
+    "price_symbol": "IQE.L",
+    "exchange": "London LSE",
+    "currency": "GBp",
+    "verified": true,
+    "note": "IQE plc; London prices in pence (GBp)",
+    "company": "IQE plc",
+    "industry": "Compound Semiconductors"
+  },
+  "IREN": {
+    "company": "IREN (Iris Energy)",
+    "industry": "Bitcoin Miner→AI Datacenter (Neocloud)"
+  },
+  "JBL": {
+    "company": "Jabil",
+    "industry": "Optical Module Manufacturing",
+    "thesis_summary": "他首次提及 JBL,把它归入\"超大规模厂商→光模块/收发器代工\"环节,称其为算力客户供应光收发器。"
+  },
+  "KOSPI": {},
+  "KRKNF": {},
+  "LANDMARK": {},
+  "LITE": {
+    "company": "Lumentum",
+    "industry": "Optical Comms/CPO",
+    "thesis_summary": "他视 Lumentum 为 CPO 战略受益者,认为已大幅上涨但仍有空间,是光通信主线标的。"
+  },
+  "LPK": {
+    "price_symbol": "LPK.DE",
+    "exchange": "Frankfurt Xetra",
+    "currency": "EUR",
+    "verified": true,
+    "note": "LPKF Laser & Electronics SE; LIDE glass-substrate. EODHD code (LPK.XETRA or LPK.F)"
+  },
+  "LPTH": {
+    "company": "LightPath Technologies",
+    "industry": "Infrared Optics/Lenses"
+  },
+  "LWLG": {},
+  "MA": {},
+  "META": {
+    "company": "Meta",
+    "industry": "Hyperscaler",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "MRVL": {
+    "company": "Marvell",
+    "industry": "AI Semis/CPO",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "MSFT": {
+    "company": "Microsoft",
+    "industry": "Hyperscaler",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "MSTR": {},
+  "MTSI": {
+    "company": "MACOM Technology",
+    "industry": "Optical Comms/CPO Components"
+  },
+  "MU": {
+    "company": "Micron",
+    "industry": "Memory/HBM"
+  },
+  "NBIS": {
+    "company": "Nebius",
+    "industry": "AI Cloud/GPU"
+  },
+  "NVDA": {
+    "company": "NVIDIA",
+    "industry": "AI Chips",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "ONET": {},
+  "OPTT": {},
+  "OSS": {
+    "company": "One Stop Systems",
+    "industry": "Edge AI Compute/GPU Systems"
+  },
+  "PLTR": {},
+  "POET": {
+    "company": "POET Technologies",
+    "industry": "Optical Engine Packaging",
+    "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。"
+  },
+  "PYPL": {},
+  "RDDT": {
+    "company": "Reddit"
+  },
+  "RIOT": {},
+  "RPI": {
+    "price_symbol": "RPI.L",
+    "exchange": "London LSE",
+    "currency": "GBp",
+    "verified": true,
+    "note": "Raspberry Pi Holdings plc; pence (GBp); his $280->$800 = 280p->800p. EODHD code (RPI.LSE)",
+    "company": "Raspberry Pi Holdings"
+  },
+  "RVI": {},
+  "SAMSUNG": {},
+  "SIVE": {
+    "price_symbol": "SIVE.ST",
+    "exchange": "Nasdaq Stockholm",
+    "currency": "SEK",
+    "verified": true,
+    "note": "Sivers Semiconductor; his $4->$71 is SEK; do NOT use US OTC SIVEF (USD)",
+    "company": "Sivers Semiconductor",
+    "industry": "AI Photonics/CPO Lasers",
+    "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。"
+  },
+  "SIVEF": {
+    "price_symbol": "SIVEF",
+    "exchange": "OTC US",
+    "currency": "USD",
+    "verified": true,
+    "note": "US OTC shadow of SIVE; aliased to SIVE for counting, kept here only as ref",
+    "company": "Sivers (US OTC)",
+    "industry": "—",
+    "thesis_summary": "他当天多次提及,延续既有关注。"
+  },
+  "SK HYNIX": {
+    "company": "SK Hynix",
+    "industry": "Memory/HBM (Korea)"
+  },
+  "SLOIF": {},
+  "SNAP": {
+    "company": "Snap"
+  },
+  "SNDK": {
+    "company": "SanDisk",
+    "industry": "Memory",
+    "thesis_summary": "他看好 SanDisk 的存储周期上行。"
+  },
+  "SOI": {
+    "price_symbol": "SOI.PA",
+    "exchange": "Euronext Paris",
+    "currency": "EUR",
+    "verified": true,
+    "note": "Soitec; SLOIF/SOITEC alias to this",
+    "company": "Soitec",
+    "industry": "SOI Wafers"
+  },
+  "SOITEC": {},
+  "SUMITOMO": {},
+  "TSEM": {
+    "company": "Tower Semiconductor",
+    "industry": "Semiconductor Foundry",
+    "thesis_summary": "他把 Tower 列为更高信念的代工标的。"
+  },
+  "TSLA": {
+    "company": "Tesla"
+  },
+  "TSM": {
+    "company": "TSMC",
+    "industry": "Wafer Foundry"
+  },
+  "V": {},
+  "VLN": {
+    "company": "Valens Semiconductor",
+    "industry": "High-Speed Connectivity Semis (Automotive A-PHY)"
+  },
+  "VPG": {
+    "company": "Vishay Precision Group",
+    "industry": "Precision Sensors/Foil Resistors"
+  },
+  "WIN_SEMI": {},
+  "XFAB": {
+    "price_symbol": "XFAB.PA",
+    "exchange": "Euronext Paris",
+    "currency": "EUR",
+    "verified": true,
+    "note": "X-FAB Silicon Foundries"
+  },
+  "XLE": {},
+  "XLU": {
+    "company": "Utilities Select Sector SPDR ETF",
+    "exclude": true
+  },
+  "CRDO": {
+    "company": "Credo Technology",
+    "industry": "High-Speed Optical Interconnect/AEC"
+  },
+  "SMCI": {
+    "company": "Super Micro",
+    "industry": "AI Servers"
+  },
+  "ALAB": {
+    "company": "Astera Labs",
+    "industry": "AI Interconnect Semis (PCIe/CXL)"
+  },
+  "CRWV": {
+    "company": "CoreWeave",
+    "industry": "GPU Cloud/Neocloud"
+  },
+  "CIFR": {
+    "company": "Cipher Mining",
+    "industry": "Bitcoin Miner/AI Datacenter"
+  },
+  "WULF": {
+    "company": "TeraWulf",
+    "industry": "Bitcoin Miner/AI Datacenter"
+  },
+  "ORCL": {
+    "company": "Oracle",
+    "industry": "Cloud/AI Cloud Infra (OCI)"
+  },
+  "AAPL": {
+    "company": "Apple"
+  },
+  "RKLB": {
+    "company": "Rocket Lab"
+  }
+}

@@ -1,0 +1,39 @@
+name: daily-prices
+on:
+  workflow_dispatch:
+
+jobs:
+  prices:
+    # Ticker-level, NOT per-blogger: data/db/stocks/*.json is shared across all
+    # 10 tracked bloggers (see build_db.py), and prices.py fetches once per
+    # ticker regardless of how many bloggers mention it. Do NOT matrix this by
+    # blogger — that would burn the EODHD free-tier daily call budget 10x over
+    # for symbols multiple trackers happen to cover in common.
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Update prices
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: python scripts/prices.py
+      - name: Verify data
+        run: python scripts/verify_data.py
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Daily prices $(date -u +%Y-%m-%d)"
+          git push

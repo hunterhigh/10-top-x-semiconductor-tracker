@@ -1,0 +1,95 @@
+name: hourly-sync
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-extract:
+    # One shard per tracked blogger, fully isolated (own state/raw/extracted
+    # files under data/bloggers/{id}/) — a failure or rate-limit on one
+    # account never blocks the other 9. Each shard uploads its output as an
+    # artifact rather than pushing directly, so 10 concurrent jobs never race
+    # on `git push`; the aggregate job below does the single combined commit.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        blogger:
+          - aleabitoreddit
+          - zephyr_z9
+          - jukan05
+          - jasonschips
+          - KawzInvests
+          - vikramskr
+          - semivision_tw
+          - damnang2
+          - futurist_lens
+          - michaelsikand
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Fetch new tweets
+        env:
+          TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
+        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }}
+      - name: Extract opinions (LLM, fixed to Opus)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d '7 days ago' +%Y-%m-%d)
+      - name: Upload blogger data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blogger-data-${{ matrix.blogger }}
+          path: data/bloggers/${{ matrix.blogger }}/
+          retention-days: 1
+
+  aggregate:
+    needs: fetch-extract
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Download all blogger artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: blogger-data-*
+          path: data/bloggers
+          merge-multiple: false
+      - name: Flatten artifact directories
+        # download-artifact with a pattern nests each artifact under its own
+        # name (data/bloggers/blogger-data-<id>/...); move contents back to
+        # data/bloggers/<id>/ to match what build_db.py expects.
+        run: |
+          cd data/bloggers
+          for d in blogger-data-*; do
+            id="${d#blogger-data-}"
+            mkdir -p "$id"
+            mv "$d"/* "$id"/ 2>/dev/null || true
+            rmdir "$d"
+          done
+          ls -la
+      - name: Rebuild shared stock database (all bloggers, no LLM)
+        run: python scripts/build_db.py
+      - name: Verify data
+        run: python scripts/verify_data.py
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Hourly sync $(date -u +%Y-%m-%dT%H:%M)"
+          git push

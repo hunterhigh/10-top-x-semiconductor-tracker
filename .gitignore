@@ -1,0 +1,23 @@
+# ===== Secrets / tokens — NEVER commit =====
+*.env
+.env
+secrets/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ===== IDE / OS =====
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== Logs / temp =====
+*.log
+*.tmp
+
+# ===== Generated HTML (reproducible: run render on db/ to regenerate) =====
+*-tracker-*.html
