@@ -53,6 +53,10 @@ jobs:
 
   aggregate:
     needs: fetch-extract
+    # Run even if one or more matrix legs failed (e.g. a bad handle) — the
+    # bloggers that DID succeed already paid for LLM extraction, so their
+    # artifacts must still get committed rather than silently discarded.
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

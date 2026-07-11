@@ -213,6 +213,8 @@ def fetch(username: str, backfill: bool) -> None:
     kind_counts = {}        # post / self_thread / reply tallies (this run)
     reached_known = False
     newest_id_this_run = None
+    had_error = False       # set on network/HTTP/API errors so a bad handle or bad
+                             # key doesn't silently look identical to "0 tweets, done"
 
     while True:
         page += 1
@@ -233,15 +235,18 @@ def fetch(username: str, backfill: bool) -> None:
                 r = s.get(f"{BASE_URL}/twitter/user/last_tweets", params=params, timeout=30)
             except requests.RequestException as e2:
                 log(f"  retry failed: {e2}; stopping (partial data preserved).")
+                had_error = True
                 break
 
         if r.status_code != 200:
             log(f"  HTTP {r.status_code} on page {page}: {r.text[:200]}")
+            had_error = True
             break
 
         payload = r.json()
         if payload.get("status") == "error":
             log(f"  API error: {payload.get('message') or payload.get('msg')}")
+            had_error = True
             break
 
         # The API nests results under "data" (data.tweets), though the docs show
@@ -324,6 +329,18 @@ def fetch(username: str, backfill: bool) -> None:
     log(f"  total in store     : {len(merged)}  -> {raw_path}")
     log(f"  newest id          : {state.get('newest_tweet_id')}")
     log("===================")
+
+    if had_error and not merged:
+        # A real failure (bad handle, bad key, API/network error) with ZERO usable
+        # tweets — fail loudly here instead of writing an empty raw_tweets.json and
+        # letting extract.py report a confusing unrelated-looking "no tweets" error
+        # one step later. A legitimate "this account just has 0 tweets in range" is
+        # NOT an error (had_error stays False in that case: see "0 tweets, done"
+        # above, which is a clean break, not an error path).
+        log(f"FAILING: no tweets were fetched for @{username} AND an error occurred "
+            f"above — check the HTTP status/API error logged during this run "
+            f"(401 = bad TWITTERAPI_KEY, 404 = handle not found, other = investigate).")
+        sys.exit(1)
 
 
 def main():
