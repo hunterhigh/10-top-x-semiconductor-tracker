@@ -170,7 +170,12 @@ Every input tweet_id MUST appear exactly once in results."""
 
 
 def build_system_prompt(handle: str, display_name: str) -> str:
-    return SYSTEM_PROMPT_TEMPLATE.format(handle=handle, display_name=display_name)
+    # NOTE: deliberately NOT using str.format() — the template embeds a literal
+    # JSON schema example full of {...} braces (the expected output format),
+    # which .format() would misinterpret as more placeholders and crash on
+    # (e.g. KeyError on the JSON's own "results" key). Plain .replace() only
+    # touches the two placeholders we actually inject.
+    return SYSTEM_PROMPT_TEMPLATE.replace('{handle}', handle).replace('{display_name}', display_name)
 
 
 def build_user_message(convo_tweets):
