@@ -59,8 +59,10 @@ def blogger_paths(username: str) -> tuple[Path, Path]:
     d = DATA_DIR / "bloggers" / username
     return d / "raw_tweets.json", d / "state.json"
 
-PAGE_SLEEP_SEC = 0.4          # be polite between pages
-MAX_PAGES_SAFETY = 2000       # hard stop so a bug can't loop forever (2000*20 = 40k tweets)
+PAGE_SLEEP_SEC = 5.5           # twitterapi.io free tier: max 1 request / 5s (QPS-limited); small margin added
+MAX_PAGES_SAFETY = 2000        # hard stop so a bug can't loop forever (2000*20 = 40k tweets)
+RATE_LIMIT_RETRIES = 4         # how many times to back off and retry a single 429 before giving up
+RATE_LIMIT_BACKOFF_SEC = 6     # base backoff; grows with attempt number
 APPROX_COST_PER_TWEET = 0.15 / 1000  # USD, for a rough running estimate only
 
 
@@ -105,18 +107,29 @@ def session_with_key(key: str) -> requests.Session:
 
 
 def get_user_id(s: requests.Session, username: str) -> str | None:
-    """Resolve screen name -> numeric user id (more stable/faster for the timeline)."""
-    try:
-        r = s.get(f"{BASE_URL}/twitter/user/info",
-                  params={"userName": username}, timeout=30)
-        if r.status_code == 200:
-            data = r.json()
-            d = data.get("data") or data
-            uid = d.get("id") or (d.get("user") or {}).get("id")
-            if uid:
-                return str(uid)
-    except requests.RequestException as e:
-        log(f"  (user id lookup failed, will fall back to userName: {e})")
+    """Resolve screen name -> numeric user id (more stable/faster for the timeline).
+    Retries on 429 (free-tier QPS limit) since this fires right before the main
+    pagination loop, where a prior request elsewhere could still be inside the
+    5s window."""
+    for attempt in range(1, RATE_LIMIT_RETRIES + 2):
+        try:
+            r = s.get(f"{BASE_URL}/twitter/user/info",
+                      params={"userName": username}, timeout=30)
+            if r.status_code == 429 and attempt <= RATE_LIMIT_RETRIES:
+                wait = RATE_LIMIT_BACKOFF_SEC * attempt
+                log(f"  user id lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
+                time.sleep(wait)
+                continue
+            if r.status_code == 200:
+                data = r.json()
+                d = data.get("data") or data
+                uid = d.get("id") or (d.get("user") or {}).get("id")
+                if uid:
+                    return str(uid)
+            break
+        except requests.RequestException as e:
+            log(f"  (user id lookup failed, will fall back to userName: {e})")
+            break
     return None
 
 
@@ -226,17 +239,27 @@ def fetch(username: str, backfill: bool) -> None:
         if cursor:
             params["cursor"] = cursor
 
-        try:
-            r = s.get(f"{BASE_URL}/twitter/user/last_tweets", params=params, timeout=30)
-        except requests.RequestException as e:
-            log(f"  network error on page {page}: {e}; retrying once in 3s")
-            time.sleep(3)
+        r = None
+        for attempt in range(1, RATE_LIMIT_RETRIES + 2):   # +1 for the initial try
             try:
                 r = s.get(f"{BASE_URL}/twitter/user/last_tweets", params=params, timeout=30)
-            except requests.RequestException as e2:
-                log(f"  retry failed: {e2}; stopping (partial data preserved).")
-                had_error = True
-                break
+            except requests.RequestException as e:
+                log(f"  network error on page {page} (attempt {attempt}): {e}")
+                r = None
+            if r is not None and r.status_code == 429:
+                if attempt > RATE_LIMIT_RETRIES:
+                    break   # give up after RATE_LIMIT_RETRIES backoffs; handled below
+                wait = RATE_LIMIT_BACKOFF_SEC * attempt
+                log(f"  HTTP 429 (rate limited) on page {page}; backing off {wait}s "
+                    f"before retry {attempt}/{RATE_LIMIT_RETRIES}")
+                time.sleep(wait)
+                continue
+            break   # success, non-429 error, or exhausted retries — stop looping
+
+        if r is None:
+            log("  network error persisted after retries; stopping (partial data preserved).")
+            had_error = True
+            break
 
         if r.status_code != 200:
             log(f"  HTTP {r.status_code} on page {page}: {r.text[:200]}")

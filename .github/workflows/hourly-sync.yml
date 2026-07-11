@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      # twitterapi.io free tier is QPS-limited to 1 request / 5s ACROSS the whole
+      # account — running bloggers in parallel floods that shared limit and every
+      # leg gets HTTP 429 on its very first request. Serialize instead; each
+      # blogger's own requests are already paced (see fetch_tweets.py).
+      max-parallel: 1
       matrix:
         blogger:
           - aleabitoreddit
