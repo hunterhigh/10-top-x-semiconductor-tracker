@@ -5,7 +5,7 @@ on:
       bloggers:
         description: "Comma-separated blogger ids to backfill (default: the 9 new trackers, NOT aleabitoreddit — Serenity's history was already migrated for free, re-running it here would re-fetch/re-extract for nothing)"
         required: false
-        default: "zephyr_z9,jukan05,jasonschips,KawzInvests,vikramskr,semivision_tw,damnang2,futurist_lens,michaelsikand"
+        default: "zephyr_z9,jukan05,KawzInvests,michaelsikand,ren_stocks,octopusycc,unusual_whales,StockMKTNewz,DJTRadar"
       since_days:
         description: "How many days of history to pull (project decision: 30 — Quarterly report was cut, so Month's 28d window is now the deepest view; deepen later if useful)"
         required: false

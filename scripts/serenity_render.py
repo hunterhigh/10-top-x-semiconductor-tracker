@@ -36,6 +36,11 @@ try:
 except Exception:
     _BLOGGERS=[]
 _BLOGGERS_BY_ID={b['id']:b for b in _BLOGGERS}
+# Consensus math ("N of 7 bullish") only draws from opinion-type bloggers — the
+# other 3 tracked accounts (unusual_whales/StockMKTNewz/DJTRadar) report options
+# flow / news / third-party disclosures, not their own stance (see SKILL.md
+# compliance rule 8). Default to 'opinion' if a config entry predates this field.
+_OPINION_IDS={b['id'] for b in _BLOGGERS if b.get('signal_type','opinion')=='opinion'}
 BLOGGER_ID=(_argval('--blogger') or 'all')
 if BLOGGER_ID!='all' and BLOGGER_ID not in _BLOGGERS_BY_ID:
     sys.exit(f"Unknown --blogger '{BLOGGER_ID}'. Known ids: {', '.join(_BLOGGERS_BY_ID) or '(none configured — check --config path)'}")
@@ -55,7 +60,7 @@ DB=str(Path(_db_override).resolve()) if _db_override else str(SCRIPT_DIR.parent/
 STOCK={}                       # sym -> {company, industry, currency, price_series, price_status} (blogger-agnostic)
 allm=defaultdict(list)         # sym -> [(date, stance, mention_type, reason, url), ...] (mentions IN SCOPE for BLOGGER_ID)
 MENT=defaultdict(list)         # sym -> [full mention dicts] (for the per-stock detail page; scoped like allm)
-exp_bid=defaultdict(list)      # sym -> [(date, stance, blogger_id), ...] EXPLICIT-STANCE ONLY, ALWAYS ALL bloggers (consensus math)
+exp_bid=defaultdict(list)      # sym -> [(date, stance, blogger_id), ...] EXPLICIT-STANCE ONLY, ALWAYS ALL 7 opinion-type bloggers (consensus math; flow/news/disclosure accounts excluded — see _OPINION_IDS)
 _maxdate=None
 for _f in glob.glob(os.path.join(DB,'stocks','*.json')):
     _d=json.load(open(_f,encoding='utf-8')); s=_d['ticker']
@@ -66,7 +71,7 @@ for _f in glob.glob(os.path.join(DB,'stocks','*.json')):
         if not m.get('date'): continue
         dd=datetime.date.fromisoformat(m['date'])
         mbid=m.get('blogger_id')
-        if m.get('mention_type')=='explicit_stance':
+        if m.get('mention_type')=='explicit_stance' and mbid in _OPINION_IDS:
             exp_bid[s].append((dd,m.get('stance'),mbid))
         if BLOGGER_ID!='all' and mbid!=BLOGGER_ID: continue
         if _maxdate is None or dd>_maxdate: _maxdate=dd
@@ -93,14 +98,14 @@ STR={
  'en':{
   'doc_title_tmpl':"@{handle} — Stock Opinion Tracker",'doc_title_all':"Top 10 Trackers — Stock Opinion Consensus",
   'brand':"Stock Opinion<br>Tracker",'brand_all':"Top 10<br>Trackers",
-  'consensus_brand_sub':"10 tracked accounts",
+  'consensus_brand_sub':"10 accounts · 7-analyst consensus",
   'disc_top_all':"⚠️ Aggregation and tracking of public posts from the 10 tracked accounts, summarized automatically by AI. It may contain errors or omissions and is not guaranteed accurate — refer to the original posts and verify independently. This tracker does not constitute investment advice of any kind.",
   'nav_day':"Daily",'nav_week':"Weekly",'nav_month':"Monthly",'nav_quarter':"Quarterly",'nav_consensus':"Consensus",
   'consensus_title':"Cross-Tracker Consensus",
-  'consensus_subhd_day':"▼ Most agreed-upon today (net bullish/bearish across ≥2 tracked bloggers)",
+  'consensus_subhd_day':"▼ Most agreed-upon today (net bullish/bearish across ≥2 of the 7 tracked analysts; the 3 independent-signal accounts are shown separately, not counted here)",
   'consensus_subhd_week':"▼ Most agreed-upon this week",
-  'consensus_none':"No ticker had ≥2 tracked bloggers taking an explicit stance {pfx}.",
-  'consensus_count':"{n} tickers with cross-tracker agreement",'consensus_tracked':"tracked",
+  'consensus_none':"No ticker had ≥2 of the 7 tracked analysts taking an explicit stance {pfx}.",
+  'consensus_count':"{n} tickers with cross-analyst agreement",'consensus_tracked':"analysts",
   'dd_by_blogger':"By tracker",
   'side_foot':"Information aggregation<br>not investment advice",
   'disc_main':"Aggregation and tracking of public posts, summarized automatically by AI. It may contain errors or omissions and is not guaranteed accurate — always refer to the original posts and verify independently. This tracker does not constitute investment advice of any kind.",
@@ -166,14 +171,14 @@ STR={
  'zh':{
   'doc_title_tmpl':"@{handle} 个股评论追踪",'doc_title_all':"十大网红 个股共识追踪",
   'brand':"个股评论<br>追踪",'brand_all':"十大网红<br>共识追踪",
-  'consensus_brand_sub':"追踪 10 位博主",
+  'consensus_brand_sub':"追踪 10 位博主 · 7 人共识",
   'disc_top_all':"⚠️ 本页为对 10 位追踪博主公开推文的整理与追踪，由 AI 自动归纳，可能存在错误或遗漏，不保证信息绝对准确，请以原推文为准并自行核实。本追踪不构成任何投资建议。",
   'nav_day':"日报",'nav_week':"周报",'nav_month':"月报",'nav_quarter':"季报",'nav_consensus':"共识",
   'consensus_title':"跨博主共识",
-  'consensus_subhd_day':"▼ 今日最一致的标的(≥2 位追踪博主净看多/看空)",
+  'consensus_subhd_day':"▼ 今日最一致的标的(≥2 位分析师净看多/看空，仅统计 7 位意见博主，另外 3 位独立信号账号单独展示、不计入此项)",
   'consensus_subhd_week':"▼ 本周最一致的标的",
-  'consensus_none':"{pfx}没有标的获得 ≥2 位追踪博主的明确表态。",
-  'consensus_count':"{n} 只标的存在跨博主共识",'consensus_tracked':"位追踪",
+  'consensus_none':"{pfx}没有标的获得 ≥2 位分析师的明确表态。",
+  'consensus_count':"{n} 只标的存在跨博主共识",'consensus_tracked':"位分析师",
   'dd_by_blogger':"各博主表态",
   'side_foot':"仅供信息整理<br>不构成投资建议",
   'disc_main':"公开推文的整理与追踪,由 AI 自动归纳,可能存在错误或遗漏,不保证信息绝对准确,请以原推文为准并自行核实。本追踪不构成任何投资建议。",
@@ -336,7 +341,8 @@ def _to_hant(s):
         '断':'斷','价':'價','频':'頻','区':'區','复':'復','后':'後','这':'這','风':'風',
         '业':'業','周':'週','只':'檔','对':'對','动':'動','错':'錯','证':'證','内':'內',
         '记':'記','来':'來','无':'無','场':'場','签':'籤','遗':'遺','滚':'滾','头':'頭',
-        '势':'勢','盖':'蓋','网':'網','红':'紅','识':'識'
+        '势':'勢','盖':'蓋','网':'網','红':'紅','识':'識','师':'師','账':'帳','号':'號',
+        '独':'獨','单':'單','项':'項'
     }))
 STR['zh-hant']={k:_to_hant(v) for k,v in STR['zh'].items()}
 def _load_lang(code):
@@ -628,11 +634,13 @@ def bigcard(s, w0, w1, pfx, head_lbl, freq, chg_kind):
       f'<div class="cfoot"><span>{foot}</span><span class="go">{t("detail_go")}</span></div></div>')
 
 def consensus_rows(w0,w1,min_bloggers=2):
-    """For each ticker, among ALL tracked bloggers (not just BLOGGER_ID), compute
-    each blogger's net explicit-stance direction within [w0,w1], then keep only
+    """For each ticker, among the 7 opinion-type bloggers (not just BLOGGER_ID,
+    and NOT the 3 independent-signal accounts — see _OPINION_IDS), compute each
+    blogger's net explicit-stance direction within [w0,w1], then keep only
     tickers where >=min_bloggers bloggers took a net stance. This is the data
-    behind the 'N of 10 bullish' consensus feature — deliberately independent
-    of the --blogger filter (exp_bid is populated unconditionally at load time)."""
+    behind the 'N of 7 bullish' consensus feature — deliberately independent
+    of the --blogger filter (exp_bid is populated unconditionally at load time,
+    but only for opinion-type bloggers)."""
     rows=[]
     for s,items in exp_bid.items():
         by_b=defaultdict(lambda:[0,0])

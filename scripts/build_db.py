@@ -207,6 +207,12 @@ def main():
     if not bloggers:
         log(f"No bloggers configured in {CONFIG_PATH}. Nothing to build.")
         sys.exit(1)
+    # signal_type: "opinion" bloggers express personal stance (feeds consensus);
+    # "flow"/"news"/"disclosure" bloggers (unusual_whales/StockMKTNewz/DJTRadar)
+    # report options flow / news / third-party trades, not their own opinion —
+    # threaded into each stock_doc below so downstream consumers (render.py's
+    # consensus math, future triangulation features) don't need to re-derive it.
+    signal_type_by_blogger = {b["id"]: b.get("signal_type", "opinion") for b in bloggers}
     tmap = load_json(TMAP, {}) or {}
 
     extracted, raw, per_blogger_counts = load_all_extracted_and_raw(bloggers)
@@ -293,9 +299,13 @@ def main():
         clean_mentions = [{k: v for k, v in m.items() if k not in ("_dt", "_company_name")} for m in ms]
 
         by_blogger = defaultdict(int)
+        by_signal_type = defaultdict(int)
         for m in ms:
-            by_blogger[m.get("blogger_id") or "unknown"] += 1
+            bid = m.get("blogger_id") or "unknown"
+            by_blogger[bid] += 1
+            by_signal_type[signal_type_by_blogger.get(bid, "opinion")] += 1
         total_mentions_by_blogger = dict(sorted(by_blogger.items(), key=lambda x: -x[1]))
+        total_mentions_by_signal_type = dict(by_signal_type)  # e.g. {"opinion": 12, "flow": 2, "news": 1}
 
         # ---- preserve existing price data (prices.py fills these; don't wipe on rebuild)
         existing_file = STOCKS_DIR / f"{sym}.json"
@@ -323,6 +333,7 @@ def main():
             "last_mention": last_dt.date().isoformat() if last_dt else None,
             "total_mentions": len(ms),           # raw count across ALL bloggers, window-independent; NOT a stance metric
             "total_mentions_by_blogger": total_mentions_by_blogger,  # window-independent fact; enables consensus view
+            "total_mentions_by_signal_type": total_mentions_by_signal_type,  # opinion/flow/news/disclosure breakdown; see signal_type_by_blogger
             "mentions": clean_mentions,          # EVERY mention (all bloggers), ET dates, fully traceable
             # prices: preserve from previous build if available; prices.py overwrites on its run
             "price_series": prev_prices,

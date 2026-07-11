@@ -1,5 +1,5 @@
 {
-  "_comment": "Tracked X/Twitter finance influencers. 'id' is the canonical blogger_id used throughout the data pipeline (state files, extracted records, mention.blogger_id, per-blogger render output). Display metadata (avatar_letter/color) is presentation-only.",
+  "_comment": "Tracked X/Twitter finance influencers. 'id' is the canonical blogger_id used throughout the data pipeline (state files, extracted records, mention.blogger_id, per-blogger render output). Display metadata (avatar_letter/color) is presentation-only. 'signal_type' drives product behavior: 'opinion' bloggers feed the stance-consensus math (N/7); 'flow'/'news'/'disclosure' bloggers are independent-signal accounts whose content is NOT personal stance and must never be folded into the opinion consensus count (see SKILL.md compliance rules).",
   "bloggers": [
     {
       "id": "aleabitoreddit",
@@ -8,6 +8,7 @@
       "x_url": "https://x.com/aleabitoreddit",
       "avatar_letter": "S",
       "color": "#1F5C4D",
+      "signal_type": "opinion",
       "has_existing_data": true,
       "backfill_scope": "reuse_existing_full_history"
     },
@@ -18,8 +19,9 @@
       "x_url": "https://x.com/zephyr_z9",
       "avatar_letter": "Z",
       "color": "#4E79A7",
+      "signal_type": "opinion",
       "has_existing_data": false,
-      "backfill_scope": "recent_90d"
+      "backfill_scope": "recent_30d"
     },
     {
       "id": "jukan05",
@@ -28,18 +30,9 @@
       "x_url": "https://x.com/jukan05",
       "avatar_letter": "J",
       "color": "#F28E2B",
+      "signal_type": "opinion",
       "has_existing_data": false,
-      "backfill_scope": "recent_90d"
-    },
-    {
-      "id": "jasonschips",
-      "handle": "@jasonschips",
-      "display_name": "Jason's Chips",
-      "x_url": "https://x.com/jasonschips",
-      "avatar_letter": "Ja",
-      "color": "#E15759",
-      "has_existing_data": false,
-      "backfill_scope": "recent_90d"
+      "backfill_scope": "recent_30d"
     },
     {
       "id": "KawzInvests",
@@ -48,48 +41,9 @@
       "x_url": "https://x.com/KawzInvests",
       "avatar_letter": "K",
       "color": "#76B7B2",
+      "signal_type": "opinion",
       "has_existing_data": false,
-      "backfill_scope": "recent_90d"
-    },
-    {
-      "id": "vikramskr",
-      "handle": "@vikramskr",
-      "display_name": "Vikram Sekar",
-      "x_url": "https://x.com/vikramskr",
-      "avatar_letter": "V",
-      "color": "#B07AA1",
-      "has_existing_data": false,
-      "backfill_scope": "recent_90d"
-    },
-    {
-      "id": "semivision_tw",
-      "handle": "@semivision_tw",
-      "display_name": "SemiVision",
-      "x_url": "https://x.com/semivision_tw",
-      "avatar_letter": "Se",
-      "color": "#EDC948",
-      "has_existing_data": false,
-      "backfill_scope": "recent_90d"
-    },
-    {
-      "id": "damnang2",
-      "handle": "@damnang2",
-      "display_name": "Damnang",
-      "x_url": "https://x.com/damnang2",
-      "avatar_letter": "D",
-      "color": "#FF9DA7",
-      "has_existing_data": false,
-      "backfill_scope": "recent_90d"
-    },
-    {
-      "id": "futurist_lens",
-      "handle": "@futurist_lens",
-      "display_name": "Futurist",
-      "x_url": "https://x.com/futurist_lens",
-      "avatar_letter": "F",
-      "color": "#9C755F",
-      "has_existing_data": false,
-      "backfill_scope": "recent_90d"
+      "backfill_scope": "recent_30d"
     },
     {
       "id": "michaelsikand",
@@ -98,8 +52,64 @@
       "x_url": "https://x.com/michaelsikand",
       "avatar_letter": "M",
       "color": "#17BECF",
+      "signal_type": "opinion",
       "has_existing_data": false,
-      "backfill_scope": "recent_90d"
+      "backfill_scope": "recent_30d"
+    },
+    {
+      "id": "ren_stocks",
+      "handle": "@ren_stocks",
+      "display_name": "Ren",
+      "x_url": "https://x.com/ren_stocks",
+      "avatar_letter": "R",
+      "color": "#FF9DA7",
+      "signal_type": "opinion",
+      "has_existing_data": false,
+      "backfill_scope": "recent_30d"
+    },
+    {
+      "id": "octopusycc",
+      "handle": "@octopusycc",
+      "display_name": "大老师",
+      "x_url": "https://x.com/octopusycc",
+      "avatar_letter": "大",
+      "color": "#9C755F",
+      "signal_type": "opinion",
+      "has_existing_data": false,
+      "backfill_scope": "recent_30d"
+    },
+    {
+      "id": "unusual_whales",
+      "handle": "@unusual_whales",
+      "display_name": "Unusual Whales",
+      "x_url": "https://x.com/unusual_whales",
+      "avatar_letter": "U",
+      "color": "#E15759",
+      "signal_type": "flow",
+      "has_existing_data": false,
+      "backfill_scope": "recent_30d"
+    },
+    {
+      "id": "StockMKTNewz",
+      "handle": "@StockMKTNewz",
+      "display_name": "Evan",
+      "x_url": "https://x.com/StockMKTNewz",
+      "avatar_letter": "E",
+      "color": "#B07AA1",
+      "signal_type": "news",
+      "has_existing_data": false,
+      "backfill_scope": "recent_30d"
+    },
+    {
+      "id": "DJTRadar",
+      "handle": "@DJTRadar",
+      "display_name": "DJT Radar",
+      "x_url": "https://x.com/DJTRadar",
+      "avatar_letter": "D",
+      "color": "#EDC948",
+      "signal_type": "disclosure",
+      "has_existing_data": false,
+      "backfill_scope": "recent_30d"
     }
   ]
 }
