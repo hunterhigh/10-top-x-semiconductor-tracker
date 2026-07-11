@@ -1,0 +1,98 @@
+name: backfill
+on:
+  workflow_dispatch:
+    inputs:
+      bloggers:
+        description: "Comma-separated blogger ids to backfill (default: the 9 new trackers, NOT aleabitoreddit — Serenity's history was already migrated for free, re-running it here would re-fetch/re-extract for nothing)"
+        required: false
+        default: "zephyr_z9,jukan05,jasonschips,KawzInvests,vikramskr,semivision_tw,damnang2,futurist_lens,michaelsikand"
+      since_days:
+        description: "How many days of history to pull (project decision: 90 for the first batch, deepen later if useful)"
+        required: false
+        default: "90"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          IFS=',' read -ra IDS <<< "${{ inputs.bloggers }}"
+          json=$(printf '"%s",' "${IDS[@]}" | sed 's/,$//')
+          echo "matrix=[$json]" >> "$GITHUB_OUTPUT"
+
+  fetch-extract:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        blogger: ${{ fromJson(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Fetch tweets (full backfill for this blogger)
+        env:
+          TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
+        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }} --backfill
+      - name: Extract opinions (LLM, Sonnet — see extract.py for the accepted metaphor/irony risk)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
+      - name: Upload blogger data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blogger-data-${{ matrix.blogger }}
+          path: data/bloggers/${{ matrix.blogger }}/
+          retention-days: 1
+
+  aggregate:
+    needs: fetch-extract
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Download all blogger artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: blogger-data-*
+          path: data/bloggers
+          merge-multiple: false
+      - name: Flatten artifact directories
+        run: |
+          cd data/bloggers
+          for d in blogger-data-*; do
+            id="${d#blogger-data-}"
+            mkdir -p "$id"
+            mv "$d"/* "$id"/ 2>/dev/null || true
+            rmdir "$d"
+          done
+          ls -la
+      - name: Rebuild shared stock database (all bloggers, no LLM)
+        run: python scripts/build_db.py
+      - name: Verify data
+        run: python scripts/verify_data.py
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Backfill (${{ inputs.since_days }}d): ${{ inputs.bloggers }}"
+          git push
