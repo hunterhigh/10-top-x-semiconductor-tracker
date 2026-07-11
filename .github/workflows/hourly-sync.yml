@@ -40,7 +40,7 @@ jobs:
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
         run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }}
-      - name: Extract opinions (LLM, fixed to Opus)
+      - name: Extract opinions (LLM, Sonnet)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d '7 days ago' +%Y-%m-%d)

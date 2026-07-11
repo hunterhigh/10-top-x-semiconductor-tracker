@@ -37,10 +37,13 @@ Key design decisions:
     "they are talking about SIVE / 4092 / Sivers".
   - Social chatter is allowed in and the model marks has_investment_content=false.
   - Resumable: writes results incrementally; re-running skips done tweet_ids.
-  - Model: fixed to Claude Opus across all bloggers — rhetorical style (irony,
-    metaphor, hedging) varies a lot person to person and Opus disambiguates
-    stance more reliably than cheaper models, which is what this pipeline is
-    graded on (correct bullish/bearish attribution, not raw throughput).
+  - Model: Claude Sonnet (project decision — the API account in use doesn't
+    have Opus access; Sonnet is ~5x cheaper). KNOWN RISK: Sonnet is more prone
+    to misreading metaphor/irony as a real stance than Opus (this is why the
+    original single-blogger project used Opus). Spot-check extracted stances
+    per blogger more carefully than you would with Opus, especially for
+    accounts with a sarcastic/ironic voice — see extract_all.py's --limit flag
+    to sample a blogger's output before running the full backfill.
 
 Auth: reads ANTHROPIC_API_KEY from environment.
 
@@ -63,7 +66,7 @@ DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
 
 DEFAULT_USER = "aleabitoreddit"
-DEFAULT_MODEL = "claude-opus-4-6"   # fixed per project decision; --model exists for testing only
+DEFAULT_MODEL = "claude-sonnet-4-6"   # project decision (no Opus access on this account); --model can override
 MAX_TWEETS_PER_CALL = 8               # smaller groups -> shorter JSON output -> no truncation on long threads
 RETRY = 3
 REQUEST_PACING_SEC = 0.5              # polite pause between calls to avoid tripping limits

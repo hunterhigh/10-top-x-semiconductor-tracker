@@ -46,7 +46,7 @@ REVIEW_PATH = DATA_DIR / "ticker_review.json"
 SUGGESTIONS_PATH = DATA_DIR / "ticker_map_suggestions.json"
 TMAP_PATH = DATA_DIR / "ticker_map.json"
 
-DEFAULT_MODEL = "claude-opus-4-6"
+DEFAULT_MODEL = "claude-sonnet-4-6"   # matches extract.py's model choice (no Opus access on this account)
 BATCH_SIZE = 15   # symbols per LLM call
 
 SYSTEM_PROMPT = """You help maintain a stock ticker mapping table for a financial data pipeline. \

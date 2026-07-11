@@ -31,7 +31,7 @@ def main():
     ap = argparse.ArgumentParser(description="Extract stances for all tracked bloggers")
     ap.add_argument("--since", default="", help="only process tweets on/after YYYY-MM-DD")
     ap.add_argument("--limit", type=int, default=0, help="only process first N tweets per blogger (test)")
-    ap.add_argument("--model", default="", help="override model (default: extract.py's fixed Opus)")
+    ap.add_argument("--model", default="", help="override model (default: extract.py's Sonnet default)")
     ap.add_argument("--only", nargs="*", default=None, help="restrict to these blogger ids")
     args = ap.parse_args()
 
