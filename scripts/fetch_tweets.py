@@ -39,7 +39,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import requests
@@ -197,8 +197,17 @@ def reply_kind(t: dict, owner_username: str) -> str:
     return "reply"
 
 
+def _tweet_date(t: dict):
+    """created_at like 'Mon Jun 01 02:52:08 +0000 2026' -> date, or None if unparseable."""
+    s = t.get("createdAt") or ""
+    try:
+        return datetime.strptime(s, "%a %b %d %H:%M:%S %z %Y").date()
+    except ValueError:
+        return None
+
+
 # ----------------------------------------------------------------------------- main fetch
-def fetch(username: str, backfill: bool) -> None:
+def fetch(username: str, backfill: bool, since_date=None) -> None:
     key = get_api_key()
     s = session_with_key(key)
 
@@ -209,6 +218,9 @@ def fetch(username: str, backfill: bool) -> None:
     log(f"Mode: {mode}")
     if stop_at_id:
         log(f"  will stop when reaching already-seen id {stop_at_id}")
+    if since_date:
+        log(f"  will stop once tweets are older than {since_date.isoformat()} "
+            f"(bounds pagination instead of pulling full account history)")
 
     uid = get_user_id(s, username)
     base_params = {"includeReplies": "true"}         # pull everything, filter locally
@@ -225,6 +237,7 @@ def fetch(username: str, backfill: bool) -> None:
     kept_new = []           # tweets we keep AND are new this run
     kind_counts = {}        # post / self_thread / reply tallies (this run)
     reached_known = False
+    reached_cutoff = False
     newest_id_this_run = None
     had_error = False       # set on network/HTTP/API errors so a bad handle or bad
                              # key doesn't silently look identical to "0 tweets, done"
@@ -295,6 +308,15 @@ def fetch(username: str, backfill: bool) -> None:
             if stop_at_id and tid == stop_at_id:
                 reached_known = True
                 break
+            # date-bounded stop: tweets arrive newest-first, so once one is older
+            # than since_date, every remaining tweet (rest of this page + all
+            # future pages) is too — safe to stop immediately without pulling
+            # the account's full history just to throw most of it away later.
+            if since_date:
+                d = _tweet_date(t)
+                if d is not None and d < since_date:
+                    reached_cutoff = True
+                    break
             kind = reply_kind(t, username)
             kind_counts[kind] = kind_counts.get(kind, 0) + 1
             kept_new.append(slim_tweet(t, kind))
@@ -304,6 +326,9 @@ def fetch(username: str, backfill: bool) -> None:
 
         if reached_known:
             log("  reached already-seen tweet; stopping incremental pull.")
+            break
+        if reached_cutoff:
+            log(f"  reached tweets older than {since_date.isoformat()}; stopping bounded pull.")
             break
         if not has_next:
             log("  no more pages.")
@@ -371,8 +396,13 @@ def main():
     ap.add_argument("--user", default=DEFAULT_USER, help="screen name (no @)")
     ap.add_argument("--backfill", action="store_true",
                     help="ignore saved state and pull full history")
+    ap.add_argument("--since-date", default="", metavar="YYYY-MM-DD",
+                     help="stop paginating once tweets are older than this date "
+                          "(bounds a --backfill pull instead of fetching the "
+                          "account's ENTIRE history when only recent days are needed)")
     args = ap.parse_args()
-    fetch(args.user, args.backfill)
+    since_date = date.fromisoformat(args.since_date) if args.since_date else None
+    fetch(args.user, args.backfill, since_date=since_date)
 
 
 if __name__ == "__main__":

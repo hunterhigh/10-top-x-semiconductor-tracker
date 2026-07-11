@@ -47,10 +47,10 @@ jobs:
           key: pip-${{ hashFiles('requirements.txt') }}
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Fetch tweets (full backfill for this blogger)
+      - name: Fetch tweets (bounded backfill — stops once tweets predate since_days)
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
-        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }} --backfill
+        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }} --backfill --since-date $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
       - name: Extract opinions (LLM, Sonnet — see extract.py for the accepted metaphor/irony risk)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
