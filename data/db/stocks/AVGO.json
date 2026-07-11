@@ -1,6 +1,6 @@
 {
   "ticker": "AVGO",
-  "cashtag": "$AVGO",
+  "cashtag": "AVGO",
   "price_symbol": "AVGO",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,24 @@
   "industry": "AI ASIC/Networking Chips",
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-06-16",
-  "total_mentions": 138,
+  "last_mention": "2026-07-10",
+  "total_mentions": 166,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 138
+    "aleabitoreddit": 138,
+    "StockMKTNewz": 8,
+    "jukan05": 8,
+    "octopusycc": 3,
+    "KawzInvests": 2,
+    "zephyr_z9": 2,
+    "unusual_whales": 2,
+    "DJTRadar": 2,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 138
+    "opinion": 154,
+    "news": 8,
+    "flow": 2,
+    "disclosure": 2
   },
   "mentions": [
     {
@@ -3128,6 +3139,50 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2066114323840205108",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-14",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "There are currently 16 public companies worth more than $1 Trillion\n\n🥇 Nvidia $NVDA - $5T\n🥈 Google $GOOGL - $4.4T\n🥉 Apple $AAPL - $4.3T\n4: Microsoft $MSFT - $2.9T\n5: Amazon $AMZN - $2.6T\n6: Taiwan Semi $TSM - $2.2T\n7: SpaceX $SPCX $2.1T\n8: Broadcom $AVGO $1.8T\n9: Saudi Aramco - 1.8T\n10: Tesla $TSLA - $1.5T\n11: Meta Platforms $META  - $1.4T\n12: Samsung - $1.4T\n13:Micron $MU - $1.1T\n14: Berkshire Hathaway $BRK.B $1.1T \n15: Eli Lilly $LLY - $1T\n16: SK Hynix - $1T",
+      "url": "https://x.com/StockMKTNewz/status/2066114323840205108",
+      "kind": "post",
+      "engagement": {
+        "views": 62066,
+        "likes": 518,
+        "reposts": 54,
+        "replies": 45
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066672855983554676",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "The AI infrastructure buildout has three distinct networking layers. Each one is at a different point in its adoption curve and each one has different winners.\n\n1. Scale-up connects GPUs inside a single server and eventually across racks. The transition from copper is happening in stages.\n\n> Copper still dominates at short distances.\n\n> Active electrical cable extends that reach but loses signal integrity as clusters grow.\n\n> LPO removes the DSP entirely, cutting power consumption to near CPO levels while keeping the pluggable form factor operators already know.\n\n> NPO moves optics closer to the chip without full co-packaging. Both are ramping faster than CPO in the near term because they require less ecosystem disruption.\n\n> CPO is the endgame. It integrates optics directly onto the switch ASIC substrate, cutting signal loss from 20dB to 1-2dB and power consumption by 3x or more.\n\n$AVGO's Davisson and $NVDA's Spectrum-X are the CPO platforms. $MRVL acquired Celestial AI to position optics directly on top of XPUs rather than at the die edge, with Amazon as the lead design win. $COHR and $LITE supply the CW and EML lasers every platform requires. $LITE holds more than 50% share in high-speed EML lasers with multi-billion dollar supply agreements locked with Nvidia through end of decade. $CRDO and $MTSI supply the LRO and LPO chipsets capturing near term volume before CPO fully ramps.\n\n2. Scale-out connects servers inside a single data center. The 800G transceiver cycle is at peak volume with 1.6T at the beginning of its inflection.\n\n> $MRVL's 51.2T switches and DSPs sit at the center.\n\n> $AAOI is expanding capacity 10x and demand still outpaces supply through mid-2027.\n\n> $COHR supplies modules across the stack.\n\n3. Scale-across connects data centers to each other over distance so one AI model trains across geographically distributed GPU clusters as a single logical environment. The link between sites requires lossless coherent optical transport at 800G and 1.6T.\n\n> $CIEN holds the number one global position in data center interconnect. Their Q2 executive summary states it directly: \"DCI, including scale-across, is gaining momentum as customers connect AI data centers to monetize their investments.\"\n\n> $COHR and $LITE supply the optical circuit switches enabling spine replacement and redundancy across those links.",
+      "url": "https://x.com/KawzInvests/status/2066672855983554676",
+      "kind": "post",
+      "engagement": {
+        "views": 97766,
+        "likes": 255,
+        "reposts": 33,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2066868456457416871",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-16",
@@ -3149,6 +3204,596 @@
         "replies": 26
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067092746364748272",
+      "blogger_id": "jukan05",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "Samsung sees rising chip production requests from BYD, Google, AMD- Nikkei Asia\n\nBYD, Google, AMD, Tesla and others are looking increasingly to Samsung Electronics for contract chipmaking services as surging demand for AI infrastructure strains the advanced chipmaking capacity of market leader TSMC, Nikkei Asia has learned.\n\nSamsung has seen a surge in inquiries from existing and potential global customers, including those in China, looking to use its advanced chip manufacturing capacity, according to six people with knowledge of the matter.\n\nBYD, China's top electric vehicle maker, has been in talks with Samsung about building future generations of autonomous driving chips, while Google is engaging with the South Korean company about potentially producing its next-generation Axion processors, set to launch around 2028, two people familiar with the matter told Nikkei Asia. Google is also considering asking Samsung to build part of its key Tensor Processing Units (TPUs) for AI computing workloads, as early as 2028, one of the people said.\n\n\"TSMC is prioritizing advanced-node production not only because it reinforces its tech leadership and long-term strategy, but also because those nodes are more profitable and remain in short supply,\" said an executive from a Chinese autochip designer, who asked not to be named. \"Samsung's yields still lag behind TSMC's, but capacity availability has made it an increasingly attractive option.\"\n\nYield is the industry term for production quality, measured as the percentage of chips produced that meet the required specifications and performance.\n\nTSMC, Samsung and Intel are the world's only chipmakers that can offer cutting-edge chip production at a large scale. TSMC has secured the majority of such orders, as well as orders for advanced chip packaging services, from the likes of Nvidia, Apple, AMD, Broadcom, Marvell and MediaTek. These clients take up a large share of the Taiwanese chipmaking group's advanced chipmaking capacity.\n\nIntel, which mainly manufactures chips for in-house use, is working to attract more customers to adopt its advanced chipmaking and packaging capacity.\n\nThe Chinese auto industry executive said many chip designers in the country are now pursuing a dual-sourcing strategy, spreading orders between TSMC and Samsung rather than relying on a single foundry, with exact allocation depending on the product.\n\n\"Geopolitical factors also push some U.S. clients to use multiple contract chipmakers, if available out there, if they can,\" another chip industry executive with knowledge told Nikkei Asia.\n\n\"TSMC's advanced chip production capacity is really full, which is hard for Chinese clients who have smaller volumes to place new orders, so several have turned to approach Samsung for future possibilities,\" said an executive-level chip industry source who is familiar with the matter.\n\nGoogle has been a driving force in the multi-foundry strategy, sources told Nikkei Asia. MediaTek, Taiwan's top chip developer, is helping Google to work with both TSMC and Intel for advanced chip packaging, Nikkei Asia earlier reported, while Qualcomm, the U.S. mobile chip king, has long made use of both TSMC's and Samsung's services.\n\nHowever, using multiple foundries for advanced chip production requires substantial investment in adapting chip designs to different chipmakers' manufacturing processes, along with greater R&D and supply-chain coordination. Such a strategy is typically viable only for deep-pocketed chip developers, given the additional engineering and workforce costs involved.\n\nMeanwhile, capacity constraints at TSMC are pushing other existing customers to potentially place more orders with Samsung, sources said.\n\nTesla works with both Samsung and TSMC on various products, including its AI5 chips used in its cars and robots. The upcoming AI6, however, will be made by Samsung in Texas. Tesla founder Elon Musk also announced a partnership with Intel for its future terafab projects in Texas, aiming to bring more critical chip production back to the U.S. and help meet growing demand.\n\nAMD and Nvidia, key clients of TSMC, are also working with Samsung on some chip projects due to capacity constraints. AMD, for example, is in talks to build some future CPUs with Samsung from 2028, one source with knowledge of the situation said.\n\nNvidia's Groq language processing units (LPUs) are produced by Samsung, and the U.S. chipmaker has not decided whether production of the next generation of these highly specialized chips will be given to other contract chipmakers. The majority of Nvidia's chips are made exclusively by TSMC.\n\nThe increasing requests for leading-edge chip production for Samsung would mark a victory for the South Korean chipmaker's foundry business, which used to mainly serve its own consumer electronics and home appliance divisions.\n\nThe growing foundry business comes as Samsung is also riding the AI investment boom, enjoying exponentially growing demand for its memory products, including high-bandwidth memory chips, DRAM and NAND flash memories.\n\nSamsung said that it does not comment on customers.\n\nNew orders would help Samsung's foundry unit rebound from a recent downturn. The company said earnings for the segment declined in the first quarter due to it being the off-peak season, but it did not elaborate on how big the dip was.\n\nSamsung's foundry and system large-scale integration business units posted a combined 6.9 trillion won ($4.6 billion) in sales in the first quarter, up from 6 trillion won a year ago. Samsung does not break down its earnings for the two units, the latter of which makes an array of logic and analog chips, including image sensors and display chips.\n\nBYD declined to comment. Google said it does not comment on the details of its supply chain.",
+      "url": "https://x.com/jukan05/status/2067092746364748272",
+      "kind": "post",
+      "engagement": {
+        "views": 150035,
+        "likes": 390,
+        "reposts": 52,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067156318016930044",
+      "blogger_id": "jukan05",
+      "date": "2026-06-17",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "JPMorgan’s Harlan Sur just published a report on AVGO — is this real? Is Broadcom really involved in Anthropic’s ASIC? https://t.co/Kro15qd416",
+      "url": "https://x.com/jukan05/status/2067156318016930044",
+      "kind": "post",
+      "engagement": {
+        "views": 138046,
+        "likes": 592,
+        "reposts": 48,
+        "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067608063012659683",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "今日的费城半导体指数调仓，会对市场造成多大的影响？\n\n其中MU MRVL LRCX AMAT 都会有不同程度的卖出现象\n\n而 $SOXX 有大量的杠杆产品\n如 $SOXL $SOXS \n\nSOX 调权 → 部分半导体股出现被动买卖 → 这些股票和 SOXL 底层 ICE Semiconductor Index 高度重合 → 半导体板块价格波动 → SOXL 按 3 倍放大。\n\n假设 SOXL 规模约 250-300 亿美元级别，目标是 3 倍敞口，那么它背后对应的名义敞口可能是 750-900 亿美元。Yahoo / Robinhood 等页面显示 SOXL 规模大约在 250-300 亿美元附近。\n\n所以 SOXL 的最大风险：\n\n调权当天 MU / MRVL / AMD / NVDA / AVGO 等重合股尾盘异动；\n半导体指数如果同方向下跌，SOXL 会被动放大；\n如果当天本来就高波动，SOXL 的再平衡可能让尾盘更极端。\n\n————————\n\n（调仓时间可能集中在6/18和6/22两天时间",
+      "url": "https://x.com/octopusycc/status/2067608063012659683",
+      "kind": "post",
+      "engagement": {
+        "views": 135237,
+        "likes": 58,
+        "reposts": 4,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069548946419020163",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-23",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "HERE ARE THE 30 HIGHEST PAID CEOs IN THE S&P 500 VIA WSJ\n\n🥇 Elon Musk, Tesla $TSLA: $158,359M\n🥈 Shankh Mitra, Welltower $WELL: $821M\n🥉 George Kurtz, CrowdStrike $CRWD: $248M\n4. Hock Tan, Broadcom $AVGO: $205M\n5. David Zaslav, Warner Bros $WBD: $165M\n6. Stephen Schwarzman, Blackstone $BX: $126M\n7. David Solomon, Goldman Sachs $GS: $119M\n8. Nikesh Arora, Palo Alto Networks $PANW: $100M\n9. Jane Fraser, Citigroup $C: $96M\n10. Charles Scharf, Wells Fargo $WFC: $95M\n11. Joseph Bae, KKR $KKR: $84M\n12. Robin Vince, BNY Mellon $BK: $83M\n13. Scott Nuttall, KKR $KKR: $80M\n14. Marc Casper, Thermo Fisher $TMO: $80M\n15. Tim Cook, Apple $AAPL: $74M\n16. Gregory Case, Aon $AON: $74M\n17. John Plant, Howmet Aerospace $HWM: $71M\n18. John Wren, Omnicom $OMC: $70M\n19. Michael Arougheti, Ares Management $ARES: $68M\n20. Ariel Emanuel, TKO Group $TKO: $67M\n21. Richard Fairbank, Capital One $COF: $65M\n22. Anirudh Devgan, Cadence Design $CDNS: $57M\n23. Lisa Su, AMD $AMD: $55M\n24. Theodore Sarandos, Netflix $NFLX: $54M\n25. Greg Peters, Netflix $NFLX: $53M\n26. Charles Robbins, Cisco $CSCO: $53M\n27. William McDermott, ServiceNow $NOW: $52M\n28. Shantanu Narayen, Adobe $ADBE: $51M\n29. Marc Benioff, Salesforce $CRM: $49M\n30. Stephen Squeri, American Express $AXP: $46M",
+      "url": "https://x.com/StockMKTNewz/status/2069548946419020163",
+      "kind": "post",
+      "engagement": {
+        "views": 61733,
+        "likes": 179,
+        "reposts": 26,
+        "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069768286955307050",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-24",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "co-developed OpenAI's first custom AI inference chip (Jalapeño)",
+        "multi-generation roadmap with OpenAI",
+        "gigawatt scale data center deployment starting 2026 with Microsoft and other partners"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "OPENAI AND BROADCOM $AVGO JUST UNVEILED OPENAI'S FIRST CUSTOM AI CHIP\n\nIt is called Jalapeño. It is an inference accelerator built from scratch specifically for large language models.\n\nDesigned from scratch to manufacturing tape-out in nine months. OpenAI believes this is the fastest ASIC development cycle ever achieved in high-performance advanced semiconductors.\n\nBroadcom CEO Hock Tan:\n\n\"This is just the beginning of a multi-generation roadmap. By co-developing our industry-leading silicon directly with OpenAI, we are enabling the deployment of gigawatt scale data centers with Microsoft and other partners beginning in 2026.\"\n\nDeployment starts by end of 2026 across multiple data center partners at gigawatt scale.",
+      "url": "https://x.com/StockMKTNewz/status/2069768286955307050",
+      "kind": "post",
+      "engagement": {
+        "views": 49749,
+        "likes": 226,
+        "reposts": 37,
+        "replies": 31
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069774451366064346",
+      "blogger_id": "jukan05",
+      "date": "2026-06-24",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "@tuolaji2024 Are you sure you’re interpreting my point correctly?\n\nBroadcom is trying to take away CBRS’s largest revenue customer.",
+      "url": "https://x.com/jukan05/status/2069774451366064346",
+      "kind": "reply",
+      "engagement": {
+        "views": 6911,
+        "likes": 48,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070553697541910760",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "Everyone is adopting memory on logic 3D stacking\nSamsung, Huawei, Apple, Qualcomm for phones (2027-28)\nGoogle, Nvidia, Broadcom for AI XPUs (2028-29)",
+      "url": "https://x.com/zephyr_z9/status/2070553697541910760",
+      "kind": "post",
+      "engagement": {
+        "views": 44902,
+        "likes": 206,
+        "reposts": 17,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071878284154212859",
+      "blogger_id": "jukan05",
+      "date": "2026-06-30",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "LG Electronics Begins ASIC Design Service Based on TSMC Processes\n\nLG Electronics is entering the application specific integrated circuit (ASIC) design service market, leveraging its independent system semiconductor design capabilities. LG Electronics has designed system on chip (SoC) products for use in its own devices since the early 2000s, and it is now expanding this into an external service. The business model mirrors that of US semiconductor firms Broadcom and Marvell, and the target customers are domestic and overseas fabless companies.\n\nAccording to the semiconductor industry on the 30th, LG Electronics has launched its design service business centered on the SoC Center under its Chief Technology Officer (CTO). A design service involves converting a semiconductor design circuit into a physical circuit suited to a foundry's production line.\n\nUnlike a typical design house, LG Electronics provides ASIC design services. This follows the same business model as Broadcom and Marvell, with the company's in house SoC expertise developed through chips such as DQ-C serving as the foundation for the business.\n\nIts first result is a robot vacuum cleaner chipset being mass produced under the \"K On Device AI Semiconductor\" national project. The chip is produced on TSMC's 6nm (nanometer, one billionth of a meter) process based on orders from a domestic fabless company, after which LG Electronics' HS Business Division repurchases it and installs it in robot vacuum cleaners. LG Electronics is reportedly in talks on design service cooperation with several domestic and overseas customers.\n\nOne semiconductor industry official assessed, \"LG Electronics' SoC Center is a large scale specialized organization that supports the home appliance and automotive component businesses and possesses its own IP development capability,\" adding, \"From a business diversification standpoint, the strategy of deploying its high end design workforce into external design services is a competitive choice in terms of both technical stability and business efficiency.\"\n\nLG Electronics already holds an IP portfolio for processes at 6nm and below, and it reportedly plans to broaden its service scope to the 3nm (N3) process within the next three years, depending on customer demand.\n\nCost Savings Through In House Staffing... A \"30 Year TSMC Partnership\" Reference as a Strength\n\nThe competitive edge LG Electronics emphasizes is cost. Existing design houses relied on outsourced staff during the design process, resulting in high contracting costs. By contrast, LG Electronics uses a structure in which in house engineers handle the design directly, allowing it to reduce additional labor costs.\n\nIts track record is also a strength. Even after selling LG Semicon in 1999, LG Electronics retained its design organization, effectively making it a fabless company. Having lost its production plants, LG Electronics began outsourcing chip production to TSMC in the early 2000s, a partnership spanning more than 20 years.\n\nThe industry expects that, on the basis of its relationship of trust with TSMC, LG Electronics will be able to offer support such as wafer allocation for customer volumes.\n\nA fabless industry official who requested anonymity explained, \"Most design houses tend to set high contracting costs because they rely on outsourced staff due to a shortage of their own personnel,\" adding, \"LG Electronics is free from this labor cost burden and has a long standing relationship of trust with TSMC, which can make it an attractive option.\"\n\nThat said, LG Electronics is not a TSMC VCA (Value Chain Alliance). A VCA is a partner design house that has built a cooperative framework with TSMC. Under TSMC policy, outside of mainland Taiwan only one VCA may exist per country. In Korea, ASICLAND is the TSMC VCA.\n\nSpillover Benefit From Samsung Foundry's Shift in Direction... Expected to Absorb Domestic Demand\n\nThe industry also expects that the contraction of Samsung Electronics' foundry legacy processes will be a boon for LG Electronics' design service.\n\nA semiconductor industry official forecast, \"As Samsung Foundry's legacy processes contract, some customers are turning to TSMC, which has abundant legacy capacity,\" predicting, \"If LG Electronics rides this trend, it could draw in a substantial share of domestic demand.\"\n\nAn LG Electronics official responded, \"We cannot confirm the matter.\"",
+      "url": "https://x.com/jukan05/status/2071878284154212859",
+      "kind": "post",
+      "engagement": {
+        "views": 50668,
+        "likes": 180,
+        "reposts": 19,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071953488825979198",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-30",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "will emerge from the gloom tomorrow",
+        "currently still suppressed/under pressure"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "AVGO也是 明天将会走出阴霾\n\n目前仍然被压制",
+      "url": "https://x.com/octopusycc/status/2071953488825979198",
+      "kind": "post",
+      "engagement": {
+        "views": 19635,
+        "likes": 28,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072427713067930045",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "BREAKING: Look at this.\n\nOn July 23, 2025, Trump purchased up to $5 million of Broadcom, $AVGO, Meta, $META, Amazon, $AMZN, Apple, $AAPL, Microsoft, $MSFT, &amp; Nvidia, $NVDA.\n\nLater that day, the Trump admin unveiled its AI Action Plan, a policy that benefited those companies.",
+      "url": "https://x.com/unusual_whales/status/2072427713067930045",
+      "kind": "post",
+      "engagement": {
+        "views": 466660,
+        "likes": 5092,
+        "reposts": 832,
+        "replies": 253
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072448718633316671",
+      "blogger_id": "jukan05",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "MediaTek Reportedly Secures Meta as ASIC Customer After TPU\n\nQualcomm has formally unveiled its Dragonfly platform, loudly declaring its entry into the cloud AI market, and by leading with several product lines at once it has captured a sizable base of customers in one stroke. MediaTek, the Taiwanese IC design heavyweight that has drawn high expectations in recent years for its cloud custom chip (ASIC) business, appears set to compete once again with this longtime rival in the ASIC arena. Word from the supply chain is that MediaTek's securing of a \"second customer\" beyond Google is already firm, and barring surprises, that customer will be Meta as rumored.\n\nMediaTek, by convention, does not publicly comment on individual products, customer situations, or market rumors.\n\nQualcomm currently appears to hold key major customers such as Meta, Microsoft, and even ByteDance. The industry view, however, is that MediaTek, which continues to deepen its cooperation with Google and stands a chance of locking in a second customer, is not in fact at a disadvantage.\n\nA semiconductor supply chain source stated flatly that, judging by the current ordering outlook of major cloud service providers (CSPs) for AI data centers and ASIC products and the pace of generational transition, Google remains to this day the major customer whose progress is the strongest and whose stance is the most aggressive.\n\nThis does not, of course, mean that orders from other CSPs are small in scale or that they might be delayed. Rather, it means that securing Google's orders more reliably guarantees the positive effect they will bring to earnings. Once the mass production schedule emerges, one can basically pin down how much more can be earned in that year, and the scale is above a certain level as well.\n\nMediaTek not only holds two products, code named Zebrafish and Humufish, but according to market related information and confirmation from industry sources well versed in ASICs, its participation in the v9 generation Triggerfish is now all but confirmed. This means that from late 2026 through 2028, and even into 2029, MediaTek can steadily reap the revenue contribution brought by TPU mass production.\n\nCompared with Qualcomm's stated 2029 cloud AI revenue target of 15 billion dollars, it appears that MediaTek, holding multiple TPU ASIC orders, reaching the 10 billion dollar level is only a matter of time.\n\nThat said, the industry is paying equal attention to whether MediaTek can smoothly secure a second key CSP major customer. Taking together the earlier market information and recent confirmation from the supply chain side, MediaTek is still actively cooperating with Meta on ASIC products, and the substance of that cooperation is likely still centered on AI accelerator chips.\n\nWhile Meta has struck cooperation deals with Arm and Qualcomm one after another during this period, those cooperation products were all aimed at CPUs, and on the self developed AI accelerator chip front there is still no clearer cooperation news. If MediaTek can land this customer, it will be of no small help to the subsequent growth of its ASIC business.\n\nIC design industry sources observe that Meta's recent cloud AI development strategy has indeed been somewhat chaotic and unclear. Its in house chip development plans have been repeatedly adjusted, and in the CPU segment alone it has sought out multiple cooperation partners and pursued different approaches.\n\nOn the AI accelerator chip front, although Meta has previously officially announced its cooperation plan with Broadcom, word from the supply side indicates that this has not interrupted the cooperation plan underway between MediaTek and Meta. Evidently Meta intends to develop products with as many cooperation partners as possible.\n\nIC design industry sources also emphasized that the cloud AI development blueprints of the two companies, MediaTek and Qualcomm, still look quite different. MediaTek is concentrating all its resources on the ASIC business, whereas Qualcomm intends to pursue customization and standardization in parallel, covering both AI accelerator chip and CPU product directions at once.\n\nThe differing plans for their product lines mean the two sides' development strategies should also differ. From MediaTek's standpoint, as long as it focuses its development on the ASIC end and holds onto Google as a major customer over the long term, it will by no means tilt into a disadvantage on the fundamental competitive footing.",
+      "url": "https://x.com/jukan05/status/2072448718633316671",
+      "kind": "post",
+      "engagement": {
+        "views": 137345,
+        "likes": 282,
+        "reposts": 21,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072458831217737932",
+      "blogger_id": "jukan05",
+      "date": "2026-07-01",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "losing ASIC business to MediaTek"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "@Alex_Intel_ MTK is eating AVGO’s lunch.",
+      "url": "https://x.com/jukan05/status/2072458831217737932",
+      "kind": "reply",
+      "engagement": {
+        "views": 2805,
+        "likes": 14,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072460267741720961",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-01",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "will make a lot of money designing chips for Ant and OAI"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Hock",
+      "text": "@TBU12345678 Hock will make a lot of money designing chips for Ant &amp; OAI",
+      "url": "https://x.com/zephyr_z9/status/2072460267741720961",
+      "kind": "reply",
+      "engagement": {
+        "views": 3186,
+        "likes": 24,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072657265065152720",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-02",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "TRUMP'S DISCLOSED PORTFOLIO ADDS UP TO $3.8B, HERE'S WHAT'S ACTUALLY INSIDE EACH CATEGORY\n\nReal estate & golf: $1.44B (37%)\n\n- Includes 12 properties capped at \"$50M+\" each: Mar-a-Lago, Trump Tower, Bedminster, Doral, Turnberry, Seven Springs, Trump Park Ave, Trump Hotel Chicago, and more. Plus $235M in \"other real estate.\"\n\nStocks: $744M (19%)\n\n- $461M in unnamed \"other stocks.\" Named positions include Apple ($38M), Nvidia ($35M), Alphabet ($32M), Broadcom ($27M), Microsoft ($26M), Amazon ($25M), Meta ($20M), and Tesla ($19M).\n\nBonds & notes: $714M (19%)\n\n- $360M municipal, $288M corporate, $66M US government.\n\nCrypto: $249M (6%)\n\n- $115M in World Liberty Ethereum, $100M in World Liberty Bitcoin, plus smaller stablecoin holdings.\n\nOperating businesses: $237M (6%)\n\n- $172M unnamed \"other,\" $50M in The Trump Corp, $15M in Trump Retail.\n\nCash & money market: $222M (6%)\n\n- $122M other cash and bank, $100M money-market accounts.\n\nETFs & funds: $182M (5%)\n\n- $104M in unnamed \"other ETFs,\" plus named positions in SPY ($30M), VIG ($18M), SPHQ ($15M), and IGM ($15M). Truth Social sits in this bucket too, capped at the form's \"$50M+\" floor.\n\nShoutout to our partners over at Leverage Shares for making this graphic 🫡",
+      "url": "https://x.com/StockMKTNewz/status/2072657265065152720",
+      "kind": "post",
+      "engagement": {
+        "views": 74739,
+        "likes": 216,
+        "reposts": 43,
+        "replies": 32
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072923398653821326",
+      "blogger_id": "jukan05",
+      "date": "2026-07-03",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "Has $AVGO  entered the Trainium supply chain? Or is it $QCOM ?",
+      "url": "https://x.com/jukan05/status/2072923398653821326",
+      "kind": "post",
+      "engagement": {
+        "views": 201345,
+        "likes": 224,
+        "reposts": 11,
+        "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073143020111954393",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-03",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "This is how the largest stocks in the world have performed over the last decade\n\nNvidia $NVDA +16,602%🟢\nApple $AAPL +1,187%🟢\nGoogle $GOOGL +919%🟢\nMicrosoft $MSFT +663%🟢\nAmazon $AMZN +569%🟢\nTaiwan Semi $TSM +1,536%🟢\nBroadcom $AVGO +2,237%🟢\nMeta Platforms $META +410%🟢\nTesla $TSLA +2,626%🟢\nEli Lilly $LLY +1,438%🟢\nMicron $MU +7,705%🟢",
+      "url": "https://x.com/StockMKTNewz/status/2073143020111954393",
+      "kind": "post",
+      "engagement": {
+        "views": 174017,
+        "likes": 1219,
+        "reposts": 138,
+        "replies": 72
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073408963903701085",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-04",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "Here are the top 50 largest American 🇺🇸 companies\n\nNvidia $NVDA $4.718T\nApple $AAPL $4.532T\nGoogle $GOOG $4.346T\nMicrosoft $MSFT $2.900T\nAmazon $AMZN $2.610T\nSpaceX $SPCX $2.134T\nBroadcom $AVGO $1.714T\nMeta Platforms $META $1.479T\nTesla $TSLA $1.477T\nMicron Technology $MU $1.101T\nBerkshire Hathaway $BRK.B $1.095T\nEli Lilly $LLY $1.082T\nJPMorgan $JPM $896.21B\nWalmart $WMT $890.03B\nAMD $AMD $844.35B\nVisa $V $688.67B\nJohnson & Johnson $JNJ $633.19B\nIntel $INTC $604.87B\nExxon Mobil $XOM $568.23B\nApplied Materials $AMAT $478.78B\nMastercard $MA $476.59B\nAbbVie $ABBV $461.25B\nCisco $CSCO $444.16B\nCaterpillar $CAT $443.79B\nLam Research $LRCX $439.46B\nCostco $COST $422.04B\nBank of America $BAC $416.78B\nOracle $ORCL $404.04B\nGeneral Electric $GE $394.44B\nUnitedHealth $UNH $386.28B\nCoca-Cola $KO $362.01B\nHome Depot $HD $356.86B\nProcter & Gamble $PG $352.57B\nMorgan Stanley $MS $337.42B\nChevron $CVX $336.97B\nNetflix $NFLX $326.96B\nMerck $MRK $319.99B\nPalantir $PLTR $309.97B\nKLA $KLAC $307.69B\nGoldman Sachs $GS $301.20B\nGE Vernova $GEV $299.11B\nPhilip Morris $PM $284.07B\nPalo Alto Networks $PANW $283.66B\nIBM $IBM $272.11B\nRTX $RTX $268.32B\nTexas Instruments $TXN $266.72B\nWells Fargo $WFC $261.67B\nSandisk $SNDK $258.41B\nDell $DELL $254.78B\nAmerican Express $AXP $240.15B",
+      "url": "https://x.com/StockMKTNewz/status/2073408963903701085",
+      "kind": "post",
+      "engagement": {
+        "views": 56361,
+        "likes": 384,
+        "reposts": 63,
+        "replies": 40
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073410686894366901",
+      "blogger_id": "DJTRadar",
+      "date": "2026-07-04",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "Here is how much money you would have today if you invested $1,000 in every single stock Trump mentioned or his administration put money into since January 20, 2025.\n\nNot the cherry-picked winners. All of them. Exact closing prices the day he mentioned them or the day the government stepped in.\n\nI went through every ethics disclosure, speech transcript, TV clip, and Truth Social post to build this list.\n\nJuly 23, 2025 AI Action Plan cluster (his personal accounts bought big):\n\nNVDA: $170.78 → $1,140.82 (+14.1%)\nAAPL: $214.15 → $1,441.19 (+44.1%)\nMSFT: $505.87 → $771.92 (-22.8%)\nAMZN: $228.29 → $1,062.99 (+6.3%)\nAVGO: $283.69 → $1,270.58 (+27.1%)\nMETA: $713.58 → $816.87 (-18.3%)\n\nBig personal buys + public shoutouts:\n\nDELL: $126.01, plus the May 8 speech telling people “Go out and buy Dell!” → $3,129.28 (+212.9%)\nPLTR: $139.51, plus Truth Social praise → $926.82 (-7.3%)\n\nJune 2026 Pennsylvania speech mentions:\n\nNOK: $13.81 → $874.00 (-12.6%)\nLLY: $1,117.26 → $1,086.51 (+8.7%)\n\nMarch 2026 TV and speech mentions:\n\nMU: $355.46, called “one of the hottest companies” on Fox → $2,744.50 (+174.5%)\nTMO: $495.72, called a “great company” → $1,055.92 (+5.6%)\n\nAdministration investments (government money):\n\nINTC: $20.00 from the date his administration bought the 9.9% government stake → $6,017.49 (+501.7%)\nMP: $20.87, personal buys plus the DoD ~15% stake → $2,554.50 (+155.5%)\nLAC: $6.01, admin equity stake plus $2.3B support → $625.62 (-37.4%)\n\nThe grand total.\n\n$15,000 invested → $25,519 today.\n\n+70.1% overall.\n\nThe S&P 500 returned 21% over the same period.\n\nTrump’s picks more than tripled the market.\n\nThe monsters were DELL, MU, INTC, and MP. The critical minerals and domestic manufacturing names crushed it the moment government money stepped in, especially INTC once the administration took its stake. The mega cap tech names dragged the total down.\n\nThe pattern is crystal clear. AI infrastructure, semiconductors, rare earths, lithium, defense, and anything tied to US supply chains.\n\nNew disclosures drop, the list updates. We are tracking all of it.\n\nFollow us with notifications, this is very important.\n\nA lot of people are going to wish they followed us sooner.",
+      "url": "https://x.com/DJTRadar/status/2073410686894366901",
+      "kind": "post",
+      "engagement": {
+        "views": 2529776,
+        "likes": 1618,
+        "reposts": 145,
+        "replies": 60
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073485365965373885",
+      "blogger_id": "DJTRadar",
+      "date": "2026-07-04",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "ORCL. Oracle.\n\nTrump executed 11 purchases worth somewhere between $2.2M and $10.6M, plus a few smaller sales. His most recent buy came in March.\n\nHe was also loading up on Nvidia, Microsoft, Broadcom, and Dell during the February dip in software stocks.",
+      "url": "https://x.com/DJTRadar/status/2073485365965373885",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 33133,
+        "likes": 333,
+        "reposts": 30,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073920109106655590",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-05",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "This is interesting timing.\n\nOn July 23, 2025, Trump purchased $5 million of Broadcom, $AVGO, Meta. $META, Amazon, $AMZN, Apple, $AAPL, Microsoft, $MSFT, and Nvidia, $NVDA.\n\nLater that day, the Trump admin announced its AI Action Plan, policy expected to benefit those companies.",
+      "url": "https://x.com/unusual_whales/status/2073920109106655590",
+      "kind": "post",
+      "engagement": {
+        "views": 426766,
+        "likes": 2092,
+        "reposts": 277,
+        "replies": 142
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074103277914865664",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "Broadcom $AVGO and Apple $AAPL just announced they have agreed to \n\n\"expand their long-standing technology collaboration through 2031 by entering into new multi-year long-term agreements for Broadcom to develop and supply a range of custom ASIC silicon products for use in multiple generations of Apple products.\"",
+      "url": "https://x.com/StockMKTNewz/status/2074103277914865664",
+      "kind": "post",
+      "engagement": {
+        "views": 71881,
+        "likes": 272,
+        "reposts": 23,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074641836874809650",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "switch ASICs winner in CPO ramp"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "Scale-out CPO switches going from 5,000 units this year to 200,000 by 2030. And you are selling?\n\nThat’s a 144% CAGR. A 40x volume ramp that both Yole and Morgan Stanley are modeling off the same wall. That’s the whole thesis, and notice what it doesn’t require: it doesn’t require me to pick which laser vendor qualifies into which switch, or whether Broadcom’s socket beats Nvidia’s.\n\nTo be short this ramp up you have to argue the entire build doesn’t happen, and good luck making that case while the SemiAnalysis “delay” everyone panicked over still lands you at 200k units by 2030. \n\nA delay bends the curve doesn’t make it go away. \n\nThe physics won’t let it go away. A 200,000 GPU cluster is burning ~17 megawatts just on transceivers. CPO cuts that ~73% per 800G. At scale-up density copper is already dead and pluggables are out of runway. Forced migrations are the best ramps you can be long because the demand doesn’t care.\n\nThe biggest winners:\n\nLasers and light sources: $LITE, $COHR, $SIVE\nOptical engines and pump lasers: $AAOI, $COHR\nSwitch ASICs: $AVGO, $MRVL, $NVDA\nOptical I/O chiplets: $ALAB, $CRDO\nPackaging and assembly: $FN, $AMKR\nInP substrate and materials: $AXTI\n\nLITE is the cleanest CPO scarcity play, shipping 200G-per-lane EMLs at volume, book through 2028. $AAOI is the one that wins both ways: its core 800G and 1.6T pluggable business actually benefits if CPO slips, while its external laser fab keeps it in the game when CPO finally ramps.\n\nBullish photonics ⚡️",
+      "url": "https://x.com/ren_stocks/status/2074641836874809650",
+      "kind": "post",
+      "engagement": {
+        "views": 49366,
+        "likes": 313,
+        "reposts": 37,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074765232124408119",
+      "blogger_id": "jukan05",
+      "date": "2026-07-08",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Hock Tan may be downplaying MediaTek too aggressively",
+        "Broadcom's own TPU was also delayed in some areas",
+        "doubts about whether Broadcom can continue to defend its high margins (~65%)",
+        "competition from MediaTek (TPU margin ~35%) may pressure margins over time"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "Some thoughts I’ve been having recently:\n\nCould DeepSeek and Zhipu considering their own chips imply that China’s HBM self-sufficiency has already reached a certain level, or is at least on track to get there?\n\nAlso, is the EDA moat already starting to collapse? OpenAI reportedly completed Jalapeño in just nine months using its own in-house AI chip design tools. Is it really plausible that Chinese labs don’t have something similar? In fact, there are claims that the chip design tools developed by Chinese labs may be even more practical in real-world use than OpenAI’s.\n\nThe fact that OpenAI is specifically launching GPT-5.6 inference on Cerebras makes me think they may see more demand for ultra-fast inference than people realize. Jensen has described markets like Cerebras as niche, but OpenAI’s move seems to suggest otherwise.\n\nBroadcom is a great company, but I think Hock Tan may be downplaying MediaTek too aggressively. He says MediaTek’s TPU has been delayed, but wasn’t Broadcom’s own TPU also delayed in some areas?\n\nAmazon’s 20% GPU price increase is not because of memory. It is because of rising demand.\n\nI also have doubts about whether Broadcom can continue to defend its high margins. MediaTek’s TPU margin is around 35%, while Broadcom’s is around 65%. Broadcom may be able to maintain high margins for the first couple of years as it wins new customers like Anthropic, but won’t margins eventually trend lower as competition intensifies?\n\nMorgan Stanley updated its TPU / AMD GPU shipment estimates, but personally, I do not understand how MS is arriving at this scale for AMD GPU shipments.\n\nMorgan Stanley now models AMD shipping 2.4 million GPUs this year and 2.7 million next year.",
+      "url": "https://x.com/jukan05/status/2074765232124408119",
+      "kind": "post",
+      "engagement": {
+        "views": 104267,
+        "likes": 508,
+        "reposts": 44,
+        "replies": 70
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074835513471647747",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-08",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "Apple $AAPL and Broadcom $AVGO just announced a expanded deal which could be worth up to $30 Billion\n\nThe deal will involve Broadcom manufacturing more than 15B chips in the US for Apple, supporting hundreds of jobs, and Apple said it also will help Broadcom upgrade its production facilities in Colorado - Bloomberg",
+      "url": "https://x.com/StockMKTNewz/status/2074835513471647747",
+      "kind": "post",
+      "engagement": {
+        "views": 46897,
+        "likes": 233,
+        "reposts": 22,
+        "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075210832401604870",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-09",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "$AEHR just landed a FOLLOW ON production order from its lead silicon photonics customer.\n\n\"The order includes Aehr’s turnkey FOX-XP multi-wafer WLBI system configured to test up to nine 300mm wafers in parallel together with the fully automated FOX WaferPak® AutoAligner™, enabling automated, high-volume production burn-in with hands-free operation when integrated with an automated wafer handler.\"\n\nSame customer that ran their first fully automated system last year. now scaling up to high volume.\n\nNo customer name in the release. The wafer runs through a FOX-XP before it ships whether the buyer downstream turns out to be $AVGO, $MRVL or $CSCO.\n\nThe word that matters here is follow-on. the first system already qualified and ran hands-free, so this is the volume ramp starting.\n\nearnings are july 14. $AEHR",
+      "url": "https://x.com/KawzInvests/status/2075210832401604870",
+      "kind": "post",
+      "engagement": {
+        "views": 23589,
+        "likes": 45,
+        "reposts": 1,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075624299126575423",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-10",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AVGO",
+      "text": "以后盘前就可以交易期权了\n\n支持下面这些品类\n\nAAPL, AMD, AMZN, AVGO, BABA, GOOG, GOOGL, HOOD, INTC, META, MSFT, MU, NFLX, NVDA, ORCL, PLTR, TSLA will trade pre mkt",
+      "url": "https://x.com/octopusycc/status/2075624299126575423",
+      "kind": "post",
+      "engagement": {
+        "views": 19697,
+        "likes": 52,
+        "reposts": 8,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

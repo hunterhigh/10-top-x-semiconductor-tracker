@@ -5,17 +5,19 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "SoFi Technologies",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-31",
-  "last_mention": "2026-04-12",
-  "total_mentions": 20,
+  "last_mention": "2026-06-23",
+  "total_mentions": 22,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 20
+    "aleabitoreddit": 20,
+    "StockMKTNewz": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 20
+    "opinion": 20,
+    "news": 2
   },
   "mentions": [
     {
@@ -476,6 +478,52 @@
         "replies": 1
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066983633689120895",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-16",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "CEO Anthony Noto bought 13,888 shares at $18.06 spending ~$250K (insider buying)"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SOFI",
+      "text": "SoFi CEO Anthony Noto just bought 13,888 shares of $SOFI stock at $18.06 per share spending ~$250K\n\nAnthony Noto now owns 11,960,507 shares of SoFi stock worth $211.8M https://t.co/CO3mSfXhHm",
+      "url": "https://x.com/StockMKTNewz/status/2066983633689120895",
+      "kind": "post",
+      "engagement": {
+        "views": 87667,
+        "likes": 442,
+        "reposts": 27,
+        "replies": 39
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069391118937051558",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-23",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SOFI",
+      "text": "$SOFI just announced \"Composer by SoFi\"\n\n\"an AI-powered investing platform that helps investors move from investing ideas to automated execution in minutes\" https://t.co/5MQMfK79PB",
+      "url": "https://x.com/StockMKTNewz/status/2069391118937051558",
+      "kind": "post",
+      "engagement": {
+        "views": 96276,
+        "likes": 252,
+        "reposts": 32,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

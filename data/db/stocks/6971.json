@@ -1,21 +1,22 @@
 {
   "ticker": "6971",
-  "cashtag": "6971",
+  "cashtag": "Kyocera",
   "price_symbol": "6971",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Kyocera Corporation",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-30",
-  "last_mention": "2026-03-30",
-  "total_mentions": 1,
+  "last_mention": "2026-06-17",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -38,6 +39,28 @@
         "replies": 20
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067371368770109774",
+      "blogger_id": "jukan05",
+      "date": "2026-06-17",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Kyocera",
+      "text": "▶ CSP In House ASIC Boom Drives MLCC Specification Concentration; Structural Shortages of High End Specialty MLCCs May Emerge in 2H26, Says TrendForce\n\n- According to TrendForce's latest MLCC industry survey, as the AI competition among global CSPs continues, the adoption of in house ASIC accelerators is accelerating, and as a result, reliance on small form factor, high capacity, high heat resistance MLCCs is expanding.\n\n- Because of this, demand is rapidly concentrating into a limited set of premium specifications, but suppliers' capacity expansion is failing to keep pace with the speed of demand growth, making the possibility of a structural supply shortage in the second half of 2026 an increasingly hard to overlook risk.\n\n- TrendForce emphasizes that next generation AI accelerator platforms are undergoing frequent design changes at the final qualification stage, and that in this process the per board mounting volume of high spec MLCCs is increasing substantially.\n\n- For example, AMD has replaced both aluminum electrolytic capacitors and tantalum capacitors with MLCCs in the BOM of its MI450 platform, and as a result the usage of 47μF 2.5V X6S 0402 MLCCs has increased from 1,440 units per board to 10,544 units.\n\n- Similarly, demand for 100μF 4V X6S 0805 MLCCs on NVIDIA's Vera Rubin platform has also increased from 320 units per board to 500 units.\n\n- As the market enters the second half of 2026, mass production of major ASIC platforms such as Google TPU V8t/i, AWS Trainium4, and Meta MTIA 400/450 is expected to ramp up in earnest, and accordingly MLCC demand is projected to reach a new high.\n\n- By contrast, supply growth is failing to keep pace with this demand surge, and signs of supply tightness are already intensifying.\n\n- Murata began mass production of high spec MLCC products such as the 47μF 2.5V X6S 0402 and the 100μF 2.5V X6S 0603 at the end of 2025.\n\n- Samsung Electro Mechanics entered mass production starting in March 2026, and Taiyo Yuden and Kyocera are also expanding output.\n\n- However, these specifications are extremely difficult to manufacture, and significant challenges in securing yield still exist across the industry, creating constraints on any meaningful expansion of actual supply.\n\n- In addition, Murata's new Izumo plant is expected to reach full operation only in 2027, so it is unlikely to provide a meaningful supply easing effect within the current demand cycle.\n\n- The Book to Bill (BB) ratio of major Japanese and Korean suppliers has been rising steadily since April 2026, and lead times for some high capacity X6S products have been extended from the previous 8 weeks to as much as 20 weeks.\n\n- Major CSPs that have already secured long term supply agreements (LTAs) are expected to receive priority allocation.\n\n- By contrast, ODMs and system makers that have not yet secured supply agreements are increasingly likely to face both price premiums on the spot market and shipment delays at the same time.\n\n- TrendForce projects that as multiple demand factors converge simultaneously between the end of the third quarter and the start of the fourth quarter, the possibility of a supply shortage, which until now has remained a potential risk, could turn into an actual market shortage.\n\n- Accordingly, it emphasizes that ODMs need to hurry to secure strategic inventory during the third quarter and to raise their safety stock levels in preparation for potential supply disruptions in the fourth quarter.",
+      "url": "https://x.com/jukan05/status/2067371368770109774",
+      "kind": "post",
+      "engagement": {
+        "views": 70828,
+        "likes": 183,
+        "reposts": 24,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

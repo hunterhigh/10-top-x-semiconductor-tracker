@@ -5,17 +5,20 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Lululemon Athletica",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-10",
-  "last_mention": "2026-05-15",
-  "total_mentions": 17,
+  "last_mention": "2026-06-30",
+  "total_mentions": 20,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 17
+    "aleabitoreddit": 17,
+    "StockMKTNewz": 2,
+    "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 17
+    "opinion": 18,
+    "news": 2
   },
   "mentions": [
     {
@@ -425,6 +428,74 @@
         "replies": 10
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069087190681022775",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LULU",
+      "text": "Lululemon收购预测\n\nBurry发布关于Lululemon的收购预测，认为如果当前趋势持续，私募股权公司可能会收购LULU，因为私募资本已承诺投资零售业，而LULU规模合适。\n\n$LULU   Burry takeover note \"LULU is going to be taken out if this continues. Private equity has capital committed to retail, and this is good size.\"\n\n————————\n\n早该被收购了",
+      "url": "https://x.com/octopusycc/status/2069087190681022775",
+      "kind": "post",
+      "engagement": {
+        "views": 11236,
+        "likes": 15,
+        "reposts": 0,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069142159685484747",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [
+        "hit new 52-week low"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LULU",
+      "text": "All these stocks hit new 52 WEEK LOWS at some point today\n\nNetflix $NFLX\nPalantir $PLTR\nComcast $CMCSA\nAccenture $ACN\nSalesforce $CRM\nTrade Desk $TTD \nMcDonald's $MCD\nLululemon $LULU\nCognizant $CTSH\nBoston Scientific $BSX\nAlbertsons $ACI\nVici Properties $VICI\nKroger $KR\nO'Reilly Automotive $ORLY\nChewy $CHWY\nSony Group $SONY\nPDD Holdings $PDD\nTencent Music $TME\nSanofi $SNY\nIntuit $INTU\nCoStar Group $CSGP\nTAL Education $TAL\nFull Truck Alliance $YMM\nTelus Corp $TU\nTrip $TCOM\nFidelity National $FIS\nIntercontinental Exchange $ICE\nZillow C $Z\nAutodesk $ADSK\nCharter Communications $CHTR\nSAP $SAP\nLi Auto $LI\nRollins $ROL\nFox Corp B $FOX\nAeroVironment $AVAV\nAmdocs $DOX\nBooz Allen Hamilton $BAH\nBilibili $BILI\nProcore Technologies $PCOR\nPegasystems $PEGA\nBJ's Wholesale Club $BJ\nTransUnion $TRU\nHubSpot $HUBS\nOpenText $OTEX\nThomson Reuters $TRI\nLeidos Holdings $LDOS\nVipshop $VIPS\nEquifax $EFX\nGuidewire Software $GWRE",
+      "url": "https://x.com/StockMKTNewz/status/2069142159685484747",
+      "kind": "post",
+      "engagement": {
+        "views": 88540,
+        "likes": 389,
+        "reposts": 57,
+        "replies": 42
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072159684652339466",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-30",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LULU",
+      "text": "Here were the worst performing S&P 500 stocks from the first half of 2026\n\n💩 Intuit $INTU -61%🔴\nCostar $CSGP -58%🔴\nBoston Scientific $BSX -55%🔴\nAccenture $ACN -54%🔴\nCognizant $CTSH -53%🔴\nTrade Desk $TTD -52%🔴\nGartner $IT -49%🔴\nIntulett $PODD -46%🔴\nLululemon $LULU -45%🔴\nWorkday $WDAY -43%🔴",
+      "url": "https://x.com/StockMKTNewz/status/2072159684652339466",
+      "kind": "post",
+      "engagement": {
+        "views": 89425,
+        "likes": 240,
+        "reposts": 21,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

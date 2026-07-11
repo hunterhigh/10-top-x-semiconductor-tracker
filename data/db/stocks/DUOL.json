@@ -5,17 +5,20 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Duolingo",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-08-23",
-  "last_mention": "2026-03-17",
-  "total_mentions": 18,
+  "last_mention": "2026-06-16",
+  "total_mentions": 20,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 18
+    "aleabitoreddit": 18,
+    "StockMKTNewz": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 18
+    "opinion": 19,
+    "news": 1
   },
   "mentions": [
     {
@@ -431,6 +434,52 @@
         "replies": 1
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066936097628688733",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$DUOL",
+      "text": "ELON MUSK NET WORTH INCREASES (and decreases) $6B EVERY TIME SPACEX STOCK GOES UP/DOWN $1 DOLLAR\n\nFor anyone curious $6 Billion is equivalent to:\n\n- The market cap of Duolingo \n$DUOL\n \n- The New York Yankees\n\n- 11,659 homes at the average sale price of a new home in the United States\n\n- 120,000 new cars at the average sale price of a new car in the United States\n\n- 4 Billion Costco Hot Dog Combos",
+      "url": "https://x.com/StockMKTNewz/status/2066936097628688733",
+      "kind": "post",
+      "engagement": {
+        "views": 27772,
+        "likes": 253,
+        "reposts": 21,
+        "replies": 30
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067026111872037321",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-16",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "AI models replacing the need for language learning apps, implying DUOL owners are on the wrong side"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$DUOL",
+      "text": "At my job, I work with 14 different models, some proprietary, most are Claude with different levels of guardrails.\n\nParadis is spot on, on this take.\n\nModels lack alpha. \n\nGood.\n\nThis is a human endeavor, for now…\n\nSome humans also lack alpha. \n\nThat’s good too, not all of us can win.\n\nHere is looking at $DUOL stock owners.",
+      "url": "https://x.com/ren_stocks/status/2067026111872037321",
+      "kind": "post",
+      "engagement": {
+        "views": 22776,
+        "likes": 54,
+        "reposts": 1,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

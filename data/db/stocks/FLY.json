@@ -5,17 +5,18 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Firefly Aerospace",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-08",
-  "last_mention": "2026-04-19",
-  "total_mentions": 31,
+  "last_mention": "2026-07-06",
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 31
+    "aleabitoreddit": 31,
+    "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 31
+    "opinion": 32
   },
   "mentions": [
     {
@@ -792,6 +793,36 @@
         "replies": 2
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074237701021421900",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-06",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "down 53% since May, looks very attractive at $27/share ($4.5B MC)",
+        "long-time favorite space stock",
+        "monetizing vast lunar data as a high-margin AI/software engine",
+        "Blue Ghost 1 sent 120GB of raw lunar data, NASA issued $10M follow-on order",
+        "Ocula imaging service runs NVDA Jetson in lunar orbit — first edge AI around the moon",
+        "SciTec AI software on top of Jetson chain; Elytra spacecraft on five-year lunar mission",
+        "data processing in space is the near-term opportunity for orbital AI"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$FLY",
+      "text": "$FLY is running $NVDA compute from the moon and down 53% since May?\n\nFirefly has long been my favorite space stock and looks very attractive at $27/share ($4.5B MC).\n\nOne of its slept on superpowers is monetizing the vast data it collects, and this capability is being highlighted on the $NVDA blog.\n\nBlue Ghost 1 sent home 120GB of raw lunar data that scientists are STILL processing a year later. NASA even issued a $10M follow on order to buy more data than they originally negotiated.\n\nOn Blue Ghost 2 this year, Firefly's Ocula imaging service runs $NVDA Jetson directly in lunar orbit. First time edge AI has ever operated around the moon.\n\nInstead of dumping raw data down to Earth, Ocula runs the inference ON ORBIT and beams back only what the customer wants, in near real time.\n\nFirefly's own SciTec AI software sits on top of the Jetson chain. Its Elytra spacecraft stays parked at the moon for a FIVE YEAR mission running it.\n\nThis is the high margin AI/software engine hiding inside a \"space stock\".\n\n- Map landing sites for the next wave of lunar missions\n- Detect minerals like ilmenite for future lunar energy\n- Track objects and operations across cislunar space\n\nData processing in space feels like the near term opportunity for orbital AI until full on data centers get built there.",
+      "url": "https://x.com/michaelsikand/status/2074237701021421900",
+      "kind": "post",
+      "engagement": {
+        "views": 22821,
+        "likes": 91,
+        "reposts": 9,
+        "replies": 25
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

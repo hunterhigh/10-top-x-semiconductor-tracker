@@ -1,21 +1,25 @@
 {
   "ticker": "CIEN",
-  "cashtag": "Ciena (CIEN)",
+  "cashtag": "$CIEN",
   "price_symbol": "CIEN",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Ciena Corporation",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-06",
-  "last_mention": "2026-05-03",
-  "total_mentions": 7,
+  "last_mention": "2026-07-10",
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 7
+    "aleabitoreddit": 7,
+    "KawzInvests": 6,
+    "michaelsikand": 4,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 7
+    "opinion": 17,
+    "news": 1
   },
   "mentions": [
     {
@@ -170,6 +174,269 @@
         "replies": 78
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2065886285160444225",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-13",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "added $600M to backlog in a single quarter",
+        "backlog now at $7.7B"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "I went through every earnings call across the entire 800G and 1.6T supply chain and mapped out the actual supply vs. demand.\n\nThe $LITE  CEO said it best: \"We are significantly under shipping demand. It's certainly greater than that 30% number. We are having to make choices as to who we support.\"\n\n> $LITE has every laser it can make through the end of 2027 already sold.\n\n> $AAOI is expanding capacity 10x and the CEO still said demand will outrun it through mid-2027.\n\n> $FN said demand far exceeded what they shipped last quarter. Named lasers as the first constraint.\n\n> $CIEN added $600M to its backlog in a single quarter. Now sitting at $7.7B.\n\n> $CSCO raised its hyperscaler AI order guidance from $5B to $9B mid-year with one quarter left. That is purchase orders. Not projections.\n\nFull report is free to read. Link in replies or link in bio.",
+      "url": "https://x.com/KawzInvests/status/2065886285160444225",
+      "kind": "post",
+      "engagement": {
+        "views": 453778,
+        "likes": 824,
+        "reposts": 77,
+        "replies": 43
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066612577103118686",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "$MRVL joins the S&P 500 on June 22. It is already up 75% in the past month before a single index fund has bought a share.\n\nMatt Murphy on the Q1 call: \"We are seeing exceptional AI-related bookings, and as a result, we are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028.\"\n\nQ1 revenue came in at $2.418B, up 28% year-over-year. Q2 guided to $2.7B at the midpoint, 35% year-over-year growth. Operating cash flow hit a record $638M in a single quarter.\n\nMarvell sits at the physical layer of AI infrastructure. It makes the 800G and 1.6T optical interconnects moving data between GPUs, the 51.2T Ethernet switches connecting clusters, and the custom XPUs being designed directly into hyperscaler next-generation architecture. Every dollar of hyperscaler capex this year flows through hardware that needs what Marvell builds.\n\nJune 1 it released the industry's first 102.4 Tbps switch purpose-built for AI data centers. Jensen called it the next trillion-dollar company at Computex. At $272B market cap today that implies more than 3x from here if he is right. $MRVL $NVDA $CIEN $AAOI",
+      "url": "https://x.com/KawzInvests/status/2066612577103118686",
+      "kind": "post",
+      "engagement": {
+        "views": 149305,
+        "likes": 576,
+        "reposts": 61,
+        "replies": 42
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066672855983554676",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "holds number one global position in data center interconnect",
+        "DCI including scale-across is gaining momentum as customers connect AI data centers"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "The AI infrastructure buildout has three distinct networking layers. Each one is at a different point in its adoption curve and each one has different winners.\n\n1. Scale-up connects GPUs inside a single server and eventually across racks. The transition from copper is happening in stages.\n\n> Copper still dominates at short distances.\n\n> Active electrical cable extends that reach but loses signal integrity as clusters grow.\n\n> LPO removes the DSP entirely, cutting power consumption to near CPO levels while keeping the pluggable form factor operators already know.\n\n> NPO moves optics closer to the chip without full co-packaging. Both are ramping faster than CPO in the near term because they require less ecosystem disruption.\n\n> CPO is the endgame. It integrates optics directly onto the switch ASIC substrate, cutting signal loss from 20dB to 1-2dB and power consumption by 3x or more.\n\n$AVGO's Davisson and $NVDA's Spectrum-X are the CPO platforms. $MRVL acquired Celestial AI to position optics directly on top of XPUs rather than at the die edge, with Amazon as the lead design win. $COHR and $LITE supply the CW and EML lasers every platform requires. $LITE holds more than 50% share in high-speed EML lasers with multi-billion dollar supply agreements locked with Nvidia through end of decade. $CRDO and $MTSI supply the LRO and LPO chipsets capturing near term volume before CPO fully ramps.\n\n2. Scale-out connects servers inside a single data center. The 800G transceiver cycle is at peak volume with 1.6T at the beginning of its inflection.\n\n> $MRVL's 51.2T switches and DSPs sit at the center.\n\n> $AAOI is expanding capacity 10x and demand still outpaces supply through mid-2027.\n\n> $COHR supplies modules across the stack.\n\n3. Scale-across connects data centers to each other over distance so one AI model trains across geographically distributed GPU clusters as a single logical environment. The link between sites requires lossless coherent optical transport at 800G and 1.6T.\n\n> $CIEN holds the number one global position in data center interconnect. Their Q2 executive summary states it directly: \"DCI, including scale-across, is gaining momentum as customers connect AI data centers to monetize their investments.\"\n\n> $COHR and $LITE supply the optical circuit switches enabling spine replacement and redundancy across those links.",
+      "url": "https://x.com/KawzInvests/status/2066672855983554676",
+      "kind": "post",
+      "engagement": {
+        "views": 97766,
+        "likes": 255,
+        "reposts": 33,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066898048299470925",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-16",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "beat EPS by 12%, grew revenue 40% year over year, raised full year guidance to $6.3B",
+        "selloff had nothing to do with the business",
+        "convertible offering selling pressure now cleared through June 11 close",
+        "number one globally in data center interconnect",
+        "addressable market doubles to $50B by 2029",
+        "hyperscalers building continentally connected AI data centers requiring coherent optical at 800G and 1.6T",
+        "$7.7B backlog",
+        "stock is 30% off its high with both selloff catalysts cleared",
+        "management says visibility remains strong, well beyond historical norms"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "$CIEN beat EPS by 12%, grew revenue 40% year over year, and raised full year guidance to $6.3B. The stock is 30% off its high.\n\nThe selloff had nothing to do with the business. Full year guidance came in at $6.3B. The street was modeling $6.29B. When a beat-and-raise lands exactly on consensus after a 200% run, the exit happens automatically. The $2.875B convertible offering that followed added mechanical selling pressure from hedge counterparties through its June 11 close.\n\nGary Smith on the call: \"Visibility remains strong, well beyond our historical norms.\"\n\nHyperscalers are stitching together GPU clusters across cities, countries, and continents into a single logical training environment. The coherent optical fiber running between those sites at 800G and 1.6T is the backbone of every continentally connected AI data center being built today. That is what $CIEN builds. Number one globally in data center interconnect. Addressable market doubles to $50B by 2029. This is scale-across.\n\n$7.7B backlog. Stock is 30% off its high with both selloff catalysts cleared.",
+      "url": "https://x.com/KawzInvests/status/2066898048299470925",
+      "kind": "post",
+      "engagement": {
+        "views": 46174,
+        "likes": 181,
+        "reposts": 17,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066956573377798564",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "$NOK just announced a 10x expansion of its photonic chip facility in Allentown, Pennsylvania. New capacity online by end of Q3 2026.\n\nLess than 2% of global semiconductor advanced test and packaging happens on US soil. Nokia's Allentown plant is one of only a handful of facilities in the country doing it for optical modules going into AI infrastructure.\n\n$CIEN trades at 11.0x forward revenue. $COHR trades at 11.6x. Nokia trades at 3.4x. All three sell optical networking gear to the same AI datacenter customers.\n\nThe gap exists because optical is still only 15% of Nokia's revenue. Wall Street prices the whole company like Ericsson. Today's announcement is the capacity build that changes that mix.\n\nWe ran a SOTP model attributing peer multiples to each business segment. The numbers tell a very different story than where this stock trades.\n\n$NOK is still one of the most slept on optical businesses on the market. €3.8B net cash on the balance sheet and the Ericsson floor already sets the downside.\n\nFull deep dive with the complete model and price target is live on the Substack. Link in below and in bio. \n$NOK $COHR $CIEN $ERIC $AAOI $LITE",
+      "url": "https://x.com/KawzInvests/status/2066956573377798564",
+      "kind": "post",
+      "engagement": {
+        "views": 726106,
+        "likes": 1156,
+        "reposts": 120,
+        "replies": 55
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068410360508588207",
+      "blogger_id": "michaelsikand",
+      "date": "2026-06-20",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "CIEN",
+      "text": "@AtlasShrug1 I read your post about wives trading CIEN and mogging their husbands.\n\nIt is not a contrarian viewpoint to expect a crash at some point however, shouldn't we just let human emotions and cycles run their course and appreciate our lunacy?\n\nI do find this market fascinating - in that consumer sentiment is so low but the market is so high. In 99 they were both together. Feels like there's disagreement, tension. I am not sure we are the stage where my GF is running options on micron.",
+      "url": "https://x.com/michaelsikand/status/2068410360508588207",
+      "kind": "reply",
+      "engagement": {
+        "views": 445,
+        "likes": 2,
+        "reposts": 1,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072738199927926897",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-02",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "part of optical supply chain with unchanged thesis",
+        "down 31% from ATH"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$CIEN",
+      "text": "Let's talk about photonics. \n\nMy photonics portfolio is up roughly 100% in 6 months but down around 10% in the last month, and will be down more after today's price action is baked in.\n\nThe first thing I'll say is that the last 3 months in the stock market and the rise of FinX creators + the mass proliferation of copy trading and bottleneck trades have created unrealistic expectations after truly biblical returns. The truth is that many of the investors following my photonics fund on @joinautopilot entered after it had already produced near or above triple digit returns. \n\nSEC Rule 156 exists for a reason: Past performance doesn't guarantee future results. The truth is that the natural human intuition is to believe that past performance DOES, which makes that disclosure very important.\n\nIn terms of photonics, when a sector explodes this fast, it's inevitable that the trade will contract/consolidate especially in the absence of major earnings reports that can compress multiples and in light of bearish macro news that drags anything high beta with it. AI is getting hit across the board today, but photonics being some of the highest beta infra stocks are particularly bloody.\n\n$LITE -9% (down 33% from ATH)\n$COHR -9% (down 24% from ATH)\n$AAOI -16% (down 50% from ATH)\n$CIEN -8% (down 31% from ATH)\n\nHowever, nothing has changed about the thesis. \n\nI went through every earnings call across the entire optical supply chain last quarter. Every layer told the same story. $LITE is rationing customers. Every laser it makes is SOLD through 2027. $COHR is booked into 2028. $AAOI is scaling capacity nearly 10x and STILL says it won't be enough.\n\nGoldman Sachs projects the optical networking and silicon photonics total addressable market (TAM) to 9x from roughly $15 billion to $154 billion.\n\nThat's the thesis around photonics in a nutshell and why I have conviction in it.\n\nRemember to never over index on one specific sector. I own photonics in addition to non AI like gaming, defense, water tech, and space plus other AI infra sectors like neoclouds and memory, some of which are up big even today, like defense.\n\nDisclaimer: Since this is investing, Investment advice provided by Autopilot advisers LLC, an SEC registered investment advisor. Past performance does not guarantee future results. Investing carries risks including the risk of the loss of principal. Gross performance shown, includes fees from Autopilot.",
+      "url": "https://x.com/michaelsikand/status/2072738199927926897",
+      "kind": "post",
+      "engagement": {
+        "views": 95081,
+        "likes": 228,
+        "reposts": 18,
+        "replies": 32
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073860523146502384",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-05",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "Citi just released this list of its most and least preferred tech & communication stocks for the rest of 2026\n\nMost Preferred tickers\n\n$AMZN \n$GOOGL \n$SNDK \n$AMD\n$MSFT\n$EQIX\n$SBAC\n$AMT\n$DASH\n$LITE\n$CIEN\n$APP\n$TTWO\n$NXST\n$TXN\n$AMAT\n$MDB\n$SNOW \n$BOX\n$NAVN\n$APPN\n$DDOG\n$RBRK\n\nLeast Preferred Tickers:\n\n$OPTU\n$UNTI\n$CCOI\n$HPQ \n$XRX\n$AMC\n$SIRI\n$QRVO\n$SWKS \n$OLED\n$GTM \n$ADBE\n$CXM\n$OTEX\n$DBX\n$PAYC \n$RPB\n$FSLY\n\n(Source @SeekingAlpha)",
+      "url": "https://x.com/StockMKTNewz/status/2073860523146502384",
+      "kind": "post",
+      "engagement": {
+        "views": 99069,
+        "likes": 275,
+        "reposts": 27,
+        "replies": 32
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074226194053058784",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trimming allocation from 11.39% to 10.00%"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$CIEN",
+      "text": "$20M trade update.\n\nI just updated my \"Photonics Is Next\" AI infra portfolio on @joinautopilot followed by 3300+ U.S. retail investors and $21.9M in connected assets as of 7/6.\n\nThis portfolio, which is also overseen by my partner @KawzInvests, has been a major part of the rise in my profile as an investor.\n\nOn 6/2, my optical basket peaked at 123.5% all-time returns, achieving those gains in under 6 months, as computed by Autopilot's software. For context, the fund achieved this return holding a diverse basket of stocks, an incredible outcome for retail investors passively following. \n\nI'm extremely proud of our work on this product. There exists no optical ETF currently for retail investors despite a rush by issuers to cash in on the hype. My picks were launched back in February, providing retail investors a 6 month window to front run the category and get staked into the next AI bottleneck without the complexity of individual stock picking.\n\nDespite the recent sell off, the portfolio is still up 45% year to date, roughly 4.5x the S&P 500.\n\n$LAZR and $LYTE are two ETFs going to launch soon by major players, which should attract billions in AUM. However, I believe my allocations are superior and that my picks will outperform them with lower fees.\n\nSo where are we now? Recently, the optical sector has gotten slammed based in my view mainly on sentiment, institutional profit taking, and disputed rumors from a well-known research firm on delays to next-gen architecture. Photonics Is Next is down 29.6% in the last month and 16.8% in just the last week. \n\nThat's why I think it's the perfect time to re-balance, add more weight to higher conviction positions, and add one brand new position I missed earlier on.\n\nThis rebalance today adds Corning ($GLW) as a new 10.00% position. Down 13% in five days. Now anchored by three hyperscale relationships (a 10x-capacity NVIDIA partnership, a Meta deal worth up to $6B, and a multi billion dollar Amazon agreement). \n\nThree names get boosted: AAOI (12.30%→15.00%), LITE (14.75%→15.00%), and AEHR (4.26%→5.00%). \n\nSix positions are trimmed: TSEM (11.11%→10.00%), COHR (16.07%→15.00%), AXTI (8.58%→5.00%), CIEN (11.39%→10.00%), MRVL (11.11%→5.00%), and VIAV (10.43%→10.00%). \n\nFor catalysts that could create upside, I'm watching:\n\n- Hyperscale Capex Guides In Upcoming Earnings\n- Earnings From All Optical Names In The Basket Particularly $COHR $LITE $AAOI\n- The launch of mainstream optical ETFs $LAZR and $LYTE\n\n$GLW $AAOI $LITE $AEHR $TSEM $COHR $AXTI $CIEN $MRVL $VIAV \n\n--\nSee link in comments to follow the portfolio using the Autopilot app. Pay attention to disclaimers on the image of this post and the Autopilot app.",
+      "url": "https://x.com/michaelsikand/status/2074226194053058784",
+      "kind": "post",
+      "engagement": {
+        "views": 54858,
+        "likes": 171,
+        "reposts": 14,
+        "replies": 45
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074229346391249280",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "$CIEN $NOK",
+      "url": "https://x.com/KawzInvests/status/2074229346391249280",
+      "kind": "post",
+      "engagement": {
+        "views": 27656,
+        "likes": 62,
+        "reposts": 1,
+        "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075617730242470376",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-10",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CIEN",
+      "text": "Rosenblatt: Photonics short sellers have zero conviction and are preying on fear.\n\nThey point out that short sellers have no real conviction in the short thesis and actually intend to buy the stocks back after covering before these companies smash earnings.\n\nOptical stocks have traded down for 1-2 months on two stories: fears that Chinese indium phosphide capacity crashes laser pricing for $LITE $COHR $AAOI, and reports that scale up CPO slips a year. \n\nRosenblatt figures Chinese players add 20-40% to their 2030 InP forecast, but they already model 2030 capacity running 40% behind demand. So even with new supply the industry is still short lasers. \n\nThey also argue the CPO \"delay\" is overblown. The process isn't delayed, only the ramp to volume. 2028 is now the inflection year and NPO fills the 2027 gap with nearly identical laser needs. Same photons, same suppliers, same thesis.\n\nYou might see photonics red right now but the smart money is setting up to reload here ahead of earnings.\n\n$AAOI has been hit particularly hard and it's well known Rosenblatt has the highest street PT. So it's nice to see a bullish note here ahead of ER.\n\n\"We expect AAOI to beat and raise and for 2Q26 to mark a watershed quarter where this starts happening consistently. We believe 2Q26 revenues can beat, and be above $200mn, with 800G sales to Amazon and Oracle as the primary driver of upside. The 3Q26 guidance should be ~$300mn with better GMs versus the ~30% level in 1H26\"\n\nCan't wait to see photonics explode back soon.\n\n$LITE $COHR $AAOI $CIEN $VIAV $AXTI",
+      "url": "https://x.com/michaelsikand/status/2075617730242470376",
+      "kind": "post",
+      "engagement": {
+        "views": 36147,
+        "likes": 248,
+        "reposts": 19,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

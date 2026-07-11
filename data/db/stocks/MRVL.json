@@ -1,6 +1,6 @@
 {
   "ticker": "MRVL",
-  "cashtag": "$MRVL",
+  "cashtag": "Marvell",
   "price_symbol": "MRVL",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,21 @@
   "industry": "AI Semis/CPO",
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-08-25",
-  "last_mention": "2026-07-06",
-  "total_mentions": 262,
+  "last_mention": "2026-07-09",
+  "total_mentions": 297,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 262
+    "aleabitoreddit": 262,
+    "octopusycc": 11,
+    "StockMKTNewz": 7,
+    "KawzInvests": 5,
+    "zephyr_z9": 5,
+    "jukan05": 3,
+    "michaelsikand": 2,
+    "ren_stocks": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 262
+    "opinion": 290,
+    "news": 7
   },
   "mentions": [
     {
@@ -5663,6 +5671,28 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2065975102953632101",
+      "blogger_id": "jukan05",
+      "date": "2026-06-13",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "Samsung Electro-Mechanics Expands Beyond MLCCs into Silicon Capacitor Business\n\nSamsung Electro-Mechanics is in discussions with multiple global Big Tech companies to supply silicon capacitors (Si-Cap) for AI servers. The company is rapidly emerging as a major supplier alongside Japan's Murata and Taiwan's TSMC.\n\nOn the 11th, Samsung Electro-Mechanics held a technology seminar at the Taepyeongno Building in Jung-gu, Seoul, where it shared its silicon capacitor technology and commercialization roadmap. Kim Won-gi, head of Samsung Electro-Mechanics' Si-Cap Development Group, said, \"Global Big Tech companies whose names you would immediately recognize are reviewing the adoption of silicon capacitors,\" adding, \"Because the market is formed around a small number of players, Samsung Electro-Mechanics is also aggressively pursuing sales activities.\"\n\nThe silicon capacitor market is led by Japan's Murata and Taiwan's TSMC. Barriers to entry are high because the business requires both semiconductor wafer process and passive component capabilities, and the number of suppliers is limited. Samsung Electro-Mechanics President Chang Duck-hyun is cultivating silicon capacitors as a core growth business in the company's push into the AI market.\n\nThe company made its full-scale entry into the market last year as it began supplying customers. It supplied products for the AI accelerators of Marvell—a leader in custom networking chips (ASICs)—and for the package of Samsung Electronics' mobile application processor (AP), the Exynos 2600, among others. More recently, it secured a supply contract worth 1.5 trillion won from a global Big Tech company—the largest single contract in Samsung Electro-Mechanics' history. The related revenue is scheduled to be reflected in earnings starting in 2027.\n\nSamsung Electro-Mechanics presented a \"total solution\" strategy—bundling its silicon capacitor, multilayer ceramic capacitor (MLCC), and package substrate businesses—as a differentiating factor. Silicon capacitors are mounted inside or adjacent to the package substrate. By supplying both products together, Samsung Electro-Mechanics can design and optimize the package and components simultaneously. Samsung Electro-Mechanics is the only company that operates both passive component and package substrate businesses.\n\nRather than building large-scale production facilities, the company has chosen a design-centric strategy. It employs a fabless model, outsourcing wafer production to foundries and componentization to specialized semiconductor back-end (OSAT) firms, while Samsung Electro-Mechanics handles product design, testing, and quality verification. The company has a silicon capacitor design and development organization at its Central Research Institute in Suwon.\n\nSamsung Electro-Mechanics' silicon capacitors are manufactured on a 300-millimeter (mm) wafer basis.\n\nA silicon capacitor is a passive component made from a silicon wafer. It temporarily stores electricity and supplies it when needed, keeping the voltage inside the semiconductor package stable. Whereas conventional MLCCs secure capacitance by stacking multiple layers of ceramic, silicon capacitors bore microscopic holes into a wafer and place electrodes inside them. This allows the thickness to be reduced to 100 micrometers (㎛) or less.\n\nSamsung Electro-Mechanics drew its business idea from DRAM technology. DRAM uses a capacitor inside each cell to store data. Samsung Electro-Mechanics developed the silicon capacitor by taking just the capacitor portion of this structure and advancing it into a separate component. The fine-process technology it accumulated while shrinking DRAM circuit linewidths was transferred directly into silicon capacitor development. The more microscopic holes formed in the wafer, the greater the capacitance a silicon capacitor can achieve.\n\nThere are differences in silicon capacitor technology between competitors. Samsung Electro-Mechanics utilizes a DRAM-based structure, while TSMC is known to use a logic-process-based trench structure. Samsung Electro-Mechanics mass-produces its products on a 300mm wafer basis, the type primarily used for memory semiconductors.\n\nSamsung Electro-Mechanics projected that the silicon capacitor market will grow at an average annual rate of more than 18%. Its scope of application is expanding from a mobile focus into AI servers, automotive electronics, aerospace, and optical communications. AI servers in particular are emerging as the largest source of demand, as power density increases and package integration intensify simultaneously.\n\nKim said, \"The higher semiconductor performance becomes, the more important power stabilization becomes,\" adding, \"Silicon capacitors will see their range of application continuously expand in the AI server and next-generation high-performance semiconductor markets.\"",
+      "url": "https://x.com/jukan05/status/2065975102953632101",
+      "kind": "post",
+      "engagement": {
+        "views": 59143,
+        "likes": 292,
+        "reposts": 40,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2066509405634597036",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-15",
@@ -5685,6 +5715,81 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2066612577103118686",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "joining S&P 500 on June 22 with index fund buying still ahead",
+        "exceptional AI-related bookings driving significantly raised revenue outlook for FY2027 and FY2028",
+        "Q1 revenue $2.418B up 28% YoY, Q2 guided to $2.7B at midpoint (35% YoY growth)",
+        "record operating cash flow of $638M in a single quarter",
+        "sits at physical layer of AI infrastructure — 800G/1.6T optical interconnects, 51.2T Ethernet switches, custom XPUs designed into hyperscaler next-gen architecture",
+        "every dollar of hyperscaler capex flows through hardware Marvell builds",
+        "released industry's first 102.4 Tbps switch purpose-built for AI data centers on June 1",
+        "Jensen called it the next trillion-dollar company at Computex, implying 3x+ upside from current market cap"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$MRVL",
+      "text": "$MRVL joins the S&P 500 on June 22. It is already up 75% in the past month before a single index fund has bought a share.\n\nMatt Murphy on the Q1 call: \"We are seeing exceptional AI-related bookings, and as a result, we are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028.\"\n\nQ1 revenue came in at $2.418B, up 28% year-over-year. Q2 guided to $2.7B at the midpoint, 35% year-over-year growth. Operating cash flow hit a record $638M in a single quarter.\n\nMarvell sits at the physical layer of AI infrastructure. It makes the 800G and 1.6T optical interconnects moving data between GPUs, the 51.2T Ethernet switches connecting clusters, and the custom XPUs being designed directly into hyperscaler next-generation architecture. Every dollar of hyperscaler capex this year flows through hardware that needs what Marvell builds.\n\nJune 1 it released the industry's first 102.4 Tbps switch purpose-built for AI data centers. Jensen called it the next trillion-dollar company at Computex. At $272B market cap today that implies more than 3x from here if he is right. $MRVL $NVDA $CIEN $AAOI",
+      "url": "https://x.com/KawzInvests/status/2066612577103118686",
+      "kind": "post",
+      "engagement": {
+        "views": 149305,
+        "likes": 576,
+        "reposts": 61,
+        "replies": 42
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066621958205096254",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL (implied)",
+      "text": "@WoodstockFlhr The inclusion is effective June 22.",
+      "url": "https://x.com/KawzInvests/status/2066621958205096254",
+      "kind": "reply",
+      "engagement": {
+        "views": 1659,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066672855983554676",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "The AI infrastructure buildout has three distinct networking layers. Each one is at a different point in its adoption curve and each one has different winners.\n\n1. Scale-up connects GPUs inside a single server and eventually across racks. The transition from copper is happening in stages.\n\n> Copper still dominates at short distances.\n\n> Active electrical cable extends that reach but loses signal integrity as clusters grow.\n\n> LPO removes the DSP entirely, cutting power consumption to near CPO levels while keeping the pluggable form factor operators already know.\n\n> NPO moves optics closer to the chip without full co-packaging. Both are ramping faster than CPO in the near term because they require less ecosystem disruption.\n\n> CPO is the endgame. It integrates optics directly onto the switch ASIC substrate, cutting signal loss from 20dB to 1-2dB and power consumption by 3x or more.\n\n$AVGO's Davisson and $NVDA's Spectrum-X are the CPO platforms. $MRVL acquired Celestial AI to position optics directly on top of XPUs rather than at the die edge, with Amazon as the lead design win. $COHR and $LITE supply the CW and EML lasers every platform requires. $LITE holds more than 50% share in high-speed EML lasers with multi-billion dollar supply agreements locked with Nvidia through end of decade. $CRDO and $MTSI supply the LRO and LPO chipsets capturing near term volume before CPO fully ramps.\n\n2. Scale-out connects servers inside a single data center. The 800G transceiver cycle is at peak volume with 1.6T at the beginning of its inflection.\n\n> $MRVL's 51.2T switches and DSPs sit at the center.\n\n> $AAOI is expanding capacity 10x and demand still outpaces supply through mid-2027.\n\n> $COHR supplies modules across the stack.\n\n3. Scale-across connects data centers to each other over distance so one AI model trains across geographically distributed GPU clusters as a single logical environment. The link between sites requires lossless coherent optical transport at 800G and 1.6T.\n\n> $CIEN holds the number one global position in data center interconnect. Their Q2 executive summary states it directly: \"DCI, including scale-across, is gaining momentum as customers connect AI data centers to monetize their investments.\"\n\n> $COHR and $LITE supply the optical circuit switches enabling spine replacement and redundancy across those links.",
+      "url": "https://x.com/KawzInvests/status/2066672855983554676",
+      "kind": "post",
+      "engagement": {
+        "views": 97766,
+        "likes": 255,
+        "reposts": 33,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2066751027702079858",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-16",
@@ -5704,6 +5809,209 @@
         "replies": 5
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067092746364748272",
+      "blogger_id": "jukan05",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "Samsung sees rising chip production requests from BYD, Google, AMD- Nikkei Asia\n\nBYD, Google, AMD, Tesla and others are looking increasingly to Samsung Electronics for contract chipmaking services as surging demand for AI infrastructure strains the advanced chipmaking capacity of market leader TSMC, Nikkei Asia has learned.\n\nSamsung has seen a surge in inquiries from existing and potential global customers, including those in China, looking to use its advanced chip manufacturing capacity, according to six people with knowledge of the matter.\n\nBYD, China's top electric vehicle maker, has been in talks with Samsung about building future generations of autonomous driving chips, while Google is engaging with the South Korean company about potentially producing its next-generation Axion processors, set to launch around 2028, two people familiar with the matter told Nikkei Asia. Google is also considering asking Samsung to build part of its key Tensor Processing Units (TPUs) for AI computing workloads, as early as 2028, one of the people said.\n\n\"TSMC is prioritizing advanced-node production not only because it reinforces its tech leadership and long-term strategy, but also because those nodes are more profitable and remain in short supply,\" said an executive from a Chinese autochip designer, who asked not to be named. \"Samsung's yields still lag behind TSMC's, but capacity availability has made it an increasingly attractive option.\"\n\nYield is the industry term for production quality, measured as the percentage of chips produced that meet the required specifications and performance.\n\nTSMC, Samsung and Intel are the world's only chipmakers that can offer cutting-edge chip production at a large scale. TSMC has secured the majority of such orders, as well as orders for advanced chip packaging services, from the likes of Nvidia, Apple, AMD, Broadcom, Marvell and MediaTek. These clients take up a large share of the Taiwanese chipmaking group's advanced chipmaking capacity.\n\nIntel, which mainly manufactures chips for in-house use, is working to attract more customers to adopt its advanced chipmaking and packaging capacity.\n\nThe Chinese auto industry executive said many chip designers in the country are now pursuing a dual-sourcing strategy, spreading orders between TSMC and Samsung rather than relying on a single foundry, with exact allocation depending on the product.\n\n\"Geopolitical factors also push some U.S. clients to use multiple contract chipmakers, if available out there, if they can,\" another chip industry executive with knowledge told Nikkei Asia.\n\n\"TSMC's advanced chip production capacity is really full, which is hard for Chinese clients who have smaller volumes to place new orders, so several have turned to approach Samsung for future possibilities,\" said an executive-level chip industry source who is familiar with the matter.\n\nGoogle has been a driving force in the multi-foundry strategy, sources told Nikkei Asia. MediaTek, Taiwan's top chip developer, is helping Google to work with both TSMC and Intel for advanced chip packaging, Nikkei Asia earlier reported, while Qualcomm, the U.S. mobile chip king, has long made use of both TSMC's and Samsung's services.\n\nHowever, using multiple foundries for advanced chip production requires substantial investment in adapting chip designs to different chipmakers' manufacturing processes, along with greater R&D and supply-chain coordination. Such a strategy is typically viable only for deep-pocketed chip developers, given the additional engineering and workforce costs involved.\n\nMeanwhile, capacity constraints at TSMC are pushing other existing customers to potentially place more orders with Samsung, sources said.\n\nTesla works with both Samsung and TSMC on various products, including its AI5 chips used in its cars and robots. The upcoming AI6, however, will be made by Samsung in Texas. Tesla founder Elon Musk also announced a partnership with Intel for its future terafab projects in Texas, aiming to bring more critical chip production back to the U.S. and help meet growing demand.\n\nAMD and Nvidia, key clients of TSMC, are also working with Samsung on some chip projects due to capacity constraints. AMD, for example, is in talks to build some future CPUs with Samsung from 2028, one source with knowledge of the situation said.\n\nNvidia's Groq language processing units (LPUs) are produced by Samsung, and the U.S. chipmaker has not decided whether production of the next generation of these highly specialized chips will be given to other contract chipmakers. The majority of Nvidia's chips are made exclusively by TSMC.\n\nThe increasing requests for leading-edge chip production for Samsung would mark a victory for the South Korean chipmaker's foundry business, which used to mainly serve its own consumer electronics and home appliance divisions.\n\nThe growing foundry business comes as Samsung is also riding the AI investment boom, enjoying exponentially growing demand for its memory products, including high-bandwidth memory chips, DRAM and NAND flash memories.\n\nSamsung said that it does not comment on customers.\n\nNew orders would help Samsung's foundry unit rebound from a recent downturn. The company said earnings for the segment declined in the first quarter due to it being the off-peak season, but it did not elaborate on how big the dip was.\n\nSamsung's foundry and system large-scale integration business units posted a combined 6.9 trillion won ($4.6 billion) in sales in the first quarter, up from 6 trillion won a year ago. Samsung does not break down its earnings for the two units, the latter of which makes an array of logic and analog chips, including image sensors and display chips.\n\nBYD declined to comment. Google said it does not comment on the details of its supply chain.",
+      "url": "https://x.com/jukan05/status/2067092746364748272",
+      "kind": "post",
+      "engagement": {
+        "views": 150035,
+        "likes": 390,
+        "reposts": 52,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067608063012659683",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL",
+      "text": "今日的费城半导体指数调仓，会对市场造成多大的影响？\n\n其中MU MRVL LRCX AMAT 都会有不同程度的卖出现象\n\n而 $SOXX 有大量的杠杆产品\n如 $SOXL $SOXS \n\nSOX 调权 → 部分半导体股出现被动买卖 → 这些股票和 SOXL 底层 ICE Semiconductor Index 高度重合 → 半导体板块价格波动 → SOXL 按 3 倍放大。\n\n假设 SOXL 规模约 250-300 亿美元级别，目标是 3 倍敞口，那么它背后对应的名义敞口可能是 750-900 亿美元。Yahoo / Robinhood 等页面显示 SOXL 规模大约在 250-300 亿美元附近。\n\n所以 SOXL 的最大风险：\n\n调权当天 MU / MRVL / AMD / NVDA / AVGO 等重合股尾盘异动；\n半导体指数如果同方向下跌，SOXL 会被动放大；\n如果当天本来就高波动，SOXL 的再平衡可能让尾盘更极端。\n\n————————\n\n（调仓时间可能集中在6/18和6/22两天时间",
+      "url": "https://x.com/octopusycc/status/2067608063012659683",
+      "kind": "post",
+      "engagement": {
+        "views": 135237,
+        "likes": 58,
+        "reposts": 4,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067617858516066620",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "large bullish options order (call options at $350 strike, $6.16M premium, 14-day expiry)",
+        "MRVL to officially join S&P 500 on June 22, 2026, replacing POOL — high certainty catalyst"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$MRVL",
+      "text": "MRVL再现 7/2大单，14天到期\n$MRVL\n\n看涨350美金 权利金 616万美金\n\n————————\n\n相对应的新闻是这个，我认为确定性相当高\n\nMRVL 将在 2026 年 6 月 22 日开盘前正式加入 S&amp;P 500，替代 POOL https://t.co/1Ha2rF1AeV",
+      "url": "https://x.com/octopusycc/status/2067617858516066620",
+      "kind": "post",
+      "engagement": {
+        "views": 46318,
+        "likes": 50,
+        "reposts": 3,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067654271009780003",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "MRVL再现400 Call 14天到期 $MRVL \n\n权利金220万美金 https://t.co/dLrVTdboUv",
+      "url": "https://x.com/octopusycc/status/2067654271009780003",
+      "kind": "post",
+      "engagement": {
+        "views": 18862,
+        "likes": 47,
+        "reposts": 2,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067658628648288648",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "mrvl",
+      "text": "@yzbjcw 我当时在200刀的时候看到mrvl 250call的时候也是你这个反应",
+      "url": "https://x.com/octopusycc/status/2067658628648288648",
+      "kind": "reply",
+      "engagement": {
+        "views": 1629,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067688642693488913",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nMicron Technology $MU\nIntel $INTC\nMarvell Technology $MRVL\nSanDisk $SNDK\nWestern Digital $WDC\nSeagate Technology $STX\nApplied Materials $AMAT\nArm Holdings $ARM\nNebius Group $NBIS\nLam Research $LRCX\nCaterpillar $CAT\nASML Holding $ASML\nJPMorgan Chase $JPM\nAstera Labs $ALAB\nGoldman Sachs $GS\nCitigroup $C\nMorgan Stanley $MS\nGE Aerospace $GE\nCipher Digital $CIFR\nModerna $MRNA\nCummins $CMI\nTeraWulf $WULF\nEntegris $ENTG\nVishay Intertechnology $VSH\nMKS Instruments $MKSI\nHowmet Aerospace $HWM\nJohnson Controls $JCI\nSilicon Motion $SIMO\nState Street $STT\nDominion Energy $D\nBank of New York Mellon $BNY\nInteractive Brokers $IBKR\nUnited Microelectronics $UMC\nnVent Electric $NVT\nToronto Dominion Bank $TD\nTTM Technologies $TTMI\nW.W. Grainger $GWW\nWoodward $WWD\nCarpenter Technology $CRS\nBank of Nova Scotia $BNS\nCurtiss-Wright $CW\nViking Holdings $VIK\nRockwell Automation $ROK\nBank of Montreal $BMO\nSharkNinja $SN\nFrontline $FRO\nACM Research $ACMR\nWabtec $WAB\nAllegro Microsystems $ALGM\nHyatt Hotels $H",
+      "url": "https://x.com/StockMKTNewz/status/2067688642693488913",
+      "kind": "post",
+      "engagement": {
+        "views": 38999,
+        "likes": 328,
+        "reposts": 48,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067696646503432500",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "mrvl",
+      "text": "？？？？\nmrvl mu日内暴跌",
+      "url": "https://x.com/octopusycc/status/2067696646503432500",
+      "kind": "post",
+      "engagement": {
+        "views": 91580,
+        "likes": 44,
+        "reposts": 1,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067698297582870828",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [
+        "SOX index rebalancing brought approximately $1B+ in sell pressure"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "mrvl",
+      "text": "sox调仓大概带来了mrvl 十几亿美金卖盘\n\n谢谢大家",
+      "url": "https://x.com/octopusycc/status/2067698297582870828",
+      "kind": "post",
+      "engagement": {
+        "views": 47991,
+        "likes": 89,
+        "reposts": 5,
+        "replies": 35
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067700059718975954",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL",
+      "text": "见证MU和MRVL同时在最后十分钟里被爆浇10亿美金卖盘\n\nMRVL从330暴跌到310 MU从1149到1139\n\nHBM太恐怖了",
+      "url": "https://x.com/octopusycc/status/2067700059718975954",
+      "kind": "post",
+      "engagement": {
+        "views": 87227,
+        "likes": 101,
+        "reposts": 9,
+        "replies": 69
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {
@@ -5755,6 +6063,50 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2068313556647293287",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-20",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Marvell $MRVL stock is now up almost 50% since Jensen Huang said earlier this month that the stock is going to $1 Trillion  https://t.co/uI7NpZBiVe",
+      "url": "https://x.com/StockMKTNewz/status/2068313556647293287",
+      "kind": "post",
+      "engagement": {
+        "views": 113026,
+        "likes": 566,
+        "reposts": 37,
+        "replies": 38
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068431646572097584",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-20",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "交一份45天期权聪明钱答卷\n\n成功命中48个标的\n\n自以为是还算合格的\n\n—————\n\n大家是因为什么才关注到我的呢？\n\n$ALAB\n$MRVL\n$BTDR \n$NOW \n$WDC \n$ALK \n$HPE\n$DELL \n$IGV \n$NOK\n$COIN\n$CPSH\n$ENPH \n$MDB \n$MU\n$GLXY\n$HYPE\n$NOK \n\n这些都算让人印象深刻\n\n—————\n\n我的推文会坚持不 shitposting。同样的，如果是社交媒体上广泛讨论而我没有新内容的时候，我也会避开讨论。\n\n希望成为大家Timeline里独特的一部分。\n\n—————\n\n（目前已经错误/归零的会择日再做一次统计\n目测大概是6-10个）\n\n最后，还是感谢大家支持！",
+      "url": "https://x.com/octopusycc/status/2068431646572097584",
+      "kind": "post",
+      "engagement": {
+        "views": 10641,
+        "likes": 76,
+        "reposts": 4,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2068651355422814294",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-21",
@@ -5774,6 +6126,122 @@
         "replies": 213
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068783811488317670",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-21",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "When the stock market opens tomorrow Marvell $MRVL and $FLEX will officially be members of the S&amp;P 500 index https://t.co/6sJKz1D9nz",
+      "url": "https://x.com/StockMKTNewz/status/2068783811488317670",
+      "kind": "post",
+      "engagement": {
+        "views": 72253,
+        "likes": 326,
+        "reposts": 19,
+        "replies": 37
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068788790190064100",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-21",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Marvell $MRVL is about to replace Campbell's Soup Company $CPB in the S&amp;P 500 Index https://t.co/D9MQcXz1hk",
+      "url": "https://x.com/StockMKTNewz/status/2068788790190064100",
+      "kind": "post",
+      "engagement": {
+        "views": 91712,
+        "likes": 577,
+        "reposts": 39,
+        "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069014147052851610",
+      "blogger_id": "michaelsikand",
+      "date": "2026-06-22",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Jensen said this stock can 4x from here"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Jensen said this stock can 4x from here. \n\nAnd you're still fading $MRVL? https://t.co/D5OPWxTA1Y",
+      "url": "https://x.com/michaelsikand/status/2069014147052851610",
+      "kind": "post",
+      "engagement": {
+        "views": 24530,
+        "likes": 86,
+        "reposts": 6,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069029628858019886",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "$MRVL is officially in the S&amp;P 500 today.",
+      "url": "https://x.com/KawzInvests/status/2069029628858019886",
+      "kind": "post",
+      "engagement": {
+        "views": 72860,
+        "likes": 408,
+        "reposts": 20,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069181208412721377",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-22",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "management team using it as a pump and dump to extract money",
+        "wall street pricing it as an ASIC design house incorrectly",
+        "ASIC design business is just IT outsourcing"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "\"Marvell which you would think should be competing is just a pump and dump by the management team to take your money and put it in their pockets and wall street is pricing them as an asic design house not realizing the asic design business is just IT outsourcing.\"\n\nMy sweet summer child...",
+      "url": "https://x.com/zephyr_z9/status/2069181208412721377",
+      "kind": "post",
+      "engagement": {
+        "views": 166203,
+        "likes": 446,
+        "reposts": 11,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {
@@ -5846,6 +6314,31 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2069788711227961806",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-24",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "unhealthy rise leads to unhealthy decline",
+        "bought at 300 bottom expecting reversal downward"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "mrvl",
+      "text": "mrvl是怎么从200去的300\n\nmrvl就会怎么从300跌下来\n\n一个300抄底的人如是说\n\n————————\n\n不健康的上涨就会被不健康的下跌带下来",
+      "url": "https://x.com/octopusycc/status/2069788711227961806",
+      "kind": "post",
+      "engagement": {
+        "views": 68578,
+        "likes": 88,
+        "reposts": 2,
+        "replies": 35
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2070447713196327115",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-26",
@@ -5868,6 +6361,100 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2071497488415252777",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-29",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "more pieces to the puzzle (implying more upside/catalysts to be revealed)"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "The Marvell puzzle has more pieces 😏😏 https://t.co/gePuS9OFtp",
+      "url": "https://x.com/zephyr_z9/status/2071497488415252777",
+      "kind": "post",
+      "engagement": {
+        "views": 108856,
+        "likes": 324,
+        "reposts": 20,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071878284154212859",
+      "blogger_id": "jukan05",
+      "date": "2026-06-30",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "LG Electronics Begins ASIC Design Service Based on TSMC Processes\n\nLG Electronics is entering the application specific integrated circuit (ASIC) design service market, leveraging its independent system semiconductor design capabilities. LG Electronics has designed system on chip (SoC) products for use in its own devices since the early 2000s, and it is now expanding this into an external service. The business model mirrors that of US semiconductor firms Broadcom and Marvell, and the target customers are domestic and overseas fabless companies.\n\nAccording to the semiconductor industry on the 30th, LG Electronics has launched its design service business centered on the SoC Center under its Chief Technology Officer (CTO). A design service involves converting a semiconductor design circuit into a physical circuit suited to a foundry's production line.\n\nUnlike a typical design house, LG Electronics provides ASIC design services. This follows the same business model as Broadcom and Marvell, with the company's in house SoC expertise developed through chips such as DQ-C serving as the foundation for the business.\n\nIts first result is a robot vacuum cleaner chipset being mass produced under the \"K On Device AI Semiconductor\" national project. The chip is produced on TSMC's 6nm (nanometer, one billionth of a meter) process based on orders from a domestic fabless company, after which LG Electronics' HS Business Division repurchases it and installs it in robot vacuum cleaners. LG Electronics is reportedly in talks on design service cooperation with several domestic and overseas customers.\n\nOne semiconductor industry official assessed, \"LG Electronics' SoC Center is a large scale specialized organization that supports the home appliance and automotive component businesses and possesses its own IP development capability,\" adding, \"From a business diversification standpoint, the strategy of deploying its high end design workforce into external design services is a competitive choice in terms of both technical stability and business efficiency.\"\n\nLG Electronics already holds an IP portfolio for processes at 6nm and below, and it reportedly plans to broaden its service scope to the 3nm (N3) process within the next three years, depending on customer demand.\n\nCost Savings Through In House Staffing... A \"30 Year TSMC Partnership\" Reference as a Strength\n\nThe competitive edge LG Electronics emphasizes is cost. Existing design houses relied on outsourced staff during the design process, resulting in high contracting costs. By contrast, LG Electronics uses a structure in which in house engineers handle the design directly, allowing it to reduce additional labor costs.\n\nIts track record is also a strength. Even after selling LG Semicon in 1999, LG Electronics retained its design organization, effectively making it a fabless company. Having lost its production plants, LG Electronics began outsourcing chip production to TSMC in the early 2000s, a partnership spanning more than 20 years.\n\nThe industry expects that, on the basis of its relationship of trust with TSMC, LG Electronics will be able to offer support such as wafer allocation for customer volumes.\n\nA fabless industry official who requested anonymity explained, \"Most design houses tend to set high contracting costs because they rely on outsourced staff due to a shortage of their own personnel,\" adding, \"LG Electronics is free from this labor cost burden and has a long standing relationship of trust with TSMC, which can make it an attractive option.\"\n\nThat said, LG Electronics is not a TSMC VCA (Value Chain Alliance). A VCA is a partner design house that has built a cooperative framework with TSMC. Under TSMC policy, outside of mainland Taiwan only one VCA may exist per country. In Korea, ASICLAND is the TSMC VCA.\n\nSpillover Benefit From Samsung Foundry's Shift in Direction... Expected to Absorb Domestic Demand\n\nThe industry also expects that the contraction of Samsung Electronics' foundry legacy processes will be a boon for LG Electronics' design service.\n\nA semiconductor industry official forecast, \"As Samsung Foundry's legacy processes contract, some customers are turning to TSMC, which has abundant legacy capacity,\" predicting, \"If LG Electronics rides this trend, it could draw in a substantial share of domestic demand.\"\n\nAn LG Electronics official responded, \"We cannot confirm the matter.\"",
+      "url": "https://x.com/jukan05/status/2071878284154212859",
+      "kind": "post",
+      "engagement": {
+        "views": 50668,
+        "likes": 180,
+        "reposts": 19,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071951421499687017",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-30",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "options GEX structure becoming healthier",
+        "pension fund rebalancing selling pressure may end today",
+        "GEX support at $280"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "就在刚刚，MRVL的期权GEX整体 变的更健康\n\n也许是 养老金调仓 的抛压在今日将会完结\n\n$MRVL \n\nGEX支撑也很浅 280美金 https://t.co/7ftHiqLmZ0",
+      "url": "https://x.com/octopusycc/status/2071951421499687017",
+      "kind": "post",
+      "engagement": {
+        "views": 35928,
+        "likes": 50,
+        "reposts": 2,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072058491657761236",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-30",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "The first half of 2026 in the stock market is now officially OVER\n\nHere are the best performing stocks from the S&P 500 so far in 2026\n\n🥇 Sandisk $SNDK +857%🟢\n🥈 Micron $MU +303%🟢\n🥉 Intel $INTC  +278%🟢\nWestern Digital $WDC +271%🟢\nSeagate blockstack:native +250%🟢\nMarvell $MRVL +250%🟢\n$DELL +243%🟢\nCorning $GLW  +192%🟢\nApplied Materials $AMAT +181%🟢\n$AMD +171%🟢",
+      "url": "https://x.com/StockMKTNewz/status/2072058491657761236",
+      "kind": "post",
+      "engagement": {
+        "views": 202774,
+        "likes": 966,
+        "reposts": 142,
+        "replies": 34
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2072575509880512555",
       "blogger_id": "aleabitoreddit",
       "date": "2026-07-02",
@@ -5887,6 +6474,75 @@
         "replies": 3
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072620185673179391",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-02",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expected to generate $2.8B / $13.0B in revenue in 2027 / 2028 driven by Google CXL-related business",
+        "claim to have been first to break it down"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL",
+      "text": "\"GFHK: MRVL is expected to generate $2.8B / $13.0B in revenue in 2027 / 2028, respectively, driven by Google CXL-related business.\"\n\nDid u listen to us, anon??\nI'm pretty sure we were the first to break it down",
+      "url": "https://x.com/zephyr_z9/status/2072620185673179391",
+      "kind": "post",
+      "engagement": {
+        "views": 119524,
+        "likes": 186,
+        "reposts": 10,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072621970542538937",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-02",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL",
+      "text": "\"GFHK: MRVL is expected to generate $2.8B / $13.0B in revenue in 2027 / 2028, respectively, driven by Google CXL-related business\"",
+      "url": "https://x.com/zephyr_z9/status/2072621970542538937",
+      "kind": "post",
+      "engagement": {
+        "views": 44339,
+        "likes": 97,
+        "reposts": 7,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072639036943180229",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-02",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MRVL",
+      "text": "@jake_ayes FY26 was $8B",
+      "url": "https://x.com/zephyr_z9/status/2072639036943180229",
+      "kind": "reply",
+      "engagement": {
+        "views": 2138,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {
@@ -5934,6 +6590,28 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2073992422623961284",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "$CRDO $APH $ALAB $MRVL $TEL $MCHP",
+      "url": "https://x.com/octopusycc/status/2073992422623961284",
+      "kind": "post",
+      "engagement": {
+        "views": 17113,
+        "likes": 20,
+        "reposts": 4,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2074046947434860971",
       "blogger_id": "aleabitoreddit",
       "date": "2026-07-06",
@@ -5953,6 +6631,145 @@
         "replies": 99
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074226194053058784",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-06",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trimming allocation significantly from 11.11% to 5.00%"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$MRVL",
+      "text": "$20M trade update.\n\nI just updated my \"Photonics Is Next\" AI infra portfolio on @joinautopilot followed by 3300+ U.S. retail investors and $21.9M in connected assets as of 7/6.\n\nThis portfolio, which is also overseen by my partner @KawzInvests, has been a major part of the rise in my profile as an investor.\n\nOn 6/2, my optical basket peaked at 123.5% all-time returns, achieving those gains in under 6 months, as computed by Autopilot's software. For context, the fund achieved this return holding a diverse basket of stocks, an incredible outcome for retail investors passively following. \n\nI'm extremely proud of our work on this product. There exists no optical ETF currently for retail investors despite a rush by issuers to cash in on the hype. My picks were launched back in February, providing retail investors a 6 month window to front run the category and get staked into the next AI bottleneck without the complexity of individual stock picking.\n\nDespite the recent sell off, the portfolio is still up 45% year to date, roughly 4.5x the S&P 500.\n\n$LAZR and $LYTE are two ETFs going to launch soon by major players, which should attract billions in AUM. However, I believe my allocations are superior and that my picks will outperform them with lower fees.\n\nSo where are we now? Recently, the optical sector has gotten slammed based in my view mainly on sentiment, institutional profit taking, and disputed rumors from a well-known research firm on delays to next-gen architecture. Photonics Is Next is down 29.6% in the last month and 16.8% in just the last week. \n\nThat's why I think it's the perfect time to re-balance, add more weight to higher conviction positions, and add one brand new position I missed earlier on.\n\nThis rebalance today adds Corning ($GLW) as a new 10.00% position. Down 13% in five days. Now anchored by three hyperscale relationships (a 10x-capacity NVIDIA partnership, a Meta deal worth up to $6B, and a multi billion dollar Amazon agreement). \n\nThree names get boosted: AAOI (12.30%→15.00%), LITE (14.75%→15.00%), and AEHR (4.26%→5.00%). \n\nSix positions are trimmed: TSEM (11.11%→10.00%), COHR (16.07%→15.00%), AXTI (8.58%→5.00%), CIEN (11.39%→10.00%), MRVL (11.11%→5.00%), and VIAV (10.43%→10.00%). \n\nFor catalysts that could create upside, I'm watching:\n\n- Hyperscale Capex Guides In Upcoming Earnings\n- Earnings From All Optical Names In The Basket Particularly $COHR $LITE $AAOI\n- The launch of mainstream optical ETFs $LAZR and $LYTE\n\n$GLW $AAOI $LITE $AEHR $TSEM $COHR $AXTI $CIEN $MRVL $VIAV \n\n--\nSee link in comments to follow the portfolio using the Autopilot app. Pay attention to disclaimers on the image of this post and the Autopilot app.",
+      "url": "https://x.com/michaelsikand/status/2074226194053058784",
+      "kind": "post",
+      "engagement": {
+        "views": 54858,
+        "likes": 171,
+        "reposts": 14,
+        "replies": 45
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074445511633813519",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-07",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Here are the top 10 best performing stocks from the S&P 500 during Q2 of this year\n\nSandisk $SNDK: +228.2%🟢\nMicron $MU: +213.8%🟢\nIntel $INTC: +190.7%🟢\nMarvell $MRVL: +179.3%🟢\nAMD $AMD: +176.3%🟢\nDell $DELL: +155.5%🟢\nFlex $FLEX: +137.5%🟢\nSeagate $STX: +128.2%🟢\nHumana $HUM: +125.0%🟢\nDatadog $DDOG: +119.4%🟢\n\nCredit to my partners at Leverage Shares for the info",
+      "url": "https://x.com/StockMKTNewz/status/2074445511633813519",
+      "kind": "post",
+      "engagement": {
+        "views": 57279,
+        "likes": 223,
+        "reposts": 45,
+        "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074641836874809650",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "switch ASICs winner in CPO ramp"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Scale-out CPO switches going from 5,000 units this year to 200,000 by 2030. And you are selling?\n\nThat’s a 144% CAGR. A 40x volume ramp that both Yole and Morgan Stanley are modeling off the same wall. That’s the whole thesis, and notice what it doesn’t require: it doesn’t require me to pick which laser vendor qualifies into which switch, or whether Broadcom’s socket beats Nvidia’s.\n\nTo be short this ramp up you have to argue the entire build doesn’t happen, and good luck making that case while the SemiAnalysis “delay” everyone panicked over still lands you at 200k units by 2030. \n\nA delay bends the curve doesn’t make it go away. \n\nThe physics won’t let it go away. A 200,000 GPU cluster is burning ~17 megawatts just on transceivers. CPO cuts that ~73% per 800G. At scale-up density copper is already dead and pluggables are out of runway. Forced migrations are the best ramps you can be long because the demand doesn’t care.\n\nThe biggest winners:\n\nLasers and light sources: $LITE, $COHR, $SIVE\nOptical engines and pump lasers: $AAOI, $COHR\nSwitch ASICs: $AVGO, $MRVL, $NVDA\nOptical I/O chiplets: $ALAB, $CRDO\nPackaging and assembly: $FN, $AMKR\nInP substrate and materials: $AXTI\n\nLITE is the cleanest CPO scarcity play, shipping 200G-per-lane EMLs at volume, book through 2028. $AAOI is the one that wins both ways: its core 800G and 1.6T pluggable business actually benefits if CPO slips, while its external laser fab keeps it in the game when CPO finally ramps.\n\nBullish photonics ⚡️",
+      "url": "https://x.com/ren_stocks/status/2074641836874809650",
+      "kind": "post",
+      "engagement": {
+        "views": 49366,
+        "likes": 313,
+        "reposts": 37,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074881387874644283",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-08",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "This is how every stock in the NASDAQ 100 performed during the first half of 2026\n\n🥇 Sandisk $SNDK : +228.2%🟢\n🥈 Micron $MU: +213.8%🟢\n🥉 Intel $INTC: +190.7%🟢\nMarvell $MRVL: +179.3%🟢\n$AMD AMD: +176.3%🟢\n\nCredit to my partners at Leverage Shares for the info https://t.co/xo1H940nxk",
+      "url": "https://x.com/StockMKTNewz/status/2074881387874644283",
+      "kind": "post",
+      "engagement": {
+        "views": 63379,
+        "likes": 205,
+        "reposts": 40,
+        "replies": 36
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075210832401604870",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-09",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "$AEHR just landed a FOLLOW ON production order from its lead silicon photonics customer.\n\n\"The order includes Aehr’s turnkey FOX-XP multi-wafer WLBI system configured to test up to nine 300mm wafers in parallel together with the fully automated FOX WaferPak® AutoAligner™, enabling automated, high-volume production burn-in with hands-free operation when integrated with an automated wafer handler.\"\n\nSame customer that ran their first fully automated system last year. now scaling up to high volume.\n\nNo customer name in the release. The wafer runs through a FOX-XP before it ships whether the buyer downstream turns out to be $AVGO, $MRVL or $CSCO.\n\nThe word that matters here is follow-on. the first system already qualified and ran hands-free, so this is the volume ramp starting.\n\nearnings are july 14. $AEHR",
+      "url": "https://x.com/KawzInvests/status/2075210832401604870",
+      "kind": "post",
+      "engagement": {
+        "views": 23589,
+        "likes": 45,
+        "reposts": 1,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075288227284422707",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-09",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "ripping",
+        "part of AI buildout portfolio held with conviction"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Marvell",
+      "text": "Today is a great green day for the AI buildout, and the stocks I invest in are being rewarded for holding with conviction.\n\n$SNDK up double digits, $MU +7% on a $250B fab plan, AMD and Marvell ripping, $SK Hynix debuting 7x oversubscribed. This is the buildout waking back up.\n\nBut I'm not posting because it's green today. I mapped 50+ of these names over 12 months, some obvious, some so obscure most people have never heard of them, and my timeline isn't next week. It's 2030.\n\nToday is a good day to look at what actually holds up.\n\nIn my portfolio update I did just that: listed every company I actually invested in, every name tagged to its floor. 95% of them are up since I bought them. Check it out and see if some of these names resonate with you on my substack.\n\nhttps://t.co/m9k6Umi62m",
+      "url": "https://x.com/ren_stocks/status/2075288227284422707",
+      "kind": "post",
+      "engagement": {
+        "views": 23323,
+        "likes": 59,
+        "reposts": 2,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

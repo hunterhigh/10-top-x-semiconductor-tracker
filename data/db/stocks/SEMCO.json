@@ -1,21 +1,23 @@
 {
   "ticker": "SEMCO",
-  "cashtag": "Samsung Electro-mechanics",
+  "cashtag": "Samsung Electro-Mechanics",
   "price_symbol": "SEMCO",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Samsung Electro-Mechanics",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-31",
-  "last_mention": "2025-12-31",
-  "total_mentions": 1,
+  "last_mention": "2026-07-03",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "zephyr_z9": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 3
   },
   "mentions": [
     {
@@ -39,6 +41,53 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2069644880494862662",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-24",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "has a lot going for it apart from MLCC",
+        "explosive IC substrate business"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Semco",
+      "text": "@iammoisturized @labubu_trader Semco has a lot going for it apart from MLCC\nThey have an explosive IC substrate biz",
+      "url": "https://x.com/zephyr_z9/status/2069644880494862662",
+      "kind": "reply",
+      "engagement": {
+        "views": 1736,
+        "likes": 11,
+        "reposts": 2,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072982062588662151",
+      "blogger_id": "jukan05",
+      "date": "2026-07-03",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electro-Mechanics",
+      "text": "Tech Taiwan reports: \n\nTSMC’s CoPoS is expected to enter mass production in the first half of 2029.\n\nSamsung Electro-Mechanics (SEMCO), a Samsung Group affiliate, along with Japan’s Toppan and other substrate manufacturers across Japan and South Korea, have all joined the race to develop glass-core substrates and have recently begun submitting engineering samples to TSMC.\n\nTSMC never even considered glass interposers.",
+      "url": "https://x.com/jukan05/status/2072982062588662151",
+      "kind": "post",
+      "engagement": {
+        "views": 157702,
+        "likes": 340,
+        "reposts": 32,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

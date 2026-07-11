@@ -5,17 +5,18 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "PDF Solutions",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-18",
-  "last_mention": "2026-03-23",
-  "total_mentions": 2,
+  "last_mention": "2026-06-26",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 2
+    "aleabitoreddit": 2,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -66,6 +67,33 @@
         "replies": 48
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070458502204580182",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-26",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hit fresh 52-week high",
+        "up roughly 40% in a month",
+        "building on INTC",
+        "slow and steady compounder worth adding to portfolio"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$PDFS",
+      "text": "Not all stocks need to be rocket ships to be worth adding to your portfolio.\n\n$PDFS is one of them.\n\nWhile most AI names are down from their previous ATHs, sleepy compounders like $PDFS, building on $INTC, just hit a fresh 52-week high, up roughly 40% in a month.\n\nThat’s why diversification, even within the AI buildout, matters.\n\nSometimes slow and steady win the race.",
+      "url": "https://x.com/ren_stocks/status/2070458502204580182",
+      "kind": "post",
+      "engagement": {
+        "views": 22171,
+        "likes": 57,
+        "reposts": 3,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

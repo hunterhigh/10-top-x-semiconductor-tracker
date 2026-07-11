@@ -1,21 +1,23 @@
 {
   "ticker": "FI",
-  "cashtag": "$FI",
+  "cashtag": "Fiserv",
   "price_symbol": "FI",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Fiserv",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-29",
-  "last_mention": "2025-11-01",
-  "total_mentions": 3,
+  "last_mention": "2026-06-26",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 3
+    "aleabitoreddit": 3,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3
+    "opinion": 3,
+    "flow": 1
   },
   "mentions": [
     {
@@ -89,6 +91,28 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2070526749566529593",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Fiserv",
+      "text": "Michael Burry bought Microsoft, $MSFT, 2028 LEAPS with strikes in the low seven hundreds, per YF.\n\nHe added JD, Adobe and Fiserv, while also selling Alibaba for tax-loss reasons.",
+      "url": "https://x.com/unusual_whales/status/2070526749566529593",
+      "kind": "post",
+      "engagement": {
+        "views": 457620,
+        "likes": 2374,
+        "reposts": 107,
+        "replies": 96
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

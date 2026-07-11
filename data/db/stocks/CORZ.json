@@ -5,17 +5,18 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Core Scientific",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-01-17",
-  "total_mentions": 13,
+  "last_mention": "2026-06-11",
+  "total_mentions": 14,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 13
+    "aleabitoreddit": 13,
+    "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 13
+    "opinion": 14
   },
   "mentions": [
     {
@@ -330,6 +331,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2065083025759838330",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-11",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "unusual large options order (29.5 6/18 C) with significant volume",
+        "data center buildout progressing rapidly",
+        "company pivoting toward data centers, replacing legacy Bitcoin mining business"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$CORZ",
+      "text": "之前干比特币挖矿的 $CORZ 再出异常大单\n\n29.5 6/18 C 量绝对不算小\n\n市值84亿美金\n\n再翻CORZ的 twitter \n\n发现 他们数据中心进展迅速\n\n他们强调CORZ 会朝着数据中心大步迈进，并逐渐取代落后业务 比特币挖矿 https://t.co/6dDYaJpMbT",
+      "url": "https://x.com/octopusycc/status/2065083025759838330",
+      "kind": "post",
+      "engagement": {
+        "views": 14022,
+        "likes": 21,
+        "reposts": 1,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

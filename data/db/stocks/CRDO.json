@@ -9,13 +9,18 @@
   "industry": "High-Speed Optical Interconnect/AEC",
   "thesis_summary": null,
   "first_mention": "2025-07-21",
-  "last_mention": "2026-03-20",
-  "total_mentions": 60,
+  "last_mention": "2026-07-07",
+  "total_mentions": 68,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 60
+    "aleabitoreddit": 60,
+    "octopusycc": 4,
+    "StockMKTNewz": 2,
+    "KawzInvests": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 60
+    "opinion": 66,
+    "news": 2
   },
   "mentions": [
     {
@@ -1477,6 +1482,193 @@
         "replies": 52
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2065417468265582922",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-12",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "NVIDIA Vera Rubin platform deepens reliance on copper interconnect ('use copper where possible' strategy)",
+        "copper communication sector valuation re-rating narrative",
+        "expanding from AEC supplier story to AI datacenter 'reliability-first' interconnect platform",
+        "value capture path unfolding in valuation re-rating"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "CRDO",
+      "text": "7分38秒，xBubble给我产出了CRDO的顶级投研报告\n\nAI时代，我们几乎都会受困于Prompt怎么写的工程学问题，近期 @dappOS_com 通过xBubble推出一个投研SOP，非常好用。\n\n只要输入股票代码，就可以自动生成出一份完整的公司投研报告，且深度也足够全面。绝不是那种只给一些类似于一些百科的无用信息，而是一些实时有效的股票投研信息。\n\n这和Binance @binancezh 近期上线的全量美股是不是有些关系？DappOS在23年被Yzi Labs以Pre-seed轮进行独立融资。\n\n这种好用程度。Binance也许将会嵌入xBubble？\n\n也建议BN的美股交易界面也可以综合这些信息。 @heyibinance \n\n————————\n\n大部分人其实没有好用的研究框架、也不知道近期的交易重点是什么。\n\n当大家开始讨论一个标的的时候，也是两眼一抹黑，无法真正通过AI进行高质量投研。\n\n我直接拿近期的热点、NVIDIA Vera Rubin平台继续深度依赖并大幅强化铜互连，体现了“能用铜就用铜”的策略。这将给铜通信板块带来重塑估值的直接叙事\n\n于是我在 xBubble上输入 CRDO ，图三是运行出来的目录，这十分惊人\n\n————————\n\n可追溯来源的市场共识目标价\n\n到业务扩展的 AI 数据中心“可靠性优先”的互连平台。直接冲出原本的AEC供应商叙事\n\n估值重塑层面，价值捕获路径的展开\n\nAI 数据中心互连深度拆解（Scale-up / Scale-out 框架）\n等财报和电话会细节研究\n\n一个Prompt就实现了一个相当透彻的深度研究，深度更比买方投研报告。\n\n——————————\n\n当前加密交易所大量的上线美股交易。xBubble无非给用户提供了一个极强的投研助手，普通用户都可以因此快速迈入专业美股投研的门槛。\n我非常建议去深度体验一下",
+      "url": "https://x.com/octopusycc/status/2065417468265582922",
+      "kind": "post",
+      "engagement": {
+        "views": 15284,
+        "likes": 37,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066672855983554676",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-15",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "supplies LRO and LPO chipsets capturing near term volume before CPO fully ramps"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "The AI infrastructure buildout has three distinct networking layers. Each one is at a different point in its adoption curve and each one has different winners.\n\n1. Scale-up connects GPUs inside a single server and eventually across racks. The transition from copper is happening in stages.\n\n> Copper still dominates at short distances.\n\n> Active electrical cable extends that reach but loses signal integrity as clusters grow.\n\n> LPO removes the DSP entirely, cutting power consumption to near CPO levels while keeping the pluggable form factor operators already know.\n\n> NPO moves optics closer to the chip without full co-packaging. Both are ramping faster than CPO in the near term because they require less ecosystem disruption.\n\n> CPO is the endgame. It integrates optics directly onto the switch ASIC substrate, cutting signal loss from 20dB to 1-2dB and power consumption by 3x or more.\n\n$AVGO's Davisson and $NVDA's Spectrum-X are the CPO platforms. $MRVL acquired Celestial AI to position optics directly on top of XPUs rather than at the die edge, with Amazon as the lead design win. $COHR and $LITE supply the CW and EML lasers every platform requires. $LITE holds more than 50% share in high-speed EML lasers with multi-billion dollar supply agreements locked with Nvidia through end of decade. $CRDO and $MTSI supply the LRO and LPO chipsets capturing near term volume before CPO fully ramps.\n\n2. Scale-out connects servers inside a single data center. The 800G transceiver cycle is at peak volume with 1.6T at the beginning of its inflection.\n\n> $MRVL's 51.2T switches and DSPs sit at the center.\n\n> $AAOI is expanding capacity 10x and demand still outpaces supply through mid-2027.\n\n> $COHR supplies modules across the stack.\n\n3. Scale-across connects data centers to each other over distance so one AI model trains across geographically distributed GPU clusters as a single logical environment. The link between sites requires lossless coherent optical transport at 800G and 1.6T.\n\n> $CIEN holds the number one global position in data center interconnect. Their Q2 executive summary states it directly: \"DCI, including scale-across, is gaining momentum as customers connect AI data centers to monetize their investments.\"\n\n> $COHR and $LITE supply the optical circuit switches enabling spine replacement and redundancy across those links.",
+      "url": "https://x.com/KawzInvests/status/2066672855983554676",
+      "kind": "post",
+      "engagement": {
+        "views": 97766,
+        "likes": 255,
+        "reposts": 33,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067982329453097101",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-19",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "CHATGPT STOCK MARKET INVESTING UPDATE\n\nWe gave ChatGPT $100K in the stock market to see if it could beat the S&P 500\n\nSo far GPT is up by 72.4% beating the S&P 500's return of +11.3%\n\nChatGPT made Credo $CRDO and Nebius $NBIS its largest holding in March and both names have doubled since\n\nGPT has now sold out of a majority of its Credo and Nebius positions and has decided to diversify its portfolio\n\nGPT didn't want to be fully exposed to just AI anymore and started buying names like Exxon Mobil $XOM, Visa $V, and JPMorgan $JPM\n\nWe made an X account to cover the AI Stock Market competition we started ... give @ralliesarena a follow. If you want to see everything in real time check out the app",
+      "url": "https://x.com/StockMKTNewz/status/2067982329453097101",
+      "kind": "post",
+      "engagement": {
+        "views": 189313,
+        "likes": 546,
+        "reposts": 54,
+        "replies": 50
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069137605346603267",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nMicron Technology $MU\nASML Holding $ASML \nIntel $INTC \nCredo Technology $CRDO\nSanDisk $SNDK \nCaterpillar $CAT \nBloom Energy $BE\nAstera Labs $ALAB\nAmerican Airlines $AAL\nApogee Therapeutics $APGE\nClearwater Analytics $CWAN\nUnited Microelectronics $UMC\nAdvanced Micro Devices $AMD\nTeraWulf $WULF\nCipher Digital $CIFR\nRiot Platforms $RIOT\nNebius Group $NBIS\nASE Industrial Holding $ASX\nEcopetrol $EC\nKLA Corporation $KLAC\nCVS Health $CVS\nLam Research $LRCX\nAmphenol $APH\nApplied Materials $AMAT\nFrontline $FRO\nTexas Instruments $TXN\nFranklin Resources $BEN\nING Groep $ING\nArcosa $ACA\nHost Hotels $HST\nViking Holdings $VIK\nEntegris $ENTG\nCytokinetics $CYTK\nTeradyne $TER\nAllegro Microsystems $ALGM\nAnalog Devices $ADI\nSpyre Therapeutics $SYRE\nKymera Therapeutics $KYMR\nTG Therapeutics $TGTX\nImmunovant $IMVT\nElement Solutions $ESI\nTower Semiconductor $TSEM\nUBS Group $UBS\nLiquidia Corp $LQDA\nnVent Electric $NVT\nGrupo Aval $AVAL\nRevolution Medicines $RVMD\nLattice Semiconductor $LSCC\nTTM Technologies $TTMI\nLife Time Group $LTH",
+      "url": "https://x.com/StockMKTNewz/status/2069137605346603267",
+      "kind": "post",
+      "engagement": {
+        "views": 42242,
+        "likes": 144,
+        "reposts": 14,
+        "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071704405012062563",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-29",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "screened as worth watching after index rebalancing end"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$CRDO",
+      "text": "随着指数再平衡的结束(6.30尾盘结束）\n\n我筛选了一些值得关注的 标的\n\n$MU \n$SNDK\n$WDC \n$AMZN \n$BE\n$CRDO\n$IREN",
+      "url": "https://x.com/octopusycc/status/2071704405012062563",
+      "kind": "post",
+      "engagement": {
+        "views": 17048,
+        "likes": 64,
+        "reposts": 3,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073992422623961284",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "$CRDO $APH $ALAB $MRVL $TEL $MCHP",
+      "url": "https://x.com/octopusycc/status/2073992422623961284",
+      "kind": "post",
+      "engagement": {
+        "views": 17113,
+        "likes": 20,
+        "reposts": 4,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074155600527884294",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "CRDO",
+      "text": "CRDO ALAB 走得有多好 光就走的有多差",
+      "url": "https://x.com/octopusycc/status/2074155600527884294",
+      "kind": "post",
+      "engagement": {
+        "views": 16716,
+        "likes": 33,
+        "reposts": 2,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074641836874809650",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "optical I/O chiplets winner in CPO ramp"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "Scale-out CPO switches going from 5,000 units this year to 200,000 by 2030. And you are selling?\n\nThat’s a 144% CAGR. A 40x volume ramp that both Yole and Morgan Stanley are modeling off the same wall. That’s the whole thesis, and notice what it doesn’t require: it doesn’t require me to pick which laser vendor qualifies into which switch, or whether Broadcom’s socket beats Nvidia’s.\n\nTo be short this ramp up you have to argue the entire build doesn’t happen, and good luck making that case while the SemiAnalysis “delay” everyone panicked over still lands you at 200k units by 2030. \n\nA delay bends the curve doesn’t make it go away. \n\nThe physics won’t let it go away. A 200,000 GPU cluster is burning ~17 megawatts just on transceivers. CPO cuts that ~73% per 800G. At scale-up density copper is already dead and pluggables are out of runway. Forced migrations are the best ramps you can be long because the demand doesn’t care.\n\nThe biggest winners:\n\nLasers and light sources: $LITE, $COHR, $SIVE\nOptical engines and pump lasers: $AAOI, $COHR\nSwitch ASICs: $AVGO, $MRVL, $NVDA\nOptical I/O chiplets: $ALAB, $CRDO\nPackaging and assembly: $FN, $AMKR\nInP substrate and materials: $AXTI\n\nLITE is the cleanest CPO scarcity play, shipping 200G-per-lane EMLs at volume, book through 2028. $AAOI is the one that wins both ways: its core 800G and 1.6T pluggable business actually benefits if CPO slips, while its external laser fab keeps it in the game when CPO finally ramps.\n\nBullish photonics ⚡️",
+      "url": "https://x.com/ren_stocks/status/2074641836874809650",
+      "kind": "post",
+      "engagement": {
+        "views": 49366,
+        "likes": 313,
+        "reposts": 37,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

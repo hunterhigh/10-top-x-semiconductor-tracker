@@ -5,17 +5,27 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Qualcomm",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-12",
-  "last_mention": "2026-06-03",
-  "total_mentions": 6,
+  "last_mention": "2026-07-05",
+  "total_mentions": 35,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 6
+    "jukan05": 11,
+    "aleabitoreddit": 6,
+    "StockMKTNewz": 6,
+    "KawzInvests": 3,
+    "unusual_whales": 2,
+    "zephyr_z9": 2,
+    "ren_stocks": 2,
+    "michaelsikand": 2,
+    "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 6
+    "opinion": 27,
+    "flow": 2,
+    "news": 6
   },
   "mentions": [
     {
@@ -152,6 +162,671 @@
         "replies": 3
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066657381740933419",
+      "blogger_id": "jukan05",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "board should replace current management team",
+        "bring Jim Keller in as CEO"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "Qualcomm’s board should replace the current management team and bring Jim Keller in as CEO. https://t.co/GFpaggyYs2",
+      "url": "https://x.com/jukan05/status/2066657381740933419",
+      "kind": "post",
+      "engagement": {
+        "views": 64041,
+        "likes": 516,
+        "reposts": 32,
+        "replies": 38
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066847505782899082",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Qualcomm, $QCOM, CEO says AI agents will replace apps, per CNBC",
+      "url": "https://x.com/unusual_whales/status/2066847505782899082",
+      "kind": "post",
+      "engagement": {
+        "views": 166839,
+        "likes": 912,
+        "reposts": 71,
+        "replies": 120
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067092746364748272",
+      "blogger_id": "jukan05",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "Samsung sees rising chip production requests from BYD, Google, AMD- Nikkei Asia\n\nBYD, Google, AMD, Tesla and others are looking increasingly to Samsung Electronics for contract chipmaking services as surging demand for AI infrastructure strains the advanced chipmaking capacity of market leader TSMC, Nikkei Asia has learned.\n\nSamsung has seen a surge in inquiries from existing and potential global customers, including those in China, looking to use its advanced chip manufacturing capacity, according to six people with knowledge of the matter.\n\nBYD, China's top electric vehicle maker, has been in talks with Samsung about building future generations of autonomous driving chips, while Google is engaging with the South Korean company about potentially producing its next-generation Axion processors, set to launch around 2028, two people familiar with the matter told Nikkei Asia. Google is also considering asking Samsung to build part of its key Tensor Processing Units (TPUs) for AI computing workloads, as early as 2028, one of the people said.\n\n\"TSMC is prioritizing advanced-node production not only because it reinforces its tech leadership and long-term strategy, but also because those nodes are more profitable and remain in short supply,\" said an executive from a Chinese autochip designer, who asked not to be named. \"Samsung's yields still lag behind TSMC's, but capacity availability has made it an increasingly attractive option.\"\n\nYield is the industry term for production quality, measured as the percentage of chips produced that meet the required specifications and performance.\n\nTSMC, Samsung and Intel are the world's only chipmakers that can offer cutting-edge chip production at a large scale. TSMC has secured the majority of such orders, as well as orders for advanced chip packaging services, from the likes of Nvidia, Apple, AMD, Broadcom, Marvell and MediaTek. These clients take up a large share of the Taiwanese chipmaking group's advanced chipmaking capacity.\n\nIntel, which mainly manufactures chips for in-house use, is working to attract more customers to adopt its advanced chipmaking and packaging capacity.\n\nThe Chinese auto industry executive said many chip designers in the country are now pursuing a dual-sourcing strategy, spreading orders between TSMC and Samsung rather than relying on a single foundry, with exact allocation depending on the product.\n\n\"Geopolitical factors also push some U.S. clients to use multiple contract chipmakers, if available out there, if they can,\" another chip industry executive with knowledge told Nikkei Asia.\n\n\"TSMC's advanced chip production capacity is really full, which is hard for Chinese clients who have smaller volumes to place new orders, so several have turned to approach Samsung for future possibilities,\" said an executive-level chip industry source who is familiar with the matter.\n\nGoogle has been a driving force in the multi-foundry strategy, sources told Nikkei Asia. MediaTek, Taiwan's top chip developer, is helping Google to work with both TSMC and Intel for advanced chip packaging, Nikkei Asia earlier reported, while Qualcomm, the U.S. mobile chip king, has long made use of both TSMC's and Samsung's services.\n\nHowever, using multiple foundries for advanced chip production requires substantial investment in adapting chip designs to different chipmakers' manufacturing processes, along with greater R&D and supply-chain coordination. Such a strategy is typically viable only for deep-pocketed chip developers, given the additional engineering and workforce costs involved.\n\nMeanwhile, capacity constraints at TSMC are pushing other existing customers to potentially place more orders with Samsung, sources said.\n\nTesla works with both Samsung and TSMC on various products, including its AI5 chips used in its cars and robots. The upcoming AI6, however, will be made by Samsung in Texas. Tesla founder Elon Musk also announced a partnership with Intel for its future terafab projects in Texas, aiming to bring more critical chip production back to the U.S. and help meet growing demand.\n\nAMD and Nvidia, key clients of TSMC, are also working with Samsung on some chip projects due to capacity constraints. AMD, for example, is in talks to build some future CPUs with Samsung from 2028, one source with knowledge of the situation said.\n\nNvidia's Groq language processing units (LPUs) are produced by Samsung, and the U.S. chipmaker has not decided whether production of the next generation of these highly specialized chips will be given to other contract chipmakers. The majority of Nvidia's chips are made exclusively by TSMC.\n\nThe increasing requests for leading-edge chip production for Samsung would mark a victory for the South Korean chipmaker's foundry business, which used to mainly serve its own consumer electronics and home appliance divisions.\n\nThe growing foundry business comes as Samsung is also riding the AI investment boom, enjoying exponentially growing demand for its memory products, including high-bandwidth memory chips, DRAM and NAND flash memories.\n\nSamsung said that it does not comment on customers.\n\nNew orders would help Samsung's foundry unit rebound from a recent downturn. The company said earnings for the segment declined in the first quarter due to it being the off-peak season, but it did not elaborate on how big the dip was.\n\nSamsung's foundry and system large-scale integration business units posted a combined 6.9 trillion won ($4.6 billion) in sales in the first quarter, up from 6 trillion won a year ago. Samsung does not break down its earnings for the two units, the latter of which makes an array of logic and analog chips, including image sensors and display chips.\n\nBYD declined to comment. Google said it does not comment on the details of its supply chain.",
+      "url": "https://x.com/jukan05/status/2067092746364748272",
+      "kind": "post",
+      "engagement": {
+        "views": 150035,
+        "likes": 390,
+        "reposts": 52,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067655576189088205",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "QCOM出现 14天的大call \n\n$QCOM \n\n189万美金的权利金 看涨到270 https://t.co/3F5vK0DmGE",
+      "url": "https://x.com/octopusycc/status/2067655576189088205",
+      "kind": "post",
+      "engagement": {
+        "views": 11444,
+        "likes": 22,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068833982037565498",
+      "blogger_id": "jukan05",
+      "date": "2026-06-21",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab\n\nSamsung Electronics has begun preparations to break ground on \"P5 Fab 2,\" the final fab at its Pyeongtaek campus in Gyeonggi Province. As a wave of artificial intelligence (AI) infrastructure investment has driven a surge in memory chip orders, the company has moved up the timing of its capital investment by roughly six months from the original plan.\n\nConstruction Equipment Deployed at the P5 Fab 2 Site\n\nAccording to the industry on the 21st, several pile drivers have recently been newly positioned at Samsung Electronics' P5 Fab 2 site. A pile driver is a piece of construction equipment used to drive columns into the ground. An industry official said, \"Equipment coming into the construction site one by one means that P5 Fab 2 construction will begin in earnest before long,\" adding, \"There is a strong likelihood of breaking ground around next month.\" The containers on the fab site are being moved elsewhere. The site partitioning work has reportedly also been completed. Samsung Electronics and the construction contractor are said to be assembling a dedicated team for the P5 Fab 2 project.\n\nP5 Fab 2 is the sixth fab to be built at the Pyeongtaek site, where Samsung Electronics produces its most advanced chips. It is also the last semiconductor production line at the Pyeongtaek site. The fab will be built on a site measuring 661m by 194m (approximately 130,000 square meters). That is the size of 18 soccer fields. It is expected to be able to produce 200,000 to 300,000 wafers per month on a 300mm wafer basis. It will house everything from high bandwidth memory (HBM), its flagship product, to next generation DRAM, NAND flash, and advanced process foundry (contract manufacturing) lines. The target is for it to begin operation for the first time in 2029.\n\nA distinctive feature is that it will be built in a three story \"triple fab\" structure. This building structure was first adopted at \"P5 Fab 1,\" located right next to this site, which began construction late last year with a target of beginning operation in 2028. P5 Fab 1 is expected to require an investment of more than 60 trillion won. A similar amount of funding is forecast to go into building P5 Fab 2. Combining the production capacity of P5 Fabs 1 and 2 comes to around 600,000 wafers per month on a 300mm wafer basis. That is a scale comparable to Samsung Electronics' current total DRAM output (650,000 units per month).\n\nAccelerating Capital Investment Amid Surging Chip Demand\n\nSamsung Electronics had originally planned to break ground on P5 Fab 2 early next year. However, as demand recently surged in the information technology (IT) industry not only for HBM, the core of AI chips, but also for general purpose DRAM and NAND flash, the company decided to move up the groundbreaking timing. An industry official said, \"Once Samsung Electronics begins pouring out volume in earnest, it will be able to gain an edge over competitors in cost competitiveness through 'economies of scale.'\"\n\nThe fact that global big tech companies have recently approached Samsung Electronics' foundry one after another about collaboration is also one of the factors behind moving up the groundbreaking. Chip design companies such as Nvidia, AMD, and Qualcomm, as well as Tesla and Neuralink led by Elon Musk, have all proposed contract manufacturing to Samsung Electronics.\n\nIn addition to building P5 Fabs 1 and 2 simultaneously, Samsung Electronics is expanding the production capacity of each of its bases in various ways. At P4, the newest fab within the Pyeongtaek site, it is additionally building a 10nm class 6th generation (1c) DRAM production line for 6th generation HBM (HBM4) with a scale of 100,000 to 120,000 wafers per month on a 300mm wafer basis. Its Xian fab in China is being equipped with space to produce 286 layer (V9) NAND flash. Its fab in Taylor, Texas, in the United States is being equipped with a 2 nanometer (nm; 1nm = one billionth of a meter) manufacturing line capable of making Tesla AI chips. The company is also reportedly pursuing the establishment of a semiconductor back end (packaging) fab in the Gwangju or Saemangeum region in a bid to promote balanced regional development.\n\nDaniel Oh, Executive Vice President at Samsung Electronics, said at the first quarter earnings call held this past April, \"With AI demand continuing this year, we plan to expand the scale of our capital expenditure (CAPEX) to a considerable level compared with the previous year,\" adding, \"We will strengthen our strategic bases and secure additional infrastructure so that we can proactively respond to future demand.\"",
+      "url": "https://x.com/jukan05/status/2068833982037565498",
+      "kind": "post",
+      "engagement": {
+        "views": 77088,
+        "likes": 280,
+        "reposts": 29,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068932544347980289",
+      "blogger_id": "jukan05",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm's \"AI200,\" Expanding Collaboration into the Data Center Segment\n\nSamsung Electro Mechanics has begun mass production of the package substrate that will be used in Qualcomm's first data center artificial intelligence (AI) accelerator. The supply deal is expected to expand the collaboration between the two companies from its existing footprint in mobile and PC into the data center segment.\n\nAccording to reporting by ZDNet Korea on the 22nd, Samsung Electro Mechanics recently began mass production at its Busan plant of the flip chip ball grid array (FC BGA) used in Qualcomm's latest AI accelerator, the \"AI200.\"\n\nThe AI200 is Qualcomm's first data center AI accelerator, unveiled this past October. It is specialized for AI inference workloads. It is equipped with Qualcomm's in house \"Oryon\" CPU and \"Hexagon\" NPU, paired with LPDDR5, a low power DRAM with strong power efficiency.\n\nQualcomm is targeting the second half of this year for the AI200's launch, and Samsung Electro Mechanics appears to have begun its FC BGA mass production in line with that timeline.\n\nBecause the FC BGA that Samsung Electro Mechanics is mass producing for Qualcomm's AI200 is an initial production volume, the volume is reportedly modest for now. Even so, the move is seen as meaningful in that the collaboration between Samsung Electro Mechanics and Qualcomm is expanding from its existing mobile and PC footprint into data center semiconductors. Until now, Samsung Electro Mechanics had supplied the package substrates used in Qualcomm's application processors (AP) for IT devices.\n\nOne semiconductor industry official said, \"Because Samsung Electro Mechanics has had a long collaboration with Qualcomm, the supply deal for the AI accelerator FC BGA appears to have been concluded smoothly,\" adding, \"Qualcomm plans to release the AI200 this year and the AI250 next year in succession, so Samsung Electro Mechanics can also enjoy the benefit of diversifying its customer base accordingly.\"\n\nLG Innotek is also understood to be pursuing the supply chain for Qualcomm's AI200 FC BGA. Earlier, at a media event on the 17th, LG Innotek stated that \"mass production of FC BGA used in server training and inference semiconductors is targeted for next year.\"\n\nAnother official said, \"The AI200, which is specialized for AI inference, requires lower performance specifications for its FC BGA compared with high bandwidth memory (HBM) based AI accelerators,\" adding, \"so the barrier to entry should be comparatively low even for LG Innotek, a latecomer in the FC BGA industry.\"\n\nFC BGA is a package substrate that connects the semiconductor chip and the substrate via \"flip chip bumps\" (a method of flipping the chip over). Compared with the wire bonding that was mainly used in conventional packages, it has superior electrical and thermal characteristics, so demand is high, centered on high performance semiconductors.\n\nThe AI200 FC BGA is formed with internal layers in the low to mid teens. FC BGA is structured by stacking copper wired circuit layers and an insulator called Ajinomoto Build up Film (ABF) layer upon layer, and the higher the layer count, the higher the performance. For ultra high performance data center AI accelerators, more than 20 layers must be stacked.",
+      "url": "https://x.com/jukan05/status/2068932544347980289",
+      "kind": "post",
+      "engagement": {
+        "views": 47101,
+        "likes": 199,
+        "reposts": 17,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069170156564074533",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Qualcomm $QCOM is reportedly in advanced talks to acquire Modular in a transaction valuing the AI chip startup at about $4 billion - Bloomberg https://t.co/AKzmOqs1nK",
+      "url": "https://x.com/StockMKTNewz/status/2069170156564074533",
+      "kind": "post",
+      "engagement": {
+        "views": 47843,
+        "likes": 160,
+        "reposts": 8,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069762714436526163",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-24",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Qualcomm $QCOM just announced it has agreed to acquire Modular for ~$3.9 Billion in stock - Bloomberg\n\n“Modular provides an open, AI-native software stack that enables AI to run efficiently across hardware architectures” https://t.co/dDu8TNgY0b",
+      "url": "https://x.com/StockMKTNewz/status/2069762714436526163",
+      "kind": "post",
+      "engagement": {
+        "views": 53611,
+        "likes": 195,
+        "reposts": 20,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069773531273896238",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-24",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Qualcomm $QCOM is in talks with ByteDance to develop custom Video Processing Units Chips - Reuters\n\nhttps://t.co/0rd4DtAT8t",
+      "url": "https://x.com/StockMKTNewz/status/2069773531273896238",
+      "kind": "post",
+      "engagement": {
+        "views": 33784,
+        "likes": 41,
+        "reposts": 6,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069863257834222014",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-24",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "unveiled first data center CPU",
+        "chip optimized for performance per watt",
+        "Meta is launch customer",
+        "CFO says not enough supply and multiple players needed in CPU market",
+        "production starts 2028"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "QUALCOMM $QCOM JUST UNVEILED ITS FIRST DATA CENTER CPU AND META $META IS THE LAUNCH CUSTOMER  \n\nThe chip is called Dragonfly C1000. It is built specifically for agentic AI workloads and optimized for performance per watt. Meta starts production in 2028\n\nQualcomm CFO Akash Palkhiwala: \"There really isn't enough supply and multiple players are needed in the CPU market.\"\n\n(Source CNBC)",
+      "url": "https://x.com/StockMKTNewz/status/2069863257834222014",
+      "kind": "post",
+      "engagement": {
+        "views": 42090,
+        "likes": 120,
+        "reposts": 20,
+        "replies": 25
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069890671218229629",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-24",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "lies a lot",
+        "didn't disclose technical detail"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "QCOM",
+      "text": "@JDorbal1989 They didn't disclose technical detail\nQCOM lies a lot",
+      "url": "https://x.com/zephyr_z9/status/2069890671218229629",
+      "kind": "reply",
+      "engagement": {
+        "views": 7387,
+        "likes": 30,
+        "reposts": 1,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069941535009874313",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-24",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Qualcomm $QCOM forecasts sales of more than $15 billion a year by fiscal 2029 in its data center market - Bloomberg https://t.co/bct4B6Dh8f",
+      "url": "https://x.com/StockMKTNewz/status/2069941535009874313",
+      "kind": "post",
+      "engagement": {
+        "views": 41051,
+        "likes": 147,
+        "reposts": 7,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070143245493960913",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-25",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "$BB is up 100% since I first covered it.\n\nHad earnings today. Beat revenue by $14M. EBITDA up 144% YoY. First positive Q1 operating cash flow in 9 years.\n\nMost people think BB is a dead phone company or a meme stock with a Reddit army. They don't realize BB owns QNX. And most people have no idea what QNX even is.\n\nQNX is the operating system that runs underneath 275 million cars. The invisible software layer that makes the vehicle work. 10 of the top 10 automakers run it. Every major chip vendor in physical compute is partnered with it. $NVDA. $AMD. $INTC. $ARM. $QCOM. $NXPI. $TXN.\nAnd their royalty model means revenue compounds with every car, robot, and device that ships.\n\nStill funny to me that people are out here calling this a meme stock while QNX is quietly becoming the software backbone of physical AI. $BB",
+      "url": "https://x.com/KawzInvests/status/2070143245493960913",
+      "kind": "post",
+      "engagement": {
+        "views": 37252,
+        "likes": 181,
+        "reposts": 17,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070222242668310700",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-25",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Look at this.\n\nQualcomm, $QCOM, is up nearly 6% today.\n\nThis is after it forecasted $15 billion data centre chip sales by 2029. https://t.co/sSgrEn1rA9",
+      "url": "https://x.com/unusual_whales/status/2070222242668310700",
+      "kind": "post",
+      "engagement": {
+        "views": 168116,
+        "likes": 250,
+        "reposts": 15,
+        "replies": 32
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070553697541910760",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "Everyone is adopting memory on logic 3D stacking\nSamsung, Huawei, Apple, Qualcomm for phones (2027-28)\nGoogle, Nvidia, Broadcom for AI XPUs (2028-29)",
+      "url": "https://x.com/zephyr_z9/status/2070553697541910760",
+      "kind": "post",
+      "engagement": {
+        "views": 44902,
+        "likes": 206,
+        "reposts": 17,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070672837745279104",
+      "blogger_id": "jukan05",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "An interesting trend… MediaTek has now almost caught up with Qualcomm in market cap. https://t.co/niE0vS3uas",
+      "url": "https://x.com/jukan05/status/2070672837745279104",
+      "kind": "post",
+      "engagement": {
+        "views": 65893,
+        "likes": 257,
+        "reposts": 22,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071141023666090276",
+      "blogger_id": "jukan05",
+      "date": "2026-06-28",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "퀄컴",
+      "text": "@__bag_h_dad 퀄컴이 PIM 쓰려 한다는 얘기는 이전부터 있더라고요. 개인적으로 눈여겨 보고 있습니다.\n\nhttps://t.co/6b4tqiVKQ6",
+      "url": "https://x.com/jukan05/status/2071141023666090276",
+      "kind": "reply",
+      "engagement": {
+        "views": 13788,
+        "likes": 40,
+        "reposts": 5,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071362306207109504",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-28",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "RB6 robotics platform",
+        "lower power",
+        "industrial design wins"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$QCOM",
+      "text": "Everyone and their mother is talking about humanoids on my timeline, so I thought I'd give it a go.\n\nHere's the stack, layer by layer. Household names first, hidden picks last.\n\n1. AI Brains // the intelligence\n$NVDA Nvidia -- Jetson + GR00T foundation model. \n$QCOM Qualcomm -- RB6 robotics platform, lower power, industrial design wins.\n\n2. Sensors & Perception // how it sees and feels\n$CGNX Cognex -- the established machine-vision incumbent.\n$ALGM Allegro Micro -- magnetic position sensors. \n$OUST Ouster -- solid-state lidar pure-play, the small-cap everyone debates.\n$VPG Vishay Precision -- strain gauges and force sensing.\n\n3. Edge AI Inference // decisions on-device\n$LSCC Lattice -- low-power FPGAs for sensor fusion.\n$AMBA Ambarella -- edge vision processors crossing over from auto.\n$CEVA Ceva -- DSP and inference IP. Pure licensing, pure obscurity.\n\n4. Motors & Motion // the muscles\n$AME Ametek -- precision instruments and motion, blue-chip industrial.\n$NJDCY Nidec -- world's largest motor maker.\n$RRX Regal Rexnord -- motors and drives at scale.\n$RBC RBC Bearings -- precision components.\n\n5. Joints & Precision Motion // human-like movement\n$ALNT Allient -- US-listed, integrated motion.\n6324.T Harmonic Drive -- strain wave gears. Every Optimus joint uses one. Potentially a bottleneck name.\n6481.T THK -- linear bearings and ball screws. Tokyo-listed, off the radar.\n\n6. Power Electronics // energy into controlled motion\n$TXN Texas Instruments -- motor control MCUs at scale.\n$STM STMicro -- broad motor control portfolio.\n$IFNNY Infineon -- dominant in automotive-grade power.\n$ON onsemi -- power management and sensing.\n$RNECY Renesas -- automotive and industrial motor control.\n$MPWR Monolithic Power -- high-efficiency DC-DC for compact systems.\n$WOLF Wolfspeed -- silicon carbide pure-play, the distressed wildcard.\n$NVTS Navitas -- GaN, asymmetric small-cap.\n\n7. Energy & Rare Earth // the raw fuel\n$MP MP Materials -- the REE pure-play everyone knows.\n$LYSCF Lynas -- largest non-China producer.\n$ENS EnerSys -- industrial batteries.\n$UUUU Energy Fuels -- diversified REE and uranium.\n$USAR USA Rare Earth -- magnet manufacturing, the new entrant.\n\nThe winners may not be the robot makers. They may be the companies inside the robot.\n\nNow, I'm not investing in this theme just yet.\n\nRobotics VC hit a RECORD HIGH of ~$16B in Q1 2026. \n\nBut AI venture funding reached $255.5B in the same quarter, eclipsing the full-year 2025 total of $254.4B in a single three-month stretch. That's 16x what robotics pulled in the same window.\n\nI'm bullish on everything here, but I also know where to allocate my money.\n\nMaybe 5 of every 100 lesser-known names in this sector will actually do well. I'm going to keep waiting to see which ones have a clearer path. \n\nFor now I have exactly 3 in mind, and I'm not yet invested. I'll do proper research before I talk about it.\n\nCredit to @realfuturistlens on Substack for the ilustration.",
+      "url": "https://x.com/ren_stocks/status/2071362306207109504",
+      "kind": "post",
+      "engagement": {
+        "views": 203611,
+        "likes": 941,
+        "reposts": 149,
+        "replies": 41
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071617100838293819",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-29",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "$BB CEO was on Bloomberg this morning \n\nInterviewer asked about memory cost pressures. Apple and Microsoft are raising prices because of HBM. The CEO didn't flinch:\n\n\"The beauty of our model is we sell the software only directly. Now that we're a software and services only play, that enables us to really participate on the high margin side of the equation.\"\n\n$NVDA and $QCOM have fully standardized their vehicle compute platforms on QNX. Every new car that ships has multiple computers inside it. QNX runs underneath all of them. More compute per vehicle means more royalties per vehicle.\n\nNow expanding into robotics, medical devices, and industrial automation. CEO called it the fastest growing segment in the company. 👀",
+      "url": "https://x.com/KawzInvests/status/2071617100838293819",
+      "kind": "post",
+      "engagement": {
+        "views": 79088,
+        "likes": 329,
+        "reposts": 50,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071780334413447568",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-29",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Everyone is chasing the humanoid logos. I did what I did with AI Infra -- looked underneath the hood.\n\nThe money is not in the robot. It is in the ~40 parts that repeat inside every body, the ones almost nobody can build.\n\nHere's the full list according to Goldman Sachs: \n\n1. The brain // the intelligence:\n\n$NVDA Nvidia -- Jetson + GR00T. The obvious one, lowest humanoid alpha.\n$QCOM Qualcomm -- RB6, lower-power industrial.\nAlso: Tesla, $GOOGL, $META, iFlytek (https://t.co/KU8j5ePbkQ), Huawei (private)\n\n2. Sensors & perception // how it sees and feels:\n\n$OUST Ouster -- solid-state lidar pure-play.\n$CGNX Cognex -- machine-vision incumbent.\n$ALGM Allegro -- magnetic position sensors. The quiet winner, every joint needs them.\n$VPG Vishay Precision -- strain gauges, force sensing.\n$NOVT Novanta -- six-axis force-torque (ATI).\nAlso: Orbbec (https://t.co/EmUgsWEgkb), RoboSense (https://t.co/LhyDNpQfLV), $HSAI Hesai, Sunny Optical (https://t.co/bGc3smstll)\n\n3. Edge AI inference // decisions on-device:\n\n$AMBA Ambarella -- edge vision processors.\n$LSCC Lattice -- low-power FPGAs for sensor fusion.\n$CEVA Ceva -- DSP and inference IP. Pure licensing, pure obscurity.\n\n4. Motors & motion // the muscles:\n\n$NJDCY Nidec -- world's largest motor maker.\n$AME Ametek -- precision instruments and motion.\n$RRX Regal Rexnord -- motors and drives at scale.\n$RBC RBC Bearings -- precision components.\nAlso: Moons' Electric (https://t.co/SU7teQIXWZ), Zhaowei (https://t.co/SfgqzHgLXa), Leadshine (https://t.co/QVkDM2gVw8), Veichi (https://t.co/gmK0xmcWww)\n\n5. Joints & precision motion // human-like movement -- \nTHE POTENTIAL BOTTLENECK:\n\n6324.T Harmonic Drive -- strain wave gears. Every Optimus joint uses one.\n6481.T THK -- planetary roller screws and linear bearings. Tokyo-listed, off the radar.\n$ALNT Allient -- US-listed, integrated motion.\nhttps://t.co/PItDtJ8PBJ Schaeffler -- roller screws.\nAlso: LeaderDrive (https://t.co/VL92TVG0Iw), Shuanghuan (https://t.co/8px4AQdQsO), Zhongda Leader (https://t.co/Znu2SoTgkf)\n\n6. Dexterous hands // a humanoid in your palm:\n\n$INVN... none US-listed. China leads here.\nZhaowei (https://t.co/SfgqzHgLXa) -- hand drive modules.\nInovance (https://t.co/kN8VYE6iDX) -- servo and motion control.\nAlso: PaXini (private, tactile)\n\n7. Actuator assembly // putting it together:\n\nSanhua (https://t.co/4zM5co71yk) -- assembly at auto-supply-chain cost.\nTuopu (https://t.co/78h2i40K2N) -- built for cost and volume.\n\n8. Power electronics // energy into controlled motion:\n\n$NVTS Navitas -- GaN, the asymmetric small-cap.\n$TXN Texas Instruments -- motor-control MCUs at scale.\n$STM STMicro -- broad motor-control portfolio.\n$ON onsemi -- power management and sensing.\n$MPWR Monolithic Power -- high-efficiency DC-DC.\n$IFNNY Infineon -- automotive-grade power.\n$RNECY Renesas -- automotive and industrial motor control.\n$WOLF Wolfspeed -- SiC pure-play, the distressed wildcard.\n\n9. Energy & rare earth // the raw fuel:\n\n$MP MP Materials -- the REE pure-play everyone knows.\n$USAR USA Rare Earth -- magnet manufacturing, the new entrant.\n$LYSCF Lynas -- largest non-China producer.\n$UUUU Energy Fuels -- diversified REE and uranium.\n$ENS EnerSys -- industrial batteries.\nAlso: CATL (https://t.co/havEzEZrGN). The magnet, not the cell, is the scarce part.\nThe one maker I'd own:\n$CCXI Churchill Capital XI -- merging with Agility Robotics, trades as $AGLT on close. Only US-listed pure-play humanoid. Pre-deal SPAC, size it small.\n\nThe one maker I own: $CCXI / $AGLT\n\n$CCXI Churchill Capital XI -- merging with Agility Robotics, trades as $AGLT on close. Only US-listed pure-play humanoid. Digit is real: 65k+ work hours, 300M+ in orders, backed by NVIDIA, Amazon, Foxconn.\n\nThe winners may not be the robot makers. They may be the companies inside the robot.\n\nI made a deeper dive for free on my substack, go check it out: \n\nhttps://t.co/euNn12SDVp\n\nNow you know which floor to look at. ⚡",
+      "url": "https://x.com/ren_stocks/status/2071780334413447568",
+      "kind": "post",
+      "engagement": {
+        "views": 99204,
+        "likes": 546,
+        "reposts": 101,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072301004981457356",
+      "blogger_id": "jukan05",
+      "date": "2026-07-01",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Meta was planning to buy their chips but this news looks bearish for that plan"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "QCOM",
+      "text": "@lokoyacap Really? Either way, this looks bearish for the QCOM and ARM chips Meta was planning to buy.",
+      "url": "https://x.com/jukan05/status/2072301004981457356",
+      "kind": "reply",
+      "engagement": {
+        "views": 13042,
+        "likes": 57,
+        "reposts": 2,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072379826007421261",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "SPACEX $SPCX TRYING TO COMPETE WITH APPLE??\n\nElon Musk owned SpaceX has been showing off a prototype AI device, slimmer than an iPhone, per WSJ.\n\nThe device runs on a proprietary operating system and integrates AI from xAI, using a Qualcomm Snapdragon chipset, according to people familiar with the matter.\n\nSpaceX has told investors the project is still early stage. The design could change, and it's unclear whether the device ever ships.",
+      "url": "https://x.com/StockMKTNewz/status/2072379826007421261",
+      "kind": "post",
+      "engagement": {
+        "views": 61491,
+        "likes": 245,
+        "reposts": 31,
+        "replies": 47
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072448718633316671",
+      "blogger_id": "jukan05",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "MediaTek Reportedly Secures Meta as ASIC Customer After TPU\n\nQualcomm has formally unveiled its Dragonfly platform, loudly declaring its entry into the cloud AI market, and by leading with several product lines at once it has captured a sizable base of customers in one stroke. MediaTek, the Taiwanese IC design heavyweight that has drawn high expectations in recent years for its cloud custom chip (ASIC) business, appears set to compete once again with this longtime rival in the ASIC arena. Word from the supply chain is that MediaTek's securing of a \"second customer\" beyond Google is already firm, and barring surprises, that customer will be Meta as rumored.\n\nMediaTek, by convention, does not publicly comment on individual products, customer situations, or market rumors.\n\nQualcomm currently appears to hold key major customers such as Meta, Microsoft, and even ByteDance. The industry view, however, is that MediaTek, which continues to deepen its cooperation with Google and stands a chance of locking in a second customer, is not in fact at a disadvantage.\n\nA semiconductor supply chain source stated flatly that, judging by the current ordering outlook of major cloud service providers (CSPs) for AI data centers and ASIC products and the pace of generational transition, Google remains to this day the major customer whose progress is the strongest and whose stance is the most aggressive.\n\nThis does not, of course, mean that orders from other CSPs are small in scale or that they might be delayed. Rather, it means that securing Google's orders more reliably guarantees the positive effect they will bring to earnings. Once the mass production schedule emerges, one can basically pin down how much more can be earned in that year, and the scale is above a certain level as well.\n\nMediaTek not only holds two products, code named Zebrafish and Humufish, but according to market related information and confirmation from industry sources well versed in ASICs, its participation in the v9 generation Triggerfish is now all but confirmed. This means that from late 2026 through 2028, and even into 2029, MediaTek can steadily reap the revenue contribution brought by TPU mass production.\n\nCompared with Qualcomm's stated 2029 cloud AI revenue target of 15 billion dollars, it appears that MediaTek, holding multiple TPU ASIC orders, reaching the 10 billion dollar level is only a matter of time.\n\nThat said, the industry is paying equal attention to whether MediaTek can smoothly secure a second key CSP major customer. Taking together the earlier market information and recent confirmation from the supply chain side, MediaTek is still actively cooperating with Meta on ASIC products, and the substance of that cooperation is likely still centered on AI accelerator chips.\n\nWhile Meta has struck cooperation deals with Arm and Qualcomm one after another during this period, those cooperation products were all aimed at CPUs, and on the self developed AI accelerator chip front there is still no clearer cooperation news. If MediaTek can land this customer, it will be of no small help to the subsequent growth of its ASIC business.\n\nIC design industry sources observe that Meta's recent cloud AI development strategy has indeed been somewhat chaotic and unclear. Its in house chip development plans have been repeatedly adjusted, and in the CPU segment alone it has sought out multiple cooperation partners and pursued different approaches.\n\nOn the AI accelerator chip front, although Meta has previously officially announced its cooperation plan with Broadcom, word from the supply side indicates that this has not interrupted the cooperation plan underway between MediaTek and Meta. Evidently Meta intends to develop products with as many cooperation partners as possible.\n\nIC design industry sources also emphasized that the cloud AI development blueprints of the two companies, MediaTek and Qualcomm, still look quite different. MediaTek is concentrating all its resources on the ASIC business, whereas Qualcomm intends to pursue customization and standardization in parallel, covering both AI accelerator chip and CPU product directions at once.\n\nThe differing plans for their product lines mean the two sides' development strategies should also differ. From MediaTek's standpoint, as long as it focuses its development on the ASIC end and holds onto Google as a major customer over the long term, it will by no means tilt into a disadvantage on the fundamental competitive footing.",
+      "url": "https://x.com/jukan05/status/2072448718633316671",
+      "kind": "post",
+      "engagement": {
+        "views": 137345,
+        "likes": 282,
+        "reposts": 21,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072535645848051923",
+      "blogger_id": "jukan05",
+      "date": "2026-07-02",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "revenue exposure to Amazon seems smaller than expected"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Qualcomm",
+      "text": "@insane_analyst Qualcomm’s revenue exposure to Amazon seems smaller than I thought.",
+      "url": "https://x.com/jukan05/status/2072535645848051923",
+      "kind": "reply",
+      "engagement": {
+        "views": 5686,
+        "likes": 20,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072923398653821326",
+      "blogger_id": "jukan05",
+      "date": "2026-07-03",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "Has $AVGO  entered the Trainium supply chain? Or is it $QCOM ?",
+      "url": "https://x.com/jukan05/status/2072923398653821326",
+      "kind": "post",
+      "engagement": {
+        "views": 201345,
+        "likes": 224,
+        "reposts": 11,
+        "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072924502770815379",
+      "blogger_id": "jukan05",
+      "date": "2026-07-03",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "entered the Trainium supply chain"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "Qualcomm",
+      "text": "I think it’s Qualcomm.",
+      "url": "https://x.com/jukan05/status/2072924502770815379",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 19319,
+        "likes": 86,
+        "reposts": 3,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073500069114814571",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-04",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hit 10x on options from 150 to 240",
+        "finds it way more interesting at 180"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "qcom",
+      "text": "@optionscjp I hit a 10x on qcom\noptions from 150 - 240 \n\nwish I sized bigger\n\nI will\nsay it is wayyy more interesting at 180",
+      "url": "https://x.com/michaelsikand/status/2073500069114814571",
+      "kind": "reply",
+      "engagement": {
+        "views": 2934,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073502201515769885",
+      "blogger_id": "michaelsikand",
+      "date": "2026-07-04",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "bought before earnings when they said hyperscaler"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "qcom",
+      "text": "@optionscjp Well I bought before earnings when they said hyperscaler",
+      "url": "https://x.com/michaelsikand/status/2073502201515769885",
+      "kind": "reply",
+      "engagement": {
+        "views": 697,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073835302729232729",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-05",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "275 million vehicles run on software almost no one can name. The same software runs 9 of 10 medical device makers and 8 of 10 surgical robotics platforms.\n\nIt is QNX, and it is a division of $BB.\n\nLast quarter it did $72.3M, up 25.7% YoY at 86% gross margin, now 47.3% of the entire company.\n\nThe verticals it already owns \n> Automotive, 10 of 10 top automakers and 24 of 25 top EV makers \n> Commercial vehicles, all five top tier 1 suppliers\n> Medical devices, 9 of 10 makers and 8 of 10 surgical robotics platforms\n> Robotics, 300+ programs at a 100% production deadline record\n> Rail, 300M+ mission critical systems deployed\n> Defense, NATO, 17 of the G20, and NASA flight software\n\nThe silicon under QNX reads like the entire AI compute stack. $NVDA, $QCOM, $NXPI, $INTC and $TXN plus Renesas all run QNX in their ecosystems. \n\nWrote the full deep dive on BlackBerry's Hidden Physical AI Play in the comments and pinned to my bio. \n$BB $NVDA $QCOM",
+      "url": "https://x.com/KawzInvests/status/2073835302729232729",
+      "kind": "post",
+      "engagement": {
+        "views": 35086,
+        "likes": 262,
+        "reposts": 23,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

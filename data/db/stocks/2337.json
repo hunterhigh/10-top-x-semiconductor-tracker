@@ -10,12 +10,13 @@
   "thesis_summary": null,
   "first_mention": "2026-01-30",
   "last_mention": "2026-07-05",
-  "total_mentions": 3,
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 3
+    "aleabitoreddit": 3,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3
+    "opinion": 4
   },
   "mentions": [
     {
@@ -69,6 +70,28 @@
         "replies": 13
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067376339691434198",
+      "blogger_id": "jukan05",
+      "date": "2026-06-17",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "[Exclusive] Winbond's NOR Flash enters NVIDIA's supply chain for the first time, taking aim at 50% market share\n\nAI servers are driving an explosion in memory demand. NVIDIA's next generation Vera Rubin platform is scheduled to ramp into volume shipments in the second half of 2026, and word in the memory industry is that Winbond's NOR Flash will officially enter NVIDIA's supply chain in the second half of the year, in line with customer shipment schedules. Going forward, Winbond is expected to capture a major share on the Vera Rubin platform. The strong crowding out effect of AI servers on capacity is anticipated to become apparent, continuing to push the forward pricing of high capacity NOR Flash upward.\n\nBased on estimates, server related memory bit demand for 2026 to 2027 will show a 40% compound annual growth rate (CAGR). This not only crowds out DRAM capacity supply, but the explosion in demand from AI data centers and edge computing has caused both the NOR Flash capacity and the volume mounted per machine to surge. In particular, the new generation of server racks adds large numbers of switches and network interface cards (NICs) for external connectivity, and NOR Flash usage there is growing by multiples.\n\nIt is understood that NVIDIA's past AI chip platforms primarily paired with Micron's NOR Flash. As the number of AI server deployments grows by multiples and the count of NOR Flash chips mounted per rack rises, existing supply volume can no longer fully satisfy demand. The Vera Rubin platform rack requires upwards of 600 NOR Flash chips. Winbond has confirmed entry into the Vera Rubin supply chain in the second half of 2026, and its supply weighting will continue to rise.\n\nOn this, Winbond stated that it does not comment on rumors regarding individual customers.\n\nWinbond has previously noted that with rising demand from AI data centers, edge AI computing, and smart terminals, the overall memory industry is showing structural undersupply, so the shortage is not limited to DRAM and that supply of NOR Flash and NAND Flash is equally tight.\n\nThe industry reveals that Winbond has quietly positioned itself in the AI data center market, having submitted samples for qualification as early as the GB200 period. At that time, however, NOR Flash had not yet hit shortage, and customers had little interest in qualifying a new supplier.\n\nBy the GB300 period, supply gradually tightened. Entering the new generation Vera Rubin platform, the overall system is composed of 1.3 million components, including 72 Rubin GPUs and 36 Vera CPUs. NOR Flash, which plays the critical role of boot, system initialization, and firmware storage, has also seen sharply increased usage, with per chip capacity ranging from 4Mb to 2Gb.\n\nAlthough NOR Flash carries a low unit price, because it has an important impact on the stable operation of the entire server, cloud customers place greater emphasis on quality stability for NOR component supply, which doubles the value content of NOR Flash in AI server racks.\n\nOn another front, amid the trend of US China rivalry, cloud service providers (CSPs) have largely stopped using Chinese suppliers in order to avoid disputes. As Micron shifts its operational focus to high bandwidth memory (HBM) and high end DDR5 and turns conservative on NOR capacity expansion, and as Macronix recently benefits from MLC NAND shortages driving prices sharply higher with its eMMC products becoming the main growth driver, Winbond can seize the opportunity to expand its supply weighting on Vera Rubin, with the potential to capture half the market share in 2027.\n\nIn addition, with the trend toward AI deployment on the ground, the importance of inference functions is rising, and inference type servers, benefiting from strengthened communication and NIC functionality, will gradually replace conventional servers.\n\nIndustry figures point out that under this trend, the number of NOR Flash chips used in inference type servers may not necessarily increase, but per chip capacity is generally rising, for example from the original 256Mb to 512Mb, or from 1Gb to 2Gb.\n\nCompared with SLC NAND or MLC NAND, where international majors have successively exited 2D NAND and pushed market prices up rapidly, NOR Flash prices have also followed with increases, but the magnitude still lags behind 2D NAND products. At present NOR Flash is also the lower gross margin product line within Winbond's memory portfolio, and its output value per wafer is calculated to be lower.\n\nThe market expects that as NOR Flash expands its applications into AI servers, combined with growing demand for high density NOR Flash in automotive electronics and increased volume of 256Mb and above high capacity NOR Flash for edge AI devices serving on premises computing needs, there will be room for NOR Flash prices to continue rising from the second half of 2026 into 2027.\n\nIt is estimated that in the first half of 2026, affected by extended lead times and allocation, NOR Flash contract prices will rise by 100% to 120%. Affected by limited added capacity and growth in end demand volume, prices in the second half are expected to continue rising by more than 60% to 65%.",
+      "url": "https://x.com/jukan05/status/2067376339691434198",
+      "kind": "post",
+      "engagement": {
+        "views": 47475,
+        "likes": 234,
+        "reposts": 16,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {

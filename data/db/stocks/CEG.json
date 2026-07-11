@@ -5,17 +5,20 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Constellation Energy",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-17",
-  "last_mention": "2026-04-09",
-  "total_mentions": 9,
+  "last_mention": "2026-07-01",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 9
+    "aleabitoreddit": 9,
+    "octopusycc": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 9
+    "opinion": 10,
+    "news": 1
   },
   "mentions": [
     {
@@ -219,6 +222,50 @@
         "replies": 193
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069423141391388894",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-23",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CEG",
+      "text": "The U.S. Energy Department plans to offer $17.5B in low-interest loans for utilities to order Westinghouse AP1000 nuclear reactors, per WSJ. The loans are aimed at accelerating 10 large U.S. reactors across five projects, with two reactors each. Seven utilities have reportedly signed letters of intent, though DOE did not name them. Westinghouse says new AP1000s could begin coming online in 2035. Each reactor produces about 1,100 MW, enough for a midsize city or major AI data center. The push comes as AI-driven power demand revives nuclear interest, but AP1000 has a difficult U.S. history: Vogtle’s two units exceeded $30B in cost vs. an original ~$14B estimate and came online years late.\n​\n美国能源部计划提供175亿美元低息贷款，支持公用事业公司订购西屋AP1000核反应堆。该计划旨在加速5个项目共10座大型反应堆建设，已有7家公用事业公司签署意向书。西屋表示新反应堆最早可能在2035年投入运营，每座反应堆产能约1100兆瓦，足以供应中型城市或大型AI数据中心。此举是为应对AI驱动的电力需求增长，但AP1000在美国历史表现不佳，Vogtle项目成本超支至300亿美元且严重延期。\n纽约时间: 06/23/2026, 10:07:46 AM\n\n$CCJ \n$BAM \n$CEG",
+      "url": "https://x.com/octopusycc/status/2069423141391388894",
+      "kind": "post",
+      "engagement": {
+        "views": 7056,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072295561403785371",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CEG",
+      "text": "Here were the worst performing NASDAQ 100 stocks from the first half of 2026\n\nIntuit $INTU -61%🔴\nWorkday $WDAY -49%🔴\nMicroStrategy $MSTR -43%🔴\nAdobe $ADBE -41%🔴\nReuters $TRI -38%🔴\nPalantir $PLTR -34%🔴\nAutodesk $ADSK -34%🔴\nPinduoduo $PDD -33%🔴\nIntuitive Surgical $ISRG -30%🔴\nConstellation Energy $CEG -30%🔴\nShopify $SHOP -29%🔴\nCopart $CPRT -28%🔴\nPayPal $PYPL -26%🔴",
+      "url": "https://x.com/StockMKTNewz/status/2072295561403785371",
+      "kind": "post",
+      "engagement": {
+        "views": 56853,
+        "likes": 142,
+        "reposts": 21,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

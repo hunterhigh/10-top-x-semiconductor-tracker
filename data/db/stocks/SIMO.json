@@ -10,12 +10,16 @@
   "thesis_summary": null,
   "first_mention": "2026-02-15",
   "last_mention": "2026-07-05",
-  "total_mentions": 14,
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 14
+    "aleabitoreddit": 14,
+    "zephyr_z9": 2,
+    "StockMKTNewz": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 14
+    "opinion": 17,
+    "news": 1
   },
   "mentions": [
     {
@@ -316,6 +320,72 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2067648616693711029",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SIMO",
+      "text": "@nim_chef @Kente_Clarke @jukan05 @rwang07 Well, I like controllers, cuz u need stuff that can support 100M IOPS\nThe big question is will it be developed internally by the NAND bois or will they buy from Phison, FADU, SIMO",
+      "url": "https://x.com/zephyr_z9/status/2067648616693711029",
+      "kind": "reply",
+      "engagement": {
+        "views": 859,
+        "likes": 9,
+        "reposts": 1,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067673512995950898",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "simo",
+      "text": "@retailpunter @nim_chef @Kente_Clarke @jukan05 @rwang07 \"External controller makes hyperscalers nand agnostic. Well, at least simo’s controller works with all nands. Unsure about phison and fadu\"\n\nWho told u this??\nNAND doesn't have JEDEC standardization, and NAND suppliers have always resisted standardization",
+      "url": "https://x.com/zephyr_z9/status/2067673512995950898",
+      "kind": "reply",
+      "engagement": {
+        "views": 784,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067688642693488913",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIMO",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nMicron Technology $MU\nIntel $INTC\nMarvell Technology $MRVL\nSanDisk $SNDK\nWestern Digital $WDC\nSeagate Technology $STX\nApplied Materials $AMAT\nArm Holdings $ARM\nNebius Group $NBIS\nLam Research $LRCX\nCaterpillar $CAT\nASML Holding $ASML\nJPMorgan Chase $JPM\nAstera Labs $ALAB\nGoldman Sachs $GS\nCitigroup $C\nMorgan Stanley $MS\nGE Aerospace $GE\nCipher Digital $CIFR\nModerna $MRNA\nCummins $CMI\nTeraWulf $WULF\nEntegris $ENTG\nVishay Intertechnology $VSH\nMKS Instruments $MKSI\nHowmet Aerospace $HWM\nJohnson Controls $JCI\nSilicon Motion $SIMO\nState Street $STT\nDominion Energy $D\nBank of New York Mellon $BNY\nInteractive Brokers $IBKR\nUnited Microelectronics $UMC\nnVent Electric $NVT\nToronto Dominion Bank $TD\nTTM Technologies $TTMI\nW.W. Grainger $GWW\nWoodward $WWD\nCarpenter Technology $CRS\nBank of Nova Scotia $BNS\nCurtiss-Wright $CW\nViking Holdings $VIK\nRockwell Automation $ROK\nBank of Montreal $BMO\nSharkNinja $SN\nFrontline $FRO\nACM Research $ACMR\nWabtec $WAB\nAllegro Microsystems $ALGM\nHyatt Hotels $H",
+      "url": "https://x.com/StockMKTNewz/status/2067688642693488913",
+      "kind": "post",
+      "engagement": {
+        "views": 38999,
+        "likes": 328,
+        "reposts": 48,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2067945397923037693",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-19",
@@ -337,6 +407,31 @@
         "replies": 235
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068660538150621457",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-21",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "SSD controller play for CMX-spec drives (large-block, read-dominant, multi-tenant, power-efficient)",
+        "same catalyst as NAND but at the controller/architecture layer"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIMO",
+      "text": "Interesting piece by FADU that validates the memory thesis and confirms why NAND players like $SNDK have such a long way ahead.\n\nStructural demand, not cyclical.\n\nNVIDIA is giving the inference-storage bottleneck a product name: CMX. It turns KV cache into a permanent flash tier that scales with every GPU and every agent. 32-64TB of NAND per drive today, scaling toward 256TB. \n\nIn my SanDisk deep dive I wrote: “Training is a phase. Inference is forever.” CMX is NVIDIA putting that on a spec sheet.\n\nThe read-through, by NAND exposure:\n\nPure-play NAND: $SNDK, Kioxia (285A)\nNAND-secondary: $MU, Samsung, SK Hynix.\n\nCMX wants a specific kind of SSD: large-block, read-dominant, multi-tenant, power-efficient. That’s a controller and architecture story too.\n\nControllers: $SIMO, FADU\n\nBits and architecture. Same catalyst, two layers.\n\nInference is forever. So is the memory it runs on.\n\nRedeem a free article and check out my piece on substack:\n\nhttps://t.co/5OEsAvZb7l",
+      "url": "https://x.com/ren_stocks/status/2068660538150621457",
+      "kind": "post",
+      "engagement": {
+        "views": 43178,
+        "likes": 216,
+        "reposts": 18,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {

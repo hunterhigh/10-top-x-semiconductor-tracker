@@ -5,17 +5,20 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Vicor Corp",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-15",
-  "last_mention": "2026-06-09",
-  "total_mentions": 11,
+  "last_mention": "2026-06-29",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 11
+    "aleabitoreddit": 11,
+    "KawzInvests": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 11
+    "opinion": 12,
+    "news": 1
   },
   "mentions": [
     {
@@ -266,6 +269,53 @@
         "replies": 85
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069049869835075940",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-22",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "positioned for 800V DC sidecar power delivery upgrade in AI data centers",
+        "Amazon, Microsoft, Google, Meta showing up as new customers not bargaining on price"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$VICR",
+      "text": "In 1956 Eisenhower signed the Federal Highway Act and authorized 41,000 miles of new interstate highway across the United States.\n\nThe existing roads worked fine. The problem was the traffic coming was nothing like the traffic they were built for.\n\nThe companies supplying the concrete, the asphalt, and the heavy equipment never made headlines. They made generational money for a very long time.\n\nThe same thing is happening inside every AI data center on earth right now.\n\nNVIDIA's 2027 rack pulls 600 kilowatts. That is the same power as 400 average American homes. The wiring running through every data center built before 2025 was designed for 40 kilowatts. At 600 kilowatts the old system does not run slow. It melts.\n\nThe fix is called 800 volt DC. Instead of rebuilding every data center from scratch, a standalone power cabinet called a sidecar gets wheeled in and bolted next to the existing racks. The building stays exactly as it was. Only the power delivery at the rack level gets the upgrade.\n\nThe chips inside that sidecar cannot be made from regular silicon. You need silicon carbide and gallium nitride. More advanced materials. More expensive. And only a handful of companies make them at real production volume.\n\nThose companies built their factories for electric cars. EV demand slowed. The stocks got crushed 40 to 60 percent off their highs. Now Amazon, Microsoft, Google, and Meta are showing up as the new customers and they are not bargaining on price.\n\nFull report covering my favorite names positioned for this trade is live. Link in replies and bio.\n$ON $STM $NVTS $WOLF $VICR $POWI $AOSL $VRT $AEHR",
+      "url": "https://x.com/KawzInvests/status/2069049869835075940",
+      "kind": "post",
+      "engagement": {
+        "views": 33643,
+        "likes": 102,
+        "reposts": 6,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071682372169330909",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-29",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$VICR",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nEli Lilly $LLY\nPalo Alto Networks $PANW\nJohnson & Johnson $JNJ\nAirbnb $ABNB\nApplied Materials $AMAT\nCorning $GLW\nLam Research $LRCX\nKLA Corp $KLAC\nAstera Labs $ALAB\nAbbVie $ABBV\nRevolution Medicines $RVMD\nMerck $MRK\nFortinet $FTNT\nValero Energy $VLO\nBlackBerry $BB\nMaxlinear $MXL\nNatera $NTRA\nModerna $MRNA\nJFrog $FROG\nLive Nation $LYV\nVicor Corp $VICR\nAllegro Microsystems $ALGM\nGuardant Health $GH\nHinge Health $HNGE\nCSX Corp $CSX\nHumana $HUM\nACM Research $ACMR\nCytokinetics $CYTK\nTravelers $TRV\nF5 $FFIV\nEdwards Lifesciences $EW\nArgan $AGX\nFifth Third Bancorp $FITB\nNiSource $NI\nBiogen $BIIB\nViking Holdings $VIK\nRoivant Sciences $ROIV\nCenterPoint Energy $CNP\nRoyal Bank of Canada $RY\nUltra Clean Holdings $UCTT\nEtsy $ETSY\nOscar Health $OSCR\nAramark $ARMK\nScholar Rock $SRRK\nEnova International $ENVA\nMoog $MOG.A\nMaterion $MTRN\nRush Street Interactive $RSI\nHealthpeak Properties $DOC\nFrontdoor $FTDR",
+      "url": "https://x.com/StockMKTNewz/status/2071682372169330909",
+      "kind": "post",
+      "engagement": {
+        "views": 66162,
+        "likes": 314,
+        "reposts": 28,
+        "replies": 35
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

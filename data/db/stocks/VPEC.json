@@ -5,17 +5,18 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Visual Photonics Epitaxy Co. (VPEC)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
-  "last_mention": "2026-06-14",
-  "total_mentions": 2,
+  "last_mention": "2026-06-15",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 2
+    "aleabitoreddit": 2,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -60,6 +61,31 @@
         "replies": 38
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066375594481439123",
+      "blogger_id": "jukan05",
+      "date": "2026-06-15",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expected to benefit from InP substrate supply loosening in 2H",
+        "upstream epitaxy player that receives InP substrates from China"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "VPEC",
+      "text": "▶ China eases InP substrate exports, lifting compound semiconductor supply\n\n• China has approved new shipments of export-controlled InP substrates. Following partial approvals in 2025, the first 2026 batch shipped in late May, easing capacity bottlenecks in the optical communications market.\n\n• Taiwanese compound semiconductor players such as VPEC and GCS are expected to benefit from 2H onward as InP substrate supply loosens.\n\n• China began restricting substrate exports in February 2025, cutting off shipments from the China production base of US-based AXT. The incumbent InP substrate market has been dominated by AXT and Japan’s Sumitomo.\n\n• As optical communications grows in importance for high-speed datacenter transmission, access to InP material has emerged as the single largest capacity constraint across the compound semiconductor supply chain.\n\n• China’s InP substrate exports run under a closed-loop control regime: epitaxy houses, foundries, and end customers must submit proof of production and demand before export volumes are reviewed and approved.\n\n• After approving exports of 8,000 InP substrates in August 2025, China cleared an additional 4,000-substrate shipment in late May 2026. These substrates will go through epitaxy at upstream players such as VPEC before being supplied to compound semiconductor makers.\n\n• GCS’s US 4-inch fab carries capacity of 4,500 substrates/month, or 50,000/year, but the InP shortage meant it had largely been running RF components, with optoelectronics making up just 25% of output.\n\n• With the InP shortage temporarily easing, GCS expects shipments to recover gradually from July–August 2026, and growth in its in-house optoelectronics revenue should support 2H26 earnings and margins.\n\n• GCS’s revenue mix is 70% optoelectronics and 30% RF components, and the company plans to further expand optoelectronics capacity to improve profitability.\n\n• With the optical communications market set to enter a phase of explosive growth in 2027–2028, GCS projects PD demand to expand to over 40,000 units/year by 2028. It is anchored on 100G PDs while gradually ramping 200G PD capacity.\n\n• GCS has completed development of 70mW and 100mW CW laser products but, given certification timelines and technical barriers, has invested in Wellywave Semiconductors to build laser production capacity in Taiwan and scale up mass production in 2027.",
+      "url": "https://x.com/jukan05/status/2066375594481439123",
+      "kind": "post",
+      "engagement": {
+        "views": 117833,
+        "likes": 284,
+        "reposts": 40,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

@@ -5,17 +5,18 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Advantest Corporation",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-05",
-  "last_mention": "2026-04-20",
-  "total_mentions": 3,
+  "last_mention": "2026-06-30",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 3
+    "aleabitoreddit": 3,
+    "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3
+    "opinion": 4
   },
   "mentions": [
     {
@@ -82,6 +83,31 @@
         "replies": 94
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071974337519997368",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-30",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "HBM检测股",
+        "海力士正在采购相关半导体检测仪器，总规模约2.5亿–3亿美元"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$ATEYY",
+      "text": "HBM检测股  $ATEYY 和 $TER  值得关注一下 \n\n海力士正在采购相关半导体检测仪器\n\n总规模：约 $2.5 亿–3 亿美元",
+      "url": "https://x.com/octopusycc/status/2071974337519997368",
+      "kind": "post",
+      "engagement": {
+        "views": 11598,
+        "likes": 37,
+        "reposts": 1,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

@@ -5,17 +5,19 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Grab Holdings",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-24",
-  "last_mention": "2025-10-15",
-  "total_mentions": 5,
+  "last_mention": "2026-07-06",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 5
+    "aleabitoreddit": 5,
+    "StockMKTNewz": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 5
+    "opinion": 5,
+    "news": 2
   },
   "mentions": [
     {
@@ -130,6 +132,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2065154685221457942",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-11",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GRAB",
+      "text": "All these stocks hit new 52 WEEK LOWS at some point today\n\nSalesforce $CRM\nUber $UBER \nTrade Desk $TTD\nAlbertsons $ACI\nAdobe $ADBE\nAutodesk $ADSK\nBoston Scientific $BSX\nChewy $CHWY\nCapital One $COF\nDolby Laboratories $DLB\nAmdocs $DOX\nEquifax $EFX\nESAB Corp $ESAB\nExpand Energy $EXE\nFidelity National $FIS\nFiserv $FISV\nGlobal Payments $GPN\nGrab Holdings $GRAB\nGuidewire Software $GWRE\nHoulihan Lokey $HLI\nInfosys $INFY\nIntuit $INTU\nLi Auto $LI\nProcore Technologies $PCOR\nPDD Holdings $PDD\nPTC Inc $PTC\nStantec $STN\nSuzano $SUZ\nTrimble $TRMB\nXP Inc $XP\nXPeng $XPEV\nZillow $Z",
+      "url": "https://x.com/StockMKTNewz/status/2065154685221457942",
+      "kind": "post",
+      "engagement": {
+        "views": 76341,
+        "likes": 288,
+        "reposts": 26,
+        "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074202147118272625",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Uber CEO Dara Khosrowshahi stepped down from its board of directors"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GRAB",
+      "text": "$GRAB said that Uber CEO Dara Khosrowshahi had stepped down from its board of directors",
+      "url": "https://x.com/StockMKTNewz/status/2074202147118272625",
+      "kind": "post",
+      "engagement": {
+        "views": 70892,
+        "likes": 126,
+        "reposts": 4,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

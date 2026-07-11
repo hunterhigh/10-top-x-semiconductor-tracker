@@ -1,21 +1,23 @@
 {
   "ticker": "BMNR",
-  "cashtag": "$BMNR",
+  "cashtag": "BMNR",
   "price_symbol": "BMNR",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Bitmine Immersion Technologies",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-14",
-  "last_mention": "2026-03-07",
-  "total_mentions": 45,
+  "last_mention": "2026-07-07",
+  "total_mentions": 49,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 45
+    "aleabitoreddit": 45,
+    "StockMKTNewz": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 45
+    "opinion": 45,
+    "news": 4
   },
   "mentions": [
     {
@@ -1077,6 +1079,100 @@
         "replies": 5
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069036161427808534",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$BMNR",
+      "text": "Tom Lee and Bitmine $BMNR now hold 4.7% of the total Ethereum $ETH supply",
+      "url": "https://x.com/StockMKTNewz/status/2069036161427808534",
+      "kind": "post",
+      "engagement": {
+        "views": 48448,
+        "likes": 85,
+        "reposts": 2,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072279799368909120",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-01",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "pain"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "BMNR",
+      "text": "@WOLF_TradingX BMNR\n\nPain",
+      "url": "https://x.com/StockMKTNewz/status/2072279799368909120",
+      "kind": "reply",
+      "engagement": {
+        "views": 3764,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073778982466605360",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-05",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "went long BMNR at the wrong time"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "BMNR",
+      "text": "@sunxliao I picked to go long BMNR at the wrong time lol",
+      "url": "https://x.com/StockMKTNewz/status/2073778982466605360",
+      "kind": "reply",
+      "engagement": {
+        "views": 1589,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074579780419109204",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-07",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Pain"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "BMNR",
+      "text": "@ralliesai BMNR\n\nPain",
+      "url": "https://x.com/StockMKTNewz/status/2074579780419109204",
+      "kind": "reply",
+      "engagement": {
+        "views": 3185,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

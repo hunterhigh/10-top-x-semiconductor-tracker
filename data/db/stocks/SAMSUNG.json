@@ -1,6 +1,6 @@
 {
   "ticker": "SAMSUNG",
-  "cashtag": "Samsung",
+  "cashtag": "Sammy",
   "price_symbol": "SAMSUNG",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-06-19",
-  "total_mentions": 49,
+  "last_mention": "2026-06-23",
+  "total_mentions": 53,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 49
+    "aleabitoreddit": 49,
+    "ren_stocks": 2,
+    "StockMKTNewz": 1,
+    "zephyr_z9": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 49
+    "opinion": 52,
+    "news": 1
   },
   "mentions": [
     {
@@ -1157,6 +1161,96 @@
         "replies": 4
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068543733499371992",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-20",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$Samsung",
+      "text": "$MU $SKHynix $Samsung $SNDK $Kioxia\n\nA lot of people are trying to find the next memory stock to go parabolic… in companies that aren’t profitable yet, that are going through restructuring…\n\nSometimes things are just NOT that complicated…\n\nThe next $MU? It’s $MU. A year ago, $MU was the only memory stock I knew about, and it’s almost up 1,000%… yeah, I’m not selling.\n\nI’m riding the AI memory profit supercycle.\n\nNot stopping, not slowing down.\n\nBullish AF memory.",
+      "url": "https://x.com/ren_stocks/status/2068543733499371992",
+      "kind": "post",
+      "engagement": {
+        "views": 36563,
+        "likes": 432,
+        "reposts": 26,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2068660538150621457",
+      "blogger_id": "ren_stocks",
+      "date": "2026-06-21",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "NAND-secondary exposure to CMX inference-storage demand"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Interesting piece by FADU that validates the memory thesis and confirms why NAND players like $SNDK have such a long way ahead.\n\nStructural demand, not cyclical.\n\nNVIDIA is giving the inference-storage bottleneck a product name: CMX. It turns KV cache into a permanent flash tier that scales with every GPU and every agent. 32-64TB of NAND per drive today, scaling toward 256TB. \n\nIn my SanDisk deep dive I wrote: “Training is a phase. Inference is forever.” CMX is NVIDIA putting that on a spec sheet.\n\nThe read-through, by NAND exposure:\n\nPure-play NAND: $SNDK, Kioxia (285A)\nNAND-secondary: $MU, Samsung, SK Hynix.\n\nCMX wants a specific kind of SSD: large-block, read-dominant, multi-tenant, power-efficient. That’s a controller and architecture story too.\n\nControllers: $SIMO, FADU\n\nBits and architecture. Same catalyst, two layers.\n\nInference is forever. So is the memory it runs on.\n\nRedeem a free article and check out my piece on substack:\n\nhttps://t.co/5OEsAvZb7l",
+      "url": "https://x.com/ren_stocks/status/2068660538150621457",
+      "kind": "post",
+      "engagement": {
+        "views": 43178,
+        "likes": 216,
+        "reposts": 18,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069444752823423226",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-23",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "THE MEMORY GIANTS ARE NOW WORTH A COMBINED $4.1 TRILLION\n\n2016: Combined Market Cap $254B\n\n$204B - Samsung\n$26.2B - SK Hynix\n$24.1B - Micron $MU \n\n2026: Combined Market Cap $4.1 Trillion\n\n$1.5T - Samsung\n$1.3T - SK Hynix\n$1.3T - Micron $MU https://t.co/Aw7R50QkHm",
+      "url": "https://x.com/StockMKTNewz/status/2069444752823423226",
+      "kind": "post",
+      "engagement": {
+        "views": 56410,
+        "likes": 343,
+        "reposts": 51,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069558225465413719",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-23",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Sammy",
+      "text": "@jukan05 @StreetSignal__ And, CXMT is supplying to Chinese customers who were previously dependent on SK &amp; Sammy inside China\nThose customers may never come back to Sammy &amp; Hynix in the future",
+      "url": "https://x.com/zephyr_z9/status/2069558225465413719",
+      "kind": "reply",
+      "engagement": {
+        "views": 5800,
+        "likes": 31,
+        "reposts": 1,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

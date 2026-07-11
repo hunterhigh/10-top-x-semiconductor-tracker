@@ -9,13 +9,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-24",
-  "last_mention": "2026-06-26",
-  "total_mentions": 4,
+  "last_mention": "2026-07-10",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 4
+    "aleabitoreddit": 4,
+    "jukan05": 3,
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 4
+    "opinion": 7,
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -90,6 +95,28 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2064884753288122639",
+      "blogger_id": "jukan05",
+      "date": "2026-06-10",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI",
+      "text": "* OpenAI Considers Drastic Price Cuts, Anticipating Costly War For Users With Anthropic - WSJ https://t.co/mbBXK1Th8n",
+      "url": "https://x.com/jukan05/status/2064884753288122639",
+      "kind": "post",
+      "engagement": {
+        "views": 215177,
+        "likes": 722,
+        "reposts": 81,
+        "replies": 68
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2070373235452162540",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-26",
@@ -109,6 +136,94 @@
         "replies": 106
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074546151693377695",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-07",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI",
+      "text": "Microsoft $MSFT is looking to reduce AI costs, is starting to replace OpenAI and Anthropic with its own models in software products like Excel and Outlook - Bloomberg https://t.co/PmDskUtpjd",
+      "url": "https://x.com/StockMKTNewz/status/2074546151693377695",
+      "kind": "post",
+      "engagement": {
+        "views": 103087,
+        "likes": 787,
+        "reposts": 61,
+        "replies": 61
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074558314344554753",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-07",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI",
+      "text": "Microsoft, $MSFT, has replaced OpenAI, Anthropic with own AI in some apps, per Bloomberg.",
+      "url": "https://x.com/unusual_whales/status/2074558314344554753",
+      "kind": "post",
+      "engagement": {
+        "views": 197589,
+        "likes": 647,
+        "reposts": 34,
+        "replies": 71
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074989572686315630",
+      "blogger_id": "jukan05",
+      "date": "2026-07-08",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI Codex",
+      "text": "One of the more interesting Grok bull cases I heard at ICML was this:\n\nThe core idea is that xAI may actually be better positioned than OpenAI Codex in the coding-agent market.\n\nThe reason Claude Code is currently leading in coding agents is not just model quality. Claude Code effectively pioneered the category at scale, which gave it one of the largest user pools in the industry. More users mean more real-world coding data. That data can then be used to improve Claude Code’s quality, which attracts even more users, creating a flywheel of more users, more data, and a better product.\n\nSeen through this lens, xAI’s acquisition of Cursor starts to make a lot more sense.\n\nCursor likely has a much larger real-world user base and coding dataset than Codex. If xAI can effectively train on and leverage that data, the argument is that overtaking Codex may only be a matter of time.\n\nI just saw some reactions to Grok 4.5 on my X timeline, and the feedback seems more positive than I expected.\n\nIs this thesis starting to play out?",
+      "url": "https://x.com/jukan05/status/2074989572686315630",
+      "kind": "post",
+      "engagement": {
+        "views": 123328,
+        "likes": 1063,
+        "reposts": 60,
+        "replies": 83
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075453663825584260",
+      "blogger_id": "jukan05",
+      "date": "2026-07-10",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI",
+      "text": "CPUs have suddenly emerged as a key focus for the market this year.\n\nThe main driver is that OpenAI and Anthropic have signed large-scale partnership agreements with cloud providers such as Amazon, Google, and Microsoft, leading them to consume significant amounts of cloud CPU capacity.\n\nThere are two main reasons why AI requires more CPUs.\n\nFirst, the training paradigm is shifting from traditional pretraining toward reinforcement learning.\n\nAfter a model generates code, it must run unit tests and validate the results in simulated websites or sandbox environments. These workloads rely heavily on CPUs.\n\nSecond, the inference paradigm is shifting from simple chat interfaces toward agents.\n\nModels must call a wide range of tools, including search engines, databases, code execution environments, compilers, and deployment systems. Each of these tool calls requires substantial CPU processing in the background.\n\nThere is also an indirect source of demand that is easy to overlook.\n\nThe number of GitHub commits globally has already increased severalfold compared with last year. The enormous volume of code generated by AI ultimately needs to be deployed and executed in CPU-based environments.\n\nSince this trend was first highlighted, the share prices of Arm and Intel have risen severalfold, while AMD has also benefited meaningfully.\n\nNVIDIA has even begun selling its Vera CPU as a standalone product and has set a related revenue target of $20 billion.\n\nHowever, CPUs are unlikely to become the next central pillar of the AI investment cycle.\n\nFor example, a single Blackwell GPU costs more than $50,000, while a CPU costs roughly $5,000.\n\nEven assuming one CPU supports two GPUs, every $100,000 invested in GPUs would translate into only around $5,000 of corresponding CPU spending.\n\nThe CPU market was clearly undervalued in the past, but the current re-rating is better understood as a return toward a more reasonable valuation rather than evidence that CPUs will become the next major protagonist of the AI industry.",
+      "url": "https://x.com/jukan05/status/2075453663825584260",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 27680,
+        "likes": 163,
+        "reposts": 12,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

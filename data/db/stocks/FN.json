@@ -9,13 +9,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-25",
-  "last_mention": "2026-07-06",
-  "total_mentions": 31,
+  "last_mention": "2026-07-07",
+  "total_mentions": 33,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 31
+    "aleabitoreddit": 31,
+    "KawzInvests": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 31
+    "opinion": 33
   },
   "mentions": [
     {
@@ -685,6 +687,31 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2065886285160444225",
+      "blogger_id": "KawzInvests",
+      "date": "2026-06-13",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "demand far exceeded what they shipped last quarter",
+        "named lasers as the first constraint"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$FN",
+      "text": "I went through every earnings call across the entire 800G and 1.6T supply chain and mapped out the actual supply vs. demand.\n\nThe $LITE  CEO said it best: \"We are significantly under shipping demand. It's certainly greater than that 30% number. We are having to make choices as to who we support.\"\n\n> $LITE has every laser it can make through the end of 2027 already sold.\n\n> $AAOI is expanding capacity 10x and the CEO still said demand will outrun it through mid-2027.\n\n> $FN said demand far exceeded what they shipped last quarter. Named lasers as the first constraint.\n\n> $CIEN added $600M to its backlog in a single quarter. Now sitting at $7.7B.\n\n> $CSCO raised its hyperscaler AI order guidance from $5B to $9B mid-year with one quarter left. That is purchase orders. Not projections.\n\nFull report is free to read. Link in replies or link in bio.",
+      "url": "https://x.com/KawzInvests/status/2065886285160444225",
+      "kind": "post",
+      "engagement": {
+        "views": 453778,
+        "likes": 824,
+        "reposts": 77,
+        "replies": 43
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2074046947434860971",
       "blogger_id": "aleabitoreddit",
       "date": "2026-07-06",
@@ -704,6 +731,30 @@
         "replies": 99
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074641836874809650",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "packaging and assembly winner in CPO ramp"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$FN",
+      "text": "Scale-out CPO switches going from 5,000 units this year to 200,000 by 2030. And you are selling?\n\nThat’s a 144% CAGR. A 40x volume ramp that both Yole and Morgan Stanley are modeling off the same wall. That’s the whole thesis, and notice what it doesn’t require: it doesn’t require me to pick which laser vendor qualifies into which switch, or whether Broadcom’s socket beats Nvidia’s.\n\nTo be short this ramp up you have to argue the entire build doesn’t happen, and good luck making that case while the SemiAnalysis “delay” everyone panicked over still lands you at 200k units by 2030. \n\nA delay bends the curve doesn’t make it go away. \n\nThe physics won’t let it go away. A 200,000 GPU cluster is burning ~17 megawatts just on transceivers. CPO cuts that ~73% per 800G. At scale-up density copper is already dead and pluggables are out of runway. Forced migrations are the best ramps you can be long because the demand doesn’t care.\n\nThe biggest winners:\n\nLasers and light sources: $LITE, $COHR, $SIVE\nOptical engines and pump lasers: $AAOI, $COHR\nSwitch ASICs: $AVGO, $MRVL, $NVDA\nOptical I/O chiplets: $ALAB, $CRDO\nPackaging and assembly: $FN, $AMKR\nInP substrate and materials: $AXTI\n\nLITE is the cleanest CPO scarcity play, shipping 200G-per-lane EMLs at volume, book through 2028. $AAOI is the one that wins both ways: its core 800G and 1.6T pluggable business actually benefits if CPO slips, while its external laser fab keeps it in the game when CPO finally ramps.\n\nBullish photonics ⚡️",
+      "url": "https://x.com/ren_stocks/status/2074641836874809650",
+      "kind": "post",
+      "engagement": {
+        "views": 49366,
+        "likes": 313,
+        "reposts": 37,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

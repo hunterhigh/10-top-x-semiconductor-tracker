@@ -1,6 +1,6 @@
 {
   "ticker": "GM",
-  "cashtag": "$GM",
+  "cashtag": "General Motors",
   "price_symbol": "GM",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-25",
-  "last_mention": "2026-07-05",
-  "total_mentions": 3,
+  "last_mention": "2026-07-09",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 3
+    "aleabitoreddit": 3,
+    "StockMKTNewz": 3,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3
+    "opinion": 3,
+    "news": 3,
+    "flow": 1
   },
   "mentions": [
     {
@@ -43,6 +47,50 @@
       "prompt_version": "extract-v1"
     },
     {
+      "tweet_id": "2066852348891152449",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-16",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GM",
+      "text": "General Motors $GM is in talks with Lockheed Martin $LMT about making parts for the defense contractor’s weapons - WSJ https://t.co/BG5RURqlpn",
+      "url": "https://x.com/StockMKTNewz/status/2066852348891152449",
+      "kind": "post",
+      "engagement": {
+        "views": 20165,
+        "likes": 159,
+        "reposts": 14,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069189334217990366",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-22",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GM",
+      "text": "🇺🇸 President Trump just said:\n\n\"General Motors $GM is all excited about building weapons now. They have some plants that are gonna switch over and build weapons.\" https://t.co/376X8D0ww7",
+      "url": "https://x.com/StockMKTNewz/status/2069189334217990366",
+      "kind": "post",
+      "engagement": {
+        "views": 82807,
+        "likes": 406,
+        "reposts": 29,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2071532870859149617",
       "blogger_id": "aleabitoreddit",
       "date": "2026-06-29",
@@ -65,6 +113,28 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2072297935635722648",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-01",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GM",
+      "text": "Micron $MU and General Motors $GM announced a Strategic Customer Agreement\n\n\"to secure a long-term, reliable supply of memory and storage platforms critical to GM’s vehicle production and delivery at scale\" https://t.co/XOtfhFtQec",
+      "url": "https://x.com/StockMKTNewz/status/2072297935635722648",
+      "kind": "post",
+      "engagement": {
+        "views": 50108,
+        "likes": 285,
+        "reposts": 18,
+        "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2073867745243127973",
       "blogger_id": "aleabitoreddit",
       "date": "2026-07-05",
@@ -84,6 +154,28 @@
         "replies": 90
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2075257924176269783",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-09",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "General Motors",
+      "text": "General Motors invests $275 million to expand vehicle and engine manufacturing operations in Tennessee",
+      "url": "https://x.com/unusual_whales/status/2075257924176269783",
+      "kind": "post",
+      "engagement": {
+        "views": 156469,
+        "likes": 314,
+        "reposts": 19,
+        "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

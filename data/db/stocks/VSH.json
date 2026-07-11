@@ -5,17 +5,19 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Vishay Intertechnology",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-06",
-  "last_mention": "2026-06-08",
-  "total_mentions": 4,
+  "last_mention": "2026-06-18",
+  "total_mentions": 5,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 4
+    "aleabitoreddit": 4,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 4
+    "opinion": 4,
+    "news": 1
   },
   "mentions": [
     {
@@ -108,6 +110,28 @@
         "replies": 184
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067688642693488913",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-18",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$VSH",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nMicron Technology $MU\nIntel $INTC\nMarvell Technology $MRVL\nSanDisk $SNDK\nWestern Digital $WDC\nSeagate Technology $STX\nApplied Materials $AMAT\nArm Holdings $ARM\nNebius Group $NBIS\nLam Research $LRCX\nCaterpillar $CAT\nASML Holding $ASML\nJPMorgan Chase $JPM\nAstera Labs $ALAB\nGoldman Sachs $GS\nCitigroup $C\nMorgan Stanley $MS\nGE Aerospace $GE\nCipher Digital $CIFR\nModerna $MRNA\nCummins $CMI\nTeraWulf $WULF\nEntegris $ENTG\nVishay Intertechnology $VSH\nMKS Instruments $MKSI\nHowmet Aerospace $HWM\nJohnson Controls $JCI\nSilicon Motion $SIMO\nState Street $STT\nDominion Energy $D\nBank of New York Mellon $BNY\nInteractive Brokers $IBKR\nUnited Microelectronics $UMC\nnVent Electric $NVT\nToronto Dominion Bank $TD\nTTM Technologies $TTMI\nW.W. Grainger $GWW\nWoodward $WWD\nCarpenter Technology $CRS\nBank of Nova Scotia $BNS\nCurtiss-Wright $CW\nViking Holdings $VIK\nRockwell Automation $ROK\nBank of Montreal $BMO\nSharkNinja $SN\nFrontline $FRO\nACM Research $ACMR\nWabtec $WAB\nAllegro Microsystems $ALGM\nHyatt Hotels $H",
+      "url": "https://x.com/StockMKTNewz/status/2067688642693488913",
+      "kind": "post",
+      "engagement": {
+        "views": 38999,
+        "likes": 328,
+        "reposts": 48,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

@@ -5,17 +5,20 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Adeia Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-22",
-  "last_mention": "2026-01-22",
-  "total_mentions": 1,
+  "last_mention": "2026-07-04",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "zephyr_z9": 2,
+    "aleabitoreddit": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 3,
+    "news": 1
   },
   "mentions": [
     {
@@ -42,6 +45,72 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2070390794071298075",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Adeia",
+      "text": "Can someone supply me the hybrid bonded HBM4??\n\n\"HBM4 leans on hybrid bonding even harder, so Adeia's IP gets more critical exactly when those contracts hit the table.\"",
+      "url": "https://x.com/zephyr_z9/status/2070390794071298075",
+      "kind": "post",
+      "engagement": {
+        "views": 88619,
+        "likes": 257,
+        "reposts": 14,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070511386988552220",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ADEA",
+      "text": "@acemoney21 If u look at QTs, they think I'm endorsing $ADEA",
+      "url": "https://x.com/zephyr_z9/status/2070511386988552220",
+      "kind": "reply",
+      "engagement": {
+        "views": 1652,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073481685849518496",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-04",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ADEA",
+      "text": "@bennybigbull @stocktalkweekly $LEU $TE and $ADEA next?",
+      "url": "https://x.com/StockMKTNewz/status/2073481685849518496",
+      "kind": "reply",
+      "engagement": {
+        "views": 2718,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

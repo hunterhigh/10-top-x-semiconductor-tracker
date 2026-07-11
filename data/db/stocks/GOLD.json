@@ -1,21 +1,26 @@
 {
   "ticker": "GOLD",
-  "cashtag": "Gold",
+  "cashtag": "gold",
   "price_symbol": "GOLD",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Gold (commodity)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-23",
-  "last_mention": "2026-02-23",
-  "total_mentions": 1,
+  "last_mention": "2026-07-07",
+  "total_mentions": 10,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "unusual_whales": 7,
+    "aleabitoreddit": 1,
+    "octopusycc": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2,
+    "news": 1,
+    "flow": 7
   },
   "mentions": [
     {
@@ -40,6 +45,206 @@
         "replies": 4
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2066516983756263866",
+      "blogger_id": "octopusycc",
+      "date": "2026-06-15",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "continued gold rally raises concern about broader market"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "黄金",
+      "text": "随着石油危机的结束\n\n黄金也会回到它的避险属性上，而当前黄金的持续上涨让我对大盘有所担忧 https://t.co/sUYooTPxbU",
+      "url": "https://x.com/octopusycc/status/2066516983756263866",
+      "kind": "post",
+      "engagement": {
+        "views": 16102,
+        "likes": 30,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067957180305756506",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-19",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Gold",
+      "text": "Goldman Sachs lowered its year end price target for Gold down to $4,900 from its previous $5,400 per ounce target",
+      "url": "https://x.com/StockMKTNewz/status/2067957180305756506",
+      "kind": "post",
+      "engagement": {
+        "views": 41546,
+        "likes": 214,
+        "reposts": 17,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2069896093811474928",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-24",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Gold",
+      "text": "Citigroup says its 6-12 month price target for Gold is $5000/oz.",
+      "url": "https://x.com/unusual_whales/status/2069896093811474928",
+      "kind": "post",
+      "engagement": {
+        "views": 367164,
+        "likes": 1762,
+        "reposts": 103,
+        "replies": 101
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2070642763721568526",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-26",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "Citi suggests that if the economy weakens sharply or inflation reignites, gold prices could rise above $4,000 over the summer.\n\nRead more: https://t.co/C009IlJD3t",
+      "url": "https://x.com/unusual_whales/status/2070642763721568526",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 50493,
+        "likes": 50,
+        "reposts": 0,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072021599134663166",
+      "blogger_id": "unusual_whales",
+      "date": "2026-06-30",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Gold",
+      "text": "BREAKING: Gold is headed for a 13% quarterly loss, marking its steepest decline in 13 years.",
+      "url": "https://x.com/unusual_whales/status/2072021599134663166",
+      "kind": "post",
+      "engagement": {
+        "views": 498308,
+        "likes": 4106,
+        "reposts": 268,
+        "replies": 151
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2072546055049167196",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-02",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "About 16% was wiped off gold in the three-month period ended June 30.\n\nRead more: https://t.co/5kik144jLT",
+      "url": "https://x.com/unusual_whales/status/2072546055049167196",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 57809,
+        "likes": 67,
+        "reposts": 3,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2073180234111717792",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-03",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "Gold has overtaken US government bonds as the world’s top reserve asset, per ECB",
+      "url": "https://x.com/unusual_whales/status/2073180234111717792",
+      "kind": "post",
+      "engagement": {
+        "views": 542725,
+        "likes": 5046,
+        "reposts": 556,
+        "replies": 118
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074320246110929341",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-06",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "“Geopolitical tensions continue to drive strong central bank demand for gold,” wrote ECB president Christine Lagarde in the report.\n\nRead more: https://t.co/Git1qcoD3b",
+      "url": "https://x.com/unusual_whales/status/2074320246110929341",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 64838,
+        "likes": 36,
+        "reposts": 4,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074482817484906730",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-07",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "BREAKING: For the first time, central banks plan to cut U.S. dollar holdings over the next decade while increasing allocations to gold and the euro, per Reuters",
+      "url": "https://x.com/unusual_whales/status/2074482817484906730",
+      "kind": "post",
+      "engagement": {
+        "views": 1048058,
+        "likes": 7372,
+        "reposts": 896,
+        "replies": 270
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],
