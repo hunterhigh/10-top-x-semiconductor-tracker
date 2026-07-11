@@ -508,7 +508,7 @@ def dd_data():
     out={}
     for s in mdates:
         if not mdates[s]: continue
-        if cnt(s,DAY-datetime.timedelta(days=89),DAY) < 3 and cnt(s,DAY-datetime.timedelta(days=27),DAY) < 1: continue   # 不在板上(day/week/month/quarter 窗口外)→ 不可点
+        if cnt(s,DAY-datetime.timedelta(days=89),DAY) < 3 and cnt(s,DAY-datetime.timedelta(days=27),DAY) < 1: continue   # 不在板上(day/week/month 窗口外)→ 不可点
         if total(s) < 1: continue   # 无任何提及 → 跳过
         ms=[m for m in MENT[s] if datetime.date.fromisoformat(m['date'])<=DAY]
         if not ms: continue
@@ -769,55 +769,6 @@ def month_section():
 <div class="mwall">{''.join(bigcard(s, M0, DAY, t('pfx_month'), t('head_month_mentions'), [], 'window') for s in newcards)}</div>
 </div><div style="height:40px"></div></section>'''
 
-def quarter_section():
-    Q0=DAY-datetime.timedelta(days=89)
-    syms=[s for s in mdates if cnt(s,Q0,DAY)>0]; all_v=sum(cnt(s,Q0,DAY) for s in syms)
-    we={s:win_exp(s,Q0,DAY) for s in syms}
-    TB=sum(we[s][0] for s in syms); TR=sum(we[s][1] for s in syms); TN=sum(we[s][2] for s in syms)
-    # 按标的数(每只票净偏哪边)——比按表态总数干净,不被高频标的主导
-    stanced=[s for s in syms if we[s][0]+we[s][1]>0]
-    nbull=sum(1 for s in stanced if we[s][0]>we[s][1])
-    nbear=sum(1 for s in stanced if we[s][1]>we[s][0])
-    ntie=sum(1 for s in stanced if we[s][0]==we[s][1])
-    npure=sum(1 for s in stanced if we[s][0]==0 and we[s][1]>0)
-    nst=len(stanced) or 1
-    pbk=round(nbull/nst*100); prk=round(nbear/nst*100); pnk=100-pbk-prk
-    # 可排序总表:近90日 >=3 次提及,默认按提及次数降序
-    rows=sorted([s for s in syms if cnt(s,Q0,DAY)>=3], key=lambda s:-cnt(s,Q0,DAY))
-    def qrow(s):
-        c=cnt(s,Q0,DAY); eb,er,en=we[s]; pct=mention_pct(s)
-        dchg='' if pct is None else f'{pct:.4f}'
-        ind=ind_of(s) or '<span class="muted">—</span>'
-        cur=cur_of(s); curh=f'<span class="cur"> {cur}</span>' if cur else ''
-        return (f'<tr onclick="dd(\'{s}\')" data-chg="{dchg}" data-men="{c}" data-bull="{eb}" data-bear="{er}" data-neu="{en}">'
-            f'<td class="q-tk">{s}{curh}</td><td class="q-ind">{ind}</td>'
-            f'<td class="q-dt">{ymd(first(s))}{pxcell(first_px(s),s)}</td><td class="q-dt">{ymd(last(s))}{pxcell(last_px(s),s)}</td>'
-            f'<td class="q-chg">{mention_chg(s)}</td><td class="q-n men"><b>{c}</b></td>'
-            f'<td class="q-n b">{eb}</td><td class="q-n r">{er}</td><td class="q-n n">{en}</td></tr>')
-    thead=(f'<thead><tr><th>{t("th_ticker")}</th><th>{t("th_industry")}</th><th>{t("th_first")}</th><th>{t("th_last")}</th>'
-        f'<th class="sortable num" data-dir="" onclick="qsort(\'chg\',this)">{t("th_gain")} <span class="qinfo" data-tip="{t("gain_formula_tip")}" onclick="event.stopPropagation()">!</span><span class="sar"></span></th>'
-        f'<th class="sortable num on" data-dir="desc" onclick="qsort(\'men\',this)">{t("th_mentions")}<span class="sar"></span></th>'
-        f'<th class="sortable num" data-dir="" onclick="qsort(\'bull\',this)">{t("th_bull")}<span class="sar"></span></th>'
-        f'<th class="sortable num" data-dir="" onclick="qsort(\'bear\',this)">{t("th_bear")}<span class="sar"></span></th>'
-        f'<th class="sortable num" data-dir="" onclick="qsort(\'neu\',this)">{t("th_neu")}<span class="sar"></span></th></tr></thead>')
-    table=f'<div class="stbl-wrap"><table class="stbl" id="qtbl">{thead}<tbody>{"".join(qrow(s) for s in rows)}</tbody></table></div>'
-    return f'''<section id="quarter" class="period-sec">
-<div class="sec"><div class="sechd"><div class="st">{t('nav_quarter')}</div><div class="datepill">{Q0.strftime("%Y-%m-%d")} ~ {DAY.strftime("%m-%d")} ET</div>
-<div class="sn"><span class="cnt">{t('quarter_count',n=len(syms),v=all_v)}</span><span class="upd">{t('updated',date=DAY.strftime("%Y-%m-%d"))}</span></div></div>
-<div class="subhd">{t('subhd_q_overview')}</div></div>
-<div class="daypad">
-<div class="ovbox">
-<div class="ovstats"><div class="ovs"><div class="ovn gb">{nbull}</div><div class="ovl">{t('q_net_bull')}</div></div>
-<div class="ovs"><div class="ovn gr">{nbear}</div><div class="ovl">{t('q_net_bear')}</div></div>
-<div class="ovs"><div class="ovn">{ntie}</div><div class="ovl">{t('q_balanced')}</div></div>
-<div class="ovs"><div class="ovn">{len(stanced)}</div><div class="ovl">{t('q_with_stance')}</div></div></div>
-<div class="ovbar"><i class="b" style="width:{pbk}%"></i><i class="r" style="width:{prk}%"></i><i class="n" style="width:{pnk}%"></i></div>
-<div class="ovcap">{t('q_summary',pbk=pbk,prk=prk,npure=npure,TB=TB,TR=TR,TN=TN)}</div>
-<div class="ovnote">{t('q_methodology')}</div>
-</div>
-<div class="subhd" style="margin-top:28px">{t('subhd_q_table')} <span style="color:var(--ink-soft);font-weight:400;font-size:12.5px">　{t('q_table_hint',n=len(rows))}</span></div>
-{table}
-</div><div style="height:40px"></div></section>'''
 
 W7=(DAY-datetime.timedelta(days=6),DAY)
 DAYCFG=dict(id='day',title=t('nav_day'),pfx=t('pfx_day'),win=(DAY,DAY),big=3,head=t('head_day_mentions'),
@@ -1238,13 +1189,11 @@ def build():
 <a class="navlink" data-t="week"><span>{t('nav_week')}</span><span class="ni">WK</span></a>
 {_consensus_nav}
 <a class="navlink" data-t="month"><span>{t('nav_month')}</span><span class="ni">MO</span></a>
-<a class="navlink" data-t="quarter"><span>{t('nav_quarter')}</span><span class="ni">Q</span></a>
 <div class="foot">{t('side_foot')}</div></nav>'''
     secs=period_section(DAYCFG)+period_section(WKCFG)
     if not BLOGGER:
         secs+=consensus_section()
     secs+=month_section()
-    secs+=quarter_section()
     JS_KEYS=['stance_bull','stance_bear','stance_neutral','stance_mixed','stance_none',
       'chart_ph_no_series','chart_dot_tip','chart_leg_bull','chart_leg_bear','chart_leg_note',
       'dd_ph_title','dd_ph_body','post_initial','dd_view_all',
@@ -1307,7 +1256,6 @@ function renderDD(tk){
   openDD();
 }
 function dd(tk){renderDD(tk);}
-function qsort(k,th){var tb=document.getElementById('qtbl').tBodies[0];var rows=[].slice.call(tb.rows);var dir=th.getAttribute('data-dir')==='desc'?'asc':'desc';var hs=document.querySelectorAll('#qtbl th.sortable');for(var i=0;i<hs.length;i++){hs[i].setAttribute('data-dir','');hs[i].classList.remove('on');}th.setAttribute('data-dir',dir);th.classList.add('on');var asc=dir==='asc';rows.sort(function(a,b){var x=parseFloat(a.getAttribute('data-'+k)),y=parseFloat(b.getAttribute('data-'+k));var xn=isNaN(x),yn=isNaN(y);if(xn&&yn)return 0;if(xn)return 1;if(yn)return -1;return asc?x-y:y-x;});for(var j=0;j<rows.length;j++)tb.appendChild(rows[j]);}
 (function(){var d=new Date();var ld=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');var els=document.querySelectorAll('.local-date');for(var i=0;i<els.length;i++)els[i].textContent=ld;})();
 </script>'''
     overlay=f'<div id="ddPage"><div class="ddbar"><button class="ddback" onclick="closeDD()">{t("dd_back")}</button><span class="ddbart">{t("disc_detail_top")}</span></div><div id="ddBody"></div></div>'

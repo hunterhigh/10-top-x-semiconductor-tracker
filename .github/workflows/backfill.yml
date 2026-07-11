@@ -7,9 +7,9 @@ on:
         required: false
         default: "zephyr_z9,jukan05,jasonschips,KawzInvests,vikramskr,semivision_tw,damnang2,futurist_lens,michaelsikand"
       since_days:
-        description: "How many days of history to pull (project decision: 90 for the first batch, deepen later if useful)"
+        description: "How many days of history to pull (project decision: 30 — Quarterly report was cut, so Month's 28d window is now the deepest view; deepen later if useful)"
         required: false
-        default: "90"
+        default: "30"
 
 jobs:
   prepare:
