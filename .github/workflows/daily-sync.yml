@@ -1,6 +1,12 @@
-name: hourly-sync
+name: daily-sync
 on:
+  schedule:
+    - cron: "15 16 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: daily-sync-main
+  cancel-in-progress: false
 
 jobs:
   fetch-extract:
@@ -78,6 +84,24 @@ jobs:
           pattern: blogger-data-*
           path: data/bloggers
           merge-multiple: false
+      - name: Summarize shard coverage
+        run: |
+          expected="aleabitoreddit zephyr_z9 jukan05 KawzInvests michaelsikand ren_stocks octopusycc unusual_whales StockMKTNewz DJTRadar"
+          missing=""
+          for id in $expected; do
+            if [ ! -d "data/bloggers/blogger-data-$id" ]; then
+              missing="$missing $id"
+            fi
+          done
+          {
+            echo "## Daily sync shard coverage"
+            if [ -n "$missing" ]; then
+              echo "⚠️ No artifact received for:$missing"
+              echo "Existing committed data for these accounts was retained."
+            else
+              echo "✅ Artifacts received for all 10 tracked accounts."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Flatten artifact directories
         # download-artifact with a pattern nests each artifact under its own
         # name (data/bloggers/blogger-data-<id>/...); move contents back to
@@ -100,5 +124,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Hourly sync $(date -u +%Y-%m-%dT%H:%M)"
+          git diff --cached --quiet || git commit -m "Daily sync $(date -u +%Y-%m-%dT%H:%M)"
           git push

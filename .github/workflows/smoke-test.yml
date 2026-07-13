@@ -23,13 +23,13 @@ jobs:
         run: python scripts/build_db.py
 
       - name: Run render EN, one blogger
-        run: python scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger aleabitoreddit
+        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger aleabitoreddit
 
       - name: Run render EN, consensus (all bloggers)
-        run: python scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all
+        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all
 
       - name: Run render ZH
-        run: python scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all --lang zh
+        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all --lang zh
 
       - name: Check outputs
         run: |

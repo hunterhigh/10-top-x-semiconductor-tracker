@@ -4,7 +4,7 @@ fetch_all.py — loop fetch_tweets.py over every blogger in config/bloggers.json
 
 Local/manual convenience wrapper. In GitHub Actions, prefer a matrix strategy
 (one job per blogger) so failures/rate limits on one account don't block the
-others — see .github/workflows/hourly-sync.yml.
+others — see .github/workflows/daily-sync.yml.
 
 Run:
     export TWITTERAPI_KEY="your_key_here"

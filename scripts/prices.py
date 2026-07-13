@@ -36,7 +36,7 @@ Design (confirmed with project owner):
   - Raw (unadjusted) close, on purpose: it must line up with the prices HE
     quotes in his own tweets (e.g. SIVE $4 -> $71 in SEK), which are raw quotes.
   - Scope: prices are fetched only for tickers we actually display =
-    (mentioned in the last 90 days)  UNION  (total_mentions >= --min-mentions).
+    (mentioned in the last 30 days)  UNION  (total_mentions >= --min-mentions).
     Not all ~860 tail symbols.
 
 Secrets: EODHD key is read from env EODHD_API_KEY. Never hard-coded.
@@ -47,7 +47,7 @@ Run:
     python prices.py                          # all in-scope tickers (incremental)
     python prices.py --force                  # ignore cache, full re-fetch
     python prices.py --min-mentions 30        # widen/narrow the core set
-    python prices.py --asof 2026-06-02        # pin "now" for the 90d window
+    python prices.py --asof 2026-06-02        # pin "now" for the 30d window
 """
 
 import argparse
@@ -57,6 +57,7 @@ import sys
 import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
@@ -67,7 +68,7 @@ TMAP_PATH = DATA_DIR / "ticker_map.json"
 CACHE_DIR = DATA_DIR / "prices_cache"
 
 DEFAULT_MIN_MENTIONS = 50      # core set ~= the 41 deep-divable tickers; tune with --min-mentions
-RECENT_WINDOW_DAYS = 90        # "mentioned in the last 3 months"
+RECENT_WINDOW_DAYS = 30        # matches the initial backfill and 28-day Month view
 RETRY = 3
 PACING_SEC = 0.4               # polite pause between symbols
 EODHD_DAILY_CALL_BUDGET = 20   # free tier; we self-limit and stop cleanly when hit
@@ -105,6 +106,11 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 
 def log(m): print(m, flush=True)
+
+
+def today_et() -> str:
+    """Use the same trading-day boundary as the extracted X-post dates."""
+    return datetime.now(ZoneInfo("America/New_York")).date().isoformat()
 
 
 def load_json(path, default=None):
@@ -358,7 +364,7 @@ def provider_test(args):
     """One run validates connectivity AND every mapped symbol's exchange code:
     US sanity via akshare, and EVERY non-USD ticker_map entry via EODHD."""
     providers, _ = build_providers(args)
-    today = (args.asof or date.today().isoformat())
+    today = (args.asof or today_et())
     start = (date.fromisoformat(today) - timedelta(days=21)).isoformat()
     tmap = load_json(TMAP_PATH, default={}) or {}
 
@@ -416,7 +422,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ticker", default="", help="only this ticker (test)")
     ap.add_argument("--min-mentions", type=int, default=DEFAULT_MIN_MENTIONS)
-    ap.add_argument("--asof", default="", help="pin 'today' for the 90d window + freshness (YYYY-MM-DD)")
+    ap.add_argument("--asof", default="", help="pin 'today' for the 30d window + freshness (YYYY-MM-DD)")
     ap.add_argument("--force", action="store_true", help="ignore cache; full re-fetch from first_mention")
     ap.add_argument("--provider-test", action="store_true", help="just check provider connectivity")
     ap.add_argument("--all-codes", action="store_true", help="provider-test: hit ALL non-US codes, not just unverified")
@@ -426,7 +432,7 @@ def main():
         provider_test(args)
         return
 
-    today_iso = args.asof or date.today().isoformat()
+    today_iso = args.asof or today_et()
     asof_date = date.fromisoformat(today_iso)
 
     index = load_json(INDEX_PATH, default=None)

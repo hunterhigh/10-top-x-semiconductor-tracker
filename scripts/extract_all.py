@@ -4,7 +4,7 @@ extract_all.py — loop extract.py over every blogger in config/bloggers.json.
 
 Local/manual convenience wrapper. In GitHub Actions, prefer a matrix strategy
 (one job per blogger) for parallelism and isolated failure — see
-.github/workflows/hourly-sync.yml.
+.github/workflows/daily-sync.yml.
 
 Run:
     export ANTHROPIC_API_KEY="your_key_here"

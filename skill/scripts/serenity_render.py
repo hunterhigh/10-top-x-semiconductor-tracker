@@ -1,9 +1,3 @@
-# NOTE: this is a CI-only mirror of skill/scripts/serenity_render.py, kept here
-# solely so smoke-test.yml can catch broken pipeline data before it ever
-# reaches the SKILL package. The SKILL's runtime copy (skill/scripts/) is the
-# one actually shipped/versioned for the product — if you edit rendering
-# logic, update BOTH copies (or replace this with a build step that copies
-# skill/scripts/serenity_render.py here before running CI).
 import json, datetime, sys, glob, os
 from collections import defaultdict
 from pathlib import Path

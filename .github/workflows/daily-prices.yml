@@ -1,6 +1,19 @@
 name: daily-prices
 on:
+  schedule:
+    # After the US close. UTC keeps this stable across daylight-saving changes.
+    - cron: "0 3 * * *"
   workflow_dispatch:
+    inputs:
+      require_price_scope:
+        description: "Fail if any in-scope ticker remains pending (use for first backfill)"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: daily-prices-main
+  cancel-in-progress: false
 
 jobs:
   prices:
@@ -29,7 +42,12 @@ jobs:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
         run: python scripts/prices.py
       - name: Verify data
-        run: python scripts/verify_data.py
+        run: |
+          if [ "${{ inputs.require_price_scope }}" = "true" ]; then
+            python scripts/verify_data.py --require-price-scope
+          else
+            python scripts/verify_data.py
+          fi
       - name: Commit updated data
         run: |
           git config user.name "github-actions"
