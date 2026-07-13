@@ -9,13 +9,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-26",
-  "last_mention": "2026-06-28",
-  "total_mentions": 2,
+  "last_mention": "2026-07-13",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "unusual_whales": 2
+    "unusual_whales": 3,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "flow": 2
+    "flow": 3,
+    "news": 1
   },
   "mentions": [
     {
@@ -58,6 +60,52 @@
         "likes": 56,
         "reposts": 1,
         "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076647582948843533",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-13",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "VOLKSWAGEN",
+      "text": "VOLKSWAGEN CEO OLIVER BLUME JUST OUTLINED A PLAN TO CUT UP TO 50,000 MORE JOBS AT EUROPE'S BIGGEST CARMAKER\n\nThat's on top of a similar round already underway from 2024, so as many as 100,000 positions in total.\n\nThe reason, per an internal memo seen by Bloomberg:\n\nVW's overhead is running about one-fifth higher than competitors. Blume called reaching parity a \"theoretical deduction\" of roughly 50,000 jobs.\n\n\"Group headcount has been growing for decades to a level that's no longer viable today,\" Blume said, citing market shifts and negative effects \"in the region of double-digit billion euro amounts.\"\n\nFour German plants are reportedly on the table for closure: Emden, Hanover, Zwickau, and Neckarsulm. Blume says he'd rather find \"smarter options\" than shut them, and pointed to a 20% improvement in German factory costs over the past year.\n\nBut he also admitted the company \"can't confirm a competitive allocation for the plants\" right now.\n\nLabor unions already torpedoed an earlier version of this plan and the board hasn't signed off yet.",
+      "url": "https://x.com/StockMKTNewz/status/2076647582948843533",
+      "kind": "post",
+      "engagement": {
+        "views": 30687,
+        "likes": 66,
+        "reposts": 10,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076668469035024448",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-13",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "may need to cut about 50,000 more jobs to match the competitiveness of rivals"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "Volkswagen",
+      "text": "BREAKING: Volkswagen may need to cut about 50,000 more jobs to match the competitiveness of rivals, its CEO said",
+      "url": "https://x.com/unusual_whales/status/2076668469035024448",
+      "kind": "post",
+      "engagement": {
+        "views": 82850,
+        "likes": 271,
+        "reposts": 36,
+        "replies": 71
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
