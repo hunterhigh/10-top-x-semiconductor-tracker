@@ -16,8 +16,8 @@ The nine newly added accounts were initially backfilled for 30 days. Serenity re
 
 GitHub Actions keeps manual controls and also schedules:
 
-- `daily-sync` at 16:15 UTC for incremental fetch and extraction.
-- `daily-prices` at 03:00 UTC for post-close price refresh.
+- `bihourly-sync` every two hours at minute 00 for incremental fetch and extraction.
+- `bihourly-prices` every two hours at minute 45 for price refresh. Both share a concurrency lock, so a delayed sync finishes before prices write data.
 
 Run the initial price backfill manually with the `require_price_scope` input enabled. It fails if any in-scope ticker remains `pending`; `unavailable` and `unverified_symbol` are explicit, reviewable outcomes rather than silent omissions.
 
@@ -30,4 +30,4 @@ python scripts/verify_data.py
 python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all
 ```
 
-The data repository is public. Consumers may read its manifest and snapshot without a GitHub token; a token is optional for higher GitHub API rate limits.
+The data repository is public. Consumers may read its manifest and snapshot without a GitHub token; a token is optional for higher GitHub API rate limits. Extraction supports the existing Anthropic path and OpenAI's Responses API: configure `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then select the provider in the manual workflow when needed.

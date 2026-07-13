@@ -1,8 +1,8 @@
-name: daily-prices
+name: bihourly-prices
 on:
   schedule:
-    # After the US close. UTC keeps this stable across daylight-saving changes.
-    - cron: "0 3 * * *"
+    # Runs 45 minutes after each content sync; shared concurrency prevents overlap.
+    - cron: "45 */2 * * *"
   workflow_dispatch:
     inputs:
       require_price_scope:
@@ -12,7 +12,7 @@ on:
         type: boolean
 
 concurrency:
-  group: daily-prices-main
+  group: bihourly-pipeline-main
   cancel-in-progress: false
 
 jobs:
@@ -53,5 +53,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Daily prices $(date -u +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "Bi-hourly prices $(date -u +%Y-%m-%dT%H:%M)"
           git push

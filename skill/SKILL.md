@@ -53,6 +53,12 @@ Do NOT guess this path — list the SKILL directory to confirm `scripts/serenity
 
 **Maintainer:** `hunterhigh`. The package is ready for marketplace-specific pricing decisions, but this Skill does not publish or charge users itself.
 
+## Codex and GPT Compatibility
+
+This is a standard `SKILL.md` package with `agents/openai.yaml`, so Codex can discover and invoke it directly. ChatGPT/GPT agents can follow the same public-data workflow and run the bundled Python scripts. No model-specific instruction format is required for reports or dashboards.
+
+The background extractor is provider-selectable: retain `ANTHROPIC_API_KEY` for the existing Sonnet path, or set `OPENAI_API_KEY` and use `--provider openai` with a Responses API model such as `gpt-5.6-luna`. A ChatGPT/Codex subscription is not an API credential; scheduled refreshes require the corresponding provider API key.
+
 ---
 
 ## Data Access (Shared by All Modes)

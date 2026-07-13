@@ -2,7 +2,8 @@
 """
 extract.py — multi-blogger tracker, P2 step 2
 
-Reads a single blogger's raw_tweets.json and uses Claude to turn each tweet
+Reads a single blogger's raw_tweets.json and uses a selectable Anthropic or
+OpenAI model to turn each tweet
 into structured, per-tweet investment signal (which tickers, their stance,
 their reasons, their conviction, mention type), with audit fields so every
 conclusion traces back to a tweet id.
@@ -37,7 +38,7 @@ Key design decisions:
     "they are talking about SIVE / 4092 / Sivers".
   - Social chatter is allowed in and the model marks has_investment_content=false.
   - Resumable: writes results incrementally; re-running skips done tweet_ids.
-  - Model: Claude Sonnet (project decision — the API account in use doesn't
+  - Default model: Claude Sonnet (project decision — the API account in use doesn't
     have Opus access; Sonnet is ~5x cheaper). KNOWN RISK: Sonnet is more prone
     to misreading metaphor/irony as a real stance than Opus (this is why the
     original single-blogger project used Opus). Spot-check extracted stances
@@ -45,12 +46,13 @@ Key design decisions:
     accounts with a sarcastic/ironic voice — see extract_all.py's --limit flag
     to sample a blogger's output before running the full backfill.
 
-Auth: reads ANTHROPIC_API_KEY from environment.
+Auth: reads ANTHROPIC_API_KEY or OPENAI_API_KEY from environment.
 
 Run:
     python extract.py --user aleabitoreddit --limit 50   # test on 50 tweets
     python extract.py --user aleabitoreddit               # full run (resumable)
     python extract.py --user zephyr_z9 --since 2026-04-01  # another blogger, windowed
+    python extract.py --user zephyr_z9 --provider openai --model gpt-5.6-luna
 """
 
 import argparse
@@ -66,7 +68,8 @@ DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
 
 DEFAULT_USER = "aleabitoreddit"
-DEFAULT_MODEL = "claude-sonnet-4-6"   # project decision (no Opus access on this account); --model can override
+DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-6"
+DEFAULT_OPENAI_MODEL = "gpt-5.6-luna"
 MAX_TWEETS_PER_CALL = 8               # smaller groups -> shorter JSON output -> no truncation on long threads
 RETRY = 3
 REQUEST_PACING_SEC = 0.5              # polite pause between calls to avoid tripping limits
@@ -215,7 +218,27 @@ def save_json(path, obj):
     tmp.replace(path)
 
 
-def get_client():
+def resolve_provider(requested: str) -> str:
+    if requested != "auto":
+        return requested
+    # Keep the deployed Anthropic path stable until an OpenAI key is configured.
+    return "openai" if os.environ.get("OPENAI_API_KEY", "").strip() else "anthropic"
+
+
+def get_client(provider: str):
+    if provider == "openai":
+        try:
+            from openai import OpenAI
+        except ImportError:
+            log("ERROR: the 'openai' package is not installed. Run: pip install openai")
+            sys.exit(1)
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not api_key:
+            log("ERROR: OPENAI_API_KEY is required when --provider openai.")
+            sys.exit(1)
+        log("Mode: OpenAI Responses API")
+        return OpenAI(api_key=api_key)
+
     try:
         import anthropic
     except ImportError:
@@ -269,18 +292,27 @@ def strip_fences(s: str) -> str:
     return s.strip()
 
 
-def call_model(client, model, system_prompt, convo_tweets):
+def call_model(client, provider, model, system_prompt, convo_tweets):
     user_msg = build_user_message(convo_tweets)
     last_err = None
     for attempt in range(1, RETRY + 1):
         try:
-            resp = client.messages.create(
-                model=model,
-                max_tokens=8000,
-                system=system_prompt,
-                messages=[{"role": "user", "content": user_msg}],
-            )
-            raw = "".join(b.text for b in resp.content if getattr(b, "type", None) == "text")
+            if provider == "openai":
+                resp = client.responses.create(
+                    model=model,
+                    instructions=system_prompt,
+                    input=user_msg,
+                    max_output_tokens=8000,
+                )
+                raw = resp.output_text
+            else:
+                resp = client.messages.create(
+                    model=model,
+                    max_tokens=8000,
+                    system=system_prompt,
+                    messages=[{"role": "user", "content": user_msg}],
+                )
+                raw = "".join(b.text for b in resp.content if getattr(b, "type", None) == "text")
             data = json.loads(strip_fences(raw))
             return data.get("results", [])
         except json.JSONDecodeError as e:
@@ -305,8 +337,13 @@ def main():
     ap.add_argument("--user", default=DEFAULT_USER, help="blogger id (matches config/bloggers.json + fetch_tweets.py --user)")
     ap.add_argument("--limit", type=int, default=0, help="only process first N tweets (test)")
     ap.add_argument("--since", default="", help="only process tweets created on/after this date, YYYY-MM-DD (e.g. 2026-02-01)")
-    ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--provider", choices=("auto", "anthropic", "openai"),
+                    default=os.environ.get("EXTRACT_PROVIDER", "auto"))
+    ap.add_argument("--model", default=os.environ.get("EXTRACT_MODEL", ""),
+                    help="provider-specific model override")
     args = ap.parse_args()
+    provider = resolve_provider(args.provider)
+    model = args.model or (DEFAULT_OPENAI_MODEL if provider == "openai" else DEFAULT_ANTHROPIC_MODEL)
 
     raw_path, out_path = blogger_paths(args.user)
     display_name = blogger_display_name(args.user)
@@ -371,7 +408,8 @@ def main():
     for g in groups.values():
         g.sort(key=lambda t: int(t["tweet_id"]) if str(t["tweet_id"]).isdigit() else 0)
 
-    client = get_client()
+    client = get_client(provider)
+    log(f"Extractor: {provider} / {model}")
     now = datetime.now(timezone.utc).isoformat()
     group_list = list(groups.values())
     total_groups = len(group_list)
@@ -381,14 +419,14 @@ def main():
         # chunk overly long conversations
         for start in range(0, len(convo), MAX_TWEETS_PER_CALL):
             chunk = convo[start:start + MAX_TWEETS_PER_CALL]
-            results = call_model(client, args.model, system_prompt, chunk)
+            results = call_model(client, provider, model, system_prompt, chunk)
             if results is None:
                 # mark as error so we can find them, but keep going
                 for t in chunk:
                     done[t["tweet_id"]] = {
                         "tweet_id": t["tweet_id"], "error": True,
                         "blogger_id": args.user,
-                        "extractor_model": args.model, "prompt_version": "extract-v2",
+                        "extractor_model": model, "prompt_version": "extract-v2",
                         "extracted_at": now,
                     }
                 continue
@@ -399,7 +437,7 @@ def main():
                     "tickers": [], "confidence": 0.0, "missing_from_model": True,
                 }
                 r["blogger_id"] = args.user
-                r["extractor_model"] = args.model
+                r["extractor_model"] = model
                 r["prompt_version"] = "extract-v2"
                 r["extracted_at"] = now
                 done[t["tweet_id"]] = r

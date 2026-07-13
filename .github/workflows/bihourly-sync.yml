@@ -1,11 +1,23 @@
-name: daily-sync
+name: bihourly-sync
 on:
   schedule:
-    - cron: "15 16 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
+    inputs:
+      extraction_provider:
+        description: "auto, anthropic, or openai"
+        required: false
+        default: "auto"
+        type: choice
+        options: [auto, anthropic, openai]
+      extraction_model:
+        description: "Optional provider-specific model override"
+        required: false
+        default: ""
+        type: string
 
 concurrency:
-  group: daily-sync-main
+  group: bihourly-pipeline-main
   cancel-in-progress: false
 
 jobs:
@@ -51,10 +63,16 @@ jobs:
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
         run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }}
-      - name: Extract opinions (LLM, Sonnet)
+      - name: Extract market mentions (selected LLM provider)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d '7 days ago' +%Y-%m-%d)
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          EXTRACT_PROVIDER: ${{ inputs.extraction_provider || 'auto' }}
+          EXTRACT_MODEL: ${{ inputs.extraction_model || '' }}
+        run: |
+          args=(--user "${{ matrix.blogger }}" --since "$(date -u -d '7 days ago' +%Y-%m-%d)")
+          if [ -n "$EXTRACT_MODEL" ]; then args+=(--model "$EXTRACT_MODEL"); fi
+          python scripts/extract.py "${args[@]}"
       - name: Upload blogger data as artifact
         uses: actions/upload-artifact@v4
         with:
@@ -94,7 +112,7 @@ jobs:
             fi
           done
           {
-            echo "## Daily sync shard coverage"
+            echo "## Bi-hourly sync shard coverage"
             if [ -n "$missing" ]; then
               echo "⚠️ No artifact received for:$missing"
               echo "Existing committed data for these accounts was retained."
@@ -124,5 +142,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Daily sync $(date -u +%Y-%m-%dT%H:%M)"
+          git diff --cached --quiet || git commit -m "Bi-hourly sync $(date -u +%Y-%m-%dT%H:%M)"
           git push
