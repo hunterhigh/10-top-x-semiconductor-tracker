@@ -1,6 +1,6 @@
 {
   "ticker": "UNKNOWN",
-  "cashtag": "them",
+  "cashtag": "their",
   "price_symbol": "UNKNOWN",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-06-01",
-  "total_mentions": 10,
+  "last_mention": "2026-07-13",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 10
+    "aleabitoreddit": 10,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 10
+    "opinion": 11
   },
   "mentions": [
     {
@@ -266,6 +267,31 @@
         "replies": 3
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076588144514752873",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-13",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "key component in the CPO ramp",
+        "position in CPO ramp has not changed despite price movement"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "their",
+      "text": "@ensoldyrkare Has their position as a key component in the CPO ramp changed? No. So whether it’s at 20 or 100, price is just noise until the ramp is properly underway",
+      "url": "https://x.com/ren_stocks/status/2076588144514752873",
+      "kind": "reply",
+      "engagement": {
+        "views": 369,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],
