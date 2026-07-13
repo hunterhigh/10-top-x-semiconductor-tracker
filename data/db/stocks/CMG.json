@@ -5,17 +5,19 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Chipotle Mexican Grill",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2025-11-04",
-  "total_mentions": 1,
+  "last_mention": "2026-07-13",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -41,6 +43,28 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v1"
+    },
+    {
+      "tweet_id": "2076761414564278519",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-13",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CMG",
+      "text": "Cipotle $CMG just said that its first Chipotle restaurant in Mexico 🇲🇽 will open on Thursday  in San Pedro Garza García, Nuevo León https://t.co/8jEz514BEy",
+      "url": "https://x.com/StockMKTNewz/status/2076761414564278519",
+      "kind": "post",
+      "engagement": {
+        "views": 34788,
+        "likes": 160,
+        "reposts": 8,
+        "replies": 38
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],

@@ -1,6 +1,6 @@
 {
   "ticker": "PARA",
-  "cashtag": "Paramount",
+  "cashtag": "PARAMOUNT",
   "price_symbol": "PARA",
   "exchange": "US",
   "currency": "USD",
@@ -9,13 +9,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
-  "last_mention": "2026-06-12",
-  "total_mentions": 1,
+  "last_mention": "2026-07-13",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "flow": 1
+    "flow": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -36,6 +38,30 @@
         "likes": 1008,
         "reposts": 67,
         "replies": 61
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076699781435359582",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-13",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hit with lawsuit from 12 states including California to block merger"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "PARAMOUNT",
+      "text": "PARAMOUNT, WBD HIT WITH LAWSUIT FROM 12 STATES, INCLUDING CALIFORNIA, TO BLOCK MERGER - CNBC",
+      "url": "https://x.com/StockMKTNewz/status/2076699781435359582",
+      "kind": "post",
+      "engagement": {
+        "views": 43693,
+        "likes": 62,
+        "reposts": 1,
+        "replies": 39
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
