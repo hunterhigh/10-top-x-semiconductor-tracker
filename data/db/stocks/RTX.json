@@ -5,21 +5,23 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": "RTX Corporation",
+  "company": "RTX Corporation (Raytheon Technologies)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-03",
-  "last_mention": "2026-07-04",
-  "total_mentions": 16,
+  "last_mention": "2026-07-12",
+  "total_mentions": 17,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 14,
     "unusual_whales": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 14,
     "flow": 1,
-    "news": 1
+    "news": 1,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -379,6 +381,28 @@
         "likes": 384,
         "reposts": 63,
         "replies": 40
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076239839029075979",
+      "blogger_id": "DJTRadar",
+      "date": "2026-07-12",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$RTX",
+      "text": "Then defense. He brought up LMT, RTX, and BA.\n\nHis biggest position of the three: up to $25 million in LMT.\n\nRoughly $5 million each in the other two.",
+      "url": "https://x.com/DJTRadar/status/2076239839029075979",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 57090,
+        "likes": 261,
+        "reposts": 29,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

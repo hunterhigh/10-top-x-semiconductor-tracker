@@ -1,25 +1,26 @@
 {
   "ticker": "SKHYV",
-  "cashtag": "$SKHYV",
+  "cashtag": "SKHYV",
   "price_symbol": "SKHYV",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": "SK Hynix (ADR)",
+  "company": "SK Hynix",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-09",
-  "last_mention": "2026-07-10",
-  "total_mentions": 4,
+  "last_mention": "2026-07-12",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 2,
+    "StockMKTNewz": 3,
     "unusual_whales": 1,
+    "aleabitoreddit": 1,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 2,
+    "news": 3,
     "flow": 1,
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -89,6 +90,28 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2075611260771852590",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-10",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SKHYV",
+      "text": "Sk Hynix is now trading under $SKHYV!\n\nIt's now up an insane 16%.\n\nI wonder how Sk Hynix over in Korea is going to react on Monday. https://t.co/Mmqdu0poVY",
+      "url": "https://x.com/aleabitoreddit/status/2075611260771852590",
+      "kind": "post",
+      "engagement": {
+        "views": 728476,
+        "likes": 1574,
+        "reposts": 93,
+        "replies": 227
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2075634390252519883",
       "blogger_id": "ren_stocks",
       "date": "2026-07-10",
@@ -110,6 +133,28 @@
         "likes": 88,
         "reposts": 1,
         "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2076252953099354169",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-12",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SKHYV",
+      "text": "SK Hynix starts trading under a different ticker on Monday\n\nOn Friday SK Hynix began trading under the ticker SKHYV, SK was a foregin company listing in the US so the process is a little different than normal\n\nTomorrow it will switch to its long term stock ticker which will be $SKHY",
+      "url": "https://x.com/StockMKTNewz/status/2076252953099354169",
+      "kind": "post",
+      "engagement": {
+        "views": 77459,
+        "likes": 167,
+        "reposts": 15,
+        "replies": 24
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

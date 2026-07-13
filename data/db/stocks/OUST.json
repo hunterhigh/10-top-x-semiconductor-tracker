@@ -9,14 +9,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-06",
-  "last_mention": "2026-07-01",
-  "total_mentions": 11,
+  "last_mention": "2026-07-07",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 7,
+    "aleabitoreddit": 9,
     "ren_stocks": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 11
+    "opinion": 13
   },
   "mentions": [
     {
@@ -270,6 +270,55 @@
         "replies": 7
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074581698604593367",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "competitors getting regulated out",
+        "filling vacuum left by Hesai if banned in West"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$OUST",
+      "text": "Hesai Technology, a Chinese lidar maker faces US national scrutiny over its expanded partnership with $NVDA and lidar sensors. \n\nFor $OUST, $AEVA, and Western lidar bros, this is generally positive if competitors get regulated out.\n\nSince there were warnings that: \n\nSensors could be disabled or exploited remotely, given Hesai firmware update disabled lidar units on February 29 (as evidence). \n\nBy second order effect, this is also bullish for upstream laser suppliers too like $LITE and $SIVE that are used in western lidar players.",
+      "url": "https://x.com/aleabitoreddit/status/2074581698604593367",
+      "kind": "post",
+      "engagement": {
+        "views": 413767,
+        "likes": 1032,
+        "reposts": 101,
+        "replies": 208
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074587024959709419",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-07",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "benefits by filling vacuum if major Chinese lidar player banned in West"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$OUST",
+      "text": "@jey0316 Basically:\n\n> major Chinese lidar player might be banned in West. \n> $OUST, $AEVA, and others benefit by filling in the vacuum \n> optical players players that power western lidar players like Aeva also benefit from increased revenue\n\nNot sure if this news really matters given everything is crashing though.",
+      "url": "https://x.com/aleabitoreddit/status/2074587024959709419",
+      "kind": "reply",
+      "engagement": {
+        "views": 36023,
+        "likes": 109,
+        "reposts": 4,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],
