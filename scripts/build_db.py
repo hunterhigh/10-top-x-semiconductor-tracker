@@ -310,12 +310,17 @@ def main():
         # ---- preserve existing price data (prices.py fills these; don't wipe on rebuild)
         existing_file = STOCKS_DIR / f"{sym}.json"
         prev_prices, prev_price_status = [], "pending"
+        prev_price_meta = {}
         if existing_file.exists():
             try:
                 prev = json.loads(existing_file.read_text(encoding="utf-8"))
-                if prev.get("price_series"):
-                    prev_prices = prev["price_series"]
-                    prev_price_status = prev.get("price_status", "pending")
+                prev_prices = prev.get("price_series") or []
+                prev_price_status = prev.get("price_status", "pending")
+                prev_price_meta = {
+                    key: prev[key]
+                    for key in ("price_unit", "price_updated_at", "price_reason")
+                    if prev.get(key) is not None
+                }
             except (json.JSONDecodeError, KeyError):
                 pass
 
@@ -338,6 +343,7 @@ def main():
             # prices: preserve from previous build if available; prices.py overwrites on its run
             "price_series": prev_prices,
             "price_status": prev_price_status,
+            **prev_price_meta,
         }
         save_json(STOCKS_DIR / f"{sym}.json", stock_doc)
 

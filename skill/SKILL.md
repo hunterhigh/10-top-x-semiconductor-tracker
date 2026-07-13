@@ -55,7 +55,7 @@ Do NOT guess this path — list the SKILL directory to confirm `scripts/serenity
 
 ## Codex and GPT Compatibility
 
-This is a standard `SKILL.md` package with `agents/openai.yaml`, so Codex can discover and invoke it directly. ChatGPT/GPT agents can follow the same public-data workflow and run the bundled Python scripts. No model-specific instruction format is required for reports or dashboards.
+This is a standard `SKILL.md` package with `agents/openai.yaml`, so Codex can discover and invoke it directly after installation. It also works with GPT-based agents that can read local files and run the bundled Python scripts; a chat-only GPT without file and shell tools cannot generate the dashboard itself. No model-specific instruction format is required for reports or dashboards.
 
 The background extractor is provider-selectable: retain `ANTHROPIC_API_KEY` for the existing Sonnet path, or set `OPENAI_API_KEY` and use `--provider openai` with a Responses API model such as `gpt-5.6-luna`. A ChatGPT/Codex subscription is not an API credential; scheduled refreshes require the corresponding provider API key.
 
@@ -384,6 +384,7 @@ first_mention, last_mention, total_mentions              — across ALL tracked 
 total_mentions_by_blogger                                — {blogger_id: count}, window-independent
 price_series[]     — {date, close}   (blogger-agnostic, one shared price history)
 price_status       — "ok" | "partial" | "unavailable" | "unverified_symbol"
+price_reason       — required when price_status is not "ok"; provider, mapping, no-data, or freshness explanation
 mentions[]         — each has:
     .tweet_id
     .blogger_id     — which tracked account this mention is from (see config/bloggers.json)

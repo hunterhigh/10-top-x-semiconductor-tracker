@@ -276,7 +276,7 @@ def save_cache(price_symbol, currency, price_unit, series):
 
 # --------------------------------------------------------------------------- fetch one ticker
 def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
-    """Returns (series, status, price_unit). Mutates nothing on disk here."""
+    """Return (series, status, price_unit, reason). Mutate nothing on disk here."""
     sym = stock_doc["ticker"]
     price_symbol = stock_doc.get("price_symbol") or sym
     currency = stock_doc.get("currency") or "USD"
@@ -291,12 +291,12 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
     if tmap_entry and tmap_entry.get("no_price"):
         # known to have no fetchable source (e.g. Tokyo: EODHD doesn't cover it, akshare no Japan).
         # Skip the doomed API call; board still shows mentions/stance, just no price line.
-        return [], "unavailable", price_unit
+        return [], "unavailable", price_unit, "configured_no_price_source"
 
     prov_key = pick_provider(exchange, currency, ticker_mapped)
     provider = providers.get(prov_key)
     if provider is None:
-        return [], "unavailable", price_unit   # provider unusable (e.g. no akshare / no key)
+        return [], "unavailable", price_unit, f"provider_unavailable:{prov_key}"
 
     cache = None if force else load_cache(price_symbol)
     cached_series = (cache or {}).get("series", []) if cache else []
@@ -328,20 +328,61 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
             log(f"    {sym} ({price_symbol} via {prov_key}) fetch failed: {last_err}")
             if cached_series:
                 # keep serving cached series; mark partial (couldn't extend to today)
-                return cached_series, "partial", price_unit
+                return cached_series, "partial", price_unit, last_err
             status = "unverified_symbol" if not verified else "unavailable"
-            return [], status, price_unit
+            return [], status, price_unit, last_err
 
     series = merge_series(cached_series, new)
     if not series:
-        return [], ("unverified_symbol" if not verified else "unavailable"), price_unit
+        status = "unverified_symbol" if not verified else "unavailable"
+        reason = "unverified_ticker_mapping" if not verified else "no_daily_closes_returned"
+        return [], status, price_unit, reason
 
     # freshness: ok if the latest close is within ~5 calendar days of today
     latest = date.fromisoformat(series[-1]["date"])
     status = "ok" if (date.fromisoformat(today_iso) - latest).days <= 5 else "partial"
+    reason = None if status == "ok" else f"stale_series_latest_close={latest.isoformat()}"
 
     save_cache(price_symbol, currency, price_unit, series)
-    return series, status, price_unit
+    return series, status, price_unit, reason
+
+
+def annotate_existing(scope, tmap):
+    """Give legacy non-ok price records a durable, machine-readable reason.
+
+    This is intentionally network-free so the first backfill can be made fully
+    auditable without spending another provider call on symbols already marked.
+    """
+    counts = {"annotated": 0, "already_explained": 0}
+    for row in scope:
+        stock_path = STOCKS_DIR / f"{row['ticker']}.json"
+        doc = load_json(stock_path, default=None)
+        if not doc:
+            continue
+        status = doc.get("price_status", "pending")
+        if status == "ok":
+            if doc.pop("price_reason", None) is not None:
+                save_json(stock_path, doc)
+            continue
+        if doc.get("price_reason"):
+            counts["already_explained"] += 1
+            continue
+        entry = tmap.get(doc.get("ticker")) if isinstance(tmap.get(doc.get("ticker")), dict) else {}
+        series = doc.get("price_series") or []
+        if entry.get("no_price"):
+            reason = "configured_no_price_source"
+        elif status == "unverified_symbol":
+            reason = "unverified_ticker_mapping"
+        elif status == "partial" and series:
+            reason = f"stale_series_latest_close={series[-1].get('date', 'unknown')}"
+        elif status == "unavailable":
+            reason = "no_daily_closes_returned"
+        else:
+            reason = f"status_requires_review:{status}"
+        doc["price_reason"] = reason
+        save_json(stock_path, doc)
+        counts["annotated"] += 1
+    return counts
 
 
 # --------------------------------------------------------------------------- main
@@ -426,6 +467,8 @@ def main():
     ap.add_argument("--force", action="store_true", help="ignore cache; full re-fetch from first_mention")
     ap.add_argument("--provider-test", action="store_true", help="just check provider connectivity")
     ap.add_argument("--all-codes", action="store_true", help="provider-test: hit ALL non-US codes, not just unverified")
+    ap.add_argument("--annotate-existing", action="store_true",
+                    help="add price_reason to existing non-ok in-scope records without provider calls")
     args = ap.parse_args()
 
     if args.provider_test:
@@ -452,6 +495,12 @@ def main():
     log(f"In scope: {len(scope)} tickers "
         f"(min_mentions={args.min_mentions}, recent<= {RECENT_WINDOW_DAYS}d, asof={today_iso}).")
 
+    if args.annotate_existing:
+        counts = annotate_existing(scope, tmap)
+        log(f"Annotated {counts['annotated']} existing non-ok price record(s); "
+            f"{counts['already_explained']} already had a reason.")
+        return
+
     providers, call_counter = build_providers(args)
 
     counts = {"ok": 0, "partial": 0, "unavailable": 0, "unverified_symbol": 0}
@@ -462,12 +511,16 @@ def main():
         if not doc:
             log(f"    {sym}: no stock file, skipping."); continue
 
-        series, status, price_unit = fetch_one(doc, tmap, providers, call_counter,
-                                                args.force, today_iso)
+        series, status, price_unit, reason = fetch_one(doc, tmap, providers, call_counter,
+                                                        args.force, today_iso)
         # write back ONLY the price fields (no baked returns; render derives those)
         doc["price_series"] = series
         doc["price_status"] = status
         doc["price_unit"] = price_unit
+        if reason:
+            doc["price_reason"] = reason
+        else:
+            doc.pop("price_reason", None)
         doc["price_updated_at"] = datetime.now(timezone.utc).isoformat()
         save_json(stock_path, doc)
 

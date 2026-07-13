@@ -98,6 +98,8 @@ price_scope = {
     "tickers": 0,
     "status_counts": {},
     "pending": 0,
+    "reason_counts": {},
+    "missing_reason": 0,
 }
 if index_data:
     today_et = datetime.datetime.now(ZoneInfo('America/New_York')).date()
@@ -108,18 +110,32 @@ if index_data:
         or (row.get('last_mention') and row['last_mention'] >= cutoff)
     ]
     status_counts = {}
+    reason_counts = {}
+    missing_reason = []
     for row in scope_rows:
         status = row.get('price_status') or 'pending'
         status_counts[status] = status_counts.get(status, 0) + 1
+        if status in {'partial', 'unavailable', 'unverified_symbol'}:
+            stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+            stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
+            reason = stock_doc.get('price_reason')
+            if reason:
+                reason_counts[reason] = reason_counts.get(reason, 0) + 1
+            else:
+                missing_reason.append(row['ticker'])
     price_scope.update({
         "tickers": len(scope_rows),
         "status_counts": status_counts,
         "pending": status_counts.get('pending', 0),
+        "reason_counts": reason_counts,
+        "missing_reason": len(missing_reason),
     })
     print(f"Price scope: {len(scope_rows)} tickers (last {PRICE_WINDOW_DAYS}d or >= {PRICE_MIN_MENTIONS} mentions)")
     print(f"Price statuses: {status_counts or {'pending': len(scope_rows)}}")
     if REQUIRE_PRICE_SCOPE and price_scope['pending']:
         errors.append(f"price scope has {price_scope['pending']} pending ticker(s)")
+    if REQUIRE_PRICE_SCOPE and missing_reason:
+        errors.append(f"price scope has {len(missing_reason)} non-ok ticker(s) without price_reason: {', '.join(missing_reason[:20])}")
 elif REQUIRE_PRICE_SCOPE:
     errors.append("cannot verify price scope without index.json")
 

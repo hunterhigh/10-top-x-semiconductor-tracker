@@ -10,6 +10,11 @@ on:
         required: false
         default: false
         type: boolean
+      annotate_existing:
+        description: "Only add missing price reasons; do not call price providers"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: bihourly-pipeline-main
@@ -40,7 +45,12 @@ jobs:
       - name: Update prices
         env:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
-        run: python scripts/prices.py
+        run: |
+          if [ "${{ inputs.annotate_existing }}" = "true" ]; then
+            python scripts/prices.py --annotate-existing
+          else
+            python scripts/prices.py
+          fi
       - name: Verify data
         run: |
           if [ "${{ inputs.require_price_scope }}" = "true" ]; then
