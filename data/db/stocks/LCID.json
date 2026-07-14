@@ -1,6 +1,6 @@
 {
   "ticker": "LCID",
-  "cashtag": "Lucid",
+  "cashtag": "$LCID",
   "price_symbol": "LCID",
   "exchange": "US",
   "currency": "USD",
@@ -9,15 +9,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-28",
-  "last_mention": "2026-07-03",
-  "total_mentions": 4,
+  "last_mention": "2026-07-14",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
+    "StockMKTNewz": 4,
     "aleabitoreddit": 2,
-    "StockMKTNewz": 2
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 2,
-    "news": 2
+    "news": 4,
+    "flow": 1
   },
   "mentions": [
     {
@@ -107,6 +109,77 @@
         "likes": 103,
         "reposts": 7,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077084507698524234",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-14",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "reportedly considering filing for Chapter 11 bankruptcy",
+        "stock down 46%"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$LCID",
+      "text": "Lucid $LCID is reportedly considering filing for Chapter 1 bankruptcy\n\nLucid stock is down by 46% https://t.co/UDxWyHSvCz",
+      "url": "https://x.com/StockMKTNewz/status/2077084507698524234",
+      "kind": "post",
+      "engagement": {
+        "views": 80876,
+        "likes": 259,
+        "reposts": 21,
+        "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077092512750068214",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-14",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "down 40% today on bankruptcy news"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$LCID",
+      "text": "Holy.\n\nLook at this.\n\nLucid, $LCID, is down 40% TODAY on bankruptcy news. https://t.co/NU3jAN7iGu",
+      "url": "https://x.com/unusual_whales/status/2077092512750068214",
+      "kind": "post",
+      "engagement": {
+        "views": 150100,
+        "likes": 790,
+        "reposts": 57,
+        "replies": 116
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077093153832620347",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-14",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LCID",
+      "text": "LUCID GROUP $LCID DENIES REPORT IT IS WEIGHING GOING PRIVATE OR CHAPTER 11",
+      "url": "https://x.com/StockMKTNewz/status/2077093153832620347",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 7403,
+        "likes": 8,
+        "reposts": 1,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

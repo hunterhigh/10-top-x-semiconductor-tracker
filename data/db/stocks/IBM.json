@@ -10,18 +10,18 @@
   "thesis_summary": null,
   "first_mention": "2026-06-11",
   "last_mention": "2026-07-14",
-  "total_mentions": 17,
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 11,
     "octopusycc": 3,
-    "unusual_whales": 1,
+    "unusual_whales": 2,
     "jukan05": 1,
     "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
     "news": 11,
     "opinion": 5,
-    "flow": 1
+    "flow": 2
   },
   "mentions": [
     {
@@ -410,6 +410,31 @@
         "likes": 60,
         "reposts": 5,
         "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077096539256692883",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-14",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "down 28% today",
+        "lost billions in marketcap"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$IBM",
+      "text": "This is not a meme stock.\n\nThis is $IBM, a multi billion dollar company.\n\nIt is down 28% today.\n\nIt lost billions in marketcap. https://t.co/kgstpDA7Z5",
+      "url": "https://x.com/unusual_whales/status/2077096539256692883",
+      "kind": "post",
+      "engagement": {
+        "views": 112268,
+        "likes": 644,
+        "reposts": 66,
+        "replies": 113
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
