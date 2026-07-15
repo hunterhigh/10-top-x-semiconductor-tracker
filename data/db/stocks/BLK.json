@@ -1,6 +1,6 @@
 {
   "ticker": "BLK",
-  "cashtag": "BlackRock",
+  "cashtag": "$BLK",
   "price_symbol": "BLK",
   "exchange": "US",
   "currency": "USD",
@@ -9,15 +9,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
-  "last_mention": "2026-06-12",
-  "total_mentions": 2,
+  "last_mention": "2026-07-15",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "unusual_whales": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 2,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "flow": 1,
-    "news": 1
+    "news": 2
   },
   "mentions": [
     {
@@ -60,6 +60,32 @@
         "likes": 72,
         "reposts": 5,
         "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077333973504516109",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-15",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "EPS of $13.91 beating expectations of $12.66",
+        "Revenue of $7.1B beating expectations of $6.9B",
+        "AUM of $15.34T beating expectations of $15.2T"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$BLK",
+      "text": "BLACKROCK $BLK JUST REPORTED EARNINGS\n\nEPS of $13.91 beating expectations of $12.66🟢\nRevenue of $7.1B beating expectations of $6.9B🟢\n\nBlackrock just reported having $15.34 Trillion worth of assets under management beating expectations of $15.2T🟢 https://t.co/fXyDQx7M2F",
+      "url": "https://x.com/StockMKTNewz/status/2077333973504516109",
+      "kind": "post",
+      "engagement": {
+        "views": 1891,
+        "likes": 1,
+        "reposts": 1,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

@@ -5,19 +5,21 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": "PayPal",
+  "company": "PayPal Holdings",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-27",
-  "last_mention": "2026-07-01",
-  "total_mentions": 27,
+  "last_mention": "2026-07-15",
+  "total_mentions": 28,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 25,
-    "StockMKTNewz": 2
+    "StockMKTNewz": 2,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 25,
-    "news": 2
+    "news": 2,
+    "flow": 1
   },
   "mentions": [
     {
@@ -639,6 +641,28 @@
         "likes": 142,
         "reposts": 21,
         "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077285644704071829",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-15",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$PYPL",
+      "text": "Payments company Stripe and private equity firm Advent International have made a joint offer to ​acquire PayPal Holdings, $PYPL, for $60.50 per share, per Reuters",
+      "url": "https://x.com/unusual_whales/status/2077285644704071829",
+      "kind": "post",
+      "engagement": {
+        "views": 110160,
+        "likes": 441,
+        "reposts": 44,
+        "replies": 63
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
