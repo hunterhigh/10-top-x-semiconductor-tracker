@@ -9,13 +9,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-06",
-  "last_mention": "2026-07-06",
-  "total_mentions": 1,
+  "last_mention": "2026-07-15",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -36,6 +38,30 @@
         "likes": 151,
         "reposts": 16,
         "replies": 53
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077361787117388115",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-15",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "inflation is causing consumers to spend less on snacks and soda"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$PEP",
+      "text": "PepsiCo, $PEP, CEO Ramon Laguarta said that inflation is causing consumers to spend less on snacks and soda",
+      "url": "https://x.com/unusual_whales/status/2077361787117388115",
+      "kind": "post",
+      "engagement": {
+        "views": 99879,
+        "likes": 212,
+        "reposts": 18,
+        "replies": 99
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
