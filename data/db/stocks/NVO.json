@@ -5,17 +5,19 @@
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "Novo Nordisk",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-08-23",
-  "last_mention": "2026-05-09",
-  "total_mentions": 31,
+  "last_mention": "2026-07-15",
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 31
+    "aleabitoreddit": 31,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 31
+    "opinion": 31,
+    "news": 1
   },
   "mentions": [
     {
@@ -708,6 +710,28 @@
         "replies": 142
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077421663453430022",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-15",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVO",
+      "text": "Novo Nordisk $NVO just said it plans to release its weight loss wegovy pill in more countries this year https://t.co/3Z72ReybEx",
+      "url": "https://x.com/StockMKTNewz/status/2077421663453430022",
+      "kind": "post",
+      "engagement": {
+        "views": 22715,
+        "likes": 73,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],
