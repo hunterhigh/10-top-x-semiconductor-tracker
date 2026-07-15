@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-15T17:23:29.407929+00:00",
+    "generated_at": "2026-07-15T19:15:28.011367+00:00",
     "tracked_bloggers": [
       "aleabitoreddit",
       "zephyr_z9",
@@ -13,11 +13,10 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 1609,
-    "total_mentions": 18972,
+    "total_tickers": 1616,
+    "total_mentions": 19027,
     "dates": "ET (US Eastern); matches render/pipeline.py",
-    "note": "Data layer only — facts + raw mentions from ALL tracked bloggers, merged per ticker with blogger_id attribution. All windowed/stance aggregation + rankings (incl. cross-blogger consensus) are computed by render at runtime. Prices pending.",
-    "prices_updated_at": "2026-07-15T18:06:35.610424+00:00"
+    "note": "Data layer only — facts + raw mentions from ALL tracked bloggers, merged per ticker with blogger_id attribution. All windowed/stance aggregation + rankings (incl. cross-blogger consensus) are computed by render at runtime. Prices pending."
   },
   "stocks": [
     {
@@ -68,7 +67,7 @@
     },
     {
       "ticker": "NVDA",
-      "cashtag": "$NVDA",
+      "cashtag": "Nvidia",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -77,17 +76,17 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-07-15",
-      "total_mentions": 691,
+      "total_mentions": 694,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 501,
         "jukan05": 49,
         "StockMKTNewz": 43,
         "zephyr_z9": 22,
+        "unusual_whales": 22,
         "octopusycc": 21,
-        "unusual_whales": 20,
         "KawzInvests": 13,
-        "michaelsikand": 10,
+        "michaelsikand": 11,
         "ren_stocks": 9,
         "DJTRadar": 3
       },
@@ -183,6 +182,33 @@
       "price_status": "ok"
     },
     {
+      "ticker": "META",
+      "cashtag": "$META",
+      "price_symbol": "META",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Meta",
+      "industry": "Hyperscaler",
+      "first_mention": "2025-07-28",
+      "last_mention": "2026-07-15",
+      "total_mentions": 375,
+      "blogger_count": 10,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 284,
+        "StockMKTNewz": 41,
+        "unusual_whales": 23,
+        "jukan05": 6,
+        "octopusycc": 6,
+        "zephyr_z9": 6,
+        "ren_stocks": 3,
+        "michaelsikand": 3,
+        "KawzInvests": 2,
+        "DJTRadar": 1
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "MU",
       "cashtag": "$MU",
       "price_symbol": "MU",
@@ -205,33 +231,6 @@
         "michaelsikand": 11,
         "KawzInvests": 9,
         "zephyr_z9": 4,
-        "DJTRadar": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "META",
-      "cashtag": "$META",
-      "price_symbol": "META",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Meta",
-      "industry": "Hyperscaler",
-      "first_mention": "2025-07-28",
-      "last_mention": "2026-07-15",
-      "total_mentions": 374,
-      "blogger_count": 10,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 284,
-        "StockMKTNewz": 41,
-        "unusual_whales": 23,
-        "jukan05": 6,
-        "octopusycc": 6,
-        "zephyr_z9": 6,
-        "ren_stocks": 3,
-        "KawzInvests": 2,
-        "michaelsikand": 2,
         "DJTRadar": 1
       },
       "price_status": "ok"
@@ -596,6 +595,33 @@
       "price_status": "ok"
     },
     {
+      "ticker": "AAPL",
+      "cashtag": "$AAPL",
+      "price_symbol": "AAPL",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Apple",
+      "industry": null,
+      "first_mention": "2025-09-22",
+      "last_mention": "2026-07-15",
+      "total_mentions": 180,
+      "blogger_count": 10,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 82,
+        "StockMKTNewz": 49,
+        "unusual_whales": 18,
+        "jukan05": 13,
+        "zephyr_z9": 6,
+        "octopusycc": 5,
+        "ren_stocks": 3,
+        "KawzInvests": 2,
+        "DJTRadar": 1,
+        "michaelsikand": 1
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "RKLB",
       "cashtag": "$RKLB",
       "price_symbol": "RKLB",
@@ -614,32 +640,6 @@
         "octopusycc": 3,
         "michaelsikand": 1,
         "unusual_whales": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "AAPL",
-      "cashtag": "$AAPL",
-      "price_symbol": "AAPL",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Apple",
-      "industry": null,
-      "first_mention": "2025-09-22",
-      "last_mention": "2026-07-15",
-      "total_mentions": 176,
-      "blogger_count": 9,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 82,
-        "StockMKTNewz": 47,
-        "unusual_whales": 17,
-        "jukan05": 13,
-        "zephyr_z9": 6,
-        "octopusycc": 5,
-        "ren_stocks": 3,
-        "KawzInvests": 2,
-        "DJTRadar": 1
       },
       "price_status": "ok"
     },
@@ -1266,13 +1266,13 @@
       "company": "Nokia",
       "industry": null,
       "first_mention": "2026-02-18",
-      "last_mention": "2026-07-13",
-      "total_mentions": 54,
+      "last_mention": "2026-07-15",
+      "total_mentions": 55,
       "blogger_count": 6,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 24,
         "KawzInvests": 17,
-        "michaelsikand": 6,
+        "michaelsikand": 7,
         "ren_stocks": 3,
         "octopusycc": 3,
         "DJTRadar": 1
@@ -1987,6 +1987,26 @@
       "price_status": "unavailable"
     },
     {
+      "ticker": "PYPL",
+      "cashtag": "$PYPL",
+      "price_symbol": "PYPL",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "PayPal Holdings",
+      "industry": null,
+      "first_mention": "2025-09-27",
+      "last_mention": "2026-07-15",
+      "total_mentions": 31,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 25,
+        "StockMKTNewz": 3,
+        "unusual_whales": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "SLNH",
       "cashtag": "$SLNH",
       "price_symbol": "SLNH",
@@ -2040,26 +2060,6 @@
         "aleabitoreddit": 28,
         "michaelsikand": 1,
         "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "PYPL",
-      "cashtag": "$PYPL",
-      "price_symbol": "PYPL",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "PayPal Holdings",
-      "industry": null,
-      "first_mention": "2025-09-27",
-      "last_mention": "2026-07-15",
-      "total_mentions": 30,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 25,
-        "StockMKTNewz": 3,
-        "unusual_whales": 2
       },
       "price_status": "ok"
     },
@@ -2163,6 +2163,26 @@
       "price_status": "ok"
     },
     {
+      "ticker": "JPM",
+      "cashtag": "$JPM",
+      "price_symbol": "JPM",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "JPMorgan Chase",
+      "industry": null,
+      "first_mention": "2025-12-22",
+      "last_mention": "2026-07-15",
+      "total_mentions": 28,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 18,
+        "aleabitoreddit": 7,
+        "unusual_whales": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "VIRT",
       "cashtag": "$VIRT",
       "price_symbol": "VIRT",
@@ -2178,26 +2198,6 @@
       "total_mentions_by_blogger": {
         "aleabitoreddit": 26,
         "StockMKTNewz": 2
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "JPM",
-      "cashtag": "$JPM",
-      "price_symbol": "JPM",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "JPMorgan Chase",
-      "industry": null,
-      "first_mention": "2025-12-22",
-      "last_mention": "2026-07-15",
-      "total_mentions": 27,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 17,
-        "aleabitoreddit": 7,
-        "unusual_whales": 3
       },
       "price_status": "ok"
     },
@@ -4126,6 +4126,25 @@
       "price_status": "ok"
     },
     {
+      "ticker": "SKHX",
+      "cashtag": "SKHX",
+      "price_symbol": "SKHX",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "2x Long SK Hynix ETF (Leverage Shares)",
+      "industry": null,
+      "first_mention": "2026-07-08",
+      "last_mention": "2026-07-15",
+      "total_mentions": 11,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 8,
+        "unusual_whales": 3
+      },
+      "price_status": "unavailable"
+    },
+    {
       "ticker": "SPRB",
       "cashtag": "$SPRB",
       "price_symbol": "SPRB",
@@ -4216,6 +4235,25 @@
         "aleabitoreddit": 10
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "BAC",
+      "cashtag": "$BAC",
+      "price_symbol": "BAC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Bank of America",
+      "industry": null,
+      "first_mention": "2026-03-21",
+      "last_mention": "2026-07-15",
+      "total_mentions": 10,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 9,
+        "aleabitoreddit": 1
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "BOT",
@@ -4317,6 +4355,25 @@
       "price_status": "ok"
     },
     {
+      "ticker": "GS",
+      "cashtag": "$GS",
+      "price_symbol": "GS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Goldman Sachs",
+      "industry": null,
+      "first_mention": "2026-06-17",
+      "last_mention": "2026-07-15",
+      "total_mentions": 10,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 8,
+        "unusual_whales": 2
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "LLY",
       "cashtag": "$LLY",
       "price_symbol": "LLY",
@@ -4332,6 +4389,25 @@
       "total_mentions_by_blogger": {
         "StockMKTNewz": 8,
         "DJTRadar": 2
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "MS",
+      "cashtag": "$MS",
+      "price_symbol": "MS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Morgan Stanley",
+      "industry": null,
+      "first_mention": "2026-06-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 10,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 9,
+        "unusual_whales": 1
       },
       "price_status": "ok"
     },
@@ -4392,25 +4468,6 @@
         "aleabitoreddit": 10
       },
       "price_status": "pending"
-    },
-    {
-      "ticker": "SKHX",
-      "cashtag": "$SKHX",
-      "price_symbol": "SKHX",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "2x Long SK Hynix ETF (Leverage Shares)",
-      "industry": null,
-      "first_mention": "2026-07-08",
-      "last_mention": "2026-07-15",
-      "total_mentions": 10,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 7,
-        "unusual_whales": 3
-      },
-      "price_status": "unavailable"
     },
     {
       "ticker": "SMTOY",
@@ -4583,44 +4640,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "BAC",
-      "cashtag": "$BAC",
-      "price_symbol": "BAC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Bank of America",
-      "industry": null,
-      "first_mention": "2026-03-21",
-      "last_mention": "2026-07-15",
-      "total_mentions": 9,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 8,
-        "aleabitoreddit": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "GS",
-      "cashtag": "$GS",
-      "price_symbol": "GS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Goldman Sachs",
-      "industry": null,
-      "first_mention": "2026-06-17",
-      "last_mention": "2026-07-15",
-      "total_mentions": 9,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 7,
-        "unusual_whales": 2
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "KIOXIA",
       "cashtag": "Kioxia",
       "price_symbol": "KIOXIA",
@@ -4660,25 +4679,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "MS",
-      "cashtag": "$MS",
-      "price_symbol": "MS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Morgan Stanley",
-      "industry": null,
-      "first_mention": "2026-06-15",
-      "last_mention": "2026-07-15",
-      "total_mentions": 9,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 8,
-        "unusual_whales": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "NANYA",
       "cashtag": "Nanya",
       "price_symbol": "NANYA",
@@ -4695,6 +4695,25 @@
         "aleabitoreddit": 9
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "NET",
+      "cashtag": "$NET",
+      "price_symbol": "NET",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Cloudflare",
+      "industry": null,
+      "first_mention": "2025-10-13",
+      "last_mention": "2026-07-15",
+      "total_mentions": 9,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 6,
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "ON",
@@ -4967,6 +4986,25 @@
       "price_status": "ok"
     },
     {
+      "ticker": "CRWD",
+      "cashtag": "$CRWD",
+      "price_symbol": "CRWD",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "CrowdStrike",
+      "industry": null,
+      "first_mention": "2025-10-13",
+      "last_mention": "2026-07-15",
+      "total_mentions": 8,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5,
+        "aleabitoreddit": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "DAL",
       "cashtag": "Delta Air Lines",
       "price_symbol": "DAL",
@@ -5178,25 +5216,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "NET",
-      "cashtag": "$NET",
-      "price_symbol": "NET",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Cloudflare",
-      "industry": null,
-      "first_mention": "2025-10-13",
-      "last_mention": "2026-07-14",
-      "total_mentions": 8,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 6,
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "NKE",
       "cashtag": "$NKE",
       "price_symbol": "NKE",
@@ -5251,6 +5270,43 @@
         "ren_stocks": 4,
         "aleabitoreddit": 3,
         "KawzInvests": 1
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "STT",
+      "cashtag": "$STT",
+      "price_symbol": "STT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "State Street",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 8,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 8
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "TD",
+      "cashtag": "$TD",
+      "price_symbol": "TD",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Toronto-Dominion Bank",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 8,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 7,
+        "unusual_whales": 1
       },
       "price_status": "ok"
     },
@@ -5517,25 +5573,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "CRWD",
-      "cashtag": "$CRWD",
-      "price_symbol": "CRWD",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "CrowdStrike",
-      "industry": null,
-      "first_mention": "2025-10-13",
-      "last_mention": "2026-07-06",
-      "total_mentions": 7,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4,
-        "aleabitoreddit": 3
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "CTSH",
       "cashtag": "$CTSH",
       "price_symbol": "CTSH",
@@ -5795,43 +5832,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "STT",
-      "cashtag": "$STT",
-      "price_symbol": "STT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "State Street Corporation",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-14",
-      "total_mentions": 7,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 7
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "TD",
-      "cashtag": "$TD",
-      "price_symbol": "TD",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Toronto-Dominion Bank",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-14",
-      "total_mentions": 7,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 6,
-        "unusual_whales": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "TEL",
       "cashtag": "$TEL",
       "price_symbol": "TEL",
@@ -5927,6 +5927,24 @@
         "aleabitoreddit": 7
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "UBS",
+      "cashtag": "$UBS",
+      "price_symbol": "UBS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "UBS Group",
+      "industry": null,
+      "first_mention": "2026-06-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 7,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 7
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "UNITREE",
@@ -6111,6 +6129,24 @@
         "StockMKTNewz": 4,
         "unusual_whales": 1,
         "aleabitoreddit": 1
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "FTNT",
+      "cashtag": "$FTNT",
+      "price_symbol": "FTNT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Fortinet",
+      "industry": null,
+      "first_mention": "2026-06-25",
+      "last_mention": "2026-07-15",
+      "total_mentions": 6,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 6
       },
       "price_status": "ok"
     },
@@ -6490,24 +6526,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "UBS",
-      "cashtag": "$UBS",
-      "price_symbol": "UBS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "UBS Group",
-      "industry": null,
-      "first_mention": "2026-06-15",
-      "last_mention": "2026-07-14",
-      "total_mentions": 6,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 6
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "VIK",
       "cashtag": "$VIK",
       "price_symbol": "VIK",
@@ -6863,6 +6881,61 @@
       "price_status": "pending"
     },
     {
+      "ticker": "BLK",
+      "cashtag": "$BLK",
+      "price_symbol": "BLK",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "BlackRock",
+      "industry": null,
+      "first_mention": "2026-06-11",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 4,
+        "unusual_whales": 1
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "BNS",
+      "cashtag": "$BNS",
+      "price_symbol": "BNS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Bank of Nova Scotia",
+      "industry": null,
+      "first_mention": "2026-06-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "BNY",
+      "cashtag": "$BNY",
+      "price_symbol": "BNY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Bank of New York Mellon",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "BTSG",
       "cashtag": "$BTSG",
       "price_symbol": "BTSG",
@@ -6958,6 +7031,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "CVS",
+      "cashtag": "$CVS",
+      "price_symbol": "CVS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "CVS Health",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "DEEPSEEK",
       "cashtag": "DEEPSEEK",
       "price_symbol": "DEEPSEEK",
@@ -7049,24 +7140,6 @@
       "total_mentions_by_blogger": {
         "StockMKTNewz": 4,
         "aleabitoreddit": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "FTNT",
-      "cashtag": "$FTNT",
-      "price_symbol": "FTNT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Fortinet",
-      "industry": null,
-      "first_mention": "2026-06-25",
-      "last_mention": "2026-07-14",
-      "total_mentions": 5,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 5
       },
       "price_status": "ok"
     },
@@ -7412,6 +7485,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "OKTA",
+      "cashtag": "$OKTA",
+      "price_symbol": "OKTA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Okta",
+      "industry": null,
+      "first_mention": "2026-07-01",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "PANW",
       "cashtag": "$PANW",
       "price_symbol": "PANW",
@@ -7522,6 +7613,24 @@
         "aleabitoreddit": 5
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "RY",
+      "cashtag": "$RY",
+      "price_symbol": "RY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Royal Bank of Canada",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "SHOP",
@@ -8081,61 +8190,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "BLK",
-      "cashtag": "BlackRock",
-      "price_symbol": "BLK",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "BlackRock Inc.",
-      "industry": null,
-      "first_mention": "2026-06-11",
-      "last_mention": "2026-07-15",
-      "total_mentions": 4,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 3,
-        "unusual_whales": 1
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "BNS",
-      "cashtag": "$BNS",
-      "price_symbol": "BNS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Bank of Nova Scotia",
-      "industry": null,
-      "first_mention": "2026-06-15",
-      "last_mention": "2026-07-14",
-      "total_mentions": 4,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "BNY",
-      "cashtag": "$BNY",
-      "price_symbol": "BNY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Bank of New York Mellon",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-09",
-      "total_mentions": 4,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "BRK",
       "cashtag": "Berkshire Hathaway",
       "price_symbol": "BRK",
@@ -8283,16 +8337,16 @@
       "price_status": "pending"
     },
     {
-      "ticker": "CVS",
-      "cashtag": "$CVS",
-      "price_symbol": "CVS",
+      "ticker": "CRNX",
+      "cashtag": "$CRNX",
+      "price_symbol": "CRNX",
       "exchange": "US",
       "currency": "USD",
       "ticker_mapped": false,
-      "company": "CVS Health Corporation",
+      "company": "Crinetics Pharmaceuticals",
       "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-14",
+      "first_mention": "2026-07-06",
+      "last_mention": "2026-07-15",
       "total_mentions": 4,
       "blogger_count": 1,
       "total_mentions_by_blogger": {
@@ -8355,6 +8409,24 @@
         "zephyr_z9": 1
       },
       "price_status": "unavailable"
+    },
+    {
+      "ticker": "ETSY",
+      "cashtag": "$ETSY",
+      "price_symbol": "ETSY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Etsy",
+      "industry": null,
+      "first_mention": "2026-06-24",
+      "last_mention": "2026-07-15",
+      "total_mentions": 4,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 4
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "EW",
@@ -8597,6 +8669,24 @@
         "aleabitoreddit": 4
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "ING",
+      "cashtag": "$ING",
+      "price_symbol": "ING",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "ING Groep",
+      "industry": null,
+      "first_mention": "2026-06-22",
+      "last_mention": "2026-07-15",
+      "total_mentions": 4,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 4
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "INSM",
@@ -9026,22 +9116,23 @@
       "price_status": "pending"
     },
     {
-      "ticker": "OKTA",
-      "cashtag": "$OKTA",
-      "price_symbol": "OKTA",
+      "ticker": "ONDO",
+      "cashtag": "Ondo Finance",
+      "price_symbol": "ONDO",
       "exchange": "US",
       "currency": "USD",
       "ticker_mapped": false,
-      "company": "Okta",
+      "company": "Ondo Finance",
       "industry": null,
-      "first_mention": "2026-07-01",
-      "last_mention": "2026-07-14",
+      "first_mention": "2026-06-23",
+      "last_mention": "2026-07-15",
       "total_mentions": 4,
-      "blogger_count": 1,
+      "blogger_count": 2,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 4
+        "StockMKTNewz": 2,
+        "octopusycc": 2
       },
-      "price_status": "ok"
+      "price_status": "unavailable"
     },
     {
       "ticker": "P4O",
@@ -9147,24 +9238,6 @@
       "industry": null,
       "first_mention": "2026-06-22",
       "last_mention": "2026-07-09",
-      "total_mentions": 4,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4
-      },
-      "price_status": "ok"
-    },
-    {
-      "ticker": "RY",
-      "cashtag": "$RY",
-      "price_symbol": "RY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Royal Bank of Canada",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-14",
       "total_mentions": 4,
       "blogger_count": 1,
       "total_mentions_by_blogger": {
@@ -9745,6 +9818,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "ABNB",
+      "cashtag": "$ABNB",
+      "price_symbol": "ABNB",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Airbnb",
+      "industry": null,
+      "first_mention": "2026-06-29",
+      "last_mention": "2026-07-15",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "ACLS",
       "cashtag": "$ACLS",
       "price_symbol": "ACLS",
@@ -10074,16 +10165,16 @@
       "price_status": "ok"
     },
     {
-      "ticker": "CRNX",
-      "cashtag": "$CRNX",
-      "price_symbol": "CRNX",
+      "ticker": "COLB",
+      "cashtag": "$COLB",
+      "price_symbol": "COLB",
       "exchange": "US",
       "currency": "USD",
       "ticker_mapped": false,
-      "company": "Crinetics Pharmaceuticals",
+      "company": "Columbia Banking System",
       "industry": null,
-      "first_mention": "2026-07-06",
-      "last_mention": "2026-07-14",
+      "first_mention": "2026-07-01",
+      "last_mention": "2026-07-15",
       "total_mentions": 3,
       "blogger_count": 1,
       "total_mentions_by_blogger": {
@@ -10126,6 +10217,25 @@
         "StockMKTNewz": 3
       },
       "price_status": "ok"
+    },
+    {
+      "ticker": "DAVE",
+      "cashtag": "$DAVE",
+      "price_symbol": "DAVE",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Dave Inc.",
+      "industry": null,
+      "first_mention": "2025-09-16",
+      "last_mention": "2026-07-15",
+      "total_mentions": 3,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 2,
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
     },
     {
       "ticker": "DDOG",
@@ -10194,6 +10304,24 @@
       "industry": null,
       "first_mention": "2026-06-11",
       "last_mention": "2026-06-25",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "EA",
+      "cashtag": "$EA",
+      "price_symbol": "EA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Electronic Arts",
+      "industry": null,
+      "first_mention": "2026-06-24",
+      "last_mention": "2026-07-15",
       "total_mentions": 3,
       "blogger_count": 1,
       "total_mentions_by_blogger": {
@@ -10311,24 +10439,6 @@
         "aleabitoreddit": 3
       },
       "price_status": "pending"
-    },
-    {
-      "ticker": "ETSY",
-      "cashtag": "$ETSY",
-      "price_symbol": "ETSY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Etsy",
-      "industry": null,
-      "first_mention": "2026-06-24",
-      "last_mention": "2026-07-14",
-      "total_mentions": 3,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 3
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "FCEL",
@@ -10695,24 +10805,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "ING",
-      "cashtag": "$ING",
-      "price_symbol": "ING",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "ING Groep",
-      "industry": null,
-      "first_mention": "2026-06-22",
-      "last_mention": "2026-07-14",
-      "total_mentions": 3,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 3
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "IRDM",
       "cashtag": "$IRDM",
       "price_symbol": "IRDM",
@@ -10931,6 +11023,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "MFC",
+      "cashtag": "$MFC",
+      "price_symbol": "MFC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Manulife Financial",
+      "industry": null,
+      "first_mention": "2026-07-09",
+      "last_mention": "2026-07-15",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "MIND",
       "cashtag": "$MIND",
       "price_symbol": "MIND",
@@ -11058,6 +11168,24 @@
       "price_status": "pending"
     },
     {
+      "ticker": "NMR",
+      "cashtag": "$NMR",
+      "price_symbol": "NMR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Nomura Holdings",
+      "industry": null,
+      "first_mention": "2026-07-09",
+      "last_mention": "2026-07-15",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "NTRA",
       "cashtag": "$NTRA",
       "price_symbol": "NTRA",
@@ -11111,25 +11239,6 @@
         "aleabitoreddit": 1
       },
       "price_status": "ok"
-    },
-    {
-      "ticker": "ONDO",
-      "cashtag": "Ondo Finance",
-      "price_symbol": "ONDO",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Ondo Finance",
-      "industry": null,
-      "first_mention": "2026-06-23",
-      "last_mention": "2026-07-08",
-      "total_mentions": 3,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "octopusycc": 2,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unavailable"
     },
     {
       "ticker": "OPAD",
@@ -12067,6 +12176,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "ZION",
+      "cashtag": "$ZION",
+      "price_symbol": "ZION",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Zions Bancorporation",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-15",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "ZM",
       "cashtag": "$ZM",
       "price_symbol": "ZM",
@@ -12760,24 +12887,6 @@
         "aleabitoreddit": 2
       },
       "price_status": "pending"
-    },
-    {
-      "ticker": "ABNB",
-      "cashtag": "$ABNB",
-      "price_symbol": "ABNB",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Airbnb",
-      "industry": null,
-      "first_mention": "2026-06-29",
-      "last_mention": "2026-07-09",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "ACI",
@@ -13527,24 +13636,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "COLB",
-      "cashtag": "$COLB",
-      "price_symbol": "COLB",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Columbia Banking System",
-      "industry": null,
-      "first_mention": "2026-07-01",
-      "last_mention": "2026-07-02",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "CPB",
       "cashtag": "$CPB",
       "price_symbol": "CPB",
@@ -13710,24 +13801,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "DAVE",
-      "cashtag": "$DAVE",
-      "price_symbol": "DAVE",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": null,
-      "industry": null,
-      "first_mention": "2025-09-16",
-      "last_mention": "2025-10-30",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 2
-      },
-      "price_status": "pending"
-    },
-    {
       "ticker": "DBRG",
       "cashtag": "$DBRG",
       "price_symbol": "DBRG",
@@ -13744,6 +13817,24 @@
         "aleabitoreddit": 2
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "DINO",
+      "cashtag": "$DINO",
+      "price_symbol": "DINO",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "HF Sinclair",
+      "industry": null,
+      "first_mention": "2026-07-14",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "DJIA",
@@ -13854,24 +13945,6 @@
         "unusual_whales": 2
       },
       "price_status": "unavailable"
-    },
-    {
-      "ticker": "EA",
-      "cashtag": "$EA",
-      "price_symbol": "EA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Electronic Arts Inc",
-      "industry": null,
-      "first_mention": "2026-06-24",
-      "last_mention": "2026-07-01",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "EBC",
@@ -14199,6 +14272,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "FR",
+      "cashtag": "$FR",
+      "price_symbol": "FR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "First Industrial Realty Trust",
+      "industry": null,
+      "first_mention": "2026-07-09",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "FROG",
       "cashtag": "$FROG",
       "price_symbol": "FROG",
@@ -14251,6 +14342,24 @@
         "aleabitoreddit": 2
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "GTLS",
+      "cashtag": "$GTLS",
+      "price_symbol": "GTLS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Chart Industries",
+      "industry": null,
+      "first_mention": "2026-07-09",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "GWRE",
@@ -14379,6 +14488,24 @@
       "total_mentions_by_blogger": {
         "StockMKTNewz": 1,
         "jukan05": 1
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "HR",
+      "cashtag": "$HR",
+      "price_symbol": "HR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Healthcare Realty Trust",
+      "industry": null,
+      "first_mention": "2026-07-14",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
       },
       "price_status": "ok"
     },
@@ -14856,24 +14983,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "MFC",
-      "cashtag": "$MFC",
-      "price_symbol": "MFC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Manulife Financial",
-      "industry": null,
-      "first_mention": "2026-07-09",
-      "last_mention": "2026-07-14",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "MFG",
       "cashtag": "$MFG",
       "price_symbol": "MFG",
@@ -14944,6 +15053,24 @@
         "zephyr_z9": 2
       },
       "price_status": "unavailable"
+    },
+    {
+      "ticker": "MTB",
+      "cashtag": "$MTB",
+      "price_symbol": "MTB",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "M&T Bank",
+      "industry": null,
+      "first_mention": "2026-07-14",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "MTIA",
@@ -15053,24 +15180,6 @@
         "aleabitoreddit": 2
       },
       "price_status": "pending"
-    },
-    {
-      "ticker": "NMR",
-      "cashtag": "$NMR",
-      "price_symbol": "NMR",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Nomura Holdings",
-      "industry": null,
-      "first_mention": "2026-07-09",
-      "last_mention": "2026-07-14",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "NODE",
@@ -15269,6 +15378,24 @@
         "aleabitoreddit": 2
       },
       "price_status": "pending"
+    },
+    {
+      "ticker": "PBA",
+      "cashtag": "$PBA",
+      "price_symbol": "PBA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Pembina Pipeline",
+      "industry": null,
+      "first_mention": "2026-07-14",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
     },
     {
       "ticker": "PBF",
@@ -15832,6 +15959,24 @@
       "price_status": "pending"
     },
     {
+      "ticker": "SEIC",
+      "cashtag": "$SEIC",
+      "price_symbol": "SEIC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "SEI Investments",
+      "industry": null,
+      "first_mention": "2026-07-09",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "SIDU",
       "cashtag": "$SIDU",
       "price_symbol": "SIDU",
@@ -16233,6 +16378,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "TXG",
+      "cashtag": "$TXG",
+      "price_symbol": "TXG",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "10X Genomics",
+      "industry": null,
+      "first_mention": "2026-07-14",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "ok"
+    },
+    {
       "ticker": "UCTT",
       "cashtag": "$UCTT",
       "price_symbol": "UCTT",
@@ -16338,6 +16501,24 @@
       "total_mentions_by_blogger": {
         "aleabitoreddit": 1,
         "StockMKTNewz": 1
+      },
+      "price_status": "ok"
+    },
+    {
+      "ticker": "VTR",
+      "cashtag": "$VTR",
+      "price_symbol": "VTR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Ventas",
+      "industry": null,
+      "first_mention": "2026-07-02",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
       },
       "price_status": "ok"
     },
@@ -16542,6 +16723,25 @@
       "price_status": "unavailable"
     },
     {
+      "ticker": "XYZ",
+      "cashtag": "$XYZ",
+      "price_symbol": "XYZ",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Block",
+      "industry": null,
+      "first_mention": "2025-12-04",
+      "last_mention": "2026-07-15",
+      "total_mentions": 2,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 1,
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
+    },
+    {
       "ticker": "YUM",
       "cashtag": "Yum Brands",
       "price_symbol": "YUM",
@@ -16577,24 +16777,6 @@
         "KawzInvests": 2
       },
       "price_status": "unavailable"
-    },
-    {
-      "ticker": "ZION",
-      "cashtag": "$ZION",
-      "price_symbol": "ZION",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Zions Bancorp",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-06-24",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "000660.KS",
@@ -19513,6 +19695,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "BBY",
+      "cashtag": "$BBY",
+      "price_symbol": "BBY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Best Buy",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
+    },
+    {
       "ticker": "BDC",
       "cashtag": "$BDC",
       "price_symbol": "BDC",
@@ -20737,6 +20937,24 @@
       "price_status": "pending"
     },
     {
+      "ticker": "CROX",
+      "cashtag": "$CROX",
+      "price_symbol": "CROX",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Crocs",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
+    },
+    {
       "ticker": "CRSR",
       "cashtag": "$CRSR",
       "price_symbol": "CRSR",
@@ -21077,24 +21295,6 @@
         "StockMKTNewz": 1
       },
       "price_status": "unavailable"
-    },
-    {
-      "ticker": "DINO",
-      "cashtag": "$DINO",
-      "price_symbol": "DINO",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "HF Sinclair",
-      "industry": null,
-      "first_mention": "2026-07-14",
-      "last_mention": "2026-07-14",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "DISK",
@@ -22123,24 +22323,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "FR",
-      "cashtag": "$FR",
-      "price_symbol": "FR",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "First Industrial Realty Trust",
-      "industry": null,
-      "first_mention": "2026-07-09",
-      "last_mention": "2026-07-09",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "FRMI",
       "cashtag": "$FRMI",
       "price_symbol": "FRMI",
@@ -22609,24 +22791,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "GTLS",
-      "cashtag": "$GTLS",
-      "price_symbol": "GTLS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Chart Industries",
-      "industry": null,
-      "first_mention": "2026-07-09",
-      "last_mention": "2026-07-09",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "GTM",
       "cashtag": "$GTM",
       "price_symbol": "GTM",
@@ -22895,24 +23059,6 @@
         "aleabitoreddit": 1
       },
       "price_status": "pending"
-    },
-    {
-      "ticker": "HR",
-      "cashtag": "$HR",
-      "price_symbol": "HR",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Healthcare Realty Trust",
-      "industry": null,
-      "first_mention": "2026-07-14",
-      "last_mention": "2026-07-14",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "HSAI",
@@ -23541,6 +23687,24 @@
       "blogger_count": 1,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 1
+      },
+      "price_status": "pending"
+    },
+    {
+      "ticker": "IVZ",
+      "cashtag": "$IVZ",
+      "price_symbol": "IVZ",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Invesco",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
       },
       "price_status": "pending"
     },
@@ -24877,24 +25041,6 @@
       "price_status": "unavailable"
     },
     {
-      "ticker": "MTB",
-      "cashtag": "$MTB",
-      "price_symbol": "MTB",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "M&T Bank",
-      "industry": null,
-      "first_mention": "2026-07-14",
-      "last_mention": "2026-07-14",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "MTCH",
       "cashtag": "$MTCH",
       "price_symbol": "MTCH",
@@ -25939,24 +26085,6 @@
       "price_status": "ok"
     },
     {
-      "ticker": "PBA",
-      "cashtag": "$PBA",
-      "price_symbol": "PBA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Pembina Pipeline",
-      "industry": null,
-      "first_mention": "2026-07-14",
-      "last_mention": "2026-07-14",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "PCL",
       "cashtag": "PCL",
       "price_symbol": "PCL",
@@ -26515,6 +26643,24 @@
       "price_status": "pending"
     },
     {
+      "ticker": "RF",
+      "cashtag": "$RF",
+      "price_symbol": "RF",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Regions Financial",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
+    },
+    {
       "ticker": "RHP",
       "cashtag": "$RHP",
       "price_symbol": "RHP",
@@ -27019,24 +27165,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "SEIC",
-      "cashtag": "$SEIC",
-      "price_symbol": "SEIC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "SEI Investments",
-      "industry": null,
-      "first_mention": "2026-07-09",
-      "last_mention": "2026-07-09",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "SEIGY",
       "cashtag": "$SEIGY",
       "price_symbol": "SEIGY",
@@ -27069,6 +27197,24 @@
       "blogger_count": 1,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 1
+      },
+      "price_status": "pending"
+    },
+    {
+      "ticker": "SEZL",
+      "cashtag": "$SEZL",
+      "price_symbol": "SEZL",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Sezzle",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
       },
       "price_status": "pending"
     },
@@ -27919,6 +28065,24 @@
       "price_status": "ok"
     },
     {
+      "ticker": "STAG",
+      "cashtag": "$STAG",
+      "price_symbol": "STAG",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Stag Industrial",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
+      },
+      "price_status": "pending"
+    },
+    {
       "ticker": "STCK.TO",
       "cashtag": "$STCK.TO",
       "price_symbol": "STCK.TO",
@@ -28657,24 +28821,6 @@
       "price_status": "pending"
     },
     {
-      "ticker": "TXG",
-      "cashtag": "$TXG",
-      "price_symbol": "TXG",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "10X Genomics",
-      "industry": null,
-      "first_mention": "2026-07-14",
-      "last_mention": "2026-07-14",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
-    },
-    {
       "ticker": "TYNTEK",
       "cashtag": "Tyntek",
       "price_symbol": "TYNTEK",
@@ -28833,6 +28979,24 @@
       "blogger_count": 1,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 1
+      },
+      "price_status": "pending"
+    },
+    {
+      "ticker": "VCTR",
+      "cashtag": "$VCTR",
+      "price_symbol": "VCTR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": false,
+      "company": "Victory Capital Holdings",
+      "industry": null,
+      "first_mention": "2026-07-15",
+      "last_mention": "2026-07-15",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
       },
       "price_status": "pending"
     },
@@ -29159,24 +29323,6 @@
         "zephyr_z9": 1
       },
       "price_status": "unavailable"
-    },
-    {
-      "ticker": "VTR",
-      "cashtag": "$VTR",
-      "price_symbol": "VTR",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": "Ventas",
-      "industry": null,
-      "first_mention": "2026-07-02",
-      "last_mention": "2026-07-02",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok"
     },
     {
       "ticker": "VUORI",
@@ -29555,24 +29701,6 @@
         "michaelsikand": 1
       },
       "price_status": "ok"
-    },
-    {
-      "ticker": "XYZ",
-      "cashtag": "$XYZ",
-      "price_symbol": "XYZ",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": false,
-      "company": null,
-      "industry": null,
-      "first_mention": "2025-12-04",
-      "last_mention": "2025-12-04",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 1
-      },
-      "price_status": "pending"
     },
     {
       "ticker": "YAGEO",
