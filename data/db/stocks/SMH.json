@@ -1,21 +1,22 @@
 {
   "ticker": "SMH",
-  "cashtag": "$SMH",
+  "cashtag": "SMH",
   "price_symbol": "SMH",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": null,
+  "company": "VanEck Semiconductor ETF",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-08",
-  "last_mention": "2026-04-08",
-  "total_mentions": 1,
+  "last_mention": "2026-07-16",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "zephyr_z9": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -38,6 +39,30 @@
         "replies": 47
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077878453416993029",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-16",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "would not buy SMH"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SMH",
+      "text": "@ryanTesling @AlphaExponent @teortaxesTex wait till late july (although I wouldn't buy SMH)",
+      "url": "https://x.com/zephyr_z9/status/2077878453416993029",
+      "kind": "reply",
+      "engagement": {
+        "views": 416,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],
