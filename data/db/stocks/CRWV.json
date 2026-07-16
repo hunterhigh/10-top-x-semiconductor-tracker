@@ -1,6 +1,6 @@
 {
   "ticker": "CRWV",
-  "cashtag": "$CRWV",
+  "cashtag": "CoreWeave",
   "price_symbol": "CRWV",
   "exchange": "US",
   "currency": "USD",
@@ -9,18 +9,19 @@
   "industry": "GPU Cloud/Neocloud",
   "thesis_summary": null,
   "first_mention": "2025-07-21",
-  "last_mention": "2026-07-14",
-  "total_mentions": 207,
+  "last_mention": "2026-07-16",
+  "total_mentions": 208,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 189,
     "StockMKTNewz": 10,
     "octopusycc": 4,
     "KawzInvests": 2,
     "unusual_whales": 1,
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 196,
+    "opinion": 197,
     "flow": 1,
     "news": 10
   },
@@ -5025,6 +5026,32 @@
         "views": 44944,
         "likes": 159,
         "reposts": 5,
+        "replies": 30
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077609813559927050",
+      "blogger_id": "jukan05",
+      "date": "2026-07-16",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "put options hedging implies LTAs are more binding and durable than previously thought",
+        "standard historical response was to terminate/renegotiate LTAs when memory prices fell, but CoreWeave appears contractually obligated even in a price collapse",
+        "memory is still cheap, making LTA commitments less painful"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "CoreWeave",
+      "text": "I don’t understand why the news that CoreWeave is considering put options is being interpreted as bearish.\n\nIsn’t it actually bullish news, since it implies that the LTAs would remain in place even if memory prices collapse?\n\nHistorically, wasn’t the standard response to terminate or renegotiate LTAs when memory prices fell sharply, even if an agreement had already been signed?\n\nBut if CoreWeave would still be required to purchase memory at the contracted LTA price even after a market price collapse—and therefore needs to explore hedging options—then I think the paradoxical conclusion is that these LTAs have become much more binding and durable.\n\nMemory is still cheap.",
+      "url": "https://x.com/jukan05/status/2077609813559927050",
+      "kind": "post",
+      "engagement": {
+        "views": 43569,
+        "likes": 306,
+        "reposts": 20,
         "replies": 30
       },
       "extractor_model": "claude-sonnet-4-6",
