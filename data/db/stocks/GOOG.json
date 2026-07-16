@@ -1,25 +1,25 @@
 {
   "ticker": "GOOG",
-  "cashtag": "GOOG",
+  "cashtag": "$GOOG",
   "price_symbol": "GOOG",
   "exchange": "US",
   "currency": "USD",
   "ticker_mapped": false,
-  "company": "Alphabet Inc. (Class C)",
+  "company": "Alphabet Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-10",
-  "last_mention": "2026-07-10",
-  "total_mentions": 10,
+  "last_mention": "2026-07-16",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
     "octopusycc": 5,
     "aleabitoreddit": 2,
+    "KawzInvests": 2,
     "zephyr_z9": 1,
-    "KawzInvests": 1,
     "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 9,
+    "opinion": 10,
     "news": 1
   },
   "mentions": [
@@ -254,6 +254,35 @@
         "likes": 52,
         "reposts": 8,
         "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2077838168959922576",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-16",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hitting capacity constraints using AI internally",
+        "capex guided $180B-$190B this year",
+        "Q1 capex $35.7B more than double a year ago",
+        "CFO said 2027 capex will significantly increase",
+        "engineers required to use AI but not enough compute",
+        "unlikely to lower capex"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GOOG",
+      "text": "Bloomberg reports $GOOG engineers are hitting capacity constraints when they try to use AI internally.\n\nAt a company guiding $180B to $190B of capex this year.\n\nGemini 3.5 Pro is months behind schedule. Engineers are now required to use AI to write code and there isn't enough compute to go around. Q1 capex was $35.7B, more than double a year ago, and the CFO already said 2027 will significantly increase from there.\n\n$GOOGL reports on Wednesday. If Google can't feed its own engineers, do you really think they lower capex?",
+      "url": "https://x.com/KawzInvests/status/2077838168959922576",
+      "kind": "post",
+      "engagement": {
+        "views": 31540,
+        "likes": 224,
+        "reposts": 15,
+        "replies": 20
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
