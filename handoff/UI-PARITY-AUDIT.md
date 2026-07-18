@@ -14,7 +14,7 @@ must retain the following surfaces and states.
 | Seven-day changes | Existing `week-change-title` and three `change-subsection` columns; no added report container | `weekly.changes` |
 | 28-day table | Existing `quarter-table`, price-status text, direction bars, account counts and stock route | `monthly.rows` with non-zero posts only |
 | Stock route | Existing full-screen `single-stock-view` iframe, not the account drawer | `stock_drilldowns[symbol]` |
-| Stock chart | Existing SVG line/area chart and mention event popovers | `price_series`, `mention_days` |
+| Stock chart | Existing SVG line/area chart and mention event popovers; every event row keeps the approved avatar/name link, status, evidence text and source link | `price_series`, `mention_days` |
 | Stock windows | Existing 1/7/28-day tabs, ten-person composition and metrics | `window_summaries`, `people_by_window` |
 | Stock people detail | Existing `kolGrid`, avatar rows, composition, consistency, latest evidence, expandable original posts | `people_by_window[*].evidence` |
 | Shared interactions | `#stock=` routing, return to source position, keyboard card activation, reason tooltip, responsive layouts | final UI event contract |
@@ -27,6 +27,9 @@ must retain the following surfaces and states.
 - Do not turn a missing price into `0%`, or a lack of same-day mentions into
   a lack of historical drilldown data.
 - Do not leave demonstration date, people, price, reason, or sample labels.
+- Do not present a background, comparison, or quoted mention as an investment
+  thesis merely because it names a ticker. When such a row has no structured
+  reason, show its original-post excerpt and its mention type instead.
 
 ## Required release checks
 
@@ -38,3 +41,5 @@ must retain the following surfaces and states.
 4. 320, 768 and 1440px have no page-level horizontal overflow.
 5. Candidate and reference are inspected section-by-section at the same
    viewport; real data is allowed to differ, component hierarchy is not.
+6. In a populated seven-day stock route, each chart event row has an embedded
+   author avatar and no obsolete `暂无结构化理由` fallback is rendered.

@@ -183,6 +183,15 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                         fail(errors, "v2 stock drilldown lacks the frozen stock-detail components")
                     elif frame.locator(".window-tab").count() != 3 or frame.locator(".kol-person-block").count() != expected_avatars:
                         fail(errors, "v2 stock drilldown does not retain its three windows and 10-person detail grid")
+                    else:
+                        frame.locator('.window-tab[data-window="week"]').click()
+                        event_rows = frame.locator("#chartEvents .event-row")
+                        if not event_rows.count():
+                            fail(errors, "v2 stock drilldown has no chart evidence rows in the seven-day window")
+                        elif frame.locator("#chartEvents .event-person img").count() != event_rows.count():
+                            fail(errors, "v2 chart evidence rows do not retain the approved author avatars")
+                        if "暂无结构化理由" in frame.locator("body").inner_text():
+                            fail(errors, "v2 stock drilldown still renders the obsolete empty-reason fallback")
                 elif not page.locator("#drawer.open #detail").is_visible():
                     fail(errors, "v2 stock drilldown is not visible")
             else:
