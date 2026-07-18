@@ -28,9 +28,16 @@ The nine newly added accounts were initially backfilled for 30 days. Serenity re
 
 ## Operations
 
-GitHub Actions is the only production refresh entry point. It keeps manual controls and also schedules:
+GitHub Actions is the only production refresh and publishing entry point. It
+keeps manual controls; Cloudflare Cron is the sole automatic trigger:
 
-- `trihourly-sync` every three hours at minute 00 UTC for the complete atomic pipeline: incremental fetch, extraction, database rebuild, prices, avatar cache, validated Dashboard payload, browser-checked HTML artifact, and one data commit.
+- `cloudflare/trihourly-dispatcher` dispatches `trihourly-sync` every three
+  hours at minute 05 UTC. GitHub's own `schedule` is deliberately absent, so
+  two schedulers cannot create duplicate production runs.
+- `trihourly-sync` retains its manual dispatch entry and runs the complete
+  atomic pipeline: incremental fetch, extraction, database rebuild, prices,
+  avatar cache, validated Dashboard payload, browser-checked HTML artifact,
+  and one data commit.
 - `manual-price-repair` is manual-only for exceptional price remediation. It never races the scheduled pipeline.
 - Each successful scheduled run uploads the validated Dashboard, payload, validation report, and SHA-256 as a 30-day Actions Artifact; generated HTML is never committed to Git history.
 

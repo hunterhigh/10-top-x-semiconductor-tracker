@@ -66,3 +66,17 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
   payload, validation report, and SHA-256.  HTML is not committed to Git.
 - Remote activation and first-run diagnosis still require GitHub Actions access
   and a manual production run after these changes are reviewed and pushed.
+
+## 2026-07-18 — Cloudflare external scheduler prepared
+
+- Cloudflare Cron is configured as the sole automatic trigger at minute 05 of
+  every third UTC hour. It sends a `repository_dispatch` event to the default
+  branch's `trihourly-sync` workflow; GitHub's internal cron is removed.
+- The Worker records one 3-hour UTC slot in Cloudflare KV only after GitHub
+  accepts the dispatch. The existing GitHub concurrency group remains the
+  second protection against duplicate writers.
+- The dispatcher uses a Cloudflare secret for a repository-restricted GitHub
+  dispatch credential. It never contains tracker API, model, or price keys.
+- Deployment remains intentionally manual: create the KV namespace, set its
+  ID in `cloudflare/trihourly-dispatcher/wrangler.jsonc`, add the secret, deploy
+  the Worker, then inspect the first dispatch and GitHub Step Summary.

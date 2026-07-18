@@ -97,7 +97,13 @@ python skill/scripts/render_dashboard.py <YYYY-MM-DD> --output dashboard.html
 python skill/scripts/validate_dashboard.py dashboard.html --browser required --expected-avatars 10
 ```
 
-For production, GitHub Actions is the only publisher. It uses one atomic three-hour workflow (`0 */3 * * *` UTC), a shared concurrency group, all ten API fetches, and a single remote rebase-and-publish job. A failure in any account stops extraction, database rebuild, prices, rendering, artifact upload, and data commit. While the TwitterAPI.io key has no usable balance, this workflow remains disabled; do not use an old cache to claim a successful refresh.
+For production, GitHub Actions is the only publisher. Cloudflare Cron dispatches
+the one atomic three-hour workflow at `5 */3 * * *` UTC; GitHub's own
+`schedule` must remain absent. The workflow has a shared concurrency group,
+all ten API fetches, and one remote rebase-and-publish job. A failure in any
+account stops extraction, database rebuild, prices, rendering, artifact upload,
+and data commit. The Cloudflare dispatcher records one idempotency key per UTC
+slot and GitHub records the trigger provenance in its Step Summary.
 
 ## Answering account and company questions
 

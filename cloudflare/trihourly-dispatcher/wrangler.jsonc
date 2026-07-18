@@ -1,0 +1,18 @@
+{
+  "name": "x-traders-trihourly-dispatcher",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-18",
+  "triggers": {
+    "crons": ["5 */3 * * *"]
+  },
+  "vars": {
+    "GITHUB_OWNER": "hunterhigh",
+    "GITHUB_REPO": "10-top-x-semiconductor-tracker"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SCHEDULE_STATE",
+      "id": "REPLACE_WITH_CLOUDFLARE_KV_NAMESPACE_ID"
+    }
+  ]
+}
