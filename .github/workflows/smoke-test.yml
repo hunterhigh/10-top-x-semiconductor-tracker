@@ -7,10 +7,15 @@ on:
       - "skill/scripts/dashboard_payload.py"
       - "skill/scripts/render_dashboard.py"
       - "skill/scripts/validate_dashboard.py"
+      - "skill/SKILL.md"
+      - "skill/references/dashboard-contract.md"
       - "scripts/build_db.py"
+      - "scripts/prices.py"
       - "scripts/refresh_avatars.py"
       - "tests/test_dashboard_payload.py"
       - "tests/test_build_db_dates.py"
+      - "tests/test_dashboard_validator.py"
+      - "tests/test_instrument_identity.py"
       - "handoff/10V-dashboard-backend-handoff-final-2026-07-17/**"
       - "requirements.txt"
       - ".github/workflows/smoke-test.yml"
@@ -29,7 +34,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Validate v2 data model and approved aggregation rules
         run: |
-          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates
+          python -m unittest discover -s tests -p "test_*.py"
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
       - name: Build and browser-validate v2 dashboard
         run: |
