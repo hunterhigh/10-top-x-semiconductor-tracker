@@ -173,6 +173,13 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                 source = avatars.first.get_attribute("src") or ""
                 if not source.startswith("data:image/"):
                     fail(errors, "v2 visible avatar is not embedded")
+            symbol_link = page.locator(".stock-symbol a").first
+            if symbol_link.count():
+                symbol_style = symbol_link.evaluate(
+                    "e => ({color:getComputedStyle(e).color, parent:getComputedStyle(e.parentElement).color, decoration:getComputedStyle(e).textDecorationLine})"
+                )
+                if symbol_style["color"] != symbol_style["parent"] or symbol_style["decoration"] != "none":
+                    fail(errors, "v2 stock-symbol route link no longer retains the frozen card typography")
             stock_href = page.locator('a[href^="#stock="]').first.get_attribute("href")
             if stock_href:
                 page.goto(path.resolve().as_uri() + stock_href)

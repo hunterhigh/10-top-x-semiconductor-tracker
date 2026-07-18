@@ -130,7 +130,7 @@ def render(payload: dict) -> str:
     # Only responsive containment is added to the frozen CSS: real English
     # bios and the real 9-column table can otherwise widen the document.  The
     # table keeps its approved horizontal scroll behaviour inside its module.
-    shell = shell.replace("</head>", "<style>.voice,.disclaimer{min-width:0}.bio,.disclaimer,.disclaimer p,.instrument-post,.weekly-card,.notice-defs,.notice-def,.weekly-date,.quarter-date,.daily-date{white-space:normal!important;overflow-wrap:anywhere}.notice-defs{flex-wrap:wrap}.quarter-grid{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}</style></head>")
+    shell = shell.replace("</head>", "<style>.voice,.disclaimer{min-width:0}.bio,.disclaimer,.disclaimer p,.instrument-post,.weekly-card,.notice-defs,.notice-def,.weekly-date,.quarter-date,.daily-date{white-space:normal!important;overflow-wrap:anywhere}.notice-defs{flex-wrap:wrap}.quarter-grid{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.stock-symbol a{color:inherit;font:inherit;text-decoration:none}.stock-symbol a:hover,.stock-symbol a:focus-visible{color:inherit;text-decoration:none;outline:0}</style></head>")
     runtime = r'''
 <script>
 const PAYLOAD=__PAYLOAD__;
