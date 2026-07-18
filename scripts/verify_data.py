@@ -28,6 +28,8 @@ DB = Path(_db_override).resolve() if _db_override else SCRIPT_DIR.parent / 'data
 STOCKS_DIR = DB / 'stocks'
 DATA_DIR = DB.parent
 CONFIG_PATH = SCRIPT_DIR.parent / 'config' / 'bloggers.json'
+PROFILE_CONFIG_PATH = SCRIPT_DIR.parent / 'config' / 'blogger_profiles.json'
+PROFILE_DB_PATH = DB / 'blogger_profiles.json'
 PRICE_WINDOW_DAYS = _intarg('--price-window-days', 30)
 PRICE_MIN_MENTIONS = _intarg('--price-min-mentions', 50)
 REQUIRE_PRICE_SCOPE = '--require-price-scope' in sys.argv
@@ -47,6 +49,9 @@ latest = None
 errors = []
 tickers = []
 mentions_by_blogger = {}   # blogger_id -> mention count, tallied across ALL stock files
+instrument_counts = {"verified": 0, "identified": 0, "unverified": 0}
+market_missing = 0
+price_unavailable = 0
 
 for f in files:
     fname = os.path.basename(f)
@@ -58,13 +63,43 @@ for f in files:
     if not tk:
         errors.append(f"{fname}: missing 'ticker'"); continue
     tickers.append(tk)
+    instrument = d.get("instrument") or {}
+    status = instrument.get("verification_status") or d.get("verification_status") or "unverified"
+    if status not in instrument_counts:
+        errors.append(f"{fname}: invalid instrument verification_status {status!r}")
+        status = "unverified"
+    instrument_counts[status] += 1
+    if not instrument:
+        errors.append(f"{fname}: missing instrument identity object")
+    elif not instrument.get("display_code") or not instrument.get("display_name") or not instrument.get("display_market"):
+        errors.append(f"{fname}: incomplete instrument display identity")
+    if status == "verified":
+        if not (instrument.get("market") and instrument.get("currency") and instrument.get("price_symbol")):
+            errors.append(f"{fname}: verified instrument missing market/currency/price_symbol")
+        if d.get("ticker_mapped") is not True:
+            errors.append(f"{fname}: verified instrument must set ticker_mapped=true")
+    elif d.get("ticker_mapped"):
+        errors.append(f"{fname}: unverified instrument must not be price-mapped")
+    if not instrument.get("market"):
+        market_missing += 1
     mentions = d.get('mentions') or []
     total_mentions += len(mentions)
     ps = d.get('price_series') or []
     if ps:
         total_priced += 1
+    if d.get("price_status") in {"unavailable", "unverified_symbol"}:
+        price_unavailable += 1
     for m in mentions:
         dt = m.get('date')
+        # Every published mention must retain enough source data for a v2
+        # evidence card.  The renderer never manufactures a date, reason,
+        # source link, or timestamp fallback.
+        required = ('tweet_id', 'blogger_id', 'created_at', 'date', 'text', 'url')
+        absent = [key for key in required if m.get(key) in (None, '')]
+        if absent:
+            errors.append(f"{fname}: mention missing {', '.join(absent)}")
+        if not isinstance(m.get('reasons'), list):
+            errors.append(f"{fname}: mention reasons must be a list")
         if dt:
             if earliest is None or dt < earliest: earliest = dt
             if latest is None or dt > latest: latest = dt
@@ -79,6 +114,7 @@ print(f"Total mentions: {total_mentions}")
 print(f"Priced tickers: {total_priced}")
 print(f"Date range: {earliest} — {latest}")
 print(f"Total size: {size_mb:.1f} MB ({len(files)} files)")
+print(f"Instrument identities: {instrument_counts}; market pending review: {market_missing}")
 
 # index.json check + the price coverage summary used by dashboards and release checks
 idx = DB / 'index.json'
@@ -149,6 +185,55 @@ if CONFIG_PATH.exists():
 else:
     print(f"\nWARNING: {CONFIG_PATH} not found — cannot check per-blogger state files.")
 
+# Source profiles are a first-class public interface.  Validate the editorial
+# copy separately from factual coverage stats, and never silently publish a
+# directory where a tracked account lacks a profile or a valid X destination.
+profile_copy = {}
+if not PROFILE_CONFIG_PATH.exists():
+    errors.append(f"missing profile configuration: {PROFILE_CONFIG_PATH}")
+else:
+    try:
+        profile_copy = {p.get('blogger_id'): p for p in json.load(open(PROFILE_CONFIG_PATH, encoding='utf-8')).get('profiles', []) if p.get('blogger_id')}
+    except Exception as e:
+        errors.append(f"blogger_profiles.json: invalid JSON — {e}")
+expected_ids = {b.get('id') for b in bloggers}
+if bloggers and set(profile_copy) != expected_ids:
+    errors.append(f"profile roster mismatch: config={sorted(profile_copy)} tracked={sorted(expected_ids)}")
+for b in bloggers:
+    bid = b['id']; p = profile_copy.get(bid, {})
+    if not str(b.get('x_url') or '').startswith('https://x.com/'):
+        errors.append(f"{bid}: invalid or missing X URL")
+    if not p.get('reviewed_at'):
+        errors.append(f"{bid}: profile copy missing reviewed_at")
+    # Profile configuration intentionally stores only stable, reviewed bio
+    # copy plus source links.  Coverage and activity facts are rebuilt in the
+    # database, not hand-maintained as presentation tags.
+    for field in ('bio',):
+        value = p.get(field)
+        if not isinstance(value, dict) or any(not value.get(locale) for locale in ('en', 'zh', 'zh-Hant')):
+            errors.append(f"{bid}: profile {field} must provide en/zh/zh-Hant")
+
+profile_stats = {}
+if not PROFILE_DB_PATH.exists():
+    errors.append(f"missing profile statistics: {PROFILE_DB_PATH}")
+else:
+    try:
+        profile_stats = {p.get('blogger_id'): p for p in json.load(open(PROFILE_DB_PATH, encoding='utf-8')).get('profiles', []) if p.get('blogger_id')}
+    except Exception as e:
+        errors.append(f"blogger_profiles.json in db: invalid JSON — {e}")
+if bloggers and set(profile_stats) != expected_ids:
+    errors.append(f"profile statistics roster mismatch: stats={sorted(profile_stats)} tracked={sorted(expected_ids)}")
+for b in bloggers:
+    stat = profile_stats.get(b['id'], {})
+    sample = stat.get('sample') or {}
+    if sample.get('mentions') != mentions_by_blogger.get(b['id'], 0):
+        errors.append(f"{b['id']}: profile sample mention count disagrees with DB")
+    rate = sample.get('original_link_rate')
+    if not isinstance(rate, (int, float)) or not 0 <= rate <= 1:
+        errors.append(f"{b['id']}: profile original_link_rate must be in [0,1]")
+    if b.get('signal_type', 'opinion') != 'opinion' and sample.get('explicit_stance_counts') is not None:
+        errors.append(f"{b['id']}: independent signal profile must not expose stance statistics")
+
 print(f"\nTracked bloggers: {len(bloggers)}")
 missing_state = []
 for b in bloggers:
@@ -187,7 +272,17 @@ manifest = {
     "tracked_bloggers": len(bloggers),
     "mentions_by_blogger": mentions_by_blogger,
     "bloggers_missing_state_files": missing_state,
+    "instrument_coverage": {
+        **instrument_counts,
+        "market_pending_review": market_missing,
+        "price_unavailable_or_unverified": price_unavailable,
+    },
     "price_scope": price_scope,
+    "profile_coverage": {
+        "editorial_profiles": len(profile_copy),
+        "statistical_profiles": len(profile_stats),
+        "profile_errors": len([e for e in errors if 'profile' in e.lower()]),
+    },
 }
 mf = DB / 'manifest.json'
 json.dump(manifest, open(mf, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
