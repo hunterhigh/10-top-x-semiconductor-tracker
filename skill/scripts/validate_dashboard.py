@@ -192,6 +192,16 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                             fail(errors, "v2 chart evidence rows do not retain the approved author avatars")
                         if "暂无结构化理由" in frame.locator("body").inner_text():
                             fail(errors, "v2 stock drilldown still renders the obsolete empty-reason fallback")
+                        bull_sort = frame.locator('[data-kol-sort="bull"]')
+                        if bull_sort.count() != 1:
+                            fail(errors, "v2 stock drilldown does not retain the frozen KOL sort controls")
+                        else:
+                            bull_sort.click()
+                            if "active desc" not in (bull_sort.get_attribute("class") or ""):
+                                fail(errors, "v2 bullish KOL sort does not start in descending order")
+                            bull_sort.click()
+                            if "active asc" not in (bull_sort.get_attribute("class") or ""):
+                                fail(errors, "v2 bullish KOL sort does not toggle to ascending order")
                 elif not page.locator("#drawer.open #detail").is_visible():
                     fail(errors, "v2 stock drilldown is not visible")
             else:

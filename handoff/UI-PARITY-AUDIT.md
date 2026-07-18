@@ -16,7 +16,7 @@ must retain the following surfaces and states.
 | Stock route | Existing full-screen `single-stock-view` iframe, not the account drawer | `stock_drilldowns[symbol]` |
 | Stock chart | Existing SVG line/area chart and mention event popovers; every event row keeps the approved avatar/name link, status, evidence text and source link | `price_series`, `mention_days` |
 | Stock windows | Existing 1/7/28-day tabs, ten-person composition and metrics | `window_summaries`, `people_by_window` |
-| Stock people detail | Existing `kolGrid`, avatar rows, composition, consistency, latest evidence, expandable original posts | `people_by_window[*].evidence` |
+| Stock people detail | Existing `kolGrid`, avatar rows, composition, consistency, latest evidence, expandable original posts, and the four sort controls | `people_by_window[*].evidence` |
 | Shared interactions | `#stock=` routing, return to source position, keyboard card activation, reason tooltip, responsive layouts | final UI event contract |
 
 ## Prohibited substitutions
@@ -43,3 +43,6 @@ must retain the following surfaces and states.
    viewport; real data is allowed to differ, component hierarchy is not.
 6. In a populated seven-day stock route, each chart event row has an embedded
    author avatar and no obsolete `暂无结构化理由` fallback is rendered.
+7. The stock people table has working count, bullish, bearish and consistency
+   sort controls. A newly selected criterion starts descending; a second click
+   toggles it ascending, matching the frozen final UI.
