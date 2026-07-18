@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "UNVERIFIED:NAND",
     "display_code": "NAND",
-    "display_name": "Name unverified",
+    "display_name": "NAND Flash (sector/technology)",
     "display_market": "Market unverified",
     "aliases": [
       "NAND"
@@ -20,17 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "NAND Flash (sector/technology)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-03",
-  "last_mention": "2026-07-03",
-  "total_mentions": 1,
+  "last_mention": "2026-07-17",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "jukan05": 1
+    "jukan05": 1,
+    "zephyr_z9": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -55,11 +56,34 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2078202728086753287",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-17",
+      "created_at": "2026-07-17T15:38:36-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NAND",
+      "text": "\"PCs will have 4TB+ of Flash storage with ultra high bandwidth\"\nNAND bull Tim Sweeney",
+      "url": "https://x.com/zephyr_z9/status/2078202728086753287",
+      "kind": "post",
+      "engagement": {
+        "views": 51691,
+        "likes": 247,
+        "reposts": 7,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
-  "price_status": "unavailable",
-  "price_unit": "USD",
-  "price_updated_at": "2026-07-18T03:49:03.316399+00:00",
-  "price_reason": "no_daily_closes_returned"
+  "price_status": "unverified_symbol",
+  "price_unit": "",
+  "price_updated_at": "2026-07-18T08:09:36.766941+00:00",
+  "price_reason": "unverified_instrument_identity"
 }
