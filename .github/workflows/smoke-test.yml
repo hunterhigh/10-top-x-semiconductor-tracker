@@ -1,37 +1,43 @@
-name: smoke-test
+name: smoke-test-v2
 
 on:
-  workflow_dispatch:   # manual trigger
+  workflow_dispatch:
+  push:
+    paths:
+      - "skill/scripts/dashboard_payload.py"
+      - "skill/scripts/render_dashboard.py"
+      - "skill/scripts/validate_dashboard.py"
+      - "scripts/build_db.py"
+      - "scripts/refresh_avatars.py"
+      - "tests/test_dashboard_payload.py"
+      - "tests/test_build_db_dates.py"
+      - "handoff/10V-dashboard-backend-handoff-final-2026-07-17/**"
+      - "requirements.txt"
+      - ".github/workflows/smoke-test.yml"
 
 jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Verify config + per-blogger data present
+      - name: Install dependencies and Chromium
         run: |
-          echo "Tracked bloggers in config:" && python -c "import json; print(len(json.load(open('config/bloggers.json'))['bloggers']))"
-          echo "Blogger data dirs:" && ls data/bloggers/ 2>/dev/null || echo "(none yet — run fetch_tweets.py/extract.py first)"
-          echo "Shared stocks:" && ls data/db/stocks/*.json 2>/dev/null | wc -l || echo 0
-
-      - name: Run build_db (pure aggregation across all bloggers, no API)
-        run: python scripts/build_db.py
-
-      - name: Run render EN, one blogger
-        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger aleabitoreddit
-
-      - name: Run render EN, consensus (all bloggers)
-        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all
-
-      - name: Run render ZH
-        run: python skill/scripts/serenity_render.py --db data/db --config config/bloggers.json --blogger all --lang zh
-
-      - name: Check outputs
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Validate v2 data model and approved aggregation rules
         run: |
-          ls -lh *-tracker-*.html
-          echo "✅ Smoke test passed"
+          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates
+          python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
+      - name: Build and browser-validate v2 dashboard
+        run: |
+          REPORT_DATE=$(python - <<'PY'
+          import json
+          print(json.load(open("data/db/manifest.json", encoding="utf-8"))["date_range"][1])
+          PY
+          )
+          python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/payload.json"
+          python skill/scripts/render_dashboard.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard.html"
+          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard.html" --browser required --expected-avatars 10

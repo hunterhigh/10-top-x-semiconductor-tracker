@@ -27,7 +27,8 @@ What build_db DOES keep:
   - mentions[]  : every mention, with ET date / stance / mention_type / reasons
                   / url / verbatim text / engagement / tweet_id / blogger_id.
                   (Superset of what render needs; render filters/windows from this.)
-  - resolution  : price_symbol / exchange / currency / ticker_mapped (ticker_map)
+  - instrument  : canonical identity used by every reader: display code/name,
+                  market/country/currency, aliases, provider symbol and verification state
   - editorial    : company / industry / thesis_summary — folded in from ticker_map.json
                   (merged file; render reads these from the per-stock JSON, not meta.json)
   - first_mention / last_mention  (window-independent static facts; prices.py
@@ -40,11 +41,9 @@ What build_db DOES keep:
                   independent fact that enables the consensus view.
   - price_series / price_status : left empty; prices.py fills them.
 
-Dates: tweet created_at is UTC; we convert to US Eastern before taking the
-date, to MATCH render/pipeline.py exactly (otherwise ~15% of mentions land on
-the wrong day at the UTC/ET boundary). ET is hardcoded UTC-4 to match pipeline.py
-(technically EDT; slightly off in the EST months, but it MUST equal render —
-if we ever want true DST-aware ET, change both files together).
+Dates: tweet created_at is UTC; we convert to the DST-aware
+``America/New_York`` timezone before taking the date.  The same timezone is
+the dashboard window contract, preventing EST/EDT boundary date drift.
 
 Inputs:
   ../config/bloggers.json                     tracked blogger roster
@@ -65,13 +64,15 @@ import json
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
+PROFILE_CONFIG_PATH = SCRIPT_DIR.parent / "config" / "blogger_profiles.json"
 BLOGGERS_DIR = DATA_DIR / "bloggers"
 TMAP = DATA_DIR / "ticker_map.json"
 
@@ -80,7 +81,9 @@ STOCKS_DIR = DB_DIR / "stocks"
 INDEX_PATH = DB_DIR / "index.json"
 REVIEW_PATH = DATA_DIR / "ticker_review.json"
 
-ET = timezone(timedelta(hours=-4))   # match pipeline.py (render's canonical clock)
+# Calendar windows in the dashboard are defined in New York time.  A fixed
+# UTC-4 offset silently assigns posts to the wrong calendar day during EST.
+ET = ZoneInfo("America/New_York")
 
 NON_TICKER = {
     "AWS", "CPO", "INP", "ETH", "BTC", "LTC", "SOL", "XRP", "USDC", "USDT", "ETORO",
@@ -145,16 +148,40 @@ def is_real_ticker(sym):
 
 
 def resolve(sym, tmap):
-    """map a symbol to price_symbol/exchange/currency; default US/USD if unknown."""
-    entry = tmap.get(sym)
-    if entry and isinstance(entry, dict) and "price_symbol" in entry:
-        return {
-            "price_symbol": entry["price_symbol"],
-            "exchange": entry.get("exchange", "US"),
-            "currency": entry.get("currency", "USD"),
-            "mapped": True,
-        }
-    return {"price_symbol": sym, "exchange": "US", "currency": "USD", "mapped": False}
+    """Resolve a canonical symbol without inventing a US listing for unknown codes.
+
+    ``ticker_map.json`` is the human-reviewed instrument registry.  A company
+    hint is useful for display, but only an explicitly verified registry entry
+    may drive market, currency, or price-provider selection.
+    """
+    entry = dict(tmap.get(sym) or {}) if isinstance(tmap.get(sym), dict) else {}
+    # Legacy registry versions recorded reviewed US listings in one explicit
+    # allow-list rather than repeating the same fields on every entry. Treat
+    # that list as a migration source, never as a fallback for arbitrary codes.
+    raw_confirmed_us = tmap.get("_us_confirmed") or []
+    confirmed_us = set(raw_confirmed_us if isinstance(raw_confirmed_us, list) else str(raw_confirmed_us).split())
+    if sym in confirmed_us:
+        entry.setdefault("instrument_id", f"US:{sym}")
+        entry.setdefault("exchange", "US")
+        entry.setdefault("market", "US")
+        entry.setdefault("country", "US")
+        entry.setdefault("currency", "USD")
+        entry.setdefault("price_symbol", sym)
+        entry.setdefault("verified", True)
+    verified = bool(entry.get("verified"))
+    has_market = bool(entry.get("exchange") and entry.get("currency"))
+    has_price_symbol = bool(entry.get("price_symbol"))
+    status = "verified" if verified and has_market else ("identified" if entry.get("company") else "unverified")
+    return {
+        "price_symbol": entry.get("price_symbol") if verified and has_price_symbol else None,
+        "exchange": entry.get("exchange") if verified and has_market else None,
+        "market": entry.get("market") or (entry.get("exchange") if verified and has_market else None),
+        "country": entry.get("country") if verified else None,
+        "currency": entry.get("currency") if verified and has_market else None,
+        "mapped": status == "verified",
+        "verification_status": status,
+        "entry": entry,
+    }
 
 
 def editorial(sym, tmap):
@@ -170,9 +197,41 @@ def editorial(sym, tmap):
     }
 
 
+def instrument_identity(sym, res, editorial_fields, aliases):
+    """Return the single display/identity contract consumed by renderers.
+
+    The ticker remains a backwards-compatible storage key; ``instrument_id``
+    is the stable semantic identity and aliases preserve all accepted forms.
+    """
+    status = res["verification_status"]
+    company = editorial_fields.get("company")
+    market = res.get("market")
+    display_name = company or "Name unverified"
+    display_market = market or "Market unverified"
+    instrument_id = res["entry"].get("instrument_id") or f"{market or 'UNVERIFIED'}:{sym}"
+    return {
+        "instrument_id": instrument_id,
+        "display_code": sym,
+        "display_name": display_name,
+        "display_market": display_market,
+        "aliases": sorted(set(aliases or [sym])),
+        "market": market,
+        "country": res.get("country"),
+        "currency": res.get("currency"),
+        "price_symbol": res.get("price_symbol"),
+        "verification_status": status,
+    }
+
+
 def load_bloggers():
     cfg = load_json(CONFIG_PATH, {}) or {}
     return cfg.get("bloggers", [])
+
+
+def load_profile_copy():
+    """Read editorial profile copy without mixing it into the factual stock data."""
+    cfg = load_json(PROFILE_CONFIG_PATH, {}) or {}
+    return {p.get("blogger_id"): p for p in cfg.get("profiles", []) if p.get("blogger_id")}
 
 
 def load_all_extracted_and_raw(bloggers):
@@ -213,6 +272,7 @@ def main():
     # threaded into each stock_doc below so downstream consumers (render.py's
     # consensus math, future triangulation features) don't need to re-derive it.
     signal_type_by_blogger = {b["id"]: b.get("signal_type", "opinion") for b in bloggers}
+    profile_copy = load_profile_copy()
     tmap = load_json(TMAP, {}) or {}
 
     extracted, raw, per_blogger_counts = load_all_extracted_and_raw(bloggers)
@@ -220,6 +280,9 @@ def main():
         log("No extracted/raw data found for any tracked blogger. Run fetch_tweets.py + extract.py first.")
         sys.exit(1)
     aliases = {k: v for k, v in (tmap.get("_aliases") or {}).items() if not k.startswith("_")}
+    aliases_by_canonical = defaultdict(set)
+    for alias, canonical in aliases.items():
+        aliases_by_canonical[canonical].add(alias)
     log(f"Loaded {len(extracted)} extracted (across {len(bloggers)} bloggers), {len(raw)} raw, "
         f"{sum(1 for k in tmap if not k.startswith('_'))} mapped tickers, {len(aliases)} aliases.")
     for bid, n in per_blogger_counts.items():
@@ -238,8 +301,8 @@ def main():
         if date_iso is None:           # no parseable date -> skip (matches render's `if d is None`)
             continue                   # NOTE: we deliberately do NOT filter on has_investment_content
         for tk in rec.get("tickers", []):   #       or error here, to stay faithful to render's counting.
-            sym = (tk.get("symbol") or "").strip().upper()
-            sym = aliases.get(sym, sym)         # SIVEF->SIVE, SLOIF/SOITEC->SOI, etc. (merge same company)
+            source_symbol = (tk.get("symbol") or "").strip().upper()
+            sym = aliases.get(source_symbol, source_symbol)  # merge listing aliases before aggregation
             if not is_real_ticker(sym):
                 skipped[sym] += 1
                 continue
@@ -257,8 +320,10 @@ def main():
                 "tweet_id": tid,
                 "blogger_id": rec.get("blogger_id"),
                 "date": date_iso,                    # ET date
+                "created_at": dt.isoformat() if dt else None,  # ET ISO timestamp; preserves same-day ordering
                 "_dt": dt,                           # internal, stripped before save
                 "_company_name": tk.get("company_name"),  # internal, for fallback company resolution
+                "_source_symbol": source_symbol,
                 "stance": tk.get("stance"),
                 "mention_type": tk.get("mention_type"),
                 "reasons": tk.get("reasons") or [],
@@ -281,6 +346,12 @@ def main():
     # ---- write per-ticker files (data layer only)
     STOCKS_DIR.mkdir(parents=True, exist_ok=True)
     index_rows = []
+    profile_acc = {
+        b["id"]: {"mentions": 0, "linked_mentions": 0, "dates": [], "urls": set(), "posts": {},
+                  "stances": defaultdict(int), "tickers": defaultdict(int),
+                  "industries": defaultdict(int)}
+        for b in bloggers
+    }
     for sym, ms in sorted(per.items()):
         ms.sort(key=lambda m: (m["_dt"] or datetime.min.replace(tzinfo=timezone.utc)))
         res = resolve(sym, tmap)
@@ -296,7 +367,9 @@ def main():
         dates = [m["_dt"] for m in ms if m["_dt"]]
         first_dt = min(dates) if dates else None
         last_dt = max(dates) if dates else None
-        clean_mentions = [{k: v for k, v in m.items() if k not in ("_dt", "_company_name")} for m in ms]
+        source_aliases = aliases_by_canonical[sym] | {sym} | {m.get("_source_symbol") for m in ms if m.get("_source_symbol")}
+        instrument = instrument_identity(sym, res, ed, source_aliases)
+        clean_mentions = [{k: v for k, v in m.items() if k not in ("_dt", "_company_name", "_source_symbol")} for m in ms]
 
         by_blogger = defaultdict(int)
         by_signal_type = defaultdict(int)
@@ -327,10 +400,12 @@ def main():
         stock_doc = {
             "ticker": sym,
             "cashtag": ms[-1].get("raw_mention") or f"${sym}",
+            "instrument": instrument,
             "price_symbol": res["price_symbol"],
             "exchange": res["exchange"],
             "currency": res["currency"],
             "ticker_mapped": res["mapped"],
+            "verification_status": res["verification_status"],
             "company": ed["company"],            # editorial (folded from ticker_map; was meta.json)
             "industry": ed["industry"],
             "thesis_summary": ed["thesis_summary"],
@@ -347,13 +422,39 @@ def main():
         }
         save_json(STOCKS_DIR / f"{sym}.json", stock_doc)
 
+        # Profile metrics are factual summaries of this tracker\'s collected
+        # sample, not a claim about the source account\'s quality or performance.
+        for m in clean_mentions:
+            bid = m.get("blogger_id")
+            if bid not in profile_acc:
+                continue
+            acc = profile_acc[bid]
+            acc["mentions"] += 1
+            if m.get("date"):
+                acc["dates"].append(m["date"])
+            url = m.get("url") or ""
+            if url:
+                acc["linked_mentions"] += 1
+                acc["urls"].add(url)
+                prev = acc["posts"].get(url)
+                if not prev or (m.get("date") or "") > (prev.get("date") or ""):
+                    acc["posts"][url] = {"date": m.get("date"), "url": url, "text": m.get("text") or "", "ticker": sym}
+            if signal_type_by_blogger.get(bid, "opinion") == "opinion" and m.get("mention_type") == "explicit_stance":
+                stance = m.get("stance")
+                acc["stances"][stance if stance in {"bullish", "bearish", "neutral"} else "neutral"] += 1
+            acc["tickers"][sym] += 1
+            if ed.get("industry"):
+                acc["industries"][ed["industry"]] += 1
+
         index_rows.append({
             "ticker": sym,
+            "instrument": instrument,
             "cashtag": stock_doc["cashtag"],
             "price_symbol": res["price_symbol"],
             "exchange": res["exchange"],
             "currency": res["currency"],
             "ticker_mapped": res["mapped"],
+            "verification_status": res["verification_status"],
             "company": ed["company"],            # for list view; thesis_summary stays detail-only
             "industry": ed["industry"],
             "first_mention": stock_doc["first_mention"],
@@ -363,6 +464,20 @@ def main():
             "total_mentions_by_blogger": total_mentions_by_blogger,
             "price_status": prev_price_status,
         })
+
+    # A canonical alias may have existed as a standalone file before the
+    # registry learned about it.  Remove only those obsolete alias documents
+    # after their canonical replacement has been written; never delete an
+    # arbitrary historical symbol merely because it is absent in this run.
+    pruned_alias_docs = []
+    for alias, canonical in aliases.items():
+        if alias == canonical:
+            continue
+        legacy = STOCKS_DIR / f"{alias}.json"
+        canonical_doc = STOCKS_DIR / f"{canonical}.json"
+        if legacy.exists() and canonical_doc.exists():
+            legacy.unlink()
+            pruned_alias_docs.append(alias)
 
     index_rows.sort(key=lambda r: -r["total_mentions"])
     index_doc = {
@@ -381,6 +496,33 @@ def main():
     }
     save_json(INDEX_PATH, index_doc)
 
+    profile_rows = []
+    for blogger in bloggers:
+        bid = blogger["id"]
+        acc = profile_acc[bid]
+        dates = sorted(set(acc["dates"]))
+        total = acc["mentions"]
+        profile_rows.append({
+            "blogger_id": bid,
+            "signal_type": signal_type_by_blogger[bid],
+            "sample": {
+                "first_date": dates[0] if dates else None,
+                "last_date": dates[-1] if dates else None,
+                "mentions": total,
+                "unique_original_posts": len(acc["urls"]),
+                "original_link_rate": round(acc["linked_mentions"] / total, 4) if total else 0,
+                "explicit_stance_counts": dict(acc["stances"]) if signal_type_by_blogger[bid] == "opinion" else None,
+                "top_tickers": [{"ticker": tk, "mentions": n} for tk, n in sorted(acc["tickers"].items(), key=lambda x: (-x[1], x[0]))[:8]],
+                "top_industries": [{"industry": name, "mentions": n} for name, n in sorted(acc["industries"].items(), key=lambda x: (-x[1], x[0]))[:6]],
+                "recent_posts": sorted(acc["posts"].values(), key=lambda x: (x.get("date") or "", x.get("url") or ""), reverse=True)[:12],
+            },
+            "editorial_reviewed_at": (profile_copy.get(bid) or {}).get("reviewed_at"),
+        })
+    save_json(DB_DIR / "blogger_profiles.json", {
+        "meta": {"generated_at": datetime.now(timezone.utc).isoformat(), "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."},
+        "profiles": profile_rows,
+    })
+
     def top_hint(sym):
         hints = unmapped_company_hints.get(sym)
         if not hints:
@@ -388,12 +530,18 @@ def main():
         return max(hints.items(), key=lambda x: x[1])[0]   # most-agreed-upon company_name across extractors
 
     review = {
-        "_note": "Symbols seen in data but NOT in ticker_map.json. Default-treated as US/USD. "
-                 "Verify any non-US (add to ticker_map.json). Sorted by mention count desc. "
+        "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. "
+                 "They remain publishable as explicitly unverified entities and require review. "
                  "Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions "
                  "for human review (writes to ticker_map_suggestions.json; never auto-applied).",
         "unmapped": [{"symbol": s, "mentions": n, "company_name_hint": top_hint(s)}
                      for s, n in sorted(unmapped.items(), key=lambda x: -x[1])],
+        "unverified": [
+            {"symbol": row["ticker"], "instrument_id": row["instrument"]["instrument_id"],
+             "company_name_hint": row["company"], "mentions": row["total_mentions"],
+             "verification_status": row["verification_status"]}
+            for row in index_rows if row["verification_status"] != "verified"
+        ],
         "skipped_non_tickers": [{"symbol": s, "count": n} for s, n in sorted(skipped.items(), key=lambda x: -x[1])],
         "excluded": [{"symbol": s, "mentions": n} for s, n in sorted(excluded.items(), key=lambda x: -x[1])],
     }
@@ -403,13 +551,16 @@ def main():
     log("===== build_db summary (data layer) =====")
     log(f"  tickers written : {len(index_rows)}  -> {STOCKS_DIR}")
     log(f"  index (manifest): {INDEX_PATH}")
+    log(f"  profile stats    : {DB_DIR / 'blogger_profiles.json'}")
     log(f"  unmapped symbols: {len(unmapped)} (see {REVIEW_PATH.name})")
+    if pruned_alias_docs:
+        log(f"  merged alias docs: {', '.join(sorted(pruned_alias_docs))}")
     log(f"  skipped non-tix : {len(skipped)}")
     log(f"  excluded (ETF…) : {len(excluded)} {dict(excluded) if excluded else ''}")
     if index_rows:
         log("  top by raw mentions (informational only; stance computed by render):")
         for r in index_rows[:10]:
-            cur = "" if r["currency"] == "USD" else f" [{r['currency']}]"
+            cur = "" if not r["currency"] or r["currency"] == "USD" else f" [{r['currency']}]"
             log(f"     {r['ticker']:<7} {r['total_mentions']:>4} mentions  "
                 f"({r['first_mention']} → {r['last_mention']}){cur}")
     log("=========================================")
