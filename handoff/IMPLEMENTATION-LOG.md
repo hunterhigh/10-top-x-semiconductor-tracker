@@ -80,3 +80,26 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
 - Deployment remains intentionally manual: create the KV namespace, set its
   ID in `cloudflare/trihourly-dispatcher/wrangler.jsonc`, add the secret, deploy
   the Worker, then inspect the first dispatch and GitHub Step Summary.
+
+## 2026-07-18 - final UI and standalone Skill integration
+
+- Replaced the simplified v2 renderer with an adapter over the frozen 7/17
+  final HTML. Its demonstration script is excluded at build time; the approved
+  visual shell, sidebar, daily/weekly/28-day modules and `#stock=` interaction
+  surface are retained.
+- The renderer consumes only the validated payload. It fills the existing
+  people, daily, weekly, 28-day and stock-drilldown areas from real data and
+  does not create a second weekly-report container.
+- The 28-day table filters out instruments without a post in its ET window.
+  On the 2026-07-18 snapshot it contains 824 non-empty instruments; the weekly
+  output contains 17 shared-bullish and 2 disagreement items.
+- Packaged the final UI, Draft 2020-12 Schema and approved aggregation rules
+  inside `skill/references/`. CI asserts byte-for-byte equality with the
+  immutable handoff originals.
+- Added a read-only installed-Skill snapshot synchronizer and Q&A entry point.
+  It verifies remote `main`'s manifest before atomically refreshing an external
+  cache; it has no API or publishing credentials and never falls back to an
+  unverified old snapshot.
+- Verification passed: project tests, 7 handoff aggregation tests, real 7/18
+  payload Schema/invariants, 10 embedded avatars, stock drilldown routing, and
+  320/768/1440px browser checks (zero page-level horizontal overflow).

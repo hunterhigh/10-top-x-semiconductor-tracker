@@ -163,7 +163,9 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
         page = browser.new_page(viewport={"width": 1440, "height": 900})
         page.goto(path.resolve().as_uri())
         if "const PAYLOAD=" in html and "final-ui-sha256:" in html:
-            avatars = page.locator(".person .avatar")
+            # The frozen final UI uses its original ``.voice`` cards; the
+            # renderer only replaces their demo data.
+            avatars = page.locator("#grid .voice .avatar")
             avatar_count = avatars.count()
             if avatar_count != expected_avatars:
                 fail(errors, f"browser found {avatar_count} v2 avatars, expected {expected_avatars}")
@@ -174,7 +176,14 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
             stock_href = page.locator('a[href^="#stock="]').first.get_attribute("href")
             if stock_href:
                 page.goto(path.resolve().as_uri() + stock_href)
-                if not page.locator("#detail .detail").is_visible():
+                stock_frame = page.locator(".single-stock-view.open iframe")
+                if stock_frame.count():
+                    frame = stock_frame.content_frame
+                    if not frame or not frame.locator("#chartLine").count() or not frame.locator("#kolGrid").count():
+                        fail(errors, "v2 stock drilldown lacks the frozen stock-detail components")
+                    elif frame.locator(".window-tab").count() != 3 or frame.locator(".kol-person-block").count() != expected_avatars:
+                        fail(errors, "v2 stock drilldown does not retain its three windows and 10-person detail grid")
+                elif not page.locator("#drawer.open #detail").is_visible():
                     fail(errors, "v2 stock drilldown is not visible")
             else:
                 fail(errors, "v2 report has no stock drilldown link")
@@ -186,6 +195,10 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                 overflow[str(width)] = excess
                 if excess > 1:
                     fail(errors, f"page-level horizontal overflow at {width}px: {excess}px")
+            page.goto(path.resolve().as_uri())
+            page.locator("#grid .voice").first.click()
+            if not page.locator("#drawer.open .big").count() or not page.locator("#drawer.open .instrument-list").count():
+                fail(errors, "v2 account drawer does not retain the frozen counters and instrument list")
             browser.close()
             return errors, {"browser_checked": True, "avatar_identities_rendered": avatar_count, "overflow_px": overflow, "v2_payload": True}
         avatar_ids = page.locator(".portrait-photo").evaluate_all(

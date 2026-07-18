@@ -1,51 +1,210 @@
 #!/usr/bin/env python3
-"""Render a self-contained interactive dashboard from a validated payload."""
+"""Render a validated payload into the frozen 2026-07-17 dashboard UI.
+
+The handoff HTML supplies the complete visual shell, CSS and interaction
+language.  Its demonstration script is deliberately removed; this module
+embeds only factual payload JSON and a small adapter which fills the existing
+containers.  It performs no aggregation or content inference.
+"""
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
-from html import escape
+import re
 from pathlib import Path
 
-from dashboard_payload import build_payload, validate_schema
+from dashboard_payload import PROJECT_DIR, build_payload, validate_schema
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent.parent
-FINAL_UI = PROJECT_DIR / "handoff" / "10V-dashboard-backend-handoff-final-2026-07-17" / "01-final-ui" / "10-market-voices-complete.html"
+FINAL_UI = SCRIPT_DIR.parent / "references" / "final-ui" / "10-market-voices-complete.html"
 
 
-def js_json(value: object) -> str:
-    return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
+def _without_demo_script(source: str) -> str:
+    """Keep the approved document and styles, dropping only demo runtime data."""
+    return re.sub(r"<script\b[^>]*>.*?</script>", "", source, flags=re.IGNORECASE | re.DOTALL)
+
+
+def _stock_detail_shell(source: str) -> str:
+    """Decode the frozen stock-detail document without its demo-data script."""
+    match = re.search(r"const singleFileStockDetailBase64='([^']+)'", source)
+    if not match:
+        raise RuntimeError("The approved final UI does not contain its stock-detail shell")
+    detail = base64.b64decode(match.group(1)).decode("utf-8")
+    return _without_demo_script(detail)
+
+
+def _stock_detail_binding() -> str:
+    """Runtime bound inside the frozen full-screen stock-detail document."""
+    return r'''
+(() => {
+  const D=window.__STOCK_DETAIL__, P=window.__STOCK_PEOPLE__||{};
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const label={bullish:'看多',bearish:'看空',neutral:'中性'};
+  const status=p=>p&&p.percentage!==null?`${p.percentage>=0?'+':''}${Number(p.percentage).toFixed(2)}%`:(p?.status==='pending'?'行情待补齐':'暂无行情');
+  const tone=p=>p&&p.percentage!==null?(p.percentage>=0?'up':'down'):'neutral';
+  const set=(id,value)=>{const node=document.querySelector(id);if(node)node.textContent=value};
+  const windows={day:'today',week:'days_7',month:'days_28'};
+  const shellDate=D.window_summaries.days_28.window.end;
+  set('#symbol',D.instrument.display_code);set('#company',D.instrument.display_name);set('.report-date',`数据截至 ${shellDate} · 美东时间`);
+  const points=(D.price_series||[]).filter(x=>Number.isFinite(x.close));
+  function drawChart(){
+    const svg=document.querySelector('.chart-svg'), line=document.querySelector('#chartLine'), area=document.querySelector('#chartArea');
+    if(!svg||!line||points.length<2){set('#chartRange','近28天 · 暂无完整行情');return}
+    const width=Math.max(svg.clientWidth||1000,320),height=220,values=points.map(x=>x.close),lo=Math.min(...values),hi=Math.max(...values),span=hi-lo||1,top=28,bottom=198;
+    const xy=values.map((value,i)=>[i/(values.length-1)*width,bottom-(value-lo)/span*(bottom-top)]);
+    svg.setAttribute('viewBox',`0 0 ${width} ${height}`);line.setAttribute('d','M '+xy.map(p=>p.join(',')).join(' L '));area.setAttribute('d','M '+xy[0].join(',')+' L '+xy.slice(1).map(p=>p.join(',')).join(' L ')+` L ${width},210 L 0,210 Z`);
+    set('#chartRange',`${points[0].date}–${points.at(-1).date} · 收盘价`);set('#chartStart',points[0].date.slice(5));set('#chartMiddle',points[Math.floor(points.length/2)].date.slice(5));set('#chartEnd',points.at(-1).date.slice(5));
+    const byDate=Object.fromEntries((D.mention_days||[]).map(x=>[x.date,x.evidence]));
+    const events=points.map((point,i)=>({point,i,rows:byDate[point.date]||[]})).filter(x=>x.rows.length).map(event=>{const [x,y]=xy[event.i],rows=event.rows.slice(0,6);return `<div class="daily-event bull" style="left:${x}px;top:${y}px"><button class="daily-trigger" type="button" aria-label="${event.rows.length} 条原帖"></button><div class="daily-popover"><h3>${event.point.date}<span>${event.rows.length} 条记录</span></h3>${rows.map(row=>`<div class="event-row"><span class="event-person">${esc(P[row.blogger_id]?.display_name||row.blogger_id)}</span><span class="event-stance ${row.stance}">${label[row.stance]||'中性'}</span><span class="event-reason">${esc((row.reasons||[])[0]||'暂无结构化理由')}</span><a class="event-source" href="${esc(row.url)}" target="_blank" rel="noopener">原帖 ↗</a></div>`).join('')}</div></div>`}).join('');document.querySelector('#chartEvents').innerHTML=events;
+  }
+  function peopleFor(key){return D.people_by_window[key]||[]}
+  function state(person){if(person.bullish_count&&person.bearish_count)return 'mixed';if(person.bullish_count)return 'bull';if(person.bearish_count)return 'bear';if(person.neutral_count)return 'neutral';return 'none'}
+  function chips(key){const grouped={bull:[],bear:[],mixed:[],neutral:[],none:[]};peopleFor(key).forEach(p=>grouped[state(p)].push(p));const names={bull:'看多',bear:'看空',mixed:'多空均有',neutral:'中性',none:'未提及'};return Object.entries(grouped).filter(([,rows])=>rows.length).map(([kind,rows])=>`<span class="stance-people-group ${kind}"><strong>${names[kind]}</strong>${rows.map(p=>{const person=P[p.blogger_id]||{};return `<a class="stance-person-chip ${kind}" href="${esc(person.x_url||'#')}" target="_blank" rel="noopener"><img src="${person.avatar_data_uri||''}" alt="${esc(person.display_name||p.blogger_id)}">${esc(person.display_name||p.blogger_id)}</a>`}).join('')}</span>`).join('')}
+  function renderKol(key){const rows=peopleFor(key).slice().sort((a,b)=>(b.mention_count-a.mention_count)||String(P[a.blogger_id]?.display_name||a.blogger_id).localeCompare(String(P[b.blogger_id]?.display_name||b.blogger_id)));document.querySelector('#kolDetailRange').textContent=D.window_summaries[key].window.start+'–'+D.window_summaries[key].window.end;document.querySelector('#kolGrid').innerHTML=`<div class="kol-head"><span>跟踪账号</span><span>提及</span><span class="kol-composition-head"><span>多空构成</span></span><span>一致性</span><span class="kol-latest-summary-head">最新观点摘要</span><span>展开全部</span></div>${rows.map(row=>{const person=P[row.blogger_id]||{},total=row.bullish_count+row.bearish_count+row.neutral_count||1,directional=row.bullish_count+row.bearish_count,consistency=directional?Math.round(Math.max(row.bullish_count,row.bearish_count)/directional*100):null,latest=row.latest;return `<section class="kol-person-block"><div class="kol-row"><div><a class="kol-name" href="${esc(person.x_url||'#')}" target="_blank" rel="noopener"><img src="${person.avatar_data_uri||''}" alt="${esc(person.display_name||row.blogger_id)}">${esc(person.display_name||row.blogger_id)}</a></div><div class="kol-count">${row.mention_count}</div><div><div class="kol-composition"><div class="kol-composition-bar"><span class="bull" style="width:${row.bullish_count/total*100}%"></span><span class="neutral" style="width:${row.neutral_count/total*100}%"></span><span class="bear" style="width:${row.bearish_count/total*100}%"></span></div><div class="kol-composition-counts"><span class="bull">${row.bullish_count} 多</span><span class="neutral">${row.neutral_count} 中</span><span class="bear">${row.bearish_count} 空</span></div></div></div><div class="kol-consistency"><b>${consistency===null?'—':consistency+'%'}</b><small>${row.consistency_label||'无方向'}</small></div><div class="kol-latest-summary"><span class="kol-latest-state"><time>${latest?.date||'—'}</time><span class="kol-current ${latest?.stance||'none'}">${label[latest?.stance]||'未提及'}</span></span><span class="kol-reason">${esc(latest?(latest.reasons||[])[0]||'暂无结构化理由':'该窗口没有结构化记录')}</span></div><div class="kol-action"><button class="kol-expand" type="button">查看全部 ↗</button></div></div><div class="kol-inline-evidence">${(row.evidence||[]).map(ev=>`<div class="kol-evidence-row"><time>${esc(ev.date)}</time><span class="stance ${ev.stance}">${label[ev.stance]||'中性'}</span><div class="post-original">${esc(ev.text||'')}</div><a class="source" href="${esc(ev.url)}" target="_blank" rel="noopener">原帖 ↗</a></div>`).join('')||'<div class="kol-evidence-empty">该窗口没有结构化记录。</div>'}</div></section>`}).join('')}`;document.querySelectorAll('.kol-expand').forEach(button=>button.onclick=()=>{const block=button.closest('.kol-person-block'),open=block.classList.toggle('open');button.textContent=open?'收起 ↗':'查看全部 ↗'})}
+  function setWindow(view){const key=windows[view],summary=D.window_summaries[key],rows=peopleFor(key),counts={bull:0,bear:0,mixed:0,neutral:0,none:0};rows.forEach(row=>counts[state(row)]++);set('#accounts',summary.participant_count);set('#mentions',summary.mention_count);set('#bullSignals',summary.bullish_count);set('#bearSignals',summary.bearish_count);set('#windowMove',status(summary.price_change));set('#windowRange',summary.window.start+'–'+summary.window.end);set('#windowStancePeople','');document.querySelector('#windowStancePeople').innerHTML=chips(key);const total=10;['bull','bear','mixed','neutral','none'].forEach(kind=>{const cap=kind[0].toUpperCase()+kind.slice(1),bar=document.querySelector('#window'+cap+'Bar'),text=document.querySelector('#window'+cap+'Label');if(bar)bar.style.width=counts[kind]/total*100+'%';if(text){text.hidden=!counts[kind];text.style.width=counts[kind]/total*100+'%';text.textContent=counts[kind]+({bull:'人看多',bear:'人看空',mixed:'人多空均有',neutral:'人中性',none:'人未提及'}[kind])}});renderKol(key)}
+  document.querySelectorAll('.window-tab').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.window-tab').forEach(x=>x.classList.toggle('active',x===button));setWindow(button.dataset.window)}));
+  document.querySelector('#back').addEventListener('click',event=>{event.preventDefault();parent.postMessage({type:'stockDetailBack'},'*')});
+  drawChart();setWindow('day');addEventListener('resize',drawChart);
+})();
+'''
 
 
 def render(payload: dict) -> str:
-    # The approved UI is the visual reference.  The production body below keeps
-    # its single-file routing model while replacing every sample data array with
-    # the validated deterministic payload.
-    source_hash = hashlib.sha256(FINAL_UI.read_bytes()).hexdigest() if FINAL_UI.exists() else "missing"
-    payload_json = js_json(payload)
-    return f'''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>10 Market Voices · {escape(payload["meta"]["report_date_et"])}</title>
-<style>
-:root{{--ink:#242629;--muted:#6a6b6a;--line:#d7d4cd;--paper:#fffefa;--green:#176747;--red:#a63c37;--blue:#385d8d}}*{{box-sizing:border-box}}body{{margin:0;background:#f7f6f1;color:var(--ink);font:14px/1.5 Arial,"Noto Sans SC",sans-serif}}a{{color:inherit}}.shell{{max-width:1280px;margin:auto;padding:36px 48px 80px}}header{{border-bottom:2px solid var(--ink);padding-bottom:20px}}h1,h2,h3{{font-family:Georgia,"Noto Serif SC",serif}}h1{{margin:0;font-size:38px}}h2{{font-size:26px;margin:46px 0 14px}}.meta,.note{{color:var(--muted)}}.people{{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:24px}}.person,.card,.detail{{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}}.person{{cursor:pointer}}.person:hover,.card:hover{{border-color:#90908a}}.avatar{{width:42px;height:42px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:9px}}.role{{float:right;color:var(--muted);font-size:11px}}.counts{{display:flex;gap:10px;margin-top:13px;font-weight:bold}}.bull{{color:var(--green)}}.bear{{color:var(--red)}}.neutral{{color:var(--muted)}}.grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}.card h3{{margin:0;font-size:21px}}.pill{{display:inline-block;padding:2px 7px;border-radius:999px;background:#eef1f5;color:var(--blue);font-size:11px}}.voices{{margin:12px 0 0;padding:0;list-style:none}}.voices li{{padding:6px 0;border-top:1px solid #ece9e1}}.price{{font-weight:bold}}.empty{{color:var(--muted);padding:10px 0}}.detail{{margin-top:28px}}.back{{border:1px solid var(--line);background:white;border-radius:7px;padding:7px 10px;cursor:pointer}}.window button{{margin-right:6px;padding:6px 10px;border:1px solid var(--line);background:white;border-radius:7px;cursor:pointer}}.window button.active{{background:#e9eef6;color:var(--blue)}}.evidence{{padding:10px 0;border-top:1px solid var(--line)}}.chart{{display:flex;align-items:end;height:130px;gap:2px;border-bottom:1px solid var(--line);margin:14px 0}}.chart i{{flex:1;background:#8fa6c6;min-width:2px}}@media(max-width:1100px){{.people{{grid-template-columns:repeat(3,1fr)}}}}@media(max-width:700px){{.shell{{padding:22px 16px}}.people,.grid{{grid-template-columns:1fr}}h1{{font-size:30px}}}}
-</style></head><body><main class="shell"><header><div class="note">公开观点与市场信号追踪 · 不构成投资建议</div><h1>追踪人物</h1><div class="meta">数据截止 {escape(payload["meta"]["report_date_et"])} · America/New_York · 7 位观点账号与 3 个独立信号源</div></header><section id="people" class="people"></section><section id="reports"></section><section id="detail"></section></main>
-<script>const PAYLOAD={payload_json};
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
-const byId=Object.fromEntries(PAYLOAD.people.map(p=>[p.blogger_id,p]));
-const price=p=>p.percentage===null?'暂无行情数据':`${{p.percentage>=0?'+':''}}${{p.percentage.toFixed(2)}}%`;
-const person=p=>`<article class="person" tabindex="0" data-person="${{esc(p.blogger_id)}}"><span class="role">${{esc(p.signal_type)}}</span><img class="avatar" src="${{p.avatar_data_uri}}" alt="${{esc(p.display_name)}}"><b>${{esc(p.display_name)}}</b><div class="note">${{esc(p.handle)}}</div><div class="counts"><span class="bull">↑ ${{p.daily_stock_lists.bullish.length}}</span><span class="bear">↓ ${{p.daily_stock_lists.bearish.length}}</span><span class="neutral">— ${{p.daily_stock_lists.neutral.length}}</span></div></article>`;
-function voices(items,klass){{return items.map(x=>{{let p=byId[x.blogger_id]||{{}};return `<li><b class="${{klass}}">${{esc(p.display_name||x.blogger_id)}}</b> ${{x.reasons[0]?`· ${{esc(x.reasons[0])}}`:''}} <a href="${{esc(x.evidence_url)}}" target="_blank" rel="noopener">原帖 ↗</a></li>`}}).join('')}}
-function cards(title,items){{if(!items.length)return `<section><h2>${{title}}</h2><div class="empty">本窗口暂无符合条件的标的。</div></section>`;return `<section><h2>${{title}}</h2><div class="grid">${{items.map(x=>`<article class="card"><a href="#stock=${{encodeURIComponent(x.instrument.display_code)}}"><h3>${{esc(x.instrument.display_code)}}</h3></a><div class="note">${{esc(x.instrument.display_name)}} · <span class="price">${{price(x.price_change)}}</span></div><ul class="voices">${{voices(x.bullish_accounts,'bull')}}${{voices(x.bearish_accounts,'bear')}}</ul></article>`).join('')}}</div></section>`}}
-function report(){{let d=PAYLOAD.daily,w=PAYLOAD.weekly,m=PAYLOAD.monthly;document.querySelector('#reports').innerHTML=cards('日报 · 明确共同看多',d.shared_bullish)+cards('日报 · 明确共同看空',d.shared_bearish)+cards('日报 · 多空分歧',d.disagreement)+cards('周报 · 明确共同看多',w.shared_bullish)+cards('周报 · 明确共同看空',w.shared_bearish)+cards('周报 · 多空分歧',w.disagreement)+`<section><h2>近 28 日标的</h2><div class="note">${{m.window.start}} 至 ${{m.window.end}} · 共 ${{m.rows.length}} 个标的</div></section>`}}
-function showPerson(id){{let p=byId[id];let rows=p.personal_view.map(x=>`<div class="evidence"><b>${{esc(x.instrument.display_code)}}</b> · ${{esc(x.state)}} · ↑${{x.bullish_count}} ↓${{x.bearish_count}}<br>${{x.evidence.map(e=>`<a href="${{esc(e.url)}}" target="_blank" rel="noopener">${{esc(e.date)}} 原帖</a>`).join(' · ')}}</div>`).join('')||'<div class="empty">当日无相关记录。</div>';document.querySelector('#detail').innerHTML=`<article class="detail"><button class="back" onclick="closeDetail()">返回</button><h2>${{esc(p.display_name)}} · 今日个人视角</h2><p>${{esc(p.bio||'暂无人物简介')}}</p>${{rows}}</article>`;location.hash='person='+encodeURIComponent(id)}}
-function showStock(symbol){{let d=PAYLOAD.stock_drilldowns[symbol];if(!d)return;let key='today';const draw=()=>{{let s=d.window_summaries[key],people=d.people_by_window[key],series=d.price_series,lo=Math.min(...series.map(x=>x.close)),hi=Math.max(...series.map(x=>x.close));let bars=series.map(x=>`<i style="height:${{hi===lo?50:20+80*(x.close-lo)/(hi-lo)}}%" title="${{esc(x.date)}}: ${{x.close}}"></i>`).join('');document.querySelector('#detail').innerHTML=`<article class="detail"><button class="back" onclick="closeDetail()">返回</button><h2>${{esc(d.instrument.display_code)}} · ${{esc(d.instrument.display_name)}}</h2><div class="window"><button data-w="today" class="${{key==='today'?'active':''}}">今日</button><button data-w="days_7" class="${{key==='days_7'?'active':''}}">7日</button><button data-w="days_28" class="${{key==='days_28'?'active':''}}">28日</button></div><p class="note">${{s.window.start}} 至 ${{s.window.end}} · ${{price(s.price_change)}} · ${{s.mention_count}} 条记录</p><div class="chart">${{bars}}</div>${{people.map(p=>`<div class="evidence"><b>${{esc(byId[p.blogger_id].display_name)}}</b> · ${{esc(p.latest_direction||'未提及')}} · ↑${{p.bullish_count}} —${{p.neutral_count}} ↓${{p.bearish_count}} ${{p.latest?`<a href="${{esc(p.latest.url)}}" target="_blank" rel="noopener">原帖 ↗</a>`:''}}</div>`).join('')}}</article>`;document.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{{key=b.dataset.w;draw()}})}};draw()}}
-function closeDetail(){{document.querySelector('#detail').innerHTML='';history.replaceState(null,'','#')}}
-function route(){{let h=decodeURIComponent(location.hash.slice(1));if(h.startsWith('stock='))showStock(h.slice(6));else if(h.startsWith('person='))showPerson(h.slice(7));else closeDetail()}}
-document.querySelector('#people').innerHTML=PAYLOAD.people.map(person).join('');document.querySelectorAll('[data-person]').forEach(el=>{{el.onclick=()=>showPerson(el.dataset.person);el.onkeydown=e=>{{if(e.key==='Enter'||e.key===' ')showPerson(el.dataset.person)}}}});report();addEventListener('hashchange',route);route();
-</script><!-- final-ui-sha256:{source_hash} --></body></html>'''
+    validate_schema(payload)
+    if not FINAL_UI.is_file():
+        raise RuntimeError(f"Missing packaged final UI: {FINAL_UI}")
+    shell = _without_demo_script(FINAL_UI.read_text(encoding="utf-8"))
+    source_hash = hashlib.sha256(FINAL_UI.read_bytes()).hexdigest()
+    stock_shell = base64.b64encode(_stock_detail_shell(FINAL_UI.read_text(encoding="utf-8")).encode("utf-8")).decode("ascii")
+    stock_binding = base64.b64encode(_stock_detail_binding().encode("utf-8")).decode("ascii")
+    data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    # Only responsive containment is added to the frozen CSS: real English
+    # bios and the real 9-column table can otherwise widen the document.  The
+    # table keeps its approved horizontal scroll behaviour inside its module.
+    shell = shell.replace("</head>", "<style>.voice,.disclaimer{min-width:0}.bio,.disclaimer,.disclaimer p,.instrument-post,.weekly-card,.notice-defs,.notice-def,.weekly-date,.quarter-date,.daily-date{white-space:normal!important;overflow-wrap:anywhere}.notice-defs{flex-wrap:wrap}.quarter-grid{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}</style></head>")
+    runtime = r'''
+<script>
+const PAYLOAD=__PAYLOAD__;
+const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const STOCK_DETAIL_SHELL='__STOCK_DETAIL_SHELL__';
+const STOCK_DETAIL_BINDING='__STOCK_DETAIL_BINDING__';
+const byId=Object.fromEntries(PAYLOAD.people.map(person=>[person.blogger_id,person]));
+const labels={bullish:'看多',bearish:'看空',neutral:'中性',opinion:'观点',flow:'资金流',news:'新闻',disclosure:'披露'};
+const tone=stance=>stance==='bullish'?'bull':stance==='bearish'?'bear':'neutral';
+const sourceLink=url=>url?`<a class="source-post" href="${esc(url)}" target="_blank" rel="noopener">原帖 ↗</a>`:'';
+const price=change=>change&&change.percentage!==null?`${change.percentage>=0?'+':''}${Number(change.percentage).toFixed(2)}%`:(change?.status==='pending'?'行情待补齐':change?.status==='partial'?'行情不完整':'暂无行情');
+const priceClass=change=>change&&change.percentage!==null?(change.percentage>=0?'positive':'negative'):'unavailable';
+const firstReason=item=>item?.reasons?.[0]||'暂无结构化理由';
+const personName=id=>byId[id]?.display_name||id;
+
+function setDates(){
+ const daily=document.querySelector('.daily-date'),weekly=document.querySelector('.weekly-date'),monthly=document.querySelector('.quarter-date');
+ if(daily)daily.textContent=`日报 · ${PAYLOAD.daily.window.end}`;
+ if(weekly)weekly.textContent=`周报 · 最近 7 日（${PAYLOAD.weekly.window.start}–${PAYLOAD.weekly.window.end}）`;
+ if(monthly)monthly.textContent=`近 28 日（${PAYLOAD.monthly.window.start}–${PAYLOAD.monthly.window.end}）`;
+ const peopleNote=document.querySelector('#people')?.querySelector('span');
+ if(peopleNote)peopleNote.textContent=`${PAYLOAD.meta.tracked_account_count} 个跟踪账号 · 点击人物卡查看当日视角与同源证据`;
+ const reportDate=document.querySelector('.top .date');
+ if(reportDate)reportDate.innerHTML=`报告口径<br><b>${esc(PAYLOAD.meta.report_date_et)} · 美东时间</b>`;
+ const sample=document.querySelector('.top .sample');
+ if(sample)sample.textContent='真实数据';
+}
+
+function preview(label,symbols,klass){
+ const visible=symbols.slice(0,3),more=symbols.length-visible.length;
+ return `<div class="voice-preview-row ${klass}"><span class="voice-preview-label">${label}</span><span class="voice-preview-symbols">${visible.map(symbol=>`<span role="link" tabindex="0" data-card-stock="${esc(symbol)}">${esc(symbol)}</span>`).join('')||'<i>—</i>'}${more?`<b>+${more}</b>`:''}</span></div>`;
+}
+function renderPeople(){
+ const grid=document.querySelector('#grid'); if(!grid)return;
+ grid.innerHTML=PAYLOAD.people.map((person,index)=>{
+  const lists=person.daily_stock_lists||{bullish:[],bearish:[]};
+  return `<button class="voice" data-person="${esc(person.blogger_id)}" aria-label="查看 ${esc(person.display_name)} 的账户视角"><div class="identity"><img class="avatar" src="${person.avatar_data_uri}" alt="${esc(person.display_name)}"><div><div class="identity-name-row"><h3>${esc(person.display_name)}</h3><a class="card-x-link" href="${esc(person.x_url)}" target="_blank" rel="noopener">X 主页 ↗</a></div><div class="handle">${esc(person.handle)}</div></div></div><span class="role ${esc(person.signal_type)}">${esc(labels[person.signal_type]||person.signal_type)}</span><p class="bio">${esc(person.bio||'暂无人物简介')}</p><div class="voice-preview">${preview('看多',lists.bullish||[],'bull')}${preview('看空',lists.bearish||[],'bear')}</div></button>`;
+ }).join('');
+ grid.onclick=event=>{const target=event.target.closest('[data-card-stock]');if(target){openStock(target.dataset.cardStock);return;}const card=event.target.closest('[data-person]');if(card&&!event.target.closest('a'))showPerson(card.dataset.person)};
+ grid.onkeydown=event=>{const target=event.target.closest('[data-card-stock]');if(target&&(event.key==='Enter'||event.key===' ')){event.preventDefault();openStock(target.dataset.cardStock)}};
+}
+
+function lines(accounts,stance){return accounts.map(account=>{const person=byId[account.blogger_id]||{};return `<div class="voice-line"><img class="mini-avatar" src="${person.avatar_data_uri||''}" alt="${esc(person.display_name||account.blogger_id)}"><span class="stance-word ${tone(stance)}">${labels[stance]}</span><span class="voice-reason" title="${esc(firstReason(account))}">${esc(firstReason(account))}</span>${sourceLink(account.evidence_url)}</div>`}).join('')}
+function card(item){
+ const bulls=item.bullish_accounts||[],bears=item.bearish_accounts||[],classification=item.classification||'disagreement';
+ const count=Math.max(bulls.length,bears.length);
+ const verdict=classification==='shared_bullish'?`${count} 位账户共同看多`:classification==='shared_bearish'?`${count} 位账户共同看空`:'多空分歧';
+ const tag=classification==='shared_bullish'?'共同看多':classification==='shared_bearish'?'共同看空':'分歧';
+ return `<article class="stock-card ${classification==='shared_bullish'?'bullish':classification==='shared_bearish'?'bearish':'neutral'}"><div class="stock-summary"><div class="stock-symbol"><a href="#stock=${encodeURIComponent(item.instrument.display_code)}">${esc(item.instrument.display_code)}</a></div><div class="stock-name">${esc(item.instrument.display_name)}</div><div class="stock-move ${priceClass(item.price_change)}"><b>${esc(price(item.price_change))}</b><small>${item.price_change?.start_date&&item.price_change?.end_date?`${item.price_change.start_date}–${item.price_change.end_date}`:'真实状态'}</small></div></div><div class="stock-body"><div class="stock-verdict"><strong>${esc(verdict)}</strong><span class="consensus-tag ${classification==='disagreement'?'mixed':classification==='shared_bullish'?'bull':'bear'}">${tag}</span></div><div class="voice-lines">${lines(bulls,'bullish')}${lines(bears,'bearish')}</div><footer class="stock-foot"><span>${item.unique_post_count} 个去重原帖</span><a href="#stock=${encodeURIComponent(item.instrument.display_code)}">查看股票详情 ↗</a></footer></div></article>`;
+}
+function dailyGroup(title,note,items){return `<section class="daily-group"><header class="daily-group-head"><h3>${title}</h3><p>${note}</p></header><div class="stock-grid">${items.length?items.map(card).join(''):'<div class="quarter-empty">当前窗口暂无符合条件的标的</div>'}</div></section>`}
+function renderDaily(){const daily=document.querySelector('#daily');if(!daily)return;const report=PAYLOAD.daily;daily.innerHTML=`<header class="daily-top"><h2 id="daily-title">当日共识</h2><div class="daily-date">日报 · ${report.window.end}</div></header>${dailyGroup('明确共同看多','至少 2 个观点账号给出明确看多信号',report.shared_bullish)}${dailyGroup('明确共同看空','至少 2 个观点账号给出明确看空信号',report.shared_bearish)}${dailyGroup('存在多空分歧','仅展示不同观点账号之间的真实多空信号',report.disagreement)}`}
+
+function weeklyCard(item){
+ const bulls=item.bullish_accounts||[], bears=item.bearish_accounts||[];
+ const classification=item.classification||'disagreement';
+ const verdict=classification==='shared_bullish'?`${bulls.length} 位账户看多`:classification==='shared_bearish'?`${bears.length} 位账户看空`:'多空分歧';
+ return `<article class="stock-card"><div class="stock-summary"><div class="stock-symbol"><a href="#stock=${encodeURIComponent(item.instrument.display_code)}">${esc(item.instrument.display_code)}</a></div><div class="stock-name">${esc(item.instrument.display_name)}</div><div class="stock-move ${priceClass(item.price_change)} period-return"><b>${esc(price(item.price_change))}</b><small>本周涨跌幅</small></div></div><div class="stock-body"><div class="stock-verdict"><strong>${esc(verdict)}</strong></div><div class="voice-lines">${lines(bulls,'bullish')}${lines(bears,'bearish')}</div><footer class="stock-foot"><span>${bulls.length+bears.length} 位账号</span><a href="#stock=${encodeURIComponent(item.instrument.display_code)}">查看股票详情 ↗</a></footer></div></article>`;
+}
+function weeklyGroup(title,note,items){return `<section class="weekly-subsection"><header class="weekly-subhead"><h3>${title}</h3><p>${note}</p></header><div class="weekly-stock-grid">${items.length?items.map(weeklyCard).join(''):'<div class="quarter-empty">当前分类暂无真实数据</div>'}</div></section>`}
+function renderWeekly(){
+ const target=document.querySelector('#weeklyDetails');if(!target)return;const weekly=PAYLOAD.weekly;
+ // These are the three frozen weekly containers.  Changes remain in the
+ // payload for downstream use but must not create another weekly module.
+ target.innerHTML=weeklyGroup('明确共同看多','滚动最近 7 天内，至少 2 个观点账号给出明确看多信号',weekly.shared_bullish)+weeklyGroup('明确共同看空','滚动最近 7 天内，至少 2 个观点账号给出明确看空信号',weekly.shared_bearish)+weeklyGroup('多空分歧','直接展示观点账号间真实的多空分歧',weekly.disagreement);
+ target.querySelectorAll('.stock-symbol').forEach(symbol=>{const length=symbol.textContent.trim().length;if(length>=7)symbol.classList.add('symbol-xlong');else if(length>=5)symbol.classList.add('symbol-long')});
+}
+
+function changePeople(previous,current,direction){return `<span class="current-people">${current.length?current.map(id=>{const person=byId[id]||{},added=!previous.includes(id);return `<span class="current-person ${direction}${added?' new':''}"><img src="${person.avatar_data_uri||''}" alt="${esc(person.display_name||id)}"><span>${esc(person.display_name||id)}</span>${added?'<i>+</i>':''}</span>`}).join(''):'<span class="current-person-empty">—</span>'}</span>`}
+function changeRow(title,previous,current,direction){return `<div class="current-account-row ${direction}"><span class="current-account-metric"><span>${title}</span><b>${previous.length} → ${current.length}</b></span>${changePeople(previous,current,direction)}</div>`}
+function changeItem(item,mode){
+ const bull=item.bullish||{},bear=item.bearish||{},previousBull=bull.previous||[],currentBull=bull.current||[],previousBear=bear.previous||[],currentBear=bear.current||[];
+ const tag=item.label||'近7天变化';
+ let rows=mode==='new_multi_bullish'?changeRow('看多账号',previousBull,currentBull,'bull')+(!currentBear.length?'':changeRow('同时看空',currentBear,currentBear,'bear')):mode==='consensus_strength'?(item.focus_direction==='bear'?changeRow('看空账号',previousBear,currentBear,'bear'):changeRow('看多账号',previousBull,currentBull,'bull')):changeRow('看多账号',previousBull,currentBull,'bull')+changeRow('看空账号',previousBear,currentBear,'bear');
+ return `<article class="change-item"><div class="change-item-head"><span class="change-title-group"><a class="change-ticker" href="#stock=${encodeURIComponent(item.instrument.display_code)}">${esc(item.instrument.display_code)}</a><span class="judgement">${esc(tag)}</span></span><span class="change-return ${priceClass(item.price_change)==='negative'?'down':'up'}">${esc(price(item.price_change))}<small>最近7天涨跌</small></span></div><div class="current-accounts">${rows}</div></article>`;
+}
+function renderChanges(){
+ const target=document.querySelector('.change-grid');if(!target)return;const changes=PAYLOAD.weekly.changes||{};
+ const groups=[['new_multi_bullish','新形成多人看多','此前 7 天未达到门槛，本窗口形成至少 2 个明确看多观点'],['consensus_strength','原有共识增强或减弱','比较连续两个 7 天窗口内同方向的观点账号数量'],['reversal_or_disagreement','观点反转或出现分歧','仅展示具有明确多空状态变化的真实记录']];
+ target.innerHTML=groups.map(([key,title,note])=>`<section class="change-subsection"><header class="change-subhead"><h4>${title}</h4><p>${note}</p></header><div class="change-subgrid">${(changes[key]||[]).map(item=>changeItem(item,key)).join('')||'<div class="quarter-empty">当前分类暂无真实变化</div>'}</div></section>`).join('');
+}
+
+function renderMonthly(){
+ const target=document.querySelector('#quarterGrid');if(!target)return;
+ const rows=PAYLOAD.monthly.rows||[];
+ target.innerHTML=`<table class="quarter-table"><thead><tr><th>标的</th><th>多 / 空占比</th><th>涨跌幅</th><th>原帖</th><th>看多</th><th>看空</th><th>中性</th><th>参与账号</th><th>详情</th></tr></thead><tbody>${rows.map(row=>{const directional=row.bullish_count+row.bearish_count,bull=directional?Math.round(row.bullish_count/directional*100):0,bear=directional?100-bull:0;return `<tr><td><div class="quarter-stock"><span><a class="quarter-symbol" href="#stock=${encodeURIComponent(row.instrument.display_code)}">${esc(row.instrument.display_code)}</a><span class="quarter-name">${esc(row.instrument.display_name)}</span></span></div></td><td><div class="quarter-direction"><div class="quarter-direction-bar"><span class="bull" style="width:${bull}%"></span><span class="bear" style="width:${bear}%"></span></div><div class="quarter-direction-text"><span class="bull">${bull}% 多</span><span class="bear">${bear}% 空</span></div></div></td><td><span class="quarter-return period-return ${priceClass(row.price_change)==='negative'?'down':'up'}">${esc(price(row.price_change))}</span></td><td><span class="quarter-num">${row.unique_post_count}</span></td><td><span class="quarter-num bull">${row.bullish_count}</span></td><td><span class="quarter-num bear">${row.bearish_count}</span></td><td><span class="quarter-num">${row.neutral_count}</span></td><td><span class="quarter-num">${row.participant_ids.length}</span></td><td><a class="quarter-detail" href="#stock=${encodeURIComponent(row.instrument.display_code)}">↗</a></td></tr>`}).join('')||'<tr><td class="quarter-empty" colspan="9">近 28 日暂无帖子标的</td></tr>'}</tbody></table>`;
+}
+
+function showPerson(id){
+ const person=byId[id];if(!person)return;const drawer=document.querySelector('#drawer'),detail=document.querySelector('#detail');
+ const views=person.personal_view||[],bull=views.filter(view=>view.state==='bull_only'||view.state==='both').length,bear=views.filter(view=>view.state==='bear_only'||view.state==='both').length;
+ const items=views.map(view=>{const state=view.state==='both'?'多空均有':view.state==='bull_only'?'仅看多':view.state==='bear_only'?'仅看空':'中性/无方向';const stateClass=view.state==='both'?'mixed':view.state==='bull_only'?'bullish':view.state==='bear_only'?'bearish':'neutral';return `<article class="instrument-row instrument-group"><div class="instrument-top"><div><a class="instrument-name" href="#stock=${encodeURIComponent(view.instrument.display_code)}">${esc(view.instrument.display_code)}</a><span class="instrument-post-count">${view.evidence.length} 条当日记录</span></div><span class="direction ${stateClass}">${state}</span></div><div class="instrument-posts">${view.evidence.map(ev=>`<div class="instrument-post"><time>${esc(ev.date)}</time><span class="post-direction ${tone(ev.stance)}">${esc(labels[ev.stance])}</span><span class="post-reason">${esc(firstReason(ev))}</span>${sourceLink(ev.url)}</div>`).join('')}</div></article>`}).join('')||'<div class="instrument-empty">当日没有相关记录</div>';
+ detail.innerHTML=`<div class="eyebrow">${esc(labels[person.signal_type]||person.signal_type)}账号 · 今日个人视角</div><div class="panel-title"><h2>${esc(person.display_name)}</h2><a class="x-link" href="${esc(person.x_url)}" target="_blank" rel="noopener">X 主页 ↗</a></div><div class="handle">${esc(person.handle)}</div><p>${esc(person.bio||'暂无人物简介')}</p><div class="big"><div><strong class="up-text">↑ ${bull}</strong><span>看多标的</span></div><div><strong class="down-text">↓ ${bear}</strong><span>看空标的</span></div></div><div class="instrument-head"><h3>当日涉及标的 · ${views.length}</h3><span>立场、依据与原帖同源</span></div><div class="instrument-list">${items}</div>`;
+ drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');history.replaceState(null,'',`#person=${encodeURIComponent(id)}`);
+}
+const singleStockView=document.createElement('div');singleStockView.className='single-stock-view';singleStockView.setAttribute('aria-hidden','true');singleStockView.innerHTML='<iframe class="single-stock-frame" title="股票详情"></iframe>';document.body.appendChild(singleStockView);
+const singleStockFrame=singleStockView.querySelector('iframe');
+function detailShell(){return new TextDecoder('utf-8').decode(Uint8Array.from(atob(STOCK_DETAIL_SHELL),c=>c.charCodeAt(0)))}
+function openSingleStock(symbol){
+ const drill=PAYLOAD.stock_drilldowns[symbol];if(!drill)return;const data=JSON.stringify(drill).replace(/</g,'\\u003c'),people=JSON.stringify(byId).replace(/</g,'\\u003c');
+ const bridge=`<script>window.__STOCK_DETAIL__=${data};window.__STOCK_PEOPLE__=${people};<\/script><script>eval(new TextDecoder('utf-8').decode(Uint8Array.from(atob('${STOCK_DETAIL_BINDING}'),c=>c.charCodeAt(0))))<\/script>`;
+ singleStockFrame.srcdoc=detailShell().replace('</body>',bridge+'</body>');singleStockView.dataset.symbol=symbol;singleStockView.classList.add('open');singleStockView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+}
+function closeSingleStock(){if(!singleStockView.classList.contains('open'))return;singleStockView.classList.remove('open');singleStockView.setAttribute('aria-hidden','true');singleStockFrame.removeAttribute('srcdoc');document.body.style.overflow='';singleStockView.dataset.symbol=''}
+function showStock(symbol){openSingleStock(symbol)}
+function openStock(symbol){location.hash=`stock=${encodeURIComponent(symbol)}`}
+function closeDrawer(){const drawer=document.querySelector('#drawer');drawer?.classList.remove('open');drawer?.setAttribute('aria-hidden','true');history.replaceState(null,'',location.pathname+location.search)}
+function route(){const raw=decodeURIComponent(location.hash.slice(1));if(raw.startsWith('stock='))showStock(raw.slice(6));else{closeSingleStock();if(raw.startsWith('person='))showPerson(raw.slice(7));}}
+function makeStockCardsInteractive(){document.querySelectorAll('.stock-card').forEach(card=>{const link=card.querySelector('a[href^="#stock="]');if(!link)return;const symbol=decodeURIComponent(link.getAttribute('href').split('=').slice(1).join('='));card.classList.add('clickable');card.tabIndex=0;card.setAttribute('role','link');card.setAttribute('aria-label',`查看 ${symbol} 股票详情页`);const open=event=>{if(event.target.closest('a,button'))return;openStock(symbol)};card.addEventListener('click',open);card.addEventListener('keydown',event=>{if((event.key==='Enter'||event.key===' ')&&!event.target.closest('a,button')){event.preventDefault();openStock(symbol)}})})}
+const reasonTooltip=document.querySelector('#reasonTooltip');let activeReason=null;
+function showReasonTooltip(target){const text=target.getAttribute('title')||target.textContent.trim();if(!text||!reasonTooltip)return;activeReason=target;reasonTooltip.textContent=text;reasonTooltip.classList.add('show');reasonTooltip.setAttribute('aria-hidden','false');const rect=target.getBoundingClientRect(),tip=reasonTooltip.getBoundingClientRect();reasonTooltip.style.left=`${Math.min(Math.max(14,rect.left),window.innerWidth-tip.width-14)}px`;reasonTooltip.style.top=`${rect.bottom+8}px`}
+function hideReasonTooltip(target){if(target&&activeReason!==target)return;activeReason=null;reasonTooltip?.classList.remove('show');reasonTooltip?.setAttribute('aria-hidden','true')}
+document.addEventListener('mouseover',event=>{const target=event.target.closest('.stock-card .voice-reason');if(target)showReasonTooltip(target)});document.addEventListener('mouseout',event=>{const target=event.target.closest('.stock-card .voice-reason');if(target&&!target.contains(event.relatedTarget))hideReasonTooltip(target)});document.addEventListener('focusin',event=>{const target=event.target.closest('.stock-card .voice-reason');if(target)showReasonTooltip(target)});document.addEventListener('focusout',event=>{const target=event.target.closest('.stock-card .voice-reason');if(target)hideReasonTooltip(target)});
+const reportNavLinks=[...document.querySelectorAll('[data-report-nav]')];reportNavLinks.forEach(link=>link.addEventListener('click',event=>{event.preventDefault();document.getElementById(link.dataset.reportNav)?.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',`#${link.dataset.reportNav}`);reportNavLinks.forEach(item=>item.classList.toggle('active',item===link))}));
+document.querySelector('#close')?.addEventListener('click',closeDrawer);document.querySelector('#drawer')?.addEventListener('click',event=>{if(event.target.id==='drawer')closeDrawer()});
+window.addEventListener('message',event=>{if(event.data?.type==='stockDetailBack'){history.back()}});
+renderPeople();renderDaily();renderWeekly();renderChanges();renderMonthly();setDates();makeStockCardsInteractive();window.addEventListener('hashchange',route);route();
+</script>'''.replace('__PAYLOAD__', data)
+    runtime = runtime.replace("__PAYLOAD__", data).replace("__STOCK_DETAIL_SHELL__", stock_shell).replace("__STOCK_DETAIL_BINDING__", stock_binding)
+    return shell.replace("</body>", runtime + f"<!-- final-ui-sha256:{source_hash} --></body>")
 
 
 def main() -> int:
@@ -57,12 +216,19 @@ def main() -> int:
     parser.add_argument("--avatar-cache", type=Path, default=PROJECT_DIR / "data" / "avatar_cache.json")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    if not args.db.is_dir():
+        from snapshot_sync import sync
+        cache, _, _ = sync()
+        args.db = cache / "data" / "db"
+        args.config = cache / "config" / "bloggers.json"
+        args.profiles = cache / "config" / "blogger_profiles.json"
+        args.avatar_cache = cache / "data" / "avatar_cache.json"
     payload = build_payload(args.db, args.config, args.profiles, args.date, args.avatar_cache)
-    validate_schema(payload)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(render(payload), encoding="utf-8")
     print(args.output)
     return 0
 
 
-if __name__ == "__main__": raise SystemExit(main())
+if __name__ == "__main__":
+    raise SystemExit(main())
