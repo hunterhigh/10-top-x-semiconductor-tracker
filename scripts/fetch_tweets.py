@@ -106,31 +106,37 @@ def session_with_key(key: str) -> requests.Session:
     return s
 
 
-def get_user_id(s: requests.Session, username: str) -> str | None:
-    """Resolve screen name -> numeric user id (more stable/faster for the timeline).
-    Retries on 429 (free-tier QPS limit) since this fires right before the main
-    pagination loop, where a prior request elsewhere could still be inside the
-    5s window."""
+class FetchError(RuntimeError):
+    """An API/network failure that makes this incremental snapshot unpublishable."""
+
+
+def get_user_id(s: requests.Session, username: str) -> str:
+    """Resolve screen name -> numeric user id or fail without mutating a watermark."""
     for attempt in range(1, RATE_LIMIT_RETRIES + 2):
         try:
             r = s.get(f"{BASE_URL}/twitter/user/info",
                       params={"userName": username}, timeout=30)
-            if r.status_code == 429 and attempt <= RATE_LIMIT_RETRIES:
-                wait = RATE_LIMIT_BACKOFF_SEC * attempt
-                log(f"  user id lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
-                time.sleep(wait)
-                continue
-            if r.status_code == 200:
-                data = r.json()
-                d = data.get("data") or data
-                uid = d.get("id") or (d.get("user") or {}).get("id")
-                if uid:
-                    return str(uid)
-            break
-        except requests.RequestException as e:
-            log(f"  (user id lookup failed, will fall back to userName: {e})")
-            break
-    return None
+        except requests.RequestException as exc:
+            raise FetchError(f"user lookup network error: {exc}") from exc
+        if r.status_code == 429 and attempt <= RATE_LIMIT_RETRIES:
+            wait = RATE_LIMIT_BACKOFF_SEC * attempt
+            log(f"  user id lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
+            time.sleep(wait)
+            continue
+        if r.status_code != 200:
+            raise FetchError(f"user lookup HTTP {r.status_code}: {r.text[:200]}")
+        try:
+            payload = r.json()
+        except ValueError as exc:
+            raise FetchError(f"user lookup returned invalid JSON: {exc}") from exc
+        if payload.get("status") == "error":
+            raise FetchError(f"user lookup API error: {payload.get('message') or payload.get('msg') or 'unknown'}")
+        data = payload.get("data") or payload
+        uid = data.get("id") or (data.get("user") or {}).get("id")
+        if uid:
+            return str(uid)
+        raise FetchError("user lookup response did not contain an id")
+    raise FetchError("user lookup exhausted rate-limit retries")
 
 
 def slim_tweet(t: dict, kind: str) -> dict:
@@ -222,14 +228,14 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
         log(f"  will stop once tweets are older than {since_date.isoformat()} "
             f"(bounds pagination instead of pulling full account history)")
 
-    uid = get_user_id(s, username)
+    try:
+        uid = get_user_id(s, username)
+    except FetchError as exc:
+        log(f"FAILING: @{username} was not fetched; {exc}")
+        sys.exit(1)
     base_params = {"includeReplies": "true"}         # pull everything, filter locally
-    if uid:
-        base_params["userId"] = uid
-        log(f"Resolved @{username} -> userId {uid}")
-    else:
-        base_params["userName"] = username
-        log(f"Using userName={username} (no userId resolved)")
+    base_params["userId"] = uid
+    log(f"Resolved @{username} -> userId {uid}")
 
     cursor = ""
     page = 0
@@ -339,6 +345,13 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
             break
         time.sleep(PAGE_SLEEP_SEC)
 
+    # Do not let a partial page, expired credit, bad key, or temporary network
+    # failure publish an apparently fresh snapshot from the old local cache.
+    # Retrying from the unchanged watermark is deliberate and idempotent.
+    if had_error:
+        log(f"FAILING: @{username} fetch failed; raw tweets and state watermark were left unchanged.")
+        sys.exit(1)
+
     # ----- merge into raw store (de-dupe by tweet_id)
     existing = load_json(raw_path, [])
     by_id = {t["tweet_id"]: t for t in existing if t.get("tweet_id")}
@@ -361,7 +374,11 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
             [newest_id_this_run] + ([state["newest_tweet_id"]] if state.get("newest_tweet_id") else []),
             key=lambda x: int(x) if str(x).isdigit() else 0,
         )
-    state["last_run_utc"] = datetime.now(timezone.utc).isoformat()
+    successful_at = datetime.now(timezone.utc).isoformat()
+    state["last_run_utc"] = successful_at  # legacy compatibility
+    state["last_successful_fetch_utc"] = successful_at
+    state["last_api_tweets_seen"] = seen_total
+    state["last_new_tweets_added"] = added
     state["username"] = username
     save_json(state_path, state)
 
@@ -377,19 +394,6 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
     log(f"  total in store     : {len(merged)}  -> {raw_path}")
     log(f"  newest id          : {state.get('newest_tweet_id')}")
     log("===================")
-
-    if had_error and not merged:
-        # A real failure (bad handle, bad key, API/network error) with ZERO usable
-        # tweets — fail loudly here instead of writing an empty raw_tweets.json and
-        # letting extract.py report a confusing unrelated-looking "no tweets" error
-        # one step later. A legitimate "this account just has 0 tweets in range" is
-        # NOT an error (had_error stays False in that case: see "0 tweets, done"
-        # above, which is a clean break, not an error path).
-        log(f"FAILING: no tweets were fetched for @{username} AND an error occurred "
-            f"above — check the HTTP status/API error logged during this run "
-            f"(401 = bad TWITTERAPI_KEY, 404 = handle not found, other = investigate).")
-        sys.exit(1)
-
 
 def main():
     ap = argparse.ArgumentParser(description="Fetch @user tweets from twitterapi.io")
