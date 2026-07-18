@@ -50,9 +50,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Fetch incremental posts
+        id: fetch
+        shell: bash
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
-        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }}
+        run: |
+          set -o pipefail
+          python scripts/fetch_tweets.py --user ${{ matrix.blogger }} 2>&1 | tee "$RUNNER_TEMP/fetch-${{ matrix.blogger }}.log"
       - name: Extract new and overlap-day mentions
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -74,15 +78,27 @@ jobs:
           from zoneinfo import ZoneInfo
           account = "${{ matrix.blogger }}"
           path = Path("data/bloggers") / account / "raw_tweets.json"
+          state_path = Path("data/bloggers") / account / "state.json"
           rows = json.loads(path.read_text()) if path.exists() else []
+          state = json.loads(state_path.read_text()) if state_path.exists() else {}
           dates = []
           for row in rows:
               try: dates.append(parsedate_to_datetime(row.get("created_at") or row.get("createdAt")).astimezone(ZoneInfo("America/New_York")))
               except Exception: pass
           print(f"### @{account}")
+          print(f"- fetch outcome: ${{ steps.fetch.outcome }}")
           print(f"- raw records: {len(rows)}")
           print(f"- latest ET timestamp: {max(dates).isoformat() if dates else 'unavailable'}")
+          print(f"- last successful fetch UTC: {state.get('last_successful_fetch_utc', 'unavailable')}")
+          print(f"- API tweets returned: {state.get('last_api_tweets_seen', 'unavailable')}")
+          print(f"- new tweets added: {state.get('last_new_tweets_added', 'unavailable')}")
           PY
+          if [ "${{ steps.fetch.outcome }}" != "success" ]; then
+            echo "- failure detail:" >> "$GITHUB_STEP_SUMMARY"
+            echo '```text' >> "$GITHUB_STEP_SUMMARY"
+            tail -n 12 "$RUNNER_TEMP/fetch-${{ matrix.blogger }}.log" >> "$GITHUB_STEP_SUMMARY" || true
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Upload account snapshot
         if: success()
         uses: actions/upload-artifact@v4
