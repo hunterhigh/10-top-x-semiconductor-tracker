@@ -149,7 +149,13 @@ def in_scope(row, min_mentions, asof_date):
 
 
 def pick_provider(exchange, currency, ticker_mapped):
-    """Return provider key. _default (US/USD) -> akshare; mapped non-US -> eodhd."""
+    """Return a provider only for a reviewed instrument identity.
+
+    An unmapped symbol must not silently become a US/USD quote just because
+    AkShare has a convenient default endpoint.
+    """
+    if not ticker_mapped:
+        return None
     if ticker_mapped and (currency or "USD") != "USD":
         return "eodhd"
     return "akshare_us"
@@ -278,9 +284,9 @@ def save_cache(price_symbol, currency, price_unit, series):
 def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
     """Return (series, status, price_unit, reason). Mutate nothing on disk here."""
     sym = stock_doc["ticker"]
-    price_symbol = stock_doc.get("price_symbol") or sym
-    currency = stock_doc.get("currency") or "USD"
-    exchange = stock_doc.get("exchange") or "US"
+    price_symbol = stock_doc.get("price_symbol")
+    currency = stock_doc.get("currency")
+    exchange = stock_doc.get("exchange")
     ticker_mapped = bool(stock_doc.get("ticker_mapped"))
     first_mention = stock_doc.get("first_mention") or today_iso
     price_unit = "GBp" if currency == "GBp" else currency
@@ -288,12 +294,17 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
     tmap_entry = tmap.get(sym) if isinstance(tmap.get(sym), dict) else None
     verified = tmap_entry.get("verified", True) if tmap_entry else True
 
+    if not ticker_mapped or not price_symbol or not exchange or not currency:
+        return [], "unverified_symbol", (currency or ""), "unverified_instrument_identity"
+
     if tmap_entry and tmap_entry.get("no_price"):
         # known to have no fetchable source (e.g. Tokyo: EODHD doesn't cover it, akshare no Japan).
         # Skip the doomed API call; board still shows mentions/stance, just no price line.
         return [], "unavailable", price_unit, "configured_no_price_source"
 
     prov_key = pick_provider(exchange, currency, ticker_mapped)
+    if prov_key is None:
+        return [], "unverified_symbol", price_unit, "unverified_instrument_identity"
     provider = providers.get(prov_key)
     if provider is None:
         return [], "unavailable", price_unit, f"provider_unavailable:{prov_key}"
