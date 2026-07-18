@@ -63,6 +63,62 @@ The background extractor is provider-selectable: retain `ANTHROPIC_API_KEY` for 
 
 ## Data Access (Shared by All Modes)
 
+## Instrument Identity and Display (Mandatory)
+
+The tracker is **entity-first**, not ticker-first. A ticker is an identifier
+found in a post; it is not necessarily a human-readable company name or a US
+listing.
+
+- Before aggregation or rendering, use each stock record's `instrument`
+  object. Its `instrument_id`, `display_code`, `display_name`,
+  `display_market`, `aliases`, `currency`, `price_symbol`, and
+  `verification_status` are the canonical identity contract.
+- At every user-facing first mention (cards, consensus rows, compact chips,
+  tables, details, and Q&A headings), render **`code · original company name · market`**.
+  Example: `000660 · SK Hynix · KRX`. Do not translate the company name.
+- Preserve a post's original ticker/cashtag and text exactly in source-post
+  quotes. Aliases such as `000660.KS` may resolve to the same canonical
+  instrument but must remain traceable through the instrument aliases.
+- Never infer an unknown ticker is US/USD. An unverified entity remains
+  publishable as `code · Name unverified · Market unverified`, has no price
+  provider selected, and is added to `ticker_review.json` for human review.
+- Only `verification_status == "verified"` may drive exchange, currency, or
+  price-provider selection. A missing price source is shown as unavailable;
+  it is not replaced by a different-market quote.
+
+This rule is independent of the opinion/signal separation rule: resolving a
+company identity never changes which accounts contribute to consensus.
+
+## Information-source Profiles (Mandatory)
+
+The dashboard must expose an account directory and one internal Profile route
+per tracked account: `#account-{blogger_id}`. Every source chip, attribution
+row, and profile card must link to that route. Profile copy lives in
+`config/blogger_profiles.json` and must contain one-paragraph `bio` values for
+`en`, `zh`, and `zh-Hant`, two to four sourced links, and a human
+`reviewed_at` date. Stable editorial copy is presentation metadata and must
+not be rebuilt by, or require changes to, the bi-hourly tracking pipeline. Do
+not translate original posts, handles, reasons, or company names.
+
+`data/db/blogger_profiles.json` is generated from the published stock records.
+It may report collected-sample dates, activity, original-post link coverage,
+frequently tracked entities/industries, and recent linked posts. It must never
+assign an accuracy, quality, reliability, win-rate, performance, or investment
+score. Only `opinion` accounts may show extracted stance totals; `flow`,
+`news`, and `disclosure` pages must use their exact signal role. In particular,
+attribute a trade shown by the disclosure source to Trump, never to DJTRadar.
+
+Account Profiles are investor-first rather than biographies followed by a raw
+feed. Use the exact hierarchy and formulas in
+[references/dashboard-contract.md](references/dashboard-contract.md): 28-day
+entity board and adjacent summary first, stable sourced introduction below,
+then recurring original stated reasons and actual opposite-direction
+disagreement for opinion accounts only, followed by the complete classified
+28-day post archive collapsed at the bottom. Signal accounts receive an
+activity board and no derived stance modules. This is a renderer contract; do
+not add backend fields or alter extraction, entity, price, database, manifest,
+scheduler, or consensus logic to implement it.
+
 Every user message begins by checking the remote manifest before using any local files. Do this even if data was downloaded earlier in the same conversation a few minutes ago. If the remote manifest changed, download fresh data before answering. All modes then read from the same verified local copy for the rest of that single request.
 
 Cache rule:
@@ -118,12 +174,12 @@ if need_download:
     r.raise_for_status()
     z = zipfile.ZipFile(io.BytesIO(r.content))
 
-    # Extract data/db/ AND config/bloggers.json (skip raw_tweets, extracted, per-blogger scripts)
+    # Extract data/db/ AND both config registries (skip raw_tweets, extracted, per-blogger scripts)
     prefix = z.namelist()[0].split("/")[0]
     for name in z.namelist():
         rel = name[len(prefix) + 1:]
-        if rel == "config/bloggers.json":
-            target = CONFIG_PATH
+        if rel in ("config/bloggers.json", "config/blogger_profiles.json"):
+            target = os.path.join(WORK, os.path.basename(rel))
         elif rel.startswith("data/db/"):
             target = os.path.join(DB, rel[len("data/db/"):])
         else:
@@ -190,6 +246,14 @@ If ambiguous, default to Q&A if a stock name/ticker is mentioned, otherwise Dash
 
 Generates a self-contained interactive HTML file (Daily / Weekly / Monthly views + per-stock detail pages — no Quarterly view; deliberately cut to keep the backfill window to 30 days). When `BLOGGER_ID == "all"`, the dashboard also gets a "Consensus" tab showing today's and this week's most agreed-upon tickers **among the 7 opinion-type analysts only** (`signal_type == "opinion"` in `config/bloggers.json`) — the 3 independent-signal accounts (unusual_whales/StockMKTNewz/DJTRadar) never count toward this tab's numbers, per the signal-type separation rule in Compliance. Single-blogger dashboards (`BLOGGER_ID` = a specific account) do NOT show this tab — a consensus-surfaced ticker that blogger never mentioned would have no detail page to open, so it's intentionally scoped to `all` mode only. This is why Intent Detection defaults ambiguous/general "dashboard" requests to `BLOGGER_ID = "all"`: that's what makes consensus auto-surfaced by default.
 
+### Dashboard contract and workflow (mandatory)
+
+Read [references/dashboard-contract.md](references/dashboard-contract.md) before generating or modifying a dashboard. Follow its five stable phases: **refresh → model → render → validate → deliver**.
+
+Treat the report as a decision-orientation tool, not a data dump. Lead monthly and weekly views with the most net-bullish and net-bearish entities among distinct opinion accounts; lead daily views with new or changed explicit views. Keep signal sources out of stance math and primary ranking.
+
+Do not deliver a dashboard merely because generation exited successfully or image data appears in the HTML. Run the bundled validator and require a real browser check of computed avatar visibility, responsive overflow, Profile targets, and browse-table field separation.
+
 ### A1 — Determine language
 
 - Detect user's language from conversation.
@@ -208,6 +272,8 @@ Set environment variables (do NOT use CLI flags with values that could be mispar
 import subprocess
 os.environ["SERENITY_DB"] = DB
 os.environ["SERENITY_CONFIG"] = CONFIG_PATH
+os.environ["SERENITY_PROFILES"] = os.path.join(WORK, "blogger_profiles.json")
+os.environ["SERENITY_AVATARS"] = "fetch"
 # For non-built-in languages, also set:
 # os.environ["SERENITY_LANG_FILE"] = LANG_FILE
 result = subprocess.run(
@@ -221,7 +287,23 @@ result = subprocess.run(
 - `BLOGGER_ID`: from Intent Detection Step 1 — either a specific tracked account's `id`, or `"all"`.
 - Output: `{BLOGGER_ID or 'consensus'}-tracker-{DATE}[-{LANG}].html` in the WORK directory (`--blogger all` produces a `consensus-tracker-...` file).
 
-### A2.1 — Temporary language JSON for non-built-in languages
+### A2.1 — Validate the rendered artifact
+
+Do not continue to delivery until this exits successfully:
+
+```python
+report_path = os.path.join(WORK, f"{'consensus' if BLOGGER_ID == 'all' else BLOGGER_ID}-tracker-{DATE}{'' if LANG == 'en' else '-' + LANG}.html")
+validation = subprocess.run(
+    ["python", os.path.join(SKILL_SCRIPTS_DIR, "validate_dashboard.py"), report_path,
+     "--browser", "required", "--expected-avatars", "10"],
+    capture_output=True, text=True
+)
+validation.check_returncode()
+```
+
+The validator must fail on blank or overridden avatars, missing Profile targets, page-level responsive overflow, JavaScript-dependent bodies, duplicated avatar embeddings, or browse tables that mix date ranges into the performance value.
+
+### A2.2 — Temporary language JSON for non-built-in languages
 
 Same as before: read `STR["en"]` keys from `scripts/serenity_render.py`, translate values, write a UTF-8 JSON to `{WORK}/x-traders-lang-{code}.json`, set `SERENITY_LANG_FILE`, run with `--lang {code}`. RTL languages (ar/fa/he/ur) get their direction set automatically by the render script.
 
@@ -422,3 +504,61 @@ Only `explicit_stance` counts as a blogger expressing their own opinion, and onl
 - **Stale data**: if `manifest["generated_at"]` is >48 hours old, warn user data may not reflect the most recent posts.
 - **Few mentions**: if a stock (optionally scoped to one blogger) has <3 explicit stances, `analyze_stock.py` returns minimal/`no_explicit_stance` data. Tell the user: "This stock has only brief or background mentions — not enough data for a thesis analysis. Here's what's available: [present raw latest_mention]."
 - **One blogger has no data yet** (e.g. mid-backfill): if `total_mentions_by_blogger` is missing or 0 for the requested `BLOGGER_ID`, say so plainly rather than presenting an empty dashboard as if it were complete.
+
+---
+
+## Dashboard v2 — 2026-07-17 final UI override
+
+This section supersedes every earlier Dashboard-generation instruction that
+conflicts with the final handoff.  Read these files before creating or changing
+a dashboard:
+
+1. `handoff/10V-dashboard-backend-handoff-final-2026-07-17/README-START-HERE.md`
+2. `02-backend-contract/dashboard-render-contract.schema.json`
+3. `03-rules-and-tests/report-aggregation-rules.md` and `report_rules.py`
+4. `04-reference/CHANGE-HANDOFF-FULL.md`
+
+### Required workflow
+
+Run the deterministic chain in this order:
+
+`fetch incremental → extract new/raw-only posts → build_db → prices → dashboard_payload → JSON Schema + invariants → render_dashboard → browser validation → deliver`.
+
+- Dashboard dates and all daily/7-day/28-day windows use
+  `America/New_York`, never a fixed UTC offset.
+- Use `skill/scripts/dashboard_payload.py` to build the only render input and
+  validate it with Draft 2020-12 JSON Schema.  `render_dashboard.py` accepts
+  only that deterministic payload.
+- The approved UI is the single-file reference at
+  `01-final-ui/10-market-voices-complete.html`; its demo values must never be
+  copied into production output.
+- The production file may contain JavaScript because the final UI requires
+  interactive sidebars and `#stock=<display_code>` drilldowns.  It must still
+  be one self-contained HTML file with embedded avatars and no asset bundle.
+- Never infer stance or reasons while rendering.  `reasons`, `text`, and `url`
+  must come from the same structured mention.  Empty reasons are valid and
+  must not be invented.
+- Only the seven `signal_type=opinion` accounts with `explicit_stance` records
+  participate in consensus.  `flow`, `news`, and `disclosure` remain separate
+  signals even when they discuss the same instrument.
+- Missing or partial price data must display an explicit unavailable/pending
+  state, never `0%`.
+
+### Required commands
+
+```powershell
+python scripts/incremental_refresh.py --report-date <YYYY-MM-DD> # dry-run plan
+python scripts/incremental_refresh.py --execute --report-date <YYYY-MM-DD>
+python scripts/build_db.py
+python scripts/prices.py --asof <YYYY-MM-DD>
+python scripts/refresh_avatars.py
+python skill/scripts/dashboard_payload.py <YYYY-MM-DD> --output payload.json
+python skill/scripts/render_dashboard.py <YYYY-MM-DD> --output consensus-tracker-<YYYY-MM-DD>.html
+python skill/scripts/validate_dashboard.py consensus-tracker-<YYYY-MM-DD>.html --browser required --expected-avatars 10
+```
+
+For an incremental data refresh, read every account's `raw_tweets.json` water
+mark first and fetch only newer posts.  Do not initiate a full historical
+re-crawl or re-extraction merely to adopt this UI.  Record completed UI,
+contract, and rule changes in `CHANGE-HANDOFF-FULL.md` without overwriting the
+handoff snapshot.

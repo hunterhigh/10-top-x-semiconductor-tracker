@@ -1,66 +1,89 @@
-name: backfill
+name: trihourly-sync
 
 on:
+  schedule:
+    - cron: "0 */3 * * *"
   workflow_dispatch:
     inputs:
-      bloggers:
-        description: "Comma-separated blogger ids to backfill"
+      extraction_provider:
+        description: "auto, anthropic, or openai"
         required: false
-        default: "zephyr_z9,jukan05,KawzInvests,michaelsikand,ren_stocks,octopusycc,unusual_whales,StockMKTNewz,DJTRadar"
-      since_days:
-        description: "How many days of history to pull"
+        default: "auto"
+        type: choice
+        options: [auto, anthropic, openai]
+      extraction_model:
+        description: "Optional provider-specific model override"
         required: false
-        default: "30"
+        default: ""
+        type: string
 
-# Backfill writes the same facts as scheduled refresh.  It must not race it.
 concurrency:
   group: trihourly-pipeline-main
   cancel-in-progress: false
 
 jobs:
-  prepare:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - id: set-matrix
-        run: |
-          IFS=',' read -ra IDS <<< "${{ inputs.bloggers }}"
-          json=$(printf '"%s",' "${IDS[@]}" | sed 's/,$//')
-          echo "matrix=[$json]" >> "$GITHUB_OUTPUT"
-
   fetch-extract:
-    needs: prepare
+    name: fetch-extract (${{ matrix.blogger }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      # The free-tier API is shared across accounts; serialize fetches.
+      # twitterapi.io free-tier traffic is shared.  Keep all ten accounts
+      # serial so a new run is reliable instead of concurrently rate-limited.
       max-parallel: 1
       matrix:
-        blogger: ${{ fromJson(needs.prepare.outputs.matrix) }}
+        blogger:
+          - aleabitoreddit
+          - zephyr_z9
+          - jukan05
+          - KawzInvests
+          - michaelsikand
+          - ren_stocks
+          - octopusycc
+          - unusual_whales
+          - StockMKTNewz
+          - DJTRadar
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Cache pip packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ hashFiles('requirements.txt') }}
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Fetch bounded history
+      - name: Fetch incremental posts
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
-        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }} --backfill --since-date $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
-      - name: Extract opinions
+        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }}
+      - name: Extract new and overlap-day mentions
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          EXTRACT_PROVIDER: auto
-        run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
-      - name: Upload blogger snapshot
+          EXTRACT_PROVIDER: ${{ inputs.extraction_provider || 'auto' }}
+          EXTRACT_MODEL: ${{ inputs.extraction_model || '' }}
+        run: |
+          args=(--user "${{ matrix.blogger }}" --since "$(date -u -d '7 days ago' +%Y-%m-%d)")
+          if [ -n "$EXTRACT_MODEL" ]; then args+=(--model "$EXTRACT_MODEL"); fi
+          python scripts/extract.py "${args[@]}"
+      - name: Record account watermarks
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from datetime import datetime
+          from email.utils import parsedate_to_datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          account = "${{ matrix.blogger }}"
+          path = Path("data/bloggers") / account / "raw_tweets.json"
+          rows = json.loads(path.read_text()) if path.exists() else []
+          dates = []
+          for row in rows:
+              try: dates.append(parsedate_to_datetime(row.get("created_at") or row.get("createdAt")).astimezone(ZoneInfo("America/New_York")))
+              except Exception: pass
+          print(f"### @{account}")
+          print(f"- raw records: {len(rows)}")
+          print(f"- latest ET timestamp: {max(dates).isoformat() if dates else 'unavailable'}")
+          PY
+      - name: Upload account snapshot
         if: success()
         uses: actions/upload-artifact@v4
         with:
@@ -68,10 +91,9 @@ jobs:
           path: data/bloggers/${{ matrix.blogger }}/
           retention-days: 1
 
-  aggregate:
+  publish:
     needs: fetch-extract
-    # Partial refreshes are never allowed to publish a mixed snapshot.
-    if: ${{ needs.fetch-extract.result == 'success' }}
+    if: ${{ always() && !cancelled() }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -82,20 +104,34 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Download requested blogger artifacts
+      - name: Fail closed on incomplete account refresh
+        run: |
+          {
+            echo "## Trihourly production gate"
+            echo "- fetch/extract matrix result: ${{ needs.fetch-extract.result }}"
+            echo "- source revision: $GITHUB_SHA"
+          } >> "$GITHUB_STEP_SUMMARY"
+          test "${{ needs.fetch-extract.result }}" = "success" || {
+            echo "::error::One or more account refreshes failed; no database, dashboard, artifact, or commit was published."
+            exit 1
+          }
+      - name: Download all ten account snapshots
         uses: actions/download-artifact@v4
         with:
           pattern: blogger-data-*
           path: data/bloggers
           merge-multiple: false
-      - name: Require every requested artifact and flatten them
+      - name: Require exactly ten complete artifacts
         run: |
-          IFS=',' read -ra IDS <<< "${{ inputs.bloggers }}"
+          expected="aleabitoreddit zephyr_z9 jukan05 KawzInvests michaelsikand ren_stocks octopusycc unusual_whales StockMKTNewz DJTRadar"
           missing=""
-          for id in "${IDS[@]}"; do
+          for id in $expected; do
             test -d "data/bloggers/blogger-data-$id" || missing="$missing $id"
           done
           test -z "$missing" || { echo "::error::Missing account artifacts:$missing"; exit 1; }
+          echo "- account artifacts: 10/10" >> "$GITHUB_STEP_SUMMARY"
+      - name: Flatten account snapshot directories
+        run: |
           cd data/bloggers
           for d in blogger-data-*; do
             id="${d#blogger-data-}"
@@ -103,13 +139,14 @@ jobs:
             mv "$d"/* "$id"/
             rmdir "$d"
           done
-          echo "- requested account artifacts: ${#IDS[@]}/${#IDS[@]}" >> "$GITHUB_STEP_SUMMARY"
-      - name: Rebuild, price, and validate factual data
-        env:
-          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+      - name: Rebuild factual database and validate data
         run: |
           python scripts/build_db.py
           python scripts/verify_data.py
+      - name: Refresh prices and embedded avatars
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: |
           python scripts/prices.py
           python scripts/refresh_avatars.py
       - name: Choose latest ET data cutoff
@@ -121,7 +158,7 @@ jobs:
           )
           echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
           echo "- report cutoff (ET): $REPORT_DATE" >> "$GITHUB_STEP_SUMMARY"
-      - name: Run approved rules and pipeline tests
+      - name: Run approved rules and new pipeline tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
           python -m unittest tests.test_dashboard_payload tests.test_build_db_dates
@@ -148,7 +185,7 @@ jobs:
               "artifact_name": f"dashboard-{os.environ['GITHUB_SHA']}",
           }, ensure_ascii=False, indent=2), encoding="utf-8")
           PY
-      - name: Commit complete backfill snapshot
+      - name: Commit complete data snapshot
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -157,11 +194,14 @@ jobs:
             echo "- data snapshot: unchanged" >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          git commit -m "Backfill (${{ inputs.since_days }}d): ${{ inputs.bloggers }}"
+          git commit -m "Trihourly snapshot $REPORT_DATE"
+          # The shared concurrency group prevents collisions between Actions
+          # writers.  This handles an unrelated human/code commit that landed
+          # while the dashboard was building; a real conflict fails closed.
           git fetch origin main
           if ! git rebase origin/main; then
             git rebase --abort || true
-            echo "::error::Remote changed incompatibly while publishing; no backfill was pushed."
+            echo "::error::Remote changed incompatibly while publishing; no snapshot was pushed. The next scheduled run will retry from main."
             exit 1
           fi
           git push origin HEAD:main
@@ -175,7 +215,7 @@ jobs:
       - name: Publish artifact summary
         run: |
           {
-            echo "## Published Backfill Dashboard"
+            echo "## Published Dashboard"
             echo "- Artifact: dashboard-${{ github.sha }} (retention: 30 days)"
             echo "- HTML: dashboard-$REPORT_DATE-$GITHUB_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."

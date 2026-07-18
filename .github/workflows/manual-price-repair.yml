@@ -1,12 +1,10 @@
-name: bihourly-prices
+name: manual-price-repair
+
 on:
-  schedule:
-    # Runs 45 minutes after each content sync; shared concurrency prevents overlap.
-    - cron: "45 */2 * * *"
   workflow_dispatch:
     inputs:
       require_price_scope:
-        description: "Fail if any in-scope ticker remains pending (use for first backfill)"
+        description: "Fail if any in-scope ticker remains pending"
         required: false
         default: false
         type: boolean
@@ -17,16 +15,11 @@ on:
         type: boolean
 
 concurrency:
-  group: bihourly-pipeline-main
+  group: trihourly-pipeline-main
   cancel-in-progress: false
 
 jobs:
   prices:
-    # Ticker-level, NOT per-blogger: data/db/stocks/*.json is shared across all
-    # 10 tracked bloggers (see build_db.py), and prices.py fetches once per
-    # ticker regardless of how many bloggers mention it. Do NOT matrix this by
-    # blogger — that would burn the EODHD free-tier daily call budget 10x over
-    # for symbols multiple trackers happen to cover in common.
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,11 +28,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Cache pip packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ hashFiles('requirements.txt') }}
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Update prices
@@ -51,17 +39,29 @@ jobs:
           else
             python scripts/prices.py
           fi
-      - name: Verify data
+      - name: Verify price result
         run: |
           if [ "${{ inputs.require_price_scope }}" = "true" ]; then
             python scripts/verify_data.py --require-price-scope
           else
             python scripts/verify_data.py
           fi
-      - name: Commit updated data
+      - name: Commit manual price repair
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Bi-hourly prices $(date -u +%Y-%m-%dT%H:%M)"
-          git push
+          if git diff --cached --quiet; then
+            echo "- price data: unchanged" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m "Manual price repair $(date -u +%Y-%m-%dT%H:%M)"
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort || true
+            echo "::error::Remote changed incompatibly while publishing; no repair was pushed."
+            exit 1
+          fi
+          git push origin HEAD:main
+          echo "## Manual price repair" >> "$GITHUB_STEP_SUMMARY"
+          echo "- published commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
