@@ -107,10 +107,12 @@ def analyze(path, as_of=None, blogger_id=None):
     with open(path, encoding='utf-8') as f:
         data = json.load(f)
 
-    ticker = data.get('ticker', '')
-    company = data.get('company', '')
+    instrument = data.get('instrument') or {}
+    ticker = instrument.get('display_code') or data.get('ticker', '')
+    company = instrument.get('display_name') or data.get('company', '')
+    market = instrument.get('display_market') or data.get('exchange') or 'Market unverified'
     industry = data.get('industry', '')
-    currency = data.get('currency', 'USD')
+    currency = data.get('currency') or ''
 
     # ── Filter mentions by as-of date and (optionally) by blogger ──────
     mentions = data.get('mentions', [])
@@ -125,7 +127,7 @@ def analyze(path, as_of=None, blogger_id=None):
     # ── Early exit: no data ────────────────────────────────────────────
     if not all_sorted:
         return {
-            "ticker": ticker, "company": company, "industry": industry,
+            "ticker": ticker, "company": company, "market": market, "instrument": instrument, "industry": industry,
             "currency": currency, "status": "no_mentions",
             "arc_phases": [], "transitions": [],
             "first_mention": None, "latest_mention": None,
@@ -347,6 +349,8 @@ def analyze(path, as_of=None, blogger_id=None):
     return {
         "ticker": ticker,
         "company": company,
+        "market": market,
+        "instrument": instrument,
         "industry": industry,
         "currency": currency,
         "status": "ok" if explicit else "no_explicit_stance",

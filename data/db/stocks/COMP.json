@@ -1,10 +1,25 @@
 {
   "ticker": "COMP",
   "cashtag": "Nasdaq",
-  "price_symbol": "COMP",
-  "exchange": "US",
-  "currency": "USD",
+  "instrument": {
+    "instrument_id": "UNVERIFIED:COMP",
+    "display_code": "COMP",
+    "display_name": "Nasdaq Composite Index",
+    "display_market": "Market unverified",
+    "aliases": [
+      "COMP"
+    ],
+    "market": null,
+    "country": null,
+    "currency": null,
+    "price_symbol": null,
+    "verification_status": "unverified"
+  },
+  "price_symbol": null,
+  "exchange": null,
+  "currency": null,
   "ticker_mapped": false,
+  "verification_status": "unverified",
   "company": "Nasdaq Composite Index",
   "industry": null,
   "thesis_summary": null,
@@ -22,6 +37,7 @@
       "tweet_id": "2072001466579992873",
       "blogger_id": "unusual_whales",
       "date": "2026-06-30",
+      "created_at": "2026-06-30T12:57:00-04:00",
       "stance": "neutral",
       "mention_type": "background",
       "reasons": [],

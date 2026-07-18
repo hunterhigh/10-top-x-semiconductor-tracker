@@ -29,12 +29,31 @@
 
 ## Data refresh status
 
-No external fetch, extraction, price refresh, or database rebuild was run in
-this implementation pass because the working tree already contains active
-uncommitted database changes.  The next operator must run the incremental
-workflow from `skill/SKILL.md`, then record the cutoff date, validation result,
-and generated HTML SHA-256 here.  The 2026-07-17 handoff package itself remains
-an immutable source snapshot.
+The 2026-07-17 handoff package remains an immutable source snapshot. The
+following recoverable baseline supersedes the earlier “not yet rebuilt” note.
+
+## 2026-07-18 — recoverable v2 data baseline
+
+- Rebuilt deterministically from the committed-ready local
+  `raw_tweets.json`, `extracted.json`, and `state.json` files for all ten
+  tracked accounts. No TwitterAPI.io request, LLM extraction, or price API
+  request was made.
+- Published source inputs, database, ticker/instrument registry, review queue,
+  10-account coverage statistics, and cached public X avatars together.
+- Baseline cutoff: **2026-07-17 ET**; 1,628 entities, 19,307 structured
+  mentions, and 10/10 accounts with raw/extracted/state files.
+- `verify_data.py` passed with source-binding fields (`created_at`, ET date,
+  tweet id, account id, text, URL, and list-valued reasons) present on every
+  published mention. It also validates the 10 profile records and instrument
+  identity/price-status coverage.
+- Handoff aggregation tests passed. The rendered local validation artifact had
+  10 visible embedded avatars, 1,628 stock drilldowns, 10 account panels, and
+  zero page overflow at 320, 768, and 1440px. Local artifact SHA-256:
+  `dashboard.html` `E8C8494F1F24D6C3E6A9D9BBF57F3D99953DAE64C7DD90016FBD5F8ABA472F16`;
+  `payload.json` `B9455800C565FC179EFE906BC79DA17E037E2ADCF5C253E1ADB4ACD83604438C`.
+- Generated HTML is deliberately excluded from Git. The first funded manual
+  production run will generate the 30-day Actions Artifact and record its run
+  URL, commit SHA, cutoff, and artifact SHA-256 here.
 
 ## 2026-07-18 — GitHub Actions production workflow prepared
 

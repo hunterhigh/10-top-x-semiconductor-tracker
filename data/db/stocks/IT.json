@@ -1,10 +1,25 @@
 {
   "ticker": "IT",
   "cashtag": "$IT",
-  "price_symbol": "IT",
-  "exchange": "US",
-  "currency": "USD",
+  "instrument": {
+    "instrument_id": "UNVERIFIED:IT",
+    "display_code": "IT",
+    "display_name": "Gartner",
+    "display_market": "Market unverified",
+    "aliases": [
+      "IT"
+    ],
+    "market": null,
+    "country": null,
+    "currency": null,
+    "price_symbol": null,
+    "verification_status": "unverified"
+  },
+  "price_symbol": null,
+  "exchange": null,
+  "currency": null,
   "ticker_mapped": false,
+  "verification_status": "unverified",
   "company": "Gartner",
   "industry": null,
   "thesis_summary": null,
@@ -22,6 +37,7 @@
       "tweet_id": "2072159684652339466",
       "blogger_id": "StockMKTNewz",
       "date": "2026-06-30",
+      "created_at": "2026-06-30T23:25:42-04:00",
       "stance": "neutral",
       "mention_type": "background",
       "reasons": [],
