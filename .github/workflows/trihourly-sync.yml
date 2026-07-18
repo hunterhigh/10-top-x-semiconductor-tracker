@@ -1,8 +1,10 @@
 name: trihourly-sync
 
 on:
-  schedule:
-    - cron: "0 */3 * * *"
+  # Cloudflare Cron is the sole automatic trigger. Keeping GitHub's own
+  # `schedule` here would create two production writers for the same slot.
+  repository_dispatch:
+    types: [cloudflare_trihourly_sync]
   workflow_dispatch:
     inputs:
       extraction_provider:
@@ -47,6 +49,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Record trigger provenance
+        env:
+          TRIGGER_EVENT: ${{ github.event_name }}
+          CF_SLOT_UTC: ${{ github.event.client_payload.slot_utc || 'manual' }}
+          CF_DISPATCHED_AT: ${{ github.event.client_payload.dispatched_at_utc || 'manual' }}
+        run: |
+          {
+            echo "## Trihourly trigger"
+            echo "- event: $TRIGGER_EVENT"
+            echo "- Cloudflare slot UTC: $CF_SLOT_UTC"
+            echo "- Cloudflare dispatched at UTC: $CF_DISPATCHED_AT"
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Fetch incremental posts
