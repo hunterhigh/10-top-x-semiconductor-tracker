@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "UNVERIFIED:TE",
     "display_code": "TE",
-    "display_name": "Trane Technologies (or similar TE ticker)",
+    "display_name": "Tronox Holdings",
     "display_market": "Market unverified",
     "aliases": [
       "TE"
@@ -20,19 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Trane Technologies (or similar TE ticker)",
+  "company": "Tronox Holdings",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-19",
-  "last_mention": "2026-07-16",
-  "total_mentions": 32,
+  "last_mention": "2026-07-19",
+  "total_mentions": 33,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 28,
-    "StockMKTNewz": 4
+    "StockMKTNewz": 5
   },
   "total_mentions_by_signal_type": {
     "opinion": 28,
-    "news": 4
+    "news": 5
   },
   "mentions": [
     {
@@ -830,11 +830,36 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2078940771403682140",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-19",
+      "created_at": "2026-07-19T16:31:19-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "turnaround would be cool"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$TE",
+      "text": "@sunxliao $TE \n\nA turn around would be cool",
+      "url": "https://x.com/StockMKTNewz/status/2078940771403682140",
+      "kind": "reply",
+      "engagement": {
+        "views": 3388,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-07-18T08:09:36.434673+00:00",
+  "price_updated_at": "2026-07-20T03:36:14.568148+00:00",
   "price_reason": "unverified_instrument_identity"
 }
