@@ -52,10 +52,23 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
                     break
         if "function showStock" not in html or "#stock=" not in html or "function showPerson" not in html:
             fail(errors, "v2 report lacks required stock/person routing")
+        required_runtime_markers = {
+            'class="voice-name"': "five-column consensus person names",
+            "data-quarter-sort": "monthly sortable headers",
+            "quarter-account-popover": "monthly participant popovers",
+            "data-instrument-more": "account evidence folding",
+            "IntersectionObserver": "scroll-synchronized report navigation",
+            "consistency_percentage": "canonical backend consistency values",
+            "此前 7 天未达到门槛，本窗口形成至少 3 个明确看多账号": "canonical weekly-change threshold",
+        }
+        for runtime_marker, label in required_runtime_markers.items():
+            if runtime_marker not in html:
+                fail(errors, f"v2 report lacks {label}")
+        monthly_rows = len(payload.get("monthly", {}).get("rows", [])) if isinstance(payload, dict) else 0
         return errors, {
             "embedded_avatars": len(avatars), "avatar_identities": len(avatars),
             "stock_profiles": len(drills), "account_profiles": len(people),
-            "browse_rows_checked": 0, "v2_payload": True,
+            "browse_rows_checked": monthly_rows, "v2_payload": True,
         }
 
     fail(errors, "legacy dashboard format is unsupported; render with render_dashboard.py")
@@ -180,6 +193,33 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                 )
                 if symbol_style["color"] != symbol_style["parent"] or symbol_style["decoration"] != "none":
                     fail(errors, "v2 stock-symbol route link no longer retains the frozen card typography")
+            voice_lines = page.locator(".voice-line")
+            if voice_lines.count():
+                malformed_lines = voice_lines.evaluate_all(
+                    "els => els.filter(e => !e.querySelector('.mini-avatar') || !e.querySelector('.voice-name') || !e.querySelector('.stance-word') || !e.querySelector('.voice-reason') || !e.querySelector('.source-post')).length"
+                )
+                if malformed_lines:
+                    fail(errors, f"v2 has {malformed_lines} consensus rows that do not retain the approved five-column structure")
+            else:
+                fail(errors, "v2 report has no rendered consensus evidence rows")
+            month_sort = page.locator('[data-quarter-sort="posts"]')
+            if month_sort.count() != 1:
+                fail(errors, "v2 monthly table does not retain its sortable header controls")
+            else:
+                if "active desc" not in (month_sort.get_attribute("class") or ""):
+                    fail(errors, "v2 monthly post sort is not initially descending")
+                month_sort.click()
+                month_sort = page.locator('[data-quarter-sort="posts"]')
+                if "active asc" not in (month_sort.get_attribute("class") or ""):
+                    fail(errors, "v2 monthly post sort does not toggle to ascending order")
+            participant_trigger = page.locator(".quarter-account-trigger").first
+            if participant_trigger.count():
+                participant_trigger.focus()
+                if not participant_trigger.locator(".quarter-account-popover").count():
+                    fail(errors, "v2 monthly participant trigger has no approved account popover")
+            unavailable_returns = page.locator(".period-return.unavailable")
+            if unavailable_returns.count() and unavailable_returns.first.evaluate("e => e.classList.contains('up') || e.classList.contains('down')"):
+                fail(errors, "v2 missing price is still styled as a real gain or loss")
             stock_href = page.locator('a[href^="#stock="]').first.get_attribute("href")
             if stock_href:
                 page.goto(path.resolve().as_uri() + stock_href)
@@ -237,6 +277,18 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
             page.locator("#grid .voice").first.click()
             if not page.locator("#drawer.open .big").count() or not page.locator("#drawer.open .instrument-list").count():
                 fail(errors, "v2 account drawer does not retain the frozen counters and instrument list")
+            else:
+                extra_posts = page.locator("#drawer.open .extra-post")
+                if extra_posts.count() and extra_posts.first.is_visible():
+                    fail(errors, "v2 account drawer does not collapse excess evidence by default")
+                more = page.locator("#drawer.open [data-instrument-more]").first
+                if more.count():
+                    more.click()
+                    if page.locator("#drawer.open .instrument-group.expanded").count() != 1:
+                        fail(errors, "v2 account evidence expansion control does not work")
+                page.keyboard.press("Escape")
+                if page.locator("#drawer.open").count():
+                    fail(errors, "v2 account drawer does not close on Escape")
             browser.close()
             return errors, {"browser_checked": True, "avatar_identities_rendered": avatar_count, "overflow_px": overflow, "v2_payload": True}
         avatar_ids = page.locator(".portrait-photo").evaluate_all(

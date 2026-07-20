@@ -22,7 +22,11 @@ def report_html(avatar: str = "data:image/svg+xml;base64,AA==") -> str:
     return (
         "<!doctype html><!-- final-ui-sha256: fixture -->"
         f"<script>const PAYLOAD={json.dumps(payload)};const esc=1;"
-        "function showStock(){} function showPerson(){} // #stock=</script>"
+        "function showStock(){} function showPerson(){} // #stock=\n"
+        "const consistency_percentage=1; new IntersectionObserver(()=>{});\n"
+        "const note='此前 7 天未达到门槛，本窗口形成至少 3 个明确看多账号';</script>"
+        '<span class="voice-name"></span><button data-quarter-sort="posts"></button>'
+        '<span class="quarter-account-popover"></span><button data-instrument-more></button>'
     )
 
 
