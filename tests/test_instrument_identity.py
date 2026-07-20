@@ -11,6 +11,15 @@ from prices import pick_provider  # noqa: E402
 
 
 class InstrumentIdentityTests(unittest.TestCase):
+    def test_reviewed_us_ticker_resolves_to_priced_identity(self):
+        res = resolve("AAPL", {"_us_confirmed": ["AAPL"], "AAPL": {"company": "Apple"}})
+
+        self.assertTrue(res["mapped"])
+        self.assertEqual(res["verification_status"], "verified")
+        self.assertEqual(res["price_symbol"], "AAPL")
+        self.assertEqual(res["exchange"], "US")
+        self.assertEqual(res["currency"], "USD")
+
     def test_verified_krx_entry_keeps_market_and_aliases(self):
         entry = {
             "instrument_id": "KRX:000660", "company": "SK Hynix", "exchange": "KRX",
