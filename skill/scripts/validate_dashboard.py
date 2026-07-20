@@ -199,6 +199,18 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                             fail(errors, "v2 chart evidence rows do not retain the approved author avatars")
                         if "暂无结构化理由" in frame.locator("body").inner_text():
                             fail(errors, "v2 stock drilldown still renders the obsolete empty-reason fallback")
+                        chart_triggers = frame.locator("#chartEvents .daily-trigger")
+                        if chart_triggers.count():
+                            chart_trigger = chart_triggers.first
+                            chart_trigger.click()
+                            active_event = frame.locator("#chartEvents .daily-event.active")
+                            if active_event.count() != 1:
+                                fail(errors, "v2 chart evidence click does not retain exactly one active popover")
+                            elif active_event.evaluate("e => getComputedStyle(e).zIndex") != "40":
+                                fail(errors, "v2 active chart popover is not elevated above sibling chart events")
+                            chart_trigger.press("Escape")
+                            if frame.locator("#chartEvents .daily-event.active").count():
+                                fail(errors, "v2 chart evidence popover does not close on Escape")
                         bull_sort = frame.locator('[data-kol-sort="bull"]')
                         if bull_sort.count() != 1:
                             fail(errors, "v2 stock drilldown does not retain the frozen KOL sort controls")

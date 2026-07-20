@@ -42,6 +42,9 @@ def _stock_detail_binding() -> str:
 (() => {
   const D=window.__STOCK_DETAIL__, P=window.__STOCK_PEOPLE__||{};
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const chartOverlayStyle=document.createElement('style');
+  chartOverlayStyle.textContent=`.daily-event.active,.daily-event:hover,.daily-event:focus-within{z-index:40}.daily-event.active .daily-popover{opacity:1;visibility:visible;transform:translate(-50%,0)}.daily-event.edge-left.active .daily-popover{transform:translateY(0)}.daily-event.edge-right.active .daily-popover{transform:translateY(0)}`;
+  document.head.append(chartOverlayStyle);
   const label={bullish:'看多',bearish:'看空',neutral:'中性'};
   const status=p=>p&&p.percentage!==null?`${p.percentage>=0?'+':''}${Number(p.percentage).toFixed(2)}%`:(p?.status==='pending'?'行情待补齐':'暂无行情');
   const tone=p=>p&&p.percentage!==null?(p.percentage>=0?'up':'down'):'neutral';
@@ -90,7 +93,7 @@ def _stock_detail_binding() -> str:
     const byDate=Object.fromEntries((D.mention_days||[]).map(x=>[x.date,x.evidence]));
     const eventTone=rows=>rows.some(row=>row.stance==='bearish')&&rows.some(row=>row.stance==='bullish')?'mixed':rows.some(row=>row.stance==='bearish')?'bear':rows.some(row=>row.stance==='bullish')?'bull':'neutral';
     const eventRow=row=>{const person=P[row.blogger_id]||{},name=person.display_name||row.blogger_id,reason=displayEvidence(row);return `<div class="event-row"><a class="event-person" href="${esc(person.x_url||'#')}" target="_blank" rel="noopener"><img src="${esc(person.avatar_data_uri||'')}" alt="${esc(name)}">${esc(name)}</a><span class="event-stance ${row.stance}">${esc(displayLabel(row))}</span><span class="event-reason" title="${esc(reason)}">${esc(reason)}</span><a class="event-source" href="${esc(row.url)}" target="_blank" rel="noopener">\u539f\u5e16 \u2197</a></div>`};
-    const events=points.map((point,i)=>({point,i,rows:byDate[point.date]||[]})).filter(event=>event.rows.length).map(event=>{const [x,y]=xy[event.i],rows=event.rows.slice(0,6),peopleCount=new Set(event.rows.map(row=>row.blogger_id)).size;return `<div class="daily-event ${eventTone(rows)}" style="left:${x}px;top:${y}px"><button class="daily-trigger" type="button" aria-label="${event.rows.length} \u6761\u539f\u5e16"></button><div class="daily-popover"><h3>${event.point.date}<span>${peopleCount} \u4f4d\u4eba\u7269\u63d0\u53ca</span></h3>${rows.map(eventRow).join('')}</div></div>`}).join('');
+    const events=points.map((point,i)=>({point,i,rows:byDate[point.date]||[]})).filter(event=>event.rows.length).map(event=>{const [x,y]=xy[event.i],rows=event.rows.slice(0,6),peopleCount=new Set(event.rows.map(row=>row.blogger_id)).size,edge=event.i<=3?'edge-left':event.i>=points.length-4?'edge-right':'';return `<div class="daily-event ${eventTone(rows)} ${edge}" style="left:${x}px;top:${y}px"><button class="daily-trigger" type="button" aria-label="${event.rows.length} \u6761\u539f\u5e16" aria-expanded="false"></button><div class="daily-popover"><h3>${event.point.date}<span>${peopleCount} \u4f4d\u4eba\u7269\u63d0\u53ca</span></h3>${rows.map(eventRow).join('')}</div></div>`}).join('');
     document.querySelector('#chartEvents').innerHTML=events;
   }
   function renderKol(key){
@@ -111,6 +114,11 @@ def _stock_detail_binding() -> str:
     document.querySelectorAll('.kol-expand').forEach(button=>button.onclick=()=>{const block=button.closest('.kol-person-block'),open=block.classList.toggle('open');button.textContent=open?'\u6536\u8d77 \u2197':'\u67e5\u770b\u5168\u90e8 \u2197'});
   }
   document.querySelector('#kolGrid').addEventListener('click',event=>{const button=event.target.closest('[data-kol-sort]');if(!button)return;const key=button.dataset.kolSort;kolSortDirection=kolSortKey===key?(kolSortDirection==='desc'?'asc':'desc'):'desc';kolSortKey=key;renderKol(activeKolWindow)});
+  const chartEventsNode=document.querySelector('#chartEvents');
+  const closeChartPopover=()=>chartEventsNode.querySelectorAll('.daily-event.active').forEach(item=>{item.classList.remove('active');item.querySelector('.daily-trigger')?.setAttribute('aria-expanded','false')});
+  chartEventsNode.addEventListener('click',event=>{const trigger=event.target.closest('.daily-trigger');if(trigger){event.preventDefault();const item=trigger.closest('.daily-event'),wasActive=item.classList.contains('active');closeChartPopover();if(!wasActive){item.classList.add('active');trigger.setAttribute('aria-expanded','true')}return}if(!event.target.closest('.daily-popover'))closeChartPopover()});
+  document.addEventListener('pointerdown',event=>{if(!chartEventsNode.contains(event.target))closeChartPopover()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeChartPopover()});
   document.querySelectorAll('.window-tab').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.window-tab').forEach(x=>x.classList.toggle('active',x===button));setWindow(button.dataset.window)}));
   document.querySelector('#back').addEventListener('click',event=>{event.preventDefault();parent.postMessage({type:'stockDetailBack'},'*')});
   drawChart();setWindow('day');addEventListener('resize',drawChart);
