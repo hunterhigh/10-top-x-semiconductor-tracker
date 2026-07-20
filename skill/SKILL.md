@@ -69,7 +69,7 @@ The final UI reference is `01-final-ui/10-market-voices-complete.html`. It suppl
 The only production workflow is:
 
 ```text
-refresh → extract → build_db → verify_data → prices → refresh_avatars
+refresh → extract → build_db → EODHD identity resolution → build_db → verify_data → prices → refresh_avatars
 → payload → Schema and invariant validation → v2 render → browser validation → Artifact delivery
 ```
 
@@ -90,6 +90,8 @@ Run from the repository root, after the data source is confirmed current:
 ```powershell
 python scripts/incremental_refresh.py --report-date <YYYY-MM-DD> # planning only
 python scripts/incremental_refresh.py --execute --report-date <YYYY-MM-DD>
+python scripts/build_db.py
+python scripts/resolve_tickers_eodhd.py --apply
 python scripts/build_db.py
 python scripts/verify_data.py
 python scripts/prices.py --asof <YYYY-MM-DD>

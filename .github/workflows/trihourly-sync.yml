@@ -169,8 +169,12 @@ jobs:
             mv "$d"/* "$id"/
             rmdir "$d"
           done
-      - name: Rebuild factual database and validate data
+      - name: Rebuild, resolve instrument identities, and validate data
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
         run: |
+          python scripts/build_db.py
+          python scripts/resolve_tickers_eodhd.py --apply
           python scripts/build_db.py
           python scripts/verify_data.py
       - name: Refresh prices and embedded avatars

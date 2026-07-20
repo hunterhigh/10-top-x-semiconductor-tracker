@@ -109,6 +109,8 @@ jobs:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
         run: |
           python scripts/build_db.py
+          python scripts/resolve_tickers_eodhd.py --apply
+          python scripts/build_db.py
           python scripts/verify_data.py
           python scripts/prices.py
           python scripts/refresh_avatars.py

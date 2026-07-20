@@ -122,3 +122,16 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
 - Verification passed: project tests, 7 handoff aggregation tests, real 7/18
   payload Schema/invariants, 10 embedded avatars, stock drilldown routing, and
   320/768/1440px browser checks (zero page-level horizontal overflow).
+
+## 2026-07-20 — EODHD instrument identity resolution
+
+- Added a fail-closed EODHD Search API resolver for unverified conventional US
+  ticker symbols. Automatic application requires one exact primary US common
+  stock with USD currency and a matching extracted company-name hint.
+- Resolution results and failure reasons are retained in
+  `data/ticker_resolution_eodhd.json`; verified entries are persisted to the
+  existing instrument registry before the database is rebuilt.
+- Wired the resolver into trihourly, backfill, and incremental refresh paths,
+  reusing the existing `EODHD_API_KEY` GitHub Actions secret.
+- Verification passed: Python compilation, 17 project tests, focused identity
+  resolver tests, and `git diff --check`.

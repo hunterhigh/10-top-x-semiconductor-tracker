@@ -49,6 +49,8 @@ def main() -> int:
         if not since: raise RuntimeError(f"No raw-data watermark for {bid}; use the explicit backfill workflow instead")
         steps += [(f"fetch {bid}", command("scripts/fetch_tweets.py", "--user", bid)), (f"extract {bid} since {since}", command("scripts/extract.py", "--user", bid, "--since", since))]
     steps.append(("rebuild database", command("scripts/build_db.py")))
+    steps.append(("resolve instrument identities", command("scripts/resolve_tickers_eodhd.py", "--apply")))
+    steps.append(("rebuild verified database", command("scripts/build_db.py")))
     if not args.skip_prices: steps.append(("refresh prices", command("scripts/prices.py", "--asof", args.report_date) if args.report_date else command("scripts/prices.py")))
     steps.append(("refresh avatars", command("scripts/refresh_avatars.py")))
     if args.report_date: steps.append(("render v2 dashboard", command("skill/scripts/render_dashboard.py", args.report_date, "--output", f"consensus-tracker-{args.report_date}.html")))
