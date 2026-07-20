@@ -1,6 +1,6 @@
 {
   "ticker": "YUM",
-  "cashtag": "Yum Brands",
+  "cashtag": "$YUM",
   "instrument": {
     "instrument_id": "US:YUM",
     "display_code": "YUM",
@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-16",
-  "last_mention": "2026-06-16",
-  "total_mentions": 2,
+  "last_mention": "2026-07-20",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1,
+    "StockMKTNewz": 2,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1,
+    "news": 2,
     "flow": 1
   },
   "mentions": [
@@ -77,6 +77,32 @@
         "likes": 2669,
         "reposts": 232,
         "replies": 172
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079261363319590923",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T13:45:14-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "visits to Taco Bell locations plummeted following parasite outbreak linked to lettuce supplier",
+        "foot traffic almost 19% below daily average for Fridays in 2026 on July 17th"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$YUM",
+      "text": "Visits to Taco Bell $YUM locations have plummeted following a parasite outbreak that authorities had linked to lettuce sold by one of the company’s suppliers\n\nOn July 17th, foot traffic was almost 19% below Taco Bell’s daily average for Fridays so far in 2026, according to Placer AI - Bloomberg",
+      "url": "https://x.com/StockMKTNewz/status/2079261363319590923",
+      "kind": "post",
+      "engagement": {
+        "views": 13300,
+        "likes": 17,
+        "reposts": 5,
+        "replies": 10
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -166,9 +192,13 @@
     {
       "date": "2026-07-16",
       "close": 152.1
+    },
+    {
+      "date": "2026-07-17",
+      "close": 147.92
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-17T03:55:02.888700+00:00"
+  "price_updated_at": "2026-07-20T18:22:43.462484+00:00"
 }
