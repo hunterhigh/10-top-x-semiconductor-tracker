@@ -55,12 +55,14 @@ config/{bloggers.json,blogger_profiles.json}
 
 ## Dashboard v2: sole production path
 
-Before building or changing the dashboard, read these required materials in order:
+Before building or changing the dashboard, read these packaged required materials in order:
 
-1. `handoff/10V-dashboard-backend-handoff-final-2026-07-17/README-START-HERE.md`
-2. `02-backend-contract/dashboard-render-contract.schema.json`
-3. `03-rules-and-tests/report-aggregation-rules.md` and `report_rules.py`
-4. `04-reference/CHANGE-HANDOFF-FULL.md`
+1. `references/dashboard-contract.md`
+2. `references/dashboard-render-contract.schema.json`
+3. `references/report_rules.py`
+
+In a repository checkout, the matching originals remain under the 7/17 handoff.
+CI verifies that the packaged final UI, Schema, and rules exactly match them.
 
 The final UI reference is `01-final-ui/10-market-voices-complete.html`. It supplies layout and interaction only: its demonstration arrays, people, reasons, prices, and stock data are never production input.
 
@@ -97,6 +99,16 @@ python skill/scripts/render_dashboard.py <YYYY-MM-DD> --output dashboard.html
 python skill/scripts/validate_dashboard.py dashboard.html --browser required --expected-avatars 10
 ```
 
+For an installed local Skill without a repository checkout, these commands
+first synchronize a verified read-only cache from cloud `main`; it is stored
+outside the Skill directory and never uses production credentials:
+
+```powershell
+python scripts/snapshot_sync.py
+python scripts/render_dashboard.py 2026-07-18 --output dashboard.html
+python scripts/query_stock.py NVDA --blogger aleabitoreddit
+```
+
 For production, GitHub Actions is the only publisher. Cloudflare Cron dispatches
 the one atomic three-hour workflow at `5 */3 * * *` UTC; GitHub's own
 `schedule` must remain absent. The workflow has a shared concurrency group,
@@ -109,10 +121,10 @@ slot and GitHub records the trigger provenance in its Step Summary.
 
 Resolve an account from `config/bloggers.json`. For a company, first resolve through `data/db/index.json`; ambiguity requires clarification. Do not use model memory to assign a ticker, exchange, or listing.
 
-For a single-account question, run:
+For a single-account question from an installed Skill, run:
 
 ```powershell
-python skill/scripts/analyze_stock.py <db>/stocks/<TICKER>.json --blogger <BLOGGER_ID>
+python scripts/query_stock.py <TICKER> --blogger <BLOGGER_ID>
 ```
 
 For a cross-account question, omit `--blogger`, then show the seven opinion accounts individually: bullish, bearish, neutral/no clear direction, or not covered in the requested ET window. Report the three signal accounts in a separate “Other signals” section, with no stance math and no wording that they confirm the consensus.
@@ -121,7 +133,7 @@ For every narrative, include the report date/window, original links, account att
 
 ## Skill package and release checks
 
-The package retains `agents/openai.yaml`, this `SKILL.md`, `scripts/analyze_stock.py`, `scripts/dashboard_payload.py`, `scripts/render_dashboard.py`, `scripts/validate_dashboard.py`, and `references/dashboard-contract.md`.
+The package retains `agents/openai.yaml`, this `SKILL.md`, deterministic scripts, and its version-controlled final UI, Schema and aggregation-rule resources. It does not require a sibling repository checkout.
 
 CI runs the handoff aggregation tests, ET/DST tests, payload Schema and invariants, avatar and evidence checks, and browser validation. Record production changes and verification results in `handoff/IMPLEMENTATION-LOG.md`; retain the original handoff changelog without rewriting it.
 

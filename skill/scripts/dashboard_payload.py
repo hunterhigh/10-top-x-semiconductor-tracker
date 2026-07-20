@@ -22,9 +22,12 @@ from typing import Any, Iterable
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent.parent
-HANDOFF_DIR = PROJECT_DIR / "handoff" / "10V-dashboard-backend-handoff-final-2026-07-17"
-SCHEMA_PATH = HANDOFF_DIR / "02-backend-contract" / "dashboard-render-contract.schema.json"
-RULES_PATH = HANDOFF_DIR / "03-rules-and-tests" / "report_rules.py"
+REFERENCES_DIR = SCRIPT_DIR.parent / "references"
+# These are packaged with the Skill so a locally installed Skill never relies
+# on a sibling repository checkout. CI compares their hashes with the handoff
+# originals, which remain the source of truth for this contract.
+SCHEMA_PATH = REFERENCES_DIR / "dashboard-render-contract.schema.json"
+RULES_PATH = REFERENCES_DIR / "report_rules.py"
 
 
 def _rules():
@@ -263,6 +266,10 @@ def build_payload(db: Path, config: Path, profiles: Path, report_day: str, avata
                "monthly": {"window": month, "rows": []}, "stock_drilldowns": {}}
     for doc in docs:
         rows = in_window(doc.get("mentions") or [], month)
+        # The 28-day table is a coverage view, not an instrument catalogue.
+        # Never render no-post rows as empty "stocks" in the approved UI.
+        if unique_posts(rows) == 0:
+            continue
         counts = Counter(normal_stance(r.get("stance")) for r in rows)
         directional = counts["bullish"] + counts["bearish"]
         bulls, bears = directions(rows, opinions)
@@ -309,6 +316,16 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--no-schema", action="store_true", help="Only for local dependency bootstrap; CI and production must validate schema")
     args = parser.parse_args()
+    # In a repository checkout these defaults are present.  In the installed
+    # Skill they intentionally are not, so obtain the current verified cloud
+    # snapshot before any aggregation or rendering work begins.
+    if not args.db.is_dir():
+        from snapshot_sync import sync
+        cache, _, _ = sync()
+        args.db = cache / "data" / "db"
+        args.config = cache / "config" / "bloggers.json"
+        args.profiles = cache / "config" / "blogger_profiles.json"
+        args.avatar_cache = cache / "data" / "avatar_cache.json"
     payload = build_payload(args.db, args.config, args.profiles, args.date, args.avatar_cache)
     if not args.no_schema: validate_schema(payload)
     args.output.parent.mkdir(parents=True, exist_ok=True)
