@@ -1,5 +1,24 @@
 # Dashboard implementation log
 
+## 2026-07-20 - manual instrument-registry remediation
+
+- Reviewed all 1,600 entities in the production review snapshot instead of
+  defaulting ticker-shaped strings to US/USD. The SEC official company ticker
+  and exchange registry supplied 859 high-confidence US listings; the manual
+  registry now contains 901 verified price identities after overseas listings
+  and aliases were reviewed.
+- Added explicit identities for major Korean, Japanese, Taiwanese, Chinese,
+  European, Canadian, and newly listed US instruments, including AAPL, SPCX,
+  000660, 005930, 285A, and 2454. Each verified row records market, country,
+  currency, provider symbol, review date, and its registry source.
+- Preserved ambiguous or reused codes as non-price-routable review records.
+  Private companies, indices, commodities, futures roots, and crypto mentions
+  are explicitly classified so they cannot silently acquire the price of an
+  unrelated same-code equity (for example SPX or GOLD).
+- Added canonical aliases for common names and extraction variants such as
+  APPL -> AAPL, SK HYNIX -> 000660, SAMSUNG -> 005930, and SPACEX -> SPCX.
+  Regression tests cover US, overseas, alias, private-company, and index cases.
+
 ## 2026-07-18 — Production writer collision fix
 
 - Reviewed the failed `bihourly-sync` run supplied from GitHub Actions. All ten
