@@ -2,25 +2,25 @@
   "ticker": "HR",
   "cashtag": "$HR",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HR",
+    "instrument_id": "US:HR",
     "display_code": "HR",
-    "display_name": "Healthcare Realty Trust",
-    "display_market": "Market unverified",
+    "display_name": "Healthcare Realty Trust Inc",
+    "display_market": "NYSE",
     "aliases": [
       "HR"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HR",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Healthcare Realty Trust",
+  "price_symbol": "HR",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Healthcare Realty Trust Inc",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-14",
@@ -103,9 +103,25 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.695520+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-14",
+      "close": 20.89
+    },
+    {
+      "date": "2026-07-15",
+      "close": 20.65
+    },
+    {
+      "date": "2026-07-16",
+      "close": 21.29
+    },
+    {
+      "date": "2026-07-17",
+      "close": 21.32
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:27.032255+00:00"
 }

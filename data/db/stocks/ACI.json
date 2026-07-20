@@ -2,25 +2,25 @@
   "ticker": "ACI",
   "cashtag": "$ACI",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ACI",
+    "instrument_id": "US:ACI",
     "display_code": "ACI",
-    "display_name": "Albertsons Companies",
-    "display_market": "Market unverified",
+    "display_name": "Albertsons Companies, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "ACI"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ACI",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Albertsons Companies",
+  "price_symbol": "ACI",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Albertsons Companies, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
@@ -82,9 +82,109 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.734403+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-11",
+      "close": 15.39
+    },
+    {
+      "date": "2026-06-12",
+      "close": 15.41
+    },
+    {
+      "date": "2026-06-15",
+      "close": 14.86
+    },
+    {
+      "date": "2026-06-16",
+      "close": 15.08
+    },
+    {
+      "date": "2026-06-17",
+      "close": 14.41
+    },
+    {
+      "date": "2026-06-18",
+      "close": 13.45
+    },
+    {
+      "date": "2026-06-22",
+      "close": 13.62
+    },
+    {
+      "date": "2026-06-23",
+      "close": 13.91
+    },
+    {
+      "date": "2026-06-24",
+      "close": 14.13
+    },
+    {
+      "date": "2026-06-25",
+      "close": 13.76
+    },
+    {
+      "date": "2026-06-26",
+      "close": 13.59
+    },
+    {
+      "date": "2026-06-29",
+      "close": 13.47
+    },
+    {
+      "date": "2026-06-30",
+      "close": 13.53
+    },
+    {
+      "date": "2026-07-01",
+      "close": 13.81
+    },
+    {
+      "date": "2026-07-02",
+      "close": 14.13
+    },
+    {
+      "date": "2026-07-06",
+      "close": 14.18
+    },
+    {
+      "date": "2026-07-07",
+      "close": 14.14
+    },
+    {
+      "date": "2026-07-08",
+      "close": 13.98
+    },
+    {
+      "date": "2026-07-09",
+      "close": 14.34
+    },
+    {
+      "date": "2026-07-10",
+      "close": 14.76
+    },
+    {
+      "date": "2026-07-13",
+      "close": 14.79
+    },
+    {
+      "date": "2026-07-14",
+      "close": 14.61
+    },
+    {
+      "date": "2026-07-15",
+      "close": 14.56
+    },
+    {
+      "date": "2026-07-16",
+      "close": 15.02
+    },
+    {
+      "date": "2026-07-17",
+      "close": 15.11
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:39:10.575710+00:00"
 }

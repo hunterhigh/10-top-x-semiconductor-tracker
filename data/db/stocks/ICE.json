@@ -2,25 +2,25 @@
   "ticker": "ICE",
   "cashtag": "New York Stock Exchange",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ICE",
+    "instrument_id": "US:ICE",
     "display_code": "ICE",
-    "display_name": "Intercontinental Exchange (NYSE parent)",
-    "display_market": "Market unverified",
+    "display_name": "Intercontinental Exchange, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "ICE"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ICE",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Intercontinental Exchange (NYSE parent)",
+  "price_symbol": "ICE",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Intercontinental Exchange, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -105,9 +105,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.695963+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 131.34
+    },
+    {
+      "date": "2026-06-23",
+      "close": 133.0
+    },
+    {
+      "date": "2026-06-24",
+      "close": 130.02
+    },
+    {
+      "date": "2026-06-25",
+      "close": 124.49
+    },
+    {
+      "date": "2026-06-26",
+      "close": 123.86
+    },
+    {
+      "date": "2026-06-29",
+      "close": 122.91
+    },
+    {
+      "date": "2026-06-30",
+      "close": 123.11
+    },
+    {
+      "date": "2026-07-01",
+      "close": 126.73
+    },
+    {
+      "date": "2026-07-02",
+      "close": 132.99
+    },
+    {
+      "date": "2026-07-06",
+      "close": 134.91
+    },
+    {
+      "date": "2026-07-07",
+      "close": 136.45
+    },
+    {
+      "date": "2026-07-08",
+      "close": 137.17
+    },
+    {
+      "date": "2026-07-09",
+      "close": 135.11
+    },
+    {
+      "date": "2026-07-10",
+      "close": 135.26
+    },
+    {
+      "date": "2026-07-13",
+      "close": 137.67
+    },
+    {
+      "date": "2026-07-14",
+      "close": 137.61
+    },
+    {
+      "date": "2026-07-15",
+      "close": 139.84
+    },
+    {
+      "date": "2026-07-16",
+      "close": 141.76
+    },
+    {
+      "date": "2026-07-17",
+      "close": 139.65
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:28.668464+00:00"
 }

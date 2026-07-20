@@ -2,25 +2,25 @@
   "ticker": "TCOM",
   "cashtag": "$TCOM",
   "instrument": {
-    "instrument_id": "UNVERIFIED:TCOM",
+    "instrument_id": "US:TCOM",
     "display_code": "TCOM",
-    "display_name": "Trip.com Group",
-    "display_market": "Market unverified",
+    "display_name": "Trip.com Group Ltd",
+    "display_market": "NASDAQ",
     "aliases": [
       "TCOM"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "TCOM",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Trip.com Group",
+  "price_symbol": "TCOM",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Trip.com Group Ltd",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -59,9 +59,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.885298+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 46.42
+    },
+    {
+      "date": "2026-06-23",
+      "close": 45.5
+    },
+    {
+      "date": "2026-06-24",
+      "close": 46.3
+    },
+    {
+      "date": "2026-06-25",
+      "close": 40.49
+    },
+    {
+      "date": "2026-06-26",
+      "close": 40.89
+    },
+    {
+      "date": "2026-06-29",
+      "close": 39.96
+    },
+    {
+      "date": "2026-06-30",
+      "close": 39.84
+    },
+    {
+      "date": "2026-07-01",
+      "close": 41.08
+    },
+    {
+      "date": "2026-07-02",
+      "close": 41.0
+    },
+    {
+      "date": "2026-07-06",
+      "close": 40.98
+    },
+    {
+      "date": "2026-07-07",
+      "close": 40.81
+    },
+    {
+      "date": "2026-07-08",
+      "close": 41.38
+    },
+    {
+      "date": "2026-07-09",
+      "close": 41.43
+    },
+    {
+      "date": "2026-07-10",
+      "close": 42.8
+    },
+    {
+      "date": "2026-07-13",
+      "close": 42.36
+    },
+    {
+      "date": "2026-07-14",
+      "close": 42.41
+    },
+    {
+      "date": "2026-07-15",
+      "close": 42.87
+    },
+    {
+      "date": "2026-07-16",
+      "close": 43.75
+    },
+    {
+      "date": "2026-07-17",
+      "close": 42.45
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:42:34.548346+00:00"
 }

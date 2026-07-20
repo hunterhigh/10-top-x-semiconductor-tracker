@@ -2,25 +2,25 @@
   "ticker": "HUM",
   "cashtag": "$HUM",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HUM",
+    "instrument_id": "US:HUM",
     "display_code": "HUM",
-    "display_name": "Humana Inc.",
-    "display_market": "Market unverified",
+    "display_name": "HUMANA INC",
+    "display_market": "NYSE",
     "aliases": [
       "HUM"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HUM",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Humana Inc.",
+  "price_symbol": "HUM",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "HUMANA INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -149,9 +149,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.627510+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 379.22
+    },
+    {
+      "date": "2026-06-15",
+      "close": 380.26
+    },
+    {
+      "date": "2026-06-16",
+      "close": 369.49
+    },
+    {
+      "date": "2026-06-17",
+      "close": 362.0
+    },
+    {
+      "date": "2026-06-18",
+      "close": 360.65
+    },
+    {
+      "date": "2026-06-22",
+      "close": 360.72
+    },
+    {
+      "date": "2026-06-23",
+      "close": 359.13
+    },
+    {
+      "date": "2026-06-24",
+      "close": 361.64
+    },
+    {
+      "date": "2026-06-25",
+      "close": 376.0
+    },
+    {
+      "date": "2026-06-26",
+      "close": 383.84
+    },
+    {
+      "date": "2026-06-29",
+      "close": 388.9
+    },
+    {
+      "date": "2026-06-30",
+      "close": 397.22
+    },
+    {
+      "date": "2026-07-01",
+      "close": 409.42
+    },
+    {
+      "date": "2026-07-02",
+      "close": 396.75
+    },
+    {
+      "date": "2026-07-06",
+      "close": 392.86
+    },
+    {
+      "date": "2026-07-07",
+      "close": 394.62
+    },
+    {
+      "date": "2026-07-08",
+      "close": 396.29
+    },
+    {
+      "date": "2026-07-09",
+      "close": 397.76
+    },
+    {
+      "date": "2026-07-10",
+      "close": 392.22
+    },
+    {
+      "date": "2026-07-13",
+      "close": 406.0
+    },
+    {
+      "date": "2026-07-14",
+      "close": 406.77
+    },
+    {
+      "date": "2026-07-15",
+      "close": 407.78
+    },
+    {
+      "date": "2026-07-16",
+      "close": 386.48
+    },
+    {
+      "date": "2026-07-17",
+      "close": 400.0
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:56.200205+00:00"
 }

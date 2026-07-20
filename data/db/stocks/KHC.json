@@ -2,25 +2,25 @@
   "ticker": "KHC",
   "cashtag": "Kraft Heinz",
   "instrument": {
-    "instrument_id": "UNVERIFIED:KHC",
+    "instrument_id": "US:KHC",
     "display_code": "KHC",
-    "display_name": "Kraft Heinz",
-    "display_market": "Market unverified",
+    "display_name": "Kraft Heinz Co",
+    "display_market": "NASDAQ",
     "aliases": [
       "KHC"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "KHC",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Kraft Heinz",
+  "price_symbol": "KHC",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Kraft Heinz Co",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-04",
@@ -57,9 +57,49 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.851617+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-06",
+      "close": 24.82
+    },
+    {
+      "date": "2026-07-07",
+      "close": 25.3
+    },
+    {
+      "date": "2026-07-08",
+      "close": 24.92
+    },
+    {
+      "date": "2026-07-09",
+      "close": 24.68
+    },
+    {
+      "date": "2026-07-10",
+      "close": 24.85
+    },
+    {
+      "date": "2026-07-13",
+      "close": 25.23
+    },
+    {
+      "date": "2026-07-14",
+      "close": 25.08
+    },
+    {
+      "date": "2026-07-15",
+      "close": 25.45
+    },
+    {
+      "date": "2026-07-16",
+      "close": 26.23
+    },
+    {
+      "date": "2026-07-17",
+      "close": 25.88
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:53.775844+00:00"
 }

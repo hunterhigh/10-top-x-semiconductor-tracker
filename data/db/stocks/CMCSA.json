@@ -2,25 +2,25 @@
   "ticker": "CMCSA",
   "cashtag": "$CMCSA",
   "instrument": {
-    "instrument_id": "UNVERIFIED:CMCSA",
+    "instrument_id": "US:CMCSA",
     "display_code": "CMCSA",
-    "display_name": "Comcast Corporation",
-    "display_market": "Market unverified",
+    "display_name": "COMCAST CORP",
+    "display_market": "NASDAQ",
     "aliases": [
       "CMCSA"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "CMCSA",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Comcast Corporation",
+  "price_symbol": "CMCSA",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "COMCAST CORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -105,9 +105,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.685645+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 22.32
+    },
+    {
+      "date": "2026-06-23",
+      "close": 22.8
+    },
+    {
+      "date": "2026-06-24",
+      "close": 22.64
+    },
+    {
+      "date": "2026-06-25",
+      "close": 22.69
+    },
+    {
+      "date": "2026-06-26",
+      "close": 23.17
+    },
+    {
+      "date": "2026-06-29",
+      "close": 24.22
+    },
+    {
+      "date": "2026-06-30",
+      "close": 24.55
+    },
+    {
+      "date": "2026-07-01",
+      "close": 23.73
+    },
+    {
+      "date": "2026-07-02",
+      "close": 23.79
+    },
+    {
+      "date": "2026-07-06",
+      "close": 23.38
+    },
+    {
+      "date": "2026-07-07",
+      "close": 23.41
+    },
+    {
+      "date": "2026-07-08",
+      "close": 23.19
+    },
+    {
+      "date": "2026-07-09",
+      "close": 23.345
+    },
+    {
+      "date": "2026-07-10",
+      "close": 23.57
+    },
+    {
+      "date": "2026-07-13",
+      "close": 23.97
+    },
+    {
+      "date": "2026-07-14",
+      "close": 23.19
+    },
+    {
+      "date": "2026-07-15",
+      "close": 23.49
+    },
+    {
+      "date": "2026-07-16",
+      "close": 24.1
+    },
+    {
+      "date": "2026-07-17",
+      "close": 23.79
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:05.731076+00:00"
 }

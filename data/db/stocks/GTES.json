@@ -2,25 +2,25 @@
   "ticker": "GTES",
   "cashtag": "$GTES",
   "instrument": {
-    "instrument_id": "UNVERIFIED:GTES",
+    "instrument_id": "US:GTES",
     "display_code": "GTES",
-    "display_name": "Gates Industrial",
-    "display_market": "Market unverified",
+    "display_name": "Gates Industrial Corp plc",
+    "display_market": "NYSE",
     "aliases": [
       "GTES"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "GTES",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Gates Industrial",
+  "price_symbol": "GTES",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Gates Industrial Corp plc",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -57,9 +57,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.842730+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 29.02
+    },
+    {
+      "date": "2026-06-26",
+      "close": 28.79
+    },
+    {
+      "date": "2026-06-29",
+      "close": 28.15
+    },
+    {
+      "date": "2026-06-30",
+      "close": 27.97
+    },
+    {
+      "date": "2026-07-01",
+      "close": 27.15
+    },
+    {
+      "date": "2026-07-02",
+      "close": 26.69
+    },
+    {
+      "date": "2026-07-06",
+      "close": 27.15
+    },
+    {
+      "date": "2026-07-07",
+      "close": 26.13
+    },
+    {
+      "date": "2026-07-08",
+      "close": 25.72
+    },
+    {
+      "date": "2026-07-09",
+      "close": 26.03
+    },
+    {
+      "date": "2026-07-10",
+      "close": 26.34
+    },
+    {
+      "date": "2026-07-13",
+      "close": 26.24
+    },
+    {
+      "date": "2026-07-14",
+      "close": 26.24
+    },
+    {
+      "date": "2026-07-15",
+      "close": 26.58
+    },
+    {
+      "date": "2026-07-16",
+      "close": 26.95
+    },
+    {
+      "date": "2026-07-17",
+      "close": 26.61
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:43.535200+00:00"
 }

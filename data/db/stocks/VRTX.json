@@ -2,25 +2,25 @@
   "ticker": "VRTX",
   "cashtag": "$VRTX",
   "instrument": {
-    "instrument_id": "UNVERIFIED:VRTX",
+    "instrument_id": "US:VRTX",
     "display_code": "VRTX",
-    "display_name": "Vertex Pharmaceuticals",
-    "display_market": "Market unverified",
+    "display_name": "VERTEX PHARMACEUTICALS INC / MA",
+    "display_market": "NASDAQ",
     "aliases": [
       "VRTX"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "VRTX",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Vertex Pharmaceuticals",
+  "price_symbol": "VRTX",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "VERTEX PHARMACEUTICALS INC / MA",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-06",
@@ -80,9 +80,49 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.786533+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-06",
+      "close": 529.59
+    },
+    {
+      "date": "2026-07-07",
+      "close": 522.25
+    },
+    {
+      "date": "2026-07-08",
+      "close": 498.43
+    },
+    {
+      "date": "2026-07-09",
+      "close": 496.5
+    },
+    {
+      "date": "2026-07-10",
+      "close": 485.39
+    },
+    {
+      "date": "2026-07-13",
+      "close": 480.25
+    },
+    {
+      "date": "2026-07-14",
+      "close": 476.31
+    },
+    {
+      "date": "2026-07-15",
+      "close": 477.08
+    },
+    {
+      "date": "2026-07-16",
+      "close": 486.03
+    },
+    {
+      "date": "2026-07-17",
+      "close": 485.65
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:40.893886+00:00"
 }

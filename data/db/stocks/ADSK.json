@@ -2,25 +2,25 @@
   "ticker": "ADSK",
   "cashtag": "$ADSK",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ADSK",
+    "instrument_id": "US:ADSK",
     "display_code": "ADSK",
-    "display_name": "Autodesk",
-    "display_market": "Market unverified",
+    "display_name": "Autodesk, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "ADSK"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ADSK",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Autodesk",
+  "price_symbol": "ADSK",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Autodesk, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
@@ -105,9 +105,109 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.680781+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-11",
+      "close": 205.57
+    },
+    {
+      "date": "2026-06-12",
+      "close": 198.43
+    },
+    {
+      "date": "2026-06-15",
+      "close": 198.6
+    },
+    {
+      "date": "2026-06-16",
+      "close": 201.38
+    },
+    {
+      "date": "2026-06-17",
+      "close": 193.07
+    },
+    {
+      "date": "2026-06-18",
+      "close": 193.82
+    },
+    {
+      "date": "2026-06-22",
+      "close": 187.72
+    },
+    {
+      "date": "2026-06-23",
+      "close": 188.78
+    },
+    {
+      "date": "2026-06-24",
+      "close": 192.61
+    },
+    {
+      "date": "2026-06-25",
+      "close": 189.73
+    },
+    {
+      "date": "2026-06-26",
+      "close": 196.26
+    },
+    {
+      "date": "2026-06-29",
+      "close": 195.24
+    },
+    {
+      "date": "2026-06-30",
+      "close": 194.42
+    },
+    {
+      "date": "2026-07-01",
+      "close": 199.76
+    },
+    {
+      "date": "2026-07-02",
+      "close": 207.48
+    },
+    {
+      "date": "2026-07-06",
+      "close": 207.54
+    },
+    {
+      "date": "2026-07-07",
+      "close": 212.38
+    },
+    {
+      "date": "2026-07-08",
+      "close": 206.04
+    },
+    {
+      "date": "2026-07-09",
+      "close": 208.58
+    },
+    {
+      "date": "2026-07-10",
+      "close": 208.45
+    },
+    {
+      "date": "2026-07-13",
+      "close": 212.22
+    },
+    {
+      "date": "2026-07-14",
+      "close": 205.92
+    },
+    {
+      "date": "2026-07-15",
+      "close": 208.98
+    },
+    {
+      "date": "2026-07-16",
+      "close": 217.06
+    },
+    {
+      "date": "2026-07-17",
+      "close": 218.35
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:57.724456+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "CNC",
   "cashtag": "$CNC",
   "instrument": {
-    "instrument_id": "UNVERIFIED:CNC",
+    "instrument_id": "US:CNC",
     "display_code": "CNC",
-    "display_name": "Centene Corporation",
-    "display_market": "Market unverified",
+    "display_name": "CENTENE CORP",
+    "display_market": "NYSE",
     "aliases": [
       "CNC"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "CNC",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Centene Corporation",
+  "price_symbol": "CNC",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "CENTENE CORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-01",
@@ -103,9 +103,57 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.686105+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-01",
+      "close": 68.35
+    },
+    {
+      "date": "2026-07-02",
+      "close": 67.86
+    },
+    {
+      "date": "2026-07-06",
+      "close": 66.05
+    },
+    {
+      "date": "2026-07-07",
+      "close": 66.12
+    },
+    {
+      "date": "2026-07-08",
+      "close": 67.09
+    },
+    {
+      "date": "2026-07-09",
+      "close": 67.6
+    },
+    {
+      "date": "2026-07-10",
+      "close": 67.35
+    },
+    {
+      "date": "2026-07-13",
+      "close": 68.29
+    },
+    {
+      "date": "2026-07-14",
+      "close": 68.72
+    },
+    {
+      "date": "2026-07-15",
+      "close": 66.61
+    },
+    {
+      "date": "2026-07-16",
+      "close": 63.89
+    },
+    {
+      "date": "2026-07-17",
+      "close": 66.44
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:06.386104+00:00"
 }

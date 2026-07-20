@@ -2,25 +2,25 @@
   "ticker": "RSI",
   "cashtag": "$RSI",
   "instrument": {
-    "instrument_id": "UNVERIFIED:RSI",
+    "instrument_id": "US:RSI",
     "display_code": "RSI",
-    "display_name": "Rush Street Interactive",
-    "display_market": "Market unverified",
+    "display_name": "Rush Street Interactive, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "RSI"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "RSI",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Rush Street Interactive",
+  "price_symbol": "RSI",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Rush Street Interactive, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -172,9 +172,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.585584+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 29.6
+    },
+    {
+      "date": "2026-06-15",
+      "close": 30.12
+    },
+    {
+      "date": "2026-06-16",
+      "close": 29.02
+    },
+    {
+      "date": "2026-06-17",
+      "close": 28.28
+    },
+    {
+      "date": "2026-06-18",
+      "close": 29.09
+    },
+    {
+      "date": "2026-06-22",
+      "close": 30.52
+    },
+    {
+      "date": "2026-06-23",
+      "close": 29.51
+    },
+    {
+      "date": "2026-06-24",
+      "close": 29.83
+    },
+    {
+      "date": "2026-06-25",
+      "close": 30.36
+    },
+    {
+      "date": "2026-06-26",
+      "close": 31.56
+    },
+    {
+      "date": "2026-06-29",
+      "close": 31.32
+    },
+    {
+      "date": "2026-06-30",
+      "close": 29.74
+    },
+    {
+      "date": "2026-07-01",
+      "close": 31.26
+    },
+    {
+      "date": "2026-07-02",
+      "close": 31.68
+    },
+    {
+      "date": "2026-07-06",
+      "close": 32.22
+    },
+    {
+      "date": "2026-07-07",
+      "close": 32.31
+    },
+    {
+      "date": "2026-07-08",
+      "close": 32.74
+    },
+    {
+      "date": "2026-07-09",
+      "close": 32.63
+    },
+    {
+      "date": "2026-07-10",
+      "close": 33.4
+    },
+    {
+      "date": "2026-07-13",
+      "close": 34.18
+    },
+    {
+      "date": "2026-07-14",
+      "close": 33.51
+    },
+    {
+      "date": "2026-07-15",
+      "close": 32.93
+    },
+    {
+      "date": "2026-07-16",
+      "close": 32.8
+    },
+    {
+      "date": "2026-07-17",
+      "close": 32.5
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:36.205171+00:00"
 }

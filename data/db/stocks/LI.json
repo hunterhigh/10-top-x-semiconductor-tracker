@@ -2,25 +2,25 @@
   "ticker": "LI",
   "cashtag": "$LI",
   "instrument": {
-    "instrument_id": "UNVERIFIED:LI",
+    "instrument_id": "US:LI",
     "display_code": "LI",
-    "display_name": "Li Auto",
-    "display_market": "Market unverified",
+    "display_name": "Li Auto Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "LI"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "LI",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Li Auto",
+  "price_symbol": "LI",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Li Auto Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
@@ -128,9 +128,109 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.661485+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-11",
+      "close": 13.78
+    },
+    {
+      "date": "2026-06-12",
+      "close": 14.3
+    },
+    {
+      "date": "2026-06-15",
+      "close": 14.38
+    },
+    {
+      "date": "2026-06-16",
+      "close": 14.04
+    },
+    {
+      "date": "2026-06-17",
+      "close": 13.58
+    },
+    {
+      "date": "2026-06-18",
+      "close": 13.21
+    },
+    {
+      "date": "2026-06-22",
+      "close": 12.82
+    },
+    {
+      "date": "2026-06-23",
+      "close": 12.63
+    },
+    {
+      "date": "2026-06-24",
+      "close": 12.39
+    },
+    {
+      "date": "2026-06-25",
+      "close": 11.83
+    },
+    {
+      "date": "2026-06-26",
+      "close": 12.04
+    },
+    {
+      "date": "2026-06-29",
+      "close": 11.89
+    },
+    {
+      "date": "2026-06-30",
+      "close": 11.74
+    },
+    {
+      "date": "2026-07-01",
+      "close": 12.23
+    },
+    {
+      "date": "2026-07-02",
+      "close": 12.02
+    },
+    {
+      "date": "2026-07-06",
+      "close": 12.02
+    },
+    {
+      "date": "2026-07-07",
+      "close": 12.05
+    },
+    {
+      "date": "2026-07-08",
+      "close": 12.12
+    },
+    {
+      "date": "2026-07-09",
+      "close": 11.91
+    },
+    {
+      "date": "2026-07-10",
+      "close": 12.1
+    },
+    {
+      "date": "2026-07-13",
+      "close": 12.18
+    },
+    {
+      "date": "2026-07-14",
+      "close": 12.47
+    },
+    {
+      "date": "2026-07-15",
+      "close": 12.73
+    },
+    {
+      "date": "2026-07-16",
+      "close": 12.86
+    },
+    {
+      "date": "2026-07-17",
+      "close": 12.39
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:37.714216+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "MSM",
   "cashtag": "$MSM",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MSM",
+    "instrument_id": "US:MSM",
     "display_code": "MSM",
-    "display_name": "MSC Industrial Direct Co",
-    "display_market": "Market unverified",
+    "display_name": "MSC INDUSTRIAL DIRECT CO INC",
+    "display_market": "NYSE",
     "aliases": [
       "MSM"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MSM",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "MSC Industrial Direct Co",
+  "price_symbol": "MSM",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "MSC INDUSTRIAL DIRECT CO INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-01",
@@ -57,9 +57,57 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.861711+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-01",
+      "close": 123.34
+    },
+    {
+      "date": "2026-07-02",
+      "close": 122.78
+    },
+    {
+      "date": "2026-07-06",
+      "close": 121.14
+    },
+    {
+      "date": "2026-07-07",
+      "close": 120.07
+    },
+    {
+      "date": "2026-07-08",
+      "close": 118.99
+    },
+    {
+      "date": "2026-07-09",
+      "close": 120.66
+    },
+    {
+      "date": "2026-07-10",
+      "close": 123.02
+    },
+    {
+      "date": "2026-07-13",
+      "close": 123.99
+    },
+    {
+      "date": "2026-07-14",
+      "close": 124.11
+    },
+    {
+      "date": "2026-07-15",
+      "close": 123.7
+    },
+    {
+      "date": "2026-07-16",
+      "close": 125.63
+    },
+    {
+      "date": "2026-07-17",
+      "close": 124.77
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:42:09.462547+00:00"
 }

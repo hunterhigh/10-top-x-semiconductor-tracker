@@ -2,25 +2,25 @@
   "ticker": "MCD",
   "cashtag": "$MCD",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MCD",
+    "instrument_id": "US:MCD",
     "display_code": "MCD",
-    "display_name": "McDonald's",
-    "display_market": "Market unverified",
+    "display_name": "MCDONALDS CORP",
+    "display_market": "NYSE",
     "aliases": [
       "MCD"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MCD",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "McDonald's",
+  "price_symbol": "MCD",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "MCDONALDS CORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-16",
@@ -107,9 +107,97 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.700903+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-16",
+      "close": 287.93
+    },
+    {
+      "date": "2026-06-17",
+      "close": 283.82
+    },
+    {
+      "date": "2026-06-18",
+      "close": 278.61
+    },
+    {
+      "date": "2026-06-22",
+      "close": 270.1
+    },
+    {
+      "date": "2026-06-23",
+      "close": 271.66
+    },
+    {
+      "date": "2026-06-24",
+      "close": 273.88
+    },
+    {
+      "date": "2026-06-25",
+      "close": 264.54
+    },
+    {
+      "date": "2026-06-26",
+      "close": 269.76
+    },
+    {
+      "date": "2026-06-29",
+      "close": 267.18
+    },
+    {
+      "date": "2026-06-30",
+      "close": 270.31
+    },
+    {
+      "date": "2026-07-01",
+      "close": 269.43
+    },
+    {
+      "date": "2026-07-02",
+      "close": 280.63
+    },
+    {
+      "date": "2026-07-06",
+      "close": 279.5
+    },
+    {
+      "date": "2026-07-07",
+      "close": 282.21
+    },
+    {
+      "date": "2026-07-08",
+      "close": 278.25
+    },
+    {
+      "date": "2026-07-09",
+      "close": 276.49
+    },
+    {
+      "date": "2026-07-10",
+      "close": 274.6
+    },
+    {
+      "date": "2026-07-13",
+      "close": 272.61
+    },
+    {
+      "date": "2026-07-14",
+      "close": 268.94
+    },
+    {
+      "date": "2026-07-15",
+      "close": 264.95
+    },
+    {
+      "date": "2026-07-16",
+      "close": 273.46
+    },
+    {
+      "date": "2026-07-17",
+      "close": 267.71
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:35.735506+00:00"
 }

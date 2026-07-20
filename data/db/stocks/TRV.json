@@ -2,25 +2,25 @@
   "ticker": "TRV",
   "cashtag": "$TRV",
   "instrument": {
-    "instrument_id": "UNVERIFIED:TRV",
+    "instrument_id": "US:TRV",
     "display_code": "TRV",
-    "display_name": "Travelers Companies",
-    "display_market": "Market unverified",
+    "display_name": "TRAVELERS COMPANIES, INC.",
+    "display_market": "NYSE",
     "aliases": [
       "TRV"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "TRV",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Travelers Companies",
+  "price_symbol": "TRV",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "TRAVELERS COMPANIES, INC.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
@@ -103,9 +103,77 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.715868+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-24",
+      "close": 320.74
+    },
+    {
+      "date": "2026-06-25",
+      "close": 318.29
+    },
+    {
+      "date": "2026-06-26",
+      "close": 327.37
+    },
+    {
+      "date": "2026-06-29",
+      "close": 331.88
+    },
+    {
+      "date": "2026-06-30",
+      "close": 330.12
+    },
+    {
+      "date": "2026-07-01",
+      "close": 334.62
+    },
+    {
+      "date": "2026-07-02",
+      "close": 342.31
+    },
+    {
+      "date": "2026-07-06",
+      "close": 339.17
+    },
+    {
+      "date": "2026-07-07",
+      "close": 343.73
+    },
+    {
+      "date": "2026-07-08",
+      "close": 337.94
+    },
+    {
+      "date": "2026-07-09",
+      "close": 337.48
+    },
+    {
+      "date": "2026-07-10",
+      "close": 338.92
+    },
+    {
+      "date": "2026-07-13",
+      "close": 341.51
+    },
+    {
+      "date": "2026-07-14",
+      "close": 336.83
+    },
+    {
+      "date": "2026-07-15",
+      "close": 329.19
+    },
+    {
+      "date": "2026-07-16",
+      "close": 337.82
+    },
+    {
+      "date": "2026-07-17",
+      "close": 368.98
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:59.027029+00:00"
 }

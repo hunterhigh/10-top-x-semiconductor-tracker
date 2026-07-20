@@ -2,25 +2,25 @@
   "ticker": "BB",
   "cashtag": "$BB",
   "instrument": {
-    "instrument_id": "UNVERIFIED:BB",
+    "instrument_id": "US:BB",
     "display_code": "BB",
-    "display_name": "BlackBerry",
-    "display_market": "Market unverified",
+    "display_name": "BLACKBERRY Ltd",
+    "display_market": "NYSE",
     "aliases": [
       "BB"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "BB",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "BlackBerry",
+  "price_symbol": "BB",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "BLACKBERRY Ltd",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -225,9 +225,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.558250+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 10.34
+    },
+    {
+      "date": "2026-06-26",
+      "close": 11.4
+    },
+    {
+      "date": "2026-06-29",
+      "close": 12.48
+    },
+    {
+      "date": "2026-06-30",
+      "close": 12.65
+    },
+    {
+      "date": "2026-07-01",
+      "close": 12.81
+    },
+    {
+      "date": "2026-07-02",
+      "close": 11.51
+    },
+    {
+      "date": "2026-07-06",
+      "close": 11.38
+    },
+    {
+      "date": "2026-07-07",
+      "close": 11.1
+    },
+    {
+      "date": "2026-07-08",
+      "close": 11.12
+    },
+    {
+      "date": "2026-07-09",
+      "close": 11.43
+    },
+    {
+      "date": "2026-07-10",
+      "close": 10.97
+    },
+    {
+      "date": "2026-07-13",
+      "close": 10.71
+    },
+    {
+      "date": "2026-07-14",
+      "close": 11.01
+    },
+    {
+      "date": "2026-07-15",
+      "close": 10.64
+    },
+    {
+      "date": "2026-07-16",
+      "close": 9.16
+    },
+    {
+      "date": "2026-07-17",
+      "close": 8.99
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:35:53.833081+00:00"
 }

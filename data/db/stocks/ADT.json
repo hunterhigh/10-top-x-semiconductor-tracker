@@ -2,24 +2,24 @@
   "ticker": "ADT",
   "cashtag": "$ADT",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ADT",
+    "instrument_id": "US:ADT",
     "display_code": "ADT",
     "display_name": "ADT Inc.",
-    "display_market": "Market unverified",
+    "display_market": "NYSE",
     "aliases": [
       "ADT"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ADT",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
+  "price_symbol": "ADT",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
   "company": "ADT Inc.",
   "industry": null,
   "thesis_summary": null,
@@ -57,9 +57,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.808679+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 6.3
+    },
+    {
+      "date": "2026-06-26",
+      "close": 6.39
+    },
+    {
+      "date": "2026-06-29",
+      "close": 6.5
+    },
+    {
+      "date": "2026-06-30",
+      "close": 6.5
+    },
+    {
+      "date": "2026-07-01",
+      "close": 6.72
+    },
+    {
+      "date": "2026-07-02",
+      "close": 6.83
+    },
+    {
+      "date": "2026-07-06",
+      "close": 6.75
+    },
+    {
+      "date": "2026-07-07",
+      "close": 6.91
+    },
+    {
+      "date": "2026-07-08",
+      "close": 6.73
+    },
+    {
+      "date": "2026-07-09",
+      "close": 6.65
+    },
+    {
+      "date": "2026-07-10",
+      "close": 6.71
+    },
+    {
+      "date": "2026-07-13",
+      "close": 6.78
+    },
+    {
+      "date": "2026-07-14",
+      "close": 6.73
+    },
+    {
+      "date": "2026-07-15",
+      "close": 6.77
+    },
+    {
+      "date": "2026-07-16",
+      "close": 7.06
+    },
+    {
+      "date": "2026-07-17",
+      "close": 7.0
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:48.842305+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "XENE",
   "cashtag": "$XENE",
   "instrument": {
-    "instrument_id": "UNVERIFIED:XENE",
+    "instrument_id": "US:XENE",
     "display_code": "XENE",
-    "display_name": "Xenon Pharmaceuticals",
-    "display_market": "Market unverified",
+    "display_name": "Xenon Pharmaceuticals Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "XENE"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "XENE",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Xenon Pharmaceuticals",
+  "price_symbol": "XENE",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Xenon Pharmaceuticals Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-09",
@@ -57,9 +57,37 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.894053+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-09",
+      "close": 70.96
+    },
+    {
+      "date": "2026-07-10",
+      "close": 68.92
+    },
+    {
+      "date": "2026-07-13",
+      "close": 67.72
+    },
+    {
+      "date": "2026-07-14",
+      "close": 67.3
+    },
+    {
+      "date": "2026-07-15",
+      "close": 67.71
+    },
+    {
+      "date": "2026-07-16",
+      "close": 66.98
+    },
+    {
+      "date": "2026-07-17",
+      "close": 68.26
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:42:43.267059+00:00"
 }

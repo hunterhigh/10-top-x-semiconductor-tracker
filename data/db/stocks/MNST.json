@@ -2,25 +2,25 @@
   "ticker": "MNST",
   "cashtag": "$MNST",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MNST",
+    "instrument_id": "US:MNST",
     "display_code": "MNST",
-    "display_name": "Monster Beverage",
-    "display_market": "Market unverified",
+    "display_name": "Monster Beverage Corp",
+    "display_market": "NASDAQ",
     "aliases": [
       "MNST"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MNST",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Monster Beverage",
+  "price_symbol": "MNST",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Monster Beverage Corp",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -266,9 +266,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.528108+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 92.83
+    },
+    {
+      "date": "2026-06-15",
+      "close": 93.23
+    },
+    {
+      "date": "2026-06-16",
+      "close": 92.95
+    },
+    {
+      "date": "2026-06-17",
+      "close": 91.66
+    },
+    {
+      "date": "2026-06-18",
+      "close": 91.34
+    },
+    {
+      "date": "2026-06-22",
+      "close": 93.02
+    },
+    {
+      "date": "2026-06-23",
+      "close": 93.69
+    },
+    {
+      "date": "2026-06-24",
+      "close": 94.7
+    },
+    {
+      "date": "2026-06-25",
+      "close": 95.83
+    },
+    {
+      "date": "2026-06-26",
+      "close": 96.38
+    },
+    {
+      "date": "2026-06-29",
+      "close": 97.64
+    },
+    {
+      "date": "2026-06-30",
+      "close": 96.12
+    },
+    {
+      "date": "2026-07-01",
+      "close": 97.35
+    },
+    {
+      "date": "2026-07-02",
+      "close": 97.6
+    },
+    {
+      "date": "2026-07-06",
+      "close": 97.37
+    },
+    {
+      "date": "2026-07-07",
+      "close": 96.92
+    },
+    {
+      "date": "2026-07-08",
+      "close": 95.15
+    },
+    {
+      "date": "2026-07-09",
+      "close": 96.55
+    },
+    {
+      "date": "2026-07-10",
+      "close": 97.39
+    },
+    {
+      "date": "2026-07-13",
+      "close": 97.07
+    },
+    {
+      "date": "2026-07-14",
+      "close": 98.005
+    },
+    {
+      "date": "2026-07-15",
+      "close": 97.57
+    },
+    {
+      "date": "2026-07-16",
+      "close": 99.94
+    },
+    {
+      "date": "2026-07-17",
+      "close": 97.5
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:35:21.645135+00:00"
 }

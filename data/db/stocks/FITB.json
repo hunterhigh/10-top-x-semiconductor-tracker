@@ -2,25 +2,25 @@
   "ticker": "FITB",
   "cashtag": "$FITB",
   "instrument": {
-    "instrument_id": "UNVERIFIED:FITB",
+    "instrument_id": "US:FITB",
     "display_code": "FITB",
-    "display_name": "Fifth Third Bancorp",
-    "display_market": "Market unverified",
+    "display_name": "FIFTH THIRD BANCORP",
+    "display_market": "NYSE",
     "aliases": [
       "FITB"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "FITB",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Fifth Third Bancorp",
+  "price_symbol": "FITB",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "FIFTH THIRD BANCORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -126,9 +126,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.655830+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 56.41
+    },
+    {
+      "date": "2026-06-26",
+      "close": 56.31
+    },
+    {
+      "date": "2026-06-29",
+      "close": 56.78
+    },
+    {
+      "date": "2026-06-30",
+      "close": 56.37
+    },
+    {
+      "date": "2026-07-01",
+      "close": 57.49
+    },
+    {
+      "date": "2026-07-02",
+      "close": 57.16
+    },
+    {
+      "date": "2026-07-06",
+      "close": 57.89
+    },
+    {
+      "date": "2026-07-07",
+      "close": 57.92
+    },
+    {
+      "date": "2026-07-08",
+      "close": 55.76
+    },
+    {
+      "date": "2026-07-09",
+      "close": 56.54
+    },
+    {
+      "date": "2026-07-10",
+      "close": 57.07
+    },
+    {
+      "date": "2026-07-13",
+      "close": 57.18
+    },
+    {
+      "date": "2026-07-14",
+      "close": 57.05
+    },
+    {
+      "date": "2026-07-15",
+      "close": 57.94
+    },
+    {
+      "date": "2026-07-16",
+      "close": 59.37
+    },
+    {
+      "date": "2026-07-17",
+      "close": 58.01
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:25.067883+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "EAT",
   "cashtag": "$EAT",
   "instrument": {
-    "instrument_id": "UNVERIFIED:EAT",
+    "instrument_id": "US:EAT",
     "display_code": "EAT",
-    "display_name": "Brinker International",
-    "display_market": "Market unverified",
+    "display_name": "BRINKER INTERNATIONAL, INC",
+    "display_market": "NYSE",
     "aliases": [
       "EAT"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "EAT",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Brinker International",
+  "price_symbol": "EAT",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "BRINKER INTERNATIONAL, INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-09",
@@ -57,9 +57,37 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.836165+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-09",
+      "close": 180.63
+    },
+    {
+      "date": "2026-07-10",
+      "close": 185.26
+    },
+    {
+      "date": "2026-07-13",
+      "close": 189.27
+    },
+    {
+      "date": "2026-07-14",
+      "close": 185.33
+    },
+    {
+      "date": "2026-07-15",
+      "close": 178.64
+    },
+    {
+      "date": "2026-07-16",
+      "close": 185.47
+    },
+    {
+      "date": "2026-07-17",
+      "close": 189.35
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:32.976571+00:00"
 }

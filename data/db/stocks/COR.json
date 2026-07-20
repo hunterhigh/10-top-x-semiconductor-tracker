@@ -2,25 +2,25 @@
   "ticker": "COR",
   "cashtag": "Cencora",
   "instrument": {
-    "instrument_id": "UNVERIFIED:COR",
+    "instrument_id": "US:COR",
     "display_code": "COR",
-    "display_name": "Cencora",
-    "display_market": "Market unverified",
+    "display_name": "Cencora, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "COR"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "COR",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Cencora",
+  "price_symbol": "COR",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Cencora, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-15",
@@ -57,9 +57,21 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.827353+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-15",
+      "close": 296.57
+    },
+    {
+      "date": "2026-07-16",
+      "close": 307.99
+    },
+    {
+      "date": "2026-07-17",
+      "close": 307.9
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:19.477695+00:00"
 }

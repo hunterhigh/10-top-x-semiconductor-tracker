@@ -2,25 +2,25 @@
   "ticker": "NTRA",
   "cashtag": "$NTRA",
   "instrument": {
-    "instrument_id": "UNVERIFIED:NTRA",
+    "instrument_id": "US:NTRA",
     "display_code": "NTRA",
-    "display_name": "Natera Inc",
-    "display_market": "Market unverified",
+    "display_name": "Natera, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "NTRA"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "NTRA",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Natera Inc",
+  "price_symbol": "NTRA",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Natera, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
@@ -103,9 +103,77 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.702836+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-24",
+      "close": 259.97
+    },
+    {
+      "date": "2026-06-25",
+      "close": 260.74
+    },
+    {
+      "date": "2026-06-26",
+      "close": 261.91
+    },
+    {
+      "date": "2026-06-29",
+      "close": 272.31
+    },
+    {
+      "date": "2026-06-30",
+      "close": 271.45
+    },
+    {
+      "date": "2026-07-01",
+      "close": 276.27
+    },
+    {
+      "date": "2026-07-02",
+      "close": 279.32
+    },
+    {
+      "date": "2026-07-06",
+      "close": 283.8
+    },
+    {
+      "date": "2026-07-07",
+      "close": 281.27
+    },
+    {
+      "date": "2026-07-08",
+      "close": 274.39
+    },
+    {
+      "date": "2026-07-09",
+      "close": 281.85
+    },
+    {
+      "date": "2026-07-10",
+      "close": 269.95
+    },
+    {
+      "date": "2026-07-13",
+      "close": 272.89
+    },
+    {
+      "date": "2026-07-14",
+      "close": 272.66
+    },
+    {
+      "date": "2026-07-15",
+      "close": 277.37
+    },
+    {
+      "date": "2026-07-16",
+      "close": 269.83
+    },
+    {
+      "date": "2026-07-17",
+      "close": 271.39
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:38.596728+00:00"
 }

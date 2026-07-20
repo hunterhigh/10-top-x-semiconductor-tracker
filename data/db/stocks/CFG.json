@@ -2,25 +2,25 @@
   "ticker": "CFG",
   "cashtag": "$CFG",
   "instrument": {
-    "instrument_id": "UNVERIFIED:CFG",
+    "instrument_id": "US:CFG",
     "display_code": "CFG",
-    "display_name": "Citizens Financial Group",
-    "display_market": "Market unverified",
+    "display_name": "CITIZENS FINANCIAL GROUP INC/RI",
+    "display_market": "NYSE",
     "aliases": [
       "CFG"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "CFG",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Citizens Financial Group",
+  "price_symbol": "CFG",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "CITIZENS FINANCIAL GROUP INC/RI",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
@@ -149,9 +149,77 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.599645+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-24",
+      "close": 69.46
+    },
+    {
+      "date": "2026-06-25",
+      "close": 70.66
+    },
+    {
+      "date": "2026-06-26",
+      "close": 70.4
+    },
+    {
+      "date": "2026-06-29",
+      "close": 70.43
+    },
+    {
+      "date": "2026-06-30",
+      "close": 70.07
+    },
+    {
+      "date": "2026-07-01",
+      "close": 71.82
+    },
+    {
+      "date": "2026-07-02",
+      "close": 70.98
+    },
+    {
+      "date": "2026-07-06",
+      "close": 72.11
+    },
+    {
+      "date": "2026-07-07",
+      "close": 71.78
+    },
+    {
+      "date": "2026-07-08",
+      "close": 68.56
+    },
+    {
+      "date": "2026-07-09",
+      "close": 69.86
+    },
+    {
+      "date": "2026-07-10",
+      "close": 70.34
+    },
+    {
+      "date": "2026-07-13",
+      "close": 70.36
+    },
+    {
+      "date": "2026-07-14",
+      "close": 70.32
+    },
+    {
+      "date": "2026-07-15",
+      "close": 71.12
+    },
+    {
+      "date": "2026-07-16",
+      "close": 74.4
+    },
+    {
+      "date": "2026-07-17",
+      "close": 72.39
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:49.498734+00:00"
 }

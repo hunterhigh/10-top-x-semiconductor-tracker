@@ -2,25 +2,25 @@
   "ticker": "IBM",
   "cashtag": "$IBM",
   "instrument": {
-    "instrument_id": "UNVERIFIED:IBM",
+    "instrument_id": "US:IBM",
     "display_code": "IBM",
-    "display_name": "International Business Machines",
-    "display_market": "Market unverified",
+    "display_name": "INTERNATIONAL BUSINESS MACHINES CORP",
+    "display_market": "NYSE",
     "aliases": [
       "IBM"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "IBM",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "International Business Machines",
+  "price_symbol": "IBM",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "INTERNATIONAL BUSINESS MACHINES CORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
@@ -521,9 +521,109 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.466509+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-11",
+      "close": 274.85
+    },
+    {
+      "date": "2026-06-12",
+      "close": 272.24
+    },
+    {
+      "date": "2026-06-15",
+      "close": 268.71
+    },
+    {
+      "date": "2026-06-16",
+      "close": 270.81
+    },
+    {
+      "date": "2026-06-17",
+      "close": 262.35
+    },
+    {
+      "date": "2026-06-18",
+      "close": 249.1
+    },
+    {
+      "date": "2026-06-22",
+      "close": 252.22
+    },
+    {
+      "date": "2026-06-23",
+      "close": 264.94
+    },
+    {
+      "date": "2026-06-24",
+      "close": 262.96
+    },
+    {
+      "date": "2026-06-25",
+      "close": 258.27
+    },
+    {
+      "date": "2026-06-26",
+      "close": 271.63
+    },
+    {
+      "date": "2026-06-29",
+      "close": 278.0
+    },
+    {
+      "date": "2026-06-30",
+      "close": 281.21
+    },
+    {
+      "date": "2026-07-01",
+      "close": 286.25
+    },
+    {
+      "date": "2026-07-02",
+      "close": 289.52
+    },
+    {
+      "date": "2026-07-06",
+      "close": 299.52
+    },
+    {
+      "date": "2026-07-07",
+      "close": 306.13
+    },
+    {
+      "date": "2026-07-08",
+      "close": 302.05
+    },
+    {
+      "date": "2026-07-09",
+      "close": 295.3
+    },
+    {
+      "date": "2026-07-10",
+      "close": 287.56
+    },
+    {
+      "date": "2026-07-13",
+      "close": 290.23
+    },
+    {
+      "date": "2026-07-14",
+      "close": 217.07
+    },
+    {
+      "date": "2026-07-15",
+      "close": 211.2
+    },
+    {
+      "date": "2026-07-16",
+      "close": 219.05
+    },
+    {
+      "date": "2026-07-17",
+      "close": 212.67
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:34:29.928432+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "EC",
   "cashtag": "$EC",
   "instrument": {
-    "instrument_id": "UNVERIFIED:EC",
+    "instrument_id": "US:EC",
     "display_code": "EC",
-    "display_name": "Ecopetrol",
-    "display_market": "Market unverified",
+    "display_name": "ECOPETROL S.A.",
+    "display_market": "NYSE",
     "aliases": [
       "EC"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "EC",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Ecopetrol",
+  "price_symbol": "EC",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "ECOPETROL S.A.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -57,9 +57,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.836951+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 16.25
+    },
+    {
+      "date": "2026-06-23",
+      "close": 15.51
+    },
+    {
+      "date": "2026-06-24",
+      "close": 14.59
+    },
+    {
+      "date": "2026-06-25",
+      "close": 14.45
+    },
+    {
+      "date": "2026-06-26",
+      "close": 14.72
+    },
+    {
+      "date": "2026-06-29",
+      "close": 14.56
+    },
+    {
+      "date": "2026-06-30",
+      "close": 14.24
+    },
+    {
+      "date": "2026-07-01",
+      "close": 14.45
+    },
+    {
+      "date": "2026-07-02",
+      "close": 14.7
+    },
+    {
+      "date": "2026-07-06",
+      "close": 14.47
+    },
+    {
+      "date": "2026-07-07",
+      "close": 14.69
+    },
+    {
+      "date": "2026-07-08",
+      "close": 15.13
+    },
+    {
+      "date": "2026-07-09",
+      "close": 15.39
+    },
+    {
+      "date": "2026-07-10",
+      "close": 15.58
+    },
+    {
+      "date": "2026-07-13",
+      "close": 15.88
+    },
+    {
+      "date": "2026-07-14",
+      "close": 16.16
+    },
+    {
+      "date": "2026-07-15",
+      "close": 15.98
+    },
+    {
+      "date": "2026-07-16",
+      "close": 15.8
+    },
+    {
+      "date": "2026-07-17",
+      "close": 16.09
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:33.917972+00:00"
 }

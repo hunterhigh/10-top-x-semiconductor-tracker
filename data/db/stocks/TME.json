@@ -2,25 +2,25 @@
   "ticker": "TME",
   "cashtag": "$TME",
   "instrument": {
-    "instrument_id": "UNVERIFIED:TME",
+    "instrument_id": "US:TME",
     "display_code": "TME",
-    "display_name": "Tencent Music Entertainment",
-    "display_market": "Market unverified",
+    "display_name": "Tencent Music Entertainment Group",
+    "display_market": "NYSE",
     "aliases": [
       "TME"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "TME",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Tencent Music Entertainment",
+  "price_symbol": "TME",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Tencent Music Entertainment Group",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -105,9 +105,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.715399+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 8.34
+    },
+    {
+      "date": "2026-06-23",
+      "close": 8.2
+    },
+    {
+      "date": "2026-06-24",
+      "close": 8.18
+    },
+    {
+      "date": "2026-06-25",
+      "close": 8.16
+    },
+    {
+      "date": "2026-06-26",
+      "close": 8.39
+    },
+    {
+      "date": "2026-06-29",
+      "close": 8.45
+    },
+    {
+      "date": "2026-06-30",
+      "close": 8.35
+    },
+    {
+      "date": "2026-07-01",
+      "close": 8.66
+    },
+    {
+      "date": "2026-07-02",
+      "close": 8.63
+    },
+    {
+      "date": "2026-07-06",
+      "close": 8.77
+    },
+    {
+      "date": "2026-07-07",
+      "close": 8.62
+    },
+    {
+      "date": "2026-07-08",
+      "close": 8.82
+    },
+    {
+      "date": "2026-07-09",
+      "close": 8.85
+    },
+    {
+      "date": "2026-07-10",
+      "close": 8.88
+    },
+    {
+      "date": "2026-07-13",
+      "close": 8.83
+    },
+    {
+      "date": "2026-07-14",
+      "close": 8.78
+    },
+    {
+      "date": "2026-07-15",
+      "close": 8.86
+    },
+    {
+      "date": "2026-07-16",
+      "close": 9.24
+    },
+    {
+      "date": "2026-07-17",
+      "close": 9.12
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:57.903163+00:00"
 }

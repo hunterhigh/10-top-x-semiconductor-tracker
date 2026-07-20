@@ -2,25 +2,25 @@
   "ticker": "GH",
   "cashtag": "$GH",
   "instrument": {
-    "instrument_id": "UNVERIFIED:GH",
+    "instrument_id": "US:GH",
     "display_code": "GH",
-    "display_name": "Guardant Health Inc",
-    "display_market": "Market unverified",
+    "display_name": "Guardant Health, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "GH"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "GH",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Guardant Health Inc",
+  "price_symbol": "GH",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Guardant Health, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
@@ -103,9 +103,77 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.693380+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-24",
+      "close": 136.96
+    },
+    {
+      "date": "2026-06-25",
+      "close": 142.94
+    },
+    {
+      "date": "2026-06-26",
+      "close": 149.22
+    },
+    {
+      "date": "2026-06-29",
+      "close": 153.74
+    },
+    {
+      "date": "2026-06-30",
+      "close": 150.03
+    },
+    {
+      "date": "2026-07-01",
+      "close": 170.77
+    },
+    {
+      "date": "2026-07-02",
+      "close": 167.98
+    },
+    {
+      "date": "2026-07-06",
+      "close": 168.82
+    },
+    {
+      "date": "2026-07-07",
+      "close": 162.92
+    },
+    {
+      "date": "2026-07-08",
+      "close": 156.17
+    },
+    {
+      "date": "2026-07-09",
+      "close": 164.08
+    },
+    {
+      "date": "2026-07-10",
+      "close": 160.05
+    },
+    {
+      "date": "2026-07-13",
+      "close": 158.4
+    },
+    {
+      "date": "2026-07-14",
+      "close": 160.11
+    },
+    {
+      "date": "2026-07-15",
+      "close": 162.96
+    },
+    {
+      "date": "2026-07-16",
+      "close": 155.0
+    },
+    {
+      "date": "2026-07-17",
+      "close": 155.87
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:24.047825+00:00"
 }

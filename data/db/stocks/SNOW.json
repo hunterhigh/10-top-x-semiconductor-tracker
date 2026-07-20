@@ -2,25 +2,25 @@
   "ticker": "SNOW",
   "cashtag": "$SNOW",
   "instrument": {
-    "instrument_id": "UNVERIFIED:SNOW",
+    "instrument_id": "US:SNOW",
     "display_code": "SNOW",
-    "display_name": "Snowflake",
-    "display_market": "Market unverified",
+    "display_name": "Snowflake Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "SNOW"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "SNOW",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Snowflake",
+  "price_symbol": "SNOW",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Snowflake Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-19",
@@ -103,9 +103,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.711437+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 226.59
+    },
+    {
+      "date": "2026-06-23",
+      "close": 230.41
+    },
+    {
+      "date": "2026-06-24",
+      "close": 225.95
+    },
+    {
+      "date": "2026-06-25",
+      "close": 227.06
+    },
+    {
+      "date": "2026-06-26",
+      "close": 248.96
+    },
+    {
+      "date": "2026-06-29",
+      "close": 251.65
+    },
+    {
+      "date": "2026-06-30",
+      "close": 254.5
+    },
+    {
+      "date": "2026-07-01",
+      "close": 261.19
+    },
+    {
+      "date": "2026-07-02",
+      "close": 260.15
+    },
+    {
+      "date": "2026-07-06",
+      "close": 262.09
+    },
+    {
+      "date": "2026-07-07",
+      "close": 262.74
+    },
+    {
+      "date": "2026-07-08",
+      "close": 261.31
+    },
+    {
+      "date": "2026-07-09",
+      "close": 267.49
+    },
+    {
+      "date": "2026-07-10",
+      "close": 261.45
+    },
+    {
+      "date": "2026-07-13",
+      "close": 268.65
+    },
+    {
+      "date": "2026-07-14",
+      "close": 275.94
+    },
+    {
+      "date": "2026-07-15",
+      "close": 271.87
+    },
+    {
+      "date": "2026-07-16",
+      "close": 270.02
+    },
+    {
+      "date": "2026-07-17",
+      "close": 268.9
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:51.941304+00:00"
 }

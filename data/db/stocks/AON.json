@@ -2,25 +2,25 @@
   "ticker": "AON",
   "cashtag": "$AON",
   "instrument": {
-    "instrument_id": "UNVERIFIED:AON",
+    "instrument_id": "US:AON",
     "display_code": "AON",
-    "display_name": "Aon",
-    "display_market": "Market unverified",
+    "display_name": "Aon plc",
+    "display_market": "NYSE",
     "aliases": [
       "AON"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "AON",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Aon",
+  "price_symbol": "AON",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Aon plc",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
@@ -57,9 +57,81 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.811412+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-23",
+      "close": 320.74
+    },
+    {
+      "date": "2026-06-24",
+      "close": 325.48
+    },
+    {
+      "date": "2026-06-25",
+      "close": 315.95
+    },
+    {
+      "date": "2026-06-26",
+      "close": 328.69
+    },
+    {
+      "date": "2026-06-29",
+      "close": 327.57
+    },
+    {
+      "date": "2026-06-30",
+      "close": 331.69
+    },
+    {
+      "date": "2026-07-01",
+      "close": 343.56
+    },
+    {
+      "date": "2026-07-02",
+      "close": 357.46
+    },
+    {
+      "date": "2026-07-06",
+      "close": 356.91
+    },
+    {
+      "date": "2026-07-07",
+      "close": 359.82
+    },
+    {
+      "date": "2026-07-08",
+      "close": 357.51
+    },
+    {
+      "date": "2026-07-09",
+      "close": 355.56
+    },
+    {
+      "date": "2026-07-10",
+      "close": 356.94
+    },
+    {
+      "date": "2026-07-13",
+      "close": 367.35
+    },
+    {
+      "date": "2026-07-14",
+      "close": 358.89
+    },
+    {
+      "date": "2026-07-15",
+      "close": 355.15
+    },
+    {
+      "date": "2026-07-16",
+      "close": 368.63
+    },
+    {
+      "date": "2026-07-17",
+      "close": 367.21
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:54.102115+00:00"
 }

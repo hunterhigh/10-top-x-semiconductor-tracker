@@ -2,25 +2,25 @@
   "ticker": "EQIX",
   "cashtag": "$EQIX",
   "instrument": {
-    "instrument_id": "UNVERIFIED:EQIX",
+    "instrument_id": "US:EQIX",
     "display_code": "EQIX",
-    "display_name": "Equinix",
-    "display_market": "Market unverified",
+    "display_name": "EQUINIX INC",
+    "display_market": "NASDAQ",
     "aliases": [
       "EQIX"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "EQIX",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Equinix",
+  "price_symbol": "EQIX",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "EQUINIX INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-05",
@@ -57,9 +57,49 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.838481+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-06",
+      "close": 998.84
+    },
+    {
+      "date": "2026-07-07",
+      "close": 1022.93
+    },
+    {
+      "date": "2026-07-08",
+      "close": 1015.97
+    },
+    {
+      "date": "2026-07-09",
+      "close": 1034.87
+    },
+    {
+      "date": "2026-07-10",
+      "close": 1051.21
+    },
+    {
+      "date": "2026-07-13",
+      "close": 1039.53
+    },
+    {
+      "date": "2026-07-14",
+      "close": 1023.54
+    },
+    {
+      "date": "2026-07-15",
+      "close": 1022.6
+    },
+    {
+      "date": "2026-07-16",
+      "close": 1009.14
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1020.0
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:37.115666+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "AMRX",
   "cashtag": "$AMRX",
   "instrument": {
-    "instrument_id": "UNVERIFIED:AMRX",
+    "instrument_id": "US:AMRX",
     "display_code": "AMRX",
-    "display_name": "Amneal Pharmaceuticals",
-    "display_market": "Market unverified",
+    "display_name": "Amneal Pharmaceuticals, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "AMRX"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "AMRX",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Amneal Pharmaceuticals",
+  "price_symbol": "AMRX",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Amneal Pharmaceuticals, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -103,9 +103,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.682164+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 16.2
+    },
+    {
+      "date": "2026-06-15",
+      "close": 16.24
+    },
+    {
+      "date": "2026-06-16",
+      "close": 16.25
+    },
+    {
+      "date": "2026-06-17",
+      "close": 16.28
+    },
+    {
+      "date": "2026-06-18",
+      "close": 16.21
+    },
+    {
+      "date": "2026-06-22",
+      "close": 16.11
+    },
+    {
+      "date": "2026-06-23",
+      "close": 16.66
+    },
+    {
+      "date": "2026-06-24",
+      "close": 17.27
+    },
+    {
+      "date": "2026-06-25",
+      "close": 17.32
+    },
+    {
+      "date": "2026-06-26",
+      "close": 17.23
+    },
+    {
+      "date": "2026-06-29",
+      "close": 17.29
+    },
+    {
+      "date": "2026-06-30",
+      "close": 17.31
+    },
+    {
+      "date": "2026-07-01",
+      "close": 16.97
+    },
+    {
+      "date": "2026-07-02",
+      "close": 17.15
+    },
+    {
+      "date": "2026-07-06",
+      "close": 16.92
+    },
+    {
+      "date": "2026-07-07",
+      "close": 17.05
+    },
+    {
+      "date": "2026-07-08",
+      "close": 16.96
+    },
+    {
+      "date": "2026-07-09",
+      "close": 17.02
+    },
+    {
+      "date": "2026-07-10",
+      "close": 17.01
+    },
+    {
+      "date": "2026-07-13",
+      "close": 17.18
+    },
+    {
+      "date": "2026-07-14",
+      "close": 16.69
+    },
+    {
+      "date": "2026-07-15",
+      "close": 17.2
+    },
+    {
+      "date": "2026-07-16",
+      "close": 18.04
+    },
+    {
+      "date": "2026-07-17",
+      "close": 17.85
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:59.562287+00:00"
 }

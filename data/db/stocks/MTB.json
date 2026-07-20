@@ -2,25 +2,25 @@
   "ticker": "MTB",
   "cashtag": "$MTB",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MTB",
+    "instrument_id": "US:MTB",
     "display_code": "MTB",
-    "display_name": "M&T Bank",
-    "display_market": "Market unverified",
+    "display_name": "M&T BANK CORP",
+    "display_market": "NYSE",
     "aliases": [
       "MTB"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MTB",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "M&T Bank",
+  "price_symbol": "MTB",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "M&T BANK CORP",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-14",
@@ -80,9 +80,25 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.765673+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-14",
+      "close": 241.85
+    },
+    {
+      "date": "2026-07-15",
+      "close": 248.53
+    },
+    {
+      "date": "2026-07-16",
+      "close": 254.04
+    },
+    {
+      "date": "2026-07-17",
+      "close": 249.24
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:08.698780+00:00"
 }

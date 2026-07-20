@@ -2,38 +2,69 @@
   "ticker": "2337",
   "cashtag": "Macronix (2337)",
   "instrument": {
-    "instrument_id": "UNVERIFIED:2337",
+    "instrument_id": "TWSE:2337",
     "display_code": "2337",
-    "display_name": "Macronix International",
-    "display_market": "Market unverified",
+    "display_name": "Macronix International Co., Ltd.",
+    "display_market": "Taiwan",
     "aliases": [
-      "2337"
+      "2337",
+      "MACRONIX",
+      "MXIC"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "Taiwan",
+    "country": "TW",
+    "currency": "TWD",
+    "price_symbol": "2337.TW",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Macronix International",
+  "price_symbol": "2337.TW",
+  "exchange": "Taiwan",
+  "currency": "TWD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Macronix International Co., Ltd.",
   "industry": null,
   "thesis_summary": null,
-  "first_mention": "2026-01-29",
+  "first_mention": "2026-01-28",
   "last_mention": "2026-07-14",
-  "total_mentions": 5,
+  "total_mentions": 17,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 4,
-    "jukan05": 1
+    "aleabitoreddit": 13,
+    "zephyr_z9": 2,
+    "jukan05": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 5
+    "opinion": 16,
+    "news": 1
   },
   "mentions": [
+    {
+      "tweet_id": "2016681010793153018",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-01-28",
+      "created_at": "2026-01-28T20:13:15-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "ROM/NOR flash play",
+        "up 389% 1Y"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "Some other Asia memory long ideas like Nanya (if you don’t want $MU, Samsung, SK Hynix types)\n\n- Winbond (dram/flash) up 847% 1Y\n\n- Macronix (ROM/ NOR flash) up 389% 1Y\n\n- Phison Electronics (SSD controllers for Kioxia $SNDK) up 383% 1Y\n\nSome other interesting ones are Tokyo Electron for NAND/DRAM equipment for indirect beneficiaries",
+      "url": "https://x.com/aleabitoreddit/status/2016681010793153018",
+      "kind": "post",
+      "engagement": {
+        "views": 59958,
+        "likes": 251,
+        "reposts": 37,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v1"
+    },
     {
       "tweet_id": "2017097752535322767",
       "blogger_id": "aleabitoreddit",
@@ -63,6 +94,87 @@
       "prompt_version": "extract-v1"
     },
     {
+      "tweet_id": "2028140055425139186",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-01",
+      "created_at": "2026-03-01T11:07:24-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "NOR Flash price hikes 15-50%",
+        "holds 33-35% market share",
+        "YTD +153%",
+        "best exposure for NOR Flash segment"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "Is NOR Flash the next memory supply squeeze from HBM/DRAM? \n\nRecently 10% to 80% hikes were made to: MCUs, NOR Flash, KGD package storage, and power devices recently. \n\nThe list of companies spanning: \n\n- China Resources Microelectronics\n- SMIC Semiconductor\n- Belling\n- Goke Microelectronics\n- Yingjixin\n- Maxscend\n- Omron\n- ADI\n- Infineon\n\nhave all increased prices. More specifically, China's Cmsemicon raised MCU and NOR Flash prices by 15%–50% and Puya Semiconductor raised NOR Flash prices. \n\nThis helped confirm earlier projections regarding $NVDA GB200 NVL72 systems that NOR content per rack already exceeds $600 and could start hiking rates to $900 (+50% increase). \n\nInvestors usually like to hear the sound of price hikes so for exposure: \n\n- Macronix (YTD: +153%)  \n- Winbond (YTD: +34.91%) are the two best exposures for the segment.\n\nSince they both hold 33-35% of market share each, though a smaller TAM. Infineon and others look to a drop in the bucket for pure play exposure.",
+      "url": "https://x.com/aleabitoreddit/status/2028140055425139186",
+      "kind": "post",
+      "engagement": {
+        "views": 76530,
+        "likes": 376,
+        "reposts": 31,
+        "replies": 19
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2028147215206859218",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-01",
+      "created_at": "2026-03-01T11:35:51-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "most pure play for NOR Flash",
+        "30-35% of market",
+        "smaller MC of $6.7B"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "Macronix",
+      "text": "@ShortsHoward Macronix I've talked about earlier on for NOR Flash. It's probably the most pure play out of the bunch since it's 30-35% of the market with a smaller MC of $6.7B compared to the others at $15B+\n\nThe hikes have been pretty modest so far, for it to pull a $SNDK, it will need to be a lot steeper.",
+      "url": "https://x.com/aleabitoreddit/status/2028147215206859218",
+      "kind": "reply",
+      "engagement": {
+        "views": 3677,
+        "likes": 17,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2028520248891392461",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-02",
+      "created_at": "2026-03-02T12:18:10-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Asia bottleneck",
+        "triple digit returns in 2 months"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "I happened to own every single top individual stock performer this year:\n\nFrom $AXTI and $AAOI in photonics.\n\nTo $SNDK and SK Hynix in memory.\n\nTo Nittobo, Macronix, and Unimicron for Asia Bottlenecks. \n\nAll triple digit returns in 2 months. \n\nYear to Date: 501.38%\n\nJust lucky I guess?",
+      "url": "https://x.com/aleabitoreddit/status/2028520248891392461",
+      "kind": "post",
+      "engagement": {
+        "views": 341254,
+        "likes": 2352,
+        "reposts": 66,
+        "replies": 200
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2033792436892570083",
       "blogger_id": "aleabitoreddit",
       "date": "2026-03-17",
@@ -90,6 +202,150 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2033906534753939628",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-17",
+      "created_at": "2026-03-17T10:01:20-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "@zephyr_z9 Nice! Personally wasn’t expecting 201% YTD from Macronix given macro. \n\nIt’s smoking the market, curious to see how markets price it in q2",
+      "url": "https://x.com/aleabitoreddit/status/2033906534753939628",
+      "kind": "reply",
+      "engagement": {
+        "views": 7385,
+        "likes": 24,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2036342519727006000",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-24",
+      "created_at": "2026-03-24T03:21:04-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "liked international equities"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "It’s hilarious we live in a world:\n\nWhere equity analysts at major banks… \n\nMight need to adjust their estimates for $IBKR or $HOOD earnings.\n\nBecause a random person on X liked international equities like $SIVE, $IQE, Macronix, SK Hynix, Unimicron, and others not available on Robinhood or US brokerages.  \n\nWhat a wild timeline.",
+      "url": "https://x.com/aleabitoreddit/status/2036342519727006000",
+      "kind": "post",
+      "engagement": {
+        "views": 97044,
+        "likes": 643,
+        "reposts": 7,
+        "replies": 42
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2036760616376107309",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-03-25",
+      "created_at": "2026-03-25T07:02:26-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "massive implications from legacy memory bottleneck being underpriced"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "Macronix",
+      "text": "Woah Nanya was my long earlier in the year... \n\nDid not expect $SNDK to take a $1B+ stake in it just now. \n\nFact that Sandisk is taking stakes in companies like Nanya, means bottleneck in legacy memory might be bigger / more underpriced than marketes thought. \n\nMassive implications for others like Macronix + other TW companies. \n\nOr... $SNDK just has too much money from NAND price hiking and needed somewhere to spend it?",
+      "url": "https://x.com/aleabitoreddit/status/2036760616376107309",
+      "kind": "post",
+      "engagement": {
+        "views": 67996,
+        "likes": 405,
+        "reposts": 23,
+        "replies": 24
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2042701873833218352",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-04-10",
+      "created_at": "2026-04-10T16:30:52-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "I feel like I've called out the most triple digit stock returns YTD...\n\nOut of anyone in history?  Hence why I have 150k+ followers now! \n\nIn just a short timeframe:\n$AXTI -> 5x+\n$AAOI -> 5x\n$SIVE -> 2x+\n$LITE -> 2x+ \n$IQE -> 2x+ \n$AEHR -> 2x+ \n$CRCL -> 2x+ \n$EWY IV -> 2x\nUnimicron -> 2x+\nNitto Boseki -> 2x+\n$OSS -> 2x+ \n$GDRZF -> 2x+\n$AEHR -> 2x\n\nWith many more like $TSEM, $RPI having close to triple digit returns. \n\nNot including many others last year like $HOOD or $RKLB for triple digit returns, just this YTD.\n\nThere's stuff like $FORM and others like Macronix... and $NBIS that actually doubled from the bottom at $70. But I won't take credit since I didn't do a specific post about it during the timeframes. \n\nThere's a difference between just mentioning among many other tickers.\n\nThen having conviction like myself, writing a specific thesis post about it, getting catalyst timing right, and going long yourself. \n\nBut proud if this helped retail going the right direction. \n\nEspecially that they don’t need to pay $2,000+ just to see tickers people go long on or join some “special club” for company discussion.",
+      "url": "https://x.com/aleabitoreddit/status/2042701873833218352",
+      "kind": "post",
+      "engagement": {
+        "views": 188713,
+        "likes": 2117,
+        "reposts": 95,
+        "replies": 154
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2053205192980721797",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-05-09",
+      "created_at": "2026-05-09T16:07:19-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "2D NAND shortage spirals after Samsung, Micron, and rivals exit market"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "Just a TLDR of recent semi developments:\n\n1. $TSM pushing hard CoPoS - VisEra/others might go brrr earlier than expected.\n\n2. $AAPL goes with $INTC for semi production, which is a major shift cause they normally go with TSM. Made in America go like Intel go brrr. \n\n3. $NVDA Vera Rubin reportedly makes changes to cooling architectures very recently. \n\n\"Taiwan's thermal management suppliers are emerging as one of the fastest-growing segments in the AI hardware ecosystem\" - From Last Month.\n\n\"Vera Rubin server architecture is expected to drive a fundamental shift in data center cooling and system design\"\n\nWill cover thermal ecosystem later, maybe it's time to take a look?\n\n4. 2D NAND shortage spirals after Samsung, Micron, and rivals exit market \n\nMacronix, Windbond go brrr. implications for GigaDevice and other niche players. \n\n5. \"Big Tech reportedly offers to fund SK Hynix fabs and EUV\"\n\n- Memory that badly bottlenecked that mag7 wants to pay for it, so $MU, SK Hynix, Samsung go brr. \n\n6. $TSM 2026 net revenue $12.6B for April 2026. Revenue up 30%, Semis keep going brr.\n\n7. Anthropic needs compute ->  SpaceX.\n\nSo implications for compute demand is extreme here which is BRRR $NBIS and others.\n\nBut it's very interesting they sidestepped Neoclouds and went with SpaceX. \n\n8. \"SKC to Accelerate Mass Production of Glass Substrates for U.S. Clients by the End of the Year\"\n\n\"the end of the year, ahead of its original plan, it has been announced\"\n\nGlass Core substrates players like $LPK for mass production and other related players like SKC go brrr. \n\nGlass timelines moved up. heavy brrr glass. \n\n9. \"Power chip shortages deepen as AI server demand and GaN battles escalate\"\n\nMaybe time to look into the power chip bottleneck anon?\n\n10. \"Adata said DRAM and NAND flash contract prices will each climb more than 40% in the second quarter of 2026\" \n\nAnother positive for $MU, SK Hynix, Samsung, $SNDK, and others.",
+      "url": "https://x.com/aleabitoreddit/status/2053205192980721797",
+      "kind": "post",
+      "engagement": {
+        "views": 315123,
+        "likes": 2106,
+        "reposts": 151,
+        "replies": 145
+      },
+      "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2067116128267313579",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-06-17",
+      "created_at": "2026-06-17T01:24:24-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "Macronix 😏",
+      "url": "https://x.com/zephyr_z9/status/2067116128267313579",
+      "kind": "post",
+      "engagement": {
+        "views": 43619,
+        "likes": 99,
+        "reposts": 2,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2067376339691434198",
       "blogger_id": "jukan05",
       "date": "2026-06-17",
@@ -108,6 +364,29 @@
         "likes": 234,
         "reposts": 16,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2071952116441055372",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-06-30",
+      "created_at": "2026-06-30T09:40:54-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Mxic",
+      "text": "NEW MEMORY ETF JUST LAUNCHED\n\nMy partners over at Tema ETFs just launched a new Memory ETF today trading under the ticker $DISK\n\nThe ETF invests in memory names like \n\nSK Hynix\nMicron \nSamsung\nKioxia\nSeagate\nWestern Digital\nInnodisk\nMxic\n\nDisclosure: Tema ETF is a partner of StockMKTNewz, the purpose of this is to inform and is not investment advice",
+      "url": "https://x.com/StockMKTNewz/status/2071952116441055372",
+      "kind": "post",
+      "engagement": {
+        "views": 378356,
+        "likes": 901,
+        "reposts": 101,
+        "replies": 65
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -133,6 +412,29 @@
         "replies": 105
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2074096446849335632",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-07-06",
+      "created_at": "2026-07-06T07:41:42-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Macronix",
+      "text": "Macronix Effect for MLSeeSee https://t.co/TF7D6e8ftG",
+      "url": "https://x.com/zephyr_z9/status/2074096446849335632",
+      "kind": "post",
+      "engagement": {
+        "views": 24575,
+        "likes": 87,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     },
     {
@@ -164,8 +466,8 @@
     }
   ],
   "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.592156+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_status": "unavailable",
+  "price_unit": "TWD",
+  "price_updated_at": "2026-07-20T15:34:42.271278+00:00",
+  "price_reason": "EODHD daily call budget (20) exhausted"
 }

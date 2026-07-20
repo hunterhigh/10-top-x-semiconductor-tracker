@@ -2,25 +2,25 @@
   "ticker": "MFG",
   "cashtag": "$MFG",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MFG",
+    "instrument_id": "US:MFG",
     "display_code": "MFG",
-    "display_name": "Mizuho Financial Group",
-    "display_market": "Market unverified",
+    "display_name": "MIZUHO FINANCIAL GROUP INC",
+    "display_market": "NYSE",
     "aliases": [
       "MFG"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MFG",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Mizuho Financial Group",
+  "price_symbol": "MFG",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "MIZUHO FINANCIAL GROUP INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-09",
@@ -80,9 +80,37 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.764785+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-09",
+      "close": 10.33
+    },
+    {
+      "date": "2026-07-10",
+      "close": 10.48
+    },
+    {
+      "date": "2026-07-13",
+      "close": 10.49
+    },
+    {
+      "date": "2026-07-14",
+      "close": 10.57
+    },
+    {
+      "date": "2026-07-15",
+      "close": 10.66
+    },
+    {
+      "date": "2026-07-16",
+      "close": 10.32
+    },
+    {
+      "date": "2026-07-17",
+      "close": 9.87
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:07.713857+00:00"
 }

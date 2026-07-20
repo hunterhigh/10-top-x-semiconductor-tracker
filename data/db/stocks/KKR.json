@@ -2,25 +2,25 @@
   "ticker": "KKR",
   "cashtag": "$KKR",
   "instrument": {
-    "instrument_id": "UNVERIFIED:KKR",
+    "instrument_id": "US:KKR",
     "display_code": "KKR",
-    "display_name": "KKR & Co.",
-    "display_market": "Market unverified",
+    "display_name": "KKR & Co. Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "KKR"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "KKR",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "KKR & Co.",
+  "price_symbol": "KKR",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "KKR & Co. Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
@@ -57,9 +57,81 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.852469+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-23",
+      "close": 93.5
+    },
+    {
+      "date": "2026-06-24",
+      "close": 91.51
+    },
+    {
+      "date": "2026-06-25",
+      "close": 92.65
+    },
+    {
+      "date": "2026-06-26",
+      "close": 90.13
+    },
+    {
+      "date": "2026-06-29",
+      "close": 88.94
+    },
+    {
+      "date": "2026-06-30",
+      "close": 91.78
+    },
+    {
+      "date": "2026-07-01",
+      "close": 92.56
+    },
+    {
+      "date": "2026-07-02",
+      "close": 93.84
+    },
+    {
+      "date": "2026-07-06",
+      "close": 95.97
+    },
+    {
+      "date": "2026-07-07",
+      "close": 95.14
+    },
+    {
+      "date": "2026-07-08",
+      "close": 93.3
+    },
+    {
+      "date": "2026-07-09",
+      "close": 96.27
+    },
+    {
+      "date": "2026-07-10",
+      "close": 96.94
+    },
+    {
+      "date": "2026-07-13",
+      "close": 96.91
+    },
+    {
+      "date": "2026-07-14",
+      "close": 97.21
+    },
+    {
+      "date": "2026-07-15",
+      "close": 100.95
+    },
+    {
+      "date": "2026-07-16",
+      "close": 102.75
+    },
+    {
+      "date": "2026-07-17",
+      "close": 100.94
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:54.678806+00:00"
 }

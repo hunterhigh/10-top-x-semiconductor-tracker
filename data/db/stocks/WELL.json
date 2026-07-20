@@ -2,25 +2,25 @@
   "ticker": "WELL",
   "cashtag": "$WELL",
   "instrument": {
-    "instrument_id": "UNVERIFIED:WELL",
+    "instrument_id": "US:WELL",
     "display_code": "WELL",
-    "display_name": "Welltower Inc.",
-    "display_market": "Market unverified",
+    "display_name": "WELLTOWER INC.",
+    "display_market": "NYSE",
     "aliases": [
       "WELL"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "WELL",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Welltower Inc.",
+  "price_symbol": "WELL",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "WELLTOWER INC.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -195,9 +195,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.568586+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 211.45
+    },
+    {
+      "date": "2026-06-23",
+      "close": 217.67
+    },
+    {
+      "date": "2026-06-24",
+      "close": 221.43
+    },
+    {
+      "date": "2026-06-25",
+      "close": 223.73
+    },
+    {
+      "date": "2026-06-26",
+      "close": 227.33
+    },
+    {
+      "date": "2026-06-29",
+      "close": 227.73
+    },
+    {
+      "date": "2026-06-30",
+      "close": 226.97
+    },
+    {
+      "date": "2026-07-01",
+      "close": 230.19
+    },
+    {
+      "date": "2026-07-02",
+      "close": 236.06
+    },
+    {
+      "date": "2026-07-06",
+      "close": 232.69
+    },
+    {
+      "date": "2026-07-07",
+      "close": 237.59
+    },
+    {
+      "date": "2026-07-08",
+      "close": 233.9
+    },
+    {
+      "date": "2026-07-09",
+      "close": 232.12
+    },
+    {
+      "date": "2026-07-10",
+      "close": 231.59
+    },
+    {
+      "date": "2026-07-13",
+      "close": 234.55
+    },
+    {
+      "date": "2026-07-14",
+      "close": 236.0
+    },
+    {
+      "date": "2026-07-15",
+      "close": 233.29
+    },
+    {
+      "date": "2026-07-16",
+      "close": 241.49
+    },
+    {
+      "date": "2026-07-17",
+      "close": 243.25
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:08.676521+00:00"
 }

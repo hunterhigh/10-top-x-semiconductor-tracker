@@ -2,25 +2,25 @@
   "ticker": "BNY",
   "cashtag": "$BNY",
   "instrument": {
-    "instrument_id": "UNVERIFIED:BNY",
+    "instrument_id": "US:BNY",
     "display_code": "BNY",
-    "display_name": "Bank of New York Mellon",
-    "display_market": "Market unverified",
+    "display_name": "Bank of New York Mellon Corp",
+    "display_market": "NYSE",
     "aliases": [
       "BNY"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "BNY",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Bank of New York Mellon",
+  "price_symbol": "BNY",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Bank of New York Mellon Corp",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -172,9 +172,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.574162+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 143.98
+    },
+    {
+      "date": "2026-06-15",
+      "close": 142.5
+    },
+    {
+      "date": "2026-06-16",
+      "close": 144.45
+    },
+    {
+      "date": "2026-06-17",
+      "close": 146.07
+    },
+    {
+      "date": "2026-06-18",
+      "close": 143.63
+    },
+    {
+      "date": "2026-06-22",
+      "close": 146.44
+    },
+    {
+      "date": "2026-06-23",
+      "close": 147.29
+    },
+    {
+      "date": "2026-06-24",
+      "close": 143.56
+    },
+    {
+      "date": "2026-06-25",
+      "close": 145.43
+    },
+    {
+      "date": "2026-06-26",
+      "close": 143.56
+    },
+    {
+      "date": "2026-06-29",
+      "close": 143.8
+    },
+    {
+      "date": "2026-06-30",
+      "close": 144.61
+    },
+    {
+      "date": "2026-07-01",
+      "close": 146.02
+    },
+    {
+      "date": "2026-07-02",
+      "close": 146.62
+    },
+    {
+      "date": "2026-07-06",
+      "close": 149.96
+    },
+    {
+      "date": "2026-07-07",
+      "close": 152.91
+    },
+    {
+      "date": "2026-07-08",
+      "close": 150.14
+    },
+    {
+      "date": "2026-07-09",
+      "close": 152.26
+    },
+    {
+      "date": "2026-07-10",
+      "close": 151.92
+    },
+    {
+      "date": "2026-07-13",
+      "close": 151.27
+    },
+    {
+      "date": "2026-07-14",
+      "close": 154.5
+    },
+    {
+      "date": "2026-07-15",
+      "close": 162.35
+    },
+    {
+      "date": "2026-07-16",
+      "close": 160.86
+    },
+    {
+      "date": "2026-07-17",
+      "close": 157.13
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:14.608291+00:00"
 }

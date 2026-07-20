@@ -2,25 +2,25 @@
   "ticker": "M",
   "cashtag": "$M",
   "instrument": {
-    "instrument_id": "UNVERIFIED:M",
+    "instrument_id": "US:M",
     "display_code": "M",
-    "display_name": "Macy's",
-    "display_market": "Market unverified",
+    "display_name": "Macy's, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "M"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "M",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Macy's",
+  "price_symbol": "M",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Macy's, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
@@ -80,9 +80,105 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.763034+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-12",
+      "close": 25.37
+    },
+    {
+      "date": "2026-06-15",
+      "close": 24.68
+    },
+    {
+      "date": "2026-06-16",
+      "close": 24.94
+    },
+    {
+      "date": "2026-06-17",
+      "close": 23.89
+    },
+    {
+      "date": "2026-06-18",
+      "close": 24.14
+    },
+    {
+      "date": "2026-06-22",
+      "close": 24.66
+    },
+    {
+      "date": "2026-06-23",
+      "close": 23.95
+    },
+    {
+      "date": "2026-06-24",
+      "close": 25.34
+    },
+    {
+      "date": "2026-06-25",
+      "close": 25.7
+    },
+    {
+      "date": "2026-06-26",
+      "close": 25.96
+    },
+    {
+      "date": "2026-06-29",
+      "close": 24.46
+    },
+    {
+      "date": "2026-06-30",
+      "close": 23.55
+    },
+    {
+      "date": "2026-07-01",
+      "close": 23.43
+    },
+    {
+      "date": "2026-07-02",
+      "close": 23.25
+    },
+    {
+      "date": "2026-07-06",
+      "close": 23.68
+    },
+    {
+      "date": "2026-07-07",
+      "close": 23.13
+    },
+    {
+      "date": "2026-07-08",
+      "close": 22.7
+    },
+    {
+      "date": "2026-07-09",
+      "close": 22.68
+    },
+    {
+      "date": "2026-07-10",
+      "close": 22.64
+    },
+    {
+      "date": "2026-07-13",
+      "close": 22.78
+    },
+    {
+      "date": "2026-07-14",
+      "close": 23.21
+    },
+    {
+      "date": "2026-07-15",
+      "close": 23.76
+    },
+    {
+      "date": "2026-07-16",
+      "close": 24.12
+    },
+    {
+      "date": "2026-07-17",
+      "close": 23.68
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:40:04.975007+00:00"
 }

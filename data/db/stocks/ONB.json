@@ -2,25 +2,25 @@
   "ticker": "ONB",
   "cashtag": "$ONB",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ONB",
+    "instrument_id": "US:ONB",
     "display_code": "ONB",
-    "display_name": "Old National Bancorp",
-    "display_market": "Market unverified",
+    "display_name": "OLD NATIONAL BANCORP /IN/",
+    "display_market": "NASDAQ",
     "aliases": [
       "ONB"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ONB",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Old National Bancorp",
+  "price_symbol": "ONB",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "OLD NATIONAL BANCORP /IN/",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-01",
@@ -103,9 +103,57 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.704311+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-01",
+      "close": 26.23
+    },
+    {
+      "date": "2026-07-02",
+      "close": 26.0
+    },
+    {
+      "date": "2026-07-06",
+      "close": 26.45
+    },
+    {
+      "date": "2026-07-07",
+      "close": 26.43
+    },
+    {
+      "date": "2026-07-08",
+      "close": 25.73
+    },
+    {
+      "date": "2026-07-09",
+      "close": 26.17
+    },
+    {
+      "date": "2026-07-10",
+      "close": 26.21
+    },
+    {
+      "date": "2026-07-13",
+      "close": 26.325
+    },
+    {
+      "date": "2026-07-14",
+      "close": 26.31
+    },
+    {
+      "date": "2026-07-15",
+      "close": 26.38
+    },
+    {
+      "date": "2026-07-16",
+      "close": 27.29
+    },
+    {
+      "date": "2026-07-17",
+      "close": 26.74
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:41.141435+00:00"
 }

@@ -2,25 +2,25 @@
   "ticker": "CBOE",
   "cashtag": "Cboe",
   "instrument": {
-    "instrument_id": "UNVERIFIED:CBOE",
+    "instrument_id": "US:CBOE",
     "display_code": "CBOE",
-    "display_name": "Cboe Global Markets",
-    "display_market": "Market unverified",
+    "display_name": "Cboe Global Markets, Inc.",
+    "display_market": "CBOE",
     "aliases": [
       "CBOE"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "CBOE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "CBOE",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Cboe Global Markets",
+  "price_symbol": "CBOE",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Cboe Global Markets, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
@@ -82,9 +82,81 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.743570+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-23",
+      "close": 257.42
+    },
+    {
+      "date": "2026-06-24",
+      "close": 249.59
+    },
+    {
+      "date": "2026-06-25",
+      "close": 244.98
+    },
+    {
+      "date": "2026-06-26",
+      "close": 242.21
+    },
+    {
+      "date": "2026-06-29",
+      "close": 231.51
+    },
+    {
+      "date": "2026-06-30",
+      "close": 242.67
+    },
+    {
+      "date": "2026-07-01",
+      "close": 247.72
+    },
+    {
+      "date": "2026-07-02",
+      "close": 248.99
+    },
+    {
+      "date": "2026-07-06",
+      "close": 245.08
+    },
+    {
+      "date": "2026-07-07",
+      "close": 258.64
+    },
+    {
+      "date": "2026-07-08",
+      "close": 264.98
+    },
+    {
+      "date": "2026-07-09",
+      "close": 267.85
+    },
+    {
+      "date": "2026-07-10",
+      "close": 268.07
+    },
+    {
+      "date": "2026-07-13",
+      "close": 277.13
+    },
+    {
+      "date": "2026-07-14",
+      "close": 274.98
+    },
+    {
+      "date": "2026-07-15",
+      "close": 277.11
+    },
+    {
+      "date": "2026-07-16",
+      "close": 277.89
+    },
+    {
+      "date": "2026-07-17",
+      "close": 273.41
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:39:30.454785+00:00"
 }

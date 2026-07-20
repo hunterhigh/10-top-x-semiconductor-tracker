@@ -2,25 +2,25 @@
   "ticker": "MRNA",
   "cashtag": "$MRNA",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MRNA",
+    "instrument_id": "US:MRNA",
     "display_code": "MRNA",
-    "display_name": "Moderna",
-    "display_market": "Market unverified",
+    "display_name": "Moderna, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "MRNA"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MRNA",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Moderna",
+  "price_symbol": "MRNA",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Moderna, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-18",
@@ -149,9 +149,89 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.633359+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-18",
+      "close": 63.96
+    },
+    {
+      "date": "2026-06-22",
+      "close": 59.345
+    },
+    {
+      "date": "2026-06-23",
+      "close": 61.0
+    },
+    {
+      "date": "2026-06-24",
+      "close": 60.42
+    },
+    {
+      "date": "2026-06-25",
+      "close": 59.75
+    },
+    {
+      "date": "2026-06-26",
+      "close": 67.27
+    },
+    {
+      "date": "2026-06-29",
+      "close": 69.7
+    },
+    {
+      "date": "2026-06-30",
+      "close": 70.03
+    },
+    {
+      "date": "2026-07-01",
+      "close": 72.5
+    },
+    {
+      "date": "2026-07-02",
+      "close": 79.76
+    },
+    {
+      "date": "2026-07-06",
+      "close": 81.8
+    },
+    {
+      "date": "2026-07-07",
+      "close": 79.77
+    },
+    {
+      "date": "2026-07-08",
+      "close": 73.8
+    },
+    {
+      "date": "2026-07-09",
+      "close": 76.56
+    },
+    {
+      "date": "2026-07-10",
+      "close": 68.27
+    },
+    {
+      "date": "2026-07-13",
+      "close": 67.01
+    },
+    {
+      "date": "2026-07-14",
+      "close": 67.44
+    },
+    {
+      "date": "2026-07-15",
+      "close": 68.28
+    },
+    {
+      "date": "2026-07-16",
+      "close": 63.15
+    },
+    {
+      "date": "2026-07-17",
+      "close": 61.82
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:02.988264+00:00"
 }

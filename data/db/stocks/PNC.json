@@ -2,25 +2,25 @@
   "ticker": "PNC",
   "cashtag": "$PNC",
   "instrument": {
-    "instrument_id": "UNVERIFIED:PNC",
+    "instrument_id": "US:PNC",
     "display_code": "PNC",
-    "display_name": "PNC Financial Services",
-    "display_market": "Market unverified",
+    "display_name": "PNC FINANCIAL SERVICES GROUP, INC.",
+    "display_market": "NYSE",
     "aliases": [
       "PNC"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "PNC",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "PNC Financial Services",
+  "price_symbol": "PNC",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "PNC FINANCIAL SERVICES GROUP, INC.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -103,9 +103,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.707006+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 245.28
+    },
+    {
+      "date": "2026-06-26",
+      "close": 244.99
+    },
+    {
+      "date": "2026-06-29",
+      "close": 246.73
+    },
+    {
+      "date": "2026-06-30",
+      "close": 246.22
+    },
+    {
+      "date": "2026-07-01",
+      "close": 251.62
+    },
+    {
+      "date": "2026-07-02",
+      "close": 249.49
+    },
+    {
+      "date": "2026-07-06",
+      "close": 253.18
+    },
+    {
+      "date": "2026-07-07",
+      "close": 254.01
+    },
+    {
+      "date": "2026-07-08",
+      "close": 246.53
+    },
+    {
+      "date": "2026-07-09",
+      "close": 250.91
+    },
+    {
+      "date": "2026-07-10",
+      "close": 251.91
+    },
+    {
+      "date": "2026-07-13",
+      "close": 252.85
+    },
+    {
+      "date": "2026-07-14",
+      "close": 251.88
+    },
+    {
+      "date": "2026-07-15",
+      "close": 254.15
+    },
+    {
+      "date": "2026-07-16",
+      "close": 255.2
+    },
+    {
+      "date": "2026-07-17",
+      "close": 252.86
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:38:45.391144+00:00"
 }

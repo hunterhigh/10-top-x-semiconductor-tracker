@@ -2,25 +2,25 @@
   "ticker": "FTNT",
   "cashtag": "$FTNT",
   "instrument": {
-    "instrument_id": "UNVERIFIED:FTNT",
+    "instrument_id": "US:FTNT",
     "display_code": "FTNT",
-    "display_name": "Fortinet",
-    "display_market": "Market unverified",
+    "display_name": "Fortinet, Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "FTNT"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "FTNT",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Fortinet",
+  "price_symbol": "FTNT",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Fortinet, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -172,9 +172,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.579571+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 149.93
+    },
+    {
+      "date": "2026-06-26",
+      "close": 151.35
+    },
+    {
+      "date": "2026-06-29",
+      "close": 155.42
+    },
+    {
+      "date": "2026-06-30",
+      "close": 153.62
+    },
+    {
+      "date": "2026-07-01",
+      "close": 158.98
+    },
+    {
+      "date": "2026-07-02",
+      "close": 156.25
+    },
+    {
+      "date": "2026-07-06",
+      "close": 162.35
+    },
+    {
+      "date": "2026-07-07",
+      "close": 158.67
+    },
+    {
+      "date": "2026-07-08",
+      "close": 156.71
+    },
+    {
+      "date": "2026-07-09",
+      "close": 163.73
+    },
+    {
+      "date": "2026-07-10",
+      "close": 157.51
+    },
+    {
+      "date": "2026-07-13",
+      "close": 160.62
+    },
+    {
+      "date": "2026-07-14",
+      "close": 166.83
+    },
+    {
+      "date": "2026-07-15",
+      "close": 164.51
+    },
+    {
+      "date": "2026-07-16",
+      "close": 160.78
+    },
+    {
+      "date": "2026-07-17",
+      "close": 161.61
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:25.608155+00:00"
 }

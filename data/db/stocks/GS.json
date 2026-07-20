@@ -2,25 +2,25 @@
   "ticker": "GS",
   "cashtag": "Goldman Sachs",
   "instrument": {
-    "instrument_id": "UNVERIFIED:GS",
+    "instrument_id": "US:GS",
     "display_code": "GS",
-    "display_name": "Goldman Sachs",
-    "display_market": "Market unverified",
+    "display_name": "GOLDMAN SACHS GROUP INC",
+    "display_market": "NYSE",
     "aliases": [
       "GS"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "GS",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Goldman Sachs",
+  "price_symbol": "GS",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "GOLDMAN SACHS GROUP INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-17",
@@ -289,9 +289,93 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.521844+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-17",
+      "close": 1099.14
+    },
+    {
+      "date": "2026-06-18",
+      "close": 1096.5601
+    },
+    {
+      "date": "2026-06-22",
+      "close": 1106.37
+    },
+    {
+      "date": "2026-06-23",
+      "close": 1094.4399
+    },
+    {
+      "date": "2026-06-24",
+      "close": 1076.91
+    },
+    {
+      "date": "2026-06-25",
+      "close": 1065.09
+    },
+    {
+      "date": "2026-06-26",
+      "close": 1019.61
+    },
+    {
+      "date": "2026-06-29",
+      "close": 1020.21
+    },
+    {
+      "date": "2026-06-30",
+      "close": 1011.37
+    },
+    {
+      "date": "2026-07-01",
+      "close": 1019.61
+    },
+    {
+      "date": "2026-07-02",
+      "close": 1021.0
+    },
+    {
+      "date": "2026-07-06",
+      "close": 1055.29
+    },
+    {
+      "date": "2026-07-07",
+      "close": 1042.98
+    },
+    {
+      "date": "2026-07-08",
+      "close": 1029.64
+    },
+    {
+      "date": "2026-07-09",
+      "close": 1055.97
+    },
+    {
+      "date": "2026-07-10",
+      "close": 1055.1801
+    },
+    {
+      "date": "2026-07-13",
+      "close": 1045.91
+    },
+    {
+      "date": "2026-07-14",
+      "close": 1140.0
+    },
+    {
+      "date": "2026-07-15",
+      "close": 1152.0699
+    },
+    {
+      "date": "2026-07-16",
+      "close": 1095.46
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1065.22
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:35:15.810610+00:00"
 }

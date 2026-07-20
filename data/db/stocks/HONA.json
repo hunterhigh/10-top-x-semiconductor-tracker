@@ -2,25 +2,25 @@
   "ticker": "HONA",
   "cashtag": "$HONA",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HONA",
+    "instrument_id": "US:HONA",
     "display_code": "HONA",
-    "display_name": "Honeywell Automation (spinoff)",
-    "display_market": "Market unverified",
+    "display_name": "Honeywell Aerospace Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "HONA"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HONA",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Honeywell Automation (spinoff)",
+  "price_symbol": "HONA",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Honeywell Aerospace Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
@@ -82,9 +82,65 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.756098+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-29",
+      "close": 220.19
+    },
+    {
+      "date": "2026-06-30",
+      "close": 221.08
+    },
+    {
+      "date": "2026-07-01",
+      "close": 227.29
+    },
+    {
+      "date": "2026-07-02",
+      "close": 247.15
+    },
+    {
+      "date": "2026-07-06",
+      "close": 237.7
+    },
+    {
+      "date": "2026-07-07",
+      "close": 238.14
+    },
+    {
+      "date": "2026-07-08",
+      "close": 224.35
+    },
+    {
+      "date": "2026-07-09",
+      "close": 223.12
+    },
+    {
+      "date": "2026-07-10",
+      "close": 220.75
+    },
+    {
+      "date": "2026-07-13",
+      "close": 213.05
+    },
+    {
+      "date": "2026-07-14",
+      "close": 207.51
+    },
+    {
+      "date": "2026-07-15",
+      "close": 212.55
+    },
+    {
+      "date": "2026-07-16",
+      "close": 208.37
+    },
+    {
+      "date": "2026-07-17",
+      "close": 211.625
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:39:52.778732+00:00"
 }

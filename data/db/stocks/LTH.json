@@ -2,25 +2,25 @@
   "ticker": "LTH",
   "cashtag": "$LTH",
   "instrument": {
-    "instrument_id": "UNVERIFIED:LTH",
+    "instrument_id": "US:LTH",
     "display_code": "LTH",
-    "display_name": "Life Time Group Holdings",
-    "display_market": "Market unverified",
+    "display_name": "Life Time Group Holdings, Inc.",
+    "display_market": "NYSE",
     "aliases": [
       "LTH"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "LTH",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Life Time Group Holdings",
+  "price_symbol": "LTH",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Life Time Group Holdings, Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -149,9 +149,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.630977+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 37.33
+    },
+    {
+      "date": "2026-06-23",
+      "close": 37.83
+    },
+    {
+      "date": "2026-06-24",
+      "close": 38.87
+    },
+    {
+      "date": "2026-06-25",
+      "close": 39.86
+    },
+    {
+      "date": "2026-06-26",
+      "close": 41.01
+    },
+    {
+      "date": "2026-06-29",
+      "close": 41.3
+    },
+    {
+      "date": "2026-06-30",
+      "close": 40.84
+    },
+    {
+      "date": "2026-07-01",
+      "close": 40.04
+    },
+    {
+      "date": "2026-07-02",
+      "close": 40.81
+    },
+    {
+      "date": "2026-07-06",
+      "close": 41.13
+    },
+    {
+      "date": "2026-07-07",
+      "close": 41.95
+    },
+    {
+      "date": "2026-07-08",
+      "close": 41.5
+    },
+    {
+      "date": "2026-07-09",
+      "close": 41.67
+    },
+    {
+      "date": "2026-07-10",
+      "close": 41.89
+    },
+    {
+      "date": "2026-07-13",
+      "close": 41.47
+    },
+    {
+      "date": "2026-07-14",
+      "close": 41.57
+    },
+    {
+      "date": "2026-07-15",
+      "close": 42.0
+    },
+    {
+      "date": "2026-07-16",
+      "close": 42.84
+    },
+    {
+      "date": "2026-07-17",
+      "close": 42.15
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:59.532035+00:00"
 }

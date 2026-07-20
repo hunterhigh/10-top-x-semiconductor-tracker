@@ -2,25 +2,25 @@
   "ticker": "MCHP",
   "cashtag": "$MCHP",
   "instrument": {
-    "instrument_id": "UNVERIFIED:MCHP",
+    "instrument_id": "US:MCHP",
     "display_code": "MCHP",
-    "display_name": "Microchip Technology",
-    "display_market": "Market unverified",
+    "display_name": "MICROCHIP TECHNOLOGY INC",
+    "display_market": "NASDAQ",
     "aliases": [
       "MCHP"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "MCHP",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Microchip Technology",
+  "price_symbol": "MCHP",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "MICROCHIP TECHNOLOGY INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-06",
@@ -57,9 +57,49 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.857548+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-06",
+      "close": 87.59
+    },
+    {
+      "date": "2026-07-07",
+      "close": 84.15
+    },
+    {
+      "date": "2026-07-08",
+      "close": 85.49
+    },
+    {
+      "date": "2026-07-09",
+      "close": 88.26
+    },
+    {
+      "date": "2026-07-10",
+      "close": 88.59
+    },
+    {
+      "date": "2026-07-13",
+      "close": 84.23
+    },
+    {
+      "date": "2026-07-14",
+      "close": 87.11
+    },
+    {
+      "date": "2026-07-15",
+      "close": 86.26
+    },
+    {
+      "date": "2026-07-16",
+      "close": 81.68
+    },
+    {
+      "date": "2026-07-17",
+      "close": 80.96
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:42:03.697047+00:00"
 }

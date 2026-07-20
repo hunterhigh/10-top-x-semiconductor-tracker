@@ -2,25 +2,25 @@
   "ticker": "TW",
   "cashtag": "$TW",
   "instrument": {
-    "instrument_id": "UNVERIFIED:TW",
+    "instrument_id": "US:TW",
     "display_code": "TW",
-    "display_name": "Tradeweb Markets",
-    "display_market": "Market unverified",
+    "display_name": "Tradeweb Markets Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "TW"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "TW",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Tradeweb Markets",
+  "price_symbol": "TW",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Tradeweb Markets Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -57,9 +57,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.888630+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 91.5
+    },
+    {
+      "date": "2026-06-26",
+      "close": 93.52
+    },
+    {
+      "date": "2026-06-29",
+      "close": 92.1
+    },
+    {
+      "date": "2026-06-30",
+      "close": 99.66
+    },
+    {
+      "date": "2026-07-01",
+      "close": 101.49
+    },
+    {
+      "date": "2026-07-02",
+      "close": 102.79
+    },
+    {
+      "date": "2026-07-06",
+      "close": 102.41
+    },
+    {
+      "date": "2026-07-07",
+      "close": 100.26
+    },
+    {
+      "date": "2026-07-08",
+      "close": 99.85
+    },
+    {
+      "date": "2026-07-09",
+      "close": 97.12
+    },
+    {
+      "date": "2026-07-10",
+      "close": 97.86
+    },
+    {
+      "date": "2026-07-13",
+      "close": 99.68
+    },
+    {
+      "date": "2026-07-14",
+      "close": 98.83
+    },
+    {
+      "date": "2026-07-15",
+      "close": 100.68
+    },
+    {
+      "date": "2026-07-16",
+      "close": 101.19
+    },
+    {
+      "date": "2026-07-17",
+      "close": 99.9
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:42:38.956439+00:00"
 }

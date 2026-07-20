@@ -2,24 +2,24 @@
   "ticker": "HSAI",
   "cashtag": "$HSAI",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HSAI",
+    "instrument_id": "US:HSAI",
     "display_code": "HSAI",
     "display_name": "Hesai Group",
-    "display_market": "Market unverified",
+    "display_market": "NASDAQ",
     "aliases": [
       "HSAI"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HSAI",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
+  "price_symbol": "HSAI",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
   "company": "Hesai Group",
   "industry": null,
   "thesis_summary": null,
@@ -57,9 +57,65 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.845053+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-29",
+      "close": 15.76
+    },
+    {
+      "date": "2026-06-30",
+      "close": 18.22
+    },
+    {
+      "date": "2026-07-01",
+      "close": 18.23
+    },
+    {
+      "date": "2026-07-02",
+      "close": 17.19
+    },
+    {
+      "date": "2026-07-06",
+      "close": 17.47
+    },
+    {
+      "date": "2026-07-07",
+      "close": 16.15
+    },
+    {
+      "date": "2026-07-08",
+      "close": 16.37
+    },
+    {
+      "date": "2026-07-09",
+      "close": 16.4
+    },
+    {
+      "date": "2026-07-10",
+      "close": 16.16
+    },
+    {
+      "date": "2026-07-13",
+      "close": 15.13
+    },
+    {
+      "date": "2026-07-14",
+      "close": 15.61
+    },
+    {
+      "date": "2026-07-15",
+      "close": 15.85
+    },
+    {
+      "date": "2026-07-16",
+      "close": 15.65
+    },
+    {
+      "date": "2026-07-17",
+      "close": 15.0
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:46.435125+00:00"
 }

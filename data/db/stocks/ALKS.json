@@ -2,25 +2,25 @@
   "ticker": "ALKS",
   "cashtag": "$ALKS",
   "instrument": {
-    "instrument_id": "UNVERIFIED:ALKS",
+    "instrument_id": "US:ALKS",
     "display_code": "ALKS",
-    "display_name": "Alkermes",
-    "display_market": "Market unverified",
+    "display_name": "Alkermes plc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "ALKS"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "ALKS",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Alkermes",
+  "price_symbol": "ALKS",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Alkermes plc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
@@ -80,9 +80,77 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.735678+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-24",
+      "close": 50.45
+    },
+    {
+      "date": "2026-06-25",
+      "close": 52.83
+    },
+    {
+      "date": "2026-06-26",
+      "close": 55.08
+    },
+    {
+      "date": "2026-06-29",
+      "close": 52.53
+    },
+    {
+      "date": "2026-06-30",
+      "close": 52.395
+    },
+    {
+      "date": "2026-07-01",
+      "close": 51.72
+    },
+    {
+      "date": "2026-07-02",
+      "close": 54.58
+    },
+    {
+      "date": "2026-07-06",
+      "close": 55.14
+    },
+    {
+      "date": "2026-07-07",
+      "close": 55.22
+    },
+    {
+      "date": "2026-07-08",
+      "close": 54.29
+    },
+    {
+      "date": "2026-07-09",
+      "close": 53.78
+    },
+    {
+      "date": "2026-07-10",
+      "close": 51.94
+    },
+    {
+      "date": "2026-07-13",
+      "close": 51.87
+    },
+    {
+      "date": "2026-07-14",
+      "close": 51.6
+    },
+    {
+      "date": "2026-07-15",
+      "close": 51.98
+    },
+    {
+      "date": "2026-07-16",
+      "close": 51.94
+    },
+    {
+      "date": "2026-07-17",
+      "close": 52.72
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:39:12.849305+00:00"
 }

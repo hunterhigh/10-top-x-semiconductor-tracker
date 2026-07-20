@@ -2,25 +2,25 @@
   "ticker": "FNB",
   "cashtag": "$FNB",
   "instrument": {
-    "instrument_id": "UNVERIFIED:FNB",
+    "instrument_id": "US:FNB",
     "display_code": "FNB",
-    "display_name": "F.N.B. Corp",
-    "display_market": "Market unverified",
+    "display_name": "FNB CORP/PA/",
+    "display_market": "NYSE",
     "aliases": [
       "FNB"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "FNB",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "F.N.B. Corp",
+  "price_symbol": "FNB",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "FNB CORP/PA/",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
@@ -126,9 +126,73 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.656346+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-25",
+      "close": 19.14
+    },
+    {
+      "date": "2026-06-26",
+      "close": 19.24
+    },
+    {
+      "date": "2026-06-29",
+      "close": 19.17
+    },
+    {
+      "date": "2026-06-30",
+      "close": 19.08
+    },
+    {
+      "date": "2026-07-01",
+      "close": 19.43
+    },
+    {
+      "date": "2026-07-02",
+      "close": 19.03
+    },
+    {
+      "date": "2026-07-06",
+      "close": 19.17
+    },
+    {
+      "date": "2026-07-07",
+      "close": 18.87
+    },
+    {
+      "date": "2026-07-08",
+      "close": 18.41
+    },
+    {
+      "date": "2026-07-09",
+      "close": 18.7
+    },
+    {
+      "date": "2026-07-10",
+      "close": 18.83
+    },
+    {
+      "date": "2026-07-13",
+      "close": 18.93
+    },
+    {
+      "date": "2026-07-14",
+      "close": 18.99
+    },
+    {
+      "date": "2026-07-15",
+      "close": 19.08
+    },
+    {
+      "date": "2026-07-16",
+      "close": 19.49
+    },
+    {
+      "date": "2026-07-17",
+      "close": 19.16
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:37:26.712685+00:00"
 }

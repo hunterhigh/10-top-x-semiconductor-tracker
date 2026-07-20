@@ -2,25 +2,25 @@
   "ticker": "HD",
   "cashtag": "$HD",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HD",
+    "instrument_id": "US:HD",
     "display_code": "HD",
-    "display_name": "Home Depot",
-    "display_market": "Market unverified",
+    "display_name": "HOME DEPOT, INC.",
+    "display_market": "NYSE",
     "aliases": [
       "HD"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HD",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Home Depot",
+  "price_symbol": "HD",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "HOME DEPOT, INC.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-04",
@@ -57,9 +57,49 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.843617+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-06",
+      "close": 350.65
+    },
+    {
+      "date": "2026-07-07",
+      "close": 345.21
+    },
+    {
+      "date": "2026-07-08",
+      "close": 336.21
+    },
+    {
+      "date": "2026-07-09",
+      "close": 338.73
+    },
+    {
+      "date": "2026-07-10",
+      "close": 343.3
+    },
+    {
+      "date": "2026-07-13",
+      "close": 337.11
+    },
+    {
+      "date": "2026-07-14",
+      "close": 337.74
+    },
+    {
+      "date": "2026-07-15",
+      "close": 341.44
+    },
+    {
+      "date": "2026-07-16",
+      "close": 348.02
+    },
+    {
+      "date": "2026-07-17",
+      "close": 338.87
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:41:44.721539+00:00"
 }

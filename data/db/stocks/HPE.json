@@ -2,25 +2,25 @@
   "ticker": "HPE",
   "cashtag": "$HPE",
   "instrument": {
-    "instrument_id": "UNVERIFIED:HPE",
+    "instrument_id": "US:HPE",
     "display_code": "HPE",
-    "display_name": "Hewlett Packard Enterprise",
-    "display_market": "Market unverified",
+    "display_name": "Hewlett Packard Enterprise Co",
+    "display_market": "NYSE",
     "aliases": [
       "HPE"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "HPE",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Hewlett Packard Enterprise",
+  "price_symbol": "HPE",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Hewlett Packard Enterprise Co",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-20",
@@ -158,9 +158,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.626930+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 48.4
+    },
+    {
+      "date": "2026-06-23",
+      "close": 48.92
+    },
+    {
+      "date": "2026-06-24",
+      "close": 48.75
+    },
+    {
+      "date": "2026-06-25",
+      "close": 46.72
+    },
+    {
+      "date": "2026-06-26",
+      "close": 43.71
+    },
+    {
+      "date": "2026-06-29",
+      "close": 44.41
+    },
+    {
+      "date": "2026-06-30",
+      "close": 45.11
+    },
+    {
+      "date": "2026-07-01",
+      "close": 43.95
+    },
+    {
+      "date": "2026-07-02",
+      "close": 41.23
+    },
+    {
+      "date": "2026-07-06",
+      "close": 43.15
+    },
+    {
+      "date": "2026-07-07",
+      "close": 43.47
+    },
+    {
+      "date": "2026-07-08",
+      "close": 44.67
+    },
+    {
+      "date": "2026-07-09",
+      "close": 49.11
+    },
+    {
+      "date": "2026-07-10",
+      "close": 48.54
+    },
+    {
+      "date": "2026-07-13",
+      "close": 47.24
+    },
+    {
+      "date": "2026-07-14",
+      "close": 49.56
+    },
+    {
+      "date": "2026-07-15",
+      "close": 47.39
+    },
+    {
+      "date": "2026-07-16",
+      "close": 45.13
+    },
+    {
+      "date": "2026-07-17",
+      "close": 45.82
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:54.761268+00:00"
 }

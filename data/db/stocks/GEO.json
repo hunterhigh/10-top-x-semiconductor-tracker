@@ -2,25 +2,25 @@
   "ticker": "GEO",
   "cashtag": "GEO",
   "instrument": {
-    "instrument_id": "UNVERIFIED:GEO",
+    "instrument_id": "US:GEO",
     "display_code": "GEO",
-    "display_name": "The GEO Group",
-    "display_market": "Market unverified",
+    "display_name": "GEO GROUP INC",
+    "display_market": "NYSE",
     "aliases": [
       "GEO"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NYSE",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "GEO",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "The GEO Group",
+  "price_symbol": "GEO",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "GEO GROUP INC",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-13",
@@ -172,9 +172,29 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.580116+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-07-13",
+      "close": 30.24
+    },
+    {
+      "date": "2026-07-14",
+      "close": 29.78
+    },
+    {
+      "date": "2026-07-15",
+      "close": 29.82
+    },
+    {
+      "date": "2026-07-16",
+      "close": 29.62
+    },
+    {
+      "date": "2026-07-17",
+      "close": 29.46
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:36:27.068332+00:00"
 }

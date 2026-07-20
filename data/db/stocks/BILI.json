@@ -2,25 +2,25 @@
   "ticker": "BILI",
   "cashtag": "$BILI",
   "instrument": {
-    "instrument_id": "UNVERIFIED:BILI",
+    "instrument_id": "US:BILI",
     "display_code": "BILI",
-    "display_name": "Bilibili",
-    "display_market": "Market unverified",
+    "display_name": "Bilibili Inc.",
+    "display_market": "NASDAQ",
     "aliases": [
       "BILI"
     ],
-    "market": null,
-    "country": null,
-    "currency": null,
-    "price_symbol": null,
-    "verification_status": "unverified"
+    "market": "NASDAQ",
+    "country": "US",
+    "currency": "USD",
+    "price_symbol": "BILI",
+    "verification_status": "verified"
   },
-  "price_symbol": null,
-  "exchange": null,
-  "currency": null,
-  "ticker_mapped": false,
-  "verification_status": "unverified",
-  "company": "Bilibili",
+  "price_symbol": "BILI",
+  "exchange": "US",
+  "currency": "USD",
+  "ticker_mapped": true,
+  "verification_status": "verified",
+  "company": "Bilibili Inc.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
@@ -82,9 +82,85 @@
       "prompt_version": "extract-v2"
     }
   ],
-  "price_series": [],
-  "price_status": "unverified_symbol",
-  "price_unit": "",
-  "price_updated_at": "2026-07-20T12:07:18.740800+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_series": [
+    {
+      "date": "2026-06-22",
+      "close": 16.76
+    },
+    {
+      "date": "2026-06-23",
+      "close": 15.96
+    },
+    {
+      "date": "2026-06-24",
+      "close": 16.51
+    },
+    {
+      "date": "2026-06-25",
+      "close": 16.14
+    },
+    {
+      "date": "2026-06-26",
+      "close": 16.47
+    },
+    {
+      "date": "2026-06-29",
+      "close": 16.86
+    },
+    {
+      "date": "2026-06-30",
+      "close": 17.03
+    },
+    {
+      "date": "2026-07-01",
+      "close": 17.43
+    },
+    {
+      "date": "2026-07-02",
+      "close": 17.14
+    },
+    {
+      "date": "2026-07-06",
+      "close": 17.9
+    },
+    {
+      "date": "2026-07-07",
+      "close": 17.6
+    },
+    {
+      "date": "2026-07-08",
+      "close": 18.03
+    },
+    {
+      "date": "2026-07-09",
+      "close": 17.84
+    },
+    {
+      "date": "2026-07-10",
+      "close": 17.7
+    },
+    {
+      "date": "2026-07-13",
+      "close": 17.59
+    },
+    {
+      "date": "2026-07-14",
+      "close": 17.48
+    },
+    {
+      "date": "2026-07-15",
+      "close": 18.28
+    },
+    {
+      "date": "2026-07-16",
+      "close": 19.0
+    },
+    {
+      "date": "2026-07-17",
+      "close": 18.04
+    }
+  ],
+  "price_status": "ok",
+  "price_unit": "USD",
+  "price_updated_at": "2026-07-20T15:39:26.251517+00:00"
 }
