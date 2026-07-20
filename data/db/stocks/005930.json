@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "UNVERIFIED:005930",
     "display_code": "005930",
@@ -24,10 +24,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-02",
-  "last_mention": "2026-07-18",
-  "total_mentions": 135,
+  "last_mention": "2026-07-20",
+  "total_mentions": 137,
   "total_mentions_by_blogger": {
-    "jukan05": 69,
+    "jukan05": 71,
     "aleabitoreddit": 31,
     "StockMKTNewz": 10,
     "octopusycc": 9,
@@ -37,7 +37,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 118,
+    "opinion": 120,
     "flow": 7,
     "news": 10
   },
@@ -3229,11 +3229,57 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079103447157338422",
+      "blogger_id": "jukan05",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T03:17:44-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "Memory Big Three Scrap In-House CXL Controller Chip Development\n\nThe world’s three largest memory chipmakers have all halted in-house development of controllers for Compute Express Link (CXL), a next-generation semiconductor technology in which they had invested heavily. The decision reflects concerns over a cannibalization dilemma: aggressively pushing proprietary chips into the market could undermine demand for commodity DRAM modules, or DIMMs, their core source of revenue. The memory giants are rapidly shifting to an outsourcing model, adopting chips designed by specialized fabless companies instead.\n\nAccording to semiconductor industry sources on the 20th, Samsung Electronics, SK hynix, and Micron have scaled back or scrapped plans to commercialize controllers for CXL expansion devices. Fabless companies such as Montage Technology, Astera Labs, and PrimeMass are moving in to fill the gap.\n\nMicron and SK Throw in the Towel, While Samsung Tests the Waters\n\nMicron was the first to abandon in-house development. The U.S. chipmaker shut down its proprietary controller R&D operation and adopted a solution from PrimeMass. PrimeMass solutions now also appear in Micron’s product catalog.\n\nSK hynix has likewise formally notified key partners that it is discontinuing its in-house CXL controller development project. The company is reassigning relevant personnel to processing-in-memory (PIM), a next-generation computational memory technology. The move reflects its intention to concentrate limited R&D resources on a more certain source of future growth.\n\nSamsung Electronics is using its internally developed CXL controller only for research within the development team. The team is focusing on unproven areas, including CXL solutions based on low-power DRAM, or LPDDR. For products sold externally, Samsung is reportedly purchasing controllers from fabless suppliers.\n\nThis marks a departure from Samsung’s original plan. The company had initially intended to launch modules combining its proprietary controller with a CXL Memory Module, or CMM, but has since removed the formal commercialization of its in-house controller from its official roadmap.\n\n“Samsung’s internal product-planning division has removed the in-house controller from its formal commercialization projects and retained it solely as an advanced R&D initiative,” said a semiconductor industry source familiar with the matter. “The development team is now concentrating on areas with uncertain near-term commercial viability, such as running mobile DRAM, or LPDDR, over CXL. In effect, Samsung has returned to a market-exploration phase.”\n\n“Promoting CXL Could Destabilize DRAM”—The Cannibalization Dilemma\n\nAccording to industry sources, all three memory manufacturers originally envisioned selling integrated CXL modules similar to Samsung’s proposed design. Their plan was to combine proprietary controller chips and DRAM on a single board and sell the resulting system as a high-priced finished product.\n\nMajor data-center customers, however, wanted something different. To reduce the enormous cost of building infrastructure, they preferred a disaggregated architecture: installing the CXL controller separately on the system motherboard and inserting widely available, inexpensive commodity DRAM modules into slots behind it for reuse.\n\nAnalysts say this is where the business models came into conflict and why the manufacturers changed course. If memory companies insisted on expensive integrated products built around proprietary controllers that had required substantial development spending, cost-conscious customers would be reluctant to buy them. Worse still, such products could reduce demand for the commodity DRAM modules that the companies already sell in large volumes. In other words, aggressively promoting finished CXL products could cannibalize the DIMM market that serves as their largest source of revenue.\n\n“If a memory manufacturer’s finished CXL expansion product must compete directly with its own core cash cow—DIMMs—it becomes difficult to pursue the business aggressively,” said a semiconductor industry official. “Management concluded that there was little practical benefit in forcing the commercialization of in-house controllers while risking a conflict with the company’s existing core business.”\n\nExperts stress that the three companies’ decisions should not be interpreted as a retreat from or abandonment of CXL technology and the CXL market itself. Rather, they see the move as a way to reduce risk during the market’s uncertain early stages and return to the semiconductor industry’s naturally efficient division of labor.\n\n“Instead of trying to monopolize control of CXL, the memory manufacturers have opted for a pragmatic division of labor with fabless companies,” another industry official said. “As the global semiconductor market becomes more sophisticated, this optimized ecosystem—in which specialized fabless companies handle design and memory manufacturers focus on production—is expected to accelerate further.”",
+      "url": "https://x.com/jukan05/status/2079103447157338422",
+      "kind": "post",
+      "engagement": {
+        "views": 104020,
+        "likes": 245,
+        "reposts": 30,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079127696827879509",
+      "blogger_id": "jukan05",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T04:54:05-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Samsung–Nvidia Expand NAND Alliance as V10 Shipments Begin\n\nSamsung Electronics is expanding its alliance with Nvidia into NAND flash supply, building on existing partnerships in DRAM, high-bandwidth memory (HBM), and foundry services. Leveraging its overwhelming production capacity, Samsung is increasing supplies of its flagship ninth-generation V-NAND (V9) to Nvidia while beginning mass production and shipments of its tenth-generation V-NAND (V10). The company is also accelerating the development of its 500-layer-class eleventh-generation V-NAND (V11).\n\nAccording to industry sources on July 20, Samsung Electronics has established monthly V-NAND production capacity exceeding 100,000 wafers and is mass-producing and supplying V10 products to Nvidia.\n\nSamsung has allocated approximately 60% of its V-NAND capacity to V9, elevating it to the company’s main product. Just a year ago, V8 accounted for a significant share of V-NAND output. Its share has since fallen below 40%, as Samsung rapidly shifted production toward V9 lines in response to surging demand for AI-server NAND from Nvidia and other global technology giants.\n\nOne reason Samsung is accelerating the expansion of its V9 capacity is Nvidia’s next-generation storage system, Context Memory Storage (CMX), which is scheduled for release in the second half of the year. Data centers are seeing a sharp increase in “key-value cache,” or KV cache, the contextual data generated during AI inference. KV cache has traditionally been handled by GPU servers, but as data volumes grow, dedicated storage systems equipped with solid-state drives (SSDs) offering capacities in the thousands of terabytes have become essential.\n\nNvidia’s CMX contains 576 SSDs and provides a total storage capacity of 9,600 TB. The industry expects NAND demand associated with CMX to surge from 35 million TB this year to more than 100 million TB next year. Samsung’s NAND output is projected to reach approximately 250 million TB this year. The company therefore intends to use its world-leading production capacity to establish itself as a key supplier for Nvidia’s CMX.\n\nSamsung’s V9 NAND yield has reportedly risen above 80%, bringing production into a stable mass-manufacturing phase and providing a foundation for continued V-NAND supplies to Nvidia over the medium and long term. More than half of the NAND-dedicated cleanroom space at Samsung’s Pyeongtaek Plant 4 (P4) also remains available, allowing the company to expand V9 production lines as demand increases.\n\nSamsung is also accelerating the mass production of next-generation V-NAND products. The company began full-scale V10 production in the first half of this year and has raised its share to just under 5% of total V-NAND output. V10 is a 400-layer-class product whose storage density is more than 50% higher than that of the 286-layer V9.\n\nTrial production of the 500-layer-class V11 has also begun. V11 is an advanced, high-stack V-NAND product being developed with a target of at least 400 layers and potentially as many as 500. Trial production started early this year, and Samsung plans to double the relevant volume in the second half. By expanding trial output, the company aims to secure sufficient yield data and rapidly establish a mass-production system.\n\nSamsung is pursuing materials innovation in parallel. Beginning with V10 NAND, the company will become the first in the industry to commercialize molybdenum, sometimes described as a “dream material.” Molybdenum can reduce wiring thickness by 30–40% compared with tungsten, the material currently used. Samsung partially adopted molybdenum in V9, which was released two years ago, but plans to expand its use substantially in V10.\n\nSamsung Electronics Chairman Lee Jae-yong is expected to meet Nvidia CEO Jensen Huang in San Francisco soon to discuss expanding their cooperation. Meeting Huang again after nine months, Lee is reportedly set to discuss not only the supply of HBM and next-generation NAND products but also potential cooperation on data centers planned for construction in South Korea, including in Gwangju.\n\n“Nvidia has asked Samsung to expand NAND production ahead of the CMX launch,” an industry official said. “Because the Samsung–Nvidia alliance spans the entire memory and foundry business, cooperation between Chairman Lee and CEO Huang is expected to deepen further.”",
+      "url": "https://x.com/jukan05/status/2079127696827879509",
+      "kind": "post",
+      "engagement": {
+        "views": 100314,
+        "likes": 211,
+        "reposts": 28,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-07-20T06:14:29.836835+00:00",
+  "price_updated_at": "2026-07-20T12:07:12.147010+00:00",
   "price_reason": "unverified_instrument_identity"
 }

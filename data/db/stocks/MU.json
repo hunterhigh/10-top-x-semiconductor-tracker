@@ -24,14 +24,14 @@
   "industry": "Memory/HBM",
   "thesis_summary": null,
   "first_mention": "2025-09-25",
-  "last_mention": "2026-07-19",
-  "total_mentions": 386,
+  "last_mention": "2026-07-20",
+  "total_mentions": 388,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 192,
     "StockMKTNewz": 59,
     "ren_stocks": 37,
     "octopusycc": 37,
-    "jukan05": 18,
+    "jukan05": 20,
     "unusual_whales": 15,
     "michaelsikand": 12,
     "KawzInvests": 10,
@@ -39,7 +39,7 @@
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 311,
+    "opinion": 313,
     "news": 59,
     "flow": 15,
     "disclosure": 1
@@ -9488,6 +9488,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079103447157338422",
+      "blogger_id": "jukan05",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T03:17:44-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Micron",
+      "text": "Memory Big Three Scrap In-House CXL Controller Chip Development\n\nThe world’s three largest memory chipmakers have all halted in-house development of controllers for Compute Express Link (CXL), a next-generation semiconductor technology in which they had invested heavily. The decision reflects concerns over a cannibalization dilemma: aggressively pushing proprietary chips into the market could undermine demand for commodity DRAM modules, or DIMMs, their core source of revenue. The memory giants are rapidly shifting to an outsourcing model, adopting chips designed by specialized fabless companies instead.\n\nAccording to semiconductor industry sources on the 20th, Samsung Electronics, SK hynix, and Micron have scaled back or scrapped plans to commercialize controllers for CXL expansion devices. Fabless companies such as Montage Technology, Astera Labs, and PrimeMass are moving in to fill the gap.\n\nMicron and SK Throw in the Towel, While Samsung Tests the Waters\n\nMicron was the first to abandon in-house development. The U.S. chipmaker shut down its proprietary controller R&D operation and adopted a solution from PrimeMass. PrimeMass solutions now also appear in Micron’s product catalog.\n\nSK hynix has likewise formally notified key partners that it is discontinuing its in-house CXL controller development project. The company is reassigning relevant personnel to processing-in-memory (PIM), a next-generation computational memory technology. The move reflects its intention to concentrate limited R&D resources on a more certain source of future growth.\n\nSamsung Electronics is using its internally developed CXL controller only for research within the development team. The team is focusing on unproven areas, including CXL solutions based on low-power DRAM, or LPDDR. For products sold externally, Samsung is reportedly purchasing controllers from fabless suppliers.\n\nThis marks a departure from Samsung’s original plan. The company had initially intended to launch modules combining its proprietary controller with a CXL Memory Module, or CMM, but has since removed the formal commercialization of its in-house controller from its official roadmap.\n\n“Samsung’s internal product-planning division has removed the in-house controller from its formal commercialization projects and retained it solely as an advanced R&D initiative,” said a semiconductor industry source familiar with the matter. “The development team is now concentrating on areas with uncertain near-term commercial viability, such as running mobile DRAM, or LPDDR, over CXL. In effect, Samsung has returned to a market-exploration phase.”\n\n“Promoting CXL Could Destabilize DRAM”—The Cannibalization Dilemma\n\nAccording to industry sources, all three memory manufacturers originally envisioned selling integrated CXL modules similar to Samsung’s proposed design. Their plan was to combine proprietary controller chips and DRAM on a single board and sell the resulting system as a high-priced finished product.\n\nMajor data-center customers, however, wanted something different. To reduce the enormous cost of building infrastructure, they preferred a disaggregated architecture: installing the CXL controller separately on the system motherboard and inserting widely available, inexpensive commodity DRAM modules into slots behind it for reuse.\n\nAnalysts say this is where the business models came into conflict and why the manufacturers changed course. If memory companies insisted on expensive integrated products built around proprietary controllers that had required substantial development spending, cost-conscious customers would be reluctant to buy them. Worse still, such products could reduce demand for the commodity DRAM modules that the companies already sell in large volumes. In other words, aggressively promoting finished CXL products could cannibalize the DIMM market that serves as their largest source of revenue.\n\n“If a memory manufacturer’s finished CXL expansion product must compete directly with its own core cash cow—DIMMs—it becomes difficult to pursue the business aggressively,” said a semiconductor industry official. “Management concluded that there was little practical benefit in forcing the commercialization of in-house controllers while risking a conflict with the company’s existing core business.”\n\nExperts stress that the three companies’ decisions should not be interpreted as a retreat from or abandonment of CXL technology and the CXL market itself. Rather, they see the move as a way to reduce risk during the market’s uncertain early stages and return to the semiconductor industry’s naturally efficient division of labor.\n\n“Instead of trying to monopolize control of CXL, the memory manufacturers have opted for a pragmatic division of labor with fabless companies,” another industry official said. “As the global semiconductor market becomes more sophisticated, this optimized ecosystem—in which specialized fabless companies handle design and memory manufacturers focus on production—is expected to accelerate further.”",
+      "url": "https://x.com/jukan05/status/2079103447157338422",
+      "kind": "post",
+      "engagement": {
+        "views": 104020,
+        "likes": 245,
+        "reposts": 30,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079166902035947716",
+      "blogger_id": "jukan05",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T07:29:53-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MU",
+      "text": "Morgan Stanley’s Joseph Moore said that, after speaking with several purchasing contacts in the data center space last week, the intensity of the memory shortages shows no signs of abating. He added that prices appear to be up at least 25% on a like-for-like basis from 2Q to 3Q.\n\nThis is above both Morgan Stanley’s and third-party estimates.\n\nMoore also noted that longer-term concerns that the memory shortage will intensify in 2027 and again in 2028 remain as strong as ever. Morgan Stanley added that there is not enough memory relative to AI requirements and that it does not see this situation changing.\n\nNotable quotes:\n\n“Cloud customers are paying premiums to the expected 2Q price for six-week expedites; do we think those customers are paying those premia to stockpile memory in a warehouse?”\n\n“AI is consuming so much DRAM that there isn’t enough left over for other sectors, and everywhere we look, we see indications that it is a true bottleneck. It’s holding back PC builds and smartphone builds.”\n\n“Memory is not just constrained by AI demand—memory is increasingly one of the major primary constraints on AI demand, along with space and power.”\n\n$MU $SKHY $SNDK",
+      "url": "https://x.com/jukan05/status/2079166902035947716",
+      "kind": "post",
+      "engagement": {
+        "views": 14343,
+        "likes": 126,
+        "reposts": 24,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10306,5 +10352,5 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-20T06:14:18.651662+00:00"
+  "price_updated_at": "2026-07-20T12:07:03.337227+00:00"
 }
