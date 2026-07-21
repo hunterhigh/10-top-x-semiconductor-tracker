@@ -126,6 +126,42 @@ def price_change(doc: dict[str, Any], item_window: dict[str, Any]) -> dict[str, 
     return {"status": status, "percentage": None, "start_date": None, "end_date": None}
 
 
+def price_change_52w(doc: dict[str, Any], end: date) -> dict[str, Any]:
+    """Return a rolling 52-week close-to-close change with explicit coverage state."""
+    start = end - timedelta(weeks=52)
+    start_iso, end_iso = start.isoformat(), end.isoformat()
+    series = [
+        p for p in (doc.get("price_series") or [])
+        if start_iso <= str(p.get("date", ""))[:10] <= end_iso and isinstance(p.get("close"), (int, float))
+    ]
+    series.sort(key=lambda p: p["date"])
+    if len(series) >= 2 and series[0]["close"] and iso_day(series[0]["date"]) <= start + timedelta(days=7):
+        return {
+            "status": "ok",
+            "percentage": round((series[-1]["close"] / series[0]["close"] - 1) * 100, 2),
+            "start_date": series[0]["date"],
+            "end_date": series[-1]["date"],
+        }
+
+    coverage = doc.get("price_history_52w") or {}
+    status = str(coverage.get("status") or "pending")
+    if status == "ok":
+        status = "pending"
+    if status not in {"pending", "insufficient_history", "unavailable", "unverified_symbol", "error"}:
+        status = "pending"
+    # Legacy unavailable identities remain explicit even before the first
+    # history-aware run; short caches without a completed attempt stay pending.
+    base_status = str(doc.get("price_status") or "pending")
+    if status == "pending" and base_status in {"unavailable", "unverified_symbol", "error"}:
+        status = base_status
+    return {
+        "status": status,
+        "percentage": None,
+        "start_date": series[0]["date"] if series else coverage.get("first_available_date"),
+        "end_date": series[-1]["date"] if series else coverage.get("last_available_date"),
+    }
+
+
 def explicit_opinion(rows: Iterable[dict[str, Any]], opinions: set[str]) -> list[dict[str, Any]]:
     return [r for r in rows if r.get("blogger_id") in opinions and r.get("mention_type") == "explicit_stance"]
 
@@ -273,8 +309,10 @@ def build_payload(db: Path, config: Path, profiles: Path, report_day: str, avata
         counts = Counter(normal_stance(r.get("stance")) for r in rows)
         directional = counts["bullish"] + counts["bearish"]
         bulls, bears = directions(rows, opinions)
+        change_28d = price_change(doc, month)
         payload["monthly"]["rows"].append({"instrument": instrument(doc), "bull_share": round(counts["bullish"] / directional, 6) if directional else None,
-            "bear_share": round(counts["bearish"] / directional, 6) if directional else None, "price_change": price_change(doc, month), "unique_post_count": unique_posts(rows),
+            "bear_share": round(counts["bearish"] / directional, 6) if directional else None, "price_change": change_28d,
+            "price_change_28d": change_28d, "price_change_52w": price_change_52w(doc, end), "unique_post_count": unique_posts(rows),
             "bullish_count": counts["bullish"], "bearish_count": counts["bearish"], "neutral_count": counts["neutral"], "participant_ids": sorted({r.get("blogger_id") for r in rows}),
             "bullish_account_ids": sorted(bulls), "bearish_account_ids": sorted(bears)})
         payload["stock_drilldowns"][instrument(doc)["display_code"]] = drilldown(doc, end, roster)

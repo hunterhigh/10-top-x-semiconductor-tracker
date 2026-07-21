@@ -4,8 +4,9 @@ prices.py — multi-blogger tracker, fill price_series (NO LLM)
 
 Reads the per-ticker files built by build_db.py and fills in the price fields
 that build_db deliberately left empty:
-    price_series  (full daily closes, first_mention -> today)  <- the chart data
+    price_series  (daily closes, required history start -> today) <- chart/return data
     price_status  (ok / partial / unavailable / unverified_symbol)
+    price_history_52w (independent coverage status for the rolling 52-week return)
 
 Ticker-level, not blogger-level: unchanged by the move to multi-blogger
 tracking. data/db/stocks/*.json is a single shared, ticker-keyed store (every
@@ -25,9 +26,9 @@ Design (confirmed with project owner):
     ONLY touches the three price fields, writing every other field back as-is.
   - Provider-pluggable. US/USD (the _default) -> akshare; the mapped non-US
     listings (SIVE.ST/SOI.PA/IQE.L/XFAB.PA/4092.T/6451.TW) -> EODHD.
-  - FULL-SERIES CACHE (data/prices_cache/{price_symbol}.json): first run
-    back-fills the complete series from first_mention -> today; later daily
-    runs fetch ONLY the gap (last cached day -> today) and append. The series
+  - FULL-SERIES CACHE (data/prices_cache/{price_symbol}.json): normal runs
+    back-fill from first_mention; 52-week runs extend the cache backwards to
+    the exact report horizon. Later runs fetch ONLY missing prefix/suffix data. The series
     written into the stock file is always the COMPLETE line (for the chart).
     The cache also makes us robust to build_db re-runs wiping price_series:
     we just refill from cache, no API calls.
@@ -48,6 +49,7 @@ Run:
     python prices.py --force                  # ignore cache, full re-fetch
     python prices.py --min-mentions 30        # widen/narrow the core set
     python prices.py --asof 2026-06-02        # pin "now" for the 30d window
+    python prices.py --history-weeks 52 --history-scope recent-28d
 """
 
 import argparse
@@ -64,11 +66,14 @@ DATA_DIR = SCRIPT_DIR.parent / "data"
 DB_DIR = DATA_DIR / "db"
 STOCKS_DIR = DB_DIR / "stocks"
 INDEX_PATH = DB_DIR / "index.json"
+MANIFEST_PATH = DB_DIR / "manifest.json"
 TMAP_PATH = DATA_DIR / "ticker_map.json"
 CACHE_DIR = DATA_DIR / "prices_cache"
 
 DEFAULT_MIN_MENTIONS = 50      # core set ~= the 41 deep-divable tickers; tune with --min-mentions
 RECENT_WINDOW_DAYS = 30        # matches the initial backfill and 28-day Month view
+REPORT_WINDOW_DAYS = 28        # ET closed interval [D-27, D]
+HISTORY_START_TOLERANCE_DAYS = 7
 RETRY = 3
 PACING_SEC = 0.4               # polite pause between symbols
 EODHD_DAILY_CALL_BUDGET = 20   # free tier; we self-limit and stop cleanly when hit
@@ -113,6 +118,17 @@ def today_et() -> str:
     return datetime.now(ZoneInfo("America/New_York")).date().isoformat()
 
 
+def manifest_report_date() -> str | None:
+    """Return the verified ET data cutoff rather than guessing from wall-clock time."""
+    manifest = load_json(MANIFEST_PATH, default={}) or {}
+    date_range = manifest.get("date_range")
+    if isinstance(date_range, list) and len(date_range) >= 2 and date_range[1]:
+        return str(date_range[1])[:10]
+    if isinstance(date_range, dict) and date_range.get("end"):
+        return str(date_range["end"])[:10]
+    return None
+
+
 def load_json(path, default=None):
     if path.exists():
         try:
@@ -146,6 +162,56 @@ def in_scope(row, min_mentions, asof_date):
     if lm and lm >= (asof_date - timedelta(days=RECENT_WINDOW_DAYS)).isoformat():
         return True
     return False
+
+
+def in_history_scope(row, asof_date):
+    """52-week history is maintained only for rows visible in the 28-day report."""
+    last_mention = row.get("last_mention")
+    cutoff = (asof_date - timedelta(days=REPORT_WINDOW_DAYS - 1)).isoformat()
+    return bool(last_mention and str(last_mention)[:10] >= cutoff)
+
+
+def history_coverage(series, requested_start, asof, attempted_at, failure=None):
+    """Describe 52-week coverage independently from latest-price freshness."""
+    if not requested_start:
+        return None
+    points = sorted(
+        [p for p in (series or []) if requested_start <= str(p.get("date", ""))[:10] <= asof],
+        key=lambda p: p["date"],
+    )
+    first_date = points[0]["date"] if points else None
+    last_date = points[-1]["date"] if points else None
+    if failure:
+        status, reason = "error", failure
+    elif not points:
+        status, reason = "unavailable", "no_daily_closes_returned_for_52w_window"
+    elif date.fromisoformat(first_date) <= date.fromisoformat(requested_start) + timedelta(days=HISTORY_START_TOLERANCE_DAYS):
+        status, reason = "ok", None
+    else:
+        status, reason = "insufficient_history", f"first_available_close={first_date}"
+    return {
+        "requested_start": requested_start,
+        "asof": asof,
+        "attempted_at": attempted_at,
+        "status": status,
+        "first_available_date": first_date,
+        "last_available_date": last_date,
+        "reason": reason,
+    }
+
+
+def terminal_history_coverage(status, requested_start, asof, attempted_at, reason):
+    if not requested_start:
+        return None
+    return {
+        "requested_start": requested_start,
+        "asof": asof,
+        "attempted_at": attempted_at,
+        "status": status,
+        "first_available_date": None,
+        "last_available_date": None,
+        "reason": reason,
+    }
 
 
 def pick_provider(exchange, currency, ticker_mapped):
@@ -270,19 +336,22 @@ def load_cache(price_symbol):
     return load_json(cache_path(price_symbol), default=None)
 
 
-def save_cache(price_symbol, currency, price_unit, series):
-    save_json(cache_path(price_symbol), {
+def save_cache(price_symbol, currency, price_unit, series, history_52w=None):
+    payload = {
         "price_symbol": price_symbol,
         "currency": currency,
         "price_unit": price_unit,
         "series": series,
         "last_updated": datetime.now(timezone.utc).isoformat(),
-    })
+    }
+    if history_52w:
+        payload["price_history_52w"] = history_52w
+    save_json(cache_path(price_symbol), payload)
 
 
 # --------------------------------------------------------------------------- fetch one ticker
-def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
-    """Return (series, status, price_unit, reason). Mutate nothing on disk here."""
+def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso, history_start=None):
+    """Return (series, freshness status, unit, reason, 52w coverage metadata)."""
     sym = stock_doc["ticker"]
     price_symbol = stock_doc.get("price_symbol")
     currency = stock_doc.get("currency")
@@ -290,29 +359,45 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
     ticker_mapped = bool(stock_doc.get("ticker_mapped"))
     first_mention = stock_doc.get("first_mention") or today_iso
     price_unit = "GBp" if currency == "GBp" else currency
+    attempted_at = datetime.now(timezone.utc).isoformat()
+    previous_history = stock_doc.get("price_history_52w")
 
     tmap_entry = tmap.get(sym) if isinstance(tmap.get(sym), dict) else None
     verified = tmap_entry.get("verified", True) if tmap_entry else True
 
     if not ticker_mapped or not price_symbol or not exchange or not currency:
-        return [], "unverified_symbol", (currency or ""), "unverified_instrument_identity"
+        reason = "unverified_instrument_identity"
+        history = terminal_history_coverage("unverified_symbol", history_start, today_iso, attempted_at, reason) or previous_history
+        return [], "unverified_symbol", (currency or ""), reason, history
 
     if tmap_entry and tmap_entry.get("no_price"):
         # known to have no fetchable source (e.g. Tokyo: EODHD doesn't cover it, akshare no Japan).
         # Skip the doomed API call; board still shows mentions/stance, just no price line.
-        return [], "unavailable", price_unit, "configured_no_price_source"
+        reason = "configured_no_price_source"
+        history = terminal_history_coverage("unavailable", history_start, today_iso, attempted_at, reason) or previous_history
+        return [], "unavailable", price_unit, reason, history
 
     prov_key = pick_provider(exchange, currency, ticker_mapped)
     if prov_key is None:
-        return [], "unverified_symbol", price_unit, "unverified_instrument_identity"
+        reason = "unverified_instrument_identity"
+        history = terminal_history_coverage("unverified_symbol", history_start, today_iso, attempted_at, reason) or previous_history
+        return [], "unverified_symbol", price_unit, reason, history
     provider = providers.get(prov_key)
     if provider is None:
-        return [], "unavailable", price_unit, f"provider_unavailable:{prov_key}"
+        reason = f"provider_unavailable:{prov_key}"
+        history = terminal_history_coverage("unavailable", history_start, today_iso, attempted_at, reason) or previous_history
+        return [], "unavailable", price_unit, reason, history
 
     cache = None if force else load_cache(price_symbol)
     cached_series = (cache or {}).get("series", []) if cache else []
+    previous_history = (cache or {}).get("price_history_52w") or previous_history
 
-    if cached_series:
+    # If the cached prefix is too short, request the complete target interval in
+    # one provider call. This also fills any missing suffix without spending a
+    # second EODHD call. Otherwise append only the normal latest-day gap.
+    if history_start and (not cached_series or cached_series[0]["date"] > history_start):
+        start = history_start
+    elif cached_series:
         last_cached = cached_series[-1]["date"]
         start = (date.fromisoformat(last_cached) + timedelta(days=1)).isoformat()
     else:
@@ -337,25 +422,34 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso):
                 time.sleep(2 * attempt)
         if last_err:
             log(f"    {sym} ({price_symbol} via {prov_key}) fetch failed: {last_err}")
+            history = previous_history
+            if history_start:
+                cached_coverage = history_coverage(cached_series, history_start, today_iso, attempted_at)
+                history = cached_coverage if cached_coverage["status"] == "ok" else history_coverage(
+                    cached_series, history_start, today_iso, attempted_at, failure=last_err
+                )
             if cached_series:
                 # keep serving cached series; mark partial (couldn't extend to today)
-                return cached_series, "partial", price_unit, last_err
+                return cached_series, "partial", price_unit, last_err, history
             status = "unverified_symbol" if not verified else "unavailable"
-            return [], status, price_unit, last_err
+            return [], status, price_unit, last_err, history
 
     series = merge_series(cached_series, new)
     if not series:
         status = "unverified_symbol" if not verified else "unavailable"
         reason = "unverified_ticker_mapping" if not verified else "no_daily_closes_returned"
-        return [], status, price_unit, reason
+        history_status = "unverified_symbol" if not verified else "unavailable"
+        history = terminal_history_coverage(history_status, history_start, today_iso, attempted_at, reason) or previous_history
+        return [], status, price_unit, reason, history
 
     # freshness: ok if the latest close is within ~5 calendar days of today
     latest = date.fromisoformat(series[-1]["date"])
     status = "ok" if (date.fromisoformat(today_iso) - latest).days <= 5 else "partial"
     reason = None if status == "ok" else f"stale_series_latest_close={latest.isoformat()}"
+    history = history_coverage(series, history_start, today_iso, attempted_at) if history_start else previous_history
 
-    save_cache(price_symbol, currency, price_unit, series)
-    return series, status, price_unit, reason
+    save_cache(price_symbol, currency, price_unit, series, history)
+    return series, status, price_unit, reason, history
 
 
 def annotate_existing(scope, tmap):
@@ -475,6 +569,10 @@ def main():
     ap.add_argument("--ticker", default="", help="only this ticker (test)")
     ap.add_argument("--min-mentions", type=int, default=DEFAULT_MIN_MENTIONS)
     ap.add_argument("--asof", default="", help="pin 'today' for the 30d window + freshness (YYYY-MM-DD)")
+    ap.add_argument("--history-weeks", type=int, choices=(52,), default=0,
+                    help="extend report-scope caches backwards for a rolling 52-week return")
+    ap.add_argument("--history-scope", choices=("recent-28d",), default="recent-28d",
+                    help="scope for --history-weeks (only current 28-day report rows)")
     ap.add_argument("--force", action="store_true", help="ignore cache; full re-fetch from first_mention")
     ap.add_argument("--provider-test", action="store_true", help="just check provider connectivity")
     ap.add_argument("--all-codes", action="store_true", help="provider-test: hit ALL non-US codes, not just unverified")
@@ -486,8 +584,9 @@ def main():
         provider_test(args)
         return
 
-    today_iso = args.asof or today_et()
+    today_iso = args.asof or manifest_report_date() or today_et()
     asof_date = date.fromisoformat(today_iso)
+    history_start = (asof_date - timedelta(weeks=args.history_weeks)).isoformat() if args.history_weeks else None
 
     index = load_json(INDEX_PATH, default=None)
     if not index:
@@ -505,6 +604,9 @@ def main():
         scope = [r for r in rows if in_scope(r, args.min_mentions, asof_date)]
     log(f"In scope: {len(scope)} tickers "
         f"(min_mentions={args.min_mentions}, recent<= {RECENT_WINDOW_DAYS}d, asof={today_iso}).")
+    if history_start:
+        history_count = sum(in_history_scope(row, asof_date) for row in scope)
+        log(f"52-week history scope: {history_count} recent report ticker(s); target start={history_start}.")
 
     if args.annotate_existing:
         counts = annotate_existing(scope, tmap)
@@ -515,6 +617,8 @@ def main():
     providers, call_counter = build_providers(args)
 
     counts = {"ok": 0, "partial": 0, "unavailable": 0, "unverified_symbol": 0}
+    history_counts = {"ok": 0, "insufficient_history": 0, "pending": 0, "error": 0,
+                      "unavailable": 0, "unverified_symbol": 0}
     for i, row in enumerate(scope, 1):
         sym = row["ticker"]
         stock_path = STOCKS_DIR / f"{sym}.json"
@@ -522,8 +626,10 @@ def main():
         if not doc:
             log(f"    {sym}: no stock file, skipping."); continue
 
-        series, status, price_unit, reason = fetch_one(doc, tmap, providers, call_counter,
-                                                        args.force, today_iso)
+        ticker_history_start = history_start if history_start and in_history_scope(row, asof_date) else None
+        series, status, price_unit, reason, history = fetch_one(
+            doc, tmap, providers, call_counter, args.force, today_iso, ticker_history_start
+        )
         # write back ONLY the price fields (no baked returns; render derives those)
         doc["price_series"] = series
         doc["price_status"] = status
@@ -532,10 +638,15 @@ def main():
             doc["price_reason"] = reason
         else:
             doc.pop("price_reason", None)
+        if history:
+            doc["price_history_52w"] = history
         doc["price_updated_at"] = datetime.now(timezone.utc).isoformat()
         save_json(stock_path, doc)
 
         counts[status] = counts.get(status, 0) + 1
+        if ticker_history_start:
+            history_status = (history or {}).get("status", "pending")
+            history_counts[history_status] = history_counts.get(history_status, 0) + 1
         if i % 10 == 0 or i == len(scope):
             log(f"  {i}/{len(scope)} done | EODHD calls used: {call_counter['n']}")
 
@@ -546,6 +657,8 @@ def main():
             sp = STOCKS_DIR / f"{r['ticker']}.json"
             d = load_json(sp, default={})
             r["price_status"] = d.get("price_status", "pending")
+            if d.get("price_history_52w"):
+                r["price_history_52w_status"] = d["price_history_52w"].get("status", "pending")
     index["meta"]["prices_updated_at"] = datetime.now(timezone.utc).isoformat()
     save_json(INDEX_PATH, index)
 
@@ -554,6 +667,8 @@ def main():
     for k in ("ok", "partial", "unverified_symbol", "unavailable"):
         log(f"  {k:<18}: {counts.get(k, 0)}")
     log(f"  EODHD calls used  : {call_counter['n']} / {EODHD_DAILY_CALL_BUDGET}")
+    if history_start:
+        log("  52-week coverage  : " + ", ".join(f"{k}={v}" for k, v in history_counts.items() if v))
     log("==========================")
     if counts.get("unverified_symbol") or counts.get("unavailable"):
         log("Non-ok symbols stay on the demo's B-plan (his self-quoted prices). "

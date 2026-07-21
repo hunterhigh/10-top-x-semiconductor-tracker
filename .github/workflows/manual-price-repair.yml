@@ -13,6 +13,11 @@ on:
         required: false
         default: false
         type: boolean
+      backfill_52w:
+        description: "Backfill rolling 52-week history for current 28-day report tickers"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: trihourly-pipeline-main
@@ -36,16 +41,38 @@ jobs:
         run: |
           if [ "${{ inputs.annotate_existing }}" = "true" ]; then
             python scripts/prices.py --annotate-existing
+          elif [ "${{ inputs.backfill_52w }}" = "true" ]; then
+            python scripts/prices.py --history-weeks 52 --history-scope recent-28d
           else
             python scripts/prices.py
           fi
       - name: Verify price result
         run: |
-          if [ "${{ inputs.require_price_scope }}" = "true" ]; then
+          if [ "${{ inputs.backfill_52w }}" = "true" ]; then
+            if [ "${{ inputs.require_price_scope }}" = "true" ]; then
+              python scripts/verify_data.py --require-price-scope --require-price-history-52w
+            else
+              python scripts/verify_data.py --require-price-history-52w
+            fi
+          elif [ "${{ inputs.require_price_scope }}" = "true" ]; then
             python scripts/verify_data.py --require-price-scope
           else
             python scripts/verify_data.py
           fi
+      - name: Summarize 52-week coverage
+        if: ${{ inputs.backfill_52w }}
+        run: |
+          python - <<'PY'
+          import json, os
+          manifest = json.load(open("data/db/manifest.json", encoding="utf-8"))
+          coverage = manifest.get("price_history_52w", {})
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("## 52-week price backfill\n")
+              summary.write(f"- report cutoff (ET): {coverage.get('asof')}\n")
+              summary.write(f"- target start: {coverage.get('target_start')}\n")
+              summary.write(f"- report tickers: {coverage.get('tickers')}\n")
+              summary.write(f"- statuses: `{json.dumps(coverage.get('status_counts', {}), sort_keys=True)}`\n")
+          PY
       - name: Commit manual price repair
         run: |
           git config user.name "github-actions"

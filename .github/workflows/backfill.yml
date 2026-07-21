@@ -112,7 +112,7 @@ jobs:
           python scripts/resolve_tickers_eodhd.py --apply
           python scripts/build_db.py
           python scripts/verify_data.py
-          python scripts/prices.py
+          python scripts/prices.py --history-weeks 52 --history-scope recent-28d
           python scripts/refresh_avatars.py
       - name: Choose latest ET data cutoff
         run: |
@@ -126,7 +126,7 @@ jobs:
       - name: Run approved rules and pipeline tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates
+          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history
       - name: Build and validate v2 dashboard
         run: |
           python -m playwright install --with-deps chromium
