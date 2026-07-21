@@ -193,6 +193,15 @@ jobs:
           )
           echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
           echo "- report cutoff (ET): $REPORT_DATE" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY'
+          import json, os
+          manifest = json.load(open("data/db/manifest.json", encoding="utf-8"))
+          coverage = manifest.get("price_history_52w", {})
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write(f"- 52-week statuses: `{json.dumps(coverage.get('status_counts', {}), sort_keys=True)}`\n")
+              summary.write(f"- provider states: `{json.dumps(coverage.get('provider_state_counts', {}), sort_keys=True)}`\n")
+              summary.write(f"- persistent price retry queue: {coverage.get('retry_queue', 0)}\n")
+          PY
       - name: Run approved rules and new pipeline tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py

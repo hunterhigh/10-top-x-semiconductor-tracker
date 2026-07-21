@@ -172,3 +172,22 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
 - Verification passed locally: 31 repository tests, all seven handoff rule
   tests, Python compilation, diff checks, and real 2026-07-20 report-scope
   comparisons (40 eligible in the earlier Artifact and 46 in the final report).
+
+## 2026-07-21 - provider-aware price enrichment state machine
+
+- Replaced the single undifferentiated provider error path with durable states
+  for supported, provider-unsupported, deferred, retryable and unresolved work.
+  Authentication failures remain fatal; an honest per-symbol degradation may
+  publish only when it has a reason and a scheduled retry.
+- Added generic EODHD Search API recovery after a 404. An automatically selected
+  replacement must be the only exact base-code and currency match; ambiguous or
+  unsupported results are never guessed and are re-probed on a cooldown.
+- Added `data/price_enrichment_queue.json`, keyed by stable instrument identity,
+  so report-scope work survives runs and provider budgets. The queue is pruned
+  when an instrument leaves the monthly report or reaches complete/verified
+  short-history coverage.
+- Monthly report instruments run before a rotating, oldest-first maintenance
+  batch. This prevents hundreds of unrelated symbols from exhausting the
+  non-US provider budget after the report scope is already complete.
+- Actions summaries and the manifest now expose provider-state counts and queue
+  depth. No ticker-specific no-price exception was added.

@@ -72,6 +72,8 @@ jobs:
               summary.write(f"- target start: {coverage.get('target_start')}\n")
               summary.write(f"- monthly consensus tickers: {coverage.get('tickers')}\n")
               summary.write(f"- statuses: `{json.dumps(coverage.get('status_counts', {}), sort_keys=True)}`\n")
+              summary.write(f"- provider states: `{json.dumps(coverage.get('provider_state_counts', {}), sort_keys=True)}`\n")
+              summary.write(f"- persistent retry queue: {coverage.get('retry_queue', 0)}\n")
           PY
       - name: Commit manual price repair
         run: |

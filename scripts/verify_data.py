@@ -33,7 +33,7 @@ PROFILE_DB_PATH = DB / 'blogger_profiles.json'
 
 sys.path.insert(0, str(SCRIPT_DIR.parent / 'skill' / 'scripts'))
 from report_scope import is_monthly_report_instrument  # noqa: E402
-from price_history_status import effective_history_status  # noqa: E402
+from price_history_status import effective_history_status, valid_degraded_state  # noqa: E402
 PRICE_WINDOW_DAYS = _intarg('--price-window-days', 30)
 PRICE_MIN_MENTIONS = _intarg('--price-min-mentions', 50)
 REQUIRE_PRICE_SCOPE = '--require-price-scope' in sys.argv
@@ -188,6 +188,8 @@ price_history_52w = {
     "tickers": 0,
     "status_counts": {},
     "missing_reason": 0,
+    "provider_state_counts": {},
+    "retry_queue": 0,
 }
 if index_data and latest:
     history_asof = datetime.date.fromisoformat(latest)
@@ -211,6 +213,7 @@ if index_data and latest:
         if is_monthly_report_instrument(stock_doc.get('mentions') or [], opinion_ids, history_asof):
             history_rows.append((row, stock_doc))
     status_counts = {}
+    provider_state_counts = {}
     missing_history_reason = []
     blocking = []
     for row, stock_doc in history_rows:
@@ -222,11 +225,14 @@ if index_data and latest:
             coverage.get('status'),
         )
         status_counts[status] = status_counts.get(status, 0) + 1
+        source_state = stock_doc.get('price_source_state') or {}
+        source_status = source_state.get('status') or 'unknown'
+        provider_state_counts[source_status] = provider_state_counts.get(source_status, 0) + 1
 
         reason = coverage.get('reason') or stock_doc.get('price_reason')
-        if status in {'insufficient_history', 'unavailable', 'unverified_symbol', 'error'} and not reason:
+        if status in {'insufficient_history', 'pending', 'unavailable', 'unverified_symbol', 'error'} and not reason:
             missing_history_reason.append(row['ticker'])
-        if status in {'pending', 'error'}:
+        if status in {'pending', 'error'} and not valid_degraded_state(status, source_state, reason):
             blocking.append(f"{row['ticker']}={status}")
         if status == 'ok':
             first = coverage.get('first_available_date')
@@ -238,12 +244,20 @@ if index_data and latest:
         if status == 'insufficient_history' and not coverage.get('attempted_at'):
             blocking.append(f"{row['ticker']}=insufficient_without_attempt")
 
+    queue_path = DATA_DIR / 'price_enrichment_queue.json'
+    try:
+        retry_queue = len((json.load(open(queue_path, encoding='utf-8')).get('items') or {})) if queue_path.exists() else 0
+    except Exception as exc:
+        retry_queue = 0
+        errors.append(f"cannot read price enrichment queue: {exc}")
     price_history_52w.update({
         "asof": history_asof.isoformat(),
         "target_start": target_start.isoformat(),
         "tickers": len(history_rows),
         "status_counts": status_counts,
         "missing_reason": len(missing_history_reason),
+        "provider_state_counts": provider_state_counts,
+        "retry_queue": retry_queue,
     })
     print(f"52-week price history: {len(history_rows)} monthly consensus ticker(s); target={target_start.isoformat()}")
     print(f"52-week statuses: {status_counts or {'pending': len(history_rows)}}")
