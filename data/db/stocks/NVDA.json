@@ -25,22 +25,22 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-07-21",
-  "total_mentions": 725,
+  "total_mentions": 727,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 504,
     "jukan05": 56,
-    "StockMKTNewz": 53,
+    "StockMKTNewz": 54,
     "zephyr_z9": 27,
     "unusual_whales": 26,
     "octopusycc": 21,
-    "KawzInvests": 14,
+    "KawzInvests": 15,
     "michaelsikand": 11,
     "ren_stocks": 10,
     "DJTRadar": 3
   },
   "total_mentions_by_signal_type": {
-    "opinion": 643,
-    "news": 53,
+    "opinion": 644,
+    "news": 54,
     "flow": 26,
     "disclosure": 3
   },
@@ -17044,6 +17044,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079587136899039337",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T11:19:44-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "Nvidia $NVDA just posted this\n\n\"NVIDIA Spectrum-6, a 102.4-terabit-per-second Ethernet switch built for the Vera Rubin platform, is now arriving across the world's gigascale AI factories.\"\n\nHere are the companies Nvidia listed as being some of the first to use this\n\nCoreWeave $CRWV\nMicrosoft $MSFT \nNebius $NBIS\nSpaceX $SPCX\nTesla $TSLA",
+      "url": "https://x.com/StockMKTNewz/status/2079587136899039337",
+      "kind": "post",
+      "engagement": {
+        "views": 36044,
+        "likes": 150,
+        "reposts": 17,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079597702371840290",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T12:01:43-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "\"Peak GPU performance alone no longer predicts the performance of an AI factory.\" – $NVDA \n\nThe fastest chip no longer wins on its own. Training a big AI model means tens of thousands of GPUs all working on the same problem at once, and they have to constantly pass data back and forth to stay in sync. The network that carries that data now decides how fast the whole thing runs.\n\n$NVDA says the old networking wasn't built for this. In their words, \"Ethernet was designed primarily for enterprise applications\" and \"wasn't created for the synchronized, collective-heavy communication patterns of gigascale AI.\"\n\nAmdahl's Law says a system is only as fast as its slowest shared step. You can add all the GPUs you want, but if they spend their time waiting on each other to exchange data, you hit diminishing returns fast. At this scale, that waiting happens in the network. So a faster chip can't outrun a fabric that can't feed it.\n\nThat's what Spectrum-6 is built to fix. It's a 102.4 Tb/s switch, double the last generation, made for NVIDIA's new Vera Rubin platform. NVIDIA claims up to 1.6x better AI networking performance than standard Ethernet, holding 95% efficiency even across 100,000-plus GPUs.\n\n$CRWV , $MSFT , $NBIS , $SPCX and $TSLA are among the first to deploy it.\n\nThe networking and optics layer now matters as much as the GPU itself. You can own the fastest chip on earth and it will sit idle waiting on data if the wiring around it can't keep up. $LITE $AAOI $COHR",
+      "url": "https://x.com/KawzInvests/status/2079597702371840290",
+      "kind": "post",
+      "engagement": {
+        "views": 13342,
+        "likes": 63,
+        "reposts": 2,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -18054,11 +18100,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-21T15:16:52.877826+00:00",
+  "price_updated_at": "2026-07-21T18:17:07.520745+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-22",
     "asof": "2026-07-21",
-    "attempted_at": "2026-07-21T15:16:51.933537+00:00",
+    "attempted_at": "2026-07-21T18:17:06.792552+00:00",
     "status": "ok",
     "first_available_date": "2025-07-22",
     "last_available_date": "2026-07-20",
@@ -18069,7 +18115,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-21T15:16:51.933537+00:00",
+    "checked_at": "2026-07-21T18:17:06.792552+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
