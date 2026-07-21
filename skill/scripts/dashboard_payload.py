@@ -19,6 +19,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from report_scope import is_monthly_report_instrument
+
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent.parent
@@ -302,11 +304,14 @@ def build_payload(db: Path, config: Path, profiles: Path, report_day: str, avata
                "monthly": {"window": month, "rows": []}, "stock_drilldowns": {}}
     for doc in docs:
         rows = in_window(doc.get("mentions") or [], month)
-        # The 28-day table is a coverage view, not an instrument catalogue.
-        # Never render no-post rows as empty "stocks" in the approved UI.
-        if unique_posts(rows) == 0:
+        # The monthly consensus table and the 52-week price backfill share the
+        # same scope: at least three distinct opinion accounts with an explicit
+        # bullish/bearish stance in [D-27, D].  Context-only mentions do not
+        # manufacture a consensus row.
+        if not is_monthly_report_instrument(doc.get("mentions") or [], opinions, end):
             continue
-        counts = Counter(normal_stance(r.get("stance")) for r in rows)
+        scored = explicit_opinion(rows, opinions)
+        counts = Counter(normal_stance(r.get("stance")) for r in scored)
         directional = counts["bullish"] + counts["bearish"]
         bulls, bears = directions(rows, opinions)
         change_28d = price_change(doc, month)

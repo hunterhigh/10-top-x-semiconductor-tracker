@@ -51,8 +51,8 @@ class DashboardPayloadTests(unittest.TestCase):
             self.assertEqual(monthly["price_change_52w"]["status"], "pending")
             self.assertIsNone(monthly["price_change_52w"]["percentage"])
 
-    def test_monthly_excludes_instruments_without_28_day_posts(self):
-        # The 28-day table is a coverage view, not an instrument catalogue.
+    def test_monthly_requires_three_distinct_opinion_accounts(self):
+        # Context-only activity and one-person calls do not create consensus.
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); db = root / "db"; (db / "stocks").mkdir(parents=True)
             roster = [{"id": f"op{i}", "display_name": str(i), "handle": "@x", "signal_type": "opinion"} for i in range(7)]
@@ -60,11 +60,19 @@ class DashboardPayloadTests(unittest.TestCase):
             (root / "bloggers.json").write_text(json.dumps({"bloggers": roster}), encoding="utf-8")
             (root / "profiles.json").write_text('{"profiles": []}', encoding="utf-8")
             old = {"ticker": "OLD", "instrument": {"instrument_id": "x:old", "display_code": "OLD", "display_name": "old", "display_market": "US"}, "mentions": [{"tweet_id": "1", "blogger_id": "op0", "date": "2026-06-01", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/1"}]}
-            new = {"ticker": "NEW", "instrument": {"instrument_id": "x:new", "display_code": "NEW", "display_name": "new", "display_market": "US"}, "mentions": [{"tweet_id": "2", "blogger_id": "op0", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/2"}]}
+            new = {"ticker": "NEW", "instrument": {"instrument_id": "x:new", "display_code": "NEW", "display_name": "new", "display_market": "US"}, "mentions": [
+                {"tweet_id": "2", "blogger_id": "op0", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/2"},
+                {"tweet_id": "3", "blogger_id": "op1", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/3"},
+                {"tweet_id": "4", "blogger_id": "op2", "date": "2026-07-18", "stance": "bearish", "mention_type": "explicit_stance", "url": "https://x.com/4"},
+                {"tweet_id": "5", "blogger_id": "news", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/5"},
+            ]}
             (db / "stocks/OLD.json").write_text(json.dumps(old), encoding="utf-8")
             (db / "stocks/NEW.json").write_text(json.dumps(new), encoding="utf-8")
             payload = build_payload(db, root / "bloggers.json", root / "profiles.json", "2026-07-18")
             self.assertEqual([row["instrument"]["display_code"] for row in payload["monthly"]["rows"]], ["NEW"])
+            row = payload["monthly"]["rows"][0]
+            self.assertEqual((row["bullish_count"], row["bearish_count"], row["neutral_count"]), (2, 1, 0))
+            self.assertNotIn("news", row["bullish_account_ids"])
 
 
 if __name__ == "__main__":

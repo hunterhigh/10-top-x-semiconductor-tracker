@@ -30,6 +30,10 @@ DATA_DIR = DB.parent
 CONFIG_PATH = SCRIPT_DIR.parent / 'config' / 'bloggers.json'
 PROFILE_CONFIG_PATH = SCRIPT_DIR.parent / 'config' / 'blogger_profiles.json'
 PROFILE_DB_PATH = DB / 'blogger_profiles.json'
+
+sys.path.insert(0, str(SCRIPT_DIR.parent / 'skill' / 'scripts'))
+from report_scope import is_monthly_report_instrument  # noqa: E402
+from price_history_status import effective_history_status  # noqa: E402
 PRICE_WINDOW_DAYS = _intarg('--price-window-days', 30)
 PRICE_MIN_MENTIONS = _intarg('--price-min-mentions', 50)
 REQUIRE_PRICE_SCOPE = '--require-price-scope' in sys.argv
@@ -188,25 +192,35 @@ price_history_52w = {
 if index_data and latest:
     history_asof = datetime.date.fromisoformat(latest)
     target_start = history_asof - datetime.timedelta(weeks=52)
-    recent_cutoff = history_asof - datetime.timedelta(days=27)
-    history_rows = [
-        row for row in index_data.get('stocks', [])
-        if row.get('last_mention') and datetime.date.fromisoformat(str(row['last_mention'])[:10]) >= recent_cutoff
-    ]
+    try:
+        blogger_config = json.load(open(CONFIG_PATH, encoding='utf-8'))
+        opinion_ids = {
+            str(row['id']) for row in blogger_config.get('bloggers', [])
+            if row.get('id') and row.get('signal_type') == 'opinion'
+        }
+    except Exception as exc:
+        opinion_ids = set()
+        errors.append(f"cannot load opinion account roster for 52-week scope: {exc}")
+    if len(opinion_ids) != 7:
+        errors.append(f"52-week scope expected 7 opinion accounts, found {len(opinion_ids)}")
+
+    history_rows = []
+    for row in index_data.get('stocks', []):
+        stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+        stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
+        if is_monthly_report_instrument(stock_doc.get('mentions') or [], opinion_ids, history_asof):
+            history_rows.append((row, stock_doc))
     status_counts = {}
     missing_history_reason = []
     blocking = []
-    for row in history_rows:
-        stock_file = STOCKS_DIR / f"{row['ticker']}.json"
-        stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
+    for row, stock_doc in history_rows:
         identity = stock_doc.get('instrument') or {}
         coverage = stock_doc.get('price_history_52w') or {}
-        if identity.get('verification_status') != 'verified':
-            status = 'unverified_symbol'
-        elif stock_doc.get('price_status') in {'unavailable', 'unverified_symbol'}:
-            status = stock_doc.get('price_status')
-        else:
-            status = coverage.get('status') or 'pending'
+        status = effective_history_status(
+            identity.get('verification_status'),
+            stock_doc.get('price_status'),
+            coverage.get('status'),
+        )
         status_counts[status] = status_counts.get(status, 0) + 1
 
         reason = coverage.get('reason') or stock_doc.get('price_reason')
@@ -231,7 +245,7 @@ if index_data and latest:
         "status_counts": status_counts,
         "missing_reason": len(missing_history_reason),
     })
-    print(f"52-week price history: {len(history_rows)} current 28-day report ticker(s); target={target_start.isoformat()}")
+    print(f"52-week price history: {len(history_rows)} monthly consensus ticker(s); target={target_start.isoformat()}")
     print(f"52-week statuses: {status_counts or {'pending': len(history_rows)}}")
     if REQUIRE_PRICE_HISTORY_52W and blocking:
         errors.append(f"52-week price history has {len(blocking)} blocking ticker(s): {', '.join(blocking[:20])}")

@@ -14,7 +14,7 @@ on:
         default: false
         type: boolean
       backfill_52w:
-        description: "Backfill rolling 52-week history for current 28-day report tickers"
+        description: "Backfill rolling 52-week history for current monthly consensus tickers"
         required: false
         default: false
         type: boolean
@@ -70,7 +70,7 @@ jobs:
               summary.write("## 52-week price backfill\n")
               summary.write(f"- report cutoff (ET): {coverage.get('asof')}\n")
               summary.write(f"- target start: {coverage.get('target_start')}\n")
-              summary.write(f"- report tickers: {coverage.get('tickers')}\n")
+              summary.write(f"- monthly consensus tickers: {coverage.get('tickers')}\n")
               summary.write(f"- statuses: `{json.dumps(coverage.get('status_counts', {}), sort_keys=True)}`\n")
           PY
       - name: Commit manual price repair
