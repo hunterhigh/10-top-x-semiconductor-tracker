@@ -11,6 +11,10 @@ The 2026-07-17 handoff package is the authoritative dashboard contract. Read its
 - Count only the seven `opinion` accounts with `explicit_stance` records in consensus. Show `flow`, `news`, and `disclosure` activity separately.
 - An evidence card's reasons, original text, and URL must come from the same mention. Empty reasons are valid.
 - Display explicit price availability. Missing/pending/partial data is never `0%`.
+- Monthly rows expose `price_change` as the 28-day compatibility value plus explicit
+  `price_change_28d` and `price_change_52w` objects. The 52-week object uses the
+  first close on or within seven calendar days after `D-52 weeks`; shorter listed
+  histories are `insufficient_history`, never `0%`.
 - Every visible account avatar must be a nonblank embedded resource or an explicit visible fallback after a documented fetch failure.
 
 ## Required release validation

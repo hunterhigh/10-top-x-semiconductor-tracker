@@ -135,3 +135,22 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
   reusing the existing `EODHD_API_KEY` GitHub Actions secret.
 - Verification passed: Python compilation, 17 project tests, focused identity
   resolver tests, and `git diff --check`.
+
+## 2026-07-21 - rolling 52-week price history contract
+
+- Added backward cache extension for current 28-day report instruments. The
+  report cutoff comes from the verified ET manifest and the target start is
+  exactly 52 weeks earlier; existing prefix and suffix data are merged by date.
+- Separated latest-price freshness from 52-week coverage. Completed, genuinely
+  short listing histories, unavailable identities, pending attempts and fetch
+  errors retain distinct machine-readable states and reasons.
+- Monthly payload rows now expose `price_change_28d` and `price_change_52w`
+  while retaining `price_change` as the 28-day compatibility field. Missing
+  history always has a null percentage.
+- Added a fail-closed manual backfill input and ongoing trihourly maintenance.
+  The production backfill and its final coverage counts will run only after the
+  implementation PR is merged.
+- Verification passed locally: Python compilation, 52-week cache/state tests,
+  payload Draft 2020-12 Schema validation, ET/build tests, and all seven handoff
+  aggregation tests. The complete repository discovery suite requires the
+  non-sparse CI checkout and remains a PR check.

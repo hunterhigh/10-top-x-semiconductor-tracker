@@ -33,6 +33,7 @@ PROFILE_DB_PATH = DB / 'blogger_profiles.json'
 PRICE_WINDOW_DAYS = _intarg('--price-window-days', 30)
 PRICE_MIN_MENTIONS = _intarg('--price-min-mentions', 50)
 REQUIRE_PRICE_SCOPE = '--require-price-scope' in sys.argv
+REQUIRE_PRICE_HISTORY_52W = '--require-price-history-52w' in sys.argv
 
 print(f"DB path: {DB}")
 print(f"Stocks dir: {STOCKS_DIR}")
@@ -175,6 +176,70 @@ if index_data:
 elif REQUIRE_PRICE_SCOPE:
     errors.append("cannot verify price scope without index.json")
 
+price_history_52w = {
+    "report_window_days": 28,
+    "weeks": 52,
+    "asof": latest,
+    "target_start": None,
+    "tickers": 0,
+    "status_counts": {},
+    "missing_reason": 0,
+}
+if index_data and latest:
+    history_asof = datetime.date.fromisoformat(latest)
+    target_start = history_asof - datetime.timedelta(weeks=52)
+    recent_cutoff = history_asof - datetime.timedelta(days=27)
+    history_rows = [
+        row for row in index_data.get('stocks', [])
+        if row.get('last_mention') and datetime.date.fromisoformat(str(row['last_mention'])[:10]) >= recent_cutoff
+    ]
+    status_counts = {}
+    missing_history_reason = []
+    blocking = []
+    for row in history_rows:
+        stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+        stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
+        identity = stock_doc.get('instrument') or {}
+        coverage = stock_doc.get('price_history_52w') or {}
+        if identity.get('verification_status') != 'verified':
+            status = 'unverified_symbol'
+        elif stock_doc.get('price_status') in {'unavailable', 'unverified_symbol'}:
+            status = stock_doc.get('price_status')
+        else:
+            status = coverage.get('status') or 'pending'
+        status_counts[status] = status_counts.get(status, 0) + 1
+
+        reason = coverage.get('reason') or stock_doc.get('price_reason')
+        if status in {'insufficient_history', 'unavailable', 'unverified_symbol', 'error'} and not reason:
+            missing_history_reason.append(row['ticker'])
+        if status in {'pending', 'error'}:
+            blocking.append(f"{row['ticker']}={status}")
+        if status == 'ok':
+            first = coverage.get('first_available_date')
+            requested = coverage.get('requested_start')
+            if not first or not requested:
+                blocking.append(f"{row['ticker']}=ok_without_coverage_dates")
+            elif datetime.date.fromisoformat(first) > datetime.date.fromisoformat(requested) + datetime.timedelta(days=7):
+                blocking.append(f"{row['ticker']}=ok_but_late_start:{first}")
+        if status == 'insufficient_history' and not coverage.get('attempted_at'):
+            blocking.append(f"{row['ticker']}=insufficient_without_attempt")
+
+    price_history_52w.update({
+        "asof": history_asof.isoformat(),
+        "target_start": target_start.isoformat(),
+        "tickers": len(history_rows),
+        "status_counts": status_counts,
+        "missing_reason": len(missing_history_reason),
+    })
+    print(f"52-week price history: {len(history_rows)} current 28-day report ticker(s); target={target_start.isoformat()}")
+    print(f"52-week statuses: {status_counts or {'pending': len(history_rows)}}")
+    if REQUIRE_PRICE_HISTORY_52W and blocking:
+        errors.append(f"52-week price history has {len(blocking)} blocking ticker(s): {', '.join(blocking[:20])}")
+    if REQUIRE_PRICE_HISTORY_52W and missing_history_reason:
+        errors.append(f"52-week price history has {len(missing_history_reason)} non-ok ticker(s) without reason: {', '.join(missing_history_reason[:20])}")
+elif REQUIRE_PRICE_HISTORY_52W:
+    errors.append("cannot verify 52-week price history without index.json and a data cutoff")
+
 # per-blogger state file check (needed for daily automation) + mention breakdown
 bloggers = []
 if CONFIG_PATH.exists():
@@ -278,6 +343,7 @@ manifest = {
         "price_unavailable_or_unverified": price_unavailable,
     },
     "price_scope": price_scope,
+    "price_history_52w": price_history_52w,
     "profile_coverage": {
         "editorial_profiles": len(profile_copy),
         "statistical_profiles": len(profile_stats),

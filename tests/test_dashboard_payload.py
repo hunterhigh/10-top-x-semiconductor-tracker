@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skill" / "scripts"))
-from dashboard_payload import build_payload, validate_invariants
+from dashboard_payload import build_payload, validate_invariants, validate_schema
 
 
 class DashboardPayloadTests(unittest.TestCase):
@@ -39,12 +39,17 @@ class DashboardPayloadTests(unittest.TestCase):
             (db / "stocks" / "ABC.json").write_text(json.dumps(doc), encoding="utf-8")
             payload = build_payload(db, root / "bloggers.json", root / "profiles.json", "2026-07-11", root / "avatars.json")
             validate_invariants(payload)
+            validate_schema(payload)
             self.assertEqual(payload["daily"]["disagreement"][0]["instrument"]["display_code"], "ABC")
             self.assertEqual([x["blogger_id"] for x in payload["daily"]["disagreement"][0]["bullish_accounts"]], ["op1", "op2"])
             self.assertNotIn("flow", [x["blogger_id"] for x in payload["daily"]["disagreement"][0]["bullish_accounts"]])
             drill = payload["stock_drilldowns"]["ABC"]
             self.assertEqual(len(drill["person_windows"]["today"]), 10)
             self.assertEqual(drill["people_by_window"]["today"][0]["latest"]["created_at"], "2026-07-11T12:00:00-04:00")
+            monthly = payload["monthly"]["rows"][0]
+            self.assertEqual(monthly["price_change"], monthly["price_change_28d"])
+            self.assertEqual(monthly["price_change_52w"]["status"], "pending")
+            self.assertIsNone(monthly["price_change_52w"]["percentage"])
 
     def test_monthly_excludes_instruments_without_28_day_posts(self):
         # The 28-day table is a coverage view, not an instrument catalogue.

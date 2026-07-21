@@ -140,7 +140,7 @@
       "additionalProperties": false,
       "required": ["status", "percentage"],
       "properties": {
-        "status": {"enum": ["ok", "pending", "unavailable", "unverified_symbol", "error"]},
+        "status": {"enum": ["ok", "pending", "insufficient_history", "unavailable", "unverified_symbol", "error"]},
         "percentage": {"type": ["number", "null"]},
         "start_date": {"type": ["string", "null"], "format": "date"},
         "end_date": {"type": ["string", "null"], "format": "date"}
@@ -219,12 +219,14 @@
     "monthlyRow": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["instrument", "bull_share", "bear_share", "price_change", "unique_post_count", "bullish_count", "bearish_count", "neutral_count", "participant_ids"],
+      "required": ["instrument", "bull_share", "bear_share", "price_change", "price_change_28d", "price_change_52w", "unique_post_count", "bullish_count", "bearish_count", "neutral_count", "participant_ids"],
       "properties": {
         "instrument": {"$ref": "#/$defs/instrument"},
         "bull_share": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
         "bear_share": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
         "price_change": {"$ref": "#/$defs/priceChange"},
+        "price_change_28d": {"$ref": "#/$defs/priceChange"},
+        "price_change_52w": {"$ref": "#/$defs/priceChange"},
         "unique_post_count": {"type": "integer", "minimum": 0},
         "bullish_count": {"type": "integer", "minimum": 0},
         "bearish_count": {"type": "integer", "minimum": 0},
