@@ -24,14 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-04",
-  "last_mention": "2026-07-06",
-  "total_mentions": 2,
+  "last_mention": "2026-07-21",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 1,
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 2,
+    "news": 1
   },
   "mentions": [
     {
@@ -76,6 +78,31 @@
         "likes": 171,
         "reposts": 14,
         "replies": 45
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079574014746316966",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T10:27:36-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "needs to understand more about Anthropic exposure in LAZR"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$LAZR",
+      "text": "@WOLF_Financial I need to understand more about the Anthropic exposure in $LAZR ... We'll have our Tema partners back on the spaces soon to talk about it https://t.co/yX7sw8Kt5d",
+      "url": "https://x.com/StockMKTNewz/status/2079574014746316966",
+      "kind": "reply",
+      "engagement": {
+        "views": 1607,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

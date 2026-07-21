@@ -25,11 +25,11 @@
   "thesis_summary": null,
   "first_mention": "2025-09-23",
   "last_mention": "2026-07-21",
-  "total_mentions": 201,
+  "total_mentions": 203,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 139,
-    "StockMKTNewz": 22,
-    "jukan05": 19,
+    "StockMKTNewz": 23,
+    "jukan05": 20,
     "ren_stocks": 5,
     "octopusycc": 4,
     "unusual_whales": 3,
@@ -39,8 +39,8 @@
     "KawzInvests": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 173,
-    "news": 22,
+    "opinion": 174,
+    "news": 23,
     "flow": 3,
     "disclosure": 3
   },
@@ -4848,6 +4848,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079552755958534403",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T09:03:07-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "Intel $INTC and Fortinet $FTNT just announced a new strategic collaboration to develop Fortinet Security Processor 6 (SP6). https://t.co/Sospx0M3xx",
+      "url": "https://x.com/StockMKTNewz/status/2079552755958534403",
+      "kind": "post",
+      "engagement": {
+        "views": 26564,
+        "likes": 89,
+        "reposts": 9,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079568535093973274",
+      "blogger_id": "jukan05",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T10:05:49-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "Quoted from a JPM seminar (a must-read):\n\n- Rubin Ultra, which is based on a 5.5x reticle size, has encountered difficulties in implementation testing, and the expert believes that a 9.5x implementation will be extremely difficult. As of the first half of 2027, soldering has been identified as an issue for the 9.5x reticle. Evaluations of Rubin Ultra with a 5.5x reticle are currently underway, but the expert said they are not progressing well. The expert also explained that if CoWoS-L with a 9.5x reticle is unsuccessful, limitations in packaging technology could make it difficult to realize Nvidia’s Feynman generation in 2029.\n\n- EMIB-T is a structure in which through-silicon vias (TSVs) are formed in a silicon bridge, enabling signals and power to be delivered from the substrate side to HBM and LSI. The ability to optimize power delivery on the bridge helps suppress power noise in HBM operating at high frequencies and low voltages. In addition, HBM and LSI components with different sizes and connection requirements can be mounted individually on the substrate without using a large interposer. This eliminates the need to bond an entire large module at once, as required with CoWoS-L, making the overall interposer less susceptible to warpage and offering advantages in back-end process yields. According to the expert, Intel claims that EMIB-T can support reticle sizes of up to 12x and could serve as an alternative to CoWoS-L.\n\n$INTC $TSM",
+      "url": "https://x.com/jukan05/status/2079568535093973274",
+      "kind": "post",
+      "engagement": {
+        "views": 28213,
+        "likes": 128,
+        "reposts": 11,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -5854,11 +5900,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-21T12:16:34.168458+00:00",
+  "price_updated_at": "2026-07-21T15:16:47.259410+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-22",
     "asof": "2026-07-21",
-    "attempted_at": "2026-07-21T12:16:33.286173+00:00",
+    "attempted_at": "2026-07-21T15:16:46.290879+00:00",
     "status": "ok",
     "first_available_date": "2025-07-22",
     "last_available_date": "2026-07-20",
@@ -5869,7 +5915,7 @@
     "provider_symbol": "INTC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-21T12:16:33.286173+00:00",
+    "checked_at": "2026-07-21T15:16:46.290879+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
