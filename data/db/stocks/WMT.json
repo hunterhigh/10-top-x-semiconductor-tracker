@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-10",
-  "last_mention": "2026-07-11",
-  "total_mentions": 18,
+  "last_mention": "2026-07-21",
+  "total_mentions": 19,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 13,
     "StockMKTNewz": 4,
-    "DJTRadar": 1
+    "DJTRadar": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 13,
+    "opinion": 14,
     "news": 4,
     "disclosure": 1
   },
@@ -469,6 +470,29 @@
         "likes": 427,
         "reposts": 55,
         "replies": 43
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079421415988613424",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-21",
+      "created_at": "2026-07-21T00:21:14-04:00",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$WMT",
+      "text": "Kioxia $KXIAY is up 15% tonight.\n\nOne of my favorite discounted longs is going parabolic.\n\nThe Japanese market opened and came back bullish.\n\n“But it’s down so much, you’re bag holding, the AI bubble popped.”\n\nBruh, I’m up 400%+ on Kioxia in 6 months, AFTER the drawdown.\n\nHow are your value stocks doing this year?\n$V $WMT $ADBE $LULU\n\nYeah, thought so 💀",
+      "url": "https://x.com/ren_stocks/status/2079421415988613424",
+      "kind": "post",
+      "engagement": {
+        "views": 6013,
+        "likes": 62,
+        "reposts": 1,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1082,5 +1106,15 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-21T03:16:35.400090+00:00"
+  "price_updated_at": "2026-07-21T08:24:30.372844+00:00",
+  "price_source_state": {
+    "provider": "akshare_us",
+    "provider_symbol": "WMT",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-07-21T08:24:29.189724+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
+    "http_status": null
+  }
 }

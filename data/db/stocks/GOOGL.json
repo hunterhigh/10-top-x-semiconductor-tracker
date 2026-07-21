@@ -25,19 +25,19 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-03",
   "last_mention": "2026-07-20",
-  "total_mentions": 361,
+  "total_mentions": 362,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 286,
     "StockMKTNewz": 41,
     "jukan05": 8,
     "unusual_whales": 8,
     "zephyr_z9": 6,
-    "ren_stocks": 5,
+    "ren_stocks": 6,
     "KawzInvests": 4,
     "octopusycc": 3
   },
   "total_mentions_by_signal_type": {
-    "opinion": 312,
+    "opinion": 313,
     "news": 41,
     "flow": 8
   },
@@ -8565,6 +8565,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079414486272815549",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-20",
+      "created_at": "2026-07-20T23:53:41-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "held since $30",
+        "long-term retirement account holding"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$GOOGL",
+      "text": "Most people don’t know this because I only began ACTIVELY trading a year or so ago.\n\nI hold $GOOGL shares back from when it traded at $30, which makes me older than your favorite furu at FinX.\n\nWhen Anthropic goes public, once the IPO POP is over, I’ll be buying shares in my retirement account.\n\nRight now my retirement account only holds 5 stocks. This one would be worth a spot.",
+      "url": "https://x.com/ren_stocks/status/2079414486272815549",
+      "kind": "post",
+      "engagement": {
+        "views": 5493,
+        "likes": 19,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9619,5 +9645,24 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-21T03:15:20.558363+00:00"
+  "price_updated_at": "2026-07-21T08:23:16.228941+00:00",
+  "price_history_52w": {
+    "requested_start": "2025-07-22",
+    "asof": "2026-07-21",
+    "attempted_at": "2026-07-21T08:23:15.336690+00:00",
+    "status": "ok",
+    "first_available_date": "2025-07-22",
+    "last_available_date": "2026-07-20",
+    "reason": null
+  },
+  "price_source_state": {
+    "provider": "akshare_us",
+    "provider_symbol": "GOOGL",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-07-21T08:23:15.336690+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
+    "http_status": null
+  }
 }

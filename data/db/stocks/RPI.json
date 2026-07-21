@@ -3015,7 +3015,18 @@
       "close": 659.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "GBp",
-  "price_updated_at": "2026-07-21T03:15:45.673253+00:00"
+  "price_updated_at": "2026-07-21T08:24:33.081497+00:00",
+  "price_reason": "EODHD daily call budget (20) exhausted",
+  "price_source_state": {
+    "provider": "eodhd",
+    "provider_symbol": "RPI.LSE",
+    "status": "deferred",
+    "reason": "EODHD daily call budget (20) exhausted",
+    "checked_at": "2026-07-21T08:24:33.081257+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-21T11:24:33.081257+00:00",
+    "http_status": null
+  }
 }
