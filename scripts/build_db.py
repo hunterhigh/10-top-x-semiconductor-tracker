@@ -391,7 +391,7 @@ def main():
                 prev_price_status = prev.get("price_status", "pending")
                 prev_price_meta = {
                     key: prev[key]
-                    for key in ("price_unit", "price_updated_at", "price_reason", "price_history_52w")
+                    for key in ("price_unit", "price_updated_at", "price_reason", "price_history_52w", "price_source_state")
                     if prev.get(key) is not None
                 }
             except (json.JSONDecodeError, KeyError):

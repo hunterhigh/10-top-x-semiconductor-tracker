@@ -80,6 +80,7 @@ refresh → extract → build_db → EODHD identity resolution → build_db → 
 - The delivered page is one self-contained HTML file, embeds each visible avatar, supports `#stock=<display_code>` drilldowns and the final sidebar interactions, and may use JavaScript as required by the approved final UI.
 - `skill/scripts/validate_dashboard.py` must pass with `--browser required --expected-avatars 10` at 320, 768, and 1440 px before delivery.
 - Generated HTML is an Actions Artifact, never a Git-tracked production file. Retain the HTML, payload, validation JSON, and SHA-256 for 30 days.
+- Price enrichment is provider-aware. Global authentication or contract failures stop publication; a per-instrument unsupported, deferred, or retryable state may publish only with a machine-readable reason and scheduled retry in `data/price_enrichment_queue.json`. Never add ticker-specific exceptions to bypass this gate.
 
 `serenity_render.py` is historical compatibility material only. It is not a production entry point, is not a release criterion, and must not be called by workflows or this Skill.
 
@@ -94,7 +95,7 @@ python scripts/build_db.py
 python scripts/resolve_tickers_eodhd.py --apply
 python scripts/build_db.py
 python scripts/verify_data.py
-python scripts/prices.py --asof <YYYY-MM-DD>
+python scripts/prices.py --asof <YYYY-MM-DD> --history-weeks 52 --history-scope recent-28d
 python scripts/refresh_avatars.py
 python skill/scripts/dashboard_payload.py <YYYY-MM-DD> --output payload.json
 python skill/scripts/render_dashboard.py <YYYY-MM-DD> --output dashboard.html

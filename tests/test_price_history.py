@@ -16,16 +16,33 @@ from dashboard_payload import price_change_52w  # noqa: E402
 
 
 class FakeProvider:
-    def __init__(self, rows=None, failure=None):
+    def __init__(self, rows=None, failure=None, failure_type=prices.ProviderError):
         self.rows = rows or []
         self.failure = failure
+        self.failure_type = failure_type
         self.calls = []
 
     def fetch_daily(self, symbol, start, end):
         self.calls.append((symbol, start, end))
         if self.failure:
-            raise prices.ProviderError(self.failure)
+            raise self.failure_type(self.failure)
         return [row for row in self.rows if start <= row["date"] <= end]
+
+
+class ResolvingProvider(FakeProvider):
+    def __init__(self, rows):
+        super().__init__(rows=rows)
+        self.resolved = False
+
+    def fetch_daily(self, symbol, start, end):
+        self.calls.append((symbol, start, end))
+        if not self.resolved:
+            raise prices.ProviderSymbolNotFound(f"not found: {symbol}")
+        return [row for row in self.rows if start <= row["date"] <= end]
+
+    def resolve_symbol(self, symbol, currency=None):
+        self.resolved = True
+        return "ABC.KO"
 
 
 def stock_doc():
@@ -63,7 +80,7 @@ class PriceHistoryTests(unittest.TestCase):
                 {"date": "2025-07-21", "close": 50.0},
                 {"date": "2026-07-20", "close": 100.0},
             ])
-            series, status, _, reason, coverage = prices.fetch_one(
+            series, status, _, reason, coverage, source = prices.fetch_one(
                 stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
                 {"n": 0}, False, "2026-07-20", "2025-07-21",
             )
@@ -75,6 +92,7 @@ class PriceHistoryTests(unittest.TestCase):
             self.assertEqual(status, "ok")
             self.assertIsNone(reason)
             self.assertEqual(coverage["status"], "ok")
+            self.assertEqual(source["status"], "supported")
             cached = json.loads((Path(td) / "ABC.json").read_text(encoding="utf-8"))
             self.assertEqual(cached["price_history_52w"]["requested_start"], "2025-07-21")
 
@@ -84,7 +102,7 @@ class PriceHistoryTests(unittest.TestCase):
                 {"date": "2026-01-05", "close": 20.0},
                 {"date": "2026-07-20", "close": 30.0},
             ])
-            series, status, _, _, coverage = prices.fetch_one(
+            series, status, _, _, coverage, _ = prices.fetch_one(
                 stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
                 {"n": 0}, False, "2026-07-20", "2025-07-21",
             )
@@ -103,7 +121,7 @@ class PriceHistoryTests(unittest.TestCase):
             ]
             prices.save_cache("ABC", "USD", "USD", cached)
             provider = FakeProvider(failure="network unavailable")
-            series, status, _, reason, coverage = prices.fetch_one(
+            series, status, _, reason, coverage, source = prices.fetch_one(
                 stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
                 {"n": 0}, False, "2026-07-20", "2025-07-21",
             )
@@ -112,19 +130,25 @@ class PriceHistoryTests(unittest.TestCase):
             self.assertEqual(status, "partial")
             self.assertEqual(reason, "network unavailable")
             self.assertEqual(coverage["status"], "error")
+            self.assertEqual(source["status"], "retryable_error")
 
     def test_fetch_failure_without_cache_remains_a_history_error(self):
         with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)), patch.object(prices.time, "sleep"):
-            provider = FakeProvider(failure="EODHD daily call budget (20) exhausted")
-            _, price_status, _, reason, coverage = prices.fetch_one(
+            provider = FakeProvider(
+                failure="EODHD daily call budget (20) exhausted",
+                failure_type=prices.ProviderDeferred,
+            )
+            _, price_status, _, reason, coverage, source = prices.fetch_one(
                 stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
                 {"n": 20}, False, "2026-07-20", "2025-07-21",
             )
 
             self.assertEqual(price_status, "unavailable")
             self.assertIn("budget", reason)
-            self.assertEqual(coverage["status"], "error")
+            self.assertEqual(coverage["status"], "pending")
             self.assertIn("budget", coverage["reason"])
+            self.assertEqual(source["status"], "deferred")
+            self.assertTrue(source["next_retry_at"])
 
     def test_tail_failure_does_not_erase_already_complete_history_coverage(self):
         with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)), patch.object(prices.time, "sleep"):
@@ -134,7 +158,7 @@ class PriceHistoryTests(unittest.TestCase):
             ]
             prices.save_cache("ABC", "USD", "USD", cached)
             provider = FakeProvider(failure="network unavailable")
-            series, status, _, _, coverage = prices.fetch_one(
+            series, status, _, _, coverage, _ = prices.fetch_one(
                 stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
                 {"n": 0}, False, "2026-07-20", "2025-07-21",
             )
@@ -142,6 +166,52 @@ class PriceHistoryTests(unittest.TestCase):
             self.assertEqual(series, cached)
             self.assertEqual(status, "partial")
             self.assertEqual(coverage["status"], "ok")
+
+    def test_provider_404_becomes_cooldown_not_a_global_history_error(self):
+        with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)), patch.object(prices.time, "sleep"):
+            provider = FakeProvider(
+                failure="EODHD 404 (symbol not found: ABC.X)",
+                failure_type=prices.ProviderSymbolNotFound,
+            )
+            _, price_status, _, reason, coverage, source = prices.fetch_one(
+                stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
+                {"n": 0}, False, "2026-07-20", "2025-07-21",
+            )
+            self.assertEqual(price_status, "unavailable")
+            self.assertEqual(reason, "EODHD 404 (symbol not found: ABC.X)")
+            self.assertEqual(coverage["status"], "unavailable")
+            self.assertEqual(coverage["reason"], "provider_symbol_not_found_after_search")
+            self.assertEqual(source["status"], "unsupported")
+            self.assertEqual(source["http_status"], 404)
+            self.assertTrue(source["next_retry_at"])
+
+    def test_auth_failure_is_fatal(self):
+        provider = FakeProvider(
+            failure="EODHD 401 (bad/expired api_token)",
+            failure_type=prices.ProviderAuthError,
+        )
+        with self.assertRaises(prices.ProviderAuthError):
+            prices.fetch_one(
+                stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
+                {"n": 0}, False, "2026-07-20", "2025-07-21",
+            )
+
+    def test_404_uses_exact_provider_resolution_before_degrading(self):
+        with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)):
+            provider = ResolvingProvider([
+                {"date": "2025-07-21", "close": 50.0},
+                {"date": "2026-07-20", "close": 75.0},
+            ])
+            series, status, _, reason, coverage, source = prices.fetch_one(
+                stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
+                {"n": 0}, False, "2026-07-20", "2025-07-21",
+            )
+            self.assertEqual(len(series), 2)
+            self.assertEqual(status, "ok")
+            self.assertIsNone(reason)
+            self.assertEqual(coverage["status"], "ok")
+            self.assertEqual(source["status"], "supported")
+            self.assertEqual(source["provider_symbol"], "ABC.KO")
 
     def test_payload_uses_exact_52_week_target_and_never_returns_zero_for_missing(self):
         complete = {
