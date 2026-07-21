@@ -154,3 +154,21 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
   payload Draft 2020-12 Schema validation, ET/build tests, and all seven handoff
   aggregation tests. The complete repository discovery suite requires the
   non-sparse CI checkout and remains a PR check.
+
+## 2026-07-21 - monthly scope and EODHD budget repair
+
+- Replaced the broad “any mention in 28 days” price-history scope with the
+  actual monthly consensus rule: at least three distinct opinion accounts must
+  provide an `explicit_stance` bullish or bearish signal in the ET closed
+  interval `[D-27, D]`.
+- The payload builder, 52-week fetcher, and verification gate now import one
+  shared scope function. Flow, news, disclosure, background, and neutral rows
+  remain visible as context but cannot expand the price-history queue.
+- Report-scope instruments are processed before the broader price universe so
+  unrelated non-US symbols cannot consume the 20-call EODHD budget first.
+- A provider or budget failure remains `error` in 52-week coverage even when
+  the general price layer falls back to `unavailable`; strict verification
+  therefore fails visibly without publishing a partial snapshot.
+- Verification passed locally: 31 repository tests, all seven handoff rule
+  tests, Python compilation, diff checks, and real 2026-07-20 report-scope
+  comparisons (40 eligible in the earlier Artifact and 46 in the final report).

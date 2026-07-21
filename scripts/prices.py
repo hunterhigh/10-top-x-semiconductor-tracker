@@ -62,6 +62,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
 DB_DIR = DATA_DIR / "db"
 STOCKS_DIR = DB_DIR / "stocks"
@@ -69,10 +70,14 @@ INDEX_PATH = DB_DIR / "index.json"
 MANIFEST_PATH = DB_DIR / "manifest.json"
 TMAP_PATH = DATA_DIR / "ticker_map.json"
 CACHE_DIR = DATA_DIR / "prices_cache"
+BLOGGERS_PATH = PROJECT_DIR / "config" / "bloggers.json"
+
+# Keep the installed Skill and repository pipeline on one eligibility rule.
+sys.path.insert(0, str(PROJECT_DIR / "skill" / "scripts"))
+from report_scope import is_monthly_report_instrument  # noqa: E402
 
 DEFAULT_MIN_MENTIONS = 50      # core set ~= the 41 deep-divable tickers; tune with --min-mentions
 RECENT_WINDOW_DAYS = 30        # matches the initial backfill and 28-day Month view
-REPORT_WINDOW_DAYS = 28        # ET closed interval [D-27, D]
 HISTORY_START_TOLERANCE_DAYS = 7
 RETRY = 3
 PACING_SEC = 0.4               # polite pause between symbols
@@ -164,11 +169,22 @@ def in_scope(row, min_mentions, asof_date):
     return False
 
 
-def in_history_scope(row, asof_date):
-    """52-week history is maintained only for rows visible in the 28-day report."""
-    last_mention = row.get("last_mention")
-    cutoff = (asof_date - timedelta(days=REPORT_WINDOW_DAYS - 1)).isoformat()
-    return bool(last_mention and str(last_mention)[:10] >= cutoff)
+def opinion_account_ids():
+    """Load the seven accounts allowed to contribute to consensus."""
+    config = load_json(BLOGGERS_PATH, default={}) or {}
+    account_ids = {
+        str(row["id"])
+        for row in config.get("bloggers", [])
+        if row.get("id") and row.get("signal_type") == "opinion"
+    }
+    if len(account_ids) != 7:
+        raise RuntimeError(f"Expected 7 opinion accounts, found {len(account_ids)}")
+    return account_ids
+
+
+def in_history_scope(stock_doc, asof_date, opinion_ids):
+    """52-week history is maintained only for monthly consensus instruments."""
+    return is_monthly_report_instrument(stock_doc.get("mentions") or [], opinion_ids, asof_date)
 
 
 def history_coverage(series, requested_start, asof, attempted_at, failure=None):
@@ -385,7 +401,8 @@ def fetch_one(stock_doc, tmap, providers, call_counter, force, today_iso, histor
     provider = providers.get(prov_key)
     if provider is None:
         reason = f"provider_unavailable:{prov_key}"
-        history = terminal_history_coverage("unavailable", history_start, today_iso, attempted_at, reason) or previous_history
+        history_status = "error" if history_start and verified else "unavailable"
+        history = terminal_history_coverage(history_status, history_start, today_iso, attempted_at, reason) or previous_history
         return [], "unavailable", price_unit, reason, history
 
     cache = None if force else load_cache(price_symbol)
@@ -602,11 +619,31 @@ def main():
             log(f"{args.ticker} not in index."); sys.exit(1)
     else:
         scope = [r for r in rows if in_scope(r, args.min_mentions, asof_date)]
+
+    docs_by_ticker = {}
+    history_tickers = set()
+    if history_start:
+        opinions = opinion_account_ids()
+        for row in scope:
+            stock_doc = load_json(STOCKS_DIR / f"{row['ticker']}.json", default=None)
+            if not stock_doc:
+                continue
+            docs_by_ticker[row["ticker"]] = stock_doc
+            if in_history_scope(stock_doc, asof_date, opinions):
+                history_tickers.add(row["ticker"])
+
+        # Complete the report-visible history before refreshing the broader
+        # price universe.  Otherwise unrelated non-US symbols can consume the
+        # entire EODHD budget before a report ticker is reached.
+        scope.sort(key=lambda row: (
+            0 if row["ticker"] in history_tickers else 1,
+            0 if (docs_by_ticker.get(row["ticker"], {}).get("currency") or "USD") == "USD" else 1,
+            str(row["ticker"]).casefold(),
+        ))
     log(f"In scope: {len(scope)} tickers "
         f"(min_mentions={args.min_mentions}, recent<= {RECENT_WINDOW_DAYS}d, asof={today_iso}).")
     if history_start:
-        history_count = sum(in_history_scope(row, asof_date) for row in scope)
-        log(f"52-week history scope: {history_count} recent report ticker(s); target start={history_start}.")
+        log(f"52-week history scope: {len(history_tickers)} monthly consensus ticker(s); target start={history_start}.")
 
     if args.annotate_existing:
         counts = annotate_existing(scope, tmap)
@@ -622,11 +659,11 @@ def main():
     for i, row in enumerate(scope, 1):
         sym = row["ticker"]
         stock_path = STOCKS_DIR / f"{sym}.json"
-        doc = load_json(stock_path, default=None)
+        doc = docs_by_ticker.get(sym) or load_json(stock_path, default=None)
         if not doc:
             log(f"    {sym}: no stock file, skipping."); continue
 
-        ticker_history_start = history_start if history_start and in_history_scope(row, asof_date) else None
+        ticker_history_start = history_start if sym in history_tickers else None
         series, status, price_unit, reason, history = fetch_one(
             doc, tmap, providers, call_counter, args.force, today_iso, ticker_history_start
         )

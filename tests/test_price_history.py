@@ -40,6 +40,19 @@ def stock_doc():
 
 
 class PriceHistoryTests(unittest.TestCase):
+    def test_history_scope_uses_three_distinct_explicit_opinion_accounts(self):
+        opinions = {f"op{i}" for i in range(1, 8)}
+        doc = {"mentions": [
+            {"blogger_id": "op1", "date": "2026-07-20", "stance": "bullish", "mention_type": "explicit_stance"},
+            {"blogger_id": "op2", "date": "2026-07-19", "stance": "bearish", "mention_type": "explicit_stance"},
+            {"blogger_id": "news", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance"},
+        ]}
+        self.assertFalse(prices.in_history_scope(doc, date(2026, 7, 20), opinions))
+        doc["mentions"].append(
+            {"blogger_id": "op3", "date": "2026-07-17", "stance": "bullish", "mention_type": "explicit_stance"}
+        )
+        self.assertTrue(prices.in_history_scope(doc, date(2026, 7, 20), opinions))
+
     def test_short_cache_is_extended_backwards_and_forwards_in_one_call(self):
         with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)):
             prices.save_cache("ABC", "USD", "USD", [
@@ -99,6 +112,19 @@ class PriceHistoryTests(unittest.TestCase):
             self.assertEqual(status, "partial")
             self.assertEqual(reason, "network unavailable")
             self.assertEqual(coverage["status"], "error")
+
+    def test_fetch_failure_without_cache_remains_a_history_error(self):
+        with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)), patch.object(prices.time, "sleep"):
+            provider = FakeProvider(failure="EODHD daily call budget (20) exhausted")
+            _, price_status, _, reason, coverage = prices.fetch_one(
+                stock_doc(), {"ABC": {"verified": True}}, {"akshare_us": provider},
+                {"n": 20}, False, "2026-07-20", "2025-07-21",
+            )
+
+            self.assertEqual(price_status, "unavailable")
+            self.assertIn("budget", reason)
+            self.assertEqual(coverage["status"], "error")
+            self.assertIn("budget", coverage["reason"])
 
     def test_tail_failure_does_not_erase_already_complete_history_coverage(self):
         with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)), patch.object(prices.time, "sleep"):
