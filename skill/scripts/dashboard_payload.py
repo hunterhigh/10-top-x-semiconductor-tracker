@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Build the deterministic 10V Dashboard render payload.
 
-This is the only place where dashboard aggregation is performed.  It consumes
-the factual stock documents produced by ``build_db.py`` and never infers a
-stance from post text.  The emitted object conforms to the 2026-07-17 handoff
-schema and is suitable for any single-file renderer.
+This is the only place where dashboard aggregation is performed. It reads a
+local ``data/db`` snapshot and never downloads data or infers stance from text.
+The 10 tracked account ids and approved aggregation rules are embedded; person
+identity fields come from database profile metadata and the avatar cache.
 """
 from __future__ import annotations
 
@@ -12,36 +12,120 @@ import argparse
 import base64
 import hashlib
 import html
-import importlib.util
 import json
+import re
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-from report_scope import is_monthly_report_instrument
+from jsonschema import Draft202012Validator, FormatChecker
+
+from report_scope import is_rankable_equity, monthly_top_pick_candidates
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent.parent
-REFERENCES_DIR = SCRIPT_DIR.parent / "references"
-# These are packaged with the Skill so a locally installed Skill never relies
-# on a sibling repository checkout. CI compares their hashes with the handoff
-# originals, which remain the source of truth for this contract.
-SCHEMA_PATH = REFERENCES_DIR / "dashboard-render-contract.schema.json"
-RULES_PATH = REFERENCES_DIR / "report_rules.py"
+PACKAGE_DIR = SCRIPT_DIR.parent
+REPOSITORY_DIR = SCRIPT_DIR.parents[1]
+PROJECT_DIR = REPOSITORY_DIR if (REPOSITORY_DIR / "skill").is_dir() else PACKAGE_DIR
+SCHEMA_PATH = PACKAGE_DIR / "references" / "dashboard-render-contract.schema.json"
+
+LEGACY_ROSTER = [
+    {"id": "aleabitoreddit", "handle": "@aleabitoreddit", "display_name": "Serenity", "x_url": "https://x.com/aleabitoreddit", "avatar_letter": "S", "color": "#1F5C4D", "signal_type": "opinion"},
+    {"id": "zephyr_z9", "handle": "@zephyr_z9", "display_name": "Zephyr", "x_url": "https://x.com/zephyr_z9", "avatar_letter": "Z", "color": "#4E79A7", "signal_type": "opinion"},
+    {"id": "jukan05", "handle": "@jukan05", "display_name": "Jukan", "x_url": "https://x.com/jukan05", "avatar_letter": "J", "color": "#F28E2B", "signal_type": "opinion"},
+    {"id": "KawzInvests", "handle": "@KawzInvests", "display_name": "KawzInvests", "x_url": "https://x.com/KawzInvests", "avatar_letter": "K", "color": "#76B7B2", "signal_type": "opinion"},
+    {"id": "michaelsikand", "handle": "@michaelsikand", "display_name": "Michael Sikand", "x_url": "https://x.com/michaelsikand", "avatar_letter": "M", "color": "#17BECF", "signal_type": "opinion"},
+    {"id": "ren_stocks", "handle": "@ren_stocks", "display_name": "Ren", "x_url": "https://x.com/ren_stocks", "avatar_letter": "R", "color": "#FF9DA7", "signal_type": "opinion"},
+    {"id": "octopusycc", "handle": "@octopusycc", "display_name": "大老师", "x_url": "https://x.com/octopusycc", "avatar_letter": "大", "color": "#9C755F", "signal_type": "opinion"},
+    {"id": "unusual_whales", "handle": "@unusual_whales", "display_name": "Unusual Whales", "x_url": "https://x.com/unusual_whales", "avatar_letter": "U", "color": "#E15759", "signal_type": "flow"},
+    {"id": "StockMKTNewz", "handle": "@StockMKTNewz", "display_name": "Evan", "x_url": "https://x.com/StockMKTNewz", "avatar_letter": "E", "color": "#B07AA1", "signal_type": "news"},
+    {"id": "DJTRadar", "handle": "@DJTRadar", "display_name": "DJT Radar", "x_url": "https://x.com/DJTRadar", "avatar_letter": "D", "color": "#EDC948", "signal_type": "disclosure"},
+]
+TRACKED_ACCOUNT_IDS = tuple(item["id"] for item in LEGACY_ROSTER)
 
 
-def _rules():
-    spec = importlib.util.spec_from_file_location("dashboard_handoff_rules", RULES_PATH)
-    if not spec or not spec.loader:
-        raise RuntimeError(f"Cannot load approved aggregation rules: {RULES_PATH}")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+class _Rules:
+    """Approved deterministic UI aggregation rules, embedded for portability."""
+
+    @staticmethod
+    def classify_main_section(bullish_accounts, bearish_accounts, mentioned_accounts, unique_posts_by_account):
+        del mentioned_accounts, unique_posts_by_account
+        bulls, bears = set(filter(None, bullish_accounts)), set(filter(None, bearish_accounts))
+        if bulls and bears:
+            return {"key": "disagreement", "label": "存在多空分歧", "display_mode": "both"}
+        if len(bulls) >= 2:
+            return {"key": "shared_bullish", "label": "明确共同看多", "display_mode": "bull"}
+        if len(bears) >= 2:
+            return {"key": "shared_bearish", "label": "明确共同看空", "display_mode": "bear"}
+        return None
+
+    @staticmethod
+    def classify_weekly_change(previous_bullish, current_bullish, previous_bearish, current_bearish):
+        pb, cb, pr, cr = map(set, (previous_bullish, current_bullish, previous_bearish, current_bearish))
+        primary = lambda bull, bear: "bull" if len(bull) > len(bear) else "bear" if len(bear) > len(bull) else None
+        before, now = primary(pb, pr), primary(cb, cr)
+        if len(pb | pr) >= 2 and len(cb | cr) >= 2 and before and now and before != now:
+            return {"group": "reversal_or_disagreement", "label": "主方向反转", "display_mode": "both", "focus_direction": None}
+        if cb and cr and not (pb and pr):
+            return {"group": "reversal_or_disagreement", "label": "新出现分歧", "display_mode": "both", "focus_direction": None}
+        if len(pb) < 3 <= len(cb):
+            return {"group": "new_multi_bullish", "label": "新形成多人看多", "display_mode": "bull_with_current_bear_warning", "focus_direction": "bull"}
+        changes = []
+        for direction, previous, current in (("bull", pb, cb), ("bear", pr, cr)):
+            delta = len(current) - len(previous)
+            if delta and max(len(previous), len(current)) >= 2:
+                changes.append((abs(delta), max(len(previous), len(current)), len(current), direction == "bull", direction, delta))
+        if not changes:
+            return None
+        *_, focus, delta = max(changes)
+        word = "看多" if focus == "bull" else "看空"
+        return {"group": "consensus_strength", "label": f"{word}共识增强" if delta > 0 else f"{word}信号人数减少", "display_mode": "single_direction", "focus_direction": focus}
+
+    @staticmethod
+    def account_change_states(previous, current):
+        previous, current = set(previous), set(current)
+        ordered = sorted(current, key=str.lower) + sorted(previous - current, key=str.lower)
+        return [{"account": account, "state": "added" if account not in previous else "removed" if account not in current else "retained"} for account in ordered]
+
+    @staticmethod
+    def person_window_state(has_bull, has_bear, has_no_direction, has_mentions):
+        if has_bull and has_bear: return "both"
+        if has_bull: return "bull_only"
+        if has_bear: return "bear_only"
+        if has_mentions or has_no_direction: return "no_direction"
+        return "not_mentioned"
+
+    @staticmethod
+    def person_window_statistics(records):
+        normalized, latest_key, latest_direction = [], None, None
+        for index, record in enumerate(records):
+            raw = str(record.get("direction") or record.get("stance") or "").lower()
+            direction = "bullish" if raw in {"bull", "bullish"} else "bearish" if raw in {"bear", "bearish"} else "neutral"
+            normalized.append(direction)
+            key = (str(record.get("created_at") or record.get("date") or ""), index)
+            if latest_key is None or key > latest_key: latest_key, latest_direction = key, direction
+        bull, bear, neutral = normalized.count("bullish"), normalized.count("bearish"), normalized.count("neutral")
+        directional = bull + bear
+        percentage = round(max(bull, bear) / directional * 100) if directional else None
+        label = "无方向信号" if percentage is None else "稳定" if percentage >= 80 else "较稳定" if percentage >= 60 else "多空反复"
+        return {"mention_count": len(normalized), "bullish_count": bull, "neutral_count": neutral, "bearish_count": bear, "state": _Rules.person_window_state(bool(bull), bool(bear), bool(neutral), bool(normalized)), "latest_direction": latest_direction, "consistency": {"percentage": percentage, "label": label}}
+
+    @staticmethod
+    def tracked_person_stock_lists(records):
+        grouped = defaultdict(set)
+        for record in records:
+            stock = str(record.get("stock") or record.get("ticker") or "").strip()
+            if stock: grouped[stock].add(str(record.get("direction") or "").strip())
+        result = {"bullish": [], "bearish": [], "neutral": []}
+        for stock, directions in grouped.items():
+            if directions & {"bull", "bullish"}: result["bullish"].append(stock)
+            if directions & {"bear", "bearish"}: result["bearish"].append(stock)
+            if not directions & {"bull", "bullish", "bear", "bearish"}: result["neutral"].append(stock)
+        return {key: sorted(value) for key, value in result.items()}
 
 
-RULES = _rules()
+RULES = _Rules()
 
 
 def load(path: Path, fallback: Any) -> Any:
@@ -49,6 +133,80 @@ def load(path: Path, fallback: Any) -> Any:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return fallback
+
+
+def _profile_rows(document: Any) -> list[dict[str, Any]]:
+    if isinstance(document, list):
+        return [row for row in document if isinstance(row, dict)]
+    if isinstance(document, dict):
+        for key in ("accounts", "profiles", "people"):
+            rows = document.get(key)
+            if isinstance(rows, list):
+                return [row for row in rows if isinstance(row, dict)]
+    return []
+
+
+def load_roster(db: Path, avatar_cache: Path | None) -> list[dict[str, Any]]:
+    """Merge fixed account ids with database-owned identity fields."""
+    legacy = {item["id"]: dict(item) for item in LEGACY_ROSTER}
+    profiles: dict[str, dict[str, Any]] = {}
+    for path in (db / "blogger_profiles.json", db / "blogger_identities.json"):
+        for row in _profile_rows(load(path, {})):
+            blogger_id = str(row.get("blogger_id") or row.get("id") or "")
+            if blogger_id in legacy:
+                profiles[blogger_id] = {**profiles.get(blogger_id, {}), **row}
+
+    cache = load(avatar_cache, {}) if avatar_cache else {}
+    if not isinstance(cache, dict):
+        cache = {}
+
+    roster: list[dict[str, Any]] = []
+    for blogger_id in TRACKED_ACCOUNT_IDS:
+        fallback = legacy[blogger_id]
+        source = dict(profiles.get(blogger_id, {}))
+        cached = cache.get(blogger_id)
+        if isinstance(cached, dict):
+            source = {**source, **cached}
+            cached_avatar = cached.get("avatar_data_uri") or cached.get("avatar")
+        else:
+            cached_avatar = cached
+
+        display_name = display_text(source.get("display_name") or source.get("name")) or fallback["display_name"]
+        handle = display_text(source.get("handle") or source.get("username")) or fallback["handle"]
+        if not handle.startswith("@"):
+            handle = f"@{handle}"
+        x_url = display_text(source.get("x_url") or source.get("profile_url")) or f"https://x.com/{handle[1:]}"
+        avatar = source.get("avatar_data_uri") or cached_avatar or fallback.get("avatar_data_uri")
+        if not isinstance(avatar, str) or not avatar.startswith("data:image/"):
+            avatar = svg_avatar(display_name, str(source.get("color") or fallback.get("color") or "#52616b"))
+        roster.append({
+            "id": blogger_id,
+            "display_name": display_name,
+            "handle": handle,
+            "x_url": x_url,
+            "signal_type": str(source.get("signal_type") or fallback.get("signal_type") or "opinion"),
+            "profile_summary": display_text(source.get("profile_summary") or source.get("bio") or source.get("description")),
+            "avatar_data_uri": avatar,
+            "avatar_letter": fallback.get("avatar_letter", display_name[:1]),
+            "color": str(source.get("color") or fallback.get("color") or "#52616b"),
+        })
+    return roster
+
+
+def snapshot_id(manifest_path: Path, db: Path, avatar_cache: Path | None) -> str | None:
+    paths = [manifest_path, db / "blogger_profiles.json", db / "blogger_identities.json"]
+    if avatar_cache:
+        paths.append(avatar_cache)
+    existing = [path for path in paths if path.is_file()]
+    if not existing:
+        return None
+    digest = hashlib.sha256()
+    for path in existing:
+        digest.update(path.name.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(path.read_bytes())
+        digest.update(b"\0")
+    return digest.hexdigest()
 
 
 def display_text(value: Any, language: str = "zh") -> str:
@@ -115,9 +273,28 @@ def instrument(doc: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def is_consensus_equity(doc: dict[str, Any]) -> bool:
+    """Compatibility alias for the shared listed-equity gate."""
+    return is_rankable_equity(doc)
+
+
 def price_change(doc: dict[str, Any], item_window: dict[str, Any]) -> dict[str, Any]:
     status = str(doc.get("price_status") or "pending")
-    series = [p for p in (doc.get("price_series") or []) if item_window["start"] <= str(p.get("date", ""))[:10] <= item_window["end"] and isinstance(p.get("close"), (int, float))]
+    all_series = [p for p in (doc.get("price_series") or []) if str(p.get("date", ""))[:10] <= item_window["end"] and isinstance(p.get("close"), (int, float))]
+    all_series.sort(key=lambda p: p["date"])
+    # One-day reports still need two closes. Weekends and market holidays use
+    # the latest two valid trading sessions available before the report date.
+    if item_window["start"] == item_window["end"] and len(all_series) >= 2 and all_series[-2]["close"]:
+        start_point, end_point = all_series[-2], all_series[-1]
+        return {
+            "status": "ok",
+            "percentage": round((end_point["close"] / start_point["close"] - 1) * 100, 2),
+            "start_date": start_point["date"],
+            "end_date": end_point["date"],
+            "basis": "latest_two_trading_days",
+            "used_previous_trading_day": str(end_point["date"])[:10] < item_window["end"],
+        }
+    series = [p for p in all_series if item_window["start"] <= str(p.get("date", ""))[:10]]
     series.sort(key=lambda p: p["date"])
     if len(series) >= 2 and series[0]["close"]:
         return {"status": "ok", "percentage": round((series[-1]["close"] / series[0]["close"] - 1) * 100, 2), "start_date": series[0]["date"], "end_date": series[-1]["date"]}
@@ -128,48 +305,34 @@ def price_change(doc: dict[str, Any], item_window: dict[str, Any]) -> dict[str, 
     return {"status": status, "percentage": None, "start_date": None, "end_date": None}
 
 
-def price_change_52w(doc: dict[str, Any], end: date) -> dict[str, Any]:
-    """Return a rolling 52-week close-to-close change with explicit coverage state."""
-    start = end - timedelta(weeks=52)
-    start_iso, end_iso = start.isoformat(), end.isoformat()
-    series = [
-        p for p in (doc.get("price_series") or [])
-        if start_iso <= str(p.get("date", ""))[:10] <= end_iso and isinstance(p.get("close"), (int, float))
-    ]
-    series.sort(key=lambda p: p["date"])
-    if len(series) >= 2 and series[0]["close"] and iso_day(series[0]["date"]) <= start + timedelta(days=7):
+def price_change_52_weeks(doc: dict[str, Any], end: date) -> dict[str, Any]:
+    """Return 52-week change, falling back to the full available stored range."""
+    item_window = window(end, 365)
+    change = price_change(doc, item_window)
+    if change["status"] != "ok":
+        return change
+    target_start = iso_day(item_window["start"])
+    actual_start = iso_day(change["start_date"])
+    if (actual_start - target_start).days > 7:
         return {
             "status": "ok",
-            "percentage": round((series[-1]["close"] / series[0]["close"] - 1) * 100, 2),
-            "start_date": series[0]["date"],
-            "end_date": series[-1]["date"],
+            "percentage": change["percentage"],
+            "start_date": change["start_date"],
+            "end_date": change["end_date"],
+            "basis": "available_history_fallback",
+            "history_status": "insufficient_history",
+            "target_start_date": item_window["start"],
         }
-
-    coverage = doc.get("price_history_52w") or {}
-    status = str(coverage.get("status") or "pending")
-    if status == "ok":
-        status = "pending"
-    if status not in {"pending", "insufficient_history", "unavailable", "unverified_symbol", "error"}:
-        status = "pending"
-    # Legacy unavailable identities remain explicit even before the first
-    # history-aware run; short caches without a completed attempt stay pending.
-    base_status = str(doc.get("price_status") or "pending")
-    if status == "pending" and base_status in {"unavailable", "unverified_symbol", "error"}:
-        status = base_status
-    return {
-        "status": status,
-        "percentage": None,
-        "start_date": series[0]["date"] if series else coverage.get("first_available_date"),
-        "end_date": series[-1]["date"] if series else coverage.get("last_available_date"),
-    }
+    return change
 
 
-def explicit_opinion(rows: Iterable[dict[str, Any]], opinions: set[str]) -> list[dict[str, Any]]:
-    return [r for r in rows if r.get("blogger_id") in opinions and r.get("mention_type") == "explicit_stance"]
+def explicit_directional(rows: Iterable[dict[str, Any]], scored_accounts: set[str]) -> list[dict[str, Any]]:
+    """Return directional records from every tracked account, including signal accounts."""
+    return [r for r in rows if r.get("blogger_id") in scored_accounts and r.get("mention_type") == "explicit_stance"]
 
 
-def directions(rows: Iterable[dict[str, Any]], opinions: set[str]) -> tuple[set[str], set[str]]:
-    scored = explicit_opinion(rows, opinions)
+def directions(rows: Iterable[dict[str, Any]], scored_accounts: set[str]) -> tuple[set[str], set[str]]:
+    scored = explicit_directional(rows, scored_accounts)
     return ({r["blogger_id"] for r in scored if normal_stance(r.get("stance")) == "bullish"}, {r["blogger_id"] for r in scored if normal_stance(r.get("stance")) == "bearish"})
 
 
@@ -178,7 +341,13 @@ def account_summaries(rows: list[dict[str, Any]], ids: set[str], stance: str) ->
     for blogger_id in sorted(ids, key=str.lower):
         candidates = [r for r in rows if r.get("blogger_id") == blogger_id and normal_stance(r.get("stance")) == stance]
         newest = max(candidates, key=lambda r: (str(r.get("created_at") or r.get("date")), str(r.get("tweet_id"))), default={})
-        output.append({"blogger_id": blogger_id, "reasons": [str(x) for x in newest.get("reasons", [])], "evidence_url": str(newest.get("url") or "https://x.com")})
+        output.append({
+            "blogger_id": blogger_id,
+            "stance": normal_stance(newest.get("stance")),
+            "reasons": [str(x) for x in newest.get("reasons", [])],
+            "text": str(newest.get("text") or ""),
+            "evidence_url": str(newest.get("url") or "https://x.com"),
+        })
     return output
 
 
@@ -186,9 +355,37 @@ def unique_posts(rows: Iterable[dict[str, Any]]) -> int:
     return len({r.get("url") or r.get("tweet_id") for r in rows})
 
 
-def stock_card(doc: dict[str, Any], rows: list[dict[str, Any]], item_window: dict[str, Any], opinions: set[str], classification: str) -> dict[str, Any]:
-    bulls, bears = directions(rows, opinions)
-    neutral = {r["blogger_id"] for r in explicit_opinion(rows, opinions) if normal_stance(r.get("stance")) == "neutral"}
+def monthly_top_picks(
+    docs: list[dict[str, Any]],
+    roster: list[dict[str, Any]],
+    item_window: dict[str, Any],
+    end: date,
+) -> list[dict[str, Any]]:
+    """Choose one deterministic 28-day bullish favorite for every tracked account."""
+    selected_by_account = monthly_top_pick_candidates(docs, [b["id"] for b in roster], end)
+    picks = []
+    for blogger in roster:
+        blogger_id = blogger["id"]
+        choice = selected_by_account[blogger_id]
+        selected = choice.get("doc")
+        if not selected:
+            picks.append({"blogger_id": blogger_id, "instrument": None, "bullish_mention_count": 0,
+                          "mention_count": 0, "latest_bullish_at": None, "price_change_52w": None})
+            continue
+        picks.append({
+            "blogger_id": blogger_id,
+            "instrument": instrument(selected),
+            "bullish_mention_count": choice["bullish_mention_count"],
+            "mention_count": choice["mention_count"],
+            "latest_bullish_at": choice["latest_bullish_at"],
+            "price_change_52w": price_change_52_weeks(selected, end),
+        })
+    return picks
+
+
+def stock_card(doc: dict[str, Any], rows: list[dict[str, Any]], item_window: dict[str, Any], scored_accounts: set[str], classification: str) -> dict[str, Any]:
+    bulls, bears = directions(rows, scored_accounts)
+    neutral = {r["blogger_id"] for r in explicit_directional(rows, scored_accounts) if normal_stance(r.get("stance")) == "neutral"}
     return {"instrument": instrument(doc), "classification": classification, "price_change": price_change(doc, item_window),
             "bullish_accounts": account_summaries(rows, bulls, "bullish"), "bearish_accounts": account_summaries(rows, bears, "bearish"),
             "neutral_accounts": account_summaries(rows, neutral, "neutral"), "unique_post_count": unique_posts(rows)}
@@ -258,22 +455,23 @@ def drilldown(doc: dict[str, Any], end: date, roster: list[dict[str, Any]]) -> d
     series = [{k: p.get(k) for k in ("date", "open", "high", "low", "close") if k in p} for p in (doc.get("price_series") or []) if windows["days_28"]["start"] <= str(p.get("date", ""))[:10] <= windows["days_28"]["end"] and isinstance(p.get("close"), (int, float))]
     status = "ok" if series else str(doc.get("price_status") or "pending")
     if status not in {"ok", "pending", "unavailable", "unverified_symbol", "error"}: status = "unavailable"
-    return {"instrument": instrument(doc), "window": windows["days_28"], "default_person_window": "today", "price_status": status, "price_series": series,
+    return {"instrument": instrument(doc), "window": windows["days_28"], "default_person_window": "days_7", "price_status": status, "price_series": series,
             "mention_days": [{"date": k, "evidence": v} for k, v in sorted(by_day.items())], "window_summaries": summaries,
             "person_windows": person_windows, "people_by_window": people_by_window}
 
 
-def build_payload(db: Path, config: Path, profiles: Path, report_day: str, avatar_cache: Path | None = None) -> dict[str, Any]:
+def build_payload(db: Path, report_day: str, avatar_cache: Path | None = None) -> dict[str, Any]:
     end = iso_day(report_day)
-    roster = load(config, {}).get("bloggers", [])
+    manifest_path = db / "manifest.json"
+    manifest = load(manifest_path, {}) if manifest_path.exists() else {}
+    roster = load_roster(db, avatar_cache)
     if len(roster) != 10:
         raise ValueError(f"Expected exactly 10 tracked accounts, found {len(roster)}")
-    opinions = {b["id"] for b in roster if b.get("signal_type") == "opinion"}
-    if len(opinions) != 7: raise ValueError(f"Expected exactly 7 opinion accounts, found {len(opinions)}")
-    profile_by_id = {p.get("blogger_id"): p for p in load(profiles, {}).get("profiles", [])}
-    cache = load(avatar_cache, {}) if avatar_cache else {}
+    scored_accounts = {b["id"] for b in roster}
+    if len(scored_accounts) != 10: raise ValueError(f"Expected exactly 10 scored accounts, found {len(scored_accounts)}")
     docs = [load(path, {}) for path in sorted((db / "stocks").glob("*.json"))]
     docs = [doc for doc in docs if doc.get("ticker")]
+    consensus_docs = [doc for doc in docs if is_consensus_equity(doc)]
     today = window(end, 1); week = window(end, 7); month = window(end, 28); previous_week = window(end - timedelta(days=7), 7)
     people = []
     for blogger in roster:
@@ -291,43 +489,56 @@ def build_payload(db: Path, config: Path, profiles: Path, report_day: str, avata
             state = "both" if counts["bullish"] and counts["bearish"] else "bull_only" if counts["bullish"] else "bear_only" if counts["bearish"] else "no_direction"
             personal.append({"instrument": instrument(docs_by_symbol[symbol]), "state": state, "bullish_count": counts["bullish"], "bearish_count": counts["bearish"], "neutral_count": counts["neutral"], "evidence": [evidence(x) for x in rows]})
         daily_lists = RULES.tracked_person_stock_lists([{"stock": symbol, "direction": normal_stance(row.get("stance"))} for symbol, rows in grouped.items() for row in rows])
-        profile = profile_by_id.get(bid, {})
-        avatar = cache.get(bid) or blogger.get("avatar_data_uri") or svg_avatar(blogger.get("display_name") or bid, blogger.get("color") or "#52616b")
+        avatar = blogger.get("avatar_data_uri") or svg_avatar(blogger.get("display_name") or bid, blogger.get("color") or "#52616b")
         person = {"blogger_id": bid, "display_name": blogger.get("display_name", bid), "handle": blogger.get("handle", ""), "x_url": blogger.get("x_url", f"https://x.com/{bid}"),
-                  "signal_type": blogger.get("signal_type", "opinion"), "avatar_data_uri": avatar, "daily_stock_lists": daily_lists, "personal_view": personal}
-        if profile.get("bio"): person["bio"] = display_text(profile["bio"])
+                  "signal_type": blogger.get("signal_type", "opinion"), "profile_summary": blogger.get("profile_summary", ""),
+                  "avatar_data_uri": avatar, "daily_stock_lists": daily_lists, "personal_view": personal}
         people.append(person)
-    weekly = main_report(docs, week, opinions); weekly["changes"] = weekly_changes(docs, week, previous_week, opinions)
-    payload = {"meta": {"report_date_et": end.isoformat(), "timezone": "America/New_York", "generated_at": datetime.now(timezone.utc).isoformat(), "tracked_account_count": 10, "opinion_account_count": 7,
-                        "data_snapshot_id": hashlib.sha256((db / "manifest.json").read_bytes()).hexdigest() if (db / "manifest.json").exists() else None},
-               "people": people, "daily": main_report(docs, today, opinions), "weekly": weekly,
-               "monthly": {"window": month, "rows": []}, "stock_drilldowns": {}}
+    weekly = main_report(consensus_docs, week, scored_accounts); weekly["changes"] = weekly_changes(consensus_docs, week, previous_week, scored_accounts)
+    payload = {"meta": {"report_date_et": end.isoformat(), "timezone": "America/New_York", "generated_at": datetime.now(timezone.utc).isoformat(), "tracked_account_count": 10, "scored_account_count": 10,
+                        "data_cutoff_at": manifest.get("generated_at"),
+                        "data_snapshot_id": snapshot_id(manifest_path, db, avatar_cache)},
+               "people": people, "daily": main_report(consensus_docs, today, scored_accounts), "weekly": weekly,
+               "monthly": {"window": month, "rows": [], "top_picks": monthly_top_picks(consensus_docs, roster, month, end)},
+               "stock_drilldowns": {}}
     for doc in docs:
         rows = in_window(doc.get("mentions") or [], month)
-        # The monthly consensus table and the 52-week price backfill share the
-        # same scope: at least three distinct opinion accounts with an explicit
-        # bullish/bearish stance in [D-27, D].  Context-only mentions do not
-        # manufacture a consensus row.
-        if not is_monthly_report_instrument(doc.get("mentions") or [], opinions, end):
+        # The 28-day table is a coverage view, not an instrument catalogue.
+        # Never render no-post rows as empty "stocks" in the approved UI.
+        if unique_posts(rows) == 0:
             continue
-        scored = explicit_opinion(rows, opinions)
-        counts = Counter(normal_stance(r.get("stance")) for r in scored)
-        directional = counts["bullish"] + counts["bearish"]
-        bulls, bears = directions(rows, opinions)
-        change_28d = price_change(doc, month)
-        payload["monthly"]["rows"].append({"instrument": instrument(doc), "bull_share": round(counts["bullish"] / directional, 6) if directional else None,
-            "bear_share": round(counts["bearish"] / directional, 6) if directional else None, "price_change": change_28d,
-            "price_change_28d": change_28d, "price_change_52w": price_change_52w(doc, end), "unique_post_count": unique_posts(rows),
-            "bullish_count": counts["bullish"], "bearish_count": counts["bearish"], "neutral_count": counts["neutral"], "participant_ids": sorted({r.get("blogger_id") for r in rows}),
-            "bullish_account_ids": sorted(bulls), "bearish_account_ids": sorted(bears)})
         payload["stock_drilldowns"][instrument(doc)["display_code"]] = drilldown(doc, end, roster)
+        if not is_consensus_equity(doc):
+            continue
+        scored_rows = explicit_directional(rows, scored_accounts)
+        counts = Counter(normal_stance(r.get("stance")) for r in scored_rows)
+        directional = counts["bullish"] + counts["bearish"]
+        bulls, bears = directions(rows, scored_accounts)
+        directional_account_ids = sorted(bulls | bears)
+        if len(directional_account_ids) < 3:
+            continue
+        payload["monthly"]["rows"].append({"instrument": instrument(doc), "bull_share": round(counts["bullish"] / directional, 6) if directional else None,
+            "bear_share": round(counts["bearish"] / directional, 6) if directional else None,
+            "price_change": price_change(doc, month), "price_change_28d": price_change(doc, month),
+            "price_change_52w": price_change_52_weeks(doc, end), "unique_post_count": unique_posts(rows),
+            "bullish_count": counts["bullish"], "bearish_count": counts["bearish"], "neutral_count": counts["neutral"], "participant_ids": sorted({r.get("blogger_id") for r in rows}),
+            "directional_account_ids": directional_account_ids,
+            "bullish_account_ids": sorted(bulls), "bearish_account_ids": sorted(bears)})
     payload["monthly"]["rows"].sort(key=lambda x: (-x["unique_post_count"], x["instrument"]["display_code"]))
     validate_invariants(payload)
+    validate_schema(payload)
     return payload
 
 
 def validate_invariants(payload: dict[str, Any]) -> None:
     if len(payload.get("people", [])) != 10: raise ValueError("Payload must contain 10 people")
+    monthly = payload.get("monthly", {})
+    for row in monthly.get("rows", []):
+        if len(set(row.get("directional_account_ids", []))) < 3:
+            raise ValueError("Monthly consensus rows require at least 3 directional accounts")
+    top_picks = monthly.get("top_picks", [])
+    if len(top_picks) != 10 or len({x.get("blogger_id") for x in top_picks}) != 10:
+        raise ValueError("Monthly top picks must contain exactly 10 unique tracked accounts")
     for drill in payload.get("stock_drilldowns", {}).values():
         for key in ("today", "days_7", "days_28"):
             states = drill["person_windows"][key]
@@ -340,37 +551,37 @@ def validate_invariants(payload: dict[str, Any]) -> None:
 
 
 def validate_schema(payload: dict[str, Any]) -> None:
-    try:
-        import jsonschema
-    except ImportError as exc:
-        raise RuntimeError("jsonschema is required for production payload validation; install requirements.txt") from exc
-    schema = load(SCHEMA_PATH, None)
-    if not schema: raise RuntimeError(f"Missing handoff schema: {SCHEMA_PATH}")
-    jsonschema.Draft202012Validator(schema, format_checker=jsonschema.Draft202012Validator.FORMAT_CHECKER).validate(payload)
+    schema = load(SCHEMA_PATH, {})
+    if not schema:
+        raise ValueError(f"Dashboard schema is unavailable: {SCHEMA_PATH}")
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    errors = sorted(validator.iter_errors(payload), key=lambda error: list(error.absolute_path))
+    if errors:
+        rendered = []
+        for error in errors[:20]:
+            path = ".".join(str(part) for part in error.absolute_path) or "$"
+            rendered.append(f"{path}: {error.message}")
+        raise ValueError("Dashboard payload failed schema validation:\n" + "\n".join(rendered))
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Aggregate a local x-traders database into the 10V dashboard payload")
     parser.add_argument("date", help="Report cutoff date in America/New_York (YYYY-MM-DD)")
     parser.add_argument("--db", type=Path, default=PROJECT_DIR / "data" / "db")
-    parser.add_argument("--config", type=Path, default=PROJECT_DIR / "config" / "bloggers.json")
-    parser.add_argument("--profiles", type=Path, default=PROJECT_DIR / "config" / "blogger_profiles.json")
     parser.add_argument("--avatar-cache", type=Path, default=PROJECT_DIR / "data" / "avatar_cache.json")
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--no-schema", action="store_true", help="Only for local dependency bootstrap; CI and production must validate schema")
     args = parser.parse_args()
-    # In a repository checkout these defaults are present.  In the installed
-    # Skill they intentionally are not, so obtain the current verified cloud
-    # snapshot before any aggregation or rendering work begins.
     if not args.db.is_dir():
-        from snapshot_sync import sync
-        cache, _, _ = sync()
-        args.db = cache / "data" / "db"
-        args.config = cache / "config" / "bloggers.json"
-        args.profiles = cache / "config" / "blogger_profiles.json"
-        args.avatar_cache = cache / "data" / "avatar_cache.json"
-    payload = build_payload(args.db, args.config, args.profiles, args.date, args.avatar_cache)
-    if not args.no_schema: validate_schema(payload)
+        try:
+            from snapshot_sync import sync
+            cache, _, _ = sync()
+            args.db = cache / "data" / "db"
+            args.avatar_cache = cache / "data" / "avatar_cache.json"
+        except Exception as exc:
+            parser.error(f"database directory does not exist and cloud sync failed: {exc}")
+    if not (args.db / "stocks").is_dir():
+        parser.error(f"database is missing stocks/: {args.db}")
+    payload = build_payload(args.db.resolve(), args.date, args.avatar_cache.resolve() if args.avatar_cache.exists() else None)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(args.output)

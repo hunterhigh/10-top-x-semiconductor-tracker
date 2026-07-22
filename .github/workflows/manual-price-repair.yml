@@ -14,7 +14,7 @@ on:
         default: false
         type: boolean
       backfill_52w:
-        description: "Backfill rolling 52-week history for current monthly consensus tickers"
+        description: "Backfill 52-week history for monthly rows and all 10 monthly top picks"
         required: false
         default: false
         type: boolean
@@ -70,7 +70,8 @@ jobs:
               summary.write("## 52-week price backfill\n")
               summary.write(f"- report cutoff (ET): {coverage.get('asof')}\n")
               summary.write(f"- target start: {coverage.get('target_start')}\n")
-              summary.write(f"- monthly consensus tickers: {coverage.get('tickers')}\n")
+              summary.write(f"- union tickers: {coverage.get('tickers')}\n")
+              summary.write(f"- scope: `{json.dumps(coverage.get('scope_counts', {}), sort_keys=True)}`\n")
               summary.write(f"- statuses: `{json.dumps(coverage.get('status_counts', {}), sort_keys=True)}`\n")
               summary.write(f"- provider states: `{json.dumps(coverage.get('provider_state_counts', {}), sort_keys=True)}`\n")
               summary.write(f"- persistent retry queue: {coverage.get('retry_queue', 0)}\n")

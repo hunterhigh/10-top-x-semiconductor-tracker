@@ -9,13 +9,14 @@
     "meta": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["report_date_et", "timezone", "generated_at", "tracked_account_count", "opinion_account_count"],
+      "required": ["report_date_et", "timezone", "generated_at", "tracked_account_count", "scored_account_count"],
       "properties": {
         "report_date_et": {"type": "string", "format": "date"},
         "timezone": {"const": "America/New_York"},
         "generated_at": {"type": "string", "format": "date-time"},
         "tracked_account_count": {"const": 10},
-        "opinion_account_count": {"const": 7},
+        "scored_account_count": {"const": 10},
+        "data_cutoff_at": {"type": ["string", "null"], "format": "date-time"},
         "data_snapshot_id": {"type": ["string", "null"]}
       }
     },
@@ -45,10 +46,11 @@
     "monthly": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["window", "rows"],
+      "required": ["window", "rows", "top_picks"],
       "properties": {
         "window": {"$ref": "#/$defs/window"},
-        "rows": {"type": "array", "items": {"$ref": "#/$defs/monthlyRow"}}
+        "rows": {"type": "array", "items": {"$ref": "#/$defs/monthlyRow"}},
+        "top_picks": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/monthlyTopPick"}}
       }
     },
     "stock_drilldowns": {
@@ -109,6 +111,7 @@
         "signal_type": {"enum": ["opinion", "flow", "news", "disclosure"]},
         "avatar_data_uri": {"type": "string", "pattern": "^data:image/"},
         "bio": {"type": "string"},
+        "profile_summary": {"type": "string"},
         "daily_stock_lists": {
           "type": "object",
           "additionalProperties": false,
@@ -143,7 +146,11 @@
         "status": {"enum": ["ok", "pending", "insufficient_history", "unavailable", "unverified_symbol", "error"]},
         "percentage": {"type": ["number", "null"]},
         "start_date": {"type": ["string", "null"], "format": "date"},
-        "end_date": {"type": ["string", "null"], "format": "date"}
+        "end_date": {"type": ["string", "null"], "format": "date"},
+        "basis": {"type": "string"},
+        "used_previous_trading_day": {"type": "boolean"},
+        "history_status": {"enum": ["insufficient_history"]},
+        "target_start_date": {"type": "string", "format": "date"}
       }
     },
     "accountSummary": {
@@ -152,7 +159,9 @@
       "required": ["blogger_id", "reasons", "evidence_url"],
       "properties": {
         "blogger_id": {"type": "string"},
+        "stance": {"enum": ["bullish", "bearish", "neutral"]},
         "reasons": {"type": "array", "items": {"type": "string"}},
+        "text": {"type": "string"},
         "evidence_url": {"type": "string", "format": "uri"}
       }
     },
@@ -219,7 +228,7 @@
     "monthlyRow": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["instrument", "bull_share", "bear_share", "price_change", "price_change_28d", "price_change_52w", "unique_post_count", "bullish_count", "bearish_count", "neutral_count", "participant_ids"],
+      "required": ["instrument", "bull_share", "bear_share", "price_change", "price_change_28d", "price_change_52w", "unique_post_count", "bullish_count", "bearish_count", "neutral_count", "participant_ids", "directional_account_ids"],
       "properties": {
         "instrument": {"$ref": "#/$defs/instrument"},
         "bull_share": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
@@ -232,8 +241,22 @@
         "bearish_count": {"type": "integer", "minimum": 0},
         "neutral_count": {"type": "integer", "minimum": 0},
         "participant_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "directional_account_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
         "bullish_account_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
         "bearish_account_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "monthlyTopPick": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blogger_id", "instrument", "bullish_mention_count", "mention_count", "latest_bullish_at", "price_change_52w"],
+      "properties": {
+        "blogger_id": {"type": "string"},
+        "instrument": {"anyOf": [{"$ref": "#/$defs/instrument"}, {"type": "null"}]},
+        "bullish_mention_count": {"type": "integer", "minimum": 0},
+        "mention_count": {"type": "integer", "minimum": 0},
+        "latest_bullish_at": {"type": ["string", "null"]},
+        "price_change_52w": {"anyOf": [{"$ref": "#/$defs/priceChange"}, {"type": "null"}]}
       }
     },
     "pricePoint": {
@@ -282,7 +305,7 @@
       "properties": {
         "instrument": {"$ref": "#/$defs/instrument"},
         "window": {"$ref": "#/$defs/window"},
-        "default_person_window": {"const": "today"},
+        "default_person_window": {"const": "days_7"},
         "price_status": {"enum": ["ok", "pending", "unavailable", "unverified_symbol", "error"]},
         "price_series": {"type": "array", "items": {"$ref": "#/$defs/pricePoint"}},
         "mention_days": {

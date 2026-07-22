@@ -75,7 +75,7 @@ BLOGGERS_PATH = PROJECT_DIR / "config" / "bloggers.json"
 
 # Keep the installed Skill and repository pipeline on one eligibility rule.
 sys.path.insert(0, str(PROJECT_DIR / "skill" / "scripts"))
-from report_scope import is_monthly_report_instrument  # noqa: E402
+from report_scope import monthly_history_scope  # noqa: E402
 
 DEFAULT_MIN_MENTIONS = 50      # core set ~= the 41 deep-divable tickers; tune with --min-mentions
 RECENT_WINDOW_DAYS = 30        # matches the initial backfill and 28-day Month view
@@ -171,22 +171,17 @@ def in_scope(row, min_mentions, asof_date):
     return False
 
 
-def opinion_account_ids():
-    """Load the seven accounts allowed to contribute to consensus."""
+def tracked_account_ids():
+    """Load the ten accounts scored by the supplied dashboard contract."""
     config = load_json(BLOGGERS_PATH, default={}) or {}
-    account_ids = {
+    account_ids = [
         str(row["id"])
         for row in config.get("bloggers", [])
-        if row.get("id") and row.get("signal_type") == "opinion"
-    }
-    if len(account_ids) != 7:
-        raise RuntimeError(f"Expected 7 opinion accounts, found {len(account_ids)}")
+        if row.get("id")
+    ]
+    if len(account_ids) != 10 or len(set(account_ids)) != 10:
+        raise RuntimeError(f"Expected 10 unique tracked accounts, found {len(set(account_ids))}")
     return account_ids
-
-
-def in_history_scope(stock_doc, asof_date, opinion_ids):
-    """52-week history is maintained only for monthly consensus instruments."""
-    return is_monthly_report_instrument(stock_doc.get("mentions") or [], opinion_ids, asof_date)
 
 
 def history_coverage(series, requested_start, asof, attempted_at, failure=None):
@@ -779,7 +774,7 @@ def main():
     ap.add_argument("--history-weeks", type=int, choices=(52,), default=0,
                     help="extend report-scope caches backwards for a rolling 52-week return")
     ap.add_argument("--history-scope", choices=("recent-28d",), default="recent-28d",
-                    help="scope for --history-weeks (only current 28-day report rows)")
+                    help="scope for --history-weeks (monthly rows union all ten monthly top picks)")
     ap.add_argument("--force", action="store_true", help="ignore cache; full re-fetch from first_mention")
     ap.add_argument("--provider-test", action="store_true", help="just check provider connectivity")
     ap.add_argument("--all-codes", action="store_true", help="provider-test: hit ALL non-US codes, not just unverified")
@@ -814,15 +809,18 @@ def main():
 
     docs_by_ticker = {}
     history_tickers = set()
-    opinions = opinion_account_ids() if history_start else set()
+    history_scope_summary = None
+    tracked_ids = tracked_account_ids() if history_start else []
     for row in scope:
         stock_doc = load_json(STOCKS_DIR / f"{row['ticker']}.json", default=None)
         if not stock_doc:
             continue
         docs_by_ticker[row["ticker"]] = stock_doc
-        if history_start:
-            if in_history_scope(stock_doc, asof_date, opinions):
-                history_tickers.add(row["ticker"])
+    if history_start:
+        history_scope_summary = monthly_history_scope(docs_by_ticker.values(), tracked_ids, asof_date)
+        history_tickers = {
+            str(doc.get("ticker")) for doc in history_scope_summary["docs"] if doc.get("ticker")
+        }
 
     # Complete report-visible work first, then rotate a bounded maintenance
     # batch ordered by oldest successful update. This keeps three-hour runs
@@ -843,7 +841,12 @@ def main():
     log(f"In scope: {len(scope)} tickers "
         f"(min_mentions={args.min_mentions}, recent<= {RECENT_WINDOW_DAYS}d, asof={today_iso}).")
     if history_start:
-        log(f"52-week history scope: {len(history_tickers)} monthly consensus ticker(s); target start={history_start}.")
+        monthly_count = len(history_scope_summary["monthly_instrument_ids"])
+        pick_count = len(history_scope_summary["top_pick_instrument_ids"])
+        overlap_count = len(history_scope_summary["overlap_instrument_ids"])
+        log(f"52-week history scope: {len(history_tickers)} unique ticker(s) "
+            f"(monthly={monthly_count}, top-picks={pick_count}, overlap={overlap_count}); "
+            f"target start={history_start}.")
 
     if args.annotate_existing:
         counts = annotate_existing(scope, tmap)

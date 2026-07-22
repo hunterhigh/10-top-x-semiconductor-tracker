@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "skill/scripts/dashboard_payload.py"
+      - "skill/scripts/report_scope.py"
       - "skill/scripts/render_dashboard.py"
       - "skill/scripts/validate_dashboard.py"
       - "skill/scripts/snapshot_sync.py"
@@ -17,6 +18,8 @@ on:
       - "scripts/resolve_tickers_eodhd.py"
       - "scripts/refresh_avatars.py"
       - "tests/test_dashboard_payload.py"
+      - "tests/test_report_scope.py"
+      - "tests/test_price_history.py"
       - "tests/test_build_db_dates.py"
       - "tests/test_dashboard_validator.py"
       - "tests/test_instrument_identity.py"
@@ -49,5 +52,5 @@ jobs:
           PY
           )
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/payload.json"
-          python skill/scripts/render_dashboard.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard.html"
+          python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/payload.json" --output "$RUNNER_TEMP/dashboard.html"
           python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard.html" --browser required --expected-avatars 10

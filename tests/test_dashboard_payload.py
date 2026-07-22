@@ -1,5 +1,5 @@
-import json
 import hashlib
+import json
 import sys
 import tempfile
 import unittest
@@ -7,7 +7,50 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skill" / "scripts"))
-from dashboard_payload import build_payload, validate_invariants, validate_schema
+
+from dashboard_payload import TRACKED_ACCOUNT_IDS, build_payload
+
+
+def mention(tweet_id, blogger_id, day, stance, ticker="ABC"):
+    return {
+        "tweet_id": str(tweet_id),
+        "blogger_id": blogger_id,
+        "date": day,
+        "created_at": f"{day}T12:00:00-04:00",
+        "stance": stance,
+        "mention_type": "explicit_stance",
+        "reasons": [f"{ticker} reason"],
+        "text": f"{ticker} {stance}",
+        "url": f"https://x.com/{blogger_id}/status/{tweet_id}",
+    }
+
+
+def stock(ticker, mentions, asset_type="equity", short_history=False):
+    start = "2026-01-05" if short_history else "2025-07-21"
+    return {
+        "ticker": ticker,
+        "instrument": {
+            "instrument_id": f"US:{ticker}",
+            "display_code": ticker,
+            "display_name": f"{ticker} Corp",
+            "display_market": "US",
+            "currency": "USD",
+            "price_symbol": ticker,
+            "verification_status": "verified",
+            "asset_type": asset_type,
+        },
+        "price_status": "ok",
+        "price_history_52w": {
+            "status": "insufficient_history" if short_history else "ok",
+            "first_available_date": start,
+            "last_available_date": "2026-07-20",
+        },
+        "price_series": [
+            {"date": start, "close": 50.0},
+            {"date": "2026-07-20", "close": 100.0},
+        ],
+        "mentions": mentions,
+    }
 
 
 class DashboardPayloadTests(unittest.TestCase):
@@ -22,57 +65,60 @@ class DashboardPayloadTests(unittest.TestCase):
             self.assertTrue(packaged.is_file())
             self.assertEqual(hashlib.sha256(packaged.read_bytes()).hexdigest(), hashlib.sha256(original.read_bytes()).hexdigest())
 
-    def test_payload_uses_traceable_windows_and_separates_signal_sources(self):
+    def test_all_ten_accounts_are_scored_and_top_picks_are_deterministic(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td); db = root / "db"; (db / "stocks").mkdir(parents=True)
-            roster = [{"id": f"op{i}", "display_name": f"Opinion {i}", "handle": f"@op{i}", "x_url": f"https://x.com/op{i}", "signal_type": "opinion", "color": "#123456"} for i in range(1, 8)]
-            roster += [{"id": "flow", "display_name": "Flow", "handle": "@flow", "x_url": "https://x.com/flow", "signal_type": "flow"}, {"id": "news", "display_name": "News", "handle": "@news", "x_url": "https://x.com/news", "signal_type": "news"}, {"id": "disc", "display_name": "Disclosure", "handle": "@disc", "x_url": "https://x.com/disc", "signal_type": "disclosure"}]
-            (root / "bloggers.json").write_text(json.dumps({"bloggers": roster}), encoding="utf-8")
-            (root / "profiles.json").write_text(json.dumps({"profiles": []}), encoding="utf-8")
-            mentions = [
-                {"tweet_id": "1", "blogger_id": "op1", "date": "2026-07-11", "created_at": "2026-07-11T12:00:00-04:00", "stance": "bullish", "mention_type": "explicit_stance", "reasons": ["demand"], "text": "bull", "url": "https://x.com/op1/status/1"},
-                {"tweet_id": "2", "blogger_id": "op2", "date": "2026-07-11", "created_at": "2026-07-11T13:00:00-04:00", "stance": "bullish", "mention_type": "explicit_stance", "reasons": [], "text": "bull", "url": "https://x.com/op2/status/2"},
-                {"tweet_id": "3", "blogger_id": "op3", "date": "2026-07-11", "created_at": "2026-07-11T14:00:00-04:00", "stance": "bearish", "mention_type": "explicit_stance", "reasons": ["valuation"], "text": "bear", "url": "https://x.com/op3/status/3"},
-                {"tweet_id": "4", "blogger_id": "flow", "date": "2026-07-11", "stance": "bullish", "mention_type": "explicit_stance", "reasons": ["flow"], "text": "flow", "url": "https://x.com/flow/status/4"},
-            ]
-            doc = {"ticker": "ABC", "instrument": {"instrument_id": "US:ABC", "display_code": "ABC", "display_name": "ABC Corp", "display_market": "US", "currency": "USD", "price_symbol": "ABC", "verification_status": "verified"}, "price_status": "ok", "price_series": [{"date": "2026-07-10", "close": 100}, {"date": "2026-07-11", "close": 110}], "mentions": mentions}
-            (db / "stocks" / "ABC.json").write_text(json.dumps(doc), encoding="utf-8")
-            payload = build_payload(db, root / "bloggers.json", root / "profiles.json", "2026-07-11", root / "avatars.json")
-            validate_invariants(payload)
-            validate_schema(payload)
-            self.assertEqual(payload["daily"]["disagreement"][0]["instrument"]["display_code"], "ABC")
-            self.assertEqual([x["blogger_id"] for x in payload["daily"]["disagreement"][0]["bullish_accounts"]], ["op1", "op2"])
-            self.assertNotIn("flow", [x["blogger_id"] for x in payload["daily"]["disagreement"][0]["bullish_accounts"]])
-            drill = payload["stock_drilldowns"]["ABC"]
-            self.assertEqual(len(drill["person_windows"]["today"]), 10)
-            self.assertEqual(drill["people_by_window"]["today"][0]["latest"]["created_at"], "2026-07-11T12:00:00-04:00")
-            monthly = payload["monthly"]["rows"][0]
-            self.assertEqual(monthly["price_change"], monthly["price_change_28d"])
-            self.assertEqual(monthly["price_change_52w"]["status"], "pending")
-            self.assertIsNone(monthly["price_change_52w"]["percentage"])
+            db = Path(td) / "db"
+            (db / "stocks").mkdir(parents=True)
+            (db / "manifest.json").write_text(json.dumps({"generated_at": "2026-07-21T01:00:00Z"}), encoding="utf-8")
 
-    def test_monthly_requires_three_distinct_opinion_accounts(self):
-        # Context-only activity and one-person calls do not create consensus.
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td); db = root / "db"; (db / "stocks").mkdir(parents=True)
-            roster = [{"id": f"op{i}", "display_name": str(i), "handle": "@x", "signal_type": "opinion"} for i in range(7)]
-            roster += [{"id": "flow", "display_name": "f", "handle": "@f", "signal_type": "flow"}, {"id": "news", "display_name": "n", "handle": "@n", "signal_type": "news"}, {"id": "disc", "display_name": "d", "handle": "@d", "signal_type": "disclosure"}]
-            (root / "bloggers.json").write_text(json.dumps({"bloggers": roster}), encoding="utf-8")
-            (root / "profiles.json").write_text('{"profiles": []}', encoding="utf-8")
-            old = {"ticker": "OLD", "instrument": {"instrument_id": "x:old", "display_code": "OLD", "display_name": "old", "display_market": "US"}, "mentions": [{"tweet_id": "1", "blogger_id": "op0", "date": "2026-06-01", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/1"}]}
-            new = {"ticker": "NEW", "instrument": {"instrument_id": "x:new", "display_code": "NEW", "display_name": "new", "display_market": "US"}, "mentions": [
-                {"tweet_id": "2", "blogger_id": "op0", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/2"},
-                {"tweet_id": "3", "blogger_id": "op1", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/3"},
-                {"tweet_id": "4", "blogger_id": "op2", "date": "2026-07-18", "stance": "bearish", "mention_type": "explicit_stance", "url": "https://x.com/4"},
-                {"tweet_id": "5", "blogger_id": "news", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance", "url": "https://x.com/5"},
-            ]}
-            (db / "stocks/OLD.json").write_text(json.dumps(old), encoding="utf-8")
-            (db / "stocks/NEW.json").write_text(json.dumps(new), encoding="utf-8")
-            payload = build_payload(db, root / "bloggers.json", root / "profiles.json", "2026-07-18")
-            self.assertEqual([row["instrument"]["display_code"] for row in payload["monthly"]["rows"]], ["NEW"])
-            row = payload["monthly"]["rows"][0]
-            self.assertEqual((row["bullish_count"], row["bearish_count"], row["neutral_count"]), (2, 1, 0))
-            self.assertNotIn("news", row["bullish_account_ids"])
+            rows = [
+                mention(1, "aleabitoreddit", "2026-07-20", "bullish"),
+                mention(2, "zephyr_z9", "2026-07-20", "bullish"),
+                mention(3, "jukan05", "2026-07-20", "bearish"),
+                mention(4, "unusual_whales", "2026-07-20", "bullish"),
+                mention(5, "StockMKTNewz", "2026-07-20", "bullish"),
+                mention(6, "DJTRadar", "2026-07-20", "bearish"),
+            ]
+            (db / "stocks" / "ABC.json").write_text(json.dumps(stock("ABC", rows, short_history=True)), encoding="utf-8")
+            # A bullish ETF must not enter monthly rows or favorite rankings.
+            etf_rows = [mention(20 + i, account, "2026-07-20", "bullish", "ETF1") for i, account in enumerate(TRACKED_ACCOUNT_IDS)]
+            (db / "stocks" / "ETF1.json").write_text(json.dumps(stock("ETF1", etf_rows, asset_type="etf")), encoding="utf-8")
+
+            payload = build_payload(db, "2026-07-20")
+            self.assertEqual(payload["meta"]["scored_account_count"], 10)
+            self.assertEqual(len(payload["people"]), 10)
+            self.assertEqual(len(payload["monthly"]["top_picks"]), 10)
+
+            disagreement = payload["daily"]["disagreement"][0]
+            self.assertEqual(
+                {row["blogger_id"] for row in disagreement["bullish_accounts"]},
+                {"aleabitoreddit", "zephyr_z9", "unusual_whales", "StockMKTNewz"},
+            )
+            self.assertEqual(
+                {row["blogger_id"] for row in disagreement["bearish_accounts"]},
+                {"jukan05", "DJTRadar"},
+            )
+
+            monthly = payload["monthly"]["rows"]
+            self.assertEqual([row["instrument"]["display_code"] for row in monthly], ["ABC"])
+            self.assertEqual(set(monthly[0]["directional_account_ids"]), {
+                "aleabitoreddit", "zephyr_z9", "jukan05", "unusual_whales", "StockMKTNewz", "DJTRadar"
+            })
+            self.assertEqual(monthly[0]["price_change"], monthly[0]["price_change_28d"])
+            self.assertEqual(monthly[0]["price_change_52w"]["status"], "ok")
+            self.assertEqual(monthly[0]["price_change_52w"]["basis"], "available_history_fallback")
+            self.assertEqual(monthly[0]["price_change_52w"]["history_status"], "insufficient_history")
+
+            picks = {row["blogger_id"]: row for row in payload["monthly"]["top_picks"]}
+            self.assertEqual(picks["unusual_whales"]["instrument"]["display_code"], "ABC")
+            self.assertEqual(picks["StockMKTNewz"]["instrument"]["display_code"], "ABC")
+            self.assertIsNone(picks["michaelsikand"]["instrument"])
+            self.assertIn("ETF1", payload["stock_drilldowns"])
+            self.assertNotIn("ETF1", [row["instrument"]["display_code"] for row in payload["monthly"]["rows"]])
+            self.assertNotIn("ETF1", {
+                row["instrument"]["display_code"]
+                for row in payload["monthly"]["top_picks"] if row["instrument"]
+            })
 
 
 if __name__ == "__main__":

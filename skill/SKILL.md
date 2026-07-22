@@ -1,6 +1,6 @@
 ---
 name: x-traders-consensus
-description: "Track public X posts from 10 market accounts: compare the seven opinion accounts' stated bullish, bearish, or neutral views; present three separate flow, news, and disclosure signals; answer source-linked company questions; and build the validated v2 dashboard. Never use for investment advice."
+description: "Track public X posts from 10 market accounts, compare all ten accounts' structured bullish, bearish, or neutral records, answer source-linked company questions, and build the validated dashboard with monthly top picks. Never use for investment advice."
 ---
 
 # X Traders Consensus
@@ -16,8 +16,8 @@ Every answer and dashboard must include this disclaimer, or a faithful translati
 - Describe only what an account expressed or posted. Never recommend buying, selling, holding, or predict a security's price.
 - Retain original post text, company names, reasons, dates, figures, and URLs. Do not translate them.
 - Each claim about an account must remain traceable to its `blogger_id` and original-post URL.
-- Only records whose `mention_type` is `explicit_stance` and whose account `signal_type` is `opinion` contribute to a stance count.
-- The seven `opinion` accounts form the only consensus cohort. The `flow`, `news`, and `disclosure` accounts are parallel facts, never opinions and never confirmation of an opinion consensus. Attribute disclosure trades to Trump, not to `DJTRadar`.
+- Only records whose `mention_type` is `explicit_stance` contribute to dashboard stance counts. All ten tracked accounts are scored by the production dashboard contract; `signal_type` remains source metadata and does not exclude an account from the calculation.
+- Describe flow, news, and disclosure records in their actual source context. Attribute disclosure trades to Trump, not to `DJTRadar`, even though the structured record participates in deterministic dashboard counts.
 - Use gender-neutral account references unless the account self-identifies otherwise.
 - All report dates and windows use `America/New_York` (ET), including daylight-saving transitions.
 - Preserve entity identity from each record's `instrument` object. Display `code · original company name · market`; do not assume an unknown code is US/USD.
@@ -74,9 +74,11 @@ refresh → extract → build_db → EODHD identity resolution → build_db → 
 ```
 
 - Daily, 7-day, and 28-day windows are ET closed intervals: `[D,D]`, `[D-6,D]`, `[D-27,D]`.
-- Reuse the handoff's `report_rules.py` for aggregation and weekly changes. Do not reimplement or infer those rules in a renderer.
+- Reuse the packaged `report_rules.py` for weekly changes and the shared `report_scope.py` for equity eligibility, monthly rows, top-pick ranking, and 52-week price scope. Do not reimplement or infer those rules in a renderer.
 - `skill/scripts/dashboard_payload.py` builds the sole render input and validates the Draft 2020-12 Schema by default.
 - `skill/scripts/render_dashboard.py` accepts only the validated deterministic payload; it does not infer stance, reasons, or database fields.
+- `monthly.top_picks` always contains one card for each of the ten tracked accounts. Ranking is deterministic: unique bullish posts, all explicit posts for that instrument, latest bullish time, then ticker alphabetically. A person with no eligible bullish record receives an explicit empty card.
+- The rolling 52-week price scope is the union of monthly report rows and the ten monthly top-pick instruments. Short listed histories use the available stored range and must carry `basis=available_history_fallback` and `history_status=insufficient_history`.
 - The delivered page is one self-contained HTML file, embeds each visible avatar, supports `#stock=<display_code>` drilldowns and the final sidebar interactions, and may use JavaScript as required by the approved final UI.
 - `skill/scripts/validate_dashboard.py` must pass with `--browser required --expected-avatars 10` at 320, 768, and 1440 px before delivery.
 - Generated HTML is an Actions Artifact, never a Git-tracked production file. Retain the HTML, payload, validation JSON, and SHA-256 for 30 days.
@@ -98,7 +100,7 @@ python scripts/verify_data.py
 python scripts/prices.py --asof <YYYY-MM-DD> --history-weeks 52 --history-scope recent-28d
 python scripts/refresh_avatars.py
 python skill/scripts/dashboard_payload.py <YYYY-MM-DD> --output payload.json
-python skill/scripts/render_dashboard.py <YYYY-MM-DD> --output dashboard.html
+python skill/scripts/render_dashboard.py --input payload.json --output dashboard.html
 python skill/scripts/validate_dashboard.py dashboard.html --browser required --expected-avatars 10
 ```
 
@@ -108,7 +110,8 @@ outside the Skill directory and never uses production credentials:
 
 ```powershell
 python scripts/snapshot_sync.py
-python scripts/render_dashboard.py 2026-07-18 --output dashboard.html
+python scripts/dashboard_payload.py <YYYY-MM-DD> --output payload.json
+python scripts/render_dashboard.py --input payload.json --output dashboard.html
 python scripts/query_stock.py NVDA --blogger aleabitoreddit
 ```
 
@@ -130,7 +133,7 @@ For a single-account question from an installed Skill, run:
 python scripts/query_stock.py <TICKER> --blogger <BLOGGER_ID>
 ```
 
-For a cross-account question, omit `--blogger`, then show the seven opinion accounts individually: bullish, bearish, neutral/no clear direction, or not covered in the requested ET window. Report the three signal accounts in a separate “Other signals” section, with no stance math and no wording that they confirm the consensus.
+For a cross-account question, omit `--blogger`, then show all ten tracked accounts individually: bullish, bearish, neutral/no clear direction, or not covered in the requested ET window. Preserve each account's `signal_type` context and never describe a flow, news, or disclosure item as an independent analyst recommendation.
 
 For every narrative, include the report date/window, original links, account attribution, and the required disclaimer. If a ticker has fewer than three explicit stances, say that there is insufficient structured opinion history rather than inventing a thesis. If there are no records for an account or date, say so plainly.
 

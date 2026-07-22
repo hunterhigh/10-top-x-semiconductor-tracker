@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import gzip
 import json
 import re
 import shutil
@@ -16,26 +18,52 @@ def fail(errors: list[str], message: str) -> None:
         errors.append(message)
 
 
+def unpack_dashboard_html(html: str) -> str:
+    """Return the final inner document from the renderer's gzip wrapper."""
+    match = re.search(
+        r'<script id="packedDashboard" type="application/octet-stream">\s*([^<]+?)\s*</script>',
+        html,
+        re.DOTALL,
+    )
+    if not match:
+        return html
+    try:
+        return gzip.decompress(base64.b64decode(match.group(1))).decode("utf-8")
+    except Exception as exc:
+        raise ValueError(f"packed dashboard cannot be decoded: {exc}") from exc
+
+
+def embedded_payload(html: str) -> dict[str, object] | None:
+    match = re.search(
+        r'<script id="dashboardPayload" type="application/json">(.*?)</script>',
+        html,
+        re.DOTALL,
+    )
+    if match:
+        return json.loads(match.group(1).replace("<\\/", "</"))
+    if "const PAYLOAD=" in html:
+        payload_start = html.find("const PAYLOAD=") + len("const PAYLOAD=")
+        marker = html.find("const esc=", payload_start)
+        payload_end = html.rfind(";", payload_start, marker)
+        if marker >= 0 and payload_end >= 0:
+            return json.loads(html[payload_start:payload_end].replace("<\\/", "</"))
+    return None
+
+
 def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dict[str, object]]:
-    html = path.read_text(encoding="utf-8")
+    raw_html = path.read_text(encoding="utf-8")
     errors: list[str] = []
+    try:
+        html = unpack_dashboard_html(raw_html)
+        payload = embedded_payload(html)
+    except (ValueError, json.JSONDecodeError) as exc:
+        fail(errors, str(exc))
+        html, payload = raw_html, None
 
     # The 2026-07-17 final UI is an intentionally interactive one-file report.
     # Keep the legacy static-report checks below for historical artifacts, but
     # validate the deterministic embedded payload and routing contract here.
-    if "const PAYLOAD=" in html and "final-ui-sha256:" in html:
-        payload_start = html.find("const PAYLOAD=") + len("const PAYLOAD=")
-        marker = html.find("const esc=", payload_start)
-        payload_end = html.rfind(";", payload_start, marker)
-        match = None if payload_start < len("const PAYLOAD=") or marker < 0 or payload_end < 0 else html[payload_start:payload_end]
-        payload = None
-        if match is None:
-            fail(errors, "v2 dashboard has no embedded deterministic payload")
-        else:
-            try:
-                payload = json.loads(match.replace("<\\/", "</"))
-            except json.JSONDecodeError as exc:
-                fail(errors, f"v2 dashboard payload is not valid JSON: {exc.msg} at {exc.pos}")
+    if isinstance(payload, dict):
         people = payload.get("people", []) if isinstance(payload, dict) else []
         drills = payload.get("stock_drilldowns", {}) if isinstance(payload, dict) else {}
         if len(people) != expected_avatars:
@@ -50,7 +78,7 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
                 if len(drill.get("person_windows", {}).get(key, [])) != expected_avatars:
                     fail(errors, f"{symbol} {key} does not contain {expected_avatars} person states")
                     break
-        if "function showStock" not in html or "#stock=" not in html or "function showPerson" not in html:
+        if "#stock=" not in html or "openStock" not in html:
             fail(errors, "v2 report lacks required stock/person routing")
         required_runtime_markers = {
             'class="voice-name"': "five-column consensus person names",
@@ -61,14 +89,25 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
             "consistency_percentage": "canonical backend consistency values",
             "此前 7 天未达到门槛，本窗口形成至少 3 个明确看多账号": "canonical weekly-change threshold",
         }
+        required_runtime_markers = {
+            "monthly-favorite-card": "monthly favorite cards",
+            "ret52Sort": "monthly sortable headers",
+            "quarter-account-popover": "monthly participant popovers",
+            "consistency_percentage": "canonical backend consistency values",
+        }
         for runtime_marker, label in required_runtime_markers.items():
             if runtime_marker not in html:
                 fail(errors, f"v2 report lacks {label}")
         monthly_rows = len(payload.get("monthly", {}).get("rows", [])) if isinstance(payload, dict) else 0
+        top_picks = payload.get("monthly", {}).get("top_picks", []) if isinstance(payload, dict) else []
+        people_ids = {person.get("blogger_id") for person in people}
+        top_pick_ids = {item.get("blogger_id") for item in top_picks}
+        if len(top_picks) != expected_avatars or top_pick_ids != people_ids:
+            fail(errors, "monthly top picks must contain exactly the ten tracked accounts")
         return errors, {
             "embedded_avatars": len(avatars), "avatar_identities": len(avatars),
             "stock_profiles": len(drills), "account_profiles": len(people),
-            "browse_rows_checked": monthly_rows, "v2_payload": True,
+            "browse_rows_checked": monthly_rows, "monthly_top_picks": len(top_picks), "v2_payload": True,
         }
 
     fail(errors, "legacy dashboard format is unsupported; render with render_dashboard.py")
@@ -150,10 +189,137 @@ def browser_executable() -> str | None:
     return next((item for item in candidates if item and Path(item).exists()), None)
 
 
+def packed_browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[str], dict[str, object]]:
+    """Exercise the supplied packed renderer after its inner document loads."""
+    errors: list[str] = []
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        if mode == "required":
+            fail(errors, "Playwright is required for visual validation but is unavailable")
+        return errors, {"browser_checked": False}
+
+    executable = browser_executable()
+    if not executable:
+        if mode == "required":
+            fail(errors, "a Chromium-compatible browser is required for visual validation")
+        return errors, {"browser_checked": False}
+
+    overflow: dict[str, int] = {}
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True, executable_path=executable)
+        page = browser.new_page(viewport={"width": 1440, "height": 900})
+
+        def open_report(fragment: str = "") -> None:
+            page.goto(path.resolve().as_uri() + fragment)
+            page.wait_for_selector("#grid .voice .avatar", timeout=30_000)
+
+        open_report()
+        avatars = page.locator("#grid .voice .avatar")
+        avatar_count = avatars.count()
+        if avatar_count != expected_avatars:
+            fail(errors, f"browser found {avatar_count} v2 avatars, expected {expected_avatars}")
+        elif any(not (avatars.nth(index).get_attribute("src") or "").startswith("data:image/") for index in range(avatar_count)):
+            fail(errors, "v2 visible avatar is not embedded")
+
+        favorites = page.locator(".monthly-favorite-card")
+        favorite_count = favorites.count()
+        if favorite_count != expected_avatars:
+            fail(errors, f"browser found {favorite_count} monthly favorite cards, expected {expected_avatars}")
+
+        month_sort = page.locator('#quarterGrid [data-quarter-sort="mentions"]')
+        if month_sort.count() != 1:
+            fail(errors, "monthly table does not expose the supplied mention sort control")
+        else:
+            if "active desc" not in (month_sort.get_attribute("class") or ""):
+                fail(errors, "monthly mention sort is not initially descending")
+            month_sort.click()
+            if "active asc" not in (page.locator('#quarterGrid [data-quarter-sort="mentions"]').get_attribute("class") or ""):
+                fail(errors, "monthly mention sort does not toggle to ascending")
+
+        participant_trigger = page.locator(".quarter-account-trigger").first
+        if participant_trigger.count() and not participant_trigger.locator(".quarter-account-popover").count():
+            fail(errors, "monthly participant trigger has no account popover")
+
+        unavailable_returns = page.locator(".period-return.unavailable")
+        if unavailable_returns.count() and unavailable_returns.first.evaluate("e => e.classList.contains('up') || e.classList.contains('down')"):
+            fail(errors, "missing price is styled as a real gain or loss")
+
+        stock_link = page.locator(".favorite-symbol").first
+        if not stock_link.count():
+            stock_link = page.locator('a[href^="#stock="]').first
+        stock_href = stock_link.get_attribute("href") if stock_link.count() else None
+        if not stock_href:
+            fail(errors, "report has no stock drilldown link")
+        else:
+            open_report(stock_href)
+            frame_locator = page.locator(".single-stock-view.open iframe")
+            if frame_locator.count() != 1:
+                fail(errors, "stock drilldown iframe is not visible")
+            else:
+                frame = frame_locator.content_frame
+                if not frame:
+                    fail(errors, "stock drilldown iframe cannot be inspected")
+                else:
+                    frame.locator("#chartLine").wait_for(timeout=30_000)
+                    if not frame.locator("#kolGrid").count():
+                        fail(errors, "stock drilldown lacks the supplied chart/KOL components")
+                    if frame.locator(".window-tab").count() != 3 or frame.locator(".kol-person-block").count() != expected_avatars:
+                        fail(errors, "stock drilldown does not retain three windows and ten person blocks")
+                    week = frame.locator('.window-tab[data-window="week"]')
+                    if week.count():
+                        week.click()
+                    event_rows = frame.locator("#chartEvents .event-row")
+                    if event_rows.count() and frame.locator("#chartEvents .event-person img").count() != event_rows.count():
+                        fail(errors, "stock chart evidence rows do not retain author avatars")
+                    bull_sort = frame.locator('[data-kol-sort="bull"]')
+                    if bull_sort.count() == 1:
+                        bull_sort.click()
+                        if "active desc" not in (bull_sort.get_attribute("class") or ""):
+                            fail(errors, "bullish KOL sort does not start descending")
+                        bull_sort.click()
+                        if "active asc" not in (bull_sort.get_attribute("class") or ""):
+                            fail(errors, "bullish KOL sort does not toggle ascending")
+                    else:
+                        fail(errors, "stock drilldown lacks the supplied KOL sort controls")
+
+        for width in (320, 768, 1440):
+            page.set_viewport_size({"width": width, "height": 900})
+            open_report()
+            excess = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+            overflow[str(width)] = excess
+            if excess > 1:
+                fail(errors, f"page-level horizontal overflow at {width}px: {excess}px")
+
+        open_report()
+        page.locator("#grid .voice").first.click()
+        if not page.locator("#drawer.open #detail").count():
+            fail(errors, "account drawer does not open from a tracked-person card")
+        else:
+            page.keyboard.press("Escape")
+            if page.locator("#drawer.open").count():
+                fail(errors, "account drawer does not close on Escape")
+        browser.close()
+    return errors, {
+        "browser_checked": True,
+        "avatar_identities_rendered": avatar_count,
+        "monthly_favorite_cards": favorite_count,
+        "overflow_px": overflow,
+        "v2_payload": True,
+    }
+
+
 def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[str], dict[str, object]]:
     errors: list[str] = []
     result: dict[str, object] = {"browser_checked": False}
-    html = path.read_text(encoding="utf-8")
+    raw_html = path.read_text(encoding="utf-8")
+    try:
+        html = unpack_dashboard_html(raw_html)
+    except ValueError as exc:
+        fail(errors, str(exc))
+        return errors, result
+    if 'id="dashboardPayload"' in html:
+        return packed_browser_checks(path, mode, expected_avatars)
     if "const PAYLOAD=" not in html or "final-ui-sha256:" not in html:
         fail(errors, "legacy dashboard format is unsupported; render with render_dashboard.py")
         return errors, result
