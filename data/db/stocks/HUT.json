@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-03",
-  "last_mention": "2026-07-20",
-  "total_mentions": 15,
+  "last_mention": "2026-07-22",
+  "total_mentions": 16,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 11,
     "KawzInvests": 2,
-    "michaelsikand": 2
+    "michaelsikand": 2,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 15
+    "opinion": 16
   },
   "mentions": [
     {
@@ -418,9 +419,151 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079933842136207410",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-22",
+      "created_at": "2026-07-22T10:17:25-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "more compute",
+        "neocloud"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$HUT",
+      "text": "Bullish $NBIS $IREN $WULF $HUT $BRUN and every NeCloud for that matter \n\nThe words will keep on repeating.\n\nMore compute.",
+      "url": "https://x.com/ren_stocks/status/2079933842136207410",
+      "kind": "post",
+      "engagement": {
+        "views": 7129,
+        "likes": 37,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
+    {
+      "date": "2025-07-23",
+      "close": 21.65
+    },
+    {
+      "date": "2025-07-24",
+      "close": 21.14
+    },
+    {
+      "date": "2025-07-25",
+      "close": 20.38
+    },
+    {
+      "date": "2025-07-28",
+      "close": 20.33
+    },
+    {
+      "date": "2025-07-29",
+      "close": 19.7
+    },
+    {
+      "date": "2025-07-30",
+      "close": 19.82
+    },
+    {
+      "date": "2025-07-31",
+      "close": 21.23
+    },
+    {
+      "date": "2025-08-01",
+      "close": 19.78
+    },
+    {
+      "date": "2025-08-04",
+      "close": 21.19
+    },
+    {
+      "date": "2025-08-05",
+      "close": 20.27
+    },
+    {
+      "date": "2025-08-06",
+      "close": 20.69
+    },
+    {
+      "date": "2025-08-07",
+      "close": 20.02
+    },
+    {
+      "date": "2025-08-08",
+      "close": 19.455
+    },
+    {
+      "date": "2025-08-11",
+      "close": 20.57
+    },
+    {
+      "date": "2025-08-12",
+      "close": 21.58
+    },
+    {
+      "date": "2025-08-13",
+      "close": 22.36
+    },
+    {
+      "date": "2025-08-14",
+      "close": 23.8
+    },
+    {
+      "date": "2025-08-15",
+      "close": 23.32
+    },
+    {
+      "date": "2025-08-18",
+      "close": 24.42
+    },
+    {
+      "date": "2025-08-19",
+      "close": 21.98
+    },
+    {
+      "date": "2025-08-20",
+      "close": 22.31
+    },
+    {
+      "date": "2025-08-21",
+      "close": 21.37
+    },
+    {
+      "date": "2025-08-22",
+      "close": 23.37
+    },
+    {
+      "date": "2025-08-25",
+      "close": 23.45
+    },
+    {
+      "date": "2025-08-26",
+      "close": 25.91
+    },
+    {
+      "date": "2025-08-27",
+      "close": 26.35
+    },
+    {
+      "date": "2025-08-28",
+      "close": 26.51
+    },
+    {
+      "date": "2025-08-29",
+      "close": 26.73
+    },
+    {
+      "date": "2025-09-02",
+      "close": 27.4
+    },
     {
       "date": "2025-09-03",
       "close": 27.67
@@ -1308,15 +1451,24 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-22T06:43:48.860271+00:00",
+  "price_updated_at": "2026-07-22T15:18:31.627998+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "HUT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-22T06:43:48.193818+00:00",
+    "checked_at": "2026-07-22T15:18:30.592591+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
+  },
+  "price_history_52w": {
+    "requested_start": "2025-07-23",
+    "asof": "2026-07-22",
+    "attempted_at": "2026-07-22T15:18:30.592591+00:00",
+    "status": "ok",
+    "first_available_date": "2025-07-23",
+    "last_available_date": "2026-07-21",
+    "reason": null
   }
 }
