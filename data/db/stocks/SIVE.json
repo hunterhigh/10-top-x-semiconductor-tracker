@@ -25,16 +25,16 @@
   "industry": "AI Photonics/CPO Lasers",
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
-  "last_mention": "2026-07-21",
-  "total_mentions": 812,
+  "last_mention": "2026-07-22",
+  "total_mentions": 813,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 777,
+    "aleabitoreddit": 778,
     "ren_stocks": 32,
     "jukan05": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 812
+    "opinion": 813
   },
   "mentions": [
     {
@@ -21456,6 +21456,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2079953508904964575",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-22",
+      "created_at": "2026-07-22T11:35:34-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "@gaetan_po Yeah, I’m testing some things right now for bot prevention.\n\nAlso going to $AMD event tomorrow rather than full 2 days, will definitely be asking about $SIVE!",
+      "url": "https://x.com/aleabitoreddit/status/2079953508904964575",
+      "kind": "reply",
+      "engagement": {
+        "views": 12435,
+        "likes": 193,
+        "reposts": 9,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -22456,13 +22479,13 @@
       "close": 40.98
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "SEK",
-  "price_updated_at": "2026-07-22T15:18:54.740854+00:00",
+  "price_updated_at": "2026-07-22T21:24:57.318718+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-23",
     "asof": "2026-07-22",
-    "attempted_at": "2026-07-22T15:18:54.453882+00:00",
+    "attempted_at": "2026-07-22T21:24:56.974208+00:00",
     "status": "ok",
     "first_available_date": "2025-07-23",
     "last_available_date": "2026-07-21",
@@ -22471,11 +22494,12 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-22T15:18:54.453882+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-22T21:24:56.974208+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-07-23T00:24:56.974208+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
