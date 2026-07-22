@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T06:17:46.548122+00:00",
+  "generated_at": "2026-07-22T06:44:41.211494+00:00",
   "tickers": 1648,
   "total_mentions": 19874,
   "priced_tickers": 635,
@@ -34,18 +34,15 @@
     "min_mentions": 50,
     "tickers": 866,
     "status_counts": {
-      "ok": 565,
-      "partial": 8,
+      "ok": 570,
       "unverified_symbol": 275,
-      "unavailable": 18
+      "unavailable": 18,
+      "partial": 3
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD daily call budget (20) exhausted": 5,
       "unverified_instrument_identity": 275,
-      "EODHD 404 (symbol not found: 285A.TSE)": 1,
-      "EODHD 404 (symbol not found: 5802.TSE)": 1,
-      "EODHD 404 (symbol not found: 6315.TSE)": 1,
+      "provider_symbol_not_found_after_search": 3,
       "no_daily_closes_returned": 7,
       "EODHD 404 (symbol not found: 3110.TSE)": 1,
       "EODHD 404 (symbol not found: 5801.TSE)": 1,
@@ -65,18 +62,22 @@
     "weeks": 52,
     "asof": "2026-07-22",
     "target_start": "2025-07-23",
-    "tickers": 34,
+    "tickers": 43,
     "status_counts": {
-      "ok": 31,
-      "insufficient_history": 2,
-      "unverified_symbol": 1
+      "ok": 41,
+      "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 33,
-      "symbol_unresolved": 1
+      "supported": 43
     },
-    "retry_queue": 0
+    "retry_queue": 0,
+    "scope_counts": {
+      "monthly_consensus": 39,
+      "top_pick_cards": 10,
+      "top_pick_unique": 9,
+      "overlap": 5
+    }
   },
   "profile_coverage": {
     "editorial_profiles": 10,
