@@ -2,6 +2,11 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "MO",
+      "mentions": 2,
+      "company_name_hint": "Altria Group"
+    },
+    {
       "symbol": "8046",
       "mentions": 1,
       "company_name_hint": "Nan Ya Printed Circuit Board"
@@ -70,6 +75,11 @@
       "symbol": "IQEF",
       "mentions": 1,
       "company_name_hint": "IQE"
+    },
+    {
+      "symbol": "CAMBRICON",
+      "mentions": 1,
+      "company_name_hint": "Cambricon Technologies"
     },
     {
       "symbol": "688572",
@@ -180,6 +190,16 @@
       "symbol": "2X_LONG_ETFS",
       "mentions": 1,
       "company_name_hint": null
+    },
+    {
+      "symbol": "SGRO",
+      "mentions": 1,
+      "company_name_hint": "Segro"
+    },
+    {
+      "symbol": "RAI",
+      "mentions": 1,
+      "company_name_hint": "Reynolds American"
     }
   ],
   "unverified": [
@@ -1738,6 +1758,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "MO",
+      "instrument_id": "UNVERIFIED:MO",
+      "company_name_hint": "Altria Group",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "MTIA",
       "instrument_id": "UNVERIFIED:MTIA",
       "company_name_hint": "Meta Training and Inference Accelerator (Meta AI chip)",
@@ -3017,6 +3044,13 @@
       "company_name_hint": "C4 Energy",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "CAMBRICON",
+      "instrument_id": "UNVERIFIED:CAMBRICON",
+      "company_name_hint": "Cambricon Technologies",
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "CANARY",
@@ -4419,6 +4453,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "RAI",
+      "instrument_id": "UNVERIFIED:RAI",
+      "company_name_hint": "Reynolds American",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "RALEC",
       "instrument_id": "UNVERIFIED:RALEC",
       "company_name_hint": "Ralec Electronic Corp",
@@ -4585,6 +4626,13 @@
       "company_name_hint": "iShares 0-3 Month Treasury Bond ETF",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "SGRO",
+      "instrument_id": "UNVERIFIED:SGRO",
+      "company_name_hint": "Segro",
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "SHA",
@@ -5441,6 +5489,10 @@
     },
     {
       "symbol": "SOURCE_PHOTONICS",
+      "count": 1
+    },
+    {
+      "symbol": "MOORE_THREADS",
       "count": 1
     },
     {
