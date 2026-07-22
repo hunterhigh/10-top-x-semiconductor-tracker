@@ -132,7 +132,7 @@ jobs:
           python -m playwright install --with-deps chromium
           mkdir -p "$RUNNER_TEMP/dashboard"
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json"
-          python skill/scripts/render_dashboard.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html"
+          python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html"
           python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
           sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
       - name: Write build metadata

@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "skill" / "scripts"))
 
 import prices  # noqa: E402
-from dashboard_payload import price_change_52w  # noqa: E402
+from dashboard_payload import price_change_52_weeks  # noqa: E402
 
 
 class FakeProvider:
@@ -57,19 +57,6 @@ def stock_doc():
 
 
 class PriceHistoryTests(unittest.TestCase):
-    def test_history_scope_uses_three_distinct_explicit_opinion_accounts(self):
-        opinions = {f"op{i}" for i in range(1, 8)}
-        doc = {"mentions": [
-            {"blogger_id": "op1", "date": "2026-07-20", "stance": "bullish", "mention_type": "explicit_stance"},
-            {"blogger_id": "op2", "date": "2026-07-19", "stance": "bearish", "mention_type": "explicit_stance"},
-            {"blogger_id": "news", "date": "2026-07-18", "stance": "bullish", "mention_type": "explicit_stance"},
-        ]}
-        self.assertFalse(prices.in_history_scope(doc, date(2026, 7, 20), opinions))
-        doc["mentions"].append(
-            {"blogger_id": "op3", "date": "2026-07-17", "stance": "bullish", "mention_type": "explicit_stance"}
-        )
-        self.assertTrue(prices.in_history_scope(doc, date(2026, 7, 20), opinions))
-
     def test_short_cache_is_extended_backwards_and_forwards_in_one_call(self):
         with tempfile.TemporaryDirectory() as td, patch.object(prices, "CACHE_DIR", Path(td)):
             prices.save_cache("ABC", "USD", "USD", [
@@ -221,11 +208,11 @@ class PriceHistoryTests(unittest.TestCase):
                 {"date": "2026-07-20", "close": 100.0},
             ],
         }
-        result = price_change_52w(complete, date(2026, 7, 20))
-        self.assertEqual(result, {
-            "status": "ok", "percentage": 100.0,
-            "start_date": "2025-07-21", "end_date": "2026-07-20",
-        })
+        result = price_change_52_weeks(complete, date(2026, 7, 20))
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["percentage"], 100.0)
+        self.assertEqual(result["start_date"], "2025-07-21")
+        self.assertEqual(result["end_date"], "2026-07-20")
 
         short = {
             "price_status": "ok",
@@ -239,9 +226,12 @@ class PriceHistoryTests(unittest.TestCase):
                 "last_available_date": "2026-07-20",
             },
         }
-        result = price_change_52w(short, date(2026, 7, 20))
-        self.assertEqual(result["status"], "insufficient_history")
-        self.assertIsNone(result["percentage"])
+        result = price_change_52_weeks(short, date(2026, 7, 20))
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["percentage"], 50.0)
+        self.assertEqual(result["basis"], "available_history_fallback")
+        self.assertEqual(result["history_status"], "insufficient_history")
+        self.assertEqual(result["target_start_date"], "2025-07-21")
 
 
 if __name__ == "__main__":

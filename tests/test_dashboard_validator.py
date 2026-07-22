@@ -13,38 +13,51 @@ assert SPEC.loader
 SPEC.loader.exec_module(VALIDATOR)
 
 
-def report_html(avatar: str = "data:image/svg+xml;base64,AA==") -> str:
-    windows = {key: [{}] for key in ("today", "days_7", "days_28")}
+def report_html(missing_avatar=False):
+    account_ids = [f"account-{index}" for index in range(10)]
+    people = [
+        {
+            "blogger_id": account,
+            "avatar_data_uri": "" if missing_avatar and index == 0 else "data:image/svg+xml;base64,AA==",
+        }
+        for index, account in enumerate(account_ids)
+    ]
+    states = [{"blogger_id": account, "state": "not_mentioned"} for account in account_ids]
     payload = {
-        "people": [{"avatar_data_uri": avatar}],
-        "stock_drilldowns": {"NVDA": {"person_windows": windows}},
+        "people": people,
+        "monthly": {
+            "rows": [],
+            "top_picks": [{"blogger_id": account, "instrument": None} for account in account_ids],
+        },
+        "stock_drilldowns": {
+            "NVDA": {"person_windows": {key: states for key in ("today", "days_7", "days_28")}}
+        },
     }
     return (
-        "<!doctype html><!-- final-ui-sha256: fixture -->"
-        f"<script>const PAYLOAD={json.dumps(payload)};const esc=1;"
-        "function showStock(){} function showPerson(){} // #stock=\n"
-        "const consistency_percentage=1; new IntersectionObserver(()=>{});\n"
-        "const note='此前 7 天未达到门槛，本窗口形成至少 3 个明确看多账号';</script>"
-        '<span class="voice-name"></span><button data-quarter-sort="posts"></button>'
-        '<span class="quarter-account-popover"></span><button data-instrument-more></button>'
+        "<!doctype html>"
+        f'<script id="dashboardPayload" type="application/json">{json.dumps(payload)}</script>'
+        '<div class="monthly-favorite-card"></div><div class="quarter-account-popover"></div>'
+        '<button id="ret52Sort"></button><script>const consistency_percentage=1;'
+        'function openStock(){location.hash="#stock="}</script>'
     )
 
 
 class DashboardValidatorTests(unittest.TestCase):
-    def validate(self, html: str):
+    def validate(self, html):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "report.html"
             path.write_text(html, encoding="utf-8")
-            return VALIDATOR.structural_checks(path, 1)
+            return VALIDATOR.structural_checks(path, 10)
 
-    def test_accepts_v2_embedded_payload_and_routes(self):
+    def test_accepts_new_embedded_payload_and_routes(self):
         errors, summary = self.validate(report_html())
         self.assertEqual(errors, [])
         self.assertTrue(summary["v2_payload"])
-        self.assertEqual(summary["embedded_avatars"], 1)
+        self.assertEqual(summary["embedded_avatars"], 10)
+        self.assertEqual(summary["monthly_top_picks"], 10)
 
     def test_rejects_missing_embedded_avatar(self):
-        errors, _ = self.validate(report_html(""))
+        errors, _ = self.validate(report_html(missing_avatar=True))
         self.assertTrue(any("missing or non-embedded avatar" in error for error in errors))
 
 

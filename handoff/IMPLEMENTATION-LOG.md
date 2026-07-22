@@ -191,3 +191,25 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
   non-US provider budget after the report scope is already complete.
 - Actions summaries and the manifest now expose provider-state counts and queue
   depth. No ticker-specific no-price exception was added.
+
+## 2026-07-22 - ten-account monthly favorites production contract
+
+- Adopted the supplied payload and compressed single-file renderer as the new
+  production baseline. Their received SHA-256 values were
+  `0889BEA39560519587B15A1DAB075D24C095F58A0B26C04730F4344CFE6DD951`
+  and `46B2FB2BFAA001F8B74241508F1D1F9B991562D2F9F174CEB6E133315C614F8D`.
+- Formalized `monthly.top_picks` as exactly one deterministic card for each of
+  the ten tracked accounts. All ten accounts now participate in structured
+  dashboard direction counts; source roles remain visible metadata.
+- Added one shared equity/ranking/scope module used by payload generation,
+  price maintenance, and verification. Rolling 52-week maintenance covers the
+  union of monthly rows and unique top-pick instruments.
+- Short listed histories now render the available-range return with explicit
+  `available_history_fallback` / `insufficient_history` metadata. Missing
+  prices remain null and never become zero.
+- Updated all production workflows to render only a previously validated JSON
+  payload. The renderer performs no aggregation or data inference.
+- Real 2026-07-21 snapshot regression produced 10 favorite cards, 41 monthly
+  rows, and 800 stock drilldowns. Draft 2020-12 Schema/invariants passed; the
+  compressed HTML passed Chromium validation at 320, 768, and 1440 px with no
+  page-level horizontal overflow.

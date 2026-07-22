@@ -51,9 +51,15 @@ def main() -> int:
     steps.append(("rebuild database", command("scripts/build_db.py")))
     steps.append(("resolve instrument identities", command("scripts/resolve_tickers_eodhd.py", "--apply")))
     steps.append(("rebuild verified database", command("scripts/build_db.py")))
-    if not args.skip_prices: steps.append(("refresh prices", command("scripts/prices.py", "--asof", args.report_date) if args.report_date else command("scripts/prices.py")))
+    if not args.skip_prices:
+        price_cmd = command("scripts/prices.py", "--history-weeks", "52", "--history-scope", "recent-28d")
+        if args.report_date: price_cmd.extend(["--asof", args.report_date])
+        steps.append(("refresh prices", price_cmd))
     steps.append(("refresh avatars", command("scripts/refresh_avatars.py")))
-    if args.report_date: steps.append(("render v2 dashboard", command("skill/scripts/render_dashboard.py", args.report_date, "--output", f"consensus-tracker-{args.report_date}.html")))
+    if args.report_date:
+        payload = f"dashboard-payload-{args.report_date}.json"
+        steps.append(("build validated dashboard payload", command("skill/scripts/dashboard_payload.py", args.report_date, "--output", payload)))
+        steps.append(("render v2 dashboard", command("skill/scripts/render_dashboard.py", "--input", payload, "--output", f"consensus-tracker-{args.report_date}.html")))
     for label, cmd in steps: print(label + ": " + subprocess.list2cmdline(cmd))
     if not args.execute: return 0
     for label, cmd in steps:
