@@ -800,17 +800,18 @@
       "close": 239.5
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-07-22T12:20:19.654094+00:00",
+  "price_updated_at": "2026-07-23T18:18:24.078174+00:00",
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "BESI.AS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-22T12:20:19.522764+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-23T18:18:23.739567+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-23T21:18:23.739567+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
