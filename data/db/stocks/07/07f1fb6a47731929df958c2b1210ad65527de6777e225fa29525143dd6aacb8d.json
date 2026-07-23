@@ -454,17 +454,18 @@
       "close": 1345000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-07-22T09:18:56.479956+00:00",
+  "price_updated_at": "2026-07-23T15:19:38.253087+00:00",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "009150.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-22T09:18:55.317199+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "009150.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-23T15:19:37.976596+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-23T18:19:37.976596+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

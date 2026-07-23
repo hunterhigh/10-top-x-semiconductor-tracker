@@ -1,6 +1,6 @@
 {
   "ticker": "XOM",
-  "cashtag": "ExxonMobil",
+  "cashtag": "$XOM",
   "instrument": {
     "instrument_id": "US:XOM",
     "display_code": "XOM",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-03",
-  "last_mention": "2026-07-14",
-  "total_mentions": 10,
+  "last_mention": "2026-07-23",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
+    "StockMKTNewz": 5,
     "aleabitoreddit": 4,
-    "StockMKTNewz": 4,
     "michaelsikand": 1,
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 5,
-    "news": 4,
+    "news": 5,
     "disclosure": 1
   },
   "mentions": [
@@ -272,6 +272,29 @@
         "likes": 30,
         "reposts": 2,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080303752796356880",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T10:47:19-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$XOM",
+      "text": "Gemini just sold out of Exxon Mobil $XOM stock in the Rallies AI Arena",
+      "url": "https://x.com/StockMKTNewz/status/2080303752796356880",
+      "kind": "post",
+      "engagement": {
+        "views": 18760,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -821,17 +844,21 @@
     {
       "date": "2026-07-21",
       "close": 151.71
+    },
+    {
+      "date": "2026-07-22",
+      "close": 154.45
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-22T09:18:54.537484+00:00",
+  "price_updated_at": "2026-07-23T15:19:37.572475+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "XOM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-22T09:18:53.523030+00:00",
+    "checked_at": "2026-07-23T15:19:36.703708+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

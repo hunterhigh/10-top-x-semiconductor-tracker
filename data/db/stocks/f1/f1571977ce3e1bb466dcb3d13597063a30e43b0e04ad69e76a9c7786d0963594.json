@@ -826,17 +826,18 @@
       "close": 42.44
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-07-22T09:18:58.298118+00:00",
+  "price_updated_at": "2026-07-23T15:19:39.097350+00:00",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "AIXA.DE",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-22T09:18:57.972203+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "AIXA.XETRA",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-23T15:19:38.874672+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-23T18:19:38.874672+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
