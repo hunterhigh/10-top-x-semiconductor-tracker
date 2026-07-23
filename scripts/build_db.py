@@ -534,17 +534,6 @@ def main():
             path.unlink()
     index_doc["meta"]["stock_shards"] = shard_stats(referenced, STOCKS_DIR)
     save_json(INDEX_PATH, index_doc)
-    manifest_path = DB_DIR / "manifest.json"
-    manifest = load_json(manifest_path, {}) or {}
-    manifest.update({
-        "generated_at": generated_at,
-        "schema_version": 2,
-        "storage_layout": "hash-sharded-v1",
-        "stock_count": len(index_rows),
-        "index_sha256": file_sha256(INDEX_PATH),
-        "stocks_root": "stocks",
-    })
-    save_json(manifest_path, manifest)
 
     profile_rows = []
     for blogger in bloggers:
@@ -596,6 +585,20 @@ def main():
         "excluded": [{"symbol": s, "mentions": n} for s, n in sorted(excluded.items(), key=lambda x: -x[1])],
     }
     save_json(REVIEW_PATH, review)
+
+    # manifest.json is the snapshot commit marker and must be written after
+    # every stock, index, profile, and review document is durable.
+    manifest_path = DB_DIR / "manifest.json"
+    manifest = load_json(manifest_path, {}) or {}
+    manifest.update({
+        "generated_at": generated_at,
+        "schema_version": 2,
+        "storage_layout": "hash-sharded-v1",
+        "stock_count": len(index_rows),
+        "index_sha256": file_sha256(INDEX_PATH),
+        "stocks_root": "stocks",
+    })
+    save_json(manifest_path, manifest)
 
     log("")
     log("===== build_db summary (data layer) =====")
