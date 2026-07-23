@@ -106,6 +106,28 @@ class StorageLayoutV2Tests(unittest.TestCase):
             self.assertTrue(path.is_file())
             self.assertEqual(len(list(store.iter_stock_paths())), 1)
 
+    def test_semantically_identical_crlf_price_index_is_not_rewritten(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db, cache = self.make_snapshot(Path(tmp))
+            index_path = cache / "index.json"
+            original = json.loads(index_path.read_text(encoding="utf-8"))
+            crlf_bytes = (
+                json.dumps(original, indent=2, ensure_ascii=False) + "\n"
+            ).replace("\n", "\r\n").encode("utf-8")
+            index_path.write_bytes(crlf_bytes)
+
+            manifest_path = db / "manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["price_cache_index_sha256"] = hashlib.sha256(crlf_bytes).hexdigest()
+            write_json(manifest_path, manifest)
+
+            rebuilt = write_price_cache_index(cache)
+
+            self.assertEqual(rebuilt, original)
+            self.assertEqual(index_path.read_bytes(), crlf_bytes)
+            result = validate_snapshot_layout(db, cache)
+            self.assertEqual(result["price_cache"]["files"], 1)
+
     def test_unknown_schema_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             db, _ = self.make_snapshot(Path(tmp))

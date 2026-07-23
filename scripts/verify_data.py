@@ -14,7 +14,6 @@ from storage_layout import (
     iter_stock_documents,
     stock_document_path,
     validate_snapshot_layout,
-    write_price_cache_index,
 )
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -153,9 +152,8 @@ else:
 storage_summary = {"schema_version": 2, "storage_layout": "hash-sharded-v1"}
 try:
     cache_root = DATA_DIR / "prices_cache"
-    # Producer-side verification recreates the deterministic price index before
-    # validating it. Runtime readers never discover cache files by scanning.
-    write_price_cache_index(cache_root)
+    # Verification is deliberately read-only. prices.py owns index generation
+    # and updates the manifest hash after semantic cache changes.
     stock_layout = validate_snapshot_layout(DB, cache_root)
     stock_stats = stock_layout["stock_documents"]
     cache_stats = stock_layout["price_cache"]

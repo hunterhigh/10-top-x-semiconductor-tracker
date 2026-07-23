@@ -327,6 +327,11 @@ def write_price_cache_index(cache_dir: Path) -> dict[str, Any]:
         if previous_symbols == set(symbols) and previous.get("generated_at")
         else max(updated_values, default=datetime.now(timezone.utc).isoformat())
     )
+    # Preserve the producer-owned index byte-for-byte when its semantic
+    # contents have not changed. Otherwise a newline-only conversion between
+    # Windows (CRLF) and Linux (LF) would invalidate the manifest's raw SHA-256.
+    if previous == index:
+        return previous
     index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return index
 
