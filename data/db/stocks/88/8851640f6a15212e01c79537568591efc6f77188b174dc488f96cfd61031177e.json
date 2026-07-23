@@ -1,6 +1,6 @@
 {
   "ticker": "INTC",
-  "cashtag": "INTC",
+  "cashtag": "intc",
   "instrument": {
     "instrument_id": "US:INTC",
     "display_code": "INTC",
@@ -25,23 +25,23 @@
   "thesis_summary": null,
   "first_mention": "2025-09-23",
   "last_mention": "2026-07-23",
-  "total_mentions": 219,
+  "total_mentions": 223,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 141,
     "jukan05": 28,
-    "StockMKTNewz": 24,
+    "StockMKTNewz": 26,
+    "octopusycc": 7,
     "ren_stocks": 7,
-    "octopusycc": 6,
+    "unusual_whales": 4,
     "zephyr_z9": 3,
-    "unusual_whales": 3,
     "DJTRadar": 3,
     "michaelsikand": 2,
     "KawzInvests": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 189,
-    "news": 24,
-    "flow": 3,
+    "opinion": 190,
+    "news": 26,
+    "flow": 4,
     "disclosure": 3
   },
   "mentions": [
@@ -5262,6 +5262,101 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080383234274165068",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T16:03:09-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "Intel $INTC just reported earnings\n\nEPS of $0.42 beating expectations of $0.21\nRevenue of $16.1B beating expectations of $14.4B\n\nIntel said next quarter it expects \n\n- Revenue to come in between $15.8B - $16.8B above expectations of $15.10\n\n- EPS to come in around $0.38 above expectations of $0.27",
+      "url": "https://x.com/StockMKTNewz/status/2080383234274165068",
+      "kind": "post",
+      "engagement": {
+        "views": 60116,
+        "likes": 166,
+        "reposts": 20,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080383324028317713",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T16:03:30-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "BREAKING: Intel, $INTC, earnings:\n\n- EPS: $0.42, est: $0.22\n- Revenue: $16.1 billion, est: $14.4 billion",
+      "url": "https://x.com/unusual_whales/status/2080383324028317713",
+      "kind": "post",
+      "engagement": {
+        "views": 135612,
+        "likes": 661,
+        "reposts": 47,
+        "replies": 65
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080384377536540698",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T16:07:41-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "Intel $INTC stock is up by almost 9% in after-hours following its earnings\n\n🟢🟢🟢🟢🟢🟢🟢🟢🟢 https://t.co/McQRg8OHjg",
+      "url": "https://x.com/StockMKTNewz/status/2080384377536540698",
+      "kind": "post",
+      "engagement": {
+        "views": 31254,
+        "likes": 154,
+        "reposts": 10,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080386538760999056",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T16:16:17-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "earnings beat expectations",
+        "expects price below 110 at open tomorrow as buying opportunity"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "intc",
+      "text": "一些马前炮\n\nintc盘后 财报超预期 \n\n明天开盘intc应当还有110刀以下的机会",
+      "url": "https://x.com/octopusycc/status/2080386538760999056",
+      "kind": "post",
+      "engagement": {
+        "views": 3060,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6276,11 +6371,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-23T18:17:01.781410+00:00",
+  "price_updated_at": "2026-07-23T21:17:18.086884+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-24",
     "asof": "2026-07-23",
-    "attempted_at": "2026-07-23T18:17:00.653512+00:00",
+    "attempted_at": "2026-07-23T21:17:17.161462+00:00",
     "status": "ok",
     "first_available_date": "2025-07-24",
     "last_available_date": "2026-07-22",
@@ -6291,7 +6386,7 @@
     "provider_symbol": "INTC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-23T18:17:00.653512+00:00",
+    "checked_at": "2026-07-23T21:17:17.161462+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
