@@ -61,6 +61,15 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from storage_layout import (
+    detect_storage_layout,
+    file_sha256,
+    index_stock_rows,
+    price_cache_path,
+    stock_document_path,
+    write_price_cache_index,
+)
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
@@ -467,8 +476,7 @@ class EODHDProvider:
 
 # --------------------------------------------------------------------------- cache
 def cache_path(price_symbol):
-    safe = price_symbol.replace("/", "_").replace("\\", "_")
-    return CACHE_DIR / f"{safe}.json"
+    return price_cache_path(CACHE_DIR, price_symbol, version=detect_storage_layout(DB_DIR))
 
 
 def load_cache(price_symbol):
@@ -660,7 +668,7 @@ def annotate_existing(scope, tmap):
     """
     counts = {"annotated": 0, "already_explained": 0}
     for row in scope:
-        stock_path = STOCKS_DIR / f"{row['ticker']}.json"
+        stock_path = stock_document_path(DB_DIR, row, must_exist=True)
         doc = load_json(stock_path, default=None)
         if not doc:
             continue
@@ -797,7 +805,7 @@ def main():
         log(f"No {INDEX_PATH}. Run build_db.py first.")
         sys.exit(1)
     tmap = load_json(TMAP_PATH, default={}) or {}
-    rows = index.get("stocks", [])
+    rows = index_stock_rows(index)
 
     # ---- scope
     if args.ticker:
@@ -812,7 +820,7 @@ def main():
     history_scope_summary = None
     tracked_ids = tracked_account_ids() if history_start else []
     for row in scope:
-        stock_doc = load_json(STOCKS_DIR / f"{row['ticker']}.json", default=None)
+        stock_doc = load_json(stock_document_path(DB_DIR, row, must_exist=True), default=None)
         if not stock_doc:
             continue
         docs_by_ticker[row["ticker"]] = stock_doc
@@ -871,7 +879,7 @@ def main():
                       "unavailable": 0, "unverified_symbol": 0}
     for i, row in enumerate(scope, 1):
         sym = row["ticker"]
-        stock_path = STOCKS_DIR / f"{sym}.json"
+        stock_path = stock_document_path(DB_DIR, row, must_exist=True)
         doc = docs_by_ticker.get(sym) or load_json(stock_path, default=None)
         if not doc:
             log(f"    {sym}: no stock file, skipping."); continue
@@ -910,13 +918,27 @@ def main():
     by_ticker = {r["ticker"] for r in scope}
     for r in rows:
         if r["ticker"] in by_ticker:
-            sp = STOCKS_DIR / f"{r['ticker']}.json"
+            sp = stock_document_path(DB_DIR, r, must_exist=True)
             d = load_json(sp, default={})
             r["price_status"] = d.get("price_status", "pending")
             if d.get("price_history_52w"):
                 r["price_history_52w_status"] = d["price_history_52w"].get("status", "pending")
     index["meta"]["prices_updated_at"] = datetime.now(timezone.utc).isoformat()
     save_json(INDEX_PATH, index)
+    price_index = write_price_cache_index(CACHE_DIR)
+    manifest = load_json(MANIFEST_PATH, default={}) or {}
+    manifest.update({
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "schema_version": 2,
+        "storage_layout": "hash-sharded-v1",
+        "stock_count": len(rows),
+        "index_sha256": file_sha256(INDEX_PATH),
+        "stocks_root": "stocks",
+        "price_cache_count": len(price_index["prices"]),
+        "price_cache_index_sha256": file_sha256(CACHE_DIR / "index.json"),
+        "price_cache_root": "prices_cache",
+    })
+    save_json(MANIFEST_PATH, manifest)
     queue["updated_at"] = datetime.now(timezone.utc).isoformat()
     queue["report_asof"] = today_iso
     save_json(QUEUE_PATH, queue)

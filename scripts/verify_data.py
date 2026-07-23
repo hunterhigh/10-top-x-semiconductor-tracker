@@ -2,9 +2,20 @@
 Usage: python verify_data.py [--db <path>] [--require-price-scope]
 默认 db 路径: 脚本上级/data/db (和 render/build_db 一致，全博主共享)
 """
-import json, glob, os, sys, datetime
+import json, os, sys, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from storage_layout import (
+    StorageLayoutError,
+    detect_storage_layout,
+    file_sha256,
+    index_stock_rows,
+    iter_stock_documents,
+    stock_document_path,
+    validate_snapshot_layout,
+    write_price_cache_index,
+)
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')   # Windows console defaults to GBK, which can't print ✅/⚠️
@@ -43,7 +54,13 @@ print(f"DB path: {DB}")
 print(f"Stocks dir: {STOCKS_DIR}")
 print()
 
-files = sorted(glob.glob(str(STOCKS_DIR / '*.json')))
+INDEX_PATH = DB / 'index.json'
+try:
+    index_preview = json.load(open(INDEX_PATH, encoding='utf-8')) if INDEX_PATH.exists() else None
+    storage_version = detect_storage_layout(DB, index=index_preview)
+    files = [str(path) for path in iter_stock_documents(DB, index=index_preview, version=storage_version)]
+except (OSError, json.JSONDecodeError, StorageLayoutError) as exc:
+    print(f"ERROR: invalid storage layout: {exc}"); sys.exit(1)
 if not files:
     print("ERROR: no stock JSON files found!"); sys.exit(1)
 
@@ -133,6 +150,23 @@ if idx.exists():
 else:
     print("index.json: NOT found (optional, render doesn't need it)")
 
+storage_summary = {"schema_version": 2, "storage_layout": "hash-sharded-v1"}
+try:
+    cache_root = DATA_DIR / "prices_cache"
+    # Producer-side verification recreates the deterministic price index before
+    # validating it. Runtime readers never discover cache files by scanning.
+    write_price_cache_index(cache_root)
+    stock_layout = validate_snapshot_layout(DB, cache_root)
+    stock_stats = stock_layout["stock_documents"]
+    cache_stats = stock_layout["price_cache"]
+    storage_summary['stock_documents'] = stock_stats
+    storage_summary['price_cache'] = cache_stats
+    print(f"Storage layout: v{storage_version}; stocks={stock_stats}; price_cache={cache_stats}")
+    if stock_stats.get('warning') or cache_stats.get('warning'):
+        print("WARNING: storage shard width is at or above 900 files")
+except (OSError, json.JSONDecodeError, StorageLayoutError) as exc:
+    errors.append(f"storage layout invalid: {exc}")
+
 price_scope = {
     "window_days": PRICE_WINDOW_DAYS,
     "min_mentions": PRICE_MIN_MENTIONS,
@@ -146,7 +180,7 @@ if index_data:
     today_et = datetime.datetime.now(ZoneInfo('America/New_York')).date()
     cutoff = (today_et - datetime.timedelta(days=PRICE_WINDOW_DAYS)).isoformat()
     scope_rows = [
-        row for row in index_data.get('stocks', [])
+        row for row in index_stock_rows(index_data)
         if (row.get('total_mentions') or 0) >= PRICE_MIN_MENTIONS
         or (row.get('last_mention') and row['last_mention'] >= cutoff)
     ]
@@ -157,7 +191,7 @@ if index_data:
         status = row.get('price_status') or 'pending'
         status_counts[status] = status_counts.get(status, 0) + 1
         if status in {'partial', 'unavailable', 'unverified_symbol'}:
-            stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+            stock_file = stock_document_path(DB, row, version=storage_version, must_exist=True)
             stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
             reason = stock_doc.get('price_reason')
             if reason:
@@ -210,8 +244,8 @@ if index_data and latest:
         errors.append(f"52-week scope expected 10 unique tracked accounts, found {len(set(tracked_ids))}")
 
     all_stock_rows = []
-    for row in index_data.get('stocks', []):
-        stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+    for row in index_stock_rows(index_data):
+        stock_file = stock_document_path(DB, row, version=storage_version, must_exist=True)
         stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
         if stock_doc:
             all_stock_rows.append((row, stock_doc))
@@ -376,6 +410,14 @@ else:
 # write manifest
 manifest = {
     "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    "schema_version": 2,
+    "storage_layout": "hash-sharded-v1",
+    "stock_count": len(tickers),
+    "index_sha256": file_sha256(idx),
+    "stocks_root": "stocks",
+    "price_cache_count": storage_summary.get("price_cache", {}).get("files", 0),
+    "price_cache_index_sha256": file_sha256(DATA_DIR / "prices_cache" / "index.json"),
+    "price_cache_root": "prices_cache",
     "tickers": len(tickers),
     "total_mentions": total_mentions,
     "priced_tickers": total_priced,
@@ -389,6 +431,7 @@ manifest = {
         "market_pending_review": market_missing,
         "price_unavailable_or_unverified": price_unavailable,
     },
+    "storage_stats": storage_summary,
     "price_scope": price_scope,
     "price_history_52w": price_history_52w,
     "profile_coverage": {

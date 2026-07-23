@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 import argparse
-import json
 import sys
-from pathlib import Path
 
 from analyze_stock import analyze
 from snapshot_sync import sync
+from stock_store import StockStore, StockStoreError
 
 
 def main() -> int:
@@ -21,16 +20,13 @@ def main() -> int:
     parser.add_argument("--blogger")
     args = parser.parse_args()
     cache, manifest, _ = sync()
-    index = json.loads((cache / "data" / "db" / "index.json").read_text(encoding="utf-8"))
-    code = args.ticker.upper()
-    candidates = [row for row in index.get("stocks", []) if str((row.get("instrument") or {}).get("display_code") or row.get("ticker") or "").upper() == code]
-    if len(candidates) != 1:
-        raise SystemExit(f"Ticker is not uniquely tracked: {args.ticker}")
-    stock = cache / "data" / "db" / "stocks" / f"{candidates[0]['ticker']}.json"
-    if not stock.is_file():
-        raise SystemExit(f"Tracked stock document is unavailable: {args.ticker}")
+    try:
+        _, stock = StockStore(cache / "data" / "db").resolve_stock(args.ticker)
+    except StockStoreError as exc:
+        raise SystemExit(str(exc)) from exc
     import datetime
     result = analyze(stock, datetime.date.fromisoformat(args.as_of) if args.as_of else None, args.blogger)
+    import json
     print(json.dumps({"manifest": manifest, "analysis": result}, ensure_ascii=False, indent=2))
     return 0
 

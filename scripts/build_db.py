@@ -69,7 +69,24 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+# Keep sibling data-layer modules importable when this file is loaded through
+# importlib.spec_from_file_location(), where Python does not add scripts/ to
+# sys.path as it does for `python scripts/build_db.py`.
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from storage_layout import (
+    detect_storage_layout,
+    file_sha256,
+    index_rows_by_ticker,
+    make_stock_index,
+    safe_resolve,
+    shard_stats,
+    stock_document_path,
+    stock_document_relative,
+)
+
 DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
 PROFILE_CONFIG_PATH = SCRIPT_DIR.parent / "config" / "blogger_profiles.json"
@@ -262,6 +279,10 @@ def load_all_extracted_and_raw(bloggers):
 def main():
     argparse.ArgumentParser().parse_args()   # no flags needed anymore (no windows to anchor)
 
+    previous_index = load_json(INDEX_PATH, {}) or {}
+    storage_version = detect_storage_layout(DB_DIR, index=previous_index)
+    previous_rows = index_rows_by_ticker(previous_index)
+
     bloggers = load_bloggers()
     if not bloggers:
         log(f"No bloggers configured in {CONFIG_PATH}. Nothing to build.")
@@ -381,10 +402,14 @@ def main():
         total_mentions_by_signal_type = dict(by_signal_type)  # e.g. {"opinion": 12, "flow": 2, "news": 1}
 
         # ---- preserve existing price data (prices.py fills these; don't wipe on rebuild)
-        existing_file = STOCKS_DIR / f"{sym}.json"
+        previous_row = previous_rows.get(sym)
+        existing_file = (
+            stock_document_path(DB_DIR, previous_row, version=storage_version, must_exist=True)
+            if previous_row else None
+        )
         prev_prices, prev_price_status = [], "pending"
         prev_price_meta = {}
-        if existing_file.exists():
+        if existing_file and existing_file.exists():
             try:
                 prev = json.loads(existing_file.read_text(encoding="utf-8"))
                 prev_prices = prev.get("price_series") or []
@@ -420,7 +445,9 @@ def main():
             "price_status": prev_price_status,
             **prev_price_meta,
         }
-        save_json(STOCKS_DIR / f"{sym}.json", stock_doc)
+        document_relative = stock_document_relative(instrument["instrument_id"])
+        document_path = safe_resolve(DB_DIR, document_relative)
+        save_json(document_path, stock_doc)
 
         # Profile metrics are factual summaries of this tracker\'s collected
         # sample, not a claim about the source account\'s quality or performance.
@@ -446,7 +473,7 @@ def main():
             if ed.get("industry"):
                 acc["industries"][ed["industry"]] += 1
 
-        index_rows.append({
+        index_row = {
             "ticker": sym,
             "instrument": instrument,
             "cashtag": stock_doc["cashtag"],
@@ -463,7 +490,8 @@ def main():
             "blogger_count": len(total_mentions_by_blogger),  # how many of the tracked bloggers ever covered this ticker
             "total_mentions_by_blogger": total_mentions_by_blogger,
             "price_status": prev_price_status,
-        })
+        }
+        index_rows.append(index_row)
 
     # A canonical alias may have existed as a standalone file before the
     # registry learned about it.  Remove only those obsolete alias documents
@@ -473,28 +501,50 @@ def main():
     for alias, canonical in aliases.items():
         if alias == canonical:
             continue
-        legacy = STOCKS_DIR / f"{alias}.json"
-        canonical_doc = STOCKS_DIR / f"{canonical}.json"
-        if legacy.exists() and canonical_doc.exists():
-            legacy.unlink()
-            pruned_alias_docs.append(alias)
-
+        alias_row = previous_rows.get(alias)
+        canonical_row = next((row for row in index_rows if row["ticker"] == canonical), None)
+        if alias_row and canonical_row:
+            legacy = stock_document_path(DB_DIR, alias_row, version=storage_version, must_exist=True)
+            canonical_id = (canonical_row.get("instrument") or {}).get("instrument_id")
+            canonical_doc = safe_resolve(
+                DB_DIR, stock_document_relative(canonical_id), must_exist=True
+            )
+            if legacy != canonical_doc:
+                legacy.unlink()
+                pruned_alias_docs.append(alias)
     index_rows.sort(key=lambda r: -r["total_mentions"])
-    index_doc = {
-        "meta": {
-            "generated_at": datetime.now(timezone.utc).isoformat(),
+    generated_at = datetime.now(timezone.utc).isoformat()
+    index_doc = make_stock_index(
+        index_rows,
+        generated_at=generated_at,
+        meta={
             "tracked_bloggers": [b["id"] for b in bloggers],
             "total_tickers": len(index_rows),
             "total_mentions": sum(r["total_mentions"] for r in index_rows),
             "dates": "ET (US Eastern); matches render/pipeline.py",
-            "note": "Data layer only — facts + raw mentions from ALL tracked bloggers, "
-                    "merged per ticker with blogger_id attribution. All windowed/stance "
-                    "aggregation + rankings (incl. cross-blogger consensus) are computed "
-                    "by render at runtime. Prices pending.",
+            "note": "Data layer only; windowed aggregation is computed by payload builders.",
         },
-        "stocks": index_rows,        # sorted by raw total_mentions (manifest ordering only)
+    )
+    referenced = {
+        safe_resolve(DB_DIR, row["path"], must_exist=True).resolve()
+        for row in index_doc["stocks"].values()
     }
+    for path in STOCKS_DIR.rglob("*.json"):
+        if path.resolve() not in referenced:
+            path.unlink()
+    index_doc["meta"]["stock_shards"] = shard_stats(referenced, STOCKS_DIR)
     save_json(INDEX_PATH, index_doc)
+    manifest_path = DB_DIR / "manifest.json"
+    manifest = load_json(manifest_path, {}) or {}
+    manifest.update({
+        "generated_at": generated_at,
+        "schema_version": 2,
+        "storage_layout": "hash-sharded-v1",
+        "stock_count": len(index_rows),
+        "index_sha256": file_sha256(INDEX_PATH),
+        "stocks_root": "stocks",
+    })
+    save_json(manifest_path, manifest)
 
     profile_rows = []
     for blogger in bloggers:
