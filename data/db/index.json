@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-23T11:54:55.208826+00:00",
+  "generated_at": "2026-07-23T12:14:21.477477+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1661,
-    "total_mentions": 20128,
+    "total_mentions": 20131,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-23T11:57:03.696720+00:00"
+    "prices_updated_at": "2026-07-23T12:16:25.196743+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -140,14 +140,14 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-07-23",
-      "total_mentions": 744,
+      "total_mentions": 746,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 505,
-        "jukan05": 60,
+        "jukan05": 61,
         "StockMKTNewz": 57,
+        "zephyr_z9": 29,
         "unusual_whales": 29,
-        "zephyr_z9": 28,
         "octopusycc": 21,
         "KawzInvests": 18,
         "ren_stocks": 12,
@@ -398,11 +398,11 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-03",
       "last_mention": "2026-07-23",
-      "total_mentions": 398,
+      "total_mentions": 399,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 291,
-        "StockMKTNewz": 64,
+        "StockMKTNewz": 65,
         "ren_stocks": 10,
         "jukan05": 9,
         "unusual_whales": 9,
@@ -856,7 +856,7 @@
         "ren_stocks": 1,
         "StockMKTNewz": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json"
@@ -1200,7 +1200,7 @@
         "ren_stocks": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "London LSE:IQE",
       "hash": "145b35d89d36a50db9514b08f40d741b719d35bee046a0869878c7da934f3c4c",
       "path": "stocks/14/145b35d89d36a50db9514b08f40d741b719d35bee046a0869878c7da934f3c4c.json"
@@ -1765,7 +1765,7 @@
       "total_mentions_by_blogger": {
         "aleabitoreddit": 99
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "London LSE:RPI",
       "hash": "bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab",
       "path": "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json"
@@ -2163,7 +2163,7 @@
         "aleabitoreddit": 60,
         "ren_stocks": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Frankfurt Xetra:LPK",
       "hash": "2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278",
       "path": "stocks/2b/2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278.json"
@@ -2579,7 +2579,7 @@
       "total_mentions_by_blogger": {
         "aleabitoreddit": 47
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:XFAB",
       "hash": "a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4",
       "path": "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json"
@@ -3111,7 +3111,7 @@
         "aleabitoreddit": 26,
         "michaelsikand": 10
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "TSXV:PNG",
       "hash": "47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6",
       "path": "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json"
@@ -4650,7 +4650,7 @@
         "jukan05": 11,
         "zephyr_z9": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "TWSE:2454",
       "hash": "da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570",
       "path": "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json"
@@ -5116,7 +5116,7 @@
         "octopusycc": 2,
         "StockMKTNewz": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "SZSE:300308",
       "hash": "a1f2f4c3882094ac3f6e1c16da113684eebe9d74408e361e9de3fc5eb02716ed",
       "path": "stocks/a1/a1f2f4c3882094ac3f6e1c16da113684eebe9d74408e361e9de3fc5eb02716ed.json"
@@ -5999,7 +5999,7 @@
         "jukan05": 1,
         "StockMKTNewz": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "TWSE:2337",
       "hash": "bca7e430268731a20cc61dc8eff676165882013478be6248ac247f705176aab6",
       "path": "stocks/bc/bca7e430268731a20cc61dc8eff676165882013478be6248ac247f705176aab6.json"
