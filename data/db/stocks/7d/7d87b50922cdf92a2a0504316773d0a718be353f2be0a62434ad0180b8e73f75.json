@@ -24,18 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-03",
-  "last_mention": "2026-07-12",
-  "total_mentions": 17,
+  "last_mention": "2026-07-23",
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 14,
+    "StockMKTNewz": 2,
     "unusual_whales": 1,
-    "StockMKTNewz": 1,
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 14,
     "flow": 1,
-    "news": 1,
+    "news": 2,
     "disclosure": 1
   },
   "mentions": [
@@ -435,6 +435,34 @@
         "likes": 261,
         "reposts": 29,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080233384958190072",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T06:07:42-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "EPS of $1.89 beat expectations of $1.69",
+        "Revenue of $24.7B beat expectations of $22.6B",
+        "raised FY2026 EPS guidance to $7.10-$7.25 from $6.70-$6.90",
+        "raised FY2026 revenue guidance to $95B-$96B from $92.5B-$93.5B"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$RTX",
+      "text": "RAYTHEON $RTX JUST REPORTED EARNINGS\n\nEPS of $1.89 beating expectations of $1.69🟢\nRevenue of $24.7B beating expectations of $22.6B🟢\n\nRaytheon raised its fiscal year 2026 guidance for:\n\n- EPS up to between $7.10-$7.25 from between $6.70-$6.90\n\n- Revenue up to between $95B - $96B from between $92.5B - $93.5B",
+      "url": "https://x.com/StockMKTNewz/status/2080233384958190072",
+      "kind": "post",
+      "engagement": {
+        "views": 17420,
+        "likes": 61,
+        "reposts": 10,
+        "replies": 20
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -984,17 +1012,21 @@
     {
       "date": "2026-07-21",
       "close": 193.67
+    },
+    {
+      "date": "2026-07-22",
+      "close": 194.88
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-22T06:44:09.260677+00:00",
+  "price_updated_at": "2026-07-23T11:56:43.736956+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "RTX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-22T06:44:08.614927+00:00",
+    "checked_at": "2026-07-23T11:56:42.829797+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

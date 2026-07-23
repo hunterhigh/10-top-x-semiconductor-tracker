@@ -2,6 +2,11 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "NDAQ",
+      "mentions": 2,
+      "company_name_hint": "Nasdaq"
+    },
+    {
       "symbol": "MO",
       "mentions": 2,
       "company_name_hint": "Altria Group"
@@ -172,11 +177,6 @@
       "company_name_hint": "Pfizer"
     },
     {
-      "symbol": "NDAQ",
-      "mentions": 1,
-      "company_name_hint": "Nasdaq"
-    },
-    {
       "symbol": "PSNL",
       "mentions": 1,
       "company_name_hint": "Personalis"
@@ -312,17 +312,17 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "FOCI",
-      "instrument_id": "UNVERIFIED:FOCI",
-      "company_name_hint": "Foci Fiber Communication",
+      "symbol": "ANTHROPIC",
+      "instrument_id": "UNVERIFIED:ANTHROPIC",
+      "company_name_hint": "Anthropic PBC",
       "mentions": 25,
       "verification_status": "identified"
     },
     {
-      "symbol": "ANTHROPIC",
-      "instrument_id": "UNVERIFIED:ANTHROPIC",
-      "company_name_hint": "Anthropic PBC",
-      "mentions": 24,
+      "symbol": "FOCI",
+      "instrument_id": "UNVERIFIED:FOCI",
+      "company_name_hint": "Foci Fiber Communication",
+      "mentions": 25,
       "verification_status": "identified"
     },
     {
@@ -410,6 +410,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "HUAWEI",
+      "instrument_id": "UNVERIFIED:HUAWEI",
+      "company_name_hint": "Huawei Technologies Co., Ltd.",
+      "mentions": 11,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "UNKNOWN",
       "instrument_id": "UNVERIFIED:UNKNOWN",
       "company_name_hint": "Unresolved source mention",
@@ -417,10 +424,10 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "HUAWEI",
-      "instrument_id": "UNVERIFIED:HUAWEI",
-      "company_name_hint": "Huawei Technologies Co., Ltd.",
-      "mentions": 10,
+      "symbol": "YMTC",
+      "instrument_id": "UNVERIFIED:YMTC",
+      "company_name_hint": "Yangtze Memory Technologies Co.",
+      "mentions": 11,
       "verification_status": "identified"
     },
     {
@@ -436,13 +443,6 @@
       "company_name_hint": null,
       "mentions": 10,
       "verification_status": "unverified"
-    },
-    {
-      "symbol": "YMTC",
-      "instrument_id": "UNVERIFIED:YMTC",
-      "company_name_hint": "Yangtze Memory Technologies Co.",
-      "mentions": 10,
-      "verification_status": "identified"
     },
     {
       "symbol": "6830",
@@ -508,6 +508,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "DEEPSEEK",
+      "instrument_id": "UNVERIFIED:DEEPSEEK",
+      "company_name_hint": "DeepSeek",
+      "mentions": 7,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "FLKR",
       "instrument_id": "UNVERIFIED:FLKR",
       "company_name_hint": null,
@@ -553,13 +560,6 @@
       "symbol": "BRUN",
       "instrument_id": "UNVERIFIED:BRUN",
       "company_name_hint": "Brunn & Sorensen",
-      "mentions": 6,
-      "verification_status": "identified"
-    },
-    {
-      "symbol": "DEEPSEEK",
-      "instrument_id": "UNVERIFIED:DEEPSEEK",
-      "company_name_hint": "DeepSeek",
       "mentions": 6,
       "verification_status": "identified"
     },
@@ -1178,6 +1178,13 @@
       "company_name_hint": null,
       "mentions": 3,
       "verification_status": "unverified"
+    },
+    {
+      "symbol": "NAND",
+      "instrument_id": "UNVERIFIED:NAND",
+      "company_name_hint": "NAND Flash (sector/technology)",
+      "mentions": 3,
+      "verification_status": "identified"
     },
     {
       "symbol": "NASA",
@@ -1824,11 +1831,11 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "NAND",
-      "instrument_id": "UNVERIFIED:NAND",
-      "company_name_hint": "NAND Flash (sector/technology)",
+      "symbol": "NDAQ",
+      "instrument_id": "UNVERIFIED:NDAQ",
+      "company_name_hint": "Nasdaq, Inc.",
       "mentions": 2,
-      "verification_status": "identified"
+      "verification_status": "unverified"
     },
     {
       "symbol": "NJDCY",
@@ -1850,6 +1857,13 @@
       "company_name_hint": null,
       "mentions": 2,
       "verification_status": "unverified"
+    },
+    {
+      "symbol": "OIL",
+      "instrument_id": "UNVERIFIED:OIL",
+      "company_name_hint": "Crude Oil (commodity)",
+      "mentions": 2,
+      "verification_status": "identified"
     },
     {
       "symbol": "ONET",
@@ -4253,13 +4267,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "NDAQ",
-      "instrument_id": "UNVERIFIED:NDAQ",
-      "company_name_hint": "Nasdaq",
-      "mentions": 1,
-      "verification_status": "unverified"
-    },
-    {
       "symbol": "NEOS",
       "instrument_id": "UNVERIFIED:NEOS",
       "company_name_hint": "Neos Therapeutics",
@@ -4377,13 +4384,6 @@
       "company_name_hint": null,
       "mentions": 1,
       "verification_status": "unverified"
-    },
-    {
-      "symbol": "OIL",
-      "instrument_id": "UNVERIFIED:OIL",
-      "company_name_hint": "Crude Oil (commodity)",
-      "mentions": 1,
-      "verification_status": "identified"
     },
     {
       "symbol": "ONON",
@@ -5401,7 +5401,7 @@
     },
     {
       "symbol": "ETH",
-      "count": 55
+      "count": 56
     },
     {
       "symbol": "LTC",
