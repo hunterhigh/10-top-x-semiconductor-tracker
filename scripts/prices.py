@@ -61,8 +61,6 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from storage_layout import detect_storage_layout, price_cache_path, stock_document_path
-
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
@@ -469,7 +467,8 @@ class EODHDProvider:
 
 # --------------------------------------------------------------------------- cache
 def cache_path(price_symbol):
-    return price_cache_path(CACHE_DIR, price_symbol, version=detect_storage_layout(DB_DIR))
+    safe = price_symbol.replace("/", "_").replace("\\", "_")
+    return CACHE_DIR / f"{safe}.json"
 
 
 def load_cache(price_symbol):
@@ -661,7 +660,7 @@ def annotate_existing(scope, tmap):
     """
     counts = {"annotated": 0, "already_explained": 0}
     for row in scope:
-        stock_path = stock_document_path(DB_DIR, row, must_exist=True)
+        stock_path = STOCKS_DIR / f"{row['ticker']}.json"
         doc = load_json(stock_path, default=None)
         if not doc:
             continue
@@ -813,7 +812,7 @@ def main():
     history_scope_summary = None
     tracked_ids = tracked_account_ids() if history_start else []
     for row in scope:
-        stock_doc = load_json(stock_document_path(DB_DIR, row, must_exist=True), default=None)
+        stock_doc = load_json(STOCKS_DIR / f"{row['ticker']}.json", default=None)
         if not stock_doc:
             continue
         docs_by_ticker[row["ticker"]] = stock_doc
@@ -872,7 +871,7 @@ def main():
                       "unavailable": 0, "unverified_symbol": 0}
     for i, row in enumerate(scope, 1):
         sym = row["ticker"]
-        stock_path = stock_document_path(DB_DIR, row, must_exist=True)
+        stock_path = STOCKS_DIR / f"{sym}.json"
         doc = docs_by_ticker.get(sym) or load_json(stock_path, default=None)
         if not doc:
             log(f"    {sym}: no stock file, skipping."); continue
@@ -911,7 +910,7 @@ def main():
     by_ticker = {r["ticker"] for r in scope}
     for r in rows:
         if r["ticker"] in by_ticker:
-            sp = stock_document_path(DB_DIR, r, must_exist=True)
+            sp = STOCKS_DIR / f"{r['ticker']}.json"
             d = load_json(sp, default={})
             r["price_status"] = d.get("price_status", "pending")
             if d.get("price_history_52w"):

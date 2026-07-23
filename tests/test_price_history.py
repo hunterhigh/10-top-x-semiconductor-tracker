@@ -80,7 +80,7 @@ class PriceHistoryTests(unittest.TestCase):
             self.assertIsNone(reason)
             self.assertEqual(coverage["status"], "ok")
             self.assertEqual(source["status"], "supported")
-            cached = json.loads(prices.cache_path("ABC").read_text(encoding="utf-8"))
+            cached = json.loads((Path(td) / "ABC.json").read_text(encoding="utf-8"))
             self.assertEqual(cached["price_history_52w"]["requested_start"], "2025-07-21")
 
     def test_successful_provider_response_can_prove_listing_history_is_short(self):
@@ -236,4 +236,3 @@ class PriceHistoryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

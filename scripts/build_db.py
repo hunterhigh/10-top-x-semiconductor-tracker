@@ -69,24 +69,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-# Keep sibling data-layer modules importable when this file is loaded through
-# importlib.spec_from_file_location(), where Python does not add scripts/ to
-# sys.path as it does for `python scripts/build_db.py`.
 SCRIPT_DIR = Path(__file__).resolve().parent
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
-
-from storage_layout import (
-    SHARDED_LAYOUT_VERSION,
-    detect_storage_layout,
-    index_rows_by_ticker,
-    safe_resolve,
-    shard_stats,
-    stock_document_path,
-    stock_document_relative,
-    storage_contract,
-)
-
 DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
 PROFILE_CONFIG_PATH = SCRIPT_DIR.parent / "config" / "blogger_profiles.json"
@@ -279,10 +262,6 @@ def load_all_extracted_and_raw(bloggers):
 def main():
     argparse.ArgumentParser().parse_args()   # no flags needed anymore (no windows to anchor)
 
-    previous_index = load_json(INDEX_PATH, {}) or {}
-    storage_version = detect_storage_layout(DB_DIR, index=previous_index)
-    previous_rows = index_rows_by_ticker(previous_index)
-
     bloggers = load_bloggers()
     if not bloggers:
         log(f"No bloggers configured in {CONFIG_PATH}. Nothing to build.")
@@ -402,14 +381,10 @@ def main():
         total_mentions_by_signal_type = dict(by_signal_type)  # e.g. {"opinion": 12, "flow": 2, "news": 1}
 
         # ---- preserve existing price data (prices.py fills these; don't wipe on rebuild)
-        previous_row = previous_rows.get(sym)
-        existing_file = (
-            stock_document_path(DB_DIR, previous_row, version=storage_version, must_exist=True)
-            if previous_row else None
-        )
+        existing_file = STOCKS_DIR / f"{sym}.json"
         prev_prices, prev_price_status = [], "pending"
         prev_price_meta = {}
-        if existing_file and existing_file.exists():
+        if existing_file.exists():
             try:
                 prev = json.loads(existing_file.read_text(encoding="utf-8"))
                 prev_prices = prev.get("price_series") or []
@@ -445,13 +420,7 @@ def main():
             "price_status": prev_price_status,
             **prev_price_meta,
         }
-        if storage_version == SHARDED_LAYOUT_VERSION:
-            document_relative = stock_document_relative(instrument["instrument_id"])
-            document_path = safe_resolve(DB_DIR, document_relative)
-        else:
-            document_relative = None
-            document_path = STOCKS_DIR / f"{sym}.json"
-        save_json(document_path, stock_doc)
+        save_json(STOCKS_DIR / f"{sym}.json", stock_doc)
 
         # Profile metrics are factual summaries of this tracker\'s collected
         # sample, not a claim about the source account\'s quality or performance.
@@ -477,7 +446,7 @@ def main():
             if ed.get("industry"):
                 acc["industries"][ed["industry"]] += 1
 
-        index_row = {
+        index_rows.append({
             "ticker": sym,
             "instrument": instrument,
             "cashtag": stock_doc["cashtag"],
@@ -494,10 +463,7 @@ def main():
             "blogger_count": len(total_mentions_by_blogger),  # how many of the tracked bloggers ever covered this ticker
             "total_mentions_by_blogger": total_mentions_by_blogger,
             "price_status": prev_price_status,
-        }
-        if document_relative is not None:
-            index_row["document_path"] = document_relative.as_posix()
-        index_rows.append(index_row)
+        })
 
     # A canonical alias may have existed as a standalone file before the
     # registry learned about it.  Remove only those obsolete alias documents
@@ -507,33 +473,13 @@ def main():
     for alias, canonical in aliases.items():
         if alias == canonical:
             continue
-        if storage_version == SHARDED_LAYOUT_VERSION:
-            alias_row = previous_rows.get(alias)
-            canonical_row = next((row for row in index_rows if row["ticker"] == canonical), None)
-            if alias_row and canonical_row:
-                legacy = stock_document_path(DB_DIR, alias_row, version=storage_version, must_exist=True)
-                canonical_doc = stock_document_path(DB_DIR, canonical_row, version=storage_version, must_exist=True)
-                if legacy != canonical_doc:
-                    legacy.unlink()
-                    pruned_alias_docs.append(alias)
-        else:
-            legacy = STOCKS_DIR / f"{alias}.json"
-            canonical_doc = STOCKS_DIR / f"{canonical}.json"
-            if legacy.exists() and canonical_doc.exists():
-                legacy.unlink()
-                pruned_alias_docs.append(alias)
+        legacy = STOCKS_DIR / f"{alias}.json"
+        canonical_doc = STOCKS_DIR / f"{canonical}.json"
+        if legacy.exists() and canonical_doc.exists():
+            legacy.unlink()
+            pruned_alias_docs.append(alias)
+
     index_rows.sort(key=lambda r: -r["total_mentions"])
-    activated_at = ((previous_index.get("meta") or {}).get("storage_layout") or {}).get("activated_at")
-    layout = storage_contract(storage_version, activated_at=activated_at)
-    if storage_version == SHARDED_LAYOUT_VERSION:
-        referenced = {
-            stock_document_path(DB_DIR, row, version=storage_version, must_exist=True).resolve()
-            for row in index_rows
-        }
-        for path in STOCKS_DIR.rglob("*.json"):
-            if path.resolve() not in referenced:
-                path.unlink()
-        layout["stock_documents"].update(shard_stats(referenced, STOCKS_DIR))
     index_doc = {
         "meta": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -541,7 +487,6 @@ def main():
             "total_tickers": len(index_rows),
             "total_mentions": sum(r["total_mentions"] for r in index_rows),
             "dates": "ET (US Eastern); matches render/pipeline.py",
-            "storage_layout": layout,
             "note": "Data layer only — facts + raw mentions from ALL tracked bloggers, "
                     "merged per ticker with blogger_id attribution. All windowed/stance "
                     "aggregation + rankings (incl. cross-blogger consensus) are computed "
