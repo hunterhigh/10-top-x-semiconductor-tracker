@@ -24,19 +24,21 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-04",
-  "last_mention": "2026-07-18",
-  "total_mentions": 36,
+  "last_mention": "2026-07-22",
+  "total_mentions": 37,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 21,
     "octopusycc": 6,
     "StockMKTNewz": 5,
     "michaelsikand": 2,
     "zephyr_z9": 1,
-    "KawzInvests": 1
+    "KawzInvests": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 31,
-    "news": 5
+    "news": 5,
+    "flow": 1
   },
   "mentions": [
     {
@@ -892,6 +894,29 @@
         "likes": 68,
         "reposts": 0,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080103352340230205",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-22",
+      "created_at": "2026-07-22T21:31:00-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GLW",
+      "text": "BREAKING: Senator Alan Armstrong just disclosed more than 700 stock trades totaling over $10 million in volume, with nearly all filed well beyond the STOCK Act's 45-day reporting deadline.\n\nArmstrong, Oklahoma's newest senator and former CEO of Williams Companies ($WMB), disclosed 703 trades on July 21, including 654 purchases and 49 sales dating back to March 2026. Of those, 701 were reported 112 to 119 days after execution, meaning almost his entire opening-week portfolio remained undisclosed for nearly four months.\n\nHis early purchases included Apple ($AAPL) worth $250,000 to $500,000, along with NVIDIA ($NVDA), Alphabet ($GOOG), ASML ($ASML), and Berkshire Hathaway ($BRK.B) at $50,000 to $100,000 each.\n\nHe also disclosed selling between $5 million and $25 million of Williams Companies ($WMB), plus additional sales of Corning ($GLW), Pfizer ($PFE), Phillips 66 ($PSX), NextEra Energy ($NEE), Nasdaq ($NDAQ), and Teledyne ($TDY).\n\nDespite hundreds of late disclosures, the penalty under the STOCK Act is typically just $200.",
+      "url": "https://x.com/unusual_whales/status/2080103352340230205",
+      "kind": "post",
+      "engagement": {
+        "views": 92409,
+        "likes": 201,
+        "reposts": 47,
+        "replies": 51
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1909,11 +1934,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-23T01:06:17.127010+00:00",
+  "price_updated_at": "2026-07-23T03:14:12.595074+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-23",
     "asof": "2026-07-22",
-    "attempted_at": "2026-07-23T01:06:15.760592+00:00",
+    "attempted_at": "2026-07-23T03:14:12.593466+00:00",
     "status": "ok",
     "first_available_date": "2025-07-23",
     "last_available_date": "2026-07-22",
@@ -1924,7 +1949,7 @@
     "provider_symbol": "GLW",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-23T01:06:15.760592+00:00",
+    "checked_at": "2026-07-23T03:14:12.593466+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
