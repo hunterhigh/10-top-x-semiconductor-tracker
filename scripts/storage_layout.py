@@ -120,7 +120,7 @@ def index_stock_rows(index: dict[str, Any]) -> list[dict[str, Any]]:
     for instrument_id, raw in stocks.items():
         if not isinstance(raw, dict):
             raise StorageLayoutError(f"Invalid index row for {instrument_id}")
-        row = dict(raw)
+        row = raw
         declared = row.get("instrument_id") or (row.get("instrument") or {}).get("instrument_id")
         if declared != instrument_id:
             raise StorageLayoutError(
