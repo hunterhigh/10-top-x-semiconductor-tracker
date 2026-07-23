@@ -8,6 +8,7 @@ the local cache with the matching repository archive when the manifest changes.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -27,6 +28,32 @@ REQUIRED = {
     "config/bloggers.json",
     "config/blogger_profiles.json",
 }
+SCHEMA_VERSION = 2
+STORAGE_LAYOUT = "hash-sharded-v1"
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def validate_manifest(payload: dict) -> None:
+    if not payload.get("generated_at") or not payload.get("date_range"):
+        raise RuntimeError("Production manifest is incomplete")
+    if payload.get("schema_version") != SCHEMA_VERSION:
+        raise RuntimeError(
+            f"Unsupported database schema_version: {payload.get('schema_version')!r}"
+        )
+    if payload.get("storage_layout") != STORAGE_LAYOUT:
+        raise RuntimeError(
+            f"Unsupported database storage_layout: {payload.get('storage_layout')!r}"
+        )
+    for field in ("index_sha256", "price_cache_index_sha256", "stock_count"):
+        if payload.get(field) is None:
+            raise RuntimeError(f"Production manifest is missing {field}")
 
 
 def default_cache_dir() -> Path:
@@ -50,8 +77,7 @@ def remote_manifest() -> dict:
         payload = json.loads(fetch(f"{RAW_ROOT}/data/db/manifest.json"))
     except (json.JSONDecodeError, RuntimeError) as exc:
         raise RuntimeError("Production manifest is unavailable; refusing to use an unverified old snapshot") from exc
-    if not payload.get("generated_at") or not payload.get("date_range"):
-        raise RuntimeError("Production manifest is invalid; refusing to use an unverified old snapshot")
+    validate_manifest(payload)
     return payload
 
 
@@ -102,6 +128,10 @@ def sync(cache: Path | None = None) -> tuple[Path, dict, bool]:
         downloaded = local_manifest(staging)
         if not downloaded or downloaded.get("generated_at") != remote.get("generated_at"):
             raise RuntimeError("Snapshot archive does not match the manifest read at start; retry later")
+        validate_manifest(downloaded)
+        index_path = staging / "data" / "db" / "index.json"
+        if sha256(index_path) != downloaded.get("index_sha256"):
+            raise RuntimeError("Downloaded index.json does not match manifest.index_sha256")
         for required in ("config/bloggers.json", "config/blogger_profiles.json", "data/avatar_cache.json"):
             if not (staging / required).is_file():
                 raise RuntimeError(f"Snapshot is missing required file: {required}")

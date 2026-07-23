@@ -7,8 +7,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skill" / "scripts"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from dashboard_payload import TRACKED_ACCOUNT_IDS, build_payload
+from storage_layout import file_sha256, make_stock_index, stock_document_relative
 
 
 def mention(tweet_id, blogger_id, day, stance, ticker="ABC"):
@@ -69,7 +71,6 @@ class DashboardPayloadTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             db = Path(td) / "db"
             (db / "stocks").mkdir(parents=True)
-            (db / "manifest.json").write_text(json.dumps({"generated_at": "2026-07-21T01:00:00Z"}), encoding="utf-8")
 
             rows = [
                 mention(1, "aleabitoreddit", "2026-07-20", "bullish"),
@@ -79,10 +80,41 @@ class DashboardPayloadTests(unittest.TestCase):
                 mention(5, "StockMKTNewz", "2026-07-20", "bullish"),
                 mention(6, "DJTRadar", "2026-07-20", "bearish"),
             ]
-            (db / "stocks" / "ABC.json").write_text(json.dumps(stock("ABC", rows, short_history=True)), encoding="utf-8")
+            abc = stock("ABC", rows, short_history=True)
+            abc_path = db.joinpath(*stock_document_relative("US:ABC").parts)
+            abc_path.parent.mkdir(parents=True, exist_ok=True)
+            abc_path.write_text(json.dumps(abc), encoding="utf-8")
             # A bullish ETF must not enter monthly rows or favorite rankings.
             etf_rows = [mention(20 + i, account, "2026-07-20", "bullish", "ETF1") for i, account in enumerate(TRACKED_ACCOUNT_IDS)]
-            (db / "stocks" / "ETF1.json").write_text(json.dumps(stock("ETF1", etf_rows, asset_type="etf")), encoding="utf-8")
+            etf = stock("ETF1", etf_rows, asset_type="etf")
+            etf_path = db.joinpath(*stock_document_relative("US:ETF1").parts)
+            etf_path.parent.mkdir(parents=True, exist_ok=True)
+            etf_path.write_text(json.dumps(etf), encoding="utf-8")
+            index_rows = [
+                {
+                    "ticker": doc["ticker"],
+                    "instrument": doc["instrument"],
+                    "total_mentions": len(doc["mentions"]),
+                }
+                for doc in (abc, etf)
+            ]
+            index = make_stock_index(
+                index_rows, generated_at="2026-07-21T01:00:00Z"
+            )
+            (db / "index.json").write_text(
+                json.dumps(index, indent=2), encoding="utf-8"
+            )
+            (db / "manifest.json").write_text(
+                json.dumps({
+                    "generated_at": "2026-07-21T01:00:00Z",
+                    "schema_version": 2,
+                    "storage_layout": "hash-sharded-v1",
+                    "date_range": ["2026-07-20", "2026-07-20"],
+                    "stock_count": 2,
+                    "index_sha256": file_sha256(db / "index.json"),
+                }),
+                encoding="utf-8",
+            )
 
             payload = build_payload(db, "2026-07-20")
             self.assertEqual(payload["meta"]["scored_account_count"], 10)

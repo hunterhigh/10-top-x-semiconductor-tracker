@@ -22,6 +22,7 @@ from typing import Any, Iterable
 from jsonschema import Draft202012Validator, FormatChecker
 
 from report_scope import is_rankable_equity, monthly_top_pick_candidates
+from stock_store import StockStore
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -194,7 +195,12 @@ def load_roster(db: Path, avatar_cache: Path | None) -> list[dict[str, Any]]:
 
 
 def snapshot_id(manifest_path: Path, db: Path, avatar_cache: Path | None) -> str | None:
-    paths = [manifest_path, db / "blogger_profiles.json", db / "blogger_identities.json"]
+    paths = [
+        manifest_path,
+        db / "index.json",
+        db / "blogger_profiles.json",
+        db / "blogger_identities.json",
+    ]
     if avatar_cache:
         paths.append(avatar_cache)
     existing = [path for path in paths if path.is_file()]
@@ -469,7 +475,8 @@ def build_payload(db: Path, report_day: str, avatar_cache: Path | None = None) -
         raise ValueError(f"Expected exactly 10 tracked accounts, found {len(roster)}")
     scored_accounts = {b["id"] for b in roster}
     if len(scored_accounts) != 10: raise ValueError(f"Expected exactly 10 scored accounts, found {len(scored_accounts)}")
-    docs = [load(path, {}) for path in sorted((db / "stocks").glob("*.json"))]
+    store = StockStore(db)
+    docs = [load(path, {}) for path in store.iter_stock_paths()]
     docs = [doc for doc in docs if doc.get("ticker")]
     consensus_docs = [doc for doc in docs if is_consensus_equity(doc)]
     today = window(end, 1); week = window(end, 7); month = window(end, 28); previous_week = window(end - timedelta(days=7), 7)

@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "skill/scripts/dashboard_payload.py"
+      - "skill/scripts/stock_store.py"
       - "skill/scripts/report_scope.py"
       - "skill/scripts/render_dashboard.py"
       - "skill/scripts/validate_dashboard.py"
@@ -13,6 +14,8 @@ on:
       - "skill/SKILL.md"
       - "skill/references/**"
       - "scripts/build_db.py"
+      - "scripts/storage_layout.py"
+      - "scripts/verify_data.py"
       - "scripts/incremental_refresh.py"
       - "scripts/prices.py"
       - "scripts/resolve_tickers_eodhd.py"
