@@ -2,9 +2,21 @@
 Usage: python verify_data.py [--db <path>] [--require-price-scope]
 默认 db 路径: 脚本上级/data/db (和 render/build_db 一致，全博主共享)
 """
-import json, glob, os, sys, datetime
+import json, os, sys, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from storage_layout import (
+    SHARDED_LAYOUT_VERSION,
+    StorageLayoutError,
+    detect_storage_layout,
+    iter_stock_documents,
+    price_cache_relative,
+    shard_stats,
+    stock_document_path,
+    storage_contract,
+    validate_snapshot_layout,
+)
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')   # Windows console defaults to GBK, which can't print ✅/⚠️
@@ -43,7 +55,13 @@ print(f"DB path: {DB}")
 print(f"Stocks dir: {STOCKS_DIR}")
 print()
 
-files = sorted(glob.glob(str(STOCKS_DIR / '*.json')))
+INDEX_PATH = DB / 'index.json'
+try:
+    index_preview = json.load(open(INDEX_PATH, encoding='utf-8')) if INDEX_PATH.exists() else None
+    storage_version = detect_storage_layout(DB, index=index_preview)
+    files = [str(path) for path in iter_stock_documents(DB, index=index_preview, version=storage_version)]
+except (OSError, json.JSONDecodeError, StorageLayoutError) as exc:
+    print(f"ERROR: invalid storage layout: {exc}"); sys.exit(1)
 if not files:
     print("ERROR: no stock JSON files found!"); sys.exit(1)
 
@@ -133,6 +151,43 @@ if idx.exists():
 else:
     print("index.json: NOT found (optional, render doesn't need it)")
 
+storage_summary = storage_contract(storage_version)
+try:
+    stock_layout = validate_snapshot_layout(DB)
+    stock_stats = stock_layout["stock_documents"]
+    cache_root = DATA_DIR / "prices_cache"
+    if storage_version == SHARDED_LAYOUT_VERSION:
+        flat_cache = list(cache_root.glob("*.json"))
+        if flat_cache:
+            raise StorageLayoutError(f"v2 price cache still contains {len(flat_cache)} flat JSON file(s)")
+        cache_files = sorted(cache_root.rglob("*.json"))
+        seen_symbols = set()
+        for cache_file in cache_files:
+            cache_doc = json.load(open(cache_file, encoding='utf-8'))
+            symbol = str(cache_doc.get('price_symbol') or '')
+            if not symbol or symbol in seen_symbols:
+                raise StorageLayoutError(f"missing or duplicate price_symbol in {cache_file}")
+            seen_symbols.add(symbol)
+            expected = cache_root.joinpath(*price_cache_relative(symbol).parts).resolve()
+            if cache_file.resolve() != expected:
+                raise StorageLayoutError(f"price cache path does not match price_symbol: {cache_file}")
+    else:
+        cache_files = sorted(cache_root.glob("*.json"))
+    cache_stats = shard_stats(cache_files, cache_root)
+    if storage_version == SHARDED_LAYOUT_VERSION and not cache_stats['within_limit']:
+        raise StorageLayoutError(
+            f"A price-cache shard has {cache_stats['max_shard_width']} files; publish is blocked"
+        )
+    declared = ((index_data or {}).get('meta') or {}).get('storage_layout') or {}
+    storage_summary = dict(declared or storage_contract(storage_version))
+    storage_summary['stock_documents'] = {**storage_summary.get('stock_documents', {}), **stock_stats}
+    storage_summary['price_cache'] = {**storage_summary.get('price_cache', {}), **cache_stats}
+    print(f"Storage layout: v{storage_version}; stocks={stock_stats}; price_cache={cache_stats}")
+    if stock_stats.get('warning') or cache_stats.get('warning'):
+        print("WARNING: storage shard width is at or above 900 files")
+except (OSError, json.JSONDecodeError, StorageLayoutError) as exc:
+    errors.append(f"storage layout invalid: {exc}")
+
 price_scope = {
     "window_days": PRICE_WINDOW_DAYS,
     "min_mentions": PRICE_MIN_MENTIONS,
@@ -157,7 +212,7 @@ if index_data:
         status = row.get('price_status') or 'pending'
         status_counts[status] = status_counts.get(status, 0) + 1
         if status in {'partial', 'unavailable', 'unverified_symbol'}:
-            stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+            stock_file = stock_document_path(DB, row, version=storage_version, must_exist=True)
             stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
             reason = stock_doc.get('price_reason')
             if reason:
@@ -211,7 +266,7 @@ if index_data and latest:
 
     all_stock_rows = []
     for row in index_data.get('stocks', []):
-        stock_file = STOCKS_DIR / f"{row['ticker']}.json"
+        stock_file = stock_document_path(DB, row, version=storage_version, must_exist=True)
         stock_doc = json.load(open(stock_file, encoding='utf-8')) if stock_file.exists() else {}
         if stock_doc:
             all_stock_rows.append((row, stock_doc))
@@ -389,6 +444,7 @@ manifest = {
         "market_pending_review": market_missing,
         "price_unavailable_or_unverified": price_unavailable,
     },
+    "storage_layout": storage_summary,
     "price_scope": price_scope,
     "price_history_52w": price_history_52w,
     "profile_coverage": {
@@ -398,6 +454,9 @@ manifest = {
     },
 }
 mf = DB / 'manifest.json'
+if index_data is not None:
+    index_data.setdefault('meta', {})['storage_layout'] = storage_summary
+    json.dump(index_data, open(idx, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 json.dump(manifest, open(mf, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 print(f"\nManifest written: {mf}")
 print(json.dumps(manifest, indent=2))
