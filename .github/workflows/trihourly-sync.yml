@@ -24,7 +24,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  resolve-base:
+    runs-on: ubuntu-latest
+    outputs:
+      base_sha: ${{ steps.base.outputs.sha }}
+    steps:
+      # A queued workflow keeps the SHA from when it was dispatched. Resolve
+      # main only after this run owns the shared concurrency slot instead.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Record current main revision
+        id: base
+        run: |
+          sha=$(git rev-parse HEAD)
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "## Trihourly source" >> "$GITHUB_STEP_SUMMARY"
+          echo "- locked main revision: $sha" >> "$GITHUB_STEP_SUMMARY"
+
   fetch-extract:
+    needs: resolve-base
     name: fetch-extract (${{ matrix.blogger }})
     runs-on: ubuntu-latest
     strategy:
@@ -46,6 +66,9 @@ jobs:
           - DJTRadar
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.resolve-base.outputs.base_sha }}
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -125,13 +148,18 @@ jobs:
           retention-days: 1
 
   publish:
-    needs: fetch-extract
-    if: ${{ always() && !cancelled() }}
+    needs: [resolve-base, fetch-extract]
+    if: ${{ always() && !cancelled() && needs.resolve-base.result == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      BASE_SHA: ${{ needs.resolve-base.outputs.base_sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.resolve-base.outputs.base_sha }}
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -142,8 +170,12 @@ jobs:
           {
             echo "## Trihourly production gate"
             echo "- fetch/extract matrix result: ${{ needs.fetch-extract.result }}"
-            echo "- source revision: $GITHUB_SHA"
+            echo "- source revision: $BASE_SHA"
           } >> "$GITHUB_STEP_SUMMARY"
+          test "$(git rev-parse HEAD)" = "$BASE_SHA" || {
+            echo "::error::Publish checkout does not match the locked main revision."
+            exit 1
+          }
           test "${{ needs.fetch-extract.result }}" = "success" || {
             echo "::error::One or more account refreshes failed; no database, dashboard, artifact, or commit was published."
             exit 1
@@ -214,9 +246,9 @@ jobs:
           python -m playwright install --with-deps chromium
           mkdir -p "$RUNNER_TEMP/dashboard"
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json"
-          python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html"
-          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
-          sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
+          python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html"
+          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
+          sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
       - name: Write build metadata
         run: |
           python - <<'PY'
@@ -227,9 +259,9 @@ jobs:
           target.parent.mkdir(parents=True, exist_ok=True)
           target.write_text(json.dumps({
               "report_date_et": os.environ["REPORT_DATE"],
-              "source_sha": os.environ["GITHUB_SHA"],
+              "source_sha": os.environ["BASE_SHA"],
               "generated_at": datetime.now(timezone.utc).isoformat(),
-              "artifact_name": f"dashboard-{os.environ['GITHUB_SHA']}",
+              "artifact_name": f"dashboard-{os.environ['BASE_SHA']}",
           }, ensure_ascii=False, indent=2), encoding="utf-8")
           PY
       - name: Commit complete data snapshot
@@ -242,13 +274,12 @@ jobs:
             exit 0
           fi
           git commit -m "Trihourly snapshot $REPORT_DATE"
-          # The shared concurrency group prevents collisions between Actions
-          # writers.  This handles an unrelated human/code commit that landed
-          # while the dashboard was building; a real conflict fails closed.
-          git fetch origin main
-          if ! git rebase origin/main; then
-            git rebase --abort || true
-            echo "::error::Remote changed incompatibly while publishing; no snapshot was pushed. The next scheduled run will retry from main."
+          # Generated snapshots are not safely mergeable. Refuse to publish if
+          # main changed after this run locked its source revision.
+          git fetch --no-tags origin main
+          remote_sha=$(git rev-parse FETCH_HEAD)
+          if [ "$remote_sha" != "$BASE_SHA" ]; then
+            echo "::error::Main changed from $BASE_SHA to $remote_sha while this snapshot was building; no snapshot was pushed. Rerun from the new main revision."
             exit 1
           fi
           git push origin HEAD:main
@@ -256,14 +287,14 @@ jobs:
       - name: Upload validated dashboard artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dashboard-${{ github.sha }}
+          name: dashboard-${{ needs.resolve-base.outputs.base_sha }}
           path: ${{ runner.temp }}/dashboard/
           retention-days: 30
       - name: Publish artifact summary
         run: |
           {
             echo "## Published Dashboard"
-            echo "- Artifact: dashboard-${{ github.sha }} (retention: 30 days)"
-            echo "- HTML: dashboard-$REPORT_DATE-$GITHUB_SHA.html"
+            echo "- Artifact: dashboard-$BASE_SHA (retention: 30 days)"
+            echo "- HTML: dashboard-$REPORT_DATE-$BASE_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."
           } >> "$GITHUB_STEP_SUMMARY"
