@@ -17,9 +17,10 @@ Design decisions (per project plan):
     This is the only reliable way to preserve self-threads while dropping
     replies-to-others, because includeReplies=false may omit the thread tail.
   - Verbatim English text is preserved.
-  - Incremental: remembers the newest tweet id seen per-user
-    (data/bloggers/{user}/state.json) and stops early on the next run so you
-    only pull new tweets (cheap).
+  - Incremental: remembers per-user id/time watermarks in state.json. Exact
+    anchor matches are the fast path; whole-page id/time crossings recover
+    safely when the anchor tweet was deleted or omitted by the provider.
+    Strict page/tweet budgets prevent an incremental run becoming a backfill.
   - Idempotent: de-dupes by tweet id when merging into
     data/bloggers/{user}/raw_tweets.json.
 
@@ -39,7 +40,7 @@ import json
 import os
 import sys
 import time
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -60,7 +61,10 @@ def blogger_paths(username: str) -> tuple[Path, Path]:
     return d / "raw_tweets.json", d / "state.json"
 
 PAGE_SLEEP_SEC = 5.5           # twitterapi.io free tier: max 1 request / 5s (QPS-limited); small margin added
-MAX_PAGES_SAFETY = 2000        # hard stop so a bug can't loop forever (2000*20 = 40k tweets)
+MAX_BACKFILL_PAGES = 2000      # explicit backfills may intentionally traverse a large bounded history
+MAX_INCREMENTAL_PAGES = 50     # incremental runs must never degrade into an accidental full-history pull
+MAX_INCREMENTAL_TWEETS = 1000  # independent cost guard in case the API changes its page size
+INCREMENTAL_OVERLAP_HOURS = 24 # refetch a small overlap so delayed/provider-omitted tweets can recover
 RATE_LIMIT_RETRIES = 4         # how many times to back off and retry a single 429 before giving up
 RATE_LIMIT_BACKOFF_SEC = 6     # base backoff; grows with attempt number
 APPROX_COST_PER_TWEET = 0.15 / 1000  # USD, for a rough running estimate only
@@ -203,13 +207,61 @@ def reply_kind(t: dict, owner_username: str) -> str:
     return "reply"
 
 
-def _tweet_date(t: dict):
-    """created_at like 'Mon Jun 01 02:52:08 +0000 2026' -> date, or None if unparseable."""
+def _tweet_datetime(t: dict):
+    """created_at like 'Mon Jun 01 02:52:08 +0000 2026' -> datetime, or None."""
     s = t.get("createdAt") or ""
     try:
-        return datetime.strptime(s, "%a %b %d %H:%M:%S %z %Y").date()
+        return datetime.strptime(s, "%a %b %d %H:%M:%S %z %Y")
     except ValueError:
         return None
+
+
+def _tweet_date(t: dict):
+    parsed = _tweet_datetime(t)
+    return parsed.date() if parsed else None
+
+
+def _parse_state_datetime(value):
+    """Parse an ISO state timestamp as UTC, returning None for legacy/bad values."""
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _incremental_time_cutoff(state: dict):
+    """Return the overlap-bounded incremental cutoff from the last good receipt."""
+    last_success = (
+        _parse_state_datetime(state.get("last_successful_fetch_utc"))
+        or _parse_state_datetime(state.get("last_run_utc"))
+    )
+    if last_success is None:
+        return None
+    return last_success - timedelta(hours=INCREMENTAL_OVERLAP_HOURS)
+
+
+def _numeric_tweet_id(value):
+    text = str(value or "")
+    return int(text) if text.isdigit() else None
+
+
+def _newest_tweet_id(*values):
+    candidates = [value for value in values if value]
+    if not candidates:
+        return None
+    numeric_candidates = [
+        (numeric, value)
+        for value in candidates
+        if (numeric := _numeric_tweet_id(value)) is not None
+    ]
+    if numeric_candidates:
+        return max(numeric_candidates, key=lambda item: item[0])[1]
+    return candidates[0]
 
 
 # ----------------------------------------------------------------------------- main fetch
@@ -220,10 +272,17 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
     raw_path, state_path = blogger_paths(username)
     state = load_json(state_path, {})
     stop_at_id = None if backfill else state.get("newest_tweet_id")
+    stop_at_numeric_id = _numeric_tweet_id(stop_at_id)
+    incremental_cutoff = None if backfill else _incremental_time_cutoff(state)
+    page_limit = MAX_BACKFILL_PAGES if backfill else MAX_INCREMENTAL_PAGES
     mode = "BACKFILL (full history)" if backfill else "INCREMENTAL"
     log(f"Mode: {mode}")
     if stop_at_id:
         log(f"  will stop when reaching already-seen id {stop_at_id}")
+    if incremental_cutoff:
+        log(f"  incremental overlap cutoff: {incremental_cutoff.isoformat()}")
+    if not backfill:
+        log(f"  incremental safety budget: {page_limit} pages / {MAX_INCREMENTAL_TWEETS} tweets")
     if since_date:
         log(f"  will stop once tweets are older than {since_date.isoformat()} "
             f"(bounds pagination instead of pulling full account history)")
@@ -243,16 +302,20 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
     kept_new = []           # tweets we keep AND are new this run
     kind_counts = {}        # post / self_thread / reply tallies (this run)
     reached_known = False
-    reached_cutoff = False
     newest_id_this_run = None
+    stop_reason = None
+    failure_reason = None
+    seen_cursors = set()
+    seen_api_tweet_ids = set()
     had_error = False       # set on network/HTTP/API errors so a bad handle or bad
                              # key doesn't silently look identical to "0 tweets, done"
 
     while True:
-        page += 1
-        if page > MAX_PAGES_SAFETY:
-            log("Hit page safety limit; stopping.")
+        if page >= page_limit:
+            failure_reason = f"{mode.lower()} page budget exceeded ({page_limit})"
+            had_error = True
             break
+        page += 1
 
         params = dict(base_params)
         if cursor:
@@ -276,18 +339,27 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
             break   # success, non-429 error, or exhausted retries — stop looping
 
         if r is None:
-            log("  network error persisted after retries; stopping (partial data preserved).")
+            failure_reason = "network error persisted after retries"
+            log(f"  {failure_reason}; stopping (partial data preserved).")
             had_error = True
             break
 
         if r.status_code != 200:
-            log(f"  HTTP {r.status_code} on page {page}: {r.text[:200]}")
+            failure_reason = f"HTTP {r.status_code} on page {page}: {r.text[:200]}"
+            log(f"  {failure_reason}")
             had_error = True
             break
 
-        payload = r.json()
+        try:
+            payload = r.json()
+        except ValueError as exc:
+            failure_reason = f"invalid JSON on page {page}: {exc}"
+            log(f"  {failure_reason}")
+            had_error = True
+            break
         if payload.get("status") == "error":
-            log(f"  API error: {payload.get('message') or payload.get('msg')}")
+            failure_reason = f"API error: {payload.get('message') or payload.get('msg')}"
+            log(f"  {failure_reason}")
             had_error = True
             break
 
@@ -302,27 +374,67 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
 
         if not tweets:
             log(f"  page {page}: 0 tweets, done.")
+            stop_reason = "empty_page"
             break
 
         seen_total += len(tweets)
+        if not backfill and seen_total > MAX_INCREMENTAL_TWEETS:
+            failure_reason = (
+                f"incremental tweet budget exceeded "
+                f"({seen_total}>{MAX_INCREMENTAL_TWEETS})"
+            )
+            had_error = True
+            break
+
+        page_tweet_ids = {str(t.get("id")) for t in tweets if t.get("id")}
+        if not page_tweet_ids:
+            failure_reason = f"page {page} contained no usable tweet ids"
+            had_error = True
+            break
+        if page_tweet_ids and page_tweet_ids.issubset(seen_api_tweet_ids):
+            failure_reason = f"pagination made no tweet progress on page {page}"
+            had_error = True
+            break
+        seen_api_tweet_ids.update(page_tweet_ids)
+
+        page_numeric_ids = [_numeric_tweet_id(t.get("id")) for t in tweets]
+        page_numeric_ids = [tid for tid in page_numeric_ids if tid is not None]
+        page_datetimes = [_tweet_datetime(t) for t in tweets]
+        page_datetimes = [created for created in page_datetimes if created is not None]
+        crossed_id_watermark = bool(
+            stop_at_numeric_id is not None
+            and len(page_numeric_ids) == len(tweets)
+            and max(page_numeric_ids) < stop_at_numeric_id
+        )
+        crossed_time_watermark = bool(
+            incremental_cutoff is not None
+            and len(page_datetimes) == len(tweets)
+            and max(page_datetimes) < incremental_cutoff
+        )
+        crossed_since_date = bool(
+            since_date is not None
+            and len(page_datetimes) == len(tweets)
+            and max(created.date() for created in page_datetimes) < since_date
+        )
 
         for t in tweets:
             tid = t.get("id")
-            if newest_id_this_run is None:
-                newest_id_this_run = tid             # first tweet of page 1 = newest overall
+            newest_id_this_run = _newest_tweet_id(newest_id_this_run, tid)
             # incremental stop: we've caught up to what we already have
-            if stop_at_id and tid == stop_at_id:
+            if stop_at_id and str(tid) == str(stop_at_id):
                 reached_known = True
                 break
-            # date-bounded stop: tweets arrive newest-first, so once one is older
-            # than since_date, every remaining tweet (rest of this page + all
-            # future pages) is too — safe to stop immediately without pulling
-            # the account's full history just to throw most of it away later.
+            # Do not retain records outside an explicit backfill date bound.
+            # We decide whether pagination can stop at page level below so a
+            # single out-of-order or pinned tweet cannot truncate the page.
             if since_date:
                 d = _tweet_date(t)
                 if d is not None and d < since_date:
-                    reached_cutoff = True
-                    break
+                    continue
+            if incremental_cutoff:
+                created = _tweet_datetime(t)
+                if created is not None and created < incremental_cutoff:
+                    continue
             kind = reply_kind(t, username)
             kind_counts[kind] = kind_counts.get(kind, 0) + 1
             kept_new.append(slim_tweet(t, kind))
@@ -332,24 +444,44 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
 
         if reached_known:
             log("  reached already-seen tweet; stopping incremental pull.")
+            stop_reason = "exact_anchor"
             break
-        if reached_cutoff:
-            log(f"  reached tweets older than {since_date.isoformat()}; stopping bounded pull.")
+        if crossed_id_watermark:
+            log("  entire page is older than the saved tweet-id watermark; stopping.")
+            stop_reason = "crossed_id_watermark"
+            break
+        if crossed_time_watermark:
+            log("  entire page is older than the incremental overlap cutoff; stopping.")
+            stop_reason = "crossed_time_watermark"
+            break
+        if crossed_since_date:
+            log(f"  entire page is older than {since_date.isoformat()}; stopping bounded pull.")
+            stop_reason = "crossed_since_date"
             break
         if not has_next:
             log("  no more pages.")
+            stop_reason = "no_more_pages"
             break
-        cursor = next_cur
-        if not cursor:
+        if not next_cur:
             log("  empty next_cursor; stopping.")
+            stop_reason = "empty_cursor"
             break
+        if next_cur == cursor or next_cur in seen_cursors:
+            failure_reason = f"pagination cursor loop detected on page {page}"
+            had_error = True
+            break
+        seen_cursors.add(next_cur)
+        cursor = next_cur
         time.sleep(PAGE_SLEEP_SEC)
 
     # Do not let a partial page, expired credit, bad key, or temporary network
     # failure publish an apparently fresh snapshot from the old local cache.
     # Retrying from the unchanged watermark is deliberate and idempotent.
     if had_error:
-        log(f"FAILING: @{username} fetch failed; raw tweets and state watermark were left unchanged.")
+        log(
+            f"FAILING: @{username} fetch failed ({failure_reason or 'unknown error'}); "
+            "raw tweets and state watermark were left unchanged."
+        )
         sys.exit(1)
 
     # ----- merge into raw store (de-dupe by tweet_id)
@@ -370,15 +502,18 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
 
     # update state
     if newest_id_this_run:
-        state["newest_tweet_id"] = max(
-            [newest_id_this_run] + ([state["newest_tweet_id"]] if state.get("newest_tweet_id") else []),
-            key=lambda x: int(x) if str(x).isdigit() else 0,
+        state["newest_tweet_id"] = _newest_tweet_id(
+            state.get("newest_tweet_id"),
+            newest_id_this_run,
         )
     successful_at = datetime.now(timezone.utc).isoformat()
     state["last_run_utc"] = successful_at  # legacy compatibility
     state["last_successful_fetch_utc"] = successful_at
     state["last_api_tweets_seen"] = seen_total
     state["last_new_tweets_added"] = added
+    state["last_pages_fetched"] = page
+    state["last_fetch_stop_reason"] = stop_reason or "completed"
+    state["last_anchor_seen"] = reached_known
     state["username"] = username
     save_json(state_path, state)
 
@@ -389,6 +524,8 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
     log(f"  pages fetched      : {page}")
     log(f"  tweets seen (API)  : {seen_total}  (~${est_cost:.3f} est.)")
     log(f"  kept new this run  : {added}")
+    log(f"  stop reason        : {stop_reason or 'completed'}")
+    log(f"  exact anchor seen  : {reached_known}")
     log(f"  breakdown (run)    : posts={kind_counts.get('post',0)} "
         f"self_thread={kind_counts.get('self_thread',0)} reply={kind_counts.get('reply',0)}")
     log(f"  total in store     : {len(merged)}  -> {raw_path}")

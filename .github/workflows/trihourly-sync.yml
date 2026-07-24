@@ -106,6 +106,9 @@ jobs:
           print(f"- last successful fetch UTC: {state.get('last_successful_fetch_utc', 'unavailable')}")
           print(f"- API tweets returned: {state.get('last_api_tweets_seen', 'unavailable')}")
           print(f"- new tweets added: {state.get('last_new_tweets_added', 'unavailable')}")
+          print(f"- pages fetched: {state.get('last_pages_fetched', 'unavailable')}")
+          print(f"- stop reason: {state.get('last_fetch_stop_reason', 'unavailable')}")
+          print(f"- exact anchor seen: {state.get('last_anchor_seen', 'unavailable')}")
           PY
           if [ "${{ steps.fetch.outcome }}" != "success" ]; then
             echo "- failure detail:" >> "$GITHUB_STEP_SUMMARY"
