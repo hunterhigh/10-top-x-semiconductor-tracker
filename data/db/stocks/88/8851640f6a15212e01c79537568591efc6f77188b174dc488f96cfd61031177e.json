@@ -1,6 +1,6 @@
 {
   "ticker": "INTC",
-  "cashtag": "intc",
+  "cashtag": "$INTC",
   "instrument": {
     "instrument_id": "US:INTC",
     "display_code": "INTC",
@@ -25,22 +25,22 @@
   "thesis_summary": null,
   "first_mention": "2025-09-23",
   "last_mention": "2026-07-23",
-  "total_mentions": 223,
+  "total_mentions": 226,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 141,
-    "jukan05": 28,
-    "StockMKTNewz": 26,
+    "jukan05": 29,
+    "StockMKTNewz": 27,
     "octopusycc": 7,
     "ren_stocks": 7,
     "unusual_whales": 4,
     "zephyr_z9": 3,
+    "KawzInvests": 3,
     "DJTRadar": 3,
-    "michaelsikand": 2,
-    "KawzInvests": 2
+    "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 190,
-    "news": 26,
+    "opinion": 192,
+    "news": 27,
     "flow": 4,
     "disclosure": 3
   },
@@ -5357,6 +5357,75 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080412350557905030",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T17:58:51-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Intel",
+      "text": "The 🇺🇸 Government is now up almost ~$37B on its Intel shares",
+      "url": "https://x.com/StockMKTNewz/status/2080412350557905030",
+      "kind": "post",
+      "engagement": {
+        "views": 31774,
+        "likes": 67,
+        "reposts": 5,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080421422330159420",
+      "blogger_id": "jukan05",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T18:34:54-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Intel",
+      "text": "@jimcramer Is this why Intel’s stock fell again?",
+      "url": "https://x.com/jukan05/status/2080421422330159420",
+      "kind": "reply",
+      "engagement": {
+        "views": 5032,
+        "likes": 94,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080428780766519786",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T19:04:08-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "$INTC You really can't make this up 🤣 https://t.co/8mcpjrtndt",
+      "url": "https://x.com/KawzInvests/status/2080428780766519786",
+      "kind": "post",
+      "engagement": {
+        "views": 9053,
+        "likes": 69,
+        "reposts": 4,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6367,18 +6436,22 @@
     {
       "date": "2026-07-22",
       "close": 102.62
+    },
+    {
+      "date": "2026-07-23",
+      "close": 100.23
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-23T21:17:18.086884+00:00",
+  "price_updated_at": "2026-07-24T00:16:13.436877+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-24",
     "asof": "2026-07-23",
-    "attempted_at": "2026-07-23T21:17:17.161462+00:00",
+    "attempted_at": "2026-07-24T00:16:12.423805+00:00",
     "status": "ok",
     "first_available_date": "2025-07-24",
-    "last_available_date": "2026-07-22",
+    "last_available_date": "2026-07-23",
     "reason": null
   },
   "price_source_state": {
@@ -6386,7 +6459,7 @@
     "provider_symbol": "INTC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-23T21:17:17.161462+00:00",
+    "checked_at": "2026-07-24T00:16:12.423805+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

@@ -26,15 +26,15 @@
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
   "last_mention": "2026-07-23",
-  "total_mentions": 814,
+  "total_mentions": 815,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 778,
+    "aleabitoreddit": 779,
     "ren_stocks": 33,
     "jukan05": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 814
+    "opinion": 815
   },
   "mentions": [
     {
@@ -21504,6 +21504,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080411863448522994",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T17:56:55-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "checks very positive for SIVE in CPO segment",
+        "laser supplier for Ayar and GFS",
+        "Ayar and GFS linked with possible AMD CPO routes"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "Main thing was executive commentary on CPO thematically. Regarding $AMD + hyperscaler adoption + timelines. \n\nChecks were very positive for the CPO segment that sold off on delay news. \n\nAnd very positive for $SIVE in that segment, since they're the laser supplier for Ayar, $GFS, that are both linked with possible $AMD CPO routes. \n\nBut couldn't get direct supplier confirmation since that's confidential.",
+      "url": "https://x.com/aleabitoreddit/status/2080411863448522994",
+      "kind": "reply",
+      "engagement": {
+        "views": 9746,
+        "likes": 114,
+        "reposts": 4,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -22502,29 +22529,36 @@
     {
       "date": "2026-07-21",
       "close": 40.98
+    },
+    {
+      "date": "2026-07-22",
+      "close": 37.76
+    },
+    {
+      "date": "2026-07-23",
+      "close": 33.66
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "SEK",
-  "price_updated_at": "2026-07-23T21:17:42.145112+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-07-24T00:16:37.722649+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-24",
     "asof": "2026-07-23",
-    "attempted_at": "2026-07-23T21:17:42.011037+00:00",
+    "attempted_at": "2026-07-24T00:16:37.305254+00:00",
     "status": "ok",
     "first_available_date": "2025-07-24",
-    "last_available_date": "2026-07-21",
+    "last_available_date": "2026-07-23",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-07-23T21:17:42.011037+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-07-24T00:17:42.011037+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-07-24T00:16:37.305254+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }
