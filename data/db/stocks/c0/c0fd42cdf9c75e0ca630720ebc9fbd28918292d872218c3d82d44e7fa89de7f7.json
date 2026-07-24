@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-13",
-  "last_mention": "2026-07-15",
-  "total_mentions": 8,
+  "last_mention": "2026-07-23",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 5,
+    "StockMKTNewz": 6,
     "aleabitoreddit": 3
   },
   "total_mentions_by_signal_type": {
     "opinion": 3,
-    "news": 5
+    "news": 6
   },
   "mentions": [
     {
@@ -215,6 +215,31 @@
         "likes": 16,
         "reposts": 5,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2080446953431646241",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-23",
+      "created_at": "2026-07-23T20:16:21-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "closed lower for 7 consecutive trading days"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRWD",
+      "text": "CrowdStrike $CRWD has now closed the day lower for the last 7 trading days in a row\n\n🔴🔴🔴🔴🔴🔴🔴 https://t.co/slWCFSFW1p",
+      "url": "https://x.com/StockMKTNewz/status/2080446953431646241",
+      "kind": "post",
+      "engagement": {
+        "views": 32654,
+        "likes": 180,
+        "reposts": 9,
+        "replies": 23
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
