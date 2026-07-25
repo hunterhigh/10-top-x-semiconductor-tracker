@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-24T21:15:04.852760+00:00",
+  "generated_at": "2026-07-25T00:14:40.079499+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1665,
-    "total_mentions": 20361,
+    "total_mentions": 20366,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-24T21:16:49.939406+00:00"
+    "prices_updated_at": "2026-07-25T00:16:24.914387+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -352,11 +352,11 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-03",
       "last_mention": "2026-07-24",
-      "total_mentions": 412,
+      "total_mentions": 413,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 292,
-        "StockMKTNewz": 74,
+        "StockMKTNewz": 75,
         "unusual_whales": 12,
         "ren_stocks": 10,
         "jukan05": 9,
@@ -442,11 +442,11 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-07-24",
-      "total_mentions": 394,
+      "total_mentions": 395,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 286,
-        "StockMKTNewz": 48,
+        "StockMKTNewz": 49,
         "unusual_whales": 26,
         "ren_stocks": 7,
         "zephyr_z9": 7,
@@ -729,7 +729,7 @@
         "KawzInvests": 1,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -904,11 +904,11 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
-      "price_history_52w_status": "pending"
+      "price_history_52w_status": "ok"
     },
     "US:INTC": {
       "ticker": "INTC",
@@ -1124,7 +1124,7 @@
         "ren_stocks": 4,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -2614,11 +2614,11 @@
       "industry": null,
       "first_mention": "2025-11-24",
       "last_mention": "2026-07-24",
-      "total_mentions": 46,
+      "total_mentions": 47,
       "blogger_count": 4,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 34,
-        "StockMKTNewz": 9,
+        "StockMKTNewz": 10,
         "unusual_whales": 2,
         "ren_stocks": 1
       },
@@ -10843,6 +10843,43 @@
       "hash": "b0bd711aeeb84ec01234d2c879c49fc89a17075f6d8067557587286315862802",
       "path": "stocks/b0/b0bd711aeeb84ec01234d2c879c49fc89a17075f6d8067557587286315862802.json"
     },
+    "US:WBD": {
+      "ticker": "WBD",
+      "instrument": {
+        "instrument_id": "US:WBD",
+        "display_code": "WBD",
+        "display_name": "Warner Bros. Discovery, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "WBD"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "WBD",
+        "verification_status": "verified"
+      },
+      "cashtag": "Warner Bros Discovery",
+      "price_symbol": "WBD",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Warner Bros. Discovery, Inc.",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-24",
+      "total_mentions": 8,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 4,
+        "unusual_whales": 4
+      },
+      "price_status": "ok",
+      "instrument_id": "US:WBD",
+      "hash": "3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b",
+      "path": "stocks/32/3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b.json"
+    },
     "US:WELL": {
       "ticker": "WELL",
       "instrument": {
@@ -12125,43 +12162,6 @@
       "instrument_id": "US:USB",
       "hash": "1aeb2513c77ab9a93a6d77b3142b460d1230c775393d8b47b40c8bfcd7bcdbfa",
       "path": "stocks/1a/1aeb2513c77ab9a93a6d77b3142b460d1230c775393d8b47b40c8bfcd7bcdbfa.json"
-    },
-    "US:WBD": {
-      "ticker": "WBD",
-      "instrument": {
-        "instrument_id": "US:WBD",
-        "display_code": "WBD",
-        "display_name": "Warner Bros. Discovery, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "WBD"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "WBD",
-        "verification_status": "verified"
-      },
-      "cashtag": "Warner Bros. Discovery",
-      "price_symbol": "WBD",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Warner Bros. Discovery, Inc.",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-20",
-      "total_mentions": 7,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4,
-        "unusual_whales": 3
-      },
-      "price_status": "ok",
-      "instrument_id": "US:WBD",
-      "hash": "3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b",
-      "path": "stocks/32/3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b.json"
     },
     "US:WEN": {
       "ticker": "WEN",
@@ -14299,6 +14299,43 @@
       "instrument_id": "UNVERIFIED:NEO",
       "hash": "19fa1c776000927a8f1e68e0bd2ade129a5b67f39aa5b46f377143b324b55e6b",
       "path": "stocks/19/19fa1c776000927a8f1e68e0bd2ade129a5b67f39aa5b46f377143b324b55e6b.json"
+    },
+    "UNVERIFIED:PARA": {
+      "ticker": "PARA",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:PARA",
+        "display_code": "PARA",
+        "display_name": "Paramount Global",
+        "display_market": "Market unverified",
+        "aliases": [
+          "PARA"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Paramount",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Paramount Global",
+      "industry": null,
+      "first_mention": "2026-06-12",
+      "last_mention": "2026-07-24",
+      "total_mentions": 5,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 4,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:PARA",
+      "hash": "4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a",
+      "path": "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json"
     },
     "US:ABAT": {
       "ticker": "ABAT",
@@ -16862,43 +16899,6 @@
       "instrument_id": "UNVERIFIED:P4O",
       "hash": "b5f7f137cd1c007352f2526d4a9bdfd7bf688911578bef5488a3f364cf95b215",
       "path": "stocks/b5/b5f7f137cd1c007352f2526d4a9bdfd7bf688911578bef5488a3f364cf95b215.json"
-    },
-    "UNVERIFIED:PARA": {
-      "ticker": "PARA",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:PARA",
-        "display_code": "PARA",
-        "display_name": "Paramount Global",
-        "display_market": "Market unverified",
-        "aliases": [
-          "PARA"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Paramount",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Paramount Global",
-      "industry": null,
-      "first_mention": "2026-06-12",
-      "last_mention": "2026-07-20",
-      "total_mentions": 4,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "unusual_whales": 3,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:PARA",
-      "hash": "4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a",
-      "path": "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json"
     },
     "UNVERIFIED:SATS": {
       "ticker": "SATS",
@@ -24860,7 +24860,7 @@
       "total_mentions_by_blogger": {
         "jukan05": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005935",
       "hash": "ea26c17da03820f86909ed7de42d358209c4fde72dce8ecbc0d3bce6adb4a7b0",
       "path": "stocks/ea/ea26c17da03820f86909ed7de42d358209c4fde72dce8ecbc0d3bce6adb4a7b0.json"
@@ -80443,7 +80443,7 @@
     "WALT DISNEY CO": [
       "US:DIS"
     ],
-    "WARNER BROS. DISCOVERY": [
+    "WARNER BROS DISCOVERY": [
       "US:WBD"
     ],
     "WARNER BROS. DISCOVERY, INC.": [
@@ -81196,6 +81196,7 @@
     "stocks/c0/c066d87f3ee3c24f3f393b6af33653cf9c8f59134a75776e3bb83f36d5bdc743.json",
     "stocks/a6/a626b4d610880a5afb1f2dd3dcea3cfeef98f943260661532d828453f3339da7.json",
     "stocks/b0/b0bd711aeeb84ec01234d2c879c49fc89a17075f6d8067557587286315862802.json",
+    "stocks/32/3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b.json",
     "stocks/f7/f7f99ab99edbc5169d8cecec479b3e54de9ac069f472cebeb6927a3cb625419a.json",
     "stocks/dd/dd9597066f55c0b70cafb5b53c96514f203b3ec6780c3b338c4d7b35c888b2d6.json",
     "stocks/32/3291c9945bd444f8ee98678814d1e4c8575cc7363d587210b1c60a4a01cfe472.json",
@@ -81231,7 +81232,6 @@
     "stocks/e3/e3b8e320711e631b7075c7cf30ca7b074ebd299df5f07a6533207764d8ab5bf7.json",
     "stocks/a8/a86de389d7782e31057d2135ea2ca8b6531118b45a7d8d13d7bf8869f00e1576.json",
     "stocks/1a/1aeb2513c77ab9a93a6d77b3142b460d1230c775393d8b47b40c8bfcd7bcdbfa.json",
-    "stocks/32/3205388f8db744b56a43508e0a4f7ff85810897147fca46d964e779a3b7c0a1b.json",
     "stocks/11/11d59d9d12d7059b14d66d2404e319ff9df37a3ef6a66e3fec56611f9c77cc7e.json",
     "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json",
     "stocks/c2/c24b5dd3dfab173b6c380e175619fe104ef5ad2fcf262cf6d908b6f58e57b124.json",
@@ -81290,6 +81290,7 @@
     "stocks/d7/d70daa5f08085ed0ddea090e4aec3cec249135359863672fda2364840818cf17.json",
     "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json",
     "stocks/19/19fa1c776000927a8f1e68e0bd2ade129a5b67f39aa5b46f377143b324b55e6b.json",
+    "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json",
     "stocks/a9/a9245017c15962e3b15a8b05774def51cd9f225cf4b737a853b5025b4b319d78.json",
     "stocks/40/40334f7b2a494833e33e31a39aac5660b468cd0625ba6b4077eff9fc163a5e8f.json",
     "stocks/d8/d83abd76622a25a1cee924510d63dfabaea6d379af578e1698143067956d4ddd.json",
@@ -81360,7 +81361,6 @@
     "stocks/aa/aa5b011e8dbdc71ded9b2842856d586a4030946ece3160490a7c034c147c389c.json",
     "stocks/1c/1ceca2302c4288681386d8a13c2cd944039fd985001a082d2f415024c7efaaca.json",
     "stocks/b5/b5f7f137cd1c007352f2526d4a9bdfd7bf688911578bef5488a3f364cf95b215.json",
-    "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json",
     "stocks/8e/8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3.json",
     "stocks/31/312d3566234f461702802953645ea5ab263eebc76db95c93edab9e8168f079bc.json",
     "stocks/b7/b7e148324878031f780b81fa29b83f279090f8b8d6a7cfd9c023de15c5f80cb2.json",
