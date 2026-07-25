@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-25T18:15:26.186104+00:00",
+  "generated_at": "2026-07-25T21:16:32.510100+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1668,
-    "total_mentions": 20428,
+    "total_mentions": 20430,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-25T18:18:17.077790+00:00"
+    "prices_updated_at": "2026-07-25T21:18:26.971017+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -432,7 +432,7 @@
         "price_symbol": "META",
         "verification_status": "verified"
       },
-      "cashtag": "Meta",
+      "cashtag": "$META",
       "price_symbol": "META",
       "exchange": "US",
       "currency": "USD",
@@ -442,12 +442,12 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-07-25",
-      "total_mentions": 396,
+      "total_mentions": 397,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 286,
         "StockMKTNewz": 49,
-        "unusual_whales": 26,
+        "unusual_whales": 27,
         "jukan05": 7,
         "ren_stocks": 7,
         "zephyr_z9": 7,
@@ -3079,6 +3079,47 @@
       "hash": "47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6",
       "path": "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json"
     },
+    "UNVERIFIED:SPX": {
+      "ticker": "SPX",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SPX",
+        "display_code": "SPX",
+        "display_name": "S&P 500 Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SPX"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "S&P 500",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "S&P 500 Index",
+      "industry": null,
+      "first_mention": "2025-10-01",
+      "last_mention": "2026-07-25",
+      "total_mentions": 37,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 16,
+        "StockMKTNewz": 9,
+        "octopusycc": 7,
+        "aleabitoreddit": 2,
+        "michaelsikand": 2,
+        "ren_stocks": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SPX",
+      "hash": "3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3",
+      "path": "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json"
+    },
     "US:GLW": {
       "ticker": "GLW",
       "instrument": {
@@ -3163,47 +3204,6 @@
       "hash": "f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474",
       "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
       "price_history_52w_status": "insufficient_history"
-    },
-    "UNVERIFIED:SPX": {
-      "ticker": "SPX",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:SPX",
-        "display_code": "SPX",
-        "display_name": "S&P 500 Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "SPX"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "S&P 500",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "S&P 500 Index",
-      "industry": null,
-      "first_mention": "2025-10-01",
-      "last_mention": "2026-07-21",
-      "total_mentions": 36,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "unusual_whales": 16,
-        "StockMKTNewz": 8,
-        "octopusycc": 7,
-        "aleabitoreddit": 2,
-        "michaelsikand": 2,
-        "ren_stocks": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:SPX",
-      "hash": "3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3",
-      "path": "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json"
     },
     "US:AMKR": {
       "ticker": "AMKR",
@@ -81141,9 +81141,9 @@
     "stocks/a7/a79a3d0d677e4415296fd8002f78fb73693628d23b38393374c0de2b72fdfb3c.json",
     "stocks/42/42eff24b5795c278a96adc23563cbb381a453d8ec714b6723aa7560dc70912d2.json",
     "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json",
+    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
     "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
-    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json",
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
     "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
