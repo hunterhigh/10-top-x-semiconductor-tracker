@@ -25,13 +25,13 @@
   "thesis_summary": null,
   "first_mention": "2025-09-23",
   "last_mention": "2026-07-25",
-  "total_mentions": 227,
+  "total_mentions": 229,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 141,
-    "jukan05": 29,
+    "jukan05": 30,
     "StockMKTNewz": 28,
+    "ren_stocks": 8,
     "octopusycc": 7,
-    "ren_stocks": 7,
     "unusual_whales": 4,
     "zephyr_z9": 3,
     "KawzInvests": 3,
@@ -39,7 +39,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 192,
+    "opinion": 194,
     "news": 28,
     "flow": 4,
     "disclosure": 3
@@ -5449,6 +5449,55 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081219381296845123",
+      "blogger_id": "jukan05",
+      "date": "2026-07-25",
+      "created_at": "2026-07-25T23:25:42-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "$INTC X $SKHY ? 👀",
+      "url": "https://x.com/jukan05/status/2081219381296845123",
+      "kind": "post",
+      "engagement": {
+        "views": 34638,
+        "likes": 151,
+        "reposts": 11,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081221107562979764",
+      "blogger_id": "ren_stocks",
+      "date": "2026-07-25",
+      "created_at": "2026-07-25T23:32:33-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "KOSPI raising all AI Infrastructure stocks with it",
+        "Jensen Huang says Korean stocks will rise again"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "@JensenHuang, the closest thing we have to a president of AI, says Korean stocks will rise again… and you’re selling?\n\nWhen KOSPI raises all the AI Infrastructure stocks raises with it:\n\n$MU $SNDK $LITE $AAOI $SIVE $AMD $NBIS $PENG $AEHR $SKHY $INTC https://t.co/7PnGhpzrcA",
+      "url": "https://x.com/ren_stocks/status/2081221107562979764",
+      "kind": "post",
+      "engagement": {
+        "views": 5241,
+        "likes": 34,
+        "reposts": 2,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6471,11 +6520,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-26T03:18:24.696026+00:00",
+  "price_updated_at": "2026-07-26T06:18:14.494270+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-26",
-    "asof": "2026-07-25",
-    "attempted_at": "2026-07-26T03:18:23.534176+00:00",
+    "requested_start": "2025-07-27",
+    "asof": "2026-07-26",
+    "attempted_at": "2026-07-26T06:18:13.421456+00:00",
     "status": "ok",
     "first_available_date": "2025-07-28",
     "last_available_date": "2026-07-24",
@@ -6486,7 +6535,7 @@
     "provider_symbol": "INTC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-26T03:18:23.534176+00:00",
+    "checked_at": "2026-07-26T06:18:13.421456+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
