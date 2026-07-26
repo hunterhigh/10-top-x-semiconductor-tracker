@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-26T00:16:18.228833+00:00",
+  "generated_at": "2026-07-26T03:18:00.103703+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1668,
-    "total_mentions": 20430,
+    "total_mentions": 20431,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-26T00:18:26.542302+00:00"
+    "prices_updated_at": "2026-07-26T03:20:01.006856+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -729,7 +729,7 @@
         "KawzInvests": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -904,7 +904,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1086,7 +1086,7 @@
         "ren_stocks": 4,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -2857,7 +2857,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "UNVERIFIED:WYFI": {
       "ticker": "WYFI",
@@ -3996,6 +3997,43 @@
       "hash": "7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba",
       "path": "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json"
     },
+    "US:AEVA": {
+      "ticker": "AEVA",
+      "instrument": {
+        "instrument_id": "US:AEVA",
+        "display_code": "AEVA",
+        "display_name": "Aeva Technologies, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "AEVA"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "AEVA",
+        "verification_status": "verified"
+      },
+      "cashtag": "$AEVA",
+      "price_symbol": "AEVA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Aeva Technologies, Inc.",
+      "industry": null,
+      "first_mention": "2026-02-09",
+      "last_mention": "2026-07-25",
+      "total_mentions": 29,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 28,
+        "ren_stocks": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:AEVA",
+      "hash": "8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70",
+      "path": "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json"
+    },
     "US:AMAT": {
       "ticker": "AMAT",
       "instrument": {
@@ -4199,42 +4237,6 @@
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
       "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
-    },
-    "US:AEVA": {
-      "ticker": "AEVA",
-      "instrument": {
-        "instrument_id": "US:AEVA",
-        "display_code": "AEVA",
-        "display_name": "Aeva Technologies, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "AEVA"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "AEVA",
-        "verification_status": "verified"
-      },
-      "cashtag": "$AEVA",
-      "price_symbol": "AEVA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Aeva Technologies, Inc.",
-      "industry": null,
-      "first_mention": "2026-02-09",
-      "last_mention": "2026-07-08",
-      "total_mentions": 28,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 28
-      },
-      "price_status": "ok",
-      "instrument_id": "US:AEVA",
-      "hash": "8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70",
-      "path": "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json"
     },
     "US:GME": {
       "ticker": "GME",
@@ -4743,7 +4745,8 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:TER": {
       "ticker": "TER",
@@ -81165,12 +81168,12 @@
     "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
+    "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/03/0332837b414bda34374b93f2b5be80157f9c89dd81e13f2a116ce744bf3a7a20.json",
     "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
     "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
-    "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
     "stocks/15/15934c8eba8e809e2de8ddf72743c163eb1ea00a2e771e73e2cdb9f3d6108230.json",
     "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
