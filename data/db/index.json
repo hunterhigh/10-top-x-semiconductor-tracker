@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-26T15:17:42.925412+00:00",
+  "generated_at": "2026-07-26T18:16:14.676877+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1669,
-    "total_mentions": 20488,
+    "total_mentions": 20492,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-26T15:20:05.101225+00:00"
+    "prices_updated_at": "2026-07-26T18:18:13.101766+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -398,7 +398,7 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-03",
       "last_mention": "2026-07-26",
-      "total_mentions": 416,
+      "total_mentions": 417,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 292,
@@ -406,8 +406,8 @@
         "unusual_whales": 12,
         "ren_stocks": 10,
         "jukan05": 9,
+        "KawzInvests": 7,
         "zephyr_z9": 6,
-        "KawzInvests": 6,
         "octopusycc": 3
       },
       "price_status": "ok",
@@ -1394,7 +1394,7 @@
         "price_symbol": "RDDT",
         "verification_status": "verified"
       },
-      "cashtag": "Reddit",
+      "cashtag": "RDDT (implied)",
       "price_symbol": "RDDT",
       "exchange": "US",
       "currency": "USD",
@@ -1403,12 +1403,12 @@
       "company": "Reddit, Inc.",
       "industry": null,
       "first_mention": "2025-09-14",
-      "last_mention": "2026-07-22",
-      "total_mentions": 161,
+      "last_mention": "2026-07-26",
+      "total_mentions": 163,
       "blogger_count": 5,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 154,
-        "KawzInvests": 3,
+        "KawzInvests": 5,
         "michaelsikand": 2,
         "octopusycc": 1,
         "StockMKTNewz": 1
@@ -20085,6 +20085,42 @@
       "hash": "8c05684dc1a4efe39f466297cd6606cf422cbc471faafb40f7e6fd8ddafa9559",
       "path": "stocks/8c/8c05684dc1a4efe39f466297cd6606cf422cbc471faafb40f7e6fd8ddafa9559.json"
     },
+    "UNVERIFIED:ANDURIL": {
+      "ticker": "ANDURIL",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:ANDURIL",
+        "display_code": "ANDURIL",
+        "display_name": "Anduril Industries",
+        "display_market": "Market unverified",
+        "aliases": [
+          "ANDURIL"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Anduril",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Anduril Industries",
+      "industry": null,
+      "first_mention": "2026-06-21",
+      "last_mention": "2026-07-26",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:ANDURIL",
+      "hash": "4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844",
+      "path": "stocks/47/4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844.json"
+    },
     "UNVERIFIED:BOA": {
       "ticker": "BOA",
       "instrument": {
@@ -26435,42 +26471,6 @@
       "instrument_id": "UNVERIFIED:AMSL",
       "hash": "ae853e88f22e3e787e44e90007eb3fd5619467e0c1a237cc188063c1832275d0",
       "path": "stocks/ae/ae853e88f22e3e787e44e90007eb3fd5619467e0c1a237cc188063c1832275d0.json"
-    },
-    "UNVERIFIED:ANDURIL": {
-      "ticker": "ANDURIL",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:ANDURIL",
-        "display_code": "ANDURIL",
-        "display_name": "Anduril Industries",
-        "display_market": "Market unverified",
-        "aliases": [
-          "ANDURIL"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Anduril",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Anduril Industries",
-      "industry": null,
-      "first_mention": "2026-06-21",
-      "last_mention": "2026-06-22",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:ANDURIL",
-      "hash": "4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844",
-      "path": "stocks/47/4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844.json"
     },
     "UNVERIFIED:BESIY": {
       "ticker": "BESIY",
@@ -73486,6 +73486,9 @@
     "RDDT": [
       "US:RDDT"
     ],
+    "RDDT (IMPLIED)": [
+      "US:RDDT"
+    ],
     "RDFN": [
       "UNVERIFIED:RDFN"
     ],
@@ -73500,9 +73503,6 @@
     ],
     "RED CAT HOLDINGS, INC.": [
       "US:RCAT"
-    ],
-    "REDDIT": [
-      "US:RDDT"
     ],
     "REDDIT, INC.": [
       "US:RDDT"
@@ -81645,6 +81645,7 @@
     "stocks/aa/aa9f5b2b567483f7c31676cb9e8b71b2a001c878fc941aebb8e82f72775ebcb8.json",
     "stocks/ed/ed8977b58487ebe85b10931962a80bb68569fa2617d759316196b3b036dc73a9.json",
     "stocks/8c/8c05684dc1a4efe39f466297cd6606cf422cbc471faafb40f7e6fd8ddafa9559.json",
+    "stocks/47/4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844.json",
     "stocks/0e/0e9b6ce47ec232c8ebdf874c1a9bebbd3f71f710bc2b6f0c13e72f63bc73af72.json",
     "stocks/d9/d90c01ff20b2763a7de96c109acb098f4deef1e21f61164be2d6d71d1904fc68.json",
     "stocks/cc/cc806ac674f52bbecedf9577b15ff3ebb58959338b380c2f3b60b7339d27d8ed.json",
@@ -81820,7 +81821,6 @@
     "stocks/df/dfe184427afc60d830df511d2f3afe95243dc8098d088d7e5ed29ade0d00974e.json",
     "stocks/4d/4d21412f7f84a949e14f5b695bb05121220d183b52a62b987f3bdcfb6e307174.json",
     "stocks/ae/ae853e88f22e3e787e44e90007eb3fd5619467e0c1a237cc188063c1832275d0.json",
-    "stocks/47/4742a431015fb813459dec298c0e6bea239c92a067bfd893eb73c7d125b13844.json",
     "stocks/4d/4d8938e9e6cf08ed753bb12612e4c3e0978f2bfb6a6358b5b22b81fb7067f5b1.json",
     "stocks/85/857c4f2ded9a3c384fced19be0fe5259dd58f93d5a0fea6ec4dabd2fd8836fff.json",
     "stocks/99/994485ee2807a5f3c3469ca7255c5ab8939e7a055d6ccb0fc80db4ab55745b1a.json",
