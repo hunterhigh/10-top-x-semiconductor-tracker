@@ -2,6 +2,11 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "INVH",
+      "mentions": 3,
+      "company_name_hint": "Invitation Homes"
+    },
+    {
       "symbol": "NDAQ",
       "mentions": 2,
       "company_name_hint": "Nasdaq"
@@ -795,6 +800,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "AMEC",
+      "instrument_id": "UNVERIFIED:AMEC",
+      "company_name_hint": "Advanced Micro-Fabrication Equipment Inc. (AMEC)",
+      "mentions": 4,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "ASE",
       "instrument_id": "UNVERIFIED:ASE",
       "company_name_hint": "ASE Technology Holding",
@@ -1096,13 +1108,6 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "AMEC",
-      "instrument_id": "UNVERIFIED:AMEC",
-      "company_name_hint": "Advanced Micro-Fabrication Equipment Inc. (AMEC)",
-      "mentions": 3,
-      "verification_status": "identified"
-    },
-    {
       "symbol": "BOA",
       "instrument_id": "UNVERIFIED:BOA",
       "company_name_hint": null,
@@ -1199,6 +1204,13 @@
       "company_name_hint": "iShares Expanded Tech-Software Sector ETF",
       "mentions": 3,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "INVH",
+      "instrument_id": "UNVERIFIED:INVH",
+      "company_name_hint": "Invitation Homes",
+      "mentions": 3,
+      "verification_status": "unverified"
     },
     {
       "symbol": "JETS",
