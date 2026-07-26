@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-26T09:16:49.181282+00:00",
+  "generated_at": "2026-07-26T12:16:30.950645+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1668,
-    "total_mentions": 20457,
+    "total_mentions": 20467,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-26T09:18:49.332779+00:00"
+    "prices_updated_at": "2026-07-26T12:18:59.122586+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -352,7 +352,7 @@
       "industry": "Memory/HBM",
       "first_mention": "2025-09-25",
       "last_mention": "2026-07-26",
-      "total_mentions": 419,
+      "total_mentions": 420,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 195,
@@ -363,7 +363,7 @@
         "unusual_whales": 15,
         "michaelsikand": 12,
         "KawzInvests": 11,
-        "zephyr_z9": 6,
+        "zephyr_z9": 7,
         "DJTRadar": 2
       },
       "price_status": "ok",
@@ -706,7 +706,7 @@
         "price_symbol": "000660.KS",
         "verification_status": "verified"
       },
-      "cashtag": "SK hynix",
+      "cashtag": "SK Hynix",
       "price_symbol": "000660.KS",
       "exchange": "KRX",
       "currency": "KRW",
@@ -715,17 +715,17 @@
       "company": "SK hynix Inc.",
       "industry": null,
       "first_mention": "2025-11-04",
-      "last_mention": "2026-07-24",
-      "total_mentions": 275,
+      "last_mention": "2026-07-26",
+      "total_mentions": 277,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 116,
-        "jukan05": 62,
+        "jukan05": 63,
         "StockMKTNewz": 39,
         "ren_stocks": 26,
         "octopusycc": 12,
         "unusual_whales": 11,
-        "zephyr_z9": 7,
+        "zephyr_z9": 8,
         "KawzInvests": 1,
         "michaelsikand": 1
       },
@@ -793,7 +793,7 @@
         "price_symbol": "SNDK",
         "verification_status": "verified"
       },
-      "cashtag": "$SNDK",
+      "cashtag": "SanDisk",
       "price_symbol": "SNDK",
       "exchange": "US",
       "currency": "USD",
@@ -802,8 +802,8 @@
       "company": "Sandisk Corp",
       "industry": "Memory",
       "first_mention": "2025-11-25",
-      "last_mention": "2026-07-25",
-      "total_mentions": 258,
+      "last_mention": "2026-07-26",
+      "total_mentions": 259,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 167,
@@ -813,7 +813,7 @@
         "jukan05": 7,
         "michaelsikand": 5,
         "octopusycc": 4,
-        "zephyr_z9": 3
+        "zephyr_z9": 4
       },
       "price_status": "ok",
       "instrument_id": "US:SNDK",
@@ -1047,6 +1047,51 @@
       "path": "stocks/75/758e4e1be45ffdde003377cdce148dc7401b3e10749fc0342597f728ee69b728.json",
       "price_history_52w_status": "ok"
     },
+    "KRX:005930": {
+      "ticker": "005930",
+      "instrument": {
+        "instrument_id": "KRX:005930",
+        "display_code": "005930",
+        "display_name": "Samsung Electronics Co., Ltd.",
+        "display_market": "KRX",
+        "aliases": [
+          "005930",
+          "SAMSUNG"
+        ],
+        "market": "KRX",
+        "country": "KR",
+        "currency": "KRW",
+        "price_symbol": "005930.KS",
+        "verification_status": "verified"
+      },
+      "cashtag": "Samsung",
+      "price_symbol": "005930.KS",
+      "exchange": "KRX",
+      "currency": "KRW",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Samsung Electronics Co., Ltd.",
+      "industry": null,
+      "first_mention": "2025-12-28",
+      "last_mention": "2026-07-26",
+      "total_mentions": 206,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "jukan05": 82,
+        "aleabitoreddit": 80,
+        "StockMKTNewz": 12,
+        "zephyr_z9": 11,
+        "octopusycc": 9,
+        "unusual_whales": 7,
+        "ren_stocks": 4,
+        "michaelsikand": 1
+      },
+      "price_status": "partial",
+      "instrument_id": "KRX:005930",
+      "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
+    },
     "US:CIFR": {
       "ticker": "CIFR",
       "instrument": {
@@ -1085,51 +1130,6 @@
       "instrument_id": "US:CIFR",
       "hash": "2b5c4bd459bde843196cc9f9ebbf8369fe09fb4a7c9cd64429a13cbfd35af39c",
       "path": "stocks/2b/2b5c4bd459bde843196cc9f9ebbf8369fe09fb4a7c9cd64429a13cbfd35af39c.json"
-    },
-    "KRX:005930": {
-      "ticker": "005930",
-      "instrument": {
-        "instrument_id": "KRX:005930",
-        "display_code": "005930",
-        "display_name": "Samsung Electronics Co., Ltd.",
-        "display_market": "KRX",
-        "aliases": [
-          "005930",
-          "SAMSUNG"
-        ],
-        "market": "KRX",
-        "country": "KR",
-        "currency": "KRW",
-        "price_symbol": "005930.KS",
-        "verification_status": "verified"
-      },
-      "cashtag": "Samsung Electronics",
-      "price_symbol": "005930.KS",
-      "exchange": "KRX",
-      "currency": "KRW",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Samsung Electronics Co., Ltd.",
-      "industry": null,
-      "first_mention": "2025-12-28",
-      "last_mention": "2026-07-25",
-      "total_mentions": 204,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "jukan05": 81,
-        "aleabitoreddit": 80,
-        "StockMKTNewz": 12,
-        "zephyr_z9": 10,
-        "octopusycc": 9,
-        "unusual_whales": 7,
-        "ren_stocks": 4,
-        "michaelsikand": 1
-      },
-      "price_status": "partial",
-      "instrument_id": "KRX:005930",
-      "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
-      "price_history_52w_status": "ok"
     },
     "US:HOOD": {
       "ticker": "HOOD",
@@ -1968,6 +1968,47 @@
       "hash": "dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0",
       "path": "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json"
     },
+    "UNVERIFIED:CXMT": {
+      "ticker": "CXMT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:CXMT",
+        "display_code": "CXMT",
+        "display_name": "ChangXin Memory Technologies",
+        "display_market": "Market unverified",
+        "aliases": [
+          "CXMT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "CXMT",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "ChangXin Memory Technologies",
+      "industry": null,
+      "first_mention": "2026-02-03",
+      "last_mention": "2026-07-26",
+      "total_mentions": 72,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "zephyr_z9": 32,
+        "jukan05": 29,
+        "StockMKTNewz": 5,
+        "aleabitoreddit": 4,
+        "unusual_whales": 1,
+        "KawzInvests": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:CXMT",
+      "hash": "cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971",
+      "path": "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json"
+    },
     "US:PLTR": {
       "ticker": "PLTR",
       "instrument": {
@@ -2093,47 +2134,6 @@
       "hash": "5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c",
       "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
       "price_history_52w_status": "ok"
-    },
-    "UNVERIFIED:CXMT": {
-      "ticker": "CXMT",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:CXMT",
-        "display_code": "CXMT",
-        "display_name": "ChangXin Memory Technologies",
-        "display_market": "Market unverified",
-        "aliases": [
-          "CXMT"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "CXMT",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "ChangXin Memory Technologies",
-      "industry": null,
-      "first_mention": "2026-02-03",
-      "last_mention": "2026-07-24",
-      "total_mentions": 68,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "zephyr_z9": 32,
-        "jukan05": 25,
-        "StockMKTNewz": 5,
-        "aleabitoreddit": 4,
-        "unusual_whales": 1,
-        "KawzInvests": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:CXMT",
-      "hash": "cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971",
-      "path": "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json"
     },
     "US:ASML": {
       "ticker": "ASML",
@@ -11362,8 +11362,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:CLS": {
       "ticker": "CLS",
@@ -73752,7 +73751,6 @@
       "KRX:009150"
     ],
     "SAMSUNG ELECTRONICS": [
-      "KRX:005930",
       "UNVERIFIED:005930.KS",
       "UNVERIFIED:SSNLF"
     ],
@@ -73778,7 +73776,8 @@
       "US:SAN"
     ],
     "SANDISK": [
-      "UNVERIFIED:SANDISK"
+      "UNVERIFIED:SANDISK",
+      "US:SNDK"
     ],
     "SANDISK CORP": [
       "US:SNDK"
@@ -81094,8 +81093,8 @@
     "stocks/88/8851640f6a15212e01c79537568591efc6f77188b174dc488f96cfd61031177e.json",
     "stocks/1e/1ed11c3d73eb5139fadbf6c51f5b3ea6242ffb98b7e9f528995ea09703679ac5.json",
     "stocks/75/758e4e1be45ffdde003377cdce148dc7401b3e10749fc0342597f728ee69b728.json",
-    "stocks/2b/2b5c4bd459bde843196cc9f9ebbf8369fe09fb4a7c9cd64429a13cbfd35af39c.json",
     "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+    "stocks/2b/2b5c4bd459bde843196cc9f9ebbf8369fe09fb4a7c9cd64429a13cbfd35af39c.json",
     "stocks/22/22b4218e4f12e27ea42c4d8e37a50c0f9bd36fa6dc86904ab6a0cea53602d636.json",
     "stocks/14/145b35d89d36a50db9514b08f40d741b719d35bee046a0869878c7da934f3c4c.json",
     "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
@@ -81117,10 +81116,10 @@
     "stocks/0a/0a6a50b3e0798a170f5066f9d9394e43aa4458139aee1dee60f43eb4cf09cadf.json",
     "stocks/7a/7a6293a23f0f511e2a62f38f1d350965603edd5fc6713b00a9fd761b2b13e6b4.json",
     "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json",
+    "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json",
     "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
     "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
     "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
-    "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json",
     "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
     "stocks/2b/2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278.json",
     "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
