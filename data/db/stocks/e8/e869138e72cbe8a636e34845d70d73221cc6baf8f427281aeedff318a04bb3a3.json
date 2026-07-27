@@ -1,6 +1,6 @@
 {
   "ticker": "000660",
-  "cashtag": "SK Hynix",
+  "cashtag": "SK hynix",
   "instrument": {
     "instrument_id": "KRX:000660",
     "display_code": "000660",
@@ -28,10 +28,10 @@
   "thesis_summary": null,
   "first_mention": "2025-11-04",
   "last_mention": "2026-07-26",
-  "total_mentions": 277,
+  "total_mentions": 278,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 116,
-    "jukan05": 63,
+    "jukan05": 64,
     "StockMKTNewz": 39,
     "ren_stocks": 26,
     "octopusycc": 12,
@@ -41,7 +41,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 227,
+    "opinion": 228,
     "news": 39,
     "flow": 11
   },
@@ -6736,6 +6736,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081569881343017208",
+      "blogger_id": "jukan05",
+      "date": "2026-07-26",
+      "created_at": "2026-07-26T22:38:28-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK hynix",
+      "text": "South Korea’s Meritz Securities estimates that, as part of Bain Capital’s sale of its stake in Kioxia, SK hynix’s stake in SPC1—through which it had invested alongside Bain—was also disposed of. \nAs a result, Meritz projects SK hynix’s 2Q26 pretax profit at approximately KRW 100tn, including KRW 41.6tn in non-operating income. In 2018, SK hynix made a strategic investment of KRW 3.9tn through SPC1 and SPC2 in Bain Capital’s acquisition of Kioxia, formerly Toshiba Memory. \n\nMeritz estimates that SK hynix likely recognized cumulative gains approaching KRW 40tn upon completing the sale of SPC1 in June. Including the final SPC1 disposal gain, valuation gains on SPC2, and other investment-related gains, non-operating income is expected to exceed KRW 40tn in 2Q26. SK hynix still holds the SPC2 convertible bonds, which could convert into an approximately 14% stake in Kioxia. \n\nMeritz also noted that issues surrounding SK Group Chairman Chey Tae-won’s divorce litigation have sharply increased the need for higher dividends from SK hynix, the group’s largest cash cow, making it highly likely that the dividends will subsequently be upstreamed through onward distributions by SK Square.",
+      "url": "https://x.com/jukan05/status/2081569881343017208",
+      "kind": "post",
+      "engagement": {
+        "views": 20124,
+        "likes": 90,
+        "reposts": 16,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7724,13 +7747,13 @@
       "close": 1759000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-07-27T00:18:05.862595+00:00",
+  "price_updated_at": "2026-07-27T03:16:53.876951+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-27",
     "asof": "2026-07-26",
-    "attempted_at": "2026-07-27T00:18:05.154404+00:00",
+    "attempted_at": "2026-07-27T03:16:53.536590+00:00",
     "status": "ok",
     "first_available_date": "2025-07-28",
     "last_available_date": "2026-07-24",
@@ -7738,12 +7761,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-27T00:18:05.154404+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "000660.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-27T03:16:53.536590+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-27T06:16:53.536590+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

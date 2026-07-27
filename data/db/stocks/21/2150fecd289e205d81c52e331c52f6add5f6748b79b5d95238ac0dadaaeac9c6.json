@@ -26,9 +26,9 @@
   "thesis_summary": null,
   "first_mention": "2025-12-28",
   "last_mention": "2026-07-26",
-  "total_mentions": 207,
+  "total_mentions": 208,
   "total_mentions_by_blogger": {
-    "jukan05": 82,
+    "jukan05": 83,
     "aleabitoreddit": 80,
     "StockMKTNewz": 13,
     "zephyr_z9": 11,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 187,
+    "opinion": 188,
     "flow": 7,
     "news": 13
   },
@@ -4951,6 +4951,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081542226719748427",
+      "blogger_id": "jukan05",
+      "date": "2026-07-26",
+      "created_at": "2026-07-26T20:48:34-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Ja-heum Koo, head of technology development at Samsung’s Foundry Business, said in Samsung Newsroom that the company plans to use its 2nm GAA process for HBM5. 👀 https://t.co/dDoiRKgzT5",
+      "url": "https://x.com/jukan05/status/2081542226719748427",
+      "kind": "post",
+      "engagement": {
+        "views": 44935,
+        "likes": 170,
+        "reposts": 10,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -5939,13 +5962,13 @@
       "close": 249500.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-07-27T00:18:06.518568+00:00",
+  "price_updated_at": "2026-07-27T03:16:54.260162+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-27",
     "asof": "2026-07-26",
-    "attempted_at": "2026-07-27T00:18:05.871572+00:00",
+    "attempted_at": "2026-07-27T03:16:53.885766+00:00",
     "status": "ok",
     "first_available_date": "2025-07-28",
     "last_available_date": "2026-07-24",
@@ -5953,12 +5976,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-07-27T00:18:05.871572+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "005930.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-07-27T03:16:53.885766+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-07-27T06:16:53.885766+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
