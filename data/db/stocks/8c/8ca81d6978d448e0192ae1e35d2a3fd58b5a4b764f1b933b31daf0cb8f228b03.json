@@ -24,14 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-31",
-  "last_mention": "2026-06-23",
-  "total_mentions": 22,
+  "last_mention": "2026-07-27",
+  "total_mentions": 23,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 20,
-    "StockMKTNewz": 2
+    "StockMKTNewz": 2,
+    "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 20,
+    "opinion": 21,
     "news": 2
   },
   "mentions": [
@@ -559,6 +560,29 @@
         "likes": 252,
         "reposts": 32,
         "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081737925495001298",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-27",
+      "created_at": "2026-07-27T09:46:12-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SOFI",
+      "text": "Microsoft, Meta, Apple and Amazon all report inside 48 hours of the Fed decision. Every one of them updates AI capex guidance.\n\n> Mon $APLD $NVTS $CLS $RMBS $AMKR $FFIV\n\n> Tue $PYPL $KLAC $STX $GLW $TER $V \n\n> Wed FOMC $MSFT $META $ARM $QCOM $LRCX \n$VRT $APH $FLEX $HOOD $SOFI \n\n> Thu $AAPL $AMZN $RDDT $AXTI $RBLX $RIVN $TE\n\n$MSFT $META and $AMZN all update capex within 48 hours of the rate decision. Expect volatility.",
+      "url": "https://x.com/KawzInvests/status/2081737925495001298",
+      "kind": "post",
+      "engagement": {
+        "views": 10544,
+        "likes": 36,
+        "reposts": 4,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1544,17 +1568,25 @@
     {
       "date": "2026-07-22",
       "close": 17.07
+    },
+    {
+      "date": "2026-07-23",
+      "close": 16.65
+    },
+    {
+      "date": "2026-07-24",
+      "close": 16.46
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-23T11:56:46.600471+00:00",
+  "price_updated_at": "2026-07-27T15:20:13.171121+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "SOFI",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-23T11:56:45.688019+00:00",
+    "checked_at": "2026-07-27T15:20:12.872122+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
