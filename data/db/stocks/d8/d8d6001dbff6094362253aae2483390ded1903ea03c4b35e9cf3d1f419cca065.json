@@ -25,17 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2025-10-06",
   "last_mention": "2026-07-27",
-  "total_mentions": 65,
+  "total_mentions": 66,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 32,
     "StockMKTNewz": 15,
-    "jukan05": 9,
+    "jukan05": 10,
     "zephyr_z9": 5,
     "unusual_whales": 3,
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 47,
+    "opinion": 48,
     "news": 15,
     "flow": 3
   },
@@ -1571,6 +1571,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2081887384531357952",
+      "blogger_id": "jukan05",
+      "date": "2026-07-27",
+      "created_at": "2026-07-27T19:40:06-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "sell-off looks overdone",
+        "China DUV progress not surprising and based on unverified internal remarks"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "ASML",
+      "text": "The news about China’s DUV progress is not particularly surprising. Wasn’t this something everyone already had a vague sense of?\n\nMoreover, The Information’s report merely cites remarks made by a professor at one of China’s Jiaotong universities during an internal meeting in June.\n\nThe sell-off in semiconductor equipment names such as ASML looks overdone.",
+      "url": "https://x.com/jukan05/status/2081887384531357952",
+      "kind": "post",
+      "engagement": {
+        "views": 14128,
+        "likes": 150,
+        "reposts": 6,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2577,18 +2603,22 @@
     {
       "date": "2026-07-24",
       "close": 1757.09
+    },
+    {
+      "date": "2026-07-27",
+      "close": 1655.26
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-27T21:18:04.248594+00:00",
+  "price_updated_at": "2026-07-28T00:18:10.956542+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-28",
     "asof": "2026-07-27",
-    "attempted_at": "2026-07-27T21:18:03.400637+00:00",
+    "attempted_at": "2026-07-28T00:18:10.119274+00:00",
     "status": "ok",
     "first_available_date": "2025-07-28",
-    "last_available_date": "2026-07-24",
+    "last_available_date": "2026-07-27",
     "reason": null
   },
   "price_source_state": {
@@ -2596,7 +2626,7 @@
     "provider_symbol": "ASML",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-27T21:18:03.400637+00:00",
+    "checked_at": "2026-07-28T00:18:10.119274+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
