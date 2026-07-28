@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-28T03:19:07.036332+00:00",
+  "generated_at": "2026-07-28T06:19:10.734560+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 1697,
-  "index_sha256": "b5f34957b6bc122468e541514048e71e1601d21cc2605ef4a4a1c5374fa283dd",
+  "index_sha256": "33500e4f7db5dd9fad78652fc851988bcc09107103b810f37bd07eebe4c82128",
   "stocks_root": "stocks",
   "price_cache_count": 847,
   "price_cache_index_sha256": "9742202bb8edb794e263d7147efd8fbc50e4c76e9ba7c75559e419744e7660d6",
   "price_cache_root": "prices_cache",
   "tickers": 1697,
-  "total_mentions": 20706,
+  "total_mentions": 20712,
   "priced_tickers": 646,
   "date_range": [
     "2025-07-02",
-    "2026-07-27"
+    "2026-07-28"
   ],
   "size_mb": 37.5,
   "tracked_bloggers": 10,
@@ -26,7 +26,7 @@
     "zephyr_z9": 312,
     "KawzInvests": 269,
     "michaelsikand": 321,
-    "jukan05": 722,
+    "jukan05": 728,
     "DJTRadar": 141
   },
   "bloggers_missing_state_files": [],
@@ -58,16 +58,16 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 807,
+    "tickers": 805,
     "status_counts": {
-      "ok": 482,
-      "partial": 20,
+      "ok": 477,
+      "partial": 23,
       "unverified_symbol": 288,
       "unavailable": 17
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 17,
+      "EODHD 402 (account quota or subscription limit)": 20,
       "unverified_instrument_identity": 288,
       "provider_symbol_not_found_after_search": 11,
       "no_daily_closes_returned": 6,
@@ -79,20 +79,21 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-07-27",
-    "target_start": "2025-07-28",
-    "tickers": 43,
+    "asof": "2026-07-28",
+    "target_start": "2025-07-29",
+    "tickers": 41,
     "status_counts": {
-      "ok": 41,
+      "ok": 39,
       "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 43
+      "supported": 37,
+      "deferred": 4
     },
     "retry_queue": 0,
     "scope_counts": {
-      "monthly_consensus": 40,
+      "monthly_consensus": 38,
       "top_pick_cards": 10,
       "top_pick_unique": 9,
       "overlap": 6
