@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-28T06:16:43.268459+00:00",
+  "generated_at": "2026-07-28T09:16:56.816056+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1697,
-    "total_mentions": 20712,
+    "total_mentions": 20718,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-28T06:18:53.246771+00:00"
+    "prices_updated_at": "2026-07-28T09:18:46.671771+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -580,11 +580,11 @@
       "industry": "Wafer Foundry",
       "first_mention": "2025-09-09",
       "last_mention": "2026-07-28",
-      "total_mentions": 316,
+      "total_mentions": 318,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 229,
-        "jukan05": 45,
+        "jukan05": 47,
         "StockMKTNewz": 17,
         "zephyr_z9": 11,
         "ren_stocks": 7,
@@ -1437,7 +1437,7 @@
         "price_symbol": "JBL",
         "verification_status": "verified"
       },
-      "cashtag": "Jabil",
+      "cashtag": "$JBL",
       "price_symbol": "JBL",
       "exchange": "US",
       "currency": "USD",
@@ -1446,12 +1446,12 @@
       "company": "Jabil",
       "industry": "Optical Module Manufacturing",
       "first_mention": "2025-12-01",
-      "last_mention": "2026-07-25",
-      "total_mentions": 159,
+      "last_mention": "2026-07-28",
+      "total_mentions": 160,
       "blogger_count": 3,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 154,
-        "DJTRadar": 4,
+        "DJTRadar": 5,
         "ren_stocks": 1
       },
       "price_status": "ok",
@@ -3548,8 +3548,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -7351,6 +7350,43 @@
       "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
       "price_history_52w_status": "ok"
     },
+    "KRX:009150": {
+      "ticker": "009150",
+      "instrument": {
+        "instrument_id": "KRX:009150",
+        "display_code": "009150",
+        "display_name": "Samsung Electro-Mechanics Co., Ltd.",
+        "display_market": "KRX",
+        "aliases": [
+          "009150"
+        ],
+        "market": "KRX",
+        "country": "KR",
+        "currency": "KRW",
+        "price_symbol": "009150.KS",
+        "verification_status": "verified"
+      },
+      "cashtag": "Samsung Electro-Mechanics",
+      "price_symbol": "009150.KS",
+      "exchange": "KRX",
+      "currency": "KRW",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Samsung Electro-Mechanics Co., Ltd.",
+      "industry": null,
+      "first_mention": "2026-06-06",
+      "last_mention": "2026-07-28",
+      "total_mentions": 13,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "jukan05": 10,
+        "aleabitoreddit": 3
+      },
+      "price_status": "partial",
+      "instrument_id": "KRX:009150",
+      "hash": "07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d",
+      "path": "stocks/07/07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d.json"
+    },
     "UNVERIFIED:MSSCORPS": {
       "ticker": "MSSCORPS",
       "instrument": {
@@ -7691,8 +7727,7 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -7768,43 +7803,6 @@
       "instrument_id": "US:VICR",
       "hash": "391fed8ad7a9b517170e2a2ebb1acc340af17922632a5f76ba22b3d0008b74b1",
       "path": "stocks/39/391fed8ad7a9b517170e2a2ebb1acc340af17922632a5f76ba22b3d0008b74b1.json"
-    },
-    "KRX:009150": {
-      "ticker": "009150",
-      "instrument": {
-        "instrument_id": "KRX:009150",
-        "display_code": "009150",
-        "display_name": "Samsung Electro-Mechanics Co., Ltd.",
-        "display_market": "KRX",
-        "aliases": [
-          "009150"
-        ],
-        "market": "KRX",
-        "country": "KR",
-        "currency": "KRW",
-        "price_symbol": "009150.KS",
-        "verification_status": "verified"
-      },
-      "cashtag": "Samsung Electro-Mechanics",
-      "price_symbol": "009150.KS",
-      "exchange": "KRX",
-      "currency": "KRW",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Samsung Electro-Mechanics Co., Ltd.",
-      "industry": null,
-      "first_mention": "2026-06-06",
-      "last_mention": "2026-07-22",
-      "total_mentions": 12,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "jukan05": 9,
-        "aleabitoreddit": 3
-      },
-      "price_status": "partial",
-      "instrument_id": "KRX:009150",
-      "hash": "07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d",
-      "path": "stocks/07/07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d.json"
     },
     "TSE:5801": {
       "ticker": "5801",
@@ -9216,6 +9214,44 @@
       "hash": "a2d1a0465f2bfc8a3b49df230df5015ac6002ac23af3766abaf6f105f51708dd",
       "path": "stocks/a2/a2d1a0465f2bfc8a3b49df230df5015ac6002ac23af3766abaf6f105f51708dd.json"
     },
+    "TSE:6981": {
+      "ticker": "6981",
+      "instrument": {
+        "instrument_id": "TSE:6981",
+        "display_code": "6981",
+        "display_name": "Murata Manufacturing Co., Ltd.",
+        "display_market": "Tokyo",
+        "aliases": [
+          "6981"
+        ],
+        "market": "Tokyo",
+        "country": "JP",
+        "currency": "JPY",
+        "price_symbol": "6981.T",
+        "verification_status": "verified"
+      },
+      "cashtag": "Murata",
+      "price_symbol": "6981.T",
+      "exchange": "Tokyo",
+      "currency": "JPY",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Murata Manufacturing Co., Ltd.",
+      "industry": null,
+      "first_mention": "2026-06-10",
+      "last_mention": "2026-07-28",
+      "total_mentions": 9,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "jukan05": 6,
+        "aleabitoreddit": 2,
+        "zephyr_z9": 1
+      },
+      "price_status": "unavailable",
+      "instrument_id": "TSE:6981",
+      "hash": "f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a",
+      "path": "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json"
+    },
     "TWSE:2344": {
       "ticker": "2344",
       "instrument": {
@@ -10004,44 +10040,6 @@
       "instrument_id": "US:YSS",
       "hash": "e3656153e21d78b442a44c33ad1449a45d574f35051533718c05d7c1bfcb97d5",
       "path": "stocks/e3/e3656153e21d78b442a44c33ad1449a45d574f35051533718c05d7c1bfcb97d5.json"
-    },
-    "TSE:6981": {
-      "ticker": "6981",
-      "instrument": {
-        "instrument_id": "TSE:6981",
-        "display_code": "6981",
-        "display_name": "Murata Manufacturing Co., Ltd.",
-        "display_market": "Tokyo",
-        "aliases": [
-          "6981"
-        ],
-        "market": "Tokyo",
-        "country": "JP",
-        "currency": "JPY",
-        "price_symbol": "6981.T",
-        "verification_status": "verified"
-      },
-      "cashtag": "Murata (6981)",
-      "price_symbol": "6981.T",
-      "exchange": "Tokyo",
-      "currency": "JPY",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Murata Manufacturing Co., Ltd.",
-      "industry": null,
-      "first_mention": "2026-06-10",
-      "last_mention": "2026-07-20",
-      "total_mentions": 8,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "jukan05": 5,
-        "aleabitoreddit": 2,
-        "zephyr_z9": 1
-      },
-      "price_status": "unavailable",
-      "instrument_id": "TSE:6981",
-      "hash": "f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a",
-      "path": "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json"
     },
     "UNVERIFIED:SHAZ": {
       "ticker": "SHAZ",
@@ -12443,6 +12441,43 @@
       "hash": "68d264851fcd8c49491b6102276ab9aba50822d302c3f536ac12c26de97a6798",
       "path": "stocks/68/68d264851fcd8c49491b6102276ab9aba50822d302c3f536ac12c26de97a6798.json"
     },
+    "UNVERIFIED:6976": {
+      "ticker": "6976",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:6976",
+        "display_code": "6976",
+        "display_name": "Taiyo Yuden",
+        "display_market": "Market unverified",
+        "aliases": [
+          "6976"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Taiyo Yuden",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Taiyo Yuden",
+      "industry": null,
+      "first_mention": "2026-06-17",
+      "last_mention": "2026-07-28",
+      "total_mentions": 6,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "jukan05": 4,
+        "aleabitoreddit": 2
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:6976",
+      "hash": "aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a",
+      "path": "stocks/aa/aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a.json"
+    },
     "UNVERIFIED:ARKK": {
       "ticker": "ARKK",
       "instrument": {
@@ -14391,43 +14426,6 @@
       "instrument_id": "UNVERIFIED:6451.TW",
       "hash": "1435ba6409025716069a8c4263f89d8a8ec8325aa86a8425526e1395349b86c8",
       "path": "stocks/14/1435ba6409025716069a8c4263f89d8a8ec8325aa86a8425526e1395349b86c8.json"
-    },
-    "UNVERIFIED:6976": {
-      "ticker": "6976",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:6976",
-        "display_code": "6976",
-        "display_name": "Taiyo Yuden",
-        "display_market": "Market unverified",
-        "aliases": [
-          "6976"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Taiyo Yuden",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Taiyo Yuden",
-      "industry": null,
-      "first_mention": "2026-06-17",
-      "last_mention": "2026-07-27",
-      "total_mentions": 5,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "jukan05": 3,
-        "aleabitoreddit": 2
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:6976",
-      "hash": "aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a",
-      "path": "stocks/aa/aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a.json"
     },
     "UNVERIFIED:AVEX": {
       "ticker": "AVEX",
@@ -73140,7 +73138,7 @@
     "MUFG": [
       "US:MUFG"
     ],
-    "MURATA (6981)": [
+    "MURATA": [
       "TSE:6981"
     ],
     "MURATA MANUFACTURING CO., LTD.": [
@@ -82654,6 +82652,7 @@
     "stocks/46/46fcaefa65c469f504d36b08d5125c2bb92f5b934bd2cf0ce60edadb01b4c8d0.json",
     "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
     "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
+    "stocks/07/07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d.json",
     "stocks/8a/8a7cc12b68211343150a9e740ad00ec12bbc532cf26074825bacb11e97873822.json",
     "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
     "stocks/29/294045b56a21eaea27eb3e79d43ca78e2ac1d59a8ea9bed260ceace95ebd1335.json",
@@ -82665,7 +82664,6 @@
     "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
     "stocks/68/681226d4dab2fda64a8f0570ef370e580b0a9b2ed422bf79ec4871e5ba6d095d.json",
     "stocks/39/391fed8ad7a9b517170e2a2ebb1acc340af17922632a5f76ba22b3d0008b74b1.json",
-    "stocks/07/07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d.json",
     "stocks/2e/2eb51ce56f24d70afca0f43c3cabad8b30df3f5149001a351e98a8982da9f9b3.json",
     "stocks/0d/0da6f0fd349b85ae514f77c6d57a5d0d5490841ea0218edc604832e403c5d2c0.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
@@ -82704,6 +82702,7 @@
     "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json",
     "stocks/cc/cc28e9e0a8d0f25c0a7f308f5af682bfb5fbd7c6d82c6cdd1208c456764d3d7c.json",
     "stocks/a2/a2d1a0465f2bfc8a3b49df230df5015ac6002ac23af3766abaf6f105f51708dd.json",
+    "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json",
     "stocks/44/44a82eb1f652af042c03699a034bf7cbe5519a0d996444ace760c0a97c7f3bf5.json",
     "stocks/37/37ef1bf6a8ddb9755bb5bc8e3623f83534435c74fe5aed7b889f44adbc7082c8.json",
     "stocks/85/8528eead937fc7c29e4485f889d196bdd331ae43ff71bb99dfacc6102790f98e.json",
@@ -82725,7 +82724,6 @@
     "stocks/36/36d4a95ca86db7a5853632ae4e2f28cf47a0c385b2740e470507edc8953ad628.json",
     "stocks/85/85866b8821d1de19286745099c6329fbc5054f14d5f1439370b0249e56fdb4e8.json",
     "stocks/e3/e3656153e21d78b442a44c33ad1449a45d574f35051533718c05d7c1bfcb97d5.json",
-    "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json",
     "stocks/6c/6c5156598cb58f0137989d1079f96718ef48c41033232a997301cc510df90b9e.json",
     "stocks/ca/cae2c45a7d94a7ad5f6203e5a362ca312c1942f7d6d6f47b9707397861f91498.json",
     "stocks/9b/9bfd8f82f19bd27f57090597c0e34f529d012ae586fcb77cdcd93bedc9990db3.json",
@@ -82791,6 +82789,7 @@
     "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json",
     "stocks/c2/c24b5dd3dfab173b6c380e175619fe104ef5ad2fcf262cf6d908b6f58e57b124.json",
     "stocks/68/68d264851fcd8c49491b6102276ab9aba50822d302c3f536ac12c26de97a6798.json",
+    "stocks/aa/aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a.json",
     "stocks/bd/bdf16ede871f40e2f20be1deade817db9e700614f59359cb999a12cac0b1972e.json",
     "stocks/f4/f4e32112e5d4b40fc0c4fcd2865d9de27a633e9d578f3b1c746331803a7f5a0d.json",
     "stocks/21/21c1afd104cc4cc627189d3d2326af78dbff0446a33cf6657e39070aa93dbfb5.json",
@@ -82844,7 +82843,6 @@
     "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
     "stocks/83/83c8b5b4c7b6b936d174e08b313393cb7ec388378bd432ecaa879647d113a9b6.json",
     "stocks/14/1435ba6409025716069a8c4263f89d8a8ec8325aa86a8425526e1395349b86c8.json",
-    "stocks/aa/aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a.json",
     "stocks/75/750166a5e497f5e8eff4c0e40c172e46c05895597edf8240c5c03bdabc07fe83.json",
     "stocks/53/53c1077d954241f6c642ad65d426286ab45df5433b930b46a9a8f1e1cf87dc0b.json",
     "stocks/52/524f0d443006dda199df879a7c901f55513884b2ff8b15fcb467e24c72e22e01.json",
