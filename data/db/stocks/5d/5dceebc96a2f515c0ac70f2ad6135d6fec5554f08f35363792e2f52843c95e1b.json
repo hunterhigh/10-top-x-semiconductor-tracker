@@ -1,6 +1,6 @@
 {
   "ticker": "AMD",
-  "cashtag": "AMD",
+  "cashtag": "$AMD",
   "instrument": {
     "instrument_id": "US:AMD",
     "display_code": "AMD",
@@ -24,25 +24,25 @@
   "industry": "GPU/AI Chips",
   "thesis_summary": null,
   "first_mention": "2025-09-11",
-  "last_mention": "2026-07-27",
-  "total_mentions": 255,
+  "last_mention": "2026-07-29",
+  "total_mentions": 258,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 164,
-    "StockMKTNewz": 36,
+    "aleabitoreddit": 165,
+    "StockMKTNewz": 37,
     "jukan05": 19,
     "ren_stocks": 15,
     "octopusycc": 9,
     "zephyr_z9": 5,
+    "unusual_whales": 3,
     "michaelsikand": 2,
     "KawzInvests": 2,
-    "unusual_whales": 2,
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 216,
-    "news": 36,
+    "opinion": 217,
+    "news": 37,
     "disclosure": 1,
-    "flow": 2
+    "flow": 3
   },
   "mentions": [
     {
@@ -6106,6 +6106,77 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082108781841072540",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T10:19:51-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [
+        "stock is down 10% on the day"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AMD",
+      "text": "$AMD stock is now down by 10% so far today \n\n🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴 https://t.co/t7cAx78dZq",
+      "url": "https://x.com/StockMKTNewz/status/2082108781841072540",
+      "kind": "post",
+      "engagement": {
+        "views": 68384,
+        "likes": 625,
+        "reposts": 43,
+        "replies": 55
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082163426332221653",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T13:57:00-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AMD",
+      "text": "\"AI is at an inflection point where more and more people are doing useful work, meaningful work,\" AMD, $AMD, CEO Lisa Su has said.",
+      "url": "https://x.com/unusual_whales/status/2082163426332221653",
+      "kind": "post",
+      "engagement": {
+        "views": 138562,
+        "likes": 282,
+        "reposts": 21,
+        "replies": 48
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082605568699871284",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T19:13:55-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AMD",
+      "text": "Just some takeaways from $META | $MSFT earnings calls:\n\nMicrosoft:\n- Expected to be FCF positive in 2027, despite the increase in capex (extremely positive for AI buildout that it's funded by operating income)\n- \"Free cash flow was $19.6 billion, reflecting higher capital expenditures\"\n- Quartely capex was $41B, roughly 2/3rds were \"short lived assets, primarily CPUs and GPUs\"\n- Expects capex spend will be over $50 billion for next quarter\n- Capex Guidance at ~$175 billion and 2027 capex roughly the same. Spending plans unchanged and in line. \n- \"Extending the estimated useful life of our data centers from 15 to 25 years\"\n- \"We will be among the first cloud providers to deploy next generation rack-scale AI infrastructure based on $AMD Helios and $NVDA Vera Rubin\"\n- \"Customer demand continues to exceed available capacity\"\n\nMeta:\n- Capex $130-$145 billion (narrowed range), from $125B-$145B. \n- Meta is receiving offers at a \"significant premium\" to what they paid for it (compute scarcity, positive for neoclouds like $IREN / $NBIS )\n- Expects significant portion of compute (like the 1 GW DC in El Paso) to develop internal models. \n- Meta has multiple ROI-positive uses for additional compute across its core business (internally, not Meta Compute)\n- \"Finally, we believe that overall industry capacity is going to remain tight for the foreseeable future\" \n- \"The industry has under-built historically for the wave of AI adoption, making existing capacity, including our own, extremely valuable\" - Susan Li\n\nTLDR:\n- $MSFT and $GOOGL largely sustaining AI capex buildout while remaining FCF positive or through operating incomes.\n- $META flags available compute materially below demand at least through 2027. And $MSFT also flags compute demand far exceeds supply. \n- All three hyperscaler capex largely in line with Google hiking capex figures.\n\nAI selloff seems extremely overblown now, hyperscalers continuing capex in line (with Microsoft being FCF positive) or even hiked with $GOOGL. \n\nCompute scarcity is visible throughout every single hyperscaler ER.",
+      "url": "https://x.com/aleabitoreddit/status/2082605568699871284",
+      "kind": "post",
+      "engagement": {
+        "views": 461367,
+        "likes": 1563,
+        "reposts": 97,
+        "replies": 100
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7128,18 +7199,26 @@
     {
       "date": "2026-07-27",
       "close": 494.95
+    },
+    {
+      "date": "2026-07-28",
+      "close": 454.62
+    },
+    {
+      "date": "2026-07-29",
+      "close": 429.56
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-28T12:18:31.305873+00:00",
+  "price_updated_at": "2026-07-30T10:29:51.539808+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-29",
-    "asof": "2026-07-28",
-    "attempted_at": "2026-07-28T12:18:30.654780+00:00",
+    "requested_start": "2025-07-31",
+    "asof": "2026-07-30",
+    "attempted_at": "2026-07-30T10:29:51.129087+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-29",
-    "last_available_date": "2026-07-27",
+    "first_available_date": "2025-07-31",
+    "last_available_date": "2026-07-29",
     "reason": null
   },
   "price_source_state": {
@@ -7147,7 +7226,7 @@
     "provider_symbol": "AMD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-28T12:18:30.654780+00:00",
+    "checked_at": "2026-07-30T10:29:51.129087+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

@@ -24,14 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-20",
-  "last_mention": "2026-07-27",
-  "total_mentions": 16,
+  "last_mention": "2026-07-29",
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 14,
-    "KawzInvests": 2
+    "KawzInvests": 3,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 16
+    "opinion": 17,
+    "news": 1
   },
   "mentions": [
     {
@@ -422,6 +424,54 @@
         "likes": 36,
         "reposts": 4,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082414935099748634",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T06:36:24-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "down 13% in pre market trading following its earnings"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$VRT",
+      "text": "Vertiv $VRT is down by 13% in pre market trading following its earnings\n\n🔴 https://t.co/5Yg9GuBj2y",
+      "url": "https://x.com/StockMKTNewz/status/2082414935099748634",
+      "kind": "post",
+      "engagement": {
+        "views": 52558,
+        "likes": 107,
+        "reposts": 3,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082450773254807637",
+      "blogger_id": "KawzInvests",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T08:58:49-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$VRT",
+      "text": "Big day today. Probably the densest of the quarter:\n\n> Fed decision at 2pm - consensus is a hold at 3.5-3.75%. Market has ~30% odds of a hike, 76% for September\n\n> Warsh at 2:30 he's stripped forward guidance on purpose, so this is the only real signal we get\n\n> Trump saying the US will hit Iran \"hard tonight\" the last two times he used that phrase, oil jumped 5-9% within hours. Falling oil was quietly doing the Fed's inflation work, so this matters more than it looks\n\n> After close: MSFT and $META, both updating AI capex guidance ( GOOGL got sold for raising theirs last week). \n\n> Plus $VRT $ARM $QCOM $LRCX $HOOD\n> Tomorrow morning: PCE + Q2 GDP\n\nMarket wants a hold and a path to cuts. High oil prices makes that harder to promise.\n\nPersonally not touching anything until we hear Warsh.",
+      "url": "https://x.com/KawzInvests/status/2082450773254807637",
+      "kind": "post",
+      "engagement": {
+        "views": 20163,
+        "likes": 76,
+        "reposts": 2,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

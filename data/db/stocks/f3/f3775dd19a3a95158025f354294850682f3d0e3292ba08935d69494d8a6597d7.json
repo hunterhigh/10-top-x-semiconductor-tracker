@@ -1,6 +1,6 @@
 {
   "ticker": "APO",
-  "cashtag": "$APO",
+  "cashtag": "Apollo",
   "instrument": {
     "instrument_id": "US:APO",
     "display_code": "APO",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-23",
-  "last_mention": "2026-07-15",
-  "total_mentions": 2,
+  "last_mention": "2026-07-29",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 1,
-    "news": 1
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -77,6 +79,29 @@
         "likes": 29,
         "reposts": 4,
         "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082655166801588507",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T22:31:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Apollo",
+      "text": "Reportedly, firms like Apollo, KKR, and Blackstone have bought up life insurers and filled their balance sheets with private credit, loans that are hard for regulators to check or price properly.\n\nRead more: https://t.co/hHt3U5D477",
+      "url": "https://x.com/unusual_whales/status/2082655166801588507",
+      "kind": "reply",
+      "engagement": {
+        "views": 43694,
+        "likes": 25,
+        "reposts": 7,
+        "replies": 8
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

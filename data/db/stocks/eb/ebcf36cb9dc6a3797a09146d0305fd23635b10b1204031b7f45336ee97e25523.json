@@ -1,6 +1,6 @@
 {
   "ticker": "KLAR",
-  "cashtag": "$KLAR",
+  "cashtag": "Klarna",
   "instrument": {
     "instrument_id": "US:KLAR",
     "display_code": "KLAR",
@@ -24,16 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-26",
-  "last_mention": "2026-07-01",
-  "total_mentions": 4,
+  "last_mention": "2026-07-28",
+  "total_mentions": 5,
   "total_mentions_by_blogger": {
     "octopusycc": 2,
     "aleabitoreddit": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 3,
-    "news": 1
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -132,6 +134,29 @@
         "likes": 107,
         "reposts": 14,
         "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082108061838155857",
+      "blogger_id": "unusual_whales",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T10:17:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Klarna",
+      "text": "Apple, $AAPL, officially launches Klarna leasing in US to make iPhones and Macs more affordable.\n\nThe smallest iPhone leasing option is $17.99 per month",
+      "url": "https://x.com/unusual_whales/status/2082108061838155857",
+      "kind": "post",
+      "engagement": {
+        "views": 195676,
+        "likes": 753,
+        "reposts": 32,
+        "replies": 97
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

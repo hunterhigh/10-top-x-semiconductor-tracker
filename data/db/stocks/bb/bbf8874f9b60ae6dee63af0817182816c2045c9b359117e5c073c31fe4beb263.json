@@ -1,6 +1,6 @@
 {
   "ticker": "BTQ",
-  "cashtag": "$BTQ",
+  "cashtag": "BTQ Technologies",
   "instrument": {
     "instrument_id": "US:BTQ",
     "display_code": "BTQ",
@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
-  "last_mention": "2026-06-22",
-  "total_mentions": 1,
+  "last_mention": "2026-07-28",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "octopusycc": 1
+    "octopusycc": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -52,6 +54,29 @@
         "likes": 12,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082164783369834989",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T14:02:23-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "BTQ Technologies",
+      "text": "BTQ Technologies announced that it has completed its acquisition of QPerfect\n\n\"Advancing Its Mission of Building Trusted Quantum Technologies With World-Class Emulation, Digital Twin, and Control Capabilities\"",
+      "url": "https://x.com/StockMKTNewz/status/2082164783369834989",
+      "kind": "post",
+      "engagement": {
+        "views": 37615,
+        "likes": 24,
+        "reposts": 1,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -145,17 +170,37 @@
     {
       "date": "2026-07-22",
       "close": 3.46
+    },
+    {
+      "date": "2026-07-23",
+      "close": 3.33
+    },
+    {
+      "date": "2026-07-24",
+      "close": 3.33
+    },
+    {
+      "date": "2026-07-27",
+      "close": 3.49
+    },
+    {
+      "date": "2026-07-28",
+      "close": 3.45
+    },
+    {
+      "date": "2026-07-29",
+      "close": 3.16
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-23T03:14:19.640664+00:00",
+  "price_updated_at": "2026-07-30T10:30:24.604179+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "BTQ",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-23T03:14:18.784641+00:00",
+    "checked_at": "2026-07-30T10:30:23.765019+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

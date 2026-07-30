@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-07",
-  "last_mention": "2026-07-06",
-  "total_mentions": 144,
+  "last_mention": "2026-07-29",
+  "total_mentions": 145,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 144
+    "aleabitoreddit": 144,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 144
+    "opinion": 144,
+    "news": 1
   },
   "mentions": [
     {
@@ -3783,6 +3785,31 @@
         "replies": 118
       },
       "extractor_model": "claude-opus-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082504205936243161",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T12:31:08-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "FTC reportedly suing over billing, cancellation and privacy practices"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$HIMS",
+      "text": "🇺🇸 FTC IS REPORTEDLY SUING HIMS &amp; HERS $HIMS OVER BILLING, CANCELLATION AND PRIVACY PRACTICES",
+      "url": "https://x.com/StockMKTNewz/status/2082504205936243161",
+      "kind": "post",
+      "engagement": {
+        "views": 55067,
+        "likes": 132,
+        "reposts": 3,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
     }
   ],

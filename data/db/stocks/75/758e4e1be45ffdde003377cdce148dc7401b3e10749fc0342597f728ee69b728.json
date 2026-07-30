@@ -24,11 +24,11 @@
   "industry": "GPU Cloud/Neocloud",
   "thesis_summary": null,
   "first_mention": "2025-07-21",
-  "last_mention": "2026-07-26",
-  "total_mentions": 221,
+  "last_mention": "2026-07-29",
+  "total_mentions": 222,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 190,
-    "StockMKTNewz": 16,
+    "StockMKTNewz": 17,
     "octopusycc": 4,
     "KawzInvests": 3,
     "michaelsikand": 3,
@@ -39,7 +39,7 @@
   "total_mentions_by_signal_type": {
     "opinion": 204,
     "flow": 1,
-    "news": 16
+    "news": 17
   },
   "mentions": [
     {
@@ -5598,6 +5598,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082551457035808789",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T15:38:53-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hit new 52 week lows today"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$CRWV",
+      "text": "CoreWeave $CRWV stock hit new 52 WEEK LOWS today https://t.co/I4wr9JMY0X",
+      "url": "https://x.com/StockMKTNewz/status/2082551457035808789",
+      "kind": "post",
+      "engagement": {
+        "views": 30733,
+        "likes": 85,
+        "reposts": 4,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6624,18 +6649,26 @@
     {
       "date": "2026-07-27",
       "close": 70.79
+    },
+    {
+      "date": "2026-07-28",
+      "close": 67.3
+    },
+    {
+      "date": "2026-07-29",
+      "close": 60.82
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-28T12:18:38.455497+00:00",
+  "price_updated_at": "2026-07-30T10:29:56.442099+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-29",
-    "asof": "2026-07-28",
-    "attempted_at": "2026-07-28T12:18:37.712398+00:00",
+    "requested_start": "2025-07-31",
+    "asof": "2026-07-30",
+    "attempted_at": "2026-07-30T10:29:56.205001+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-29",
-    "last_available_date": "2026-07-27",
+    "first_available_date": "2025-07-31",
+    "last_available_date": "2026-07-29",
     "reason": null
   },
   "price_source_state": {
@@ -6643,7 +6676,7 @@
     "provider_symbol": "CRWV",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-28T12:18:37.712398+00:00",
+    "checked_at": "2026-07-30T10:29:56.205001+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

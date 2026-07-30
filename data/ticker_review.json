@@ -2,6 +2,16 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "VTRS",
+      "mentions": 3,
+      "company_name_hint": "Viatris"
+    },
+    {
+      "symbol": "MO",
+      "mentions": 3,
+      "company_name_hint": "Altria Group"
+    },
+    {
       "symbol": "INVH",
       "mentions": 3,
       "company_name_hint": "Invitation Homes"
@@ -12,9 +22,49 @@
       "company_name_hint": "Nasdaq"
     },
     {
-      "symbol": "MO",
+      "symbol": "BMY",
       "mentions": 2,
-      "company_name_hint": "Altria Group"
+      "company_name_hint": "Bristol-Myers Squibb"
+    },
+    {
+      "symbol": "PCAR",
+      "mentions": 2,
+      "company_name_hint": "PACCAR Inc."
+    },
+    {
+      "symbol": "AFL",
+      "mentions": 2,
+      "company_name_hint": "Aflac Incorporated"
+    },
+    {
+      "symbol": "MTG",
+      "mentions": 2,
+      "company_name_hint": "MGIC Investment Corporation"
+    },
+    {
+      "symbol": "SJM",
+      "mentions": 2,
+      "company_name_hint": "J.M. Smucker Company"
+    },
+    {
+      "symbol": "HALO",
+      "mentions": 2,
+      "company_name_hint": "Halozyme Therapeutics"
+    },
+    {
+      "symbol": "IQV",
+      "mentions": 2,
+      "company_name_hint": "IQVIA Holdings"
+    },
+    {
+      "symbol": "VSXY",
+      "mentions": 2,
+      "company_name_hint": "Victoria's Secret"
+    },
+    {
+      "symbol": "CPNG",
+      "mentions": 2,
+      "company_name_hint": "Coupang"
     },
     {
       "symbol": "8046",
@@ -97,6 +147,11 @@
       "company_name_hint": "Chimerix"
     },
     {
+      "symbol": "NEOCLOUD",
+      "mentions": 1,
+      "company_name_hint": null
+    },
+    {
       "symbol": "CAMBRICON",
       "mentions": 1,
       "company_name_hint": "Cambricon Technologies"
@@ -110,6 +165,21 @@
       "symbol": "DUVI",
       "mentions": 1,
       "company_name_hint": null
+    },
+    {
+      "symbol": "SMEE",
+      "mentions": 1,
+      "company_name_hint": "Shanghai Micro Electronics Equipment"
+    },
+    {
+      "symbol": "SMIC",
+      "mentions": 1,
+      "company_name_hint": "Semiconductor Manufacturing International Corporation"
+    },
+    {
+      "symbol": "HH",
+      "mentions": 1,
+      "company_name_hint": "Hua Hong Semiconductor"
     },
     {
       "symbol": "688572",
@@ -327,21 +397,6 @@
       "company_name_hint": "Jersey Mike's Subs"
     },
     {
-      "symbol": "BMY",
-      "mentions": 1,
-      "company_name_hint": "Bristol-Myers Squibb"
-    },
-    {
-      "symbol": "VTRS",
-      "mentions": 1,
-      "company_name_hint": "Viatris Inc."
-    },
-    {
-      "symbol": "PCAR",
-      "mentions": 1,
-      "company_name_hint": "PACCAR Inc."
-    },
-    {
       "symbol": "THC",
       "mentions": 1,
       "company_name_hint": "Tenet Healthcare Corporation"
@@ -355,26 +410,6 @@
       "symbol": "BBVA",
       "mentions": 1,
       "company_name_hint": "Banco Bilbao Vizcaya Argentaria"
-    },
-    {
-      "symbol": "AFL",
-      "mentions": 1,
-      "company_name_hint": "Aflac Incorporated"
-    },
-    {
-      "symbol": "MTG",
-      "mentions": 1,
-      "company_name_hint": "MGIC Investment Corporation"
-    },
-    {
-      "symbol": "SJM",
-      "mentions": 1,
-      "company_name_hint": "J.M. Smucker Company"
-    },
-    {
-      "symbol": "HALO",
-      "mentions": 1,
-      "company_name_hint": "Halozyme Therapeutics"
     },
     {
       "symbol": "HXL",
@@ -432,6 +467,156 @@
       "company_name_hint": "United Parcel Service"
     },
     {
+      "symbol": "JMIK",
+      "mentions": 1,
+      "company_name_hint": "Jersey Mike's Subs"
+    },
+    {
+      "symbol": "BURRY",
+      "mentions": 1,
+      "company_name_hint": null
+    },
+    {
+      "symbol": "TECH",
+      "mentions": 1,
+      "company_name_hint": "Bio-Techne"
+    },
+    {
+      "symbol": "GRMN",
+      "mentions": 1,
+      "company_name_hint": "Garmin"
+    },
+    {
+      "symbol": "EXR",
+      "mentions": 1,
+      "company_name_hint": "Extra Space Storage"
+    },
+    {
+      "symbol": "CUZ",
+      "mentions": 1,
+      "company_name_hint": "Cousins Properties"
+    },
+    {
+      "symbol": "PAA",
+      "mentions": 1,
+      "company_name_hint": "Plains All American Pipeline"
+    },
+    {
+      "symbol": "PAGP",
+      "mentions": 1,
+      "company_name_hint": "Plains GP Holdings"
+    },
+    {
+      "symbol": "EXPE",
+      "mentions": 1,
+      "company_name_hint": "Expedia Group"
+    },
+    {
+      "symbol": "MPLX",
+      "mentions": 1,
+      "company_name_hint": "MPLX LP"
+    },
+    {
+      "symbol": "BIP",
+      "mentions": 1,
+      "company_name_hint": "Brookfield Infrastructure Partners"
+    },
+    {
+      "symbol": "LAD",
+      "mentions": 1,
+      "company_name_hint": "Lithia Motors"
+    },
+    {
+      "symbol": "ZWS",
+      "mentions": 1,
+      "company_name_hint": "Zurn Elkay Water Solutions"
+    },
+    {
+      "symbol": "IEX",
+      "mentions": 1,
+      "company_name_hint": "IDEX Corporation"
+    },
+    {
+      "symbol": "AER",
+      "mentions": 1,
+      "company_name_hint": "AerCap Holdings"
+    },
+    {
+      "symbol": "KNSA",
+      "mentions": 1,
+      "company_name_hint": "Kiniksa Pharmaceuticals International"
+    },
+    {
+      "symbol": "CLH",
+      "mentions": 1,
+      "company_name_hint": "Clean Harbors"
+    },
+    {
+      "symbol": "MGA",
+      "mentions": 1,
+      "company_name_hint": "Magna International"
+    },
+    {
+      "symbol": "CBSH",
+      "mentions": 1,
+      "company_name_hint": "Commerce Bancshares"
+    },
+    {
+      "symbol": "PSA",
+      "mentions": 1,
+      "company_name_hint": "Public Storage"
+    },
+    {
+      "symbol": "CVNA",
+      "mentions": 1,
+      "company_name_hint": "Carvana"
+    },
+    {
+      "symbol": "BMW",
+      "mentions": 1,
+      "company_name_hint": "BMW AG"
+    },
+    {
+      "symbol": "GEHC",
+      "mentions": 1,
+      "company_name_hint": "GE HealthCare Technologies"
+    },
+    {
+      "symbol": "GGB",
+      "mentions": 1,
+      "company_name_hint": "Gerdau S.A."
+    },
+    {
+      "symbol": "CUBE",
+      "mentions": 1,
+      "company_name_hint": "CubeSmart"
+    },
+    {
+      "symbol": "AXTA",
+      "mentions": 1,
+      "company_name_hint": "Axalta Coating Systems"
+    },
+    {
+      "symbol": "AMGN",
+      "mentions": 1,
+      "company_name_hint": "Amgen Inc."
+    },
+    {
+      "symbol": "SWK",
+      "mentions": 1,
+      "company_name_hint": "Stanley Black & Decker"
+    },
+    {
+      "symbol": "CCEP",
+      "mentions": 1,
+      "company_name_hint": "Coca-Cola Europacific Partners"
+    },
+    {
+      "symbol": "TROW",
+      "mentions": 1,
+      "company_name_hint": "T. Rowe Price Group"
+    },
+    {
       "symbol": "RAI",
       "mentions": 1,
       "company_name_hint": "Reynolds American"
@@ -442,7 +627,7 @@
       "symbol": "CXMT",
       "instrument_id": "UNVERIFIED:CXMT",
       "company_name_hint": "ChangXin Memory Technologies",
-      "mentions": 82,
+      "mentions": 87,
       "verification_status": "identified"
     },
     {
@@ -456,7 +641,7 @@
       "symbol": "CCXI",
       "instrument_id": "UNVERIFIED:CCXI",
       "company_name_hint": "ChemoCentryx",
-      "mentions": 43,
+      "mentions": 44,
       "verification_status": "identified"
     },
     {
@@ -470,7 +655,7 @@
       "symbol": "SPX",
       "instrument_id": "UNVERIFIED:SPX",
       "company_name_hint": "S&P 500 Index",
-      "mentions": 37,
+      "mentions": 39,
       "verification_status": "identified"
     },
     {
@@ -495,17 +680,24 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "KOSPI",
+      "instrument_id": "UNVERIFIED:KOSPI",
+      "company_name_hint": "Korea Composite Stock Price Index",
+      "mentions": 31,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "DRAM",
       "instrument_id": "UNVERIFIED:DRAM",
       "company_name_hint": "Advantage Data Centers REIT (or DRAM ETF)",
-      "mentions": 29,
+      "mentions": 30,
       "verification_status": "identified"
     },
     {
       "symbol": "ANTHROPIC",
       "instrument_id": "UNVERIFIED:ANTHROPIC",
       "company_name_hint": "Anthropic PBC",
-      "mentions": 25,
+      "mentions": 26,
       "verification_status": "identified"
     },
     {
@@ -513,13 +705,6 @@
       "instrument_id": "UNVERIFIED:FOCI",
       "company_name_hint": "Foci Fiber Communication",
       "mentions": 25,
-      "verification_status": "identified"
-    },
-    {
-      "symbol": "KOSPI",
-      "instrument_id": "UNVERIFIED:KOSPI",
-      "company_name_hint": "Korea Composite Stock Price Index",
-      "mentions": 22,
       "verification_status": "identified"
     },
     {
@@ -534,6 +719,13 @@
       "instrument_id": "UNVERIFIED:3363",
       "company_name_hint": "Foci Fiber Optic",
       "mentions": 18,
+      "verification_status": "identified"
+    },
+    {
+      "symbol": "SKHX",
+      "instrument_id": "UNVERIFIED:SKHX",
+      "company_name_hint": "2x Long SK Hynix ETF (Leverage Shares)",
+      "mentions": 15,
       "verification_status": "identified"
     },
     {
@@ -554,13 +746,6 @@
       "symbol": "HUAWEI",
       "instrument_id": "UNVERIFIED:HUAWEI",
       "company_name_hint": "Huawei Technologies Co., Ltd.",
-      "mentions": 14,
-      "verification_status": "identified"
-    },
-    {
-      "symbol": "SKHX",
-      "instrument_id": "UNVERIFIED:SKHX",
-      "company_name_hint": "2x Long SK Hynix ETF (Leverage Shares)",
       "mentions": 14,
       "verification_status": "identified"
     },
@@ -586,6 +771,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "YMTC",
+      "instrument_id": "UNVERIFIED:YMTC",
+      "company_name_hint": "Yangtze Memory Technologies Co.",
+      "mentions": 13,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "FIG",
       "instrument_id": "UNVERIFIED:FIG",
       "company_name_hint": "Sculptor Capital Management",
@@ -596,13 +788,6 @@
       "symbol": "MSSCORP",
       "instrument_id": "UNVERIFIED:MSSCORP",
       "company_name_hint": "Msscorps Co., Ltd.",
-      "mentions": 12,
-      "verification_status": "identified"
-    },
-    {
-      "symbol": "YMTC",
-      "instrument_id": "UNVERIFIED:YMTC",
-      "company_name_hint": "Yangtze Memory Technologies Co.",
       "mentions": 12,
       "verification_status": "identified"
     },
@@ -628,6 +813,20 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "SHAZ",
+      "instrument_id": "UNVERIFIED:SHAZ",
+      "company_name_hint": "Shazam Entertainment",
+      "mentions": 10,
+      "verification_status": "identified"
+    },
+    {
+      "symbol": "SKHZ",
+      "instrument_id": "UNVERIFIED:SKHZ",
+      "company_name_hint": "Leverage Shares 1x Short SK Hynix ETP",
+      "mentions": 10,
+      "verification_status": "identified"
+    },
+    {
       "symbol": "VNP",
       "instrument_id": "UNVERIFIED:VNP",
       "company_name_hint": null,
@@ -649,16 +848,9 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "SKHZ",
-      "instrument_id": "UNVERIFIED:SKHZ",
-      "company_name_hint": "Leverage Shares 1x Short SK Hynix ETP",
-      "mentions": 9,
-      "verification_status": "identified"
-    },
-    {
-      "symbol": "SHAZ",
-      "instrument_id": "UNVERIFIED:SHAZ",
-      "company_name_hint": "Shazam Entertainment",
+      "symbol": "UNITREE",
+      "instrument_id": "UNVERIFIED:UNITREE",
+      "company_name_hint": "Unitree Robotics",
       "mentions": 8,
       "verification_status": "identified"
     },
@@ -667,6 +859,13 @@
       "instrument_id": "UNVERIFIED:WIN",
       "company_name_hint": "Win Semiconductors",
       "mentions": 8,
+      "verification_status": "identified"
+    },
+    {
+      "symbol": "6976",
+      "instrument_id": "UNVERIFIED:6976",
+      "company_name_hint": "Taiyo Yuden",
+      "mentions": 7,
       "verification_status": "identified"
     },
     {
@@ -712,16 +911,16 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "TRUMP",
-      "instrument_id": "UNVERIFIED:TRUMP",
-      "company_name_hint": "TRUMP meme coin",
+      "symbol": "SOXX",
+      "instrument_id": "UNVERIFIED:SOXX",
+      "company_name_hint": "Semiconductor sector",
       "mentions": 7,
       "verification_status": "identified"
     },
     {
-      "symbol": "UNITREE",
-      "instrument_id": "UNVERIFIED:UNITREE",
-      "company_name_hint": "Unitree Robotics",
+      "symbol": "TRUMP",
+      "instrument_id": "UNVERIFIED:TRUMP",
+      "company_name_hint": "TRUMP meme coin",
       "mentions": 7,
       "verification_status": "identified"
     },
@@ -731,13 +930,6 @@
       "company_name_hint": null,
       "mentions": 6,
       "verification_status": "unverified"
-    },
-    {
-      "symbol": "6976",
-      "instrument_id": "UNVERIFIED:6976",
-      "company_name_hint": "Taiyo Yuden",
-      "mentions": 6,
-      "verification_status": "identified"
     },
     {
       "symbol": "ARKK",
@@ -803,13 +995,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "SOXX",
-      "instrument_id": "UNVERIFIED:SOXX",
-      "company_name_hint": "Semiconductor sector",
-      "mentions": 6,
-      "verification_status": "identified"
-    },
-    {
       "symbol": "SPCH",
       "instrument_id": "UNVERIFIED:SPCH",
       "company_name_hint": "Leverage Shares 2x Long SpaceX ETF",
@@ -848,6 +1033,13 @@
       "symbol": "BYD",
       "instrument_id": "UNVERIFIED:BYD",
       "company_name_hint": "BYD",
+      "mentions": 5,
+      "verification_status": "identified"
+    },
+    {
+      "symbol": "FIGURE",
+      "instrument_id": "UNVERIFIED:FIGURE",
+      "company_name_hint": "Figure AI",
       "mentions": 5,
       "verification_status": "identified"
     },
@@ -1006,13 +1198,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "FIGURE",
-      "instrument_id": "UNVERIFIED:FIGURE",
-      "company_name_hint": "Figure AI",
-      "mentions": 4,
-      "verification_status": "identified"
-    },
-    {
       "symbol": "JX",
       "instrument_id": "UNVERIFIED:JX",
       "company_name_hint": null,
@@ -1095,6 +1280,13 @@
       "company_name_hint": null,
       "mentions": 4,
       "verification_status": "unverified"
+    },
+    {
+      "symbol": "SMH",
+      "instrument_id": "UNVERIFIED:SMH",
+      "company_name_hint": "VanEck Semiconductor ETF",
+      "mentions": 4,
+      "verification_status": "identified"
     },
     {
       "symbol": "SOX",
@@ -1412,6 +1604,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "MO",
+      "instrument_id": "UNVERIFIED:MO",
+      "company_name_hint": "Altria Group",
+      "mentions": 3,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "NAND",
       "instrument_id": "UNVERIFIED:NAND",
       "company_name_hint": "NAND Flash (sector/technology)",
@@ -1468,13 +1667,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "SMH",
-      "instrument_id": "UNVERIFIED:SMH",
-      "company_name_hint": "VanEck Semiconductor ETF",
-      "mentions": 3,
-      "verification_status": "identified"
-    },
-    {
       "symbol": "SNK",
       "instrument_id": "UNVERIFIED:SNK",
       "company_name_hint": "GraniteShares 2x Short SPCX Daily ETF",
@@ -1508,6 +1700,13 @@
       "company_name_hint": "VCSEL technology (generic)",
       "mentions": 3,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "VTRS",
+      "instrument_id": "UNVERIFIED:VTRS",
+      "company_name_hint": "Viatris",
+      "mentions": 3,
+      "verification_status": "unverified"
     },
     {
       "symbol": "WORLDEX",
@@ -1776,6 +1975,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "AFL",
+      "instrument_id": "UNVERIFIED:AFL",
+      "company_name_hint": "Aflac",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "AGIBOT",
       "instrument_id": "UNVERIFIED:AGIBOT",
       "company_name_hint": null,
@@ -1832,6 +2038,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "BMY",
+      "instrument_id": "UNVERIFIED:BMY",
+      "company_name_hint": "Bristol-Myers Squibb",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "CATL",
       "instrument_id": "UNVERIFIED:CATL",
       "company_name_hint": "Contemporary Amperex Technology Co., Limited",
@@ -1842,6 +2055,13 @@
       "symbol": "CELESTIAL",
       "instrument_id": "UNVERIFIED:CELESTIAL",
       "company_name_hint": null,
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CPNG",
+      "instrument_id": "UNVERIFIED:CPNG",
+      "company_name_hint": "Coupang",
       "mentions": 2,
       "verification_status": "unverified"
     },
@@ -1951,6 +2171,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "HALO",
+      "instrument_id": "UNVERIFIED:HALO",
+      "company_name_hint": "Halozyme Therapeutics",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "HGRAF",
       "instrument_id": "UNVERIFIED:HGRAF",
       "company_name_hint": null,
@@ -1968,6 +2195,13 @@
       "symbol": "INFN",
       "instrument_id": "UNVERIFIED:INFN",
       "company_name_hint": "Infinera",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "IQV",
+      "instrument_id": "UNVERIFIED:IQV",
+      "company_name_hint": "IQVIA Holdings",
       "mentions": 2,
       "verification_status": "unverified"
     },
@@ -2049,9 +2283,9 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "MO",
-      "instrument_id": "UNVERIFIED:MO",
-      "company_name_hint": "Altria Group",
+      "symbol": "MTG",
+      "instrument_id": "UNVERIFIED:MTG",
+      "company_name_hint": "MGIC Investment",
       "mentions": 2,
       "verification_status": "unverified"
     },
@@ -2115,6 +2349,13 @@
       "symbol": "P4O.DE",
       "instrument_id": "UNVERIFIED:P4O.DE",
       "company_name_hint": null,
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "PCAR",
+      "instrument_id": "UNVERIFIED:PCAR",
+      "company_name_hint": "PACCAR Inc.",
       "mentions": 2,
       "verification_status": "unverified"
     },
@@ -2196,6 +2437,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "SJM",
+      "instrument_id": "UNVERIFIED:SJM",
+      "company_name_hint": "J.M. Smucker",
+      "mentions": 2,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "SKH",
       "instrument_id": "UNVERIFIED:SKH",
       "company_name_hint": null,
@@ -2229,6 +2477,13 @@
       "company_name_hint": "Vanguard Group",
       "mentions": 2,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "VSXY",
+      "instrument_id": "UNVERIFIED:VSXY",
+      "company_name_hint": "Victoria's Secret",
+      "mentions": 2,
+      "verification_status": "unverified"
     },
     {
       "symbol": "WAB",
@@ -3099,9 +3354,9 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "AFL",
-      "instrument_id": "UNVERIFIED:AFL",
-      "company_name_hint": "Aflac Incorporated",
+      "symbol": "AER",
+      "instrument_id": "UNVERIFIED:AER",
+      "company_name_hint": "AerCap Holdings",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3158,6 +3413,13 @@
       "symbol": "ALTM",
       "instrument_id": "UNVERIFIED:ALTM",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "AMGN",
+      "instrument_id": "UNVERIFIED:AMGN",
+      "company_name_hint": "Amgen Inc.",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3260,6 +3522,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "AXTA",
+      "instrument_id": "UNVERIFIED:AXTA",
+      "company_name_hint": "Axalta Coating Systems",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "AZURE",
       "instrument_id": "UNVERIFIED:AZURE",
       "company_name_hint": null,
@@ -3309,6 +3578,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "BIP",
+      "instrument_id": "UNVERIFIED:BIP",
+      "company_name_hint": "Brookfield Infrastructure Partners",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "BITCOIN",
       "instrument_id": "UNVERIFIED:BITCOIN",
       "company_name_hint": null,
@@ -3344,9 +3620,9 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "BMY",
-      "instrument_id": "UNVERIFIED:BMY",
-      "company_name_hint": "Bristol-Myers Squibb",
+      "symbol": "BMW",
+      "instrument_id": "UNVERIFIED:BMW",
+      "company_name_hint": "BMW AG",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3393,6 +3669,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "BURRY",
+      "instrument_id": "UNVERIFIED:BURRY",
+      "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "C4_ENERGY",
       "instrument_id": "UNVERIFIED:C4_ENERGY",
       "company_name_hint": "C4 Energy",
@@ -3428,9 +3711,23 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "CBSH",
+      "instrument_id": "UNVERIFIED:CBSH",
+      "company_name_hint": "Commerce Bancshares",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "CCCX",
       "instrument_id": "UNVERIFIED:CCCX",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CCEP",
+      "instrument_id": "UNVERIFIED:CCEP",
+      "company_name_hint": "Coca-Cola Europacific Partners",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3466,6 +3763,13 @@
       "symbol": "CITI",
       "instrument_id": "UNVERIFIED:CITI",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CLH",
+      "instrument_id": "UNVERIFIED:CLH",
+      "company_name_hint": "Clean Harbors",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3536,6 +3840,27 @@
       "symbol": "CTH.V",
       "instrument_id": "UNVERIFIED:CTH.V",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CUBE",
+      "instrument_id": "UNVERIFIED:CUBE",
+      "company_name_hint": "CubeSmart",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CUZ",
+      "instrument_id": "UNVERIFIED:CUZ",
+      "company_name_hint": "Cousins Properties",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CVNA",
+      "instrument_id": "UNVERIFIED:CVNA",
+      "company_name_hint": "Carvana",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3792,6 +4117,20 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "EXPE",
+      "instrument_id": "UNVERIFIED:EXPE",
+      "company_name_hint": "Expedia Group",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "EXR",
+      "instrument_id": "UNVERIFIED:EXR",
+      "company_name_hint": "Extra Space Storage",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "EZU",
       "instrument_id": "UNVERIFIED:EZU",
       "company_name_hint": null,
@@ -3897,6 +4236,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "GEHC",
+      "instrument_id": "UNVERIFIED:GEHC",
+      "company_name_hint": "GE HealthCare Technologies",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "GEMI",
       "instrument_id": "UNVERIFIED:GEMI",
       "company_name_hint": null,
@@ -3907,6 +4253,13 @@
       "symbol": "GEMINI",
       "instrument_id": "UNVERIFIED:GEMINI",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "GGB",
+      "instrument_id": "UNVERIFIED:GGB",
+      "company_name_hint": "Gerdau S.A.",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -3953,6 +4306,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "GRMN",
+      "instrument_id": "UNVERIFIED:GRMN",
+      "company_name_hint": "Garmin",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "GTM",
       "instrument_id": "UNVERIFIED:GTM",
       "company_name_hint": "GTM (unknown)",
@@ -3981,9 +4341,9 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "HALO",
-      "instrument_id": "UNVERIFIED:HALO",
-      "company_name_hint": "Halozyme Therapeutics",
+      "symbol": "HH",
+      "instrument_id": "UNVERIFIED:HH",
+      "company_name_hint": "Hua Hong Semiconductor",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -4049,6 +4409,13 @@
       "company_name_hint": "Industrial and Commercial Bank of China",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "IEX",
+      "instrument_id": "UNVERIFIED:IEX",
+      "company_name_hint": "IDEX Corporation",
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "IGM",
@@ -4177,6 +4544,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "JMIK",
+      "instrument_id": "UNVERIFIED:JMIK",
+      "company_name_hint": "Jersey Mike's Subs",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "JMIKES",
       "instrument_id": "UNVERIFIED:JMIKES",
       "company_name_hint": "Jersey Mike's Subs",
@@ -4226,6 +4600,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "KNSA",
+      "instrument_id": "UNVERIFIED:KNSA",
+      "company_name_hint": "Kiniksa Pharmaceuticals International",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "KOID",
       "instrument_id": "UNVERIFIED:KOID",
       "company_name_hint": "KraneShares Dynamic Emerging Markets Strategy ETF",
@@ -4264,6 +4645,13 @@
       "symbol": "KYOCERA",
       "instrument_id": "UNVERIFIED:KYOCERA",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "LAD",
+      "instrument_id": "UNVERIFIED:LAD",
+      "company_name_hint": "Lithia Motors",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -4478,6 +4866,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "MGA",
+      "instrument_id": "UNVERIFIED:MGA",
+      "company_name_hint": "Magna International",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "MINIMAX",
       "instrument_id": "UNVERIFIED:MINIMAX",
       "company_name_hint": "MiniMax",
@@ -4513,6 +4908,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "MPLX",
+      "instrument_id": "UNVERIFIED:MPLX",
+      "company_name_hint": "MPLX LP",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "MPO",
       "instrument_id": "UNVERIFIED:MPO",
       "company_name_hint": null,
@@ -4532,13 +4934,6 @@
       "company_name_hint": "Marvell Technology / MACOM (unclear — likely 'Msscorps' refers to a company whose upside is tied to CPO yields)",
       "mentions": 1,
       "verification_status": "identified"
-    },
-    {
-      "symbol": "MTG",
-      "instrument_id": "UNVERIFIED:MTG",
-      "company_name_hint": "MGIC Investment Corporation",
-      "mentions": 1,
-      "verification_status": "unverified"
     },
     {
       "symbol": "MTL",
@@ -4602,6 +4997,13 @@
       "company_name_hint": "NBI",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "NEOCLOUD",
+      "instrument_id": "UNVERIFIED:NEOCLOUD",
+      "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "NEOS",
@@ -4772,6 +5174,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "PAA",
+      "instrument_id": "UNVERIFIED:PAA",
+      "company_name_hint": "Plains All American Pipeline",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "PACS",
       "instrument_id": "UNVERIFIED:PACS",
       "company_name_hint": "PACS Group Inc.",
@@ -4779,16 +5188,16 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "PAY.BR",
-      "instrument_id": "UNVERIFIED:PAY.BR",
-      "company_name_hint": null,
+      "symbol": "PAGP",
+      "instrument_id": "UNVERIFIED:PAGP",
+      "company_name_hint": "Plains GP Holdings",
       "mentions": 1,
       "verification_status": "unverified"
     },
     {
-      "symbol": "PCAR",
-      "instrument_id": "UNVERIFIED:PCAR",
-      "company_name_hint": "PACCAR Inc.",
+      "symbol": "PAY.BR",
+      "instrument_id": "UNVERIFIED:PAY.BR",
+      "company_name_hint": null,
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -4873,6 +5282,13 @@
       "symbol": "PRU",
       "instrument_id": "UNVERIFIED:PRU",
       "company_name_hint": "Prudential Financial",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "PSA",
+      "instrument_id": "UNVERIFIED:PSA",
+      "company_name_hint": "Public Storage",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -5199,13 +5615,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "SJM",
-      "instrument_id": "UNVERIFIED:SJM",
-      "company_name_hint": "J.M. Smucker Company",
-      "mentions": 1,
-      "verification_status": "unverified"
-    },
-    {
       "symbol": "SK",
       "instrument_id": "UNVERIFIED:SK",
       "company_name_hint": null,
@@ -5262,9 +5671,23 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "SMEE",
+      "instrument_id": "UNVERIFIED:SMEE",
+      "company_name_hint": "Shanghai Micro Electronics Equipment",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "SMHSF",
       "instrument_id": "UNVERIFIED:SMHSF",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "SMIC",
+      "instrument_id": "UNVERIFIED:SMIC",
+      "company_name_hint": "Semiconductor Manufacturing International Corporation",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -5388,6 +5811,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "SWK",
+      "instrument_id": "UNVERIFIED:SWK",
+      "company_name_hint": "Stanley Black & Decker",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "SXT",
       "instrument_id": "UNVERIFIED:SXT",
       "company_name_hint": "Sensient Technologies Corporation",
@@ -5421,6 +5851,13 @@
       "company_name_hint": "Tencent Holdings",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "TECH",
+      "instrument_id": "UNVERIFIED:TECH",
+      "company_name_hint": "Bio-Techne",
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "TECHWING",
@@ -5463,6 +5900,13 @@
       "company_name_hint": "ProShares UltraPro QQQ",
       "mentions": 1,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "TROW",
+      "instrument_id": "UNVERIFIED:TROW",
+      "company_name_hint": "T. Rowe Price Group",
+      "mentions": 1,
+      "verification_status": "unverified"
     },
     {
       "symbol": "TSE",
@@ -5661,13 +6105,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "VTRS",
-      "instrument_id": "UNVERIFIED:VTRS",
-      "company_name_hint": "Viatris Inc.",
-      "mentions": 1,
-      "verification_status": "unverified"
-    },
-    {
       "symbol": "VUORI",
       "instrument_id": "UNVERIFIED:VUORI",
       "company_name_hint": null,
@@ -5846,6 +6283,13 @@
       "symbol": "ZW",
       "instrument_id": "UNVERIFIED:ZW",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "ZWS",
+      "instrument_id": "UNVERIFIED:ZWS",
+      "company_name_hint": "Zurn Elkay Water Solutions",
       "mentions": 1,
       "verification_status": "unverified"
     }

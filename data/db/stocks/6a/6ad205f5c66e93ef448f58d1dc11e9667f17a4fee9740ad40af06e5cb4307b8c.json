@@ -24,21 +24,21 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-08-25",
-  "last_mention": "2026-07-25",
-  "total_mentions": 184,
+  "last_mention": "2026-07-29",
+  "total_mentions": 186,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 115,
-    "StockMKTNewz": 40,
+    "StockMKTNewz": 41,
+    "octopusycc": 9,
     "unusual_whales": 9,
-    "octopusycc": 8,
     "jukan05": 7,
     "michaelsikand": 3,
     "ren_stocks": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 135,
-    "news": 40,
+    "opinion": 136,
+    "news": 41,
     "flow": 9
   },
   "mentions": [
@@ -4399,6 +4399,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082120549485203576",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T11:06:37-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSLA",
+      "text": "今天反弹弹性比较好的票\n\n按顺序排名\n\nNVDA\nGOOG\nTSLA\nINTC\nMRVL\nDRAM\nSPCX",
+      "url": "https://x.com/octopusycc/status/2082120549485203576",
+      "kind": "post",
+      "engagement": {
+        "views": 22003,
+        "likes": 66,
+        "reposts": 5,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082485335414452706",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T11:16:09-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$TSLA",
+      "text": "This is how every Magnificent 7 name has performed so far in 2026\n\n+25.1%🟢 - Apple $AAPL \n+7%🟢 - Google $GOOGL \n+3.4%🟢 - Nvidia $NVDA  \n-1.1%🔴 - Amazon $AMZN \n-10.6%🔴 - Meta Platforms $META \n-18.2%🔴 - Microsoft $MSFT\n-32.7%🔴 - Tesla $TSLA https://t.co/Qva8OKws0x",
+      "url": "https://x.com/StockMKTNewz/status/2082485335414452706",
+      "kind": "post",
+      "engagement": {
+        "views": 59780,
+        "likes": 373,
+        "reposts": 40,
+        "replies": 46
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -5413,18 +5459,26 @@
     {
       "date": "2026-07-27",
       "close": 309.22
+    },
+    {
+      "date": "2026-07-28",
+      "close": 307.44
+    },
+    {
+      "date": "2026-07-29",
+      "close": 298.32
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-28T12:19:04.791734+00:00",
+  "price_updated_at": "2026-07-30T10:30:16.460144+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-29",
-    "asof": "2026-07-28",
-    "attempted_at": "2026-07-28T12:19:04.079389+00:00",
+    "requested_start": "2025-07-31",
+    "asof": "2026-07-30",
+    "attempted_at": "2026-07-30T10:30:15.076267+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-29",
-    "last_available_date": "2026-07-27",
+    "first_available_date": "2025-07-31",
+    "last_available_date": "2026-07-29",
     "reason": null
   },
   "price_source_state": {
@@ -5432,7 +5486,7 @@
     "provider_symbol": "TSLA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-28T12:19:04.079389+00:00",
+    "checked_at": "2026-07-30T10:30:15.076267+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

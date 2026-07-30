@@ -1,6 +1,6 @@
 {
   "ticker": "SPX",
-  "cashtag": "S&P 500",
+  "cashtag": "spx",
   "instrument": {
     "instrument_id": "UNVERIFIED:SPX",
     "display_code": "SPX",
@@ -24,18 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-01",
-  "last_mention": "2026-07-25",
-  "total_mentions": 37,
+  "last_mention": "2026-07-29",
+  "total_mentions": 39,
   "total_mentions_by_blogger": {
     "unusual_whales": 16,
     "StockMKTNewz": 9,
-    "octopusycc": 7,
+    "octopusycc": 9,
     "aleabitoreddit": 2,
     "michaelsikand": 2,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 12,
+    "opinion": 14,
     "news": 9,
     "flow": 16
   },
@@ -915,6 +915,54 @@
         "likes": 76,
         "reposts": 8,
         "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082083446877466859",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-28",
+      "created_at": "2026-07-28T08:39:11-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "pre-market bounce is a trap to let us short"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普",
+      "text": "标普盘前拉回去了\n\n但是应该是为了让我们做空的\n\n- - https://t.co/acq7lHF4kC",
+      "url": "https://x.com/octopusycc/status/2082083446877466859",
+      "kind": "post",
+      "engagement": {
+        "views": 39509,
+        "likes": 19,
+        "reposts": 0,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082556848742477917",
+      "blogger_id": "octopusycc",
+      "date": "2026-07-29",
+      "created_at": "2026-07-29T16:00:19-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "spx",
+      "text": "躺了吧\n\n别看了\n\nspx这么跌我也不懂了 \n\n别做了",
+      "url": "https://x.com/octopusycc/status/2082556848742477917",
+      "kind": "post",
+      "engagement": {
+        "views": 14734,
+        "likes": 16,
+        "reposts": 0,
+        "replies": 34
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
