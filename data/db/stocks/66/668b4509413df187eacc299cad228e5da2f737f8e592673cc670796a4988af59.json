@@ -1,6 +1,6 @@
 {
   "ticker": "HYPE",
-  "cashtag": "$HYPE",
+  "cashtag": "Hyperliquid",
   "instrument": {
     "instrument_id": "UNVERIFIED:HYPE",
     "display_code": "HYPE",
@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-20",
-  "last_mention": "2026-06-20",
-  "total_mentions": 1,
+  "last_mention": "2026-07-30",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "octopusycc": 1
+    "octopusycc": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -55,11 +57,46 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2082857217338826831",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-07-30",
+      "created_at": "2026-07-30T11:53:52-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "more competition coming in this space"
+      ],
+      "is_risk": true,
+      "conviction": "low",
+      "raw_mention": "Hyperliquid",
+      "text": "@LowBeta I feel like there's more competition coming in this space\n\nI wonder what happens to Hyperliquid",
+      "url": "https://x.com/StockMKTNewz/status/2082857217338826831",
+      "kind": "reply",
+      "engagement": {
+        "views": 728,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-07-21T03:16:46.531409+00:00",
-  "price_reason": "unverified_instrument_identity"
+  "price_updated_at": "2026-07-30T18:19:29.048657+00:00",
+  "price_reason": "unverified_instrument_identity",
+  "price_source_state": {
+    "provider": null,
+    "provider_symbol": null,
+    "status": "symbol_unresolved",
+    "reason": "unverified_instrument_identity",
+    "checked_at": "2026-07-30T18:19:29.048643+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
+    "http_status": null
+  }
 }
