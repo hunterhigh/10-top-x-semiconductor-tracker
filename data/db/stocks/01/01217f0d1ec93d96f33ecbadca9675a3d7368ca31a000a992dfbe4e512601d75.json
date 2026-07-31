@@ -1,10 +1,10 @@
 {
   "ticker": "6967",
-  "cashtag": "6967",
+  "cashtag": "Shinko Electric Industries",
   "instrument": {
     "instrument_id": "UNVERIFIED:6967",
     "display_code": "6967",
-    "display_name": "Name unverified",
+    "display_name": "Shinko Electric Industries Co., Ltd.",
     "display_market": "Market unverified",
     "aliases": [
       "6967"
@@ -20,17 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "Shinko Electric Industries Co., Ltd.",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-30",
-  "last_mention": "2026-03-30",
-  "total_mentions": 1,
+  "last_mention": "2026-07-31",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -55,8 +56,44 @@
       },
       "extractor_model": "claude-opus-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083136699857768712",
+      "blogger_id": "jukan05",
+      "date": "2026-07-31",
+      "created_at": "2026-07-31T06:24:26-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Shinko Electric Industries",
+      "text": "▶ Unimicron Says Intel’s EMIB-T Will Not Reach Mass Production Until 2027, Intensifying Advanced Packaging Rivalry\n\n- With TSMC’s CoWoS capacity still tight, Unimicron said Intel’s EMIB-T advanced packaging platform is unlikely to enter full-scale mass production before 2027.\n\n- According to customer feedback, the main reasons customers are considering switching from CoWoS to EMIB-T are lower costs and improved performance.\n\n- Unimicron expects these customers to remain with EMIB-T for three product generations, pointing to sustained market demand for long-term alternatives to CoWoS.\n\n- A key difference between CoWoS and EMIB-T is whether an expensive interposer is required, which could result in a price gap of as much as 40–50%.\n\n- EMIB-T is viewed as a particularly attractive option for cost-sensitive customers developing ASICs and CPU-based AI chips.\n\n- Unimicron sees EMIB-T not as a technology dedicated to a particular customer, but as part of an advanced packaging portfolio that, alongside CoWoS, can address customer- and product-specific requirements.\n\n- EMIB-T-related investment accounts for less than 10% of Unimicron’s total capital expenditure. Equipment dedicated exclusively to the platform represents only 15–20% of that amount, while the remainder consists of general-purpose equipment that can be reallocated as customer demand changes.\n\n- EMIB-T remains an early-stage platform, with rapid ramp-up and yield improvement currently the key priorities.\n\n- The customer is providing some profit-protection mechanisms during the ramp-up period. As yields improve, suppliers could benefit from more stable profitability, higher revenue, and better equipment utilization.\n\n- Unimicron, Ibiden, and Shinko Electric Industries are currently the three EMIB-T substrate suppliers, and all are targeting an initial yield of 50%.\n\n- The customer is centrally allocating some of the key EMIB-T process equipment and adjusting installation schedules based on each supplier’s capacity buildout and progress in improving yields.\n\n- In principle, the equipment is allocated equally among the three suppliers, with each receiving one-third. The total number of tools remains unchanged, but delivery timing is adjusted to improve production efficiency.",
+      "url": "https://x.com/jukan05/status/2083136699857768712",
+      "kind": "post",
+      "engagement": {
+        "views": 43733,
+        "likes": 71,
+        "reposts": 5,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
-  "price_status": "pending"
+  "price_status": "unverified_symbol",
+  "price_unit": "",
+  "price_reason": "unverified_instrument_identity",
+  "price_source_state": {
+    "provider": null,
+    "provider_symbol": null,
+    "status": "symbol_unresolved",
+    "reason": "unverified_instrument_identity",
+    "checked_at": "2026-07-31T12:18:51.507985+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
+    "http_status": null
+  },
+  "price_updated_at": "2026-07-31T12:18:51.507998+00:00"
 }

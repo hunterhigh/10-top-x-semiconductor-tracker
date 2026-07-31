@@ -1,6 +1,6 @@
 {
   "ticker": "AAPL",
-  "cashtag": "Apple",
+  "cashtag": "$AAPL",
   "instrument": {
     "instrument_id": "US:AAPL",
     "display_code": "AAPL",
@@ -26,12 +26,12 @@
   "thesis_summary": null,
   "first_mention": "2025-07-28",
   "last_mention": "2026-07-31",
-  "total_mentions": 252,
+  "total_mentions": 253,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 98,
     "StockMKTNewz": 78,
     "unusual_whales": 27,
-    "jukan05": 25,
+    "jukan05": 26,
     "zephyr_z9": 6,
     "ren_stocks": 6,
     "octopusycc": 6,
@@ -40,7 +40,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 146,
+    "opinion": 147,
     "news": 78,
     "flow": 27,
     "disclosure": 1
@@ -5923,6 +5923,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083139948329464029",
+      "blogger_id": "jukan05",
+      "date": "2026-07-31",
+      "created_at": "2026-07-31T06:37:21-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "higher 2nm silicon and DRAM/NAND costs could drive $250–300 price hike for iPhone 18 Pro/PM",
+        "price hike creates demand uncertainty",
+        "limited spec upgrade for consumers"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$AAPL",
+      "text": "* iPhone 18 Pro demand risk: Higher 2nm silicon and DRAM/NAND costs could drive a $250–300 price hike for iPhone 18 Pro/PM, creating demand uncertainty despite resilient iPhone 17 builds. iPhone 18 Pro/PM suggests limited spec upgrade for consumers.\n\nHOLY SMOKE\n\n$AAPL",
+      "url": "https://x.com/jukan05/status/2083139948329464029",
+      "kind": "post",
+      "engagement": {
+        "views": 35896,
+        "likes": 161,
+        "reposts": 13,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6961,11 +6988,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-31T09:17:27.279709+00:00",
+  "price_updated_at": "2026-07-31T12:18:12.118292+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-01",
     "asof": "2026-07-31",
-    "attempted_at": "2026-07-31T09:17:26.200162+00:00",
+    "attempted_at": "2026-07-31T12:18:10.784685+00:00",
     "status": "ok",
     "first_available_date": "2025-08-01",
     "last_available_date": "2026-07-30",
@@ -6976,7 +7003,7 @@
     "provider_symbol": "AAPL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-31T09:17:26.200162+00:00",
+    "checked_at": "2026-07-31T12:18:10.784685+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
