@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-31T03:17:07.472296+00:00",
+  "generated_at": "2026-07-31T06:18:03.496726+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 1742,
-  "index_sha256": "9d9c6adb28f60f59fa9eb42bd6abf24eb38d72d1ae1a894cdfd7452351391922",
+  "index_sha256": "049fd25a1a893adf501d2c5aa623b19daffd5e5661722be560a7dd8ca33275a2",
   "stocks_root": "stocks",
   "price_cache_count": 849,
   "price_cache_index_sha256": "73b1d7a58eaa952124f88e8e8e9a04eea534e463523ae9fdfa760df617747026",
   "price_cache_root": "prices_cache",
   "tickers": 1742,
-  "total_mentions": 21231,
+  "total_mentions": 21234,
   "priced_tickers": 650,
   "date_range": [
     "2025-07-02",
-    "2026-07-30"
+    "2026-07-31"
   ],
   "size_mb": 38.3,
   "tracked_bloggers": 10,
@@ -21,12 +21,12 @@
     "aleabitoreddit": 14930,
     "unusual_whales": 516,
     "StockMKTNewz": 2810,
-    "ren_stocks": 667,
+    "ren_stocks": 668,
     "octopusycc": 436,
     "zephyr_z9": 326,
     "KawzInvests": 296,
     "michaelsikand": 330,
-    "jukan05": 773,
+    "jukan05": 775,
     "DJTRadar": 147
   },
   "bloggers_missing_state_files": [],
@@ -58,19 +58,19 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 814,
+    "tickers": 797,
     "status_counts": {
-      "ok": 465,
-      "partial": 17,
-      "unverified_symbol": 315,
-      "unavailable": 17
+      "ok": 456,
+      "partial": 20,
+      "unverified_symbol": 305,
+      "unavailable": 16
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 14,
-      "unverified_instrument_identity": 315,
+      "EODHD 402 (account quota or subscription limit)": 17,
+      "unverified_instrument_identity": 305,
       "provider_symbol_not_found_after_search": 11,
-      "no_daily_closes_returned": 6,
+      "no_daily_closes_returned": 5,
       "stale_series_latest_close=2026-07-14": 2,
       "stale_series_latest_close=2026-07-15": 1
     },
@@ -79,23 +79,24 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-07-30",
-    "target_start": "2025-07-31",
-    "tickers": 42,
+    "asof": "2026-07-31",
+    "target_start": "2025-08-01",
+    "tickers": 41,
     "status_counts": {
-      "ok": 40,
+      "ok": 39,
       "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 42
+      "supported": 38,
+      "deferred": 3
     },
     "retry_queue": 0,
     "scope_counts": {
-      "monthly_consensus": 39,
+      "monthly_consensus": 38,
       "top_pick_cards": 10,
-      "top_pick_unique": 8,
-      "overlap": 5
+      "top_pick_unique": 7,
+      "overlap": 4
     }
   },
   "profile_coverage": {
