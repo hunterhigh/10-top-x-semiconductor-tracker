@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-07-31T00:16:35.991404+00:00",
+  "generated_at": "2026-07-31T03:15:48.596048+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1742,
-    "total_mentions": 21226,
+    "total_mentions": 21231,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-07-31T00:17:55.831450+00:00"
+    "prices_updated_at": "2026-07-31T03:16:58.382191+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -709,7 +709,7 @@
         "price_symbol": "SPCX",
         "verification_status": "verified"
       },
-      "cashtag": "$SPCX",
+      "cashtag": "스페이스X",
       "price_symbol": "SPCX",
       "exchange": "US",
       "currency": "USD",
@@ -719,7 +719,7 @@
       "industry": null,
       "first_mention": "2025-12-02",
       "last_mention": "2026-07-30",
-      "total_mentions": 285,
+      "total_mentions": 286,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 141,
@@ -727,7 +727,7 @@
         "aleabitoreddit": 39,
         "octopusycc": 11,
         "michaelsikand": 10,
-        "jukan05": 8,
+        "jukan05": 9,
         "ren_stocks": 5,
         "KawzInvests": 3
       },
@@ -1237,15 +1237,15 @@
       "company": "Tesla, Inc.",
       "industry": null,
       "first_mention": "2025-08-25",
-      "last_mention": "2026-07-29",
-      "total_mentions": 186,
+      "last_mention": "2026-07-30",
+      "total_mentions": 188,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 115,
-        "StockMKTNewz": 41,
+        "StockMKTNewz": 42,
         "octopusycc": 9,
         "unusual_whales": 9,
-        "jukan05": 7,
+        "jukan05": 8,
         "michaelsikand": 3,
         "ren_stocks": 1,
         "KawzInvests": 1
@@ -1339,7 +1339,8 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
+      "price_history_52w_status": "ok"
     },
     "US:RDDT": {
       "ticker": "RDDT",
@@ -3589,8 +3590,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -3665,6 +3665,49 @@
       "instrument_id": "UNVERIFIED:FLY",
       "hash": "81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc",
       "path": "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json"
+    },
+    "UNVERIFIED:KOSPI": {
+      "ticker": "KOSPI",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:KOSPI",
+        "display_code": "KOSPI",
+        "display_name": "Korea Composite Stock Price Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "KOSPI"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$KOSPI",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Korea Composite Stock Price Index",
+      "industry": null,
+      "first_mention": "2026-02-26",
+      "last_mention": "2026-07-30",
+      "total_mentions": 33,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 12,
+        "aleabitoreddit": 7,
+        "StockMKTNewz": 6,
+        "jukan05": 3,
+        "michaelsikand": 2,
+        "octopusycc": 1,
+        "KawzInvests": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:KOSPI",
+      "hash": "d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63",
+      "path": "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json"
     },
     "US:OKLO": {
       "ticker": "OKLO",
@@ -3927,49 +3970,6 @@
       "instrument_id": "US:UNH",
       "hash": "c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef",
       "path": "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json"
-    },
-    "UNVERIFIED:KOSPI": {
-      "ticker": "KOSPI",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:KOSPI",
-        "display_code": "KOSPI",
-        "display_name": "Korea Composite Stock Price Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "KOSPI"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$KOSPI",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Korea Composite Stock Price Index",
-      "industry": null,
-      "first_mention": "2026-02-26",
-      "last_mention": "2026-07-29",
-      "total_mentions": 31,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 11,
-        "aleabitoreddit": 7,
-        "StockMKTNewz": 5,
-        "jukan05": 3,
-        "michaelsikand": 2,
-        "octopusycc": 1,
-        "KawzInvests": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:KOSPI",
-      "hash": "d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63",
-      "path": "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -7810,8 +7810,7 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -84640,6 +84639,9 @@
     "닉스": [
       "UNVERIFIED:GNIX"
     ],
+    "스페이스X": [
+      "US:SPCX"
+    ],
     "에스엠(041510)": [
       "UNVERIFIED:041510"
     ]
@@ -84735,6 +84737,7 @@
     "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
     "stocks/4e/4ee3293836805cb62c187d20b8463de9181394df642ae0de237251b4d421094e.json",
     "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json",
+    "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
     "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json",
     "stocks/8b/8bd42cfd3c8ce078abbe115d1588aed7dfb083fb7441766580713ed3bb78bdab.json",
     "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json",
@@ -84742,7 +84745,6 @@
     "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
     "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
-    "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
