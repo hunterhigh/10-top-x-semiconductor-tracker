@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-01T12:17:31.840985+00:00",
+  "generated_at": "2026-08-01T15:16:28.576142+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1748,
-    "total_mentions": 21399,
+    "total_mentions": 21401,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-01T12:19:40.673116+00:00"
+    "prices_updated_at": "2026-08-01T15:18:45.601380+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -1271,7 +1271,7 @@
         "price_symbol": "AVGO",
         "verification_status": "verified"
       },
-      "cashtag": "Broadcom",
+      "cashtag": "AVGO",
       "price_symbol": "AVGO",
       "exchange": "US",
       "currency": "USD",
@@ -1280,13 +1280,13 @@
       "company": "Broadcom",
       "industry": "AI ASIC/Networking Chips",
       "first_mention": "2025-09-09",
-      "last_mention": "2026-07-31",
-      "total_mentions": 182,
+      "last_mention": "2026-08-01",
+      "total_mentions": 183,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 141,
         "StockMKTNewz": 13,
-        "jukan05": 11,
+        "jukan05": 12,
         "KawzInvests": 4,
         "DJTRadar": 4,
         "octopusycc": 3,
@@ -2090,7 +2090,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2254,8 +2255,7 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
     },
     "US:IBKR": {
       "ticker": "IBKR",
@@ -2789,8 +2789,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -4802,6 +4801,45 @@
       "hash": "e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4",
       "path": "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json"
     },
+    "TWSE:2454": {
+      "ticker": "2454",
+      "instrument": {
+        "instrument_id": "TWSE:2454",
+        "display_code": "2454",
+        "display_name": "MediaTek Inc.",
+        "display_market": "Taiwan",
+        "aliases": [
+          "2454",
+          "MEDIATEK"
+        ],
+        "market": "Taiwan",
+        "country": "TW",
+        "currency": "TWD",
+        "price_symbol": "2454.TW",
+        "verification_status": "verified"
+      },
+      "cashtag": "MediaTek",
+      "price_symbol": "2454.TW",
+      "exchange": "Taiwan",
+      "currency": "TWD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "MediaTek Inc.",
+      "industry": null,
+      "first_mention": "2025-12-01",
+      "last_mention": "2026-08-01",
+      "total_mentions": 25,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 12,
+        "jukan05": 12,
+        "zephyr_z9": 1
+      },
+      "price_status": "partial",
+      "instrument_id": "TWSE:2454",
+      "hash": "da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570",
+      "path": "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json"
+    },
     "US:BITF": {
       "ticker": "BITF",
       "instrument": {
@@ -4915,45 +4953,6 @@
       "hash": "930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02",
       "path": "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json"
     },
-    "TWSE:2454": {
-      "ticker": "2454",
-      "instrument": {
-        "instrument_id": "TWSE:2454",
-        "display_code": "2454",
-        "display_name": "MediaTek Inc.",
-        "display_market": "Taiwan",
-        "aliases": [
-          "2454",
-          "MEDIATEK"
-        ],
-        "market": "Taiwan",
-        "country": "TW",
-        "currency": "TWD",
-        "price_symbol": "2454.TW",
-        "verification_status": "verified"
-      },
-      "cashtag": "MediaTek",
-      "price_symbol": "2454.TW",
-      "exchange": "Taiwan",
-      "currency": "TWD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "MediaTek Inc.",
-      "industry": null,
-      "first_mention": "2025-12-01",
-      "last_mention": "2026-07-15",
-      "total_mentions": 24,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 12,
-        "jukan05": 11,
-        "zephyr_z9": 1
-      },
-      "price_status": "partial",
-      "instrument_id": "TWSE:2454",
-      "hash": "da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570",
-      "path": "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json"
-    },
     "US:CBRS": {
       "ticker": "CBRS",
       "instrument": {
@@ -4994,8 +4993,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:CIEN": {
       "ticker": "CIEN",
@@ -8300,7 +8298,8 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
+      "price_history_52w_status": "ok"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -11830,7 +11829,8 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
+      "price_history_52w_status": "ok"
     },
     "US:CPSH": {
       "ticker": "CPSH",
@@ -85058,10 +85058,10 @@
     "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json",
     "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
     "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json",
+    "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
     "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json",
-    "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
     "stocks/1f/1fc3a860e48d7950c68bac9172ee920ff96b64d32abc138353cfc6707d864af6.json",
