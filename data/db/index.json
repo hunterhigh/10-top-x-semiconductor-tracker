@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-01T09:16:25.158659+00:00",
+  "generated_at": "2026-08-01T12:17:31.840985+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1748,
-    "total_mentions": 21397,
+    "total_mentions": 21399,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-01T09:18:11.243825+00:00"
+    "prices_updated_at": "2026-08-01T12:19:40.673116+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -1022,7 +1022,7 @@
         "price_symbol": "005930.KS",
         "verification_status": "verified"
       },
-      "cashtag": "Samsung Electronics",
+      "cashtag": "Samsung",
       "price_symbol": "005930.KS",
       "exchange": "KRX",
       "currency": "KRW",
@@ -1031,11 +1031,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-07-30",
-      "total_mentions": 230,
+      "last_mention": "2026-08-01",
+      "total_mentions": 231,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "jukan05": 101,
+        "jukan05": 102,
         "aleabitoreddit": 80,
         "zephyr_z9": 14,
         "StockMKTNewz": 14,
@@ -1420,6 +1420,47 @@
       "hash": "cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753",
       "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json"
     },
+    "US:ORCL": {
+      "ticker": "ORCL",
+      "instrument": {
+        "instrument_id": "US:ORCL",
+        "display_code": "ORCL",
+        "display_name": "ORACLE CORP",
+        "display_market": "NYSE",
+        "aliases": [
+          "ORCL"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ORCL",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ORCL",
+      "price_symbol": "ORCL",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "ORACLE CORP",
+      "industry": "Cloud/AI Cloud Infra (OCI)",
+      "first_mention": "2025-09-09",
+      "last_mention": "2026-08-01",
+      "total_mentions": 162,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 129,
+        "StockMKTNewz": 16,
+        "octopusycc": 7,
+        "DJTRadar": 5,
+        "unusual_whales": 4,
+        "michaelsikand": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ORCL",
+      "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
+    },
     "US:JBL": {
       "ticker": "JBL",
       "instrument": {
@@ -1457,47 +1498,6 @@
       "instrument_id": "US:JBL",
       "hash": "c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d",
       "path": "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json"
-    },
-    "US:ORCL": {
-      "ticker": "ORCL",
-      "instrument": {
-        "instrument_id": "US:ORCL",
-        "display_code": "ORCL",
-        "display_name": "ORACLE CORP",
-        "display_market": "NYSE",
-        "aliases": [
-          "ORCL"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ORCL",
-        "verification_status": "verified"
-      },
-      "cashtag": "ORCL",
-      "price_symbol": "ORCL",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "ORACLE CORP",
-      "industry": "Cloud/AI Cloud Infra (OCI)",
-      "first_mention": "2025-09-09",
-      "last_mention": "2026-07-31",
-      "total_mentions": 161,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 129,
-        "StockMKTNewz": 15,
-        "octopusycc": 7,
-        "DJTRadar": 5,
-        "unusual_whales": 4,
-        "michaelsikand": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ORCL",
-      "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
     },
     "US:AEHR": {
       "ticker": "AEHR",
@@ -2254,7 +2254,8 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "US:IBKR": {
       "ticker": "IBKR",
@@ -2788,7 +2789,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -4992,7 +4994,8 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:CIEN": {
       "ticker": "CIEN",
@@ -77294,7 +77297,6 @@
       "KRX:009150"
     ],
     "SAMSUNG ELECTRONICS": [
-      "KRX:005930",
       "UNVERIFIED:005930.KS",
       "UNVERIFIED:SSNLF"
     ],
@@ -84969,8 +84971,8 @@
     "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
     "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
     "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
-    "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json",
     "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
+    "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json",
     "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
     "stocks/a6/a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f.json",
     "stocks/d1/d109b81e630da934747fbbbb58102276d25b19e31b19c5a63542878c516cda18.json",
