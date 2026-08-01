@@ -2,6 +2,11 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "CVNA",
+      "mentions": 6,
+      "company_name_hint": "Carvana"
+    },
+    {
       "symbol": "VTRS",
       "mentions": 3,
       "company_name_hint": "Viatris"
@@ -587,11 +592,6 @@
       "company_name_hint": "Public Storage"
     },
     {
-      "symbol": "CVNA",
-      "mentions": 1,
-      "company_name_hint": "Carvana"
-    },
-    {
       "symbol": "BMW",
       "mentions": 1,
       "company_name_hint": "BMW AG"
@@ -708,7 +708,7 @@
       "symbol": "SPX",
       "instrument_id": "UNVERIFIED:SPX",
       "company_name_hint": "S&P 500 Index",
-      "mentions": 41,
+      "mentions": 43,
       "verification_status": "identified"
     },
     {
@@ -1018,6 +1018,13 @@
       "company_name_hint": "WTI crude oil futures",
       "mentions": 6,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "CVNA",
+      "instrument_id": "UNVERIFIED:CVNA",
+      "company_name_hint": "Carvana",
+      "mentions": 6,
+      "verification_status": "unverified"
     },
     {
       "symbol": "GROQ",
@@ -3956,13 +3963,6 @@
       "symbol": "CUZ",
       "instrument_id": "UNVERIFIED:CUZ",
       "company_name_hint": "Cousins Properties",
-      "mentions": 1,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "CVNA",
-      "instrument_id": "UNVERIFIED:CVNA",
-      "company_name_hint": "Carvana",
       "mentions": 1,
       "verification_status": "unverified"
     },
