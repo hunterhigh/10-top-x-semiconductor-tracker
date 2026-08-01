@@ -1,6 +1,6 @@
 {
   "ticker": "NOW",
-  "cashtag": "$NOW",
+  "cashtag": "NOW",
   "instrument": {
     "instrument_id": "US:NOW",
     "display_code": "NOW",
@@ -24,18 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-05",
-  "last_mention": "2026-07-22",
-  "total_mentions": 8,
+  "last_mention": "2026-07-31",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 5,
     "aleabitoreddit": 1,
     "octopusycc": 1,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 2,
     "news": 5,
-    "flow": 1
+    "flow": 1,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -218,6 +220,29 @@
         "likes": 402,
         "reposts": 23,
         "replies": 28
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083313653051269382",
+      "blogger_id": "DJTRadar",
+      "date": "2026-07-31",
+      "created_at": "2026-07-31T18:07:35-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NOW",
+      "text": "Then the rest of the stack.\n\nORCL in cloud infrastructure. NOW and CDNS in the software and design layer that benefits when companies and governments actually deploy this stuff. PLTR on the government and defense side.",
+      "url": "https://x.com/DJTRadar/status/2083313653051269382",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 4573,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

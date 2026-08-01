@@ -1,6 +1,6 @@
 {
   "ticker": "AMD",
-  "cashtag": "$AMD",
+  "cashtag": "AMD",
   "instrument": {
     "instrument_id": "US:AMD",
     "display_code": "AMD",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-09-11",
   "last_mention": "2026-07-31",
-  "total_mentions": 263,
+  "total_mentions": 264,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 166,
     "StockMKTNewz": 41,
@@ -36,12 +36,12 @@
     "unusual_whales": 3,
     "michaelsikand": 2,
     "KawzInvests": 2,
-    "DJTRadar": 1
+    "DJTRadar": 2
   },
   "total_mentions_by_signal_type": {
     "opinion": 218,
     "news": 41,
-    "disclosure": 1,
+    "disclosure": 2,
     "flow": 3
   },
   "mentions": [
@@ -6292,6 +6292,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083313649397969220",
+      "blogger_id": "DJTRadar",
+      "date": "2026-07-31",
+      "created_at": "2026-07-31T18:07:34-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AMD",
+      "text": "On the hardware side, DELL has been one of the standouts.\n\nA $1 million to $5 million purchase in February, right before demand for AI servers exploded.\n\nAMD shows up as well, another major supplier of AI accelerators.",
+      "url": "https://x.com/DJTRadar/status/2083313649397969220",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 1393,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7326,18 +7349,22 @@
     {
       "date": "2026-07-30",
       "close": 485.39
+    },
+    {
+      "date": "2026-07-31",
+      "close": 476.15
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-31T21:17:36.083312+00:00",
+  "price_updated_at": "2026-08-01T00:16:41.907242+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-01",
     "asof": "2026-07-31",
-    "attempted_at": "2026-07-31T21:17:35.418088+00:00",
+    "attempted_at": "2026-08-01T00:16:41.295528+00:00",
     "status": "ok",
     "first_available_date": "2025-08-01",
-    "last_available_date": "2026-07-30",
+    "last_available_date": "2026-07-31",
     "reason": null
   },
   "price_source_state": {
@@ -7345,7 +7372,7 @@
     "provider_symbol": "AMD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-31T21:17:35.418088+00:00",
+    "checked_at": "2026-08-01T00:16:41.295528+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
