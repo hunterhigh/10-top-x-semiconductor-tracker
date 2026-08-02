@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-08-01",
-  "total_mentions": 231,
+  "last_mention": "2026-08-02",
+  "total_mentions": 233,
   "total_mentions_by_blogger": {
-    "jukan05": 102,
+    "jukan05": 104,
     "aleabitoreddit": 80,
     "zephyr_z9": 14,
     "StockMKTNewz": 14,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 210,
+    "opinion": 212,
     "flow": 7,
     "news": 14
   },
@@ -5505,6 +5505,54 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083914264998478043",
+      "blogger_id": "jukan05",
+      "date": "2026-08-02",
+      "created_at": "2026-08-02T09:54:12-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "Nomura raised its operating profit forecasts for Samsung Electronics to KRW 391tn ($271bn) → KRW 635tn ($440.1bn) → KRW 774tn ($536.4bn), with FCF projected at KRW 296tn → KRW 456tn → KRW 563tn and shareholder return yields of 11.2% → 17.6% → 22.3%. https://t.co/UM6Lxi8beg",
+      "url": "https://x.com/jukan05/status/2083914264998478043",
+      "kind": "post",
+      "engagement": {
+        "views": 83499,
+        "likes": 203,
+        "reposts": 19,
+        "replies": 32
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2083915223644397881",
+      "blogger_id": "jukan05",
+      "date": "2026-08-02",
+      "created_at": "2026-08-02T09:58:01-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expected to generate ~$1.25 trillion in operating profit over next three years relative to current market cap"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "So... Samsung is expected to generate roughly $1.25 trillion in operating profit over the next three years, right? And what was Samsung’s market cap again...? https://t.co/AywhQ5N5pF",
+      "url": "https://x.com/jukan05/status/2083915223644397881",
+      "kind": "post",
+      "engagement": {
+        "views": 61729,
+        "likes": 491,
+        "reposts": 32,
+        "replies": 41
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6513,26 +6561,27 @@
       "close": 262500.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-02T00:21:44.028717+00:00",
+  "price_updated_at": "2026-08-02T15:21:32.545156+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-31",
-    "asof": "2026-07-30",
-    "attempted_at": "2026-07-31T03:15:57.891916+00:00",
+    "requested_start": "2025-08-03",
+    "asof": "2026-08-02",
+    "attempted_at": "2026-08-02T15:21:32.419338+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-31",
-    "last_available_date": "2026-07-30",
+    "first_available_date": "2025-08-04",
+    "last_available_date": "2026-07-31",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-02T00:21:43.151041+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "005930.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-02T15:21:32.419338+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-08-02T18:21:32.419338+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

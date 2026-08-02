@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-02T12:19:12.356099+00:00",
+  "generated_at": "2026-08-02T15:20:36.024247+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1748,
-    "total_mentions": 21422,
+    "total_mentions": 21426,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-02T12:22:39.363693+00:00"
+    "prices_updated_at": "2026-08-02T15:22:33.761996+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -185,12 +185,12 @@
       "company": "Lumentum",
       "industry": "Optical Comms/CPO",
       "first_mention": "2025-10-25",
-      "last_mention": "2026-08-01",
-      "total_mentions": 608,
+      "last_mention": "2026-08-02",
+      "total_mentions": 609,
       "blogger_count": 7,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 557,
-        "ren_stocks": 29,
+        "ren_stocks": 30,
         "KawzInvests": 9,
         "michaelsikand": 8,
         "StockMKTNewz": 3,
@@ -886,7 +886,7 @@
         "price_symbol": "AAPL",
         "verification_status": "verified"
       },
-      "cashtag": "AAPL",
+      "cashtag": "$AAPL",
       "price_symbol": "AAPL",
       "exchange": "US",
       "currency": "USD",
@@ -895,12 +895,12 @@
       "company": "Apple Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-07-31",
-      "total_mentions": 258,
+      "last_mention": "2026-08-02",
+      "total_mentions": 259,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 98,
-        "StockMKTNewz": 81,
+        "StockMKTNewz": 82,
         "unusual_whales": 28,
         "jukan05": 26,
         "zephyr_z9": 6,
@@ -1031,11 +1031,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-08-01",
-      "total_mentions": 231,
+      "last_mention": "2026-08-02",
+      "total_mentions": 233,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "jukan05": 102,
+        "jukan05": 104,
         "aleabitoreddit": 80,
         "zephyr_z9": 14,
         "StockMKTNewz": 14,
@@ -1044,10 +1044,11 @@
         "ren_stocks": 4,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRWV": {
       "ticker": "CRWV",
@@ -2090,8 +2091,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -4094,7 +4094,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:BE": {
       "ticker": "BE",
@@ -7467,7 +7468,8 @@
       "price_status": "ok",
       "instrument_id": "US:OUST",
       "hash": "8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093",
-      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json"
+      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
+      "price_history_52w_status": "ok"
     },
     "US:VIAV": {
       "ticker": "VIAV",
@@ -8298,7 +8300,8 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
+      "price_history_52w_status": "ok"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -11828,8 +11831,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:CPSH": {
       "ticker": "CPSH",
