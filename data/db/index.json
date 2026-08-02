@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-01T21:18:29.297190+00:00",
+  "generated_at": "2026-08-02T00:19:49.034471+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1748,
-    "total_mentions": 21420,
+    "total_mentions": 21422,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-01T21:20:31.989043+00:00"
+    "prices_updated_at": "2026-08-02T00:21:44.290498+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -685,7 +685,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -999,7 +999,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1047,7 +1047,8 @@
       "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRWV": {
       "ticker": "CRWV",
@@ -1297,8 +1298,7 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
     },
     "US:RKLB": {
       "ticker": "RKLB",
@@ -1802,12 +1802,12 @@
       "company": "ChangXin Memory Technologies",
       "industry": null,
       "first_mention": "2026-02-03",
-      "last_mention": "2026-07-31",
-      "total_mentions": 88,
+      "last_mention": "2026-08-01",
+      "total_mentions": 89,
       "blogger_count": 7,
       "total_mentions_by_blogger": {
         "zephyr_z9": 36,
-        "jukan05": 33,
+        "jukan05": 34,
         "StockMKTNewz": 10,
         "aleabitoreddit": 6,
         "unusual_whales": 1,
@@ -3137,8 +3137,7 @@
       "price_status": "ok",
       "instrument_id": "US:GLW",
       "hash": "4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce",
-      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json"
     },
     "US:IBIT": {
       "ticker": "IBIT",
@@ -3710,7 +3709,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:FLY": {
       "ticker": "FLY",
@@ -4055,6 +4055,48 @@
       "hash": "c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef",
       "path": "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json"
     },
+    "UNVERIFIED:DRAM": {
+      "ticker": "DRAM",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:DRAM",
+        "display_code": "DRAM",
+        "display_name": "Advantage Data Centers REIT (or DRAM ETF)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "DRAM"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$DRAM",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Advantage Data Centers REIT (or DRAM ETF)",
+      "industry": null,
+      "first_mention": "2026-04-02",
+      "last_mention": "2026-08-01",
+      "total_mentions": 31,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "octopusycc": 9,
+        "jukan05": 8,
+        "aleabitoreddit": 6,
+        "KawzInvests": 3,
+        "ren_stocks": 3,
+        "StockMKTNewz": 1,
+        "michaelsikand": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:DRAM",
+      "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+    },
     "US:BE": {
       "ticker": "BE",
       "instrument": {
@@ -4211,48 +4253,6 @@
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
       "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
       "price_history_52w_status": "ok"
-    },
-    "UNVERIFIED:DRAM": {
-      "ticker": "DRAM",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:DRAM",
-        "display_code": "DRAM",
-        "display_name": "Advantage Data Centers REIT (or DRAM ETF)",
-        "display_market": "Market unverified",
-        "aliases": [
-          "DRAM"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "DRAM",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Advantage Data Centers REIT (or DRAM ETF)",
-      "industry": null,
-      "first_mention": "2026-04-02",
-      "last_mention": "2026-07-28",
-      "total_mentions": 30,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "octopusycc": 9,
-        "jukan05": 7,
-        "aleabitoreddit": 6,
-        "KawzInvests": 3,
-        "ren_stocks": 3,
-        "StockMKTNewz": 1,
-        "michaelsikand": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:DRAM",
-      "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:AMAT": {
       "ticker": "AMAT",
@@ -7884,7 +7884,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -85045,11 +85046,11 @@
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
+    "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
     "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
-    "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
     "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
