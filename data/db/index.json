@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-03T03:19:27.102876+00:00",
+  "generated_at": "2026-08-03T06:19:26.472423+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1748,
-    "total_mentions": 21439,
+    "total_mentions": 21443,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-03T03:21:25.176413+00:00"
+    "prices_updated_at": "2026-08-03T06:21:32.048379+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -795,7 +795,7 @@
         "price_symbol": "SNDK",
         "verification_status": "verified"
       },
-      "cashtag": "$SNDK",
+      "cashtag": "Sandisk",
       "price_symbol": "SNDK",
       "exchange": "US",
       "currency": "USD",
@@ -804,8 +804,8 @@
       "company": "Sandisk Corp",
       "industry": "Memory",
       "first_mention": "2025-11-25",
-      "last_mention": "2026-08-02",
-      "total_mentions": 268,
+      "last_mention": "2026-08-03",
+      "total_mentions": 269,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 172,
@@ -813,7 +813,7 @@
         "StockMKTNewz": 18,
         "KawzInvests": 9,
         "jukan05": 7,
-        "michaelsikand": 5,
+        "michaelsikand": 6,
         "octopusycc": 4,
         "zephyr_z9": 4
       },
@@ -942,11 +942,11 @@
       "industry": "CPU/Foundry/Glass Substrate",
       "first_mention": "2025-09-23",
       "last_mention": "2026-08-02",
-      "total_mentions": 246,
+      "total_mentions": 247,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 145,
-        "jukan05": 36,
+        "jukan05": 37,
         "StockMKTNewz": 30,
         "octopusycc": 8,
         "ren_stocks": 8,
@@ -1460,8 +1460,7 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -2256,7 +2255,8 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "US:IBKR": {
       "ticker": "IBKR",
@@ -2790,7 +2790,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -2830,7 +2831,8 @@
       "price_status": "ok",
       "instrument_id": "US:COIN",
       "hash": "bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a",
-      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json"
+      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json",
+      "price_history_52w_status": "ok"
     },
     "US:ETOR": {
       "ticker": "ETOR",
@@ -4254,6 +4256,49 @@
       "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
       "price_history_52w_status": "ok"
     },
+    "UNVERIFIED:ANTHROPIC": {
+      "ticker": "ANTHROPIC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:ANTHROPIC",
+        "display_code": "ANTHROPIC",
+        "display_name": "Anthropic PBC",
+        "display_market": "Market unverified",
+        "aliases": [
+          "ANTHROPIC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Anthropic",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Anthropic PBC",
+      "industry": null,
+      "first_mention": "2026-06-10",
+      "last_mention": "2026-08-03",
+      "total_mentions": 30,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "jukan05": 8,
+        "unusual_whales": 6,
+        "StockMKTNewz": 6,
+        "zephyr_z9": 4,
+        "michaelsikand": 3,
+        "KawzInvests": 1,
+        "aleabitoreddit": 1,
+        "ren_stocks": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:ANTHROPIC",
+      "hash": "8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d",
+      "path": "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json"
+    },
     "US:AMAT": {
       "ticker": "AMAT",
       "instrument": {
@@ -4442,49 +4487,6 @@
       "instrument_id": "US:VIRT",
       "hash": "309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe",
       "path": "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json"
-    },
-    "UNVERIFIED:ANTHROPIC": {
-      "ticker": "ANTHROPIC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:ANTHROPIC",
-        "display_code": "ANTHROPIC",
-        "display_name": "Anthropic PBC",
-        "display_market": "Market unverified",
-        "aliases": [
-          "ANTHROPIC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Anthropic",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Anthropic PBC",
-      "industry": null,
-      "first_mention": "2026-06-10",
-      "last_mention": "2026-07-30",
-      "total_mentions": 28,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "jukan05": 8,
-        "unusual_whales": 6,
-        "StockMKTNewz": 6,
-        "zephyr_z9": 4,
-        "KawzInvests": 1,
-        "aleabitoreddit": 1,
-        "ren_stocks": 1,
-        "michaelsikand": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:ANTHROPIC",
-      "hash": "8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d",
-      "path": "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json"
     },
     "US:APLD": {
       "ticker": "APLD",
@@ -4994,7 +4996,8 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:CIEN": {
       "ticker": "CIEN",
@@ -77329,7 +77332,8 @@
       "US:SAN"
     ],
     "SANDISK": [
-      "UNVERIFIED:SANDISK"
+      "UNVERIFIED:SANDISK",
+      "US:SNDK"
     ],
     "SANDISK CORP": [
       "US:SNDK"
@@ -85054,12 +85058,12 @@
     "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+    "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
     "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
     "stocks/03/0332837b414bda34374b93f2b5be80157f9c89dd81e13f2a116ce744bf3a7a20.json",
     "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json",
-    "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/f5/f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00.json",
     "stocks/15/15934c8eba8e809e2de8ddf72743c163eb1ea00a2e771e73e2cdb9f3d6108230.json",
     "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
