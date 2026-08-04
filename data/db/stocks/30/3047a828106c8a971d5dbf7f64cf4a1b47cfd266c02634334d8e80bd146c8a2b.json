@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "Nvidia",
+  "cashtag": "NVIDIA",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -25,11 +25,11 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-08-03",
-  "total_mentions": 807,
+  "total_mentions": 808,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 512,
     "StockMKTNewz": 80,
-    "jukan05": 72,
+    "jukan05": 73,
     "zephyr_z9": 35,
     "unusual_whales": 34,
     "octopusycc": 23,
@@ -39,7 +39,7 @@
     "DJTRadar": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 689,
+    "opinion": 690,
     "news": 80,
     "flow": 34,
     "disclosure": 4
@@ -18968,6 +18968,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084428229763604899",
+      "blogger_id": "jukan05",
+      "date": "2026-08-03",
+      "created_at": "2026-08-03T19:56:31-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NVIDIA",
+      "text": "Korea, Eugene Investment & Securities: On the NVIDIA Rubin Ultra HBM despec\n\nNVIDIA appears to be discussing a plan to configure the main version of Rubin Ultra with a 2 die structure, HBM4 8Hi, and 8 stacks, and to add an HBM4E 8Hi version at a later point. Assuming NVIDIA's 2027 CoWoS capacity allocation is 1,200k, NVIDIA's accelerator output is estimated at 9.9M units and Rubin Ultra output at 1.6M units. If Rubin Ultra shifts from HBM4E 12Hi 384GB to HBM4 8Hi 192GB, NVIDIA's 2027 HBM demand would be revised down by roughly 10%, from 24.1bn Gb to 21.6bn Gb, and total HBM demand could decline by about 4%. Of course, this assumption does not reflect the possibility of a further expansion in accelerator output.\n\nThat said, we judge this despec to be a strategy for producing more accelerators out of a limited pool of HBM bits, as the increase in HBM supply from DRAM makers has failed to keep pace with the speed of TSMC's front end and back end capacity expansion. DRAM makers find it difficult to expand HBM capacity flexibly because of the extreme shortage in commodity DRAM. With consumer set makers in smartphones and PCs experiencing production disruptions due to memory shortages, it is also not easy for memory makers to cut allocations to these customers any further.",
+      "url": "https://x.com/jukan05/status/2084428229763604899",
+      "kind": "post",
+      "engagement": {
+        "views": 60523,
+        "likes": 164,
+        "reposts": 9,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -20010,18 +20033,22 @@
     {
       "date": "2026-07-31",
       "close": 200.75
+    },
+    {
+      "date": "2026-08-03",
+      "close": 206.64
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-03T18:21:42.818980+00:00",
+  "price_updated_at": "2026-08-04T03:22:14.831338+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-04",
     "asof": "2026-08-03",
-    "attempted_at": "2026-08-03T18:21:41.698682+00:00",
+    "attempted_at": "2026-08-04T03:22:14.044749+00:00",
     "status": "ok",
     "first_available_date": "2025-08-04",
-    "last_available_date": "2026-07-31",
+    "last_available_date": "2026-08-03",
     "reason": null
   },
   "price_source_state": {
@@ -20029,7 +20056,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-03T18:21:41.698682+00:00",
+    "checked_at": "2026-08-04T03:22:14.044749+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

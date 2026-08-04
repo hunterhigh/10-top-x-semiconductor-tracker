@@ -24,17 +24,19 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-07",
-  "last_mention": "2026-06-29",
-  "total_mentions": 9,
+  "last_mention": "2026-08-03",
+  "total_mentions": 10,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 5,
     "ren_stocks": 2,
     "KawzInvests": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 8,
-    "news": 1
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -247,6 +249,29 @@
         "likes": 546,
         "reposts": 101,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084371397615513947",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-03",
+      "created_at": "2026-08-03T16:10:41-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ON",
+      "text": "$ON earnings:\n\n- Revenue: $1.6 billion, est: $1.59 billion\n- EPS: $0.74, est: $0.72",
+      "url": "https://x.com/unusual_whales/status/2084371397615513947",
+      "kind": "post",
+      "engagement": {
+        "views": 121301,
+        "likes": 104,
+        "reposts": 8,
+        "replies": 25
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -716,17 +741,37 @@
     {
       "date": "2026-07-27",
       "close": 89.04
+    },
+    {
+      "date": "2026-07-28",
+      "close": 84.39
+    },
+    {
+      "date": "2026-07-29",
+      "close": 78.86
+    },
+    {
+      "date": "2026-07-30",
+      "close": 83.74
+    },
+    {
+      "date": "2026-07-31",
+      "close": 81.61
+    },
+    {
+      "date": "2026-08-03",
+      "close": 80.4
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-28T09:18:27.108782+00:00",
+  "price_updated_at": "2026-08-04T03:23:11.346526+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ON",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-28T09:18:26.077687+00:00",
+    "checked_at": "2026-08-04T03:23:10.636469+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

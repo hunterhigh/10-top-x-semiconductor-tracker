@@ -1,6 +1,6 @@
 {
   "ticker": "SNDK",
-  "cashtag": "Sandisk",
+  "cashtag": "$SNDK",
   "instrument": {
     "instrument_id": "US:SNDK",
     "display_code": "SNDK",
@@ -25,19 +25,19 @@
   "thesis_summary": "他看好 SanDisk 的存储周期上行。",
   "first_mention": "2025-11-25",
   "last_mention": "2026-08-03",
-  "total_mentions": 269,
+  "total_mentions": 271,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 172,
+    "aleabitoreddit": 173,
     "ren_stocks": 49,
     "StockMKTNewz": 18,
     "KawzInvests": 9,
-    "jukan05": 7,
+    "jukan05": 8,
     "michaelsikand": 6,
     "octopusycc": 4,
     "zephyr_z9": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 251,
+    "opinion": 253,
     "news": 18
   },
   "mentions": [
@@ -6558,6 +6558,55 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084430819242946683",
+      "blogger_id": "jukan05",
+      "date": "2026-08-03",
+      "created_at": "2026-08-03T20:06:48-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Sandisk",
+      "text": "Google has joined the HBF consortium led by SK hynix and Sandisk. You know what that means, right? https://t.co/i32fSseVSI",
+      "url": "https://x.com/jukan05/status/2084430819242946683",
+      "kind": "post",
+      "engagement": {
+        "views": 126267,
+        "likes": 593,
+        "reposts": 50,
+        "replies": 37
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084468063228060092",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-03",
+      "created_at": "2026-08-03T22:34:48-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "current annual NAND capacity sold out",
+        "2027 expected to be most severe memory shortage"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SNDK",
+      "text": "SK Hynix, $MU , and Samsung have sold out of 2027 capacity for DRAM/HBM.\n\n$SNDK, Samsung, Micron current annual NAND capacity has been sold out, with Kioxia and SK Hynix expected to finalize allocations by August 2026. \n\n- Customers are being allocated only 60–70% of the volumes they initially requested\n\n- industry insiders pointed out that 2027 will enter the most severe moment of memory shortage\n\n- Allocation amounts are mostly decided, but final shipment pricing will be determined closer to delivery \n\nSource: Digitimes, citing industry sources. \n\nHard to see those memory \"oversupply\" claims in early-mid 2027 when they're all sold out of capacity already.",
+      "url": "https://x.com/aleabitoreddit/status/2084468063228060092",
+      "kind": "post",
+      "engagement": {
+        "views": 54370,
+        "likes": 436,
+        "reposts": 38,
+        "replies": 69
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7596,18 +7645,22 @@
     {
       "date": "2026-07-31",
       "close": 1214.83
+    },
+    {
+      "date": "2026-08-03",
+      "close": 1288.03
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-03T18:21:46.577300+00:00",
+  "price_updated_at": "2026-08-04T03:22:17.968308+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-04",
     "asof": "2026-08-03",
-    "attempted_at": "2026-08-03T18:21:46.114474+00:00",
+    "attempted_at": "2026-08-04T03:22:17.430704+00:00",
     "status": "ok",
     "first_available_date": "2025-08-04",
-    "last_available_date": "2026-07-31",
+    "last_available_date": "2026-08-03",
     "reason": null
   },
   "price_source_state": {
@@ -7615,7 +7668,7 @@
     "provider_symbol": "SNDK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-03T18:21:46.114474+00:00",
+    "checked_at": "2026-08-04T03:22:17.430704+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
