@@ -1,6 +1,6 @@
 {
   "ticker": "CAT",
-  "cashtag": "CAT",
+  "cashtag": "$CAT",
   "instrument": {
     "instrument_id": "US:CAT",
     "display_code": "CAT",
@@ -25,16 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2026-03-21",
   "last_mention": "2026-08-04",
-  "total_mentions": 13,
+  "total_mentions": 15,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 10,
+    "StockMKTNewz": 11,
+    "octopusycc": 2,
     "aleabitoreddit": 1,
-    "unusual_whales": 1,
-    "octopusycc": 1
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2,
-    "news": 10,
+    "opinion": 3,
+    "news": 11,
     "flow": 1
   },
   "mentions": [
@@ -336,6 +336,55 @@
         "likes": 17,
         "reposts": 0,
         "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084590681083781517",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T06:42:02-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CAT",
+      "text": "CATERPILLAR $CAT JUST REPORTED EARNINGS\n\n- EPS of $8.17 beating expectations of $6.17 🟢\n- Revenue of $20.50B beating expectations of $19.34B 🟢\n- Backlog: $72.1B\n\nFY guidance:\n\n- Sales & revenue growth expected in the mid-to-high teens vs. 2025\n- Adjusted operating margin expected near the bottom of the annual target range, excluding IEEPA tariff recoveries",
+      "url": "https://x.com/StockMKTNewz/status/2084590681083781517",
+      "kind": "post",
+      "engagement": {
+        "views": 23014,
+        "likes": 128,
+        "reposts": 10,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084595485571158461",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T07:01:08-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "all bullish signals",
+        "money that could go into pocket"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CAT",
+      "text": "傻逼VPN 让我看CAT看到一半 全是看涨 \n\n他妈个逼 明明都是能进兜里的钱 日了 \n\n$CAT https://t.co/yich4OkdM7",
+      "url": "https://x.com/octopusycc/status/2084595485571158461",
+      "kind": "post",
+      "engagement": {
+        "views": 2640,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -705,17 +754,21 @@
     {
       "date": "2026-07-31",
       "close": 814.81
+    },
+    {
+      "date": "2026-08-03",
+      "close": 830.03
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-03T06:20:34.951602+00:00",
+  "price_updated_at": "2026-08-04T12:21:57.142637+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "CAT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-03T06:20:31.823949+00:00",
+    "checked_at": "2026-08-04T12:21:55.395520+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
