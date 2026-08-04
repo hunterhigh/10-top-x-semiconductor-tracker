@@ -1,6 +1,6 @@
 {
   "ticker": "SPCX",
-  "cashtag": "spcx",
+  "cashtag": "$SPCX",
   "instrument": {
     "instrument_id": "US:SPCX",
     "display_code": "SPCX",
@@ -27,19 +27,19 @@
   "thesis_summary": null,
   "first_mention": "2025-12-02",
   "last_mention": "2026-08-04",
-  "total_mentions": 289,
+  "total_mentions": 290,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 141,
     "unusual_whales": 69,
     "aleabitoreddit": 40,
-    "octopusycc": 12,
+    "octopusycc": 13,
     "michaelsikand": 10,
     "jukan05": 9,
     "ren_stocks": 5,
     "KawzInvests": 3
   },
   "total_mentions_by_signal_type": {
-    "opinion": 79,
+    "opinion": 80,
     "news": 141,
     "flow": 69
   },
@@ -6785,6 +6785,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084651479655424348",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T10:43:38-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "negative GEX dominates options — volatility amplified regardless of earnings direction",
+        "large sell put flow near $90-$110 suggests support/buy pressure at those levels",
+        "Starlink showing two consecutive months of negative growth, potentially hurting revenue expectations"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SPCX",
+      "text": "SPCX首次财报期权GEX前瞻\n\n$SPCX \n\n这是一个以负GEX主导的期权表现\n\n意味着SPCX在财报好坏的任何情况下，都会放大波动\n\n从期权流来看，有大量的sell put 在90-110刀附近成交\n\n这将意味着 SPCX的下限将有相当多的买盘在90-110刀支撑\n\n————————\n\n重点信息：\n\n近期SPCX关于 Starlink出现连续两个月的负增长，作为SpaceX 最大的营收环节，这可能会冲击SPCX的营收预期，这一点大家都要心知肚明。（见图三）\n\n————————\n本文由 @Coinbase 赞助，当前Coinbase正在广泛的开放KYC\n\n美股合约交易，就上Coinbase  \n\n欢迎大家注册Coinbase：https://t.co/URl4g9OWaN",
+      "url": "https://x.com/octopusycc/status/2084651479655424348",
+      "kind": "post",
+      "engagement": {
+        "views": 2295,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6931,11 +6958,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-04T12:21:39.054515+00:00",
+  "price_updated_at": "2026-08-04T15:21:37.799248+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-05",
     "asof": "2026-08-04",
-    "attempted_at": "2026-08-04T12:21:38.720603+00:00",
+    "attempted_at": "2026-08-04T15:21:37.556129+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-06-12",
     "last_available_date": "2026-08-03",
@@ -6946,7 +6973,7 @@
     "provider_symbol": "SPCX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-04T12:21:38.720603+00:00",
+    "checked_at": "2026-08-04T15:21:37.556129+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

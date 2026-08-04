@@ -1,6 +1,6 @@
 {
   "ticker": "ALAB",
-  "cashtag": "alab",
+  "cashtag": "$ALAB",
   "instrument": {
     "instrument_id": "US:ALAB",
     "display_code": "ALAB",
@@ -25,18 +25,18 @@
   "thesis_summary": null,
   "first_mention": "2025-07-21",
   "last_mention": "2026-08-04",
-  "total_mentions": 107,
+  "total_mentions": 108,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 86,
     "StockMKTNewz": 11,
-    "octopusycc": 6,
+    "octopusycc": 7,
     "unusual_whales": 1,
     "zephyr_z9": 1,
     "ren_stocks": 1,
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 95,
+    "opinion": 96,
     "flow": 1,
     "news": 11
   },
@@ -2684,6 +2684,36 @@
         "likes": 17,
         "reposts": 0,
         "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084658687059394736",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T11:12:16-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "overall bullish bias on ALAB",
+        "key support levels at 320 and 300 (GEX accumulation zones)",
+        "call wall near 350 indicates market pricing in strong earnings",
+        "options flow predominantly bullish inflows",
+        "caution: earnings expectations high, risk of sell-the-news reaction post earnings",
+        "largest single options buy is 8/7 300 Put treated as defensive hedge"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$ALAB",
+      "text": "ALAB 光通信龙头股财报前瞻 （8/4盘后）\n\nALAB整体以看涨为主 $ALAB \n\n一句话总结：\n1. 市场对于ALAB财报预期打得较满，财报后容易sell the news\n2. 期权市场今日最大买盘仍然是 300 put 累计145万美金的 看跌成交\n3. 下方主要支撑明确 320 300都是明确支撑，如Sell the news 可以寻求 GEX堆积区域进行埋伏\n\n——————————————\n\n波动范围为 300-380 \n\n下方有大量 负GEX 堆积 \n320 都会形成支撑\n\n整体以看涨为主\n\n目前Call Wall 卡在350刀附近\n\n这意味着目前市场相对Price in ALAB较好的财报结果 \n\n小心财报后出现的sell news引发的下跌\n\n今日期权流主要以看涨流入为主，与逼近Call Wall的股价强相关（见图二）\n\n但今日市场最大的买盘依然是 8/7 300 Put，我将其视为防守",
+      "url": "https://x.com/octopusycc/status/2084658687059394736",
+      "kind": "post",
+      "engagement": {
+        "views": 0,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
