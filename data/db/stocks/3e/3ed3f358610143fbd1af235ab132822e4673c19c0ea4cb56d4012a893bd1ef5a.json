@@ -1,6 +1,6 @@
 {
   "ticker": "PLTR",
-  "cashtag": "PALANTIR",
+  "cashtag": "$PLTR",
   "instrument": {
     "instrument_id": "US:PLTR",
     "display_code": "PLTR",
@@ -24,19 +24,19 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-28",
-  "last_mention": "2026-08-03",
-  "total_mentions": 77,
+  "last_mention": "2026-08-04",
+  "total_mentions": 78,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 50,
     "StockMKTNewz": 14,
     "unusual_whales": 6,
-    "octopusycc": 3,
+    "octopusycc": 4,
     "DJTRadar": 2,
     "michaelsikand": 1,
     "zephyr_z9": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 55,
+    "opinion": 56,
     "flow": 6,
     "news": 14,
     "disclosure": 2
@@ -1875,6 +1875,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084534252138643603",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T02:57:49-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "after-hours +15.88% earnings reaction"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$PLTR",
+      "text": "盘后+15.88%\n\n$PLTR \n\n今后新增财报环节！ https://t.co/wUjSQr08fX",
+      "url": "https://x.com/octopusycc/status/2084534252138643603",
+      "kind": "post",
+      "engagement": {
+        "views": 2964,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2897,17 +2922,21 @@
     {
       "date": "2026-07-31",
       "close": 123.06
+    },
+    {
+      "date": "2026-08-03",
+      "close": 125.65
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-03T03:21:05.292192+00:00",
+  "price_updated_at": "2026-08-04T09:21:27.402480+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "PLTR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-03T03:21:04.768747+00:00",
+    "checked_at": "2026-08-04T09:21:26.580827+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
