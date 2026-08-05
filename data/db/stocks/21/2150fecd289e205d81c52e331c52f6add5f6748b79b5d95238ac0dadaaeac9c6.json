@@ -26,20 +26,20 @@
   "thesis_summary": null,
   "first_mention": "2025-12-28",
   "last_mention": "2026-08-04",
-  "total_mentions": 235,
+  "total_mentions": 236,
   "total_mentions_by_blogger": {
     "jukan05": 106,
     "aleabitoreddit": 80,
     "zephyr_z9": 14,
     "StockMKTNewz": 14,
     "octopusycc": 9,
-    "unusual_whales": 7,
+    "unusual_whales": 8,
     "ren_stocks": 4,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 214,
-    "flow": 7,
+    "flow": 8,
     "news": 14
   },
   "mentions": [
@@ -5609,6 +5609,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2084760791040004235",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-04",
+      "created_at": "2026-08-04T17:58:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "SK Hynix, Micron, $MU, and Samsung have reportedly sold out and allocated their total DRAM and High Bandwidth Memory production capacity for 2027, per Digitimes.",
+      "url": "https://x.com/unusual_whales/status/2084760791040004235",
+      "kind": "post",
+      "engagement": {
+        "views": 93680,
+        "likes": 376,
+        "reposts": 34,
+        "replies": 40
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -6619,29 +6642,32 @@
     {
       "date": "2026-08-03",
       "close": 239500.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 240000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-04T18:21:36.992752+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-05T00:22:28.132393+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-05",
     "asof": "2026-08-04",
-    "attempted_at": "2026-08-04T18:21:36.812777+00:00",
+    "attempted_at": "2026-08-05T00:22:27.373475+00:00",
     "status": "ok",
     "first_available_date": "2025-08-05",
-    "last_available_date": "2026-08-03",
+    "last_available_date": "2026-08-04",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-04T18:21:36.812777+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-04T21:21:36.812777+00:00",
+    "provider_symbol": "005930.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-05T00:22:27.373475+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }
