@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-01",
-  "last_mention": "2026-08-03",
-  "total_mentions": 6,
+  "last_mention": "2026-08-05",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 5,
-    "DJTRadar": 1
+    "DJTRadar": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 5,
-    "disclosure": 1
+    "disclosure": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -174,6 +176,29 @@
         "likes": 41,
         "reposts": 2,
         "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085098077161947513",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-05",
+      "created_at": "2026-08-05T16:18:15-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MELI",
+      "text": "RT @WOLF_Financial: MERCADOLIBRE $MELI JUST REPORTED Q2 EARNINGS\n\n- Net revenue &amp; financial income of $10.17B, up 50% YoY (43% FX-neutral),…",
+      "url": "https://x.com/StockMKTNewz/status/2085098077161947513",
+      "kind": "post",
+      "engagement": {
+        "views": 16243,
+        "likes": 35,
+        "reposts": 6,
+        "replies": 4
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
