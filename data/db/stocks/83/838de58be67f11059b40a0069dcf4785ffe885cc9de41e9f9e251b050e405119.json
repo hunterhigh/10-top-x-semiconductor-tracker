@@ -1,0 +1,81 @@
+{
+  "ticker": "BABY",
+  "cashtag": "$BABY",
+  "instrument": {
+    "instrument_id": "UNVERIFIED:BABY",
+    "display_code": "BABY",
+    "display_name": "Babylon (BabylonChain)",
+    "display_market": "Market unverified",
+    "aliases": [
+      "BABY"
+    ],
+    "market": null,
+    "country": null,
+    "currency": null,
+    "price_symbol": null,
+    "verification_status": "unverified"
+  },
+  "price_symbol": null,
+  "exchange": null,
+  "currency": null,
+  "ticker_mapped": false,
+  "verification_status": "unverified",
+  "company": "Babylon (BabylonChain)",
+  "industry": null,
+  "thesis_summary": null,
+  "first_mention": "2026-08-06",
+  "last_mention": "2026-08-06",
+  "total_mentions": 1,
+  "total_mentions_by_blogger": {
+    "octopusycc": 1
+  },
+  "total_mentions_by_signal_type": {
+    "opinion": 1
+  },
+  "mentions": [
+    {
+      "tweet_id": "2085298264602181979",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-06",
+      "created_at": "2026-08-06T05:33:43-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "native BTC can be used directly as on-chain collateral without wrapping or bridging",
+        "users retain self-custody",
+        "access to DeFi market-rate lending",
+        "BTC liquidity entering broader financial scenarios like lending, stablecoins, and derivatives",
+        "if architecture succeeds, BTC's role extends from pure holding asset to on-chain credit and liquidity layer"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$BABY",
+      "text": "比特币一直是加密市场里规模最大、共识最强的资产，但在 DeFi 里，原生 BTC 的资本效率其实并不高。\n\n想借出稳定币，过去通常要先包装、跨链，或者把资产交给中心化机构。每增加一层，都会增加额外的托管、桥接和合约风险。\n\nBabylon Trustless Bitcoin Vaults (TBV) 想解决的就是这个问题：让用户直接使用原生 BTC 作为抵押品，不需要 Wrapped BTC，不需要跨链桥，也不依赖中心化托管方。\n\n目前 TBV 已经和 Aave v4 推出了原生 BTC 抵押借贷公开测试网。用户抵押原生 BTC 后，可以在 Ethereum 上借出 USDC、USDT 等资产。\n\n我觉得这件事比较值得关注的地方有四点：\n\n1. 原生 BTC 可以直接成为链上抵押品；\n2. 用户依然保持自托管；\n3. 可以获得 DeFi 市场化的借贷利率；\n4. BTC 流动性开始进入借贷、稳定币和衍生品等更大的金融场景。\n\n如果这套架构最终跑通，BTC 的角色就会从单纯持有资产，进一步延伸到链上信用和流动性底层。\n\n目前公开测试网已经上线，可以实际体验流程，并提交产品反馈：\n\n测试网：https://t.co/9z9QPs2YWA\n反馈表：https://t.co/MZT2nDzikR\n\n@BabylonLab_io $BABY #baby",
+      "url": "https://x.com/octopusycc/status/2085298264602181979",
+      "kind": "post",
+      "engagement": {
+        "views": 6323,
+        "likes": 4,
+        "reposts": 1,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    }
+  ],
+  "price_series": [],
+  "price_status": "unverified_symbol",
+  "price_unit": "",
+  "price_reason": "unverified_instrument_identity",
+  "price_source_state": {
+    "provider": null,
+    "provider_symbol": null,
+    "status": "symbol_unresolved",
+    "reason": "unverified_instrument_identity",
+    "checked_at": "2026-08-06T12:22:23.179767+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
+    "http_status": null
+  },
+  "price_updated_at": "2026-08-06T12:22:23.179780+00:00"
+}
