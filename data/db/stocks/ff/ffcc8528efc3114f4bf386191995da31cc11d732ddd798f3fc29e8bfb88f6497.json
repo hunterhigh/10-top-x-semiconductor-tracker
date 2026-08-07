@@ -24,16 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-19",
-  "last_mention": "2026-08-04",
-  "total_mentions": 39,
+  "last_mention": "2026-08-07",
+  "total_mentions": 41,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 29,
     "StockMKTNewz": 9,
+    "DJTRadar": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 30,
-    "news": 9
+    "news": 9,
+    "disclosure": 2
   },
   "mentions": [
     {
@@ -995,6 +997,58 @@
         "likes": 123,
         "reposts": 6,
         "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085630960549216532",
+      "blogger_id": "DJTRadar",
+      "date": "2026-08-07",
+      "created_at": "2026-08-07T03:35:44-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "US solar and battery manufacturing platform building modules and cells domestically",
+        "new incentives built around fully domestic supply chains which is the entire thesis of this company"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TE",
+      "text": "TE. T1 Energy, formerly Freyr Battery.\n\nA US solar and battery manufacturing platform building modules and cells domestically rather than importing them.\n\nThe new incentives are built around fully domestic supply chains, which is the entire thesis of this company.",
+      "url": "https://x.com/DJTRadar/status/2085630960549216532",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 751,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085630975036314033",
+      "blogger_id": "DJTRadar",
+      "date": "2026-08-07",
+      "created_at": "2026-08-07T03:35:48-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "not profitable",
+        "policy support doesn't make it automatically cheap"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "TE",
+      "text": "FSLR has been through multiple boom and bust cycles. TE is not profitable. GLW is a diversified business where solar is a small piece.\n\nPolicy support is real. It doesn’t make any of these automatically cheap.\n\nCheck the price before you check the narrative.",
+      "url": "https://x.com/DJTRadar/status/2085630975036314033",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 2486,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
