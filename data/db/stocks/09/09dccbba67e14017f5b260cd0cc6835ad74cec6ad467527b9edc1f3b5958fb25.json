@@ -25,16 +25,16 @@
   "industry": "AI Photonics/CPO Lasers",
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
-  "last_mention": "2026-08-06",
-  "total_mentions": 841,
+  "last_mention": "2026-08-07",
+  "total_mentions": 842,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 795,
+    "aleabitoreddit": 796,
     "ren_stocks": 43,
     "jukan05": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 841
+    "opinion": 842
   },
   "mentions": [
     {
@@ -22197,6 +22197,34 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085603590903902621",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-07",
+      "created_at": "2026-08-07T01:46:59-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "independent CPO CW laser capacity more valuable as AAOI turns away customers",
+        "one of few qualified CPO laser names with capacity coming online",
+        "Sivers + Ayar more likely candidate for AMD Helios CPO lasers",
+        "China years behind in CPO lasers, defensible Western positioning"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$SIVE",
+      "text": "Wow, there's gem after gem in $AAOI earnings for $SIVE + other laser player readthrough.\n\n1. AAOI not meaningfully participating in CPO first-gen deployments.\n\n\"We just can’t make enough of them [CPO lasers] to be involved in their current first-generation [CPO] deployments because there’s just not enough capacity.   We have to prioritize our ability to make lasers for our own  transceivers first\"\n\nSo first-gen CPO laser deployments, might even be narrowed down further for Western players like $SIVE, $LITE, $AVGO, and $COHR.\n\nAnd independent CPO CW laser capacity became more valuable if $AAOI had to turn away more customers...\n\nAlso remember Trendforce was talking about $AMD singing CW LTAs? $COHR / $LITE have capacity signed with $NVDA ...\n\nI thought it would be $AAOI, but they might be out of the equation. $MTSI also doesn't look meaningful with early CPO participation (eg. no mention in ER aside from NPO, and removal from Ayar website).\n\nSo I wonder who players like $AMD is going to go with for Helios (eg. Sivers + Ayar more likely candidate now)?\n\nBtw, this is not bearish AAOI because they have too much demand for optical transceiver business. Just more bullish on the existing few qualified CPO laser names that have capacity. \n\n2. Demand imbalance and bottleneck for InP lasers / optical transceivers.\n\nAOI's CEO stated kinda supported that when they said: \"The customer demand is 20%-40% higher\" than expanded built out capacity.\n\n\"We are getting this kind of demand from several big customers almost every week. Lasers are the biggest bottleneck right now for the transceiver business\"\n\n3. China being years away from having CPO DWDM specification lasers.\n\nI covered this earlier when looking at CPO competition from channel checks.\n\nBut AAOI confirming that China is \"easily at least two, three years or even longer from having CPO lasers is incredible tread through on defensibility Western laser positioning in the CPO laser chokepoint.\n\nTLDR:\n\n- High demand imbalance for CW lasers and optical transceivers.\n\n- $AAOI not in first-gen CPO due to capacity constraints (not exactly bearish AAOI because they have too much demand for their optical transciver business, but even better news for the few independent players with capacity coming online like $SIVE)\n\n- China years behind in CPO lasers.",
+      "url": "https://x.com/aleabitoreddit/status/2085603590903902621",
+      "kind": "post",
+      "engagement": {
+        "views": 39482,
+        "likes": 242,
+        "reposts": 20,
+        "replies": 39
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -23245,26 +23273,27 @@
       "close": 36.7
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "SEK",
-  "price_updated_at": "2026-08-07T03:21:01.567105+00:00",
+  "price_updated_at": "2026-08-07T06:22:12.788718+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-07",
-    "asof": "2026-08-06",
-    "attempted_at": "2026-08-07T03:21:01.530748+00:00",
+    "requested_start": "2025-08-08",
+    "asof": "2026-08-07",
+    "attempted_at": "2026-08-07T06:22:12.399871+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-07",
+    "first_available_date": "2025-08-08",
     "last_available_date": "2026-08-06",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-07T03:21:01.530748+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-07T06:22:12.399871+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-08-07T09:22:12.399871+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

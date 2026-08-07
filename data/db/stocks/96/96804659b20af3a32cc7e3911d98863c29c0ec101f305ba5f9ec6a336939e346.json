@@ -25,14 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2026-04-15",
   "last_mention": "2026-08-06",
-  "total_mentions": 9,
+  "total_mentions": 12,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 7,
+    "zephyr_z9": 2,
     "KawzInvests": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 8,
+    "opinion": 11,
     "news": 1
   },
   "mentions": [
@@ -244,6 +246,79 @@
         "likes": 43,
         "reposts": 4,
         "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085574165768397213",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-06",
+      "created_at": "2026-08-06T23:50:03-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Unitree",
+      "text": "Unitree will IPO at $9B\nIt's trading at $40B on Hyperliquid\nAnother big Chinese IPO pop",
+      "url": "https://x.com/zephyr_z9/status/2085574165768397213",
+      "kind": "post",
+      "engagement": {
+        "views": 25035,
+        "likes": 245,
+        "reposts": 9,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085574434430369954",
+      "blogger_id": "jukan05",
+      "date": "2026-08-06",
+      "created_at": "2026-08-06T23:51:07-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "bubble"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Unitree",
+      "text": "@zephyr_z9 CXMT is a value investment, but Unitree is a bubble.",
+      "url": "https://x.com/jukan05/status/2085574434430369954",
+      "kind": "reply",
+      "engagement": {
+        "views": 7368,
+        "likes": 48,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2085574570476753055",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-06",
+      "created_at": "2026-08-06T23:51:40-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "can grow a lot"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Unitree",
+      "text": "@jukan05 I think Unitree can grow a looot",
+      "url": "https://x.com/zephyr_z9/status/2085574570476753055",
+      "kind": "reply",
+      "engagement": {
+        "views": 5184,
+        "likes": 45,
+        "reposts": 1,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
