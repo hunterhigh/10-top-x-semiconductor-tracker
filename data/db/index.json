@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-08T09:18:30.129669+00:00",
+  "generated_at": "2026-08-08T12:19:12.258955+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 1807,
-    "total_mentions": 22236,
+    "total_tickers": 1808,
+    "total_mentions": 22237,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 1807,
+      "files": 1808,
       "shards": 256,
       "max_shard_width": 15,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-08T09:20:24.683000+00:00"
+    "prices_updated_at": "2026-08-08T12:20:56.283047+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -1462,8 +1462,7 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -2095,7 +2094,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2798,8 +2798,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -4075,7 +4074,8 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+      "price_history_52w_status": "ok"
     },
     "Toronto TSX:HPS.A": {
       "ticker": "HPS.A",
@@ -5289,8 +5289,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "TSE:6315": {
       "ticker": "6315",
@@ -45743,6 +45742,42 @@
       "hash": "3f22832830a6213b393810fda2caccebf4cdc5b9b2ffb454c08cba4585326733",
       "path": "stocks/3f/3f22832830a6213b393810fda2caccebf4cdc5b9b2ffb454c08cba4585326733.json"
     },
+    "UNVERIFIED:GB300": {
+      "ticker": "GB300",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:GB300",
+        "display_code": "GB300",
+        "display_name": "Nvidia GB300 (Blackwell Ultra GPU)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "GB300"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "GB300s",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Nvidia GB300 (Blackwell Ultra GPU)",
+      "industry": null,
+      "first_mention": "2026-08-08",
+      "last_mention": "2026-08-08",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "zephyr_z9": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:GB300",
+      "hash": "fb03720846f39f2d19503765d4b92f53cbadf3bd5568d216559c866402510148",
+      "path": "stocks/fb/fb03720846f39f2d19503765d4b92f53cbadf3bd5568d216559c866402510148.json"
+    },
     "UNVERIFIED:GCS": {
       "ticker": "GCS",
       "instrument": {
@@ -68494,6 +68529,9 @@
     "$GAP": [
       "US:GAP"
     ],
+    "$GB300": [
+      "UNVERIFIED:GB300"
+    ],
     "$GC": [
       "UNVERIFIED:GC"
     ],
@@ -75644,6 +75682,12 @@
     "GATES INDUSTRIAL CORP PLC": [
       "US:GTES"
     ],
+    "GB300": [
+      "UNVERIFIED:GB300"
+    ],
+    "GB300S": [
+      "UNVERIFIED:GB300"
+    ],
     "GC": [
       "UNVERIFIED:GC"
     ],
@@ -78759,6 +78803,9 @@
     ],
     "NVIDIA": [
       "US:NVDA"
+    ],
+    "NVIDIA GB300 (BLACKWELL ULTRA GPU)": [
+      "UNVERIFIED:GB300"
     ],
     "NVMI": [
       "US:NVMI"
@@ -82845,6 +82892,9 @@
     ],
     "UNVERIFIED:GAMESTOP": [
       "UNVERIFIED:GAMESTOP"
+    ],
+    "UNVERIFIED:GB300": [
+      "UNVERIFIED:GB300"
     ],
     "UNVERIFIED:GC": [
       "UNVERIFIED:GC"
@@ -89094,6 +89144,7 @@
     "stocks/94/9492586981bb68e17f2b3ee40fdc34c6d66f0ab73aade7fc4ebdecc27fabdf34.json",
     "stocks/3d/3d34d8c0fc15a2d00cbbf796827bc523b589fdca95175a00732aeec6a863e529.json",
     "stocks/3f/3f22832830a6213b393810fda2caccebf4cdc5b9b2ffb454c08cba4585326733.json",
+    "stocks/fb/fb03720846f39f2d19503765d4b92f53cbadf3bd5568d216559c866402510148.json",
     "stocks/e4/e4e640e1ff9c2eb234e4e0f6ed62861cfb8dcd19800ae9795d296825ba64c6a1.json",
     "stocks/12/122b8e99426f31abf8f389e66a83c37615d8a401c12d2c6bfabba193dfc7db1b.json",
     "stocks/6d/6d63a6dec55242a108d142439c5b9193191a0d9a59b66e4bd3181f9eb9e72d28.json",
