@@ -23437,26 +23437,27 @@
       "close": 40.4
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "SEK",
-  "price_updated_at": "2026-08-08T03:18:46.719074+00:00",
+  "price_updated_at": "2026-08-08T06:19:48.262953+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-08",
-    "asof": "2026-08-07",
-    "attempted_at": "2026-08-08T03:18:46.681599+00:00",
+    "requested_start": "2025-08-09",
+    "asof": "2026-08-08",
+    "attempted_at": "2026-08-08T06:19:47.971307+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-08",
+    "first_available_date": "2025-08-11",
     "last_available_date": "2026-08-07",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-08T03:18:46.681599+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-08T06:19:47.971307+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-08-08T09:19:47.971307+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

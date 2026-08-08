@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-08T03:18:35.490196+00:00",
+  "generated_at": "2026-08-08T06:19:11.450500+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 1805,
-    "total_mentions": 22228,
+    "total_tickers": 1807,
+    "total_mentions": 22232,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 1805,
+      "files": 1807,
       "shards": 256,
       "max_shard_width": 15,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-08T03:19:35.018926+00:00"
+    "prices_updated_at": "2026-08-08T06:20:37.304660+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -130,7 +130,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "Nvidia",
+      "cashtag": "NVIDIA",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -139,13 +139,13 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-08-07",
-      "total_mentions": 830,
+      "last_mention": "2026-08-08",
+      "total_mentions": 831,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 515,
         "StockMKTNewz": 83,
-        "jukan05": 79,
+        "jukan05": 80,
         "zephyr_z9": 38,
         "unusual_whales": 37,
         "octopusycc": 23,
@@ -1045,7 +1045,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -2220,7 +2220,8 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "US:SKHY": {
       "ticker": "SKHY",
@@ -4698,7 +4699,8 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
+      "price_history_52w_status": "ok"
     },
     "US:GME": {
       "ticker": "GME",
@@ -6662,8 +6664,7 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
     },
     "US:QBTS": {
       "ticker": "QBTS",
@@ -6779,6 +6780,43 @@
       "instrument_id": "UNVERIFIED:SKHX",
       "hash": "515819ad712489340efb63584e935c79a71dfee4471065e42d976d8fb2cbb977",
       "path": "stocks/51/515819ad712489340efb63584e935c79a71dfee4471065e42d976d8fb2cbb977.json"
+    },
+    "UNVERIFIED:UNIMICRON": {
+      "ticker": "UNIMICRON",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:UNIMICRON",
+        "display_code": "UNIMICRON",
+        "display_name": "Unimicron Technology",
+        "display_market": "Market unverified",
+        "aliases": [
+          "UNIMICRON"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Unimicron",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Unimicron Technology",
+      "industry": null,
+      "first_mention": "2025-12-01",
+      "last_mention": "2026-08-08",
+      "total_mentions": 16,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 15,
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:UNIMICRON",
+      "hash": "26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416",
+      "path": "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json"
     },
     "US:CEG": {
       "ticker": "CEG",
@@ -7049,42 +7087,6 @@
       "instrument_id": "UNVERIFIED:OPENAI",
       "hash": "abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72",
       "path": "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json"
-    },
-    "UNVERIFIED:UNIMICRON": {
-      "ticker": "UNIMICRON",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:UNIMICRON",
-        "display_code": "UNIMICRON",
-        "display_name": "Name unverified",
-        "display_market": "Market unverified",
-        "aliases": [
-          "UNIMICRON"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "Unimicron",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": null,
-      "industry": null,
-      "first_mention": "2025-12-01",
-      "last_mention": "2026-05-30",
-      "total_mentions": 15,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 15
-      },
-      "price_status": "pending",
-      "instrument_id": "UNVERIFIED:UNIMICRON",
-      "hash": "26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416",
-      "path": "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json"
     },
     "US:GS": {
       "ticker": "GS",
@@ -8519,7 +8521,8 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
+      "price_history_52w_status": "ok"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -53480,6 +53483,42 @@
       "hash": "1da82c33336317c2f0125306f8108b31a6be5aebcae47f9d4aa12b9b1d7149a9",
       "path": "stocks/1d/1da82c33336317c2f0125306f8108b31a6be5aebcae47f9d4aa12b9b1d7149a9.json"
     },
+    "UNVERIFIED:SIMMTECH": {
+      "ticker": "SIMMTECH",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SIMMTECH",
+        "display_code": "SIMMTECH",
+        "display_name": "Simmtech",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SIMMTECH"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Simmtech",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Simmtech",
+      "industry": null,
+      "first_mention": "2026-08-08",
+      "last_mention": "2026-08-08",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SIMMTECH",
+      "hash": "358dddefd21a5282754a92d27170a1a5c3de054d4900e0515c0f27e609e008d7",
+      "path": "stocks/35/358dddefd21a5282754a92d27170a1a5c3de054d4900e0515c0f27e609e008d7.json"
+    },
     "UNVERIFIED:SIMMTECH_H": {
       "ticker": "SIMMTECH_H",
       "instrument": {
@@ -54991,6 +55030,42 @@
       "instrument_id": "UNVERIFIED:THC",
       "hash": "ce4e7798ff6c00df40039bd8e83509e0d9652548603e3e2b77deb3111224497b",
       "path": "stocks/ce/ce4e7798ff6c00df40039bd8e83509e0d9652548603e3e2b77deb3111224497b.json"
+    },
+    "UNVERIFIED:TLB": {
+      "ticker": "TLB",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:TLB",
+        "display_code": "TLB",
+        "display_name": "TLB Co.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "TLB"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "TLB",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "TLB Co.",
+      "industry": null,
+      "first_mention": "2026-08-08",
+      "last_mention": "2026-08-08",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:TLB",
+      "hash": "487701aa8ab0c84c534b0a1652ed89c4272133fb88f02038ccd2109cb7e9a99f",
+      "path": "stocks/48/487701aa8ab0c84c534b0a1652ed89c4272133fb88f02038ccd2109cb7e9a99f.json"
     },
     "UNVERIFIED:TOTO": {
       "ticker": "TOTO",
@@ -70498,6 +70573,9 @@
     "$SILVER": [
       "UNVERIFIED:SILVER"
     ],
+    "$SIMMTECH": [
+      "UNVERIFIED:SIMMTECH"
+    ],
     "$SIMMTECH_H": [
       "UNVERIFIED:SIMMTECH_H"
     ],
@@ -70926,6 +71004,9 @@
     ],
     "$TKR": [
       "US:TKR"
+    ],
+    "$TLB": [
+      "UNVERIFIED:TLB"
     ],
     "$TLN": [
       "US:TLN"
@@ -78217,7 +78298,6 @@
       "UNVERIFIED:UBTECH",
       "UNVERIFIED:UHR",
       "UNVERIFIED:ULVAC",
-      "UNVERIFIED:UNIMICRON",
       "UNVERIFIED:UTES",
       "UNVERIFIED:VGK",
       "UNVERIFIED:VGP",
@@ -80182,6 +80262,9 @@
       "UNVERIFIED:SI",
       "UNVERIFIED:SILVER"
     ],
+    "SIMMTECH": [
+      "UNVERIFIED:SIMMTECH"
+    ],
     "SIMMTECH HOLDINGS": [
       "UNVERIFIED:SIMMTECH_H"
     ],
@@ -81093,6 +81176,12 @@
     "TKR": [
       "US:TKR"
     ],
+    "TLB": [
+      "UNVERIFIED:TLB"
+    ],
+    "TLB CO.": [
+      "UNVERIFIED:TLB"
+    ],
     "TLN": [
       "US:TLN"
     ],
@@ -81455,6 +81544,9 @@
     ],
     "UNIMICRON": [
       "UNVERIFIED:3037",
+      "UNVERIFIED:UNIMICRON"
+    ],
+    "UNIMICRON TECHNOLOGY": [
       "UNVERIFIED:UNIMICRON"
     ],
     "UNIMICRON TECHNOLOGY CORPORATION": [
@@ -83689,6 +83781,9 @@
     "UNVERIFIED:SILVER": [
       "UNVERIFIED:SILVER"
     ],
+    "UNVERIFIED:SIMMTECH": [
+      "UNVERIFIED:SIMMTECH"
+    ],
     "UNVERIFIED:SIMMTECH_H": [
       "UNVERIFIED:SIMMTECH_H"
     ],
@@ -83877,6 +83972,9 @@
     ],
     "UNVERIFIED:THC": [
       "UNVERIFIED:THC"
+    ],
+    "UNVERIFIED:TLB": [
+      "UNVERIFIED:TLB"
     ],
     "UNVERIFIED:TOTO": [
       "UNVERIFIED:TOTO"
@@ -87923,6 +88021,7 @@
     "stocks/fd/fdb1b54852997681948cadac924dd931d5c2f77460a74e57dbb05b6acdab53d2.json",
     "stocks/46/46a5d3095c29f72e47b69c1b73e5eea34142a727e4d7a0c0211b90a64bda0d9f.json",
     "stocks/51/515819ad712489340efb63584e935c79a71dfee4471065e42d976d8fb2cbb977.json",
+    "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json",
     "stocks/3b/3be3dd57193f8c859550d03cfdbe6fd74e062f845f03f2b55bd2b489984b64e0.json",
     "stocks/e3/e33f092582163448e63dfa9631ebfad520005f29f627b0ffc65ea853b49776f4.json",
     "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
@@ -87930,7 +88029,6 @@
     "stocks/a1/a1a8dd5b8582b39ae0ac19aedd4733f54dfd1543f14cac9adfedd32ed115473c.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
     "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
-    "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json",
     "stocks/bf/bff968a164c0c33e402ec8a0736357419ee12099e6c6b7b279094a2d2db50bb8.json",
     "stocks/6a/6acccc9957d4bfaeed96083b548c7a1360ff0354751b99fe93899e95f25b4fc9.json",
     "stocks/ba/ba7ea268d8c896c1cbbd63694a15ae6eeae9a05bc684868f15ba65277bc13547.json",
@@ -89207,6 +89305,7 @@
     "stocks/77/7721e30ea1bcb4354080852b039b5ed7263a29828baacf5f9a2655c6215f4724.json",
     "stocks/4d/4d25088996704e2bc216e786a763fcdc38b556244bc67168dbb383d3413761c5.json",
     "stocks/1d/1da82c33336317c2f0125306f8108b31a6be5aebcae47f9d4aa12b9b1d7149a9.json",
+    "stocks/35/358dddefd21a5282754a92d27170a1a5c3de054d4900e0515c0f27e609e008d7.json",
     "stocks/e9/e9a7efbae044316c0db647d8d336d1d0274371c5ecc270ee24249ee338aa53b9.json",
     "stocks/0e/0eb4f12cec4bd52f88167b9c87247072aa5c887beae7ea1aaad93bf10be3743c.json",
     "stocks/f6/f66d677e13897f91ef8aa84c406942ce868f54fbf973c279f91616fd4eabe8c1.json",
@@ -89249,6 +89348,7 @@
     "stocks/85/854ebc00d5e3b0151385a563420cb925e386c7629ef8ec6afdc2cc0aea4cbad3.json",
     "stocks/12/124ae7555a135fcaca57c7b2d916ab6b1b397d6a1f3d2391eee676cb801a0ff1.json",
     "stocks/ce/ce4e7798ff6c00df40039bd8e83509e0d9652548603e3e2b77deb3111224497b.json",
+    "stocks/48/487701aa8ab0c84c534b0a1652ed89c4272133fb88f02038ccd2109cb7e9a99f.json",
     "stocks/5e/5ea8d0271c4e9039389fcda7803d8db8db38225f10999aa68ca34f969d8aa54b.json",
     "stocks/ea/eac3dc453fbd5a095d480aad36241eb086fcce9ab0e65285a9db1e96a1f6eff9.json",
     "stocks/ca/ca94b74bdeffc048f452cfeb9151773dce660df7d0e6c21b792f93869bf6dca6.json",
