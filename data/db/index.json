@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-08T21:18:54.809692+00:00",
+  "generated_at": "2026-08-09T00:15:23.925462+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1810,
-    "total_mentions": 22341,
+    "total_mentions": 22345,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-08T21:20:38.481643+00:00"
+    "prices_updated_at": "2026-08-09T00:17:30.430130+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -219,7 +219,7 @@
         "price_symbol": "AAOI",
         "verification_status": "verified"
       },
-      "cashtag": "AAOI",
+      "cashtag": "$AAOI",
       "price_symbol": "AAOI",
       "exchange": "US",
       "currency": "USD",
@@ -229,11 +229,11 @@
       "industry": "Optical Modules",
       "first_mention": "2025-12-11",
       "last_mention": "2026-08-08",
-      "total_mentions": 628,
+      "total_mentions": 629,
       "blogger_count": 7,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 492,
-        "ren_stocks": 72,
+        "ren_stocks": 73,
         "michaelsikand": 34,
         "KawzInvests": 23,
         "octopusycc": 4,
@@ -736,7 +736,8 @@
       "price_status": "ok",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
-      "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json"
+      "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
+      "price_history_52w_status": "ok"
     },
     "US:COHR": {
       "ticker": "COHR",
@@ -1006,7 +1007,8 @@
       "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
     },
     "Euronext Paris:SOI": {
       "ticker": "SOI",
@@ -1045,7 +1047,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1647,12 +1649,12 @@
       "industry": "AI Interconnect Semis (PCIe/CXL)",
       "first_mention": "2025-07-21",
       "last_mention": "2026-08-08",
-      "total_mentions": 121,
+      "total_mentions": 122,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 86,
         "StockMKTNewz": 14,
-        "ren_stocks": 8,
+        "ren_stocks": 9,
         "octopusycc": 7,
         "unusual_whales": 2,
         "zephyr_z9": 2,
@@ -1702,8 +1704,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
     },
     "US:WULF": {
       "ticker": "WULF",
@@ -1981,7 +1982,8 @@
       "price_status": "ok",
       "instrument_id": "US:SMCI",
       "hash": "dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece",
-      "path": "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json"
+      "path": "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
+      "price_history_52w_status": "ok"
     },
     "US:SNAP": {
       "ticker": "SNAP",
@@ -2440,13 +2442,14 @@
       "company": "Strategy Inc",
       "industry": null,
       "first_mention": "2025-07-02",
-      "last_mention": "2026-08-03",
-      "total_mentions": 56,
-      "blogger_count": 3,
+      "last_mention": "2026-08-08",
+      "total_mentions": 57,
+      "blogger_count": 4,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 40,
         "octopusycc": 9,
-        "StockMKTNewz": 7
+        "StockMKTNewz": 7,
+        "unusual_whales": 1
       },
       "price_status": "ok",
       "instrument_id": "US:MSTR",
@@ -2724,7 +2727,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:WLAC": {
       "ticker": "WLAC",
@@ -4935,6 +4939,46 @@
       "hash": "8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918",
       "path": "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json"
     },
+    "US:CAT": {
+      "ticker": "CAT",
+      "instrument": {
+        "instrument_id": "US:CAT",
+        "display_code": "CAT",
+        "display_name": "CATERPILLAR INC",
+        "display_market": "NYSE",
+        "aliases": [
+          "CAT"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "CAT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$CAT",
+      "price_symbol": "CAT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "CATERPILLAR INC",
+      "industry": null,
+      "first_mention": "2026-03-21",
+      "last_mention": "2026-08-08",
+      "total_mentions": 26,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 11,
+        "ren_stocks": 11,
+        "octopusycc": 2,
+        "aleabitoreddit": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:CAT",
+      "hash": "3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f",
+      "path": "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json"
+    },
     "US:CIEN": {
       "ticker": "CIEN",
       "instrument": {
@@ -5089,46 +5133,6 @@
       "instrument_id": "US:BITF",
       "hash": "5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb",
       "path": "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json"
-    },
-    "US:CAT": {
-      "ticker": "CAT",
-      "instrument": {
-        "instrument_id": "US:CAT",
-        "display_code": "CAT",
-        "display_name": "CATERPILLAR INC",
-        "display_market": "NYSE",
-        "aliases": [
-          "CAT"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "CAT",
-        "verification_status": "verified"
-      },
-      "cashtag": "$CAT",
-      "price_symbol": "CAT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "CATERPILLAR INC",
-      "industry": null,
-      "first_mention": "2026-03-21",
-      "last_mention": "2026-08-08",
-      "total_mentions": 25,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 11,
-        "ren_stocks": 10,
-        "octopusycc": 2,
-        "aleabitoreddit": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:CAT",
-      "hash": "3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f",
-      "path": "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json"
     },
     "US:LRCX": {
       "ticker": "LRCX",
@@ -88096,11 +88100,11 @@
     "stocks/c7/c7b70b6ae9993ee21f3ca85fb8b3faf91a3e7df04f8ed4783a7dfadc65effac5.json",
     "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json",
     "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json",
+    "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json",
     "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
     "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json",
     "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json",
-    "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json",
     "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
     "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json",
