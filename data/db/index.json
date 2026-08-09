@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-09T06:15:53.004645+00:00",
+  "generated_at": "2026-08-09T09:15:08.596990+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1811,
-    "total_mentions": 22364,
+    "total_mentions": 22368,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-09T06:17:32.488323+00:00"
+    "prices_updated_at": "2026-08-09T09:16:53.439315+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -389,7 +389,7 @@
         "price_symbol": "MU",
         "verification_status": "verified"
       },
-      "cashtag": "$MU",
+      "cashtag": "Micron",
       "price_symbol": "MU",
       "exchange": "US",
       "currency": "USD",
@@ -398,15 +398,15 @@
       "company": "Micron",
       "industry": "Memory/HBM",
       "first_mention": "2025-09-25",
-      "last_mention": "2026-08-08",
-      "total_mentions": 460,
+      "last_mention": "2026-08-09",
+      "total_mentions": 461,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 200,
         "StockMKTNewz": 81,
         "ren_stocks": 47,
         "octopusycc": 41,
-        "jukan05": 38,
+        "jukan05": 39,
         "unusual_whales": 17,
         "michaelsikand": 14,
         "KawzInvests": 12,
@@ -664,7 +664,7 @@
         "price_symbol": "000660.KS",
         "verification_status": "verified"
       },
-      "cashtag": "Hynix",
+      "cashtag": "SK Hynix",
       "price_symbol": "000660.KS",
       "exchange": "KRX",
       "currency": "KRW",
@@ -674,11 +674,11 @@
       "industry": null,
       "first_mention": "2025-11-04",
       "last_mention": "2026-08-09",
-      "total_mentions": 309,
+      "total_mentions": 310,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 116,
-        "jukan05": 84,
+        "jukan05": 85,
         "StockMKTNewz": 40,
         "ren_stocks": 27,
         "unusual_whales": 13,
@@ -990,11 +990,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-08-08",
-      "total_mentions": 247,
+      "last_mention": "2026-08-09",
+      "total_mentions": 248,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "jukan05": 112,
+        "jukan05": 113,
         "aleabitoreddit": 81,
         "zephyr_z9": 17,
         "StockMKTNewz": 14,
@@ -1462,7 +1462,8 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
+      "price_history_52w_status": "ok"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -2095,7 +2096,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2799,8 +2801,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -5290,8 +5291,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:LULU": {
       "ticker": "LULU",
@@ -6972,6 +6972,44 @@
       "hash": "f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594",
       "path": "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json"
     },
+    "TWSE:2408": {
+      "ticker": "2408",
+      "instrument": {
+        "instrument_id": "TWSE:2408",
+        "display_code": "2408",
+        "display_name": "Nanya Technology Corporation",
+        "display_market": "Taiwan",
+        "aliases": [
+          "2408",
+          "NANYA"
+        ],
+        "market": "Taiwan",
+        "country": "TW",
+        "currency": "TWD",
+        "price_symbol": "2408.TW",
+        "verification_status": "verified"
+      },
+      "cashtag": "Nanya",
+      "price_symbol": "2408.TW",
+      "exchange": "Taiwan",
+      "currency": "TWD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Nanya Technology Corporation",
+      "industry": null,
+      "first_mention": "2025-11-04",
+      "last_mention": "2026-08-09",
+      "total_mentions": 15,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 14,
+        "jukan05": 1
+      },
+      "price_status": "unavailable",
+      "instrument_id": "TWSE:2408",
+      "hash": "bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5",
+      "path": "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json"
+    },
     "UNVERIFIED:AYAR": {
       "ticker": "AYAR",
       "instrument": {
@@ -7276,43 +7314,6 @@
       "instrument_id": "TSE:3110",
       "hash": "a79d9cdd4eaee732d1372563631ae21302c7c6fdd1ea200039cfacbe8315af25",
       "path": "stocks/a7/a79d9cdd4eaee732d1372563631ae21302c7c6fdd1ea200039cfacbe8315af25.json"
-    },
-    "TWSE:2408": {
-      "ticker": "2408",
-      "instrument": {
-        "instrument_id": "TWSE:2408",
-        "display_code": "2408",
-        "display_name": "Nanya Technology Corporation",
-        "display_market": "Taiwan",
-        "aliases": [
-          "2408",
-          "NANYA"
-        ],
-        "market": "Taiwan",
-        "country": "TW",
-        "currency": "TWD",
-        "price_symbol": "2408.TW",
-        "verification_status": "verified"
-      },
-      "cashtag": "Nanya",
-      "price_symbol": "2408.TW",
-      "exchange": "Taiwan",
-      "currency": "TWD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Nanya Technology Corporation",
-      "industry": null,
-      "first_mention": "2025-11-04",
-      "last_mention": "2026-03-25",
-      "total_mentions": 14,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 14
-      },
-      "price_status": "pending",
-      "instrument_id": "TWSE:2408",
-      "hash": "bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5",
-      "path": "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json"
     },
     "UNVERIFIED:HUAWEI": {
       "ticker": "HUAWEI",
@@ -8563,8 +8564,7 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -76389,9 +76389,6 @@
     "HYLN": [
       "US:HYLN"
     ],
-    "HYNIX": [
-      "KRX:000660"
-    ],
     "HYOSUNG": [
       "UNVERIFIED:HYOSUNG"
     ],
@@ -88201,6 +88198,7 @@
     "stocks/e3/e33f092582163448e63dfa9631ebfad520005f29f627b0ffc65ea853b49776f4.json",
     "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
     "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json",
+    "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json",
     "stocks/a1/a1a8dd5b8582b39ae0ac19aedd4733f54dfd1543f14cac9adfedd32ed115473c.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
     "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
@@ -88209,7 +88207,6 @@
     "stocks/ba/ba7ea268d8c896c1cbbd63694a15ae6eeae9a05bc684868f15ba65277bc13547.json",
     "stocks/e3/e3f846629c4aa5303b025be4195a8a3274585b46b9ccac1815daa4ec6bd05f9f.json",
     "stocks/a7/a79d9cdd4eaee732d1372563631ae21302c7c6fdd1ea200039cfacbe8315af25.json",
-    "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json",
     "stocks/a7/a790a35827c9fdf8f3e2b24d4893131dbe2a1d3a125cb988326f37b7e4ec78cd.json",
     "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
     "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json",
