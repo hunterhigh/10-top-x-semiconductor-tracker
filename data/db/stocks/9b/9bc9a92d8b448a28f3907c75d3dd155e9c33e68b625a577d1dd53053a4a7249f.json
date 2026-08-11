@@ -25,16 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2025-09-10",
   "last_mention": "2026-08-10",
-  "total_mentions": 39,
+  "total_mentions": 42,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 31,
-    "StockMKTNewz": 5,
+    "StockMKTNewz": 6,
     "michaelsikand": 2,
+    "octopusycc": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 34,
-    "news": 5
+    "opinion": 36,
+    "news": 6
   },
   "mentions": [
     {
@@ -983,9 +984,167 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2086904871232372746",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-10",
+      "created_at": "2026-08-10T15:57:48-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ASTS",
+      "text": "I am about to post all the major earnings onto the @WOLF_Financial page\n\nWe have $HIMS $RKLB $ASTS and more ... make sure you are following\n\n@WOLF_Financial",
+      "url": "https://x.com/StockMKTNewz/status/2086904871232372746",
+      "kind": "post",
+      "engagement": {
+        "views": 36716,
+        "likes": 35,
+        "reposts": 1,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2086905432048865351",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-10",
+      "created_at": "2026-08-10T16:00:02-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "not moving up",
+        "forming a divergence/split"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "asts",
+      "text": "asts 并没有走强\n形成割裂了 https://t.co/lHRcDNegi6",
+      "url": "https://x.com/octopusycc/status/2086905432048865351",
+      "kind": "post",
+      "engagement": {
+        "views": 3645,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2086913539990786114",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-10",
+      "created_at": "2026-08-10T16:32:15-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "大miss (big earnings miss)"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ASTS",
+      "text": "asts 大miss\n$ASTS \n\n睡觉去了 https://t.co/pErzMZNJMY",
+      "url": "https://x.com/octopusycc/status/2086913539990786114",
+      "kind": "post",
+      "engagement": {
+        "views": 5658,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
+    {
+      "date": "2025-08-11",
+      "close": 45.92
+    },
+    {
+      "date": "2025-08-12",
+      "close": 49.76
+    },
+    {
+      "date": "2025-08-13",
+      "close": 50.05
+    },
+    {
+      "date": "2025-08-14",
+      "close": 48.5
+    },
+    {
+      "date": "2025-08-15",
+      "close": 48.08
+    },
+    {
+      "date": "2025-08-18",
+      "close": 48.16
+    },
+    {
+      "date": "2025-08-19",
+      "close": 44.95
+    },
+    {
+      "date": "2025-08-20",
+      "close": 45.08
+    },
+    {
+      "date": "2025-08-21",
+      "close": 44.98
+    },
+    {
+      "date": "2025-08-22",
+      "close": 47.07
+    },
+    {
+      "date": "2025-08-25",
+      "close": 50.01
+    },
+    {
+      "date": "2025-08-26",
+      "close": 50.43
+    },
+    {
+      "date": "2025-08-27",
+      "close": 48.25
+    },
+    {
+      "date": "2025-08-28",
+      "close": 48.95
+    },
+    {
+      "date": "2025-08-29",
+      "close": 48.94
+    },
+    {
+      "date": "2025-09-02",
+      "close": 48.76
+    },
+    {
+      "date": "2025-09-03",
+      "close": 45.22
+    },
+    {
+      "date": "2025-09-04",
+      "close": 41.86
+    },
+    {
+      "date": "2025-09-05",
+      "close": 42.41
+    },
+    {
+      "date": "2025-09-08",
+      "close": 40.77
+    },
+    {
+      "date": "2025-09-09",
+      "close": 36.91
+    },
     {
       "date": "2025-09-10",
       "close": 37.58
@@ -1901,19 +2060,32 @@
     {
       "date": "2026-08-07",
       "close": 71.94
+    },
+    {
+      "date": "2026-08-10",
+      "close": 68.76
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-10T03:17:02.633455+00:00",
+  "price_updated_at": "2026-08-11T03:22:41.383411+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ASTS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-10T03:17:01.461337+00:00",
+    "checked_at": "2026-08-11T03:22:40.716767+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
+  },
+  "price_history_52w": {
+    "requested_start": "2025-08-11",
+    "asof": "2026-08-10",
+    "attempted_at": "2026-08-11T03:22:40.716767+00:00",
+    "status": "ok",
+    "first_available_date": "2025-08-11",
+    "last_available_date": "2026-08-10",
+    "reason": null
   }
 }

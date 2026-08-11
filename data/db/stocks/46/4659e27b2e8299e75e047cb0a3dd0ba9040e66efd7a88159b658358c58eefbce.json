@@ -1,6 +1,6 @@
 {
   "ticker": "GLW",
-  "cashtag": "GLW",
+  "cashtag": "$GLW",
   "instrument": {
     "instrument_id": "US:GLW",
     "display_code": "GLW",
@@ -24,8 +24,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-04",
-  "last_mention": "2026-08-07",
-  "total_mentions": 42,
+  "last_mention": "2026-08-10",
+  "total_mentions": 43,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 21,
     "octopusycc": 7,
@@ -34,10 +34,11 @@
     "KawzInvests": 2,
     "DJTRadar": 2,
     "zephyr_z9": 1,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 34,
+    "opinion": 35,
     "news": 5,
     "flow": 1,
     "disclosure": 2
@@ -1042,6 +1043,32 @@
       "engagement": {
         "views": 2486,
         "likes": 3,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087008656755716443",
+      "blogger_id": "ren_stocks",
+      "date": "2026-08-10",
+      "created_at": "2026-08-10T22:50:13-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "beneficiary of data center optical interconnect growth",
+        "less pure play but still a beneficiary"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$GLW",
+      "text": "@cherryPayment Less pure play but yes a beneficiary with $GLW too",
+      "url": "https://x.com/ren_stocks/status/2087008656755716443",
+      "kind": "reply",
+      "engagement": {
+        "views": 185,
+        "likes": 0,
         "reposts": 0,
         "replies": 0
       },
@@ -2105,18 +2132,22 @@
     {
       "date": "2026-08-07",
       "close": 165.68
+    },
+    {
+      "date": "2026-08-10",
+      "close": 157.76
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-10T12:17:52.029946+00:00",
+  "price_updated_at": "2026-08-11T03:22:46.191726+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-23",
-    "asof": "2026-07-22",
-    "attempted_at": "2026-07-23T03:14:12.593466+00:00",
+    "requested_start": "2025-08-11",
+    "asof": "2026-08-10",
+    "attempted_at": "2026-08-11T03:22:45.019831+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-23",
-    "last_available_date": "2026-07-22",
+    "first_available_date": "2025-08-11",
+    "last_available_date": "2026-08-10",
     "reason": null
   },
   "price_source_state": {
@@ -2124,7 +2155,7 @@
     "provider_symbol": "GLW",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-10T12:17:50.069952+00:00",
+    "checked_at": "2026-08-11T03:22:45.019831+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

@@ -28,10 +28,10 @@
   "thesis_summary": null,
   "first_mention": "2025-11-04",
   "last_mention": "2026-08-10",
-  "total_mentions": 318,
+  "total_mentions": 319,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 116,
-    "jukan05": 88,
+    "jukan05": 89,
     "StockMKTNewz": 40,
     "ren_stocks": 27,
     "zephyr_z9": 17,
@@ -41,7 +41,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 265,
+    "opinion": 266,
     "news": 40,
     "flow": 13
   },
@@ -7705,6 +7705,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2086989511121392051",
+      "blogger_id": "jukan05",
+      "date": "2026-08-10",
+      "created_at": "2026-08-10T21:34:08-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK hynix",
+      "text": "SK hynix Becomes Kioxia’s Largest Shareholder\n\nSK hynix has become the largest shareholder of Kioxia, Japan’s largest NAND flash manufacturer.\n\nAccording to the Nikkei on August 10, Kioxia disclosed that its largest shareholder had changed from Toshiba to the special-purpose company BCPE Pangea Cayman2, or SPC2. SPC2 is the entity through which SK hynix invested via convertible bonds (CBs).\n\nToshiba previously held a 15.10% stake in Kioxia. However, through seven separate sales conducted between July 15 and August 3, it reduced its stake to 14.06%.\n\nToshiba previously held a 15.10% stake in Kioxia. However, through seven separate sales conducted between July 15 and August 3, it reduced its stake to 14.06%.\n\nAs a result, SPC2, which holds a 14.19% stake in Kioxia, has become the company’s largest shareholder.\n\nSK hynix invested approximately KRW 4 trillion in Kioxia through two SPCs in 2018. SPC1, which was jointly funded by SK hynix, Bain Capital, and other investors, sold its entire stake in June as Bain Capital exited its investment.\n\nSK hynix, meanwhile, has continued to hold SPC2, in which it invested approximately KRW 1.3 trillion. If the convertible bonds are converted into shares, SK hynix could become a voting shareholder of Kioxia.\n\nAs a result, SPC2, which holds a 14.19% stake in Kioxia, has become the company’s largest shareholder.\n\nKioxia is Japan’s largest NAND flash manufacturer. It currently ranks third in the global NAND market, behind Samsung Electronics and SK hynix.\n\nHowever, SK hynix is currently considered unlikely to exert direct influence over Kioxia’s management. To obtain voting rights, SK hynix would need approvals under competition and antitrust laws in multiple jurisdictions. The Japanese government is also unlikely to grant such approval, given its interest in protecting the country’s domestic semiconductor supply chain.",
+      "url": "https://x.com/jukan05/status/2086989511121392051",
+      "kind": "post",
+      "engagement": {
+        "views": 43688,
+        "likes": 216,
+        "reposts": 27,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8731,29 +8754,32 @@
     {
       "date": "2026-08-07",
       "close": 1422000.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 1420000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-10T15:18:10.309918+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-11T03:23:11.854018+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-11",
     "asof": "2026-08-10",
-    "attempted_at": "2026-08-10T15:18:10.173391+00:00",
+    "attempted_at": "2026-08-11T03:23:11.314050+00:00",
     "status": "ok",
     "first_available_date": "2025-08-11",
-    "last_available_date": "2026-08-07",
+    "last_available_date": "2026-08-10",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-10T15:18:10.173391+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-10T18:18:10.173391+00:00",
+    "provider_symbol": "000660.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-11T03:23:11.314050+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }
