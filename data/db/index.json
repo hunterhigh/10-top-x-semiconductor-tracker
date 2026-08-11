@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-11T03:22:26.821312+00:00",
+  "generated_at": "2026-08-11T06:14:58.528680+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1836,
-    "total_mentions": 22654,
+    "total_mentions": 22661,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-11T03:24:00.140575+00:00"
+    "prices_updated_at": "2026-08-11T06:17:05.798414+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -108,7 +108,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -130,7 +130,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "$NVDA",
+      "cashtag": "NVIDIA",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -139,13 +139,13 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-08-10",
-      "total_mentions": 846,
+      "last_mention": "2026-08-11",
+      "total_mentions": 847,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 518,
         "StockMKTNewz": 86,
-        "jukan05": 83,
+        "jukan05": 84,
         "zephyr_z9": 42,
         "unusual_whales": 38,
         "octopusycc": 23,
@@ -629,21 +629,21 @@
       "company": "SK hynix Inc.",
       "industry": null,
       "first_mention": "2025-11-04",
-      "last_mention": "2026-08-10",
-      "total_mentions": 319,
+      "last_mention": "2026-08-11",
+      "total_mentions": 321,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 116,
-        "jukan05": 89,
+        "jukan05": 90,
         "StockMKTNewz": 40,
         "ren_stocks": 27,
-        "zephyr_z9": 17,
+        "zephyr_z9": 18,
         "unusual_whales": 13,
         "octopusycc": 13,
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -889,7 +889,7 @@
         "price_symbol": "AAPL",
         "verification_status": "verified"
       },
-      "cashtag": "$AAPL",
+      "cashtag": "Apple",
       "price_symbol": "AAPL",
       "exchange": "US",
       "currency": "USD",
@@ -898,15 +898,15 @@
       "company": "Apple Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-08-10",
-      "total_mentions": 278,
+      "last_mention": "2026-08-11",
+      "total_mentions": 279,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 98,
         "StockMKTNewz": 89,
         "jukan05": 31,
         "unusual_whales": 31,
-        "zephyr_z9": 8,
+        "zephyr_z9": 9,
         "octopusycc": 8,
         "ren_stocks": 6,
         "KawzInvests": 4,
@@ -1046,7 +1046,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1542,8 +1542,7 @@
       "price_status": "ok",
       "instrument_id": "US:AEHR",
       "hash": "6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d",
-      "path": "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json"
     },
     "US:TSEM": {
       "ticker": "TSEM",
@@ -2269,7 +2268,8 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "Frankfurt Xetra:LPK": {
       "ticker": "LPK",
@@ -4555,8 +4555,7 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
     },
     "US:RGTI": {
       "ticker": "RGTI",
@@ -4750,7 +4749,8 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
+      "price_history_52w_status": "ok"
     },
     "US:GME": {
       "ticker": "GME",
@@ -5142,6 +5142,46 @@
       "hash": "14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc",
       "path": "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json"
     },
+    "TSE:5802": {
+      "ticker": "5802",
+      "instrument": {
+        "instrument_id": "TSE:5802",
+        "display_code": "5802",
+        "display_name": "Sumitomo Electric Industries, Ltd.",
+        "display_market": "Tokyo",
+        "aliases": [
+          "5802",
+          "SUMITOMO"
+        ],
+        "market": "Tokyo",
+        "country": "JP",
+        "currency": "JPY",
+        "price_symbol": "5802.T",
+        "verification_status": "verified"
+      },
+      "cashtag": "Sumitomo Electric",
+      "price_symbol": "5802.T",
+      "exchange": "Tokyo",
+      "currency": "JPY",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Sumitomo Electric Industries, Ltd.",
+      "industry": null,
+      "first_mention": "2025-12-30",
+      "last_mention": "2026-08-11",
+      "total_mentions": 25,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 21,
+        "jukan05": 2,
+        "zephyr_z9": 1,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unavailable",
+      "instrument_id": "TSE:5802",
+      "hash": "930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02",
+      "path": "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json"
+    },
     "TWSE:2454": {
       "ticker": "2454",
       "instrument": {
@@ -5257,46 +5297,6 @@
       "instrument_id": "US:LRCX",
       "hash": "2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6",
       "path": "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json"
-    },
-    "TSE:5802": {
-      "ticker": "5802",
-      "instrument": {
-        "instrument_id": "TSE:5802",
-        "display_code": "5802",
-        "display_name": "Sumitomo Electric Industries, Ltd.",
-        "display_market": "Tokyo",
-        "aliases": [
-          "5802",
-          "SUMITOMO"
-        ],
-        "market": "Tokyo",
-        "country": "JP",
-        "currency": "JPY",
-        "price_symbol": "5802.T",
-        "verification_status": "verified"
-      },
-      "cashtag": "$5802",
-      "price_symbol": "5802.T",
-      "exchange": "Tokyo",
-      "currency": "JPY",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Sumitomo Electric Industries, Ltd.",
-      "industry": null,
-      "first_mention": "2025-12-30",
-      "last_mention": "2026-07-18",
-      "total_mentions": 24,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 21,
-        "jukan05": 1,
-        "zephyr_z9": 1,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unavailable",
-      "instrument_id": "TSE:5802",
-      "hash": "930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02",
-      "path": "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json"
     },
     "US:CBRS": {
       "ticker": "CBRS",
@@ -12138,8 +12138,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "TWSE:2327": {
       "ticker": "2327",
@@ -22986,6 +22985,43 @@
       "instrument_id": "UNVERIFIED:JHICC",
       "hash": "cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2",
       "path": "stocks/cb/cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2.json"
+    },
+    "UNVERIFIED:JXAM": {
+      "ticker": "JXAM",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:JXAM",
+        "display_code": "JXAM",
+        "display_name": "JX Advanced Metals",
+        "display_market": "Market unverified",
+        "aliases": [
+          "JXAM"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "JXAM",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "JX Advanced Metals",
+      "industry": null,
+      "first_mention": "2026-06-16",
+      "last_mention": "2026-08-11",
+      "total_mentions": 3,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "jukan05": 2,
+        "zephyr_z9": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:JXAM",
+      "hash": "796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc",
+      "path": "stocks/79/796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc.json"
     },
     "UNVERIFIED:KLA": {
       "ticker": "KLA",
@@ -48500,42 +48536,6 @@
       "instrument_id": "UNVERIFIED:JTNC",
       "hash": "5a07ba9cbcdd2f60b39606425eb886fed011060a36d6c066ac1a65b0179f27cd",
       "path": "stocks/5a/5a07ba9cbcdd2f60b39606425eb886fed011060a36d6c066ac1a65b0179f27cd.json"
-    },
-    "UNVERIFIED:JXAM": {
-      "ticker": "JXAM",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:JXAM",
-        "display_code": "JXAM",
-        "display_name": "JX Advanced Metals",
-        "display_market": "Market unverified",
-        "aliases": [
-          "JXAM"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "JX Advanced Metals",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "JX Advanced Metals",
-      "industry": null,
-      "first_mention": "2026-06-16",
-      "last_mention": "2026-06-16",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "jukan05": 1
-      },
-      "price_status": "unavailable",
-      "instrument_id": "UNVERIFIED:JXAM",
-      "hash": "796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc",
-      "path": "stocks/79/796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc.json"
     },
     "UNVERIFIED:KAMET": {
       "ticker": "KAMET",
@@ -74088,6 +74088,9 @@
     "APPL": [
       "US:AAPL"
     ],
+    "APPLE": [
+      "US:AAPL"
+    ],
     "APPLE INC.": [
       "US:AAPL"
     ],
@@ -82091,6 +82094,9 @@
     "SUMITOMO CHEMICAL": [
       "UNVERIFIED:4005"
     ],
+    "SUMITOMO ELECTRIC": [
+      "TSE:5802"
+    ],
     "SUMITOMO ELECTRIC INDUSTRIES LTD/ADR/": [
       "US:SMTOY"
     ],
@@ -89354,10 +89360,10 @@
     "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
     "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
+    "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json",
     "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json",
     "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json",
-    "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json",
     "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
     "stocks/1f/1fc3a860e48d7950c68bac9172ee920ff96b64d32abc138353cfc6707d864af6.json",
@@ -89836,6 +89842,7 @@
     "stocks/fe/fea8895838731f344aeae74dada9bd3f2c8c9661c7747d66a05ef4046ae8769f.json",
     "stocks/c4/c444f3e5420fea90d885ba7d556499fa1ac30720178a421c6e21251269462ccf.json",
     "stocks/cb/cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2.json",
+    "stocks/79/796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc.json",
     "stocks/bf/bf59606b60e1f5d289feab3ff87d5bb3d95f800c8d474f9e7462d42dc376c931.json",
     "stocks/05/05a64088e8cbc893d6ba71c40848a9bdf24bc9495fec769880d88c9ab63ff864.json",
     "stocks/b5/b56d5abe79a15e96b03b88aaf8a164786b1409c47e0ea669c5f5fda7f2af6358.json",
@@ -90542,7 +90549,6 @@
     "stocks/f8/f85ccaa4181ca26750c28df80c17a27410b8614e735c028c2e7e4bdb769c0bfc.json",
     "stocks/56/560a086c7ea1a3a26f01cb8ba505d2db8799b9d6492945157be6621a29006455.json",
     "stocks/5a/5a07ba9cbcdd2f60b39606425eb886fed011060a36d6c066ac1a65b0179f27cd.json",
-    "stocks/79/796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc.json",
     "stocks/0d/0d368c445d9ab84c971a3d7f9fdc4c39c502805ed1841f747d08c55445a0dccf.json",
     "stocks/12/12b2152a8bfba761df68e857b73c8b9ee1c631aff522001ad6896f1fbe3fd2dd.json",
     "stocks/fa/fa0cbc3d9b840d826b41d050273494750b82f9add1548ccf43b75364d5b9959e.json",
