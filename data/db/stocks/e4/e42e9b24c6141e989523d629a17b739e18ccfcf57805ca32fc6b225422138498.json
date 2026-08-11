@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "US:LASR",
     "display_code": "LASR",
-    "display_name": "nLight Inc",
+    "display_name": "nLIGHT",
     "display_market": "US",
     "aliases": [
       "LASR"
@@ -20,19 +20,19 @@
   "currency": "USD",
   "ticker_mapped": true,
   "verification_status": "verified",
-  "company": "nLight Inc",
+  "company": "nLIGHT",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-23",
-  "last_mention": "2026-07-18",
-  "total_mentions": 36,
+  "last_mention": "2026-08-11",
+  "total_mentions": 37,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 34,
-    "michaelsikand": 1,
+    "michaelsikand": 2,
     "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 35,
+    "opinion": 36,
     "news": 1
   },
   "mentions": [
@@ -963,6 +963,34 @@
         "likes": 68,
         "reposts": 0,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087236893167771819",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-11",
+      "created_at": "2026-08-11T13:57:08-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "35% crash on weak guide due to uncertain procurement of Chinese optical components",
+        "CEO attributes issues to China increasing scrutiny on dual-use products for defense tech",
+        "no timeline for resolution",
+        "diodes run around 900nm on gallium arsenide, different from datacom optics"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$LASR",
+      "text": "The U.S. vs. China photonics war is spiralling.\n\nAnd it just claimed its first casualty.\n\nWe need to talk about $LASR's 35% crash and understand how the newest geopolitical war over optical equipment affects the AI photonics trade.\n\nBecause @pennycheck makes a strong point. Was yesterday's photonics dump related to this? \n\nTLDR: $LASR stock is down 35% after a weak guide on uncertain procurement of Chinese optical components.\n\nThe CEO attributed it to what appears to be China increasing scrutiny on dual-use products for defense tech. He has no timeline either when they'll be back and wasn't specific about what exactly these products were. \n\n\"The particular commodity that I would highlight would be optics. These are not specialized components. They're materials where China has built out an outsized portion of the overall supply chain over time.\"\n\nOn June 18, 2026 a Chinese precision optics company  disclosed that its chairman had been placed under compulsory measures by Shanghai Customs anti-smuggling. The alleged violation: declaring exported lenses containing germanium as ordinary optical glass to get around export licensing. So suppliers are on edge.\n\nI don't think there's a big read through into datacom optics from this - $LITE, $COHR, $AAOI. In my view, Chinese is getting most aggressive on defense linked optical products. This was already in motion with a Germanium ban, which is needed for IR sensors for drones, and we've seen escalating actions there for months.\n\n$LASR's diodes run around 900nm on gallium arsenide  while lasers from $LITE $COHR $AAOI are Indium phosphide. From my rather limited research, it doesn't appear there's many shared components from $LASR's products with data center optics. InP has already been under Chinese export control since February 2025 and its well documented/understood as a chokepoint.\n\nThat being said if there is some kind of Chinese transceiver ban from the U.S. (rumored) we could potentially see tighter InP export controls in return from China if U.S. targets their domestic photonics companies like Innolight and Eptolink, which would have a negative impact.\n\nFor now looks to be defense focused but this optical war with China needs to be watched.",
+      "url": "https://x.com/michaelsikand/status/2087236893167771819",
+      "kind": "post",
+      "engagement": {
+        "views": 5319,
+        "likes": 19,
+        "reposts": 1,
+        "replies": 20
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
