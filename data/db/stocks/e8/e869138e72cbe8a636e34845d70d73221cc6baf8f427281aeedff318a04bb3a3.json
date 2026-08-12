@@ -8827,29 +8827,32 @@
     {
       "date": "2026-08-10",
       "close": 1420000.0
+    },
+    {
+      "date": "2026-08-11",
+      "close": 1425000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-11T21:19:53.750543+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-12T00:18:00.767133+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-12",
     "asof": "2026-08-11",
-    "attempted_at": "2026-08-11T21:19:53.693672+00:00",
+    "attempted_at": "2026-08-12T00:17:56.441171+00:00",
     "status": "ok",
     "first_available_date": "2025-08-12",
-    "last_available_date": "2026-08-10",
+    "last_available_date": "2026-08-11",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-11T21:19:53.693672+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-12T00:19:53.693672+00:00",
+    "provider_symbol": "000660.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-12T00:17:56.441171+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }

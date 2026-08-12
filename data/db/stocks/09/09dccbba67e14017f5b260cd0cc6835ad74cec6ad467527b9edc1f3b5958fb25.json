@@ -1,6 +1,6 @@
 {
   "ticker": "SIVE",
-  "cashtag": "$SIVEF",
+  "cashtag": "$SIVE",
   "instrument": {
     "instrument_id": "Nasdaq Stockholm:SIVE",
     "display_code": "SIVE",
@@ -26,15 +26,15 @@
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
   "last_mention": "2026-08-11",
-  "total_mentions": 859,
+  "total_mentions": 860,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 807,
+    "aleabitoreddit": 808,
     "ren_stocks": 49,
     "jukan05": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 859
+    "opinion": 860
   },
   "mentions": [
     {
@@ -22663,6 +22663,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087329770879197549",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-11",
+      "created_at": "2026-08-11T20:06:12-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "positive pricing power for CW laser players corroborated by Lumentum results",
+        "CW laser scarcity happening before main volume ramp begins"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "$LITE earnings transcript TLDRs:\n\n- \"Our visibility into the timing of CPO scale-up deployments has also sharpened. We remain confident in a demand ramp for our ultra-high-power  laser chips in the second half of calendar 2027\"\n\nH2 2027 start of CPO scale up ramp confirmed from Lumentum for their lead customer. \n\n- \"We were recently given our first external light source, or ELS, module purchase for delivery by the second half of calendar 2027\" \n\nELS industry ramp timelines\n\n- \"The NPO opportunity is completely additive for us, significantly increasing the optical TAM.\"\n\nMore TAM for laser chokepoint club\n\n- \"we expect the 1.6T transceiver uptake to intensify starting in fiscal Q1 and sustain through calendar 2027.\"\n\n- \"Even in CW, we’ve been surprised at our ability to price up\"\n\nPositive pricing power for $SIVE and the other CW laser players. \n\n- \"As a result, we are able to command a nice price premium that we expect  to sustain, as these Chinese if these Chinese guys come online. \n\nI caution people also, I think people are some of these Chinese laser suppliers are not delivering in the market today, so they have there is no recourse when they throw out these big numbers. We have not seen anything like that to date in terms of their output.\"\n\nChinese players are more behind than markets expect, corroborated by $AAOI and $LITE. \n\n- \"We are way behind in our shipments, unfortunately, on high-powered lasers\"\n\n\"The demand signal has increased, and we are very much further behind relative to our ability to supply.\"\n\nExtreme demand imbalance for UHP CW laser capacity, continued demand imbalance for EML. Shipping roughly +$50M year end -> $100m+ (\"triple digit quarter\") into much larger H2 2027 and 2028 scale up demand,.\n\n- \"So what we are trying to do, I think, really in the last three months is secure even more substrate supply\" (because of demand imbalance), \"we found additional substrate help from $AXTI They are a great partner.\"\n\nHello InP substrate bottleneck. \n\nTLDR:\n\n- Lumentum CPO scale up H2 2027 shipments got confirmed, dismissed any \"delay\" news as market \"noise\". (one delay report caused so much damage, and it took Nvidia, Lumentum, and all these companies weeks to do damage control). \n- CW lasers demand ramp second half of 2027\n- Extreme demand imbalance for UHP CW laser capacity surprised Lumentum\n- UHP lasers commands very high margins and is able to price up CW laser capacity. \n- China further behind in the laser/capacity angle. \n\nBasically just validated timelines + demand/pricing for Western CW laser players. \n\nCW laser scarcity is already happening before the main volume ramp even begins...",
+      "url": "https://x.com/aleabitoreddit/status/2087329770879197549",
+      "kind": "post",
+      "engagement": {
+        "views": 9872,
+        "likes": 11,
+        "reposts": 2,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -23717,29 +23743,32 @@
     {
       "date": "2026-08-10",
       "close": 43.84
+    },
+    {
+      "date": "2026-08-11",
+      "close": 41.6
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "SEK",
-  "price_updated_at": "2026-08-11T21:19:53.807868+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-12T00:18:02.008607+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-12",
     "asof": "2026-08-11",
-    "attempted_at": "2026-08-11T21:19:53.758415+00:00",
+    "attempted_at": "2026-08-12T00:18:00.776360+00:00",
     "status": "ok",
     "first_available_date": "2025-08-12",
-    "last_available_date": "2026-08-10",
+    "last_available_date": "2026-08-11",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-11T21:19:53.758415+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-08-12T00:19:53.758415+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-12T00:18:00.776360+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }
