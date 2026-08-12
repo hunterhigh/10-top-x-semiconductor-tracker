@@ -1,6 +1,6 @@
 {
   "ticker": "COHR",
-  "cashtag": "$COHR",
+  "cashtag": "cohr",
   "instrument": {
     "instrument_id": "US:COHR",
     "display_code": "COHR",
@@ -25,18 +25,19 @@
   "thesis_summary": null,
   "first_mention": "2025-12-01",
   "last_mention": "2026-08-12",
-  "total_mentions": 314,
+  "total_mentions": 317,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 259,
     "michaelsikand": 19,
     "KawzInvests": 16,
     "ren_stocks": 13,
     "zephyr_z9": 4,
-    "StockMKTNewz": 3
+    "StockMKTNewz": 4,
+    "octopusycc": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 311,
-    "news": 3
+    "opinion": 313,
+    "news": 4
   },
   "mentions": [
     {
@@ -7584,6 +7585,80 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087624245010649486",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T15:36:20-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "options market showing large short positioning before earnings",
+        "put options increasing in final 30 minutes of session",
+        "9DTE 350 PUT is primary options order, implying market expects drop below $350 post-earnings",
+        "options divergence from today's broad market strength is notable"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$COHR",
+      "text": "COHR 财报前瞻\n\n期权市场看跌财报/低于预期\n\n$COHR 则出现了大量空头建仓，且最后三十分钟开始进一步成交看跌期权\n\nExpected move: 8.92% (+/- $31.57)\n\n从期权订单来看，COHR 难以跌破300 也难以突破400\n\n9DTE 350 PUT为主要看跌期权订单，期权市场认为COHR财报后会跌破350 美金\n\n在今日强势的背景下出现期权的背离是值得留意的",
+      "url": "https://x.com/octopusycc/status/2087624245010649486",
+      "kind": "post",
+      "engagement": {
+        "views": 5774,
+        "likes": 16,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087632324670140856",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T16:08:27-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$COHR",
+      "text": "RT @WOLF_Financial: COHERENT $COHR JUST REPORTED Q4 EARNINGS\n\n- Revenue of $2.05B beating expectations of $1.98B 🟢 (up 34% YoY)\n- Non-GAAP…",
+      "url": "https://x.com/StockMKTNewz/status/2087632324670140856",
+      "kind": "post",
+      "engagement": {
+        "views": 13659,
+        "likes": 33,
+        "reposts": 6,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087634714668736829",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T16:17:57-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "cohr",
+      "text": "csco cohr算猜的对吧\n\n傻逼cbrs 又猜错了 https://t.co/orqQ1JVuSM",
+      "url": "https://x.com/octopusycc/status/2087634714668736829",
+      "kind": "post",
+      "engagement": {
+        "views": 3281,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8654,11 +8729,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-12T18:17:19.013844+00:00",
+  "price_updated_at": "2026-08-12T21:18:28.611585+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-13",
     "asof": "2026-08-12",
-    "attempted_at": "2026-08-12T18:17:18.746989+00:00",
+    "attempted_at": "2026-08-12T21:18:28.052923+00:00",
     "status": "ok",
     "first_available_date": "2025-08-13",
     "last_available_date": "2026-08-11",
@@ -8669,7 +8744,7 @@
     "provider_symbol": "COHR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-12T18:17:18.746989+00:00",
+    "checked_at": "2026-08-12T21:18:28.052923+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
