@@ -238027,5 +238027,94 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-08-12T12:07:12.040732+00:00"
+  },
+  "2087515371750490383": {
+    "tweet_id": "2087515371750490383",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$NBIS",
+        "symbol": "NBIS",
+        "company_name": "Nebius Group",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "revenue +454% Y/Y, +46% Q/Q with ~50% adjusted EBITDA margin",
+          "$8.04B cash on hand",
+          "reiterates massive 2026 revenue guide of $3.0–$3.4B with EoY ARR of $7–$9B",
+          "could sell entire 2027 capacity today — massive demand visibility",
+          "4 customer agreements averaging over $1B+ each in contract value",
+          "~70% of Q2 deals included customer prepayments",
+          "contracted power guidance raised from 4+ GW to 5 GW",
+          "$9B+ of prepayments expected in 2026 with $40B+ of commitments",
+          "annual contract value per MW keeps rising (>$40M/MW for Q3 short-term capacity deals)",
+          "AI Cloud adjusted EBITDA margins progressing: 24% -> 45% -> 50%"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "$IREN",
+        "symbol": "IREN",
+        "company_name": "IREN Limited",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "$CRWV",
+        "symbol": "CRWV",
+        "company_name": "CoreWeave",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.92,
+    "blogger_id": "aleabitoreddit",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-08-12T15:06:56.694717+00:00"
+  },
+  "2087519803124969916": {
+    "tweet_id": "2087519803124969916",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$CRWV",
+        "symbol": "CRWV",
+        "company_name": "CoreWeave",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "underlying financing methods are really bad",
+          "debt interest expense reached $640M in Q2, eating into FCF way too much",
+          "interest expense is ~42% of CoreWeave's $1.51B adjusted EBITDA"
+        ],
+        "is_risk": true,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "$NBIS",
+        "symbol": "NBIS",
+        "company_name": "Nebius Group",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "preferred over $CRWV — vocally bullish on NBIS compared to CoreWeave and other neoclouds"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      }
+    ],
+    "confidence": 0.91,
+    "blogger_id": "aleabitoreddit",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-08-12T15:06:56.694717+00:00"
   }
 }

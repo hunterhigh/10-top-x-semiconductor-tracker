@@ -25,21 +25,21 @@
   "thesis_summary": null,
   "first_mention": "2025-07-21",
   "last_mention": "2026-08-12",
-  "total_mentions": 237,
+  "total_mentions": 242,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 191,
-    "StockMKTNewz": 25,
+    "aleabitoreddit": 193,
+    "StockMKTNewz": 26,
+    "KawzInvests": 6,
     "michaelsikand": 5,
     "octopusycc": 4,
-    "KawzInvests": 4,
     "ren_stocks": 4,
     "unusual_whales": 2,
     "jukan05": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 210,
+    "opinion": 214,
     "flow": 2,
-    "news": 25
+    "news": 26
   },
   "mentions": [
     {
@@ -5994,6 +5994,128 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087515371750490383",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T08:23:43-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRWV",
+      "text": "$NBIS outlook is pretty insane yet again.\n\n$582.3M revenue (+454% Y/Y, +46% Q/Q) off ~50% adjusted EBITDA margin (AI Cloud). $8.04B cash on hand. \n\nReiterates financial guide (2026 revenue: $3.0–$3.4B\n2026 EoY ARR: $7–$9B), I was hoping for a raise, but it's already massive growth. \n\nNot really about this quarter financials, but these signals:\n\n- \"We could sell our entire 2027 capacity on these terms today.\" massive visibility on demand\n- \"4 customer agreements averaging over $1B+ each in contract value\"\n- Around 70% of Q2 deals included customer prepayments\n- Contracted power guidance was raised again, from more ~4+ GW to 5 GW. (this used to be a concern vs. $IREN debate, but Nebius power guidance keeps going through the roof). \n- Expects $9B+ of prepayments in 2026 and says it has $40B+ of commitments.\n- annual contract value per MW keeps going brrr (>$40M/mw for Q3 short term capacity deals)  \n\nSame bear story will always be there (eg. large $5.66B of capex with current GAAP net loss), but demand is extreme with massive visibility, with increasing AI Cloud adjusted EBITDA margins ( 24% -> 45% -> 50% progression)\n\nWe kinda got this read through from all your hyperscaler cloud earnings and $CRWV backlog yesterday, but glad it's showing up in Weebius's earnings.",
+      "url": "https://x.com/aleabitoreddit/status/2087515371750490383",
+      "kind": "post",
+      "engagement": {
+        "views": 159643,
+        "likes": 1475,
+        "reposts": 111,
+        "replies": 83
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087519803124969916",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T08:41:19-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "underlying financing methods are really bad",
+        "debt interest expense reached $640M in Q2, eating into FCF way too much",
+        "interest expense is ~42% of CoreWeave's $1.51B adjusted EBITDA"
+      ],
+      "is_risk": true,
+      "conviction": "high",
+      "raw_mention": "$CRWV",
+      "text": "@R42t0r I've been pretty vocally bearish on $CRWV since last year compared to $NBIS and other neoclouds. \n\nDemand isn't really much of a problem with their $100B+ backlog, their revenue + 59% adjusted EBITDA margin looks good. \n\nBut underlying financing methods is really bad... \n\nCoreweave's debt interest (eg. Q2 interest expense reached $640m), which eats into FCF way too much... \nThat figure is like 42% of Coreweaves $1.51B adjusted EBITDA for reference.",
+      "url": "https://x.com/aleabitoreddit/status/2087519803124969916",
+      "kind": "reply",
+      "engagement": {
+        "views": 11095,
+        "likes": 63,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087530609757323279",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T09:24:16-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "did $2.58B in revenue with $1.5B adjusted EBITDA",
+        "capturing overflow demand from hyperscalers as capacity holder"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRWV",
+      "text": "Cloud revenue growth this quarter has been INSANE.\n\n$NBIS went from $105M in revenue a year ago to $582M this quarter. (+454% YoY)\n\nAdjusted EBITDA flipped with it, negative $21M last year to positive $236M now.\n\n$CRWV did $2.58B with $1.5B of adjusted EBITDA.\n\nNone of this should surprise anyone who listened to the hyperscaler calls last month.\n\n$GOOGL Cloud grew 82% to about $25B. $MSFT Azure grew 43% and crossed $100B for the fiscal year. $AMZN has AWS running near $169B annualized and their AI and chips businesses each cleared $25B, both more than doubling.\n\nFour largest cloud businesses in the world and all of them are speeding up.\n\nThe overflow goes to whoever has capacity. Right now that is $NBIS and $CRWV.",
+      "url": "https://x.com/KawzInvests/status/2087530609757323279",
+      "kind": "post",
+      "engagement": {
+        "views": 11278,
+        "likes": 66,
+        "reposts": 4,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087536092018815395",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T09:46:03-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRWV",
+      "text": "Martin Shkreli just said today that:\n\n\"CoreWeave $CRWV is a short\" https://t.co/k6YtdRcehN",
+      "url": "https://x.com/StockMKTNewz/status/2087536092018815395",
+      "kind": "post",
+      "engagement": {
+        "views": 30940,
+        "likes": 126,
+        "reposts": 3,
+        "replies": 36
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087541434333163660",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T10:07:17-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRWV",
+      "text": "Shorting cloud companies is the fastest way to burn money right now.\n\nYoY revenue growth last quarter:\n\n> $NBIS +454% ($105M to $582M)\n> $CRWV +112% ($1.21B to $2.58B)\n> $GOOGL Cloud +82% (~$25B)\n> $MSFT Azure +43% (crossed $100B for the fiscal year)\n> $AMZN AWS +37% ($42.2B, fastest in 18 quarters)\n\nFor this trade to work, every one of these companies has to walk back the guidance and the commitments they put in writing.",
+      "url": "https://x.com/KawzInvests/status/2087541434333163660",
+      "kind": "post",
+      "engagement": {
+        "views": 12629,
+        "likes": 65,
+        "reposts": 4,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7068,11 +7190,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-12T12:18:52.184674+00:00",
+  "price_updated_at": "2026-08-12T15:18:16.915220+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-13",
     "asof": "2026-08-12",
-    "attempted_at": "2026-08-12T12:18:51.702444+00:00",
+    "attempted_at": "2026-08-12T15:18:16.397028+00:00",
     "status": "ok",
     "first_available_date": "2025-08-13",
     "last_available_date": "2026-08-11",
@@ -7083,7 +7205,7 @@
     "provider_symbol": "CRWV",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-12T12:18:51.702444+00:00",
+    "checked_at": "2026-08-12T15:18:16.397028+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
