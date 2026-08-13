@@ -1,6 +1,6 @@
 {
   "ticker": "CVX",
-  "cashtag": "$CVX",
+  "cashtag": "Chevron",
   "instrument": {
     "instrument_id": "US:CVX",
     "display_code": "CVX",
@@ -24,16 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-03",
-  "last_mention": "2026-08-12",
-  "total_mentions": 39,
+  "last_mention": "2026-08-13",
+  "total_mentions": 40,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 30,
     "StockMKTNewz": 4,
     "unusual_whales": 4,
-    "michaelsikand": 1
+    "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 31,
+    "opinion": 32,
     "news": 4,
     "flow": 4
   },
@@ -1001,6 +1001,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087942245748191532",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-13",
+      "created_at": "2026-08-13T12:39:58-04:00",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Chevron",
+      "text": "Memory looks like oil at the dawn of the automobile. \n\nChevron and Exxon both create the most commoditized product on earth, yet trade at forward PE ratios of 12-13.\n\nProduction is the moat, not the product. https://t.co/UIOryyAjKu",
+      "url": "https://x.com/michaelsikand/status/2087942245748191532",
+      "kind": "post",
+      "engagement": {
+        "views": 12557,
+        "likes": 41,
+        "reposts": 1,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -1607,17 +1630,21 @@
     {
       "date": "2026-08-11",
       "close": 196.66
+    },
+    {
+      "date": "2026-08-12",
+      "close": 196.6
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-12T15:19:02.347031+00:00",
+  "price_updated_at": "2026-08-13T18:17:01.638669+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "CVX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-12T15:19:00.739687+00:00",
+    "checked_at": "2026-08-13T18:17:00.288960+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
