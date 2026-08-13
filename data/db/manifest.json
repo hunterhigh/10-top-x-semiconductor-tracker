@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-08-13T03:20:23.068230+00:00",
+  "generated_at": "2026-08-13T06:16:57.400232+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 1884,
-  "index_sha256": "55e62381b67c14d1ec7e2024c63257fea7985bbac28c06f833c2c7ae58f2dbfe",
+  "index_sha256": "1a48d060acaa4f6c7fa0db956d5011f38afb626fd57c29c93ebfebc38f52220f",
   "stocks_root": "stocks",
   "price_cache_count": 863,
   "price_cache_index_sha256": "d2e96bd2bdc18bd458503d055687c11e0c7c004317308494f952db25cce1928e",
   "price_cache_root": "prices_cache",
   "tickers": 1884,
-  "total_mentions": 23135,
+  "total_mentions": 23136,
   "priced_tickers": 677,
   "date_range": [
     "2025-07-02",
-    "2026-08-12"
+    "2026-08-13"
   ],
   "size_mb": 41.5,
   "tracked_bloggers": 10,
@@ -21,7 +21,7 @@
     "aleabitoreddit": 15198,
     "unusual_whales": 632,
     "StockMKTNewz": 3520,
-    "ren_stocks": 870,
+    "ren_stocks": 871,
     "octopusycc": 516,
     "zephyr_z9": 416,
     "KawzInvests": 389,
@@ -58,17 +58,17 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 857,
+    "tickers": 852,
     "status_counts": {
-      "ok": 428,
-      "partial": 17,
-      "unverified_symbol": 400,
+      "ok": 423,
+      "partial": 20,
+      "unverified_symbol": 397,
       "unavailable": 12
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 15,
-      "unverified_instrument_identity": 400,
+      "EODHD 402 (account quota or subscription limit)": 18,
+      "unverified_instrument_identity": 397,
       "provider_symbol_not_found_after_search": 8,
       "no_daily_closes_returned": 3,
       "stale_series_latest_close=2026-08-06": 1,
@@ -80,20 +80,21 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-08-12",
-    "target_start": "2025-08-13",
-    "tickers": 43,
+    "asof": "2026-08-13",
+    "target_start": "2025-08-14",
+    "tickers": 41,
     "status_counts": {
-      "ok": 41,
+      "ok": 39,
       "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 43
+      "supported": 38,
+      "deferred": 3
     },
     "retry_queue": 0,
     "scope_counts": {
-      "monthly_consensus": 40,
+      "monthly_consensus": 38,
       "top_pick_cards": 10,
       "top_pick_unique": 8,
       "overlap": 5
