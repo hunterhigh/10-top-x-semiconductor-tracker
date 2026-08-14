@@ -1,6 +1,6 @@
 {
   "ticker": "RDDT",
-  "cashtag": "RDDT",
+  "cashtag": "$RDDT",
   "instrument": {
     "instrument_id": "US:RDDT",
     "display_code": "RDDT",
@@ -24,18 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-14",
-  "last_mention": "2026-07-31",
-  "total_mentions": 174,
+  "last_mention": "2026-08-13",
+  "total_mentions": 176,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 157,
     "KawzInvests": 8,
     "michaelsikand": 6,
-    "StockMKTNewz": 2,
-    "octopusycc": 1
+    "StockMKTNewz": 3,
+    "octopusycc": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 172,
-    "news": 2
+    "news": 3,
+    "flow": 1
   },
   "mentions": [
     {
@@ -4456,6 +4458,54 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088014517028454581",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-13",
+      "created_at": "2026-08-13T17:27:08-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$RDDT",
+      "text": "JUST IN:\n\nReddit $RDDT will be replacing AvalonBay $AVB in the S&amp;P 500 before the markets open on August 18th\n\nAvalonBay is being acquired by Equity Residential $EQR https://t.co/JSplHpOCfT",
+      "url": "https://x.com/StockMKTNewz/status/2088014517028454581",
+      "kind": "post",
+      "engagement": {
+        "views": 41541,
+        "likes": 164,
+        "reposts": 20,
+        "replies": 30
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088016693947957751",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-13",
+      "created_at": "2026-08-13T17:35:47-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [
+        "being added to the S&P 500"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$RDDT",
+      "text": "BREAKING: Reddit, $RDDT, is being added to the S&amp;P500",
+      "url": "https://x.com/unusual_whales/status/2088016693947957751",
+      "kind": "post",
+      "engagement": {
+        "views": 124524,
+        "likes": 505,
+        "reposts": 27,
+        "replies": 58
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -5526,18 +5576,22 @@
     {
       "date": "2026-08-12",
       "close": 153.45
+    },
+    {
+      "date": "2026-08-13",
+      "close": 158.12
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-13T21:17:26.683702+00:00",
+  "price_updated_at": "2026-08-14T00:20:57.352350+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-14",
     "asof": "2026-08-13",
-    "attempted_at": "2026-08-13T21:17:26.173047+00:00",
+    "attempted_at": "2026-08-14T00:20:57.090898+00:00",
     "status": "ok",
     "first_available_date": "2025-08-14",
-    "last_available_date": "2026-08-12",
+    "last_available_date": "2026-08-13",
     "reason": null
   },
   "price_source_state": {
@@ -5545,7 +5599,7 @@
     "provider_symbol": "RDDT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-13T21:17:26.173047+00:00",
+    "checked_at": "2026-08-14T00:20:57.090898+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
