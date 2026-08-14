@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-14T03:21:15.725762+00:00",
+  "generated_at": "2026-08-14T06:19:50.869854+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 1912,
-    "total_mentions": 23345,
+    "total_tickers": 1914,
+    "total_mentions": 23352,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 1912,
+      "files": 1914,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-14T03:22:19.091305+00:00"
+    "prices_updated_at": "2026-08-14T06:21:20.842844+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -109,7 +109,7 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -646,7 +646,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -986,7 +986,7 @@
         "price_symbol": "005930.KS",
         "verification_status": "verified"
       },
-      "cashtag": "Samsung Electronics",
+      "cashtag": "Samsung",
       "price_symbol": "005930.KS",
       "exchange": "KRX",
       "currency": "KRW",
@@ -995,11 +995,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-08-12",
-      "total_mentions": 257,
+      "last_mention": "2026-08-14",
+      "total_mentions": 258,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "jukan05": 119,
+        "jukan05": 120,
         "aleabitoreddit": 81,
         "zephyr_z9": 19,
         "StockMKTNewz": 14,
@@ -1094,7 +1094,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1349,6 +1349,48 @@
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
       "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
     },
+    "US:RDDT": {
+      "ticker": "RDDT",
+      "instrument": {
+        "instrument_id": "US:RDDT",
+        "display_code": "RDDT",
+        "display_name": "Reddit, Inc.",
+        "display_market": "NYSE",
+        "aliases": [
+          "RDDT"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "RDDT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$RDDT",
+      "price_symbol": "RDDT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Reddit, Inc.",
+      "industry": null,
+      "first_mention": "2025-09-14",
+      "last_mention": "2026-08-14",
+      "total_mentions": 178,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 158,
+        "KawzInvests": 8,
+        "michaelsikand": 6,
+        "StockMKTNewz": 4,
+        "octopusycc": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:RDDT",
+      "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+      "price_history_52w_status": "ok"
+    },
     "US:POET": {
       "ticker": "POET",
       "instrument": {
@@ -1387,48 +1429,6 @@
       "instrument_id": "US:POET",
       "hash": "cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753",
       "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json"
-    },
-    "US:RDDT": {
-      "ticker": "RDDT",
-      "instrument": {
-        "instrument_id": "US:RDDT",
-        "display_code": "RDDT",
-        "display_name": "Reddit, Inc.",
-        "display_market": "NYSE",
-        "aliases": [
-          "RDDT"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "RDDT",
-        "verification_status": "verified"
-      },
-      "cashtag": "$RDDT",
-      "price_symbol": "RDDT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Reddit, Inc.",
-      "industry": null,
-      "first_mention": "2025-09-14",
-      "last_mention": "2026-08-13",
-      "total_mentions": 177,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 157,
-        "KawzInvests": 8,
-        "michaelsikand": 6,
-        "StockMKTNewz": 4,
-        "octopusycc": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:RDDT",
-      "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
-      "price_history_52w_status": "ok"
     },
     "US:ORCL": {
       "ticker": "ORCL",
@@ -2235,7 +2235,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
+      "price_history_52w_status": "ok"
     },
     "US:ARM": {
       "ticker": "ARM",
@@ -2276,14 +2277,15 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "Frankfurt Xetra:LPK": {
       "ticker": "LPK",
       "instrument": {
         "instrument_id": "Frankfurt Xetra:LPK",
         "display_code": "LPK",
-        "display_name": "Lumos Networks / LPK (GCS)",
+        "display_name": "Lifespark Technologies / LPK (glass substrate player)",
         "display_market": "Frankfurt Xetra",
         "aliases": [
           "LPK",
@@ -2301,14 +2303,14 @@
       "currency": "EUR",
       "ticker_mapped": true,
       "verification_status": "verified",
-      "company": "Lumos Networks / LPK (GCS)",
+      "company": "Lifespark Technologies / LPK (glass substrate player)",
       "industry": null,
       "first_mention": "2026-04-20",
-      "last_mention": "2026-07-31",
-      "total_mentions": 64,
+      "last_mention": "2026-08-14",
+      "total_mentions": 65,
       "blogger_count": 2,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 62,
+        "aleabitoreddit": 63,
         "ren_stocks": 2
       },
       "price_status": "partial",
@@ -3125,8 +3127,7 @@
       "price_status": "ok",
       "instrument_id": "US:ASTS",
       "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json"
     },
     "UNVERIFIED:TE": {
       "ticker": "TE",
@@ -3750,8 +3751,7 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
     },
     "US:DELL": {
       "ticker": "DELL",
@@ -4185,6 +4185,49 @@
       "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
       "price_history_52w_status": "ok"
     },
+    "US:CBRS": {
+      "ticker": "CBRS",
+      "instrument": {
+        "instrument_id": "US:CBRS",
+        "display_code": "CBRS",
+        "display_name": "Cerebras Systems Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "CBRS",
+          "CEREBRAS"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "CBRS",
+        "verification_status": "verified"
+      },
+      "cashtag": "Cerebras",
+      "price_symbol": "CBRS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Cerebras Systems Inc.",
+      "industry": null,
+      "first_mention": "2026-04-16",
+      "last_mention": "2026-08-14",
+      "total_mentions": 33,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 10,
+        "octopusycc": 9,
+        "StockMKTNewz": 6,
+        "jukan05": 5,
+        "KawzInvests": 1,
+        "ren_stocks": 1,
+        "zephyr_z9": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:CBRS",
+      "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
+    },
     "US:OKLO": {
       "ticker": "OKLO",
       "instrument": {
@@ -4299,8 +4342,7 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
     },
     "Toronto TSX:HPS.A": {
       "ticker": "HPS.A",
@@ -4374,48 +4416,6 @@
       "instrument_id": "US:BULL",
       "hash": "e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3",
       "path": "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json"
-    },
-    "US:CBRS": {
-      "ticker": "CBRS",
-      "instrument": {
-        "instrument_id": "US:CBRS",
-        "display_code": "CBRS",
-        "display_name": "Cerebras Systems Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "CBRS",
-          "CEREBRAS"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "CBRS",
-        "verification_status": "verified"
-      },
-      "cashtag": "$CBRS",
-      "price_symbol": "CBRS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Cerebras Systems Inc.",
-      "industry": null,
-      "first_mention": "2026-04-16",
-      "last_mention": "2026-08-13",
-      "total_mentions": 32,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 10,
-        "octopusycc": 9,
-        "StockMKTNewz": 6,
-        "jukan05": 5,
-        "KawzInvests": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:CBRS",
-      "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:ONDS": {
       "ticker": "ONDS",
@@ -4607,8 +4607,7 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
     },
     "US:VIAV": {
       "ticker": "VIAV",
@@ -8022,7 +8021,8 @@
       "price_status": "ok",
       "instrument_id": "US:OUST",
       "hash": "8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093",
-      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json"
+      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
+      "price_history_52w_status": "ok"
     },
     "US:TTMI": {
       "ticker": "TTMI",
@@ -22908,6 +22908,43 @@
       "hash": "5f28b21b344952985a882fde72e62d5dbc29bb7ddcca958808997a94bad100c6",
       "path": "stocks/5f/5f28b21b344952985a882fde72e62d5dbc29bb7ddcca958808997a94bad100c6.json"
     },
+    "UNVERIFIED:1303": {
+      "ticker": "1303",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:1303",
+        "display_code": "1303",
+        "display_name": "Nan Ya Plastics",
+        "display_market": "Market unverified",
+        "aliases": [
+          "1303"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Nan Ya Plastics",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Nan Ya Plastics",
+      "industry": null,
+      "first_mention": "2026-06-19",
+      "last_mention": "2026-08-14",
+      "total_mentions": 3,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "jukan05": 2,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:1303",
+      "hash": "aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c",
+      "path": "stocks/aa/aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c.json"
+    },
     "UNVERIFIED:138080": {
       "ticker": "138080",
       "instrument": {
@@ -29742,43 +29779,6 @@
       "instrument_id": "UNVERIFIED:07747",
       "hash": "60ba8fe2cf2015778f6b09d89bcce52668631f51473c92eb5db340bced3fdc63",
       "path": "stocks/60/60ba8fe2cf2015778f6b09d89bcce52668631f51473c92eb5db340bced3fdc63.json"
-    },
-    "UNVERIFIED:1303": {
-      "ticker": "1303",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:1303",
-        "display_code": "1303",
-        "display_name": "Nan Ya Plastics",
-        "display_market": "Market unverified",
-        "aliases": [
-          "1303"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Nan Ya Plastics (1303)",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Nan Ya Plastics",
-      "industry": null,
-      "first_mention": "2026-06-19",
-      "last_mention": "2026-07-20",
-      "total_mentions": 2,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "jukan05": 1,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:1303",
-      "hash": "aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c",
-      "path": "stocks/aa/aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c.json"
     },
     "UNVERIFIED:2317": {
       "ticker": "2317",
@@ -39364,6 +39364,42 @@
       "hash": "69a9d6d3015b0d40e940eb17fde87586239007fd8f9c1de6b388bdfe03f5709b",
       "path": "stocks/69/69a9d6d3015b0d40e940eb17fde87586239007fd8f9c1de6b388bdfe03f5709b.json"
     },
+    "UNVERIFIED:161580": {
+      "ticker": "161580",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:161580",
+        "display_code": "161580",
+        "display_name": "Philoptics",
+        "display_market": "Market unverified",
+        "aliases": [
+          "161580"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Philoptics (161580)",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Philoptics",
+      "industry": null,
+      "first_mention": "2026-08-14",
+      "last_mention": "2026-08-14",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:161580",
+      "hash": "96af650e8e58ca1af464263b6e12de95beef32eaa97b66078da2812d5aaa7d1a",
+      "path": "stocks/96/96af650e8e58ca1af464263b6e12de95beef32eaa97b66078da2812d5aaa7d1a.json"
+    },
     "UNVERIFIED:189": {
       "ticker": "189",
       "instrument": {
@@ -42819,6 +42855,42 @@
       "instrument_id": "UNVERIFIED:7911",
       "hash": "8793f085e25958ffb6ceeecc19164d1ed4262180f4cb79374b7fa4202eedfd84",
       "path": "stocks/87/8793f085e25958ffb6ceeecc19164d1ed4262180f4cb79374b7fa4202eedfd84.json"
+    },
+    "UNVERIFIED:8027": {
+      "ticker": "8027",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:8027",
+        "display_code": "8027",
+        "display_name": "E&R",
+        "display_market": "Market unverified",
+        "aliases": [
+          "8027"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "E&R (8027)",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "E&R",
+      "industry": null,
+      "first_mention": "2026-08-14",
+      "last_mention": "2026-08-14",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:8027",
+      "hash": "bc59a2da0650f31eab54e98d228a668936661a87df6130622d5594b5fac402d1",
+      "path": "stocks/bc/bc59a2da0650f31eab54e98d228a668936661a87df6130622d5594b5fac402d1.json"
     },
     "UNVERIFIED:8039": {
       "ticker": "8039",
@@ -70149,6 +70221,9 @@
     "$148": [
       "UNVERIFIED:148"
     ],
+    "$161580": [
+      "UNVERIFIED:161580"
+    ],
     "$1810": [
       "UNVERIFIED:1810"
     ],
@@ -70652,6 +70727,9 @@
     ],
     "$7911": [
       "UNVERIFIED:7911"
+    ],
+    "$8027": [
+      "UNVERIFIED:8027"
     ],
     "$8035": [
       "TSE:8035"
@@ -75913,6 +75991,9 @@
     "148": [
       "UNVERIFIED:148"
     ],
+    "161580": [
+      "UNVERIFIED:161580"
+    ],
     "1810": [
       "UNVERIFIED:1810"
     ],
@@ -76476,6 +76557,9 @@
     ],
     "7911": [
       "UNVERIFIED:7911"
+    ],
+    "8027": [
+      "UNVERIFIED:8027"
     ],
     "8035": [
       "TSE:8035"
@@ -79210,6 +79294,12 @@
     "DXY": [
       "UNVERIFIED:DXY"
     ],
+    "E&R": [
+      "UNVERIFIED:8027"
+    ],
+    "E&R (8027)": [
+      "UNVERIFIED:8027"
+    ],
     "EA": [
       "US:EA"
     ],
@@ -81659,6 +81749,9 @@
     "LIFE TIME GROUP HOLDINGS, INC.": [
       "US:LTH"
     ],
+    "LIFESPARK TECHNOLOGIES / LPK (GLASS SUBSTRATE PLAYER)": [
+      "Frankfurt Xetra:LPK"
+    ],
     "LIGHTER": [
       "UNVERIFIED:LIGHTER"
     ],
@@ -81821,9 +81914,6 @@
     ],
     "LUMILENS": [
       "UNVERIFIED:LUMILENS"
-    ],
-    "LUMOS NETWORKS / LPK (GCS)": [
-      "Frankfurt Xetra:LPK"
     ],
     "LUNR": [
       "US:LUNR"
@@ -82862,9 +82952,6 @@
     "NAN YA PLASTICS": [
       "UNVERIFIED:1303"
     ],
-    "NAN YA PLASTICS (1303)": [
-      "UNVERIFIED:1303"
-    ],
     "NAN YA PRINTED CIRCUIT BOARD": [
       "UNVERIFIED:8046"
     ],
@@ -83785,7 +83872,11 @@
       "US:PSX"
     ],
     "PHILOPTICS": [
+      "UNVERIFIED:161580",
       "UNVERIFIED:PHILOPTICS"
+    ],
+    "PHILOPTICS (161580)": [
+      "UNVERIFIED:161580"
     ],
     "PHISON": [
       "UNVERIFIED:8299"
@@ -84557,7 +84648,6 @@
       "KRX:009150"
     ],
     "SAMSUNG ELECTRONICS": [
-      "KRX:005930",
       "UNVERIFIED:005930.KS",
       "UNVERIFIED:SSNLF"
     ],
@@ -86410,6 +86500,9 @@
     "UNVERIFIED:148": [
       "UNVERIFIED:148"
     ],
+    "UNVERIFIED:161580": [
+      "UNVERIFIED:161580"
+    ],
     "UNVERIFIED:1810": [
       "UNVERIFIED:1810"
     ],
@@ -86847,6 +86940,9 @@
     ],
     "UNVERIFIED:7911": [
       "UNVERIFIED:7911"
+    ],
+    "UNVERIFIED:8027": [
+      "UNVERIFIED:8027"
     ],
     "UNVERIFIED:8039": [
       "UNVERIFIED:8039"
@@ -92926,8 +93022,8 @@
     "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
     "stocks/14/145b35d89d36a50db9514b08f40d741b719d35bee046a0869878c7da934f3c4c.json",
     "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
-    "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
     "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+    "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
     "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
     "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json",
     "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
@@ -92998,12 +93094,12 @@
     "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json",
     "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json",
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
+    "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json",
     "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
     "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
     "stocks/8b/8bd42cfd3c8ce078abbe115d1588aed7dfb083fb7441766580713ed3bb78bdab.json",
     "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json",
-    "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
@@ -93502,6 +93598,7 @@
     "stocks/a0/a09ef65340fed79cec4c00f74ddd92f9005708e0d661c42c7df35f418a5f24a8.json",
     "stocks/e1/e1af85a0a70951eae36b23c75eb8b14393aeeee408d371021000c0b9e3cdc1fd.json",
     "stocks/5f/5f28b21b344952985a882fde72e62d5dbc29bb7ddcca958808997a94bad100c6.json",
+    "stocks/aa/aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c.json",
     "stocks/49/497b015f2be37a7e359b9540e4507182c013d3ec8ad17ad31af47ab9a6e45fbd.json",
     "stocks/da/da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f.json",
     "stocks/a3/a32acd91d649e11b59d047a6da8a9049a5f09e7aa637bd4455bba231077977f8.json",
@@ -93690,7 +93787,6 @@
     "stocks/df/df87bddd060d036135f1156145b99723239bf5f08d5eb15361e4e6632fd21bb1.json",
     "stocks/87/87bba243f1d20d6d483dc012aee66bf8dceb490c649dbcb4ce9cd6d9a5f6e8ad.json",
     "stocks/60/60ba8fe2cf2015778f6b09d89bcce52668631f51473c92eb5db340bced3fdc63.json",
-    "stocks/aa/aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c.json",
     "stocks/d3/d31dc29820564b5d772f90054df47929bf7c5734eedcda580b3d42407c860f1e.json",
     "stocks/a2/a2ca32747261b1c122686252fcde4dfc6f8dc9eeb6d39e1aeb1081fd237a896d.json",
     "stocks/46/4691b240faf19b42241b058025c660cf40684cf79f7890400b6b465f5f9d7286.json",
@@ -93956,6 +94052,7 @@
     "stocks/76/76b1d36521bee22cc9cce39ec580e65931f95076b43eb0de32140a3346b3ec94.json",
     "stocks/da/da4ffd3c0498d30340dfa0b49e66816767e9f20957dda13f757141083b77da50.json",
     "stocks/69/69a9d6d3015b0d40e940eb17fde87586239007fd8f9c1de6b388bdfe03f5709b.json",
+    "stocks/96/96af650e8e58ca1af464263b6e12de95beef32eaa97b66078da2812d5aaa7d1a.json",
     "stocks/3a/3a163a79534cc460fd30d0fe892cc48010d7883e013c34430bcfa03cf6f6c535.json",
     "stocks/d1/d1dd97ac34b848db7e4daaa17bb1f904d61e699b8af6e9db9548f137ed7adc11.json",
     "stocks/3d/3d6ac5b25b5197a15be254ee9d5d5968d68b6c9c9917dfdf8f77f6b319371cda.json",
@@ -94052,6 +94149,7 @@
     "stocks/42/42a741dcb0649b9ee6e859db80af0c3ed6d9cf2356b78f4a9258e56d9fef6bbd.json",
     "stocks/51/5181e3c84d371cfc25cb9439e65cc271f9ad1d4103a6d26b09ac0f3ae2923dd9.json",
     "stocks/87/8793f085e25958ffb6ceeecc19164d1ed4262180f4cb79374b7fa4202eedfd84.json",
+    "stocks/bc/bc59a2da0650f31eab54e98d228a668936661a87df6130622d5594b5fac402d1.json",
     "stocks/69/69d475b8a1ba84b5609ab660328b7955a31a6194917c929ddeb350664c9b927a.json",
     "stocks/da/dac766f7db7121642dac08683397d14bafa072e7519abe887ef9248d5a08830a.json",
     "stocks/96/96fd72bb8ae324f954493920ba410d34b38b3d9f347b18fe68365324e7fe6f7d.json",
