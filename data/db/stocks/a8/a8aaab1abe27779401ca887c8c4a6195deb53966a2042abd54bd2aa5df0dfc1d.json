@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "UNVERIFIED:STUB",
     "display_code": "STUB",
-    "display_name": "StubHub",
+    "display_name": "STUB",
     "display_market": "Market unverified",
     "aliases": [
       "STUB"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "StubHub",
+  "company": "STUB",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-14",
   "last_mention": "2026-08-14",
-  "total_mentions": 1,
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1
+    "news": 1,
+    "flow": 1
   },
   "mentions": [
     {
@@ -55,11 +57,35 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088308165532340424",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T12:54:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$STUB",
+      "text": "BREAKING: Josh Kushner’s Thrive Capital disclosed its Q2 stock portfolio:\n\nSpaceX ($SPCX): $3.2B, 84.8%\nAmazon ($AMZN): $215.5M\nOscar Health ($OSCR): $180.9M\nShopify ($SHOP): $102.3M\nFigma ($FIG): $79.5M\n\nNew: $SPCX, $AMZN\nExited: $CVNA, $STUB",
+      "url": "https://x.com/unusual_whales/status/2088308165532340424",
+      "kind": "post",
+      "engagement": {
+        "views": 110812,
+        "likes": 369,
+        "reposts": 37,
+        "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
+  "price_updated_at": "2026-08-14T15:23:36.462851+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
@@ -70,6 +96,5 @@
     "attempts": 1,
     "next_retry_at": null,
     "http_status": null
-  },
-  "price_updated_at": "2026-08-14T15:23:36.462851+00:00"
+  }
 }

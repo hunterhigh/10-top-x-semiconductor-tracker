@@ -25,15 +25,15 @@
   "thesis_summary": null,
   "first_mention": "2026-01-16",
   "last_mention": "2026-08-14",
-  "total_mentions": 155,
+  "total_mentions": 156,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 135,
     "michaelsikand": 9,
-    "KawzInvests": 6,
+    "KawzInvests": 7,
     "ren_stocks": 5
   },
   "total_mentions_by_signal_type": {
-    "opinion": 155
+    "opinion": 156
   },
   "mentions": [
     {
@@ -3918,6 +3918,35 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088282372378595571",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T11:11:30-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "up 87% since last earnings call",
+        "two new orders landed: silicon photonics follow-on and $22M AI processor order",
+        "burn-in kills bad die at wafer stage where cost is cents vs rack failure in live cluster",
+        "FY27 guided $130-150M, ~3x FY26",
+        "Jefferies initiates at Buy with $175 PT"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AEHR",
+      "text": "$AEHR is up 87% since its last earnings call. Two more orders have landed since:\n\n> Aug 4: silicon photonics follow-on from their lead customer\n> Aug 12: $22M AI processor order\n\nEvery wafer carries a few bad die that pass inspection and fail weeks later. Burn-in kills them at the wafer stage where a die costs cents. Miss it and the same die takes down a rack in a live cluster.\n\n> FY27 guided $130-150M, ~3x FY26\n> Jefferies initiates $AEHR at Buy with a $175 PT",
+      "url": "https://x.com/KawzInvests/status/2088282372378595571",
+      "kind": "post",
+      "engagement": {
+        "views": 15807,
+        "likes": 53,
+        "reposts": 2,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -4996,11 +5025,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-14T15:22:54.797227+00:00",
+  "price_updated_at": "2026-08-14T18:20:43.512253+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-15",
     "asof": "2026-08-14",
-    "attempted_at": "2026-08-14T15:22:53.811060+00:00",
+    "attempted_at": "2026-08-14T18:20:42.547025+00:00",
     "status": "ok",
     "first_available_date": "2025-08-15",
     "last_available_date": "2026-08-13",
@@ -5011,7 +5040,7 @@
     "provider_symbol": "AEHR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-14T15:22:53.811060+00:00",
+    "checked_at": "2026-08-14T18:20:42.547025+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

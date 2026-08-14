@@ -1,6 +1,6 @@
 {
   "ticker": "SNDK",
-  "cashtag": "$SNDK",
+  "cashtag": "@SanDisk",
   "instrument": {
     "instrument_id": "US:SNDK",
     "display_code": "SNDK",
@@ -25,7 +25,7 @@
   "thesis_summary": "他看好 SanDisk 的存储周期上行。",
   "first_mention": "2025-11-25",
   "last_mention": "2026-08-14",
-  "total_mentions": 316,
+  "total_mentions": 317,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 175,
     "ren_stocks": 64,
@@ -34,11 +34,11 @@
     "jukan05": 12,
     "michaelsikand": 10,
     "octopusycc": 9,
-    "zephyr_z9": 8,
+    "zephyr_z9": 9,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 291,
+    "opinion": 292,
     "news": 24,
     "flow": 1
   },
@@ -7730,6 +7730,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088283562479075716",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T11:16:14-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "TAM for KV cache may be overstated if sized based on BF/FP16 rather than lower precision"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "@SanDisk",
+      "text": "\"With this example, it's reasonable to assume that Sandisk sized up KV cache TAM based on BF/FP16 too so divide their numbers by 2x (or 4x even)\"\n\nI hope this is wrong\n@SanDisk should clarify this",
+      "url": "https://x.com/zephyr_z9/status/2088283562479075716",
+      "kind": "post",
+      "engagement": {
+        "views": 26348,
+        "likes": 94,
+        "reposts": 6,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8808,11 +8833,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-14T15:23:14.781486+00:00",
+  "price_updated_at": "2026-08-14T18:21:07.270820+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-15",
     "asof": "2026-08-14",
-    "attempted_at": "2026-08-14T15:23:14.292380+00:00",
+    "attempted_at": "2026-08-14T18:21:07.030049+00:00",
     "status": "ok",
     "first_available_date": "2025-08-15",
     "last_available_date": "2026-08-13",
@@ -8823,7 +8848,7 @@
     "provider_symbol": "SNDK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-14T15:23:14.292380+00:00",
+    "checked_at": "2026-08-14T18:21:07.030049+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
