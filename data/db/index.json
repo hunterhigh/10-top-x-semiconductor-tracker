@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-14T06:19:50.869854+00:00",
+  "generated_at": "2026-08-14T09:24:43.477380+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 1914,
-    "total_mentions": 23352,
+    "total_mentions": 23358,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-14T06:21:20.842844+00:00"
+    "prices_updated_at": "2026-08-14T09:26:25.118177+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -140,14 +140,14 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-08-13",
-      "total_mentions": 867,
+      "last_mention": "2026-08-14",
+      "total_mentions": 868,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 520,
         "StockMKTNewz": 94,
         "jukan05": 91,
-        "zephyr_z9": 44,
+        "zephyr_z9": 45,
         "unusual_whales": 39,
         "octopusycc": 23,
         "KawzInvests": 20,
@@ -846,7 +846,7 @@
         "price_symbol": "AMD",
         "verification_status": "verified"
       },
-      "cashtag": "$AMD",
+      "cashtag": "AMD",
       "price_symbol": "AMD",
       "exchange": "US",
       "currency": "USD",
@@ -855,8 +855,8 @@
       "company": "AMD",
       "industry": "GPU/AI Chips",
       "first_mention": "2025-09-11",
-      "last_mention": "2026-08-13",
-      "total_mentions": 292,
+      "last_mention": "2026-08-14",
+      "total_mentions": 293,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 173,
@@ -864,7 +864,7 @@
         "jukan05": 23,
         "ren_stocks": 18,
         "octopusycc": 13,
-        "zephyr_z9": 6,
+        "zephyr_z9": 7,
         "unusual_whales": 5,
         "michaelsikand": 2,
         "KawzInvests": 2,
@@ -2235,8 +2235,7 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
     },
     "US:ARM": {
       "ticker": "ARM",
@@ -2277,8 +2276,7 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
     },
     "Frankfurt Xetra:LPK": {
       "ticker": "LPK",
@@ -4265,6 +4263,44 @@
       "hash": "366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8",
       "path": "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json"
     },
+    "US:ONDS": {
+      "ticker": "ONDS",
+      "instrument": {
+        "instrument_id": "US:ONDS",
+        "display_code": "ONDS",
+        "display_name": "Ondas Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "ONDS"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ONDS",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ONDS",
+      "price_symbol": "ONDS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Ondas Inc.",
+      "industry": null,
+      "first_mention": "2025-09-17",
+      "last_mention": "2026-08-14",
+      "total_mentions": 33,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 29,
+        "michaelsikand": 3,
+        "StockMKTNewz": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ONDS",
+      "hash": "e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d",
+      "path": "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json"
+    },
     "US:UNH": {
       "ticker": "UNH",
       "instrument": {
@@ -4416,44 +4452,6 @@
       "instrument_id": "US:BULL",
       "hash": "e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3",
       "path": "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json"
-    },
-    "US:ONDS": {
-      "ticker": "ONDS",
-      "instrument": {
-        "instrument_id": "US:ONDS",
-        "display_code": "ONDS",
-        "display_name": "Ondas Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "ONDS"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ONDS",
-        "verification_status": "verified"
-      },
-      "cashtag": "$ONDS",
-      "price_symbol": "ONDS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Ondas Inc.",
-      "industry": null,
-      "first_mention": "2025-09-17",
-      "last_mention": "2026-07-19",
-      "total_mentions": 32,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 28,
-        "michaelsikand": 3,
-        "StockMKTNewz": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ONDS",
-      "hash": "e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d",
-      "path": "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json"
     },
     "US:V": {
       "ticker": "V",
@@ -4958,7 +4956,8 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
+      "price_history_52w_status": "ok"
     },
     "US:TGT": {
       "ticker": "TGT",
@@ -8021,8 +8020,7 @@
       "price_status": "ok",
       "instrument_id": "US:OUST",
       "hash": "8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093",
-      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json"
     },
     "US:TTMI": {
       "ticker": "TTMI",
@@ -9338,7 +9336,8 @@
       "price_status": "ok",
       "instrument_id": "US:MCK",
       "hash": "9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199",
-      "path": "stocks/96/9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199.json"
+      "path": "stocks/96/9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199.json",
+      "price_history_52w_status": "ok"
     },
     "US:MNST": {
       "ticker": "MNST",
@@ -9448,6 +9447,43 @@
       "instrument_id": "US:SPRB",
       "hash": "69405de7810c7a613ee439ecbf8772feb32f863686acb7cea0e0098d3bb9c52f",
       "path": "stocks/69/69405de7810c7a613ee439ecbf8772feb32f863686acb7cea0e0098d3bb9c52f.json"
+    },
+    "US:UMAC": {
+      "ticker": "UMAC",
+      "instrument": {
+        "instrument_id": "US:UMAC",
+        "display_code": "UMAC",
+        "display_name": "Unusual Machines, Inc.",
+        "display_market": "NYSE",
+        "aliases": [
+          "UMAC"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "UMAC",
+        "verification_status": "verified"
+      },
+      "cashtag": "$UMAC",
+      "price_symbol": "UMAC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Unusual Machines, Inc.",
+      "industry": null,
+      "first_mention": "2026-01-08",
+      "last_mention": "2026-08-14",
+      "total_mentions": 11,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 6,
+        "DJTRadar": 5
+      },
+      "price_status": "ok",
+      "instrument_id": "US:UMAC",
+      "hash": "e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856",
+      "path": "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json"
     },
     "US:VCX": {
       "ticker": "VCX",
@@ -10374,43 +10410,6 @@
       "instrument_id": "US:SN",
       "hash": "f4b94fa991f56b7c61fd21bfd697f2d579904a8c579f541567c5e330f757dfa7",
       "path": "stocks/f4/f4b94fa991f56b7c61fd21bfd697f2d579904a8c579f541567c5e330f757dfa7.json"
-    },
-    "US:UMAC": {
-      "ticker": "UMAC",
-      "instrument": {
-        "instrument_id": "US:UMAC",
-        "display_code": "UMAC",
-        "display_name": "Unusual Machines, Inc.",
-        "display_market": "NYSE",
-        "aliases": [
-          "UMAC"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "UMAC",
-        "verification_status": "verified"
-      },
-      "cashtag": "UMAC",
-      "price_symbol": "UMAC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Unusual Machines, Inc.",
-      "industry": null,
-      "first_mention": "2026-01-08",
-      "last_mention": "2026-07-06",
-      "total_mentions": 10,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 5,
-        "DJTRadar": 5
-      },
-      "price_status": "ok",
-      "instrument_id": "US:UMAC",
-      "hash": "e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856",
-      "path": "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json"
     },
     "US:WEN": {
       "ticker": "WEN",
@@ -14005,6 +14004,44 @@
       "hash": "f114eb857b1d0a71a62424010cbaf9c5b46e83baef082b4a47f58ad88aebc643",
       "path": "stocks/f1/f114eb857b1d0a71a62424010cbaf9c5b46e83baef082b4a47f58ad88aebc643.json"
     },
+    "UNVERIFIED:IGV": {
+      "ticker": "IGV",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:IGV",
+        "display_code": "IGV",
+        "display_name": "iShares Expanded Tech-Software Sector ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "IGV"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$IGV",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "iShares Expanded Tech-Software Sector ETF",
+      "industry": null,
+      "first_mention": "2026-06-19",
+      "last_mention": "2026-08-14",
+      "total_mentions": 6,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "octopusycc": 3,
+        "StockMKTNewz": 2,
+        "michaelsikand": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:IGV",
+      "hash": "108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4",
+      "path": "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json"
+    },
     "UNVERIFIED:LANDMARK": {
       "ticker": "LANDMARK",
       "instrument": {
@@ -15516,6 +15553,43 @@
       "hash": "765cf44ffb7b234103dfb444113b2ebae97660ca1f0be9922b23d51bc6371397",
       "path": "stocks/76/765cf44ffb7b234103dfb444113b2ebae97660ca1f0be9922b23d51bc6371397.json"
     },
+    "US:RCAT": {
+      "ticker": "RCAT",
+      "instrument": {
+        "instrument_id": "US:RCAT",
+        "display_code": "RCAT",
+        "display_name": "Red Cat Holdings, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "RCAT"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "RCAT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$RCAT",
+      "price_symbol": "RCAT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Red Cat Holdings, Inc.",
+      "industry": null,
+      "first_mention": "2026-01-14",
+      "last_mention": "2026-08-14",
+      "total_mentions": 6,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 5,
+        "michaelsikand": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:RCAT",
+      "hash": "52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c",
+      "path": "stocks/52/52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c.json"
+    },
     "US:RMBS": {
       "ticker": "RMBS",
       "instrument": {
@@ -16473,44 +16547,6 @@
       "instrument_id": "UNVERIFIED:FRO",
       "hash": "524f0d443006dda199df879a7c901f55513884b2ff8b15fcb467e24c72e22e01",
       "path": "stocks/52/524f0d443006dda199df879a7c901f55513884b2ff8b15fcb467e24c72e22e01.json"
-    },
-    "UNVERIFIED:IGV": {
-      "ticker": "IGV",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:IGV",
-        "display_code": "IGV",
-        "display_name": "iShares Expanded Tech-Software Sector ETF",
-        "display_market": "Market unverified",
-        "aliases": [
-          "IGV"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$IGV",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "iShares Expanded Tech-Software Sector ETF",
-      "industry": null,
-      "first_mention": "2026-06-19",
-      "last_mention": "2026-08-10",
-      "total_mentions": 5,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "octopusycc": 2,
-        "StockMKTNewz": 2,
-        "michaelsikand": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:IGV",
-      "hash": "108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4",
-      "path": "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json"
     },
     "UNVERIFIED:JKHY": {
       "ticker": "JKHY",
@@ -18419,43 +18455,6 @@
       "instrument_id": "US:PTGX",
       "hash": "120faa422bf4cea5b0260aac113725f0e6f9065ee721f4df1ea3a8de225b43ab",
       "path": "stocks/12/120faa422bf4cea5b0260aac113725f0e6f9065ee721f4df1ea3a8de225b43ab.json"
-    },
-    "US:RCAT": {
-      "ticker": "RCAT",
-      "instrument": {
-        "instrument_id": "US:RCAT",
-        "display_code": "RCAT",
-        "display_name": "Red Cat Holdings, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "RCAT"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "RCAT",
-        "verification_status": "verified"
-      },
-      "cashtag": "$RCAT",
-      "price_symbol": "RCAT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Red Cat Holdings, Inc.",
-      "industry": null,
-      "first_mention": "2026-01-14",
-      "last_mention": "2026-06-18",
-      "total_mentions": 5,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 4,
-        "michaelsikand": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "US:RCAT",
-      "hash": "52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c",
-      "path": "stocks/52/52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c.json"
     },
     "US:S": {
       "ticker": "S",
@@ -93096,11 +93095,11 @@
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
     "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json",
+    "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
     "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
     "stocks/8b/8bd42cfd3c8ce078abbe115d1588aed7dfb083fb7441766580713ed3bb78bdab.json",
     "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json",
-    "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
@@ -93232,6 +93231,7 @@
     "stocks/69/6998aac44466b619ac23adf03ef9dc2164a66926904a265bcb03aa1817452540.json",
     "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
     "stocks/69/69405de7810c7a613ee439ecbf8772feb32f863686acb7cea0e0098d3bb9c52f.json",
+    "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json",
     "stocks/22/2233749efd5016443e5a458663c692d0c0489f7738aa60f10acc1defdb190478.json",
     "stocks/cc/cc28e9e0a8d0f25c0a7f308f5af682bfb5fbd7c6d82c6cdd1208c456764d3d7c.json",
     "stocks/dd/dd9597066f55c0b70cafb5b53c96514f203b3ec6780c3b338c4d7b35c888b2d6.json",
@@ -93257,7 +93257,6 @@
     "stocks/40/40aa06a9b5fb7950cadafe038408a39897ecbc0050b97645e57ad07ff46e29c8.json",
     "stocks/b3/b3659ba7b6e94eb842e7b78f457f29825466bade67cace73165e3a6c61ce26b0.json",
     "stocks/f4/f4b94fa991f56b7c61fd21bfd697f2d579904a8c579f541567c5e330f757dfa7.json",
-    "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json",
     "stocks/11/11d59d9d12d7059b14d66d2404e319ff9df37a3ef6a66e3fec56611f9c77cc7e.json",
     "stocks/a2/a2d1a0465f2bfc8a3b49df230df5015ac6002ac23af3766abaf6f105f51708dd.json",
     "stocks/44/44a82eb1f652af042c03699a034bf7cbe5519a0d996444ace760c0a97c7f3bf5.json",
@@ -93355,6 +93354,7 @@
     "stocks/32/3242d8ac755e414f452969e631e6da4525463b5e61ed6d44572c0c8bf9ce262b.json",
     "stocks/16/168b29ca9585a38149b07b7b32159a67993863e346c3925e5b364229a7c49007.json",
     "stocks/f1/f114eb857b1d0a71a62424010cbaf9c5b46e83baef082b4a47f58ad88aebc643.json",
+    "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json",
     "stocks/f0/f040c2dc58a7e344a3975d3c6e627e0ee09121727f225f8e140efb2610e04e9d.json",
     "stocks/39/3929a9e59d631f8d39bcb856a70aec481639de1be589d558930386d305b3c3f1.json",
     "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json",
@@ -93396,6 +93396,7 @@
     "stocks/f7/f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a.json",
     "stocks/7f/7ff4794b20ff3c5870c4bb2716a9362f90088a25d773edc7347591332869d82d.json",
     "stocks/76/765cf44ffb7b234103dfb444113b2ebae97660ca1f0be9922b23d51bc6371397.json",
+    "stocks/52/52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c.json",
     "stocks/f4/f40019ca72e23356fac3975772b75f5bd59bea9229003e7ea9e5e036037137b4.json",
     "stocks/0d/0d007dffb6b363aa06cd70694e99e5cb82412f84593794925eaf4dd2bee33af0.json",
     "stocks/cf/cf57ff6e0ca14ae763e52600a51b509aff287e6d96dd45be5e6b4ee601ca5830.json",
@@ -93422,7 +93423,6 @@
     "stocks/f1/f144d0e354beff44bfc552ca1f5e8af85efddee326531bbc0717a6412c4662f0.json",
     "stocks/2a/2a99f8b1b7e2dbe486ccd5b28e8a7856cba21494c21a8deea52865d018deca56.json",
     "stocks/52/524f0d443006dda199df879a7c901f55513884b2ff8b15fcb467e24c72e22e01.json",
-    "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json",
     "stocks/6c/6cad58776e6fe4ffad7c186a8e87e3adce749bc731a6206d46ba739652061fca.json",
     "stocks/d7/d70daa5f08085ed0ddea090e4aec3cec249135359863672fda2364840818cf17.json",
     "stocks/e5/e5ad4c58456ccbfb3e177e3c3b6167633c842f8f9b3e25a6b63015c23bb919ce.json",
@@ -93475,7 +93475,6 @@
     "stocks/da/da09837b668cc16e6b321a345c742c9641984d59ed7a3808476a19a408cd8c17.json",
     "stocks/87/87f8d2b113cd9a26917a451b5c28694c04e73088c8b3a61e4d0ae1d968999dfc.json",
     "stocks/12/120faa422bf4cea5b0260aac113725f0e6f9065ee721f4df1ea3a8de225b43ab.json",
-    "stocks/52/52b6b9317aa1edbadc49b311d585bc2bf82b89748ed74ac14ab2b69f69be951c.json",
     "stocks/cd/cd0e8107e79f00b5dcdb20c2106ec6d971298ffb79a4a6e19671fb442b874bd7.json",
     "stocks/1c/1cd044e1ceff0f7dccd8ff2bcb3548d37c217e72f651ab32afc761f9186a1b72.json",
     "stocks/21/218edb695cc42b2211bfc63957bf3783b78f99930df6c3c8a4b527b9b7b09685.json",
