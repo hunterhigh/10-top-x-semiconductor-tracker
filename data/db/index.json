@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-15T03:21:17.234104+00:00",
+  "generated_at": "2026-08-15T06:19:28.839922+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2019,
-    "total_mentions": 23731,
+    "total_tickers": 2020,
+    "total_mentions": 23737,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2019,
+      "files": 2020,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-15T03:22:05.819684+00:00"
+    "prices_updated_at": "2026-08-15T06:20:48.635978+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -74,6 +74,52 @@
       "path": "stocks/92/92505f23b394440c690e9bf418649de1194f41ac3ac6606e1bc72975eae81a9c.json",
       "price_history_52w_status": "ok"
     },
+    "US:NVDA": {
+      "ticker": "NVDA",
+      "instrument": {
+        "instrument_id": "US:NVDA",
+        "display_code": "NVDA",
+        "display_name": "NVIDIA",
+        "display_market": "US",
+        "aliases": [
+          "NVDA"
+        ],
+        "market": "US",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "NVDA",
+        "verification_status": "verified"
+      },
+      "cashtag": "Vera",
+      "price_symbol": "NVDA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "NVIDIA",
+      "industry": "AI Chips",
+      "first_mention": "2025-07-21",
+      "last_mention": "2026-08-15",
+      "total_mentions": 877,
+      "blogger_count": 10,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 520,
+        "StockMKTNewz": 97,
+        "jukan05": 91,
+        "zephyr_z9": 47,
+        "unusual_whales": 41,
+        "octopusycc": 23,
+        "KawzInvests": 21,
+        "michaelsikand": 17,
+        "ren_stocks": 15,
+        "DJTRadar": 5
+      },
+      "price_status": "ok",
+      "instrument_id": "US:NVDA",
+      "hash": "3047a828106c8a971d5dbf7f64cf4a1b47cfd266c02634334d8e80bd146c8a2b",
+      "path": "stocks/30/3047a828106c8a971d5dbf7f64cf4a1b47cfd266c02634334d8e80bd146c8a2b.json",
+      "price_history_52w_status": "ok"
+    },
     "Nasdaq Stockholm:SIVE": {
       "ticker": "SIVE",
       "instrument": {
@@ -109,56 +155,10 @@
         "jukan05": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
-      "price_history_52w_status": "ok"
-    },
-    "US:NVDA": {
-      "ticker": "NVDA",
-      "instrument": {
-        "instrument_id": "US:NVDA",
-        "display_code": "NVDA",
-        "display_name": "NVIDIA",
-        "display_market": "US",
-        "aliases": [
-          "NVDA"
-        ],
-        "market": "US",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "NVDA",
-        "verification_status": "verified"
-      },
-      "cashtag": "$NVDA",
-      "price_symbol": "NVDA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "NVIDIA",
-      "industry": "AI Chips",
-      "first_mention": "2025-07-21",
-      "last_mention": "2026-08-14",
-      "total_mentions": 875,
-      "blogger_count": 10,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 520,
-        "StockMKTNewz": 97,
-        "jukan05": 91,
-        "zephyr_z9": 45,
-        "unusual_whales": 41,
-        "octopusycc": 23,
-        "KawzInvests": 21,
-        "michaelsikand": 17,
-        "ren_stocks": 15,
-        "DJTRadar": 5
-      },
-      "price_status": "ok",
-      "instrument_id": "US:NVDA",
-      "hash": "3047a828106c8a971d5dbf7f64cf4a1b47cfd266c02634334d8e80bd146c8a2b",
-      "path": "stocks/30/3047a828106c8a971d5dbf7f64cf4a1b47cfd266c02634334d8e80bd146c8a2b.json",
       "price_history_52w_status": "ok"
     },
     "US:LITE": {
@@ -692,7 +692,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -846,7 +846,7 @@
         "price_symbol": "AMD",
         "verification_status": "verified"
       },
-      "cashtag": "$AMD",
+      "cashtag": "Turin",
       "price_symbol": "AMD",
       "exchange": "US",
       "currency": "USD",
@@ -855,8 +855,8 @@
       "company": "AMD",
       "industry": "GPU/AI Chips",
       "first_mention": "2025-09-11",
-      "last_mention": "2026-08-14",
-      "total_mentions": 297,
+      "last_mention": "2026-08-15",
+      "total_mentions": 300,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 173,
@@ -864,7 +864,7 @@
         "jukan05": 23,
         "ren_stocks": 18,
         "octopusycc": 13,
-        "zephyr_z9": 8,
+        "zephyr_z9": 11,
         "unusual_whales": 7,
         "michaelsikand": 2,
         "KawzInvests": 2,
@@ -1094,7 +1094,7 @@
         "StockMKTNewz": 1,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
       "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
@@ -1712,7 +1712,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
+      "price_history_52w_status": "ok"
     },
     "US:WULF": {
       "ticker": "WULF",
@@ -3125,7 +3126,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASTS",
       "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json"
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
+      "price_history_52w_status": "ok"
     },
     "US:SPY": {
       "ticker": "SPY",
@@ -7194,7 +7196,7 @@
         "jukan05": 1,
         "zephyr_z9": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "TWSE:2408",
       "hash": "bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5",
       "path": "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json"
@@ -9046,8 +9048,7 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -15927,8 +15928,7 @@
       "price_status": "ok",
       "instrument_id": "US:OBDC",
       "hash": "f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a",
-      "path": "stocks/f7/f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a.json"
     },
     "US:PHM": {
       "ticker": "PHM",
@@ -47857,6 +47857,42 @@
       "hash": "c9a3c774ae273a7c2acd137ce980bdb93cd99c59bf3adeb07d3c0ac44c3d3d7d",
       "path": "stocks/c9/c9a3c774ae273a7c2acd137ce980bdb93cd99c59bf3adeb07d3c0ac44c3d3d7d.json"
     },
+    "UNVERIFIED:CMX": {
+      "ticker": "CMX",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:CMX",
+        "display_code": "CMX",
+        "display_name": "Name unverified",
+        "display_market": "Market unverified",
+        "aliases": [
+          "CMX"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "CMX",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": null,
+      "industry": null,
+      "first_mention": "2026-08-14",
+      "last_mention": "2026-08-14",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "zephyr_z9": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:CMX",
+      "hash": "6d926e23dc63be6639f21d4cee9f7c6f62932a107dcd18f33bf3704cf19b0805",
+      "path": "stocks/6d/6d926e23dc63be6639f21d4cee9f7c6f62932a107dcd18f33bf3704cf19b0805.json"
+    },
     "UNVERIFIED:CMXT": {
       "ticker": "CMXT",
       "instrument": {
@@ -75588,6 +75624,9 @@
     "$CMPC": [
       "UNVERIFIED:CMPC"
     ],
+    "$CMX": [
+      "UNVERIFIED:CMX"
+    ],
     "$CMXT": [
       "UNVERIFIED:CMXT"
     ],
@@ -82776,6 +82815,9 @@
     "CMPC": [
       "UNVERIFIED:CMPC"
     ],
+    "CMX": [
+      "UNVERIFIED:CMX"
+    ],
     "CMXT": [
       "UNVERIFIED:CMXT"
     ],
@@ -87223,6 +87265,7 @@
       "UNVERIFIED:CHENBRO",
       "UNVERIFIED:CITI",
       "UNVERIFIED:CMPC",
+      "UNVERIFIED:CMX",
       "UNVERIFIED:CNEX",
       "UNVERIFIED:COHERENT",
       "UNVERIFIED:COPX",
@@ -90870,6 +90913,9 @@
     "TUC (6274)": [
       "UNVERIFIED:6274"
     ],
+    "TURIN": [
+      "US:AMD"
+    ],
     "TVTX": [
       "US:TVTX"
     ],
@@ -92110,6 +92156,9 @@
     ],
     "UNVERIFIED:CMPC": [
       "UNVERIFIED:CMPC"
+    ],
+    "UNVERIFIED:CMX": [
+      "UNVERIFIED:CMX"
     ],
     "UNVERIFIED:CMXT": [
       "UNVERIFIED:CMXT"
@@ -97197,7 +97246,8 @@
       "US:VTR"
     ],
     "VERA": [
-      "UNVERIFIED:VERA"
+      "UNVERIFIED:VERA",
+      "US:NVDA"
     ],
     "VERA THERAPEUTICS": [
       "UNVERIFIED:VERA"
@@ -98067,8 +98117,8 @@
   },
   "all_paths": [
     "stocks/92/92505f23b394440c690e9bf418649de1194f41ac3ac6606e1bc72975eae81a9c.json",
-    "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
     "stocks/30/3047a828106c8a971d5dbf7f64cf4a1b47cfd266c02634334d8e80bd146c8a2b.json",
+    "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
     "stocks/23/236f2594e193c6e8b14c6783b002d15277b44061577c36007ce0aec5d4df34b5.json",
     "stocks/9e/9ef2ef131f049fea80a49b67cd2a9c48ca7b0d5ccc01c2e2c9cf38c4b8b4912e.json",
     "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
@@ -99361,6 +99411,7 @@
     "stocks/20/201a9fc6475174481db619f1c0936f83da89fa3fd1b0397a963a3a3f80306645.json",
     "stocks/50/50415ac5c8e2a800d077a6bd21793ea8601904536732718a13ac2dd6dd0da0ac.json",
     "stocks/c9/c9a3c774ae273a7c2acd137ce980bdb93cd99c59bf3adeb07d3c0ac44c3d3d7d.json",
+    "stocks/6d/6d926e23dc63be6639f21d4cee9f7c6f62932a107dcd18f33bf3704cf19b0805.json",
     "stocks/5c/5c6f16415ff198d1267ba07c0a2e0a17e8dd578fdff74a07ba3fd88a738221ee.json",
     "stocks/7d/7dab1edc44c93546544b23f2429933ee1ec5b792a758bac432a42a5cc61d1736.json",
     "stocks/de/de2a50541f355f99a2c63f53d80b624f119acefc45c79078bd8642c1eefb68e6.json",
