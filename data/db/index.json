@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-15T18:21:06.976562+00:00",
+  "generated_at": "2026-08-15T21:19:36.417803+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2041,
-    "total_mentions": 23875,
+    "total_mentions": 23879,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-15T18:22:36.071669+00:00"
+    "prices_updated_at": "2026-08-15T21:20:55.428668+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -493,13 +493,13 @@
       "company": "MICROSOFT CORP",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
-      "last_mention": "2026-08-14",
-      "total_mentions": 420,
+      "last_mention": "2026-08-15",
+      "total_mentions": 421,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 293,
         "StockMKTNewz": 69,
-        "unusual_whales": 19,
+        "unusual_whales": 20,
         "octopusycc": 10,
         "KawzInvests": 9,
         "zephyr_z9": 5,
@@ -903,11 +903,11 @@
       "industry": null,
       "first_mention": "2025-07-28",
       "last_mention": "2026-08-15",
-      "total_mentions": 286,
+      "total_mentions": 287,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 99,
-        "StockMKTNewz": 93,
+        "StockMKTNewz": 94,
         "jukan05": 32,
         "unusual_whales": 32,
         "zephyr_z9": 9,
@@ -3912,6 +3912,46 @@
       "hash": "8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70",
       "path": "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json"
     },
+    "US:BRK.B": {
+      "ticker": "BRK.B",
+      "instrument": {
+        "instrument_id": "US:BRK.B",
+        "display_code": "BRK.B",
+        "display_name": "Berkshire Hathaway Inc. Class B",
+        "display_market": "NYSE",
+        "aliases": [
+          "BRK",
+          "BRK.B"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "BRK-B",
+        "verification_status": "verified"
+      },
+      "cashtag": "Berkshire Hathaway",
+      "price_symbol": "BRK-B",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Berkshire Hathaway Inc. Class B",
+      "industry": null,
+      "first_mention": "2025-09-25",
+      "last_mention": "2026-08-15",
+      "total_mentions": 35,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 23,
+        "unusual_whales": 8,
+        "aleabitoreddit": 3,
+        "octopusycc": 1
+      },
+      "price_status": "unavailable",
+      "instrument_id": "US:BRK.B",
+      "hash": "61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04",
+      "path": "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json"
+    },
     "US:GOOG": {
       "ticker": "GOOG",
       "instrument": {
@@ -3994,7 +4034,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -4193,46 +4234,6 @@
       "hash": "454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c",
       "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
       "price_history_52w_status": "ok"
-    },
-    "US:BRK.B": {
-      "ticker": "BRK.B",
-      "instrument": {
-        "instrument_id": "US:BRK.B",
-        "display_code": "BRK.B",
-        "display_name": "Berkshire Hathaway Inc. Class B",
-        "display_market": "NYSE",
-        "aliases": [
-          "BRK",
-          "BRK.B"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "BRK-B",
-        "verification_status": "verified"
-      },
-      "cashtag": "$BRK.B",
-      "price_symbol": "BRK-B",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Berkshire Hathaway Inc. Class B",
-      "industry": null,
-      "first_mention": "2025-09-25",
-      "last_mention": "2026-08-15",
-      "total_mentions": 34,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 22,
-        "unusual_whales": 8,
-        "aleabitoreddit": 3,
-        "octopusycc": 1
-      },
-      "price_status": "unavailable",
-      "instrument_id": "US:BRK.B",
-      "hash": "61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04",
-      "path": "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json"
     },
     "UNVERIFIED:FLY": {
       "ticker": "FLY",
@@ -4728,6 +4729,48 @@
       "hash": "f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00",
       "path": "stocks/f5/f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00.json"
     },
+    "US:BABA": {
+      "ticker": "BABA",
+      "instrument": {
+        "instrument_id": "US:BABA",
+        "display_code": "BABA",
+        "display_name": "Alibaba Group Holding Ltd",
+        "display_market": "NYSE",
+        "aliases": [
+          "BABA"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "BABA",
+        "verification_status": "verified"
+      },
+      "cashtag": "$BABA",
+      "price_symbol": "BABA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Alibaba Group Holding Ltd",
+      "industry": null,
+      "first_mention": "2025-09-16",
+      "last_mention": "2026-08-15",
+      "total_mentions": 29,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 8,
+        "aleabitoreddit": 6,
+        "unusual_whales": 5,
+        "octopusycc": 3,
+        "jukan05": 3,
+        "zephyr_z9": 3,
+        "DJTRadar": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:BABA",
+      "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+    },
     "US:GME": {
       "ticker": "GME",
       "instrument": {
@@ -4917,48 +4960,6 @@
       "instrument_id": "US:VIRT",
       "hash": "309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe",
       "path": "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json"
-    },
-    "US:BABA": {
-      "ticker": "BABA",
-      "instrument": {
-        "instrument_id": "US:BABA",
-        "display_code": "BABA",
-        "display_name": "Alibaba Group Holding Ltd",
-        "display_market": "NYSE",
-        "aliases": [
-          "BABA"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "BABA",
-        "verification_status": "verified"
-      },
-      "cashtag": "$BABA",
-      "price_symbol": "BABA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Alibaba Group Holding Ltd",
-      "industry": null,
-      "first_mention": "2025-09-16",
-      "last_mention": "2026-08-04",
-      "total_mentions": 28,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 7,
-        "aleabitoreddit": 6,
-        "unusual_whales": 5,
-        "octopusycc": 3,
-        "jukan05": 3,
-        "zephyr_z9": 3,
-        "DJTRadar": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:BABA",
-      "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
     },
     "US:CIEN": {
       "ticker": "CIEN",
@@ -12758,8 +12759,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "UNVERIFIED:8147": {
       "ticker": "8147",
@@ -82778,7 +82778,8 @@
       "US:BEPC"
     ],
     "BERKSHIRE HATHAWAY": [
-      "UNVERIFIED:BRKB"
+      "UNVERIFIED:BRKB",
+      "US:BRK.B"
     ],
     "BERKSHIRE HATHAWAY INC": [
       "US:BRK-B"
@@ -99215,6 +99216,7 @@
     "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
     "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json",
     "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
+    "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json",
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
     "stocks/4e/4ee3293836805cb62c187d20b8463de9181394df642ae0de237251b4d421094e.json",
@@ -99222,7 +99224,6 @@
     "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
     "stocks/6b/6beadde7bf8df963704d81852a35250c05327b5b89890c35fddb4e0ffea6addf.json",
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
-    "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json",
     "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json",
     "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json",
     "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json",
@@ -99236,12 +99237,12 @@
     "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
     "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
     "stocks/f5/f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00.json",
+    "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
     "stocks/15/15934c8eba8e809e2de8ddf72743c163eb1ea00a2e771e73e2cdb9f3d6108230.json",
     "stocks/03/0332837b414bda34374b93f2b5be80157f9c89dd81e13f2a116ce744bf3a7a20.json",
     "stocks/8c/8ca81d6978d448e0192ae1e35d2a3fd58b5a4b764f1b933b31daf0cb8f228b03.json",
     "stocks/fb/fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8.json",
     "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json",
-    "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
     "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
     "stocks/ad/ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77.json",
