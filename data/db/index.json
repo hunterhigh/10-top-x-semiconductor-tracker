@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-16T06:19:20.496854+00:00",
+  "generated_at": "2026-08-16T09:20:07.806615+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2045,
-    "total_mentions": 23956,
+    "total_mentions": 23957,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-16T06:21:10.404407+00:00"
+    "prices_updated_at": "2026-08-16T09:21:43.265760+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -1347,8 +1347,7 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
     },
     "US:RDDT": {
       "ticker": "RDDT",
@@ -1471,8 +1470,7 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -2744,6 +2742,44 @@
       "hash": "a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4",
       "path": "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json"
     },
+    "UNVERIFIED:CCXI": {
+      "ticker": "CCXI",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:CCXI",
+        "display_code": "CCXI",
+        "display_name": "ChemoCentryx",
+        "display_market": "Market unverified",
+        "aliases": [
+          "CCXI"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$CCXI",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "ChemoCentryx",
+      "industry": null,
+      "first_mention": "2026-06-29",
+      "last_mention": "2026-08-16",
+      "total_mentions": 50,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 36,
+        "ren_stocks": 13,
+        "michaelsikand": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:CCXI",
+      "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+    },
     "US:BMNR": {
       "ticker": "BMNR",
       "instrument": {
@@ -2780,44 +2816,6 @@
       "instrument_id": "US:BMNR",
       "hash": "e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281",
       "path": "stocks/e5/e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281.json"
-    },
-    "UNVERIFIED:CCXI": {
-      "ticker": "CCXI",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:CCXI",
-        "display_code": "CCXI",
-        "display_name": "ChemoCentryx",
-        "display_market": "Market unverified",
-        "aliases": [
-          "CCXI"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$CCXI",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "ChemoCentryx",
-      "industry": null,
-      "first_mention": "2026-06-29",
-      "last_mention": "2026-08-10",
-      "total_mentions": 49,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 35,
-        "ren_stocks": 13,
-        "michaelsikand": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:CCXI",
-      "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -3249,8 +3247,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:FLNC": {
       "ticker": "FLNC",
@@ -7168,8 +7165,7 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
     },
     "US:QBTS": {
       "ticker": "QBTS",
@@ -9168,7 +9164,8 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
+      "price_history_52w_status": "ok"
     },
     "SSE:688017": {
       "ticker": "688017",
@@ -16049,8 +16046,7 @@
       "price_status": "ok",
       "instrument_id": "US:OBDC",
       "hash": "f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a",
-      "path": "stocks/f7/f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7378553b5769480a8f50fc7b5ed95fa61460bb844ede1fd09d75608be1d9f9a.json"
     },
     "US:PHM": {
       "ticker": "PHM",
@@ -99382,8 +99378,8 @@
     "stocks/ba/bae929a7e8d4e2eb69b6776c10c1a8beabd1b3f1ac2c78a5d0c9ea55e3d74c08.json",
     "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
     "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json",
-    "stocks/e5/e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281.json",
     "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+    "stocks/e5/e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281.json",
     "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json",
     "stocks/0b/0b17fe123647e22d16db3828a0ebe2d206c76beb10f22008e1754a0e262bb944.json",
     "stocks/4a/4a5a6ddbf7f22e56529177f4235382a7f81cdcdcaa7b8e25768696800604afad.json",
