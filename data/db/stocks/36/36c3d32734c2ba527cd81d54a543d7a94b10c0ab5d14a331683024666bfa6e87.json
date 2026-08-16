@@ -1,6 +1,6 @@
 {
   "ticker": "BABA",
-  "cashtag": "$BABA",
+  "cashtag": "Alibaba",
   "instrument": {
     "instrument_id": "US:BABA",
     "display_code": "BABA",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-09-16",
   "last_mention": "2026-08-15",
-  "total_mentions": 29,
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 8,
     "aleabitoreddit": 6,
@@ -33,10 +33,11 @@
     "octopusycc": 3,
     "jukan05": 3,
     "zephyr_z9": 3,
+    "KawzInvests": 3,
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 15,
+    "opinion": 18,
     "news": 8,
     "flow": 5,
     "disclosure": 1
@@ -717,6 +718,85 @@
         "likes": 72,
         "reposts": 8,
         "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088737590006428127",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-15",
+      "created_at": "2026-08-15T17:20:22-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "AliCloud external revenue grew 40% last quarter",
+        "AI product revenue hit 11th straight quarter of triple digit growth",
+        "own ~5% of CXMT, bought for 7.6B yuan, now worth over $20B"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$BABA",
+      "text": "Agreed, $BABA is a sleeper. AliCloud external revenue grew 40% last quarter. AI product revenue just hit its 11th straight quarter of triple digit growth.\n\nThey also own ~5% of CXMT, bought for 7.6B yuan, now worth over $20B. 👀 https://t.co/rgsXnw7xTW",
+      "url": "https://x.com/KawzInvests/status/2088737590006428127",
+      "kind": "post",
+      "engagement": {
+        "views": 15912,
+        "likes": 59,
+        "reposts": 5,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088741519746388051",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-15",
+      "created_at": "2026-08-15T17:35:59-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "pretty big risk with current administration"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "it (BABA implied)",
+      "text": "@optionscjp True it’s a pretty big risk with this current administration.",
+      "url": "https://x.com/KawzInvests/status/2088741519746388051",
+      "kind": "reply",
+      "engagement": {
+        "views": 389,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088742670042632460",
+      "blogger_id": "KawzInvests",
+      "date": "2026-08-15",
+      "created_at": "2026-08-15T17:40:34-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "distilling concerns — Anthropic went to Senate Banking over Qwen",
+        "administration memo in April saying it would move on Chinese labs pulling from US models",
+        "Alibaba denies distilling but it's a headline waiting to hit"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "Alibaba",
+      "text": "@JonkooTrades Cloud growth I'm not worried about, that's coming. It's the distilling concerns for me. Anthropic went to Senate Banking in June over Qwen, and the administration already put out a memo in April saying it would move on Chinese labs pulling from US models. Alibaba denies it, but that's a headline waiting to hit.",
+      "url": "https://x.com/KawzInvests/status/2088742670042632460",
+      "kind": "reply",
+      "engagement": {
+        "views": 548,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1762,14 +1842,14 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-15T12:19:46.503925+00:00",
+  "price_updated_at": "2026-08-16T00:20:58.083102+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-06",
-    "asof": "2026-08-05",
-    "attempted_at": "2026-08-05T12:19:30.334805+00:00",
+    "requested_start": "2025-08-16",
+    "asof": "2026-08-15",
+    "attempted_at": "2026-08-16T00:20:57.291259+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-06",
-    "last_available_date": "2026-08-04",
+    "first_available_date": "2025-08-18",
+    "last_available_date": "2026-08-14",
     "reason": null
   },
   "price_source_state": {
@@ -1777,7 +1857,7 @@
     "provider_symbol": "BABA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-15T12:19:45.589449+00:00",
+    "checked_at": "2026-08-16T00:20:57.291259+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
