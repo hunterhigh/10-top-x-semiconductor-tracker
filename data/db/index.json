@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-16T12:20:00.951080+00:00",
+  "generated_at": "2026-08-16T15:19:30.571697+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2051,
-    "total_mentions": 23982,
+    "total_tickers": 2052,
+    "total_mentions": 23985,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2051,
+      "files": 2052,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-16T12:21:41.760026+00:00"
+    "prices_updated_at": "2026-08-16T15:21:23.030557+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -801,7 +801,7 @@
         "price_symbol": "SNDK",
         "verification_status": "verified"
       },
-      "cashtag": "$SNDK",
+      "cashtag": "SanDisk",
       "price_symbol": "SNDK",
       "exchange": "US",
       "currency": "USD",
@@ -811,7 +811,7 @@
       "industry": "Memory",
       "first_mention": "2025-11-25",
       "last_mention": "2026-08-16",
-      "total_mentions": 321,
+      "total_mentions": 322,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 176,
@@ -819,9 +819,9 @@
         "StockMKTNewz": 26,
         "KawzInvests": 13,
         "jukan05": 12,
+        "zephyr_z9": 10,
         "michaelsikand": 10,
         "octopusycc": 9,
-        "zephyr_z9": 9,
         "unusual_whales": 1
       },
       "price_status": "ok",
@@ -1712,8 +1712,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
     },
     "UNVERIFIED:CXMT": {
       "ticker": "CXMT",
@@ -3166,8 +3165,7 @@
       "price_status": "ok",
       "instrument_id": "US:ASTS",
       "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json"
     },
     "US:SPY": {
       "ticker": "SPY",
@@ -3796,7 +3794,8 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+      "price_history_52w_status": "ok"
     },
     "US:V": {
       "ticker": "V",
@@ -4463,7 +4462,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "Toronto TSX:HPS.A": {
       "ticker": "HPS.A",
@@ -4734,7 +4734,8 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
+      "price_history_52w_status": "ok"
     },
     "US:APLD": {
       "ticker": "APLD",
@@ -35315,6 +35316,42 @@
       "hash": "778970bd4f86ff591260bd76c093cfd75fb50dde2a82ce8b49c8adcef1cf3ac0",
       "path": "stocks/77/778970bd4f86ff591260bd76c093cfd75fb50dde2a82ce8b49c8adcef1cf3ac0.json"
     },
+    "UNVERIFIED:RACE": {
+      "ticker": "RACE",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:RACE",
+        "display_code": "RACE",
+        "display_name": "Ferrari N.V.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "RACE"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$RACE",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Ferrari N.V.",
+      "industry": null,
+      "first_mention": "2026-08-12",
+      "last_mention": "2026-08-16",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 2
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:RACE",
+      "hash": "25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265",
+      "path": "stocks/25/25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265.json"
+    },
     "UNVERIFIED:RBLX": {
       "ticker": "RBLX",
       "instrument": {
@@ -42291,6 +42328,42 @@
       "instrument_id": "UNVERIFIED:300024",
       "hash": "111f51b54bcfa6cc30606fb4caf5af60f62035632738cfb8762b5eb161f92fbb",
       "path": "stocks/11/111f51b54bcfa6cc30606fb4caf5af60f62035632738cfb8762b5eb161f92fbb.json"
+    },
+    "UNVERIFIED:300054": {
+      "ticker": "300054",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:300054",
+        "display_code": "300054",
+        "display_name": "Shenzhen Dinglong New Material",
+        "display_market": "Market unverified",
+        "aliases": [
+          "300054"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Dinglong",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Shenzhen Dinglong New Material",
+      "industry": null,
+      "first_mention": "2026-08-16",
+      "last_mention": "2026-08-16",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "zephyr_z9": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:300054",
+      "hash": "e29ae3a45db5246d8af12f555d5442d5e1e85f618f8f9afbd6a1627f9660c4f1",
+      "path": "stocks/e2/e29ae3a45db5246d8af12f555d5442d5e1e85f618f8f9afbd6a1627f9660c4f1.json"
     },
     "UNVERIFIED:300394": {
       "ticker": "300394",
@@ -60688,42 +60761,6 @@
       "hash": "3bc32fccc74e5d24b9b8882d696c1d94e57182fad2c76096b026e51d7b2c6628",
       "path": "stocks/3b/3bc32fccc74e5d24b9b8882d696c1d94e57182fad2c76096b026e51d7b2c6628.json"
     },
-    "UNVERIFIED:RACE": {
-      "ticker": "RACE",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:RACE",
-        "display_code": "RACE",
-        "display_name": "Ferrari",
-        "display_market": "Market unverified",
-        "aliases": [
-          "RACE"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "$RACE",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Ferrari",
-      "industry": null,
-      "first_mention": "2026-08-12",
-      "last_mention": "2026-08-12",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:RACE",
-      "hash": "25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265",
-      "path": "stocks/25/25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265.json"
-    },
     "UNVERIFIED:RAI": {
       "ticker": "RAI",
       "instrument": {
@@ -75315,6 +75352,9 @@
     "$300024": [
       "UNVERIFIED:300024"
     ],
+    "$300054": [
+      "UNVERIFIED:300054"
+    ],
     "$300308": [
       "SZSE:300308"
     ],
@@ -81517,6 +81557,9 @@
     "300024": [
       "UNVERIFIED:300024"
     ],
+    "300054": [
+      "UNVERIFIED:300054"
+    ],
     "300308": [
       "SZSE:300308"
     ],
@@ -84663,6 +84706,9 @@
     "DIGITALOCEAN HOLDINGS, INC.": [
       "US:DOCN"
     ],
+    "DINGLONG": [
+      "UNVERIFIED:300054"
+    ],
     "DINO": [
       "US:DINO"
     ],
@@ -85410,7 +85456,7 @@
     "FERMI INC.": [
       "US:FRMI"
     ],
-    "FERRARI": [
+    "FERRARI N.V.": [
       "UNVERIFIED:RACE"
     ],
     "FERROGLOBE PLC": [
@@ -90670,7 +90716,8 @@
       "UNVERIFIED:SANA"
     ],
     "SANDISK": [
-      "UNVERIFIED:SANDISK"
+      "UNVERIFIED:SANDISK",
+      "US:SNDK"
     ],
     "SANDISK CORP": [
       "US:SNDK"
@@ -90915,6 +90962,9 @@
       "UNVERIFIED:600183",
       "UNVERIFIED:688028",
       "UNVERIFIED:SHENGYI"
+    ],
+    "SHENZHEN DINGLONG NEW MATERIAL": [
+      "UNVERIFIED:300054"
     ],
     "SHERWIN-WILLIAMS": [
       "UNVERIFIED:SHW"
@@ -92695,6 +92745,9 @@
     ],
     "UNVERIFIED:300024": [
       "UNVERIFIED:300024"
+    ],
+    "UNVERIFIED:300054": [
+      "UNVERIFIED:300054"
     ],
     "UNVERIFIED:300376": [
       "UNVERIFIED:300376"
@@ -100544,6 +100597,7 @@
     "stocks/c4/c4b0816566a52a729f6fcfa87bae162682c40cf986a650fa28204895d1ffa399.json",
     "stocks/55/55a94652a4cce47ad7739a548ea906aadab71f3904c9a8584f164d7ccb837e83.json",
     "stocks/77/778970bd4f86ff591260bd76c093cfd75fb50dde2a82ce8b49c8adcef1cf3ac0.json",
+    "stocks/25/25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265.json",
     "stocks/01/017e6babf242dfef26a7b47abd0aeaa6068af277dc6b9388a0a9e826684958fe.json",
     "stocks/02/025f6bf511d3d0ab63b954451c8bc2ae29d376db6c71e8a5cc7e595110809d23.json",
     "stocks/6f/6f651379601bc245f36550766b386338e365f71123005eb49aea4f4ccd99ed56.json",
@@ -100737,6 +100791,7 @@
     "stocks/60/60554da700d20b2caa873493a34de1bf270b64821ee77ca18983a19e7a398d60.json",
     "stocks/7c/7ce24e7027dd845f2ec97717d7fc50b0dbb3165b9a450203325488c8740a109b.json",
     "stocks/11/111f51b54bcfa6cc30606fb4caf5af60f62035632738cfb8762b5eb161f92fbb.json",
+    "stocks/e2/e29ae3a45db5246d8af12f555d5442d5e1e85f618f8f9afbd6a1627f9660c4f1.json",
     "stocks/8d/8ddfa52bf49d9ebe910bea7ec2b2f4de3d0f8f432d623456562668330d89f8c6.json",
     "stocks/a7/a7887ecc2323d253e55299a7f4a3f3cd866b8e38a88e26de9ad5f213737d6438.json",
     "stocks/e2/e251858258adca1b9c9f0d97ba2374a603313d0cb1baf22195ea364cfbfb6344.json",
@@ -101248,7 +101303,6 @@
     "stocks/0d/0dd93e7b9fbcc932353191e07fd349e2bece873aa47287d76c15ba80b2f0f89d.json",
     "stocks/ad/ad6908ed55ba2c1d77374b2550bf0deba45e34413a4661977626379b3a99bbee.json",
     "stocks/3b/3bc32fccc74e5d24b9b8882d696c1d94e57182fad2c76096b026e51d7b2c6628.json",
-    "stocks/25/25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265.json",
     "stocks/d7/d711bf47d8d67b1260560b0a0f8a0121fef2f91ed3db0c4fbb60c9c7a8d12c69.json",
     "stocks/3e/3e6d47c6d31ba6858fa8555aae10530bdbb9141fd1dc54b94d7123b4a5abd08c.json",
     "stocks/ca/caf3dc086f458687867493ca62d51def3da53d5d6dfd611269ae8b783f391aa4.json",
