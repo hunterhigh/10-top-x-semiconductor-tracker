@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-17T06:23:09.416267+00:00",
+  "generated_at": "2026-08-17T09:19:55.024320+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2055,
-    "total_mentions": 24029,
+    "total_mentions": 24033,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-17T06:24:42.212728+00:00"
+    "prices_updated_at": "2026-08-17T09:21:25.945380+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -360,11 +360,11 @@
       "company": "Micron",
       "industry": "Memory/HBM",
       "first_mention": "2025-09-25",
-      "last_mention": "2026-08-16",
-      "total_mentions": 488,
+      "last_mention": "2026-08-17",
+      "total_mentions": 489,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 206,
+        "aleabitoreddit": 207,
         "StockMKTNewz": 88,
         "ren_stocks": 53,
         "jukan05": 43,
@@ -801,7 +801,7 @@
         "price_symbol": "SNDK",
         "verification_status": "verified"
       },
-      "cashtag": "SanDisk",
+      "cashtag": "$SNDK",
       "price_symbol": "SNDK",
       "exchange": "US",
       "currency": "USD",
@@ -811,10 +811,10 @@
       "industry": "Memory",
       "first_mention": "2025-11-25",
       "last_mention": "2026-08-17",
-      "total_mentions": 323,
+      "total_mentions": 324,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 176,
+        "aleabitoreddit": 177,
         "ren_stocks": 65,
         "StockMKTNewz": 26,
         "KawzInvests": 13,
@@ -1011,7 +1011,8 @@
       "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRWV": {
       "ticker": "CRWV",
@@ -1347,7 +1348,8 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
+      "price_history_52w_status": "ok"
     },
     "US:RDDT": {
       "ticker": "RDDT",
@@ -2034,8 +2036,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
     },
     "US:SNAP": {
       "ticker": "SNAP",
@@ -2111,6 +2112,50 @@
       "hash": "7a6293a23f0f511e2a62f38f1d350965603edd5fc6713b00a9fd761b2b13e6b4",
       "path": "stocks/7a/7a6293a23f0f511e2a62f38f1d350965603edd5fc6713b00a9fd761b2b13e6b4.json"
     },
+    "US:SKHY": {
+      "ticker": "SKHY",
+      "instrument": {
+        "instrument_id": "US:SKHY",
+        "display_code": "SKHY",
+        "display_name": "SK hynix Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SKHY"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SKHY",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SKHY",
+      "price_symbol": "SKHY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "SK hynix Inc.",
+      "industry": null,
+      "first_mention": "2026-06-30",
+      "last_mention": "2026-08-17",
+      "total_mentions": 74,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 19,
+        "StockMKTNewz": 17,
+        "jukan05": 10,
+        "KawzInvests": 9,
+        "aleabitoreddit": 8,
+        "unusual_whales": 6,
+        "octopusycc": 3,
+        "michaelsikand": 2
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SKHY",
+      "hash": "f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474",
+      "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
+      "price_history_52w_status": "insufficient_history"
+    },
     "US:NOK": {
       "ticker": "NOK",
       "instrument": {
@@ -2153,50 +2198,6 @@
       "hash": "5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c",
       "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
       "price_history_52w_status": "ok"
-    },
-    "US:SKHY": {
-      "ticker": "SKHY",
-      "instrument": {
-        "instrument_id": "US:SKHY",
-        "display_code": "SKHY",
-        "display_name": "SK hynix Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SKHY"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SKHY",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SKHY",
-      "price_symbol": "SKHY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "SK hynix Inc.",
-      "industry": null,
-      "first_mention": "2026-06-30",
-      "last_mention": "2026-08-14",
-      "total_mentions": 73,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 19,
-        "StockMKTNewz": 17,
-        "jukan05": 10,
-        "KawzInvests": 9,
-        "aleabitoreddit": 7,
-        "unusual_whales": 6,
-        "octopusycc": 3,
-        "michaelsikand": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SKHY",
-      "hash": "f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474",
-      "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
-      "price_history_52w_status": "insufficient_history"
     },
     "US:ASML": {
       "ticker": "ASML",
@@ -2705,8 +2706,7 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
     },
     "UNVERIFIED:CCXI": {
       "ticker": "CCXI",
@@ -3481,6 +3481,47 @@
       "hash": "b7a132da4ea2d41386481ff999e749913702957722f3a23b2f3876b463e70bb2",
       "path": "stocks/b7/b7a132da4ea2d41386481ff999e749913702957722f3a23b2f3876b463e70bb2.json"
     },
+    "TSE:285A": {
+      "ticker": "285A",
+      "instrument": {
+        "instrument_id": "TSE:285A",
+        "display_code": "285A",
+        "display_name": "Kioxia Holdings Corporation",
+        "display_market": "Tokyo",
+        "aliases": [
+          "285A",
+          "KIOXIA"
+        ],
+        "market": "Tokyo",
+        "country": "JP",
+        "currency": "JPY",
+        "price_symbol": "285A.T",
+        "verification_status": "verified"
+      },
+      "cashtag": "Kioxia",
+      "price_symbol": "285A.T",
+      "exchange": "Tokyo",
+      "currency": "JPY",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Kioxia Holdings Corporation",
+      "industry": null,
+      "first_mention": "2026-01-25",
+      "last_mention": "2026-08-17",
+      "total_mentions": 38,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 12,
+        "jukan05": 11,
+        "aleabitoreddit": 10,
+        "zephyr_z9": 3,
+        "StockMKTNewz": 2
+      },
+      "price_status": "unavailable",
+      "instrument_id": "TSE:285A",
+      "hash": "44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4",
+      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json"
+    },
     "US:BKKT": {
       "ticker": "BKKT",
       "instrument": {
@@ -3559,47 +3600,6 @@
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
       "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
-    },
-    "TSE:285A": {
-      "ticker": "285A",
-      "instrument": {
-        "instrument_id": "TSE:285A",
-        "display_code": "285A",
-        "display_name": "Kioxia Holdings Corporation",
-        "display_market": "Tokyo",
-        "aliases": [
-          "285A",
-          "KIOXIA"
-        ],
-        "market": "Tokyo",
-        "country": "JP",
-        "currency": "JPY",
-        "price_symbol": "285A.T",
-        "verification_status": "verified"
-      },
-      "cashtag": "Kioxia",
-      "price_symbol": "285A.T",
-      "exchange": "Tokyo",
-      "currency": "JPY",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Kioxia Holdings Corporation",
-      "industry": null,
-      "first_mention": "2026-01-25",
-      "last_mention": "2026-08-12",
-      "total_mentions": 37,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 12,
-        "jukan05": 11,
-        "aleabitoreddit": 9,
-        "zephyr_z9": 3,
-        "StockMKTNewz": 2
-      },
-      "price_status": "unavailable",
-      "instrument_id": "TSE:285A",
-      "hash": "44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4",
-      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json"
     },
     "TSXV:PNG": {
       "ticker": "KRKNF",
@@ -90852,8 +90852,7 @@
       "UNVERIFIED:SANA"
     ],
     "SANDISK": [
-      "UNVERIFIED:SANDISK",
-      "US:SNDK"
+      "UNVERIFIED:SANDISK"
     ],
     "SANDISK CORP": [
       "US:SNDK"
@@ -99846,8 +99845,8 @@
     "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
     "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json",
     "stocks/7a/7a6293a23f0f511e2a62f38f1d350965603edd5fc6713b00a9fd761b2b13e6b4.json",
-    "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
     "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
+    "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
     "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
     "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
     "stocks/2b/2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278.json",
@@ -99881,9 +99880,9 @@
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/47/472b962c9af2ce642df8e709616591638a210698bc39c0d57918b6a53d10bccd.json",
     "stocks/b7/b7a132da4ea2d41386481ff999e749913702957722f3a23b2f3876b463e70bb2.json",
+    "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
     "stocks/a7/a79a3d0d677e4415296fd8002f78fb73693628d23b38393374c0de2b72fdfb3c.json",
     "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-    "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
     "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json",
     "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
