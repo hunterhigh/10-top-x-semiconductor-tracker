@@ -27,10 +27,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-08-14",
-  "total_mentions": 326,
+  "last_mention": "2026-08-16",
+  "total_mentions": 327,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 116,
+    "aleabitoreddit": 117,
     "jukan05": 95,
     "StockMKTNewz": 40,
     "ren_stocks": 27,
@@ -41,7 +41,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 273,
+    "opinion": 274,
     "news": 40,
     "flow": 13
   },
@@ -7889,6 +7889,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089183484556480536",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-16",
+      "created_at": "2026-08-16T22:52:12-04:00",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK Hynix",
+      "text": "I think we're seeing AI server MLCC demand cause an interesting effect... with tightening capacity for consumer/general-purpose MLCCs.\n\nIf you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -> Legacy DRAM: \n\nMy thesis is we'll see the same thing here maybe late H2, early 2027 with consumer/broad MLCCs. \n\nFrom July 6th: \n\n\"the crowding-out effect from AI-oriented high-end MLCC production has begun spilling over into both the automotive and consumer markets.\" \n\nJuly 28th: \n\n\"AI Demand Pushes Japanese and Korean MLCC Suppliers to Record Monthly Shipments; Consumer-Grade Order Spillovers Continue to Surge\"\n\nAug 12: \n\nAs [MLCC] capacity shifts from consumer grades to AI-oriented products... (Trendforce)\n\nAug 12: \n\nChina's electronics market channel checks found 22µF and 47µF MLCCs (used more broadly) out of stock. Then found and said certain manufacturers had stopped taking orders. \n\n(for reference: Walsin said high-volume smartphone/PC products such as... 22µF, so it's broader MLCCs)\n\nObviously Samsung Electro-Mechanics/Murata are main beneficiaries of AI server MLCC ramp. \n\nBut companies with large market share of overall MLCCs like Taiyo Yuden (6976, disclosure: I have positions) with less AI server share, would be a major beneficiary of this. \n\nFun part is, we're only in H2 2026, so the next major bottleneck should be fun!",
+      "url": "https://x.com/aleabitoreddit/status/2089183484556480536",
+      "kind": "post",
+      "engagement": {
+        "views": 31255,
+        "likes": 109,
+        "reposts": 7,
+        "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8937,13 +8960,13 @@
       "close": 1645000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-17T00:19:23.548934+00:00",
+  "price_updated_at": "2026-08-17T03:21:16.355062+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-17",
     "asof": "2026-08-16",
-    "attempted_at": "2026-08-17T00:19:22.336231+00:00",
+    "attempted_at": "2026-08-17T03:21:16.180056+00:00",
     "status": "ok",
     "first_available_date": "2025-08-18",
     "last_available_date": "2026-08-14",
@@ -8951,12 +8974,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-17T00:19:22.336231+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "000660.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-17T03:21:16.180056+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-08-17T06:21:16.180056+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
