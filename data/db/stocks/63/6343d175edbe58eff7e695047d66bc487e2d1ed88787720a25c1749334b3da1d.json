@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-06",
-  "last_mention": "2026-08-14",
-  "total_mentions": 2,
+  "last_mention": "2026-08-17",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 2
+    "StockMKTNewz": 2,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 2
+    "news": 2,
+    "flow": 1
   },
   "mentions": [
     {
@@ -78,20 +80,43 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089409934144520665",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T13:52:02-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MSI",
+      "text": "Update: The Trump Portfolio Tracker is coming for Pelosi \n\nIn May, we recreated Trump’s top 20 holdings on Autopilot so anyone could invest alongside him\n\n3 months later, it just crossed $2,000,000 of capital invested\n\nHere's what he owns & possible conflicts of interest:\n\nOracle $ORCL: Ellison (CEO) gave $45M to a pro-Trump nonprofit\n\nDell $DELL: Trump told Americans to go buy a Dell\n\nMotorola Solutions $MSI: Won a $16M ICE radio contract\n\nMicrosoft $MSFT: Signed a $3.1B discount deal with Trump's GSA\n\nNvidia $NVDA: Trump personally cut the China chip revenue deal\n\nGeneral Motors $GM: Trump killed the EV penalties GM used to pay\n\nThe portfolio is still live and tracks every move on @joinautopilot",
+      "url": "https://x.com/unusual_whales/status/2089409934144520665",
+      "kind": "post",
+      "engagement": {
+        "views": 66846,
+        "likes": 67,
+        "reposts": 5,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-08-16T09:21:32.828887+00:00",
+  "price_updated_at": "2026-08-17T18:24:27.831917+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-08-16T09:21:32.828875+00:00",
-    "attempts": 10,
+    "checked_at": "2026-08-17T18:24:27.831904+00:00",
+    "attempts": 11,
     "next_retry_at": null,
     "http_status": null
   }

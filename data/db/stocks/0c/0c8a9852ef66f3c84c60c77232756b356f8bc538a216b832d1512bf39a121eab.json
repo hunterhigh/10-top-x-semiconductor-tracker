@@ -1,6 +1,6 @@
 {
   "ticker": "MSTR",
-  "cashtag": "$MSTR",
+  "cashtag": "MSTR",
   "instrument": {
     "instrument_id": "US:MSTR",
     "display_code": "MSTR",
@@ -24,16 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-02",
-  "last_mention": "2026-08-10",
-  "total_mentions": 58,
+  "last_mention": "2026-08-17",
+  "total_mentions": 59,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 40,
-    "octopusycc": 9,
+    "octopusycc": 10,
     "StockMKTNewz": 8,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 49,
+    "opinion": 50,
     "news": 8,
     "flow": 1
   },
@@ -1452,6 +1452,33 @@
         "likes": 34,
         "reposts": 4,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089334658727284877",
+      "blogger_id": "octopusycc",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T08:52:55-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "ATM issued 3.46M shares raising $334M",
+        "proceeds used to pay STRC dividends and buy back STRC preferred shares",
+        "MSCI may rewrite rules to exclude crypto reserve companies from indices"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MSTR",
+      "text": "你不是卖币了吗，怎么还ATM发新股了\n真是畜生 @saylor \n\nMSTR上周ATM 346万股，筹得3.34亿美元，用于支付STRC股息、回购STRC优先股及增加美元储备消息称MSCI或将改写规则，将加密货币储备公司剔除指数",
+      "url": "https://x.com/octopusycc/status/2089334658727284877",
+      "kind": "post",
+      "engagement": {
+        "views": 6873,
+        "likes": 10,
+        "reposts": 0,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

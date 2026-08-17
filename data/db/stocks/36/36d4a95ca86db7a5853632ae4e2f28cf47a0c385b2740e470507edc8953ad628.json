@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-01",
-  "last_mention": "2026-08-05",
-  "total_mentions": 14,
+  "last_mention": "2026-08-17",
+  "total_mentions": 15,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 4,
     "StockMKTNewz": 4,
-    "michaelsikand": 3,
+    "michaelsikand": 4,
     "KawzInvests": 2,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 10,
+    "opinion": 11,
     "news": 4
   },
   "mentions": [
@@ -373,6 +373,43 @@
         "likes": 5,
         "reposts": 0,
         "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089411155903304104",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T13:56:53-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trades at 20x forward earnings vs 2x median for Asian competitors — discount doesn't seem like it will last",
+        "trading well off ATH while peers bounced back hard",
+        "printed first $1B revenue quarter at record margins",
+        "high-end AI circuit boards are the next major hardware bottleneck",
+        "PCB content cost surging from $35k (GB300) to $116k (VR200) as designs push past 50-100+ layers",
+        "napkin math: ~$300M revenue from VR200 alone in H2",
+        "over 40% share on NVIDIA's VR200 platform",
+        "30% share on LPU inference rack",
+        "lead supplier across switch generations for Cisco, Arista, and Mellanox",
+        "PCB supplier to every major AI player",
+        "M+N architecture guided for ~$600M in H2 revenue",
+        "NVIDIA senior account manager confirmed TTMI as top five qualified supplier with 'strong and growing' partnership",
+        "doesn't need to guess which AI chip wins — every architecture needs high-layer boards"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$TTMI",
+      "text": "Usually it's Asian AI stocks trading at cheaper multiples than U.S. counterparts.\n\nBut $TTMI is a rare exception, and the discount doesn't seem like it will last long, especially given its trading well off its ATH while everything else bounced back hard.\n\nThe only US listed pure-play PCB maker trades at just 20x forward earnings vs. a 2x median for Asian competitors, even after printing its first $1B revenue quarter at record margins.\n\nHigh-end AI circuit boards are the next major hardware bottleneck. As designs push past 50 to 100+ layers, board complexity and ASPs are surging, with PCB content cost going from $35k (in GB300) to $116k (In VR200).\n\nNapkin math:\n\n6,000 expected shipments of VR200 in H2 alone * $116K in PCB content = ∼$700M of PCB content revenue\n\n40% market share of $700M = ∼$300M in revenue for $TTMI, just from one generation of rack. \n\nMoreover, TTMI is positioned right at the center:\n\n-> Over 40% share on NVIDIA’s VR200 platform\n-> 30% share on the LPU inference rack\n-> Lead supplier across switch generations for Cisco, Arista, and Mellanox\n-> PCB supplier to every major AI player in the market.\n->M+N architecture guided for ~$600M in H2 revenue alone\n\nAn NVIDIA senior account manager recently confirmed TTMI as one of their top five qualified suppliers, calling the partnership \"strong and growing\".\n\nTTMI doesn't need to guess which AI chip wins because every architecture needs high-layer boards underneath it.\n\nFull deep dive out now: https://t.co/ov4YBRMMOy",
+      "url": "https://x.com/michaelsikand/status/2089411155903304104",
+      "kind": "post",
+      "engagement": {
+        "views": 4936,
+        "likes": 10,
+        "reposts": 1,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
