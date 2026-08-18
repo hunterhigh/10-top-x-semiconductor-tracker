@@ -7218,29 +7218,32 @@
     {
       "date": "2026-08-14",
       "close": 129.2
+    },
+    {
+      "date": "2026-08-17",
+      "close": 133.5
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "EUR",
-  "price_updated_at": "2026-08-17T18:24:02.467003+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-18T03:37:54.684456+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-18",
     "asof": "2026-08-17",
-    "attempted_at": "2026-08-17T18:24:02.100414+00:00",
+    "attempted_at": "2026-08-18T03:37:54.543482+00:00",
     "status": "ok",
     "first_available_date": "2025-08-18",
-    "last_available_date": "2026-08-14",
+    "last_available_date": "2026-08-17",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SOI.PA",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-17T18:24:02.100414+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-08-17T21:24:02.100414+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-18T03:37:54.543482+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }
