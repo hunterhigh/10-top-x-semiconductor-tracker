@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-08-18T03:38:55.285520+00:00",
+  "generated_at": "2026-08-18T06:20:12.756220+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2061,
-  "index_sha256": "2d63d157829d524530653daa277d4c68924b2033136f1ab9f26025f0510ccbdb",
+  "stock_count": 2062,
+  "index_sha256": "23b5e672cc50664cd4e94c92b249a6908db18d47d9353c1ed9e4daec15c63b72",
   "stocks_root": "stocks",
   "price_cache_count": 875,
   "price_cache_index_sha256": "7b4fbd5fe1ef7451e8103c1344f28c5d469dd5a53a8de7e56d5d231bc7fed2c3",
   "price_cache_root": "prices_cache",
-  "tickers": 2061,
-  "total_mentions": 24221,
+  "tickers": 2062,
+  "total_mentions": 24222,
   "priced_tickers": 694,
   "date_range": [
     "2025-07-02",
-    "2026-08-17"
+    "2026-08-18"
   ],
   "size_mb": 43.8,
   "tracked_bloggers": 10,
   "mentions_by_blogger": {
     "aleabitoreddit": 15339,
-    "unusual_whales": 709,
+    "unusual_whales": 710,
     "StockMKTNewz": 4222,
     "ren_stocks": 910,
     "octopusycc": 534,
@@ -33,15 +33,15 @@
   "instrument_coverage": {
     "verified": 926,
     "identified": 337,
-    "unverified": 798,
-    "market_pending_review": 1135,
-    "price_unavailable_or_unverified": 830
+    "unverified": 799,
+    "market_pending_review": 1136,
+    "price_unavailable_or_unverified": 831
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2061,
+      "files": 2062,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
@@ -58,18 +58,18 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 1026,
+    "tickers": 1017,
     "status_counts": {
-      "ok": 444,
-      "partial": 15,
-      "unverified_symbol": 557,
-      "unavailable": 10
+      "ok": 439,
+      "partial": 18,
+      "unverified_symbol": 551,
+      "unavailable": 9
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 14,
-      "unverified_instrument_identity": 557,
-      "provider_symbol_not_found_after_search": 8,
+      "EODHD 402 (account quota or subscription limit)": 17,
+      "unverified_instrument_identity": 551,
+      "provider_symbol_not_found_after_search": 7,
       "no_daily_closes_returned": 2,
       "stale_series_latest_close=2026-08-06": 1
     },
@@ -78,8 +78,8 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-08-17",
-    "target_start": "2025-08-18",
+    "asof": "2026-08-18",
+    "target_start": "2025-08-19",
     "tickers": 42,
     "status_counts": {
       "ok": 39,
@@ -88,7 +88,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 41,
+      "supported": 38,
+      "deferred": 3,
       "unsupported": 1
     },
     "retry_queue": 1,
