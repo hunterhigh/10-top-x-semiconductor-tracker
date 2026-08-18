@@ -25,13 +25,13 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-07",
-  "last_mention": "2026-06-19",
-  "total_mentions": 32,
+  "last_mention": "2026-08-18",
+  "total_mentions": 33,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 32
+    "aleabitoreddit": 33
   },
   "total_mentions_by_signal_type": {
-    "opinion": 32
+    "opinion": 33
   },
   "mentions": [
     {
@@ -857,6 +857,34 @@
       },
       "extractor_model": "claude-opus-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089753753625018830",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T12:38:15-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "transformer bottlenecks stalling US AI buildout with very long lead times",
+        "backlog +96.9% Y/Y",
+        "strong market share",
+        "still holding a position"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$HPS.A",
+      "text": "@I_Am_Bloateds I still have positions in both companies? What I hold shouldn't affect your own decisions. \n\nTransformer bottlenecks are stalling the US AI buildout now and lead times are very long for both dry and liquid (which is more extreme). Backlog is +96.9% Y/Y for $HPS.A and given their market share... \n\nI don't they're going anywhere. \n\nPretty sure I shared this idea at ~170, it did 2x, but corrected back to 240 now, but cost average is different per person I guess.  \n\nThe Belgian company is primarily H1 2028 as a CPO/photonics volume ramp beneficary. And the work they're doing with MTP with IMEC for $NVDA as an end user in evaluation stage should be very interesting. \n\nTheir CHIP act facility for MEMS/photonics also comes online H2 2028 too, and 800V transitions should bring them material revenue growth for anything SiC adjacent next year. \n\nI'm down -31%, since my cost average is a lot higher. But they're approaching levels where replacement book value is a lot higher than MC.",
+      "url": "https://x.com/aleabitoreddit/status/2089753753625018830",
+      "kind": "reply",
+      "engagement": {
+        "views": 6079,
+        "likes": 20,
+        "reposts": 0,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -1149,7 +1177,18 @@
       "close": 278.9
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "CAD",
-  "price_updated_at": "2026-07-20T03:36:14.898454+00:00"
+  "price_updated_at": "2026-08-18T18:22:31.981204+00:00",
+  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_source_state": {
+    "provider": "eodhd",
+    "provider_symbol": "HPS-A.TO",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-18T18:22:31.660601+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-08-18T21:22:31.660601+00:00",
+    "http_status": null
+  }
 }

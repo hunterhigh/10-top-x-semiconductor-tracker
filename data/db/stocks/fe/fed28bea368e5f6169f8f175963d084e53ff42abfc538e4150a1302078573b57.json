@@ -1,6 +1,6 @@
 {
   "ticker": "KKR",
-  "cashtag": "KKR",
+  "cashtag": "$KKR",
   "instrument": {
     "instrument_id": "US:KKR",
     "display_code": "KKR",
@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
-  "last_mention": "2026-07-29",
-  "total_mentions": 2,
+  "last_mention": "2026-08-18",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1,
+    "StockMKTNewz": 2,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1,
+    "news": 2,
     "flow": 1
   },
   "mentions": [
@@ -77,6 +77,29 @@
         "likes": 25,
         "reposts": 7,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089740479696916489",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T11:45:30-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$KKR",
+      "text": "$KKR has reportedly made a bid to acquire natural-gas and electricity distributor UGI Corp. $UGI for ~$9 Billion - WSJ https://t.co/cf9xjmII32",
+      "url": "https://x.com/StockMKTNewz/status/2089740479696916489",
+      "kind": "post",
+      "engagement": {
+        "views": 20867,
+        "likes": 26,
+        "reposts": 5,
+        "replies": 12
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -234,17 +257,21 @@
     {
       "date": "2026-08-14",
       "close": 114.01
+    },
+    {
+      "date": "2026-08-17",
+      "close": 108.83
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-17T03:21:40.834085+00:00",
+  "price_updated_at": "2026-08-18T18:22:24.269786+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "KKR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-17T03:21:38.419819+00:00",
+    "checked_at": "2026-08-18T18:22:23.319017+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
