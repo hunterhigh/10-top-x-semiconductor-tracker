@@ -1,6 +1,6 @@
 {
   "ticker": "000660",
-  "cashtag": "SK Hynix",
+  "cashtag": "SK hynix",
   "instrument": {
     "instrument_id": "KRX:000660",
     "display_code": "000660",
@@ -27,11 +27,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-08-16",
-  "total_mentions": 327,
+  "last_mention": "2026-08-19",
+  "total_mentions": 328,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 117,
-    "jukan05": 95,
+    "jukan05": 96,
     "StockMKTNewz": 40,
     "ren_stocks": 27,
     "zephyr_z9": 18,
@@ -41,7 +41,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 274,
+    "opinion": 275,
     "news": 40,
     "flow": 13
   },
@@ -7912,6 +7912,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090018803384218030",
+      "blogger_id": "jukan05",
+      "date": "2026-08-19",
+      "created_at": "2026-08-19T06:11:28-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK hynix",
+      "text": "Korean media report that Samsung plans to increase the number of floors at its new fab under construction in Pyeongtaek from the originally planned two to three.\n\nMore specifically, the fabs being redesigned as three-story facilities are Pyeongtaek P5 Plants 1 and 2, which together will constitute the world’s largest semiconductor manufacturing facility at a single site. Construction first began in 2022, with final completion targeted for 2030. At peak construction, the site has employed as many as 50,000 workers.\n\nUp through P4, which recently began operations at Samsung Electronics’ Pyeongtaek campus, each building employed a double-fab configuration with four cleanrooms. If the revised plan is approved, however, P5 will adopt a triple-fab configuration accommodating up to six cleanrooms. With the number of cleanrooms increasing by 50%, production capacity is also expected to rise by at least 50%.\n\nFuture semiconductor fabs to be built by Samsung Electronics and SK hynix in the national and general industrial complexes planned for Yongin are also expected to adopt this triple-fab configuration.",
+      "url": "https://x.com/jukan05/status/2090018803384218030",
+      "kind": "post",
+      "engagement": {
+        "views": 46548,
+        "likes": 176,
+        "reposts": 11,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8964,26 +8987,27 @@
       "close": 1662000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-19T03:19:20.849528+00:00",
+  "price_updated_at": "2026-08-19T12:39:40.517765+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-19",
-    "asof": "2026-08-18",
-    "attempted_at": "2026-08-19T03:19:20.800880+00:00",
+    "requested_start": "2025-08-20",
+    "asof": "2026-08-19",
+    "attempted_at": "2026-08-19T12:39:40.385861+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-19",
+    "first_available_date": "2025-08-20",
     "last_available_date": "2026-08-18",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "000660.KS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-19T03:19:20.800880+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-19T12:39:40.385861+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-08-19T15:39:40.385861+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
