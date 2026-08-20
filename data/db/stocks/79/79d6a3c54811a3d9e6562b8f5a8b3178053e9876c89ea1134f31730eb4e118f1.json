@@ -25,19 +25,19 @@
   "thesis_summary": null,
   "first_mention": "2025-12-10",
   "last_mention": "2026-08-20",
-  "total_mentions": 31,
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 15,
     "aleabitoreddit": 13,
+    "unusual_whales": 2,
     "DJTRadar": 1,
-    "ren_stocks": 1,
-    "unusual_whales": 1
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 14,
     "news": 15,
     "disclosure": 1,
-    "flow": 1
+    "flow": 2
   },
   "mentions": [
     {
@@ -776,6 +776,31 @@
         "likes": 58,
         "reposts": 3,
         "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090463366913597773",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T11:38:00-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "posted its slowest US sales growth in 6 years"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$WMT",
+      "text": "Walmart, $WMT, posted its slowest US sales growth in 6 years: https://t.co/FvJ2ODf0HN",
+      "url": "https://x.com/unusual_whales/status/2090463366913597773",
+      "kind": "post",
+      "engagement": {
+        "views": 108144,
+        "likes": 588,
+        "reposts": 77,
+        "replies": 90
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
