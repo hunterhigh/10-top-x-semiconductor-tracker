@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-20T12:20:12.797711+00:00",
+    "generated_at": "2026-08-20T15:20:24.238059+00:00",
     "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."
   },
   "profiles": [
@@ -160,9 +160,9 @@
       "signal_type": "opinion",
       "sample": {
         "first_date": "2026-06-11",
-        "last_date": "2026-08-19",
-        "mentions": 452,
-        "unique_original_posts": 293,
+        "last_date": "2026-08-20",
+        "mentions": 453,
+        "unique_original_posts": 294,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 62,
@@ -179,12 +179,12 @@
             "mentions": 38
           },
           {
-            "ticker": "005930",
+            "ticker": "000660",
             "mentions": 19
           },
           {
-            "ticker": "000660",
-            "mentions": 18
+            "ticker": "005930",
+            "mentions": 19
           },
           {
             "ticker": "TSM",
@@ -230,6 +230,12 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/zephyr_z9/status/2090419341942775994",
+            "text": "\"SK hynix is preparing for a post-HBM era—a time when HBM may no longer be needed.\"\n\nHBM will always be important\n\"high bandwidth\" determines ur decode throughput\nThe next big thing for HBM is going from being packaged around the logic die (2.5D) to being packaged on top of the logic die (3D), like zHBM",
+            "ticker": "000660"
+          },
           {
             "date": "2026-08-19",
             "url": "https://x.com/zephyr_z9/status/2089946125549944984",
@@ -295,12 +301,6 @@
             "url": "https://x.com/zephyr_z9/status/2089201611516363209",
             "text": "RT @zephyr_z9: It's called \"persistent/long horizon agent memory\"\nSanDisk didn't even include it in their TAM estimates\nIMO, this will be t…",
             "ticker": "SNDK"
-          },
-          {
-            "date": "2026-08-16",
-            "url": "https://x.com/zephyr_z9/status/2089006125006114937",
-            "text": "@lithos_graphein @gpuhell I think all the big Chinese fabs have qualified Chinese photoresists (especially from Dinglong) for their process nodes\nI have seen a lot of news about this since early 2025",
-            "ticker": "300054"
           }
         ]
       },
@@ -312,8 +312,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-08-20",
-        "mentions": 1037,
-        "unique_original_posts": 531,
+        "mentions": 1041,
+        "unique_original_posts": 534,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 121,
@@ -327,7 +327,7 @@
           },
           {
             "ticker": "000660",
-            "mentions": 97
+            "mentions": 99
           },
           {
             "ticker": "NVDA",
@@ -335,7 +335,7 @@
           },
           {
             "ticker": "TSM",
-            "mentions": 60
+            "mentions": 61
           },
           {
             "ticker": "INTC",
@@ -361,7 +361,7 @@
           },
           {
             "industry": "Wafer Foundry",
-            "mentions": 60
+            "mentions": 61
           },
           {
             "industry": "CPU/Foundry/Glass Substrate",
@@ -381,6 +381,24 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/jukan05/status/2090417894450680303",
+            "text": "Alibaba: WE CAN RECOUP OUR AI INVESTMENTS WITHIN THREE YEARS, AND THE PAYBACK PERIOD CONTINUES TO SHORTEN—TOWARD 2.5 YEARS, FOR EXAMPLE.\n\n- AI compute resources continue to generate cash flow for a considerable period even after paying back their investment within three years. For example, the V100s we purchased in 2018 and the A100s we purchased in 2020 are still running at full utilization. Their actual useful lives are far longer than their theoretical ones.\n\n- We purchased more CPUs due to increased AI agent usage.\n\n- We aim to shorten the payback period for AI CAPEX to 2.5 years, or even two years.",
+            "ticker": "BABA"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/jukan05/status/2090415722166161583",
+            "text": "\"It could also position the company to respond proactively to the potential disruption that future memory disaggregation may pose to the traditional HBM business model.\"\n\nThat’s how I see it too. SK hynix is preparing for a post-HBM era—a time when HBM may no longer be needed.",
+            "ticker": "000660"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/jukan05/status/2090415402723791104",
+            "text": "【Tianfeng Securities Overseas Tech】 SK hynix CPO\n\nAt first glance, SK hynix’s CPO technology roadmap appears to have one axis pointing toward HBM and another toward optical communications. The underlying logic, however, is that AI competition is shifting from the performance of individual chips to the efficiency of data movement across the entire system.\n\nOver the past several years, HBM has addressed the problem of GPUs not receiving data fast enough. Vertically stacking multiple layers of DRAM and placing them next to the GPU enables extremely high bandwidth. However, as more HBM stacks are placed around each GPU, packaging area, interposer-edge space, power delivery, and cooling are all approaching their limits. At the same time, AI clusters have already scaled to thousands or even tens of thousands of GPUs. No matter how fast each GPU can compute, the entire system will still hit the “bandwidth wall” if data cannot move efficiently between GPUs and racks.\n\nSK hynix’s vision is to extend optical interconnects to memory. Low-latency, high-bandwidth local HBM would remain next to the GPU, while optical fiber would connect it to a larger shared memory pool. This would eliminate the need to fit all memory capacity within a single GPU package and enable horizontal scaling at the rack level.\n\nThe investment implications are as follows.\n\nThis does not mean that HBM will be replaced anytime soon. Instead, a new memory hierarchy is more likely to emerge. The most frequently accessed data would remain in local HBM, while larger volumes of less frequently accessed data would be stored in an optically interconnected memory pool, HBF, or SSDs.\n\nSK hynix is repositioning itself. It is moving beyond selling standardized memory chips toward jointly designing HBM, controllers, advanced packaging, and system-level memory architectures with customers. If this roadmap materializes, SK hynix could strengthen customer stickiness, increase product value-added, and improve its ability to secure long-term contracts. It could also position the company to respond proactively to the potential disruption that future memory disaggregation may pose to the traditional HBM business model.\n\nAt the supply-chain level, areas likely to benefit over the long term include silicon photonics chips, optical engines, lasers, fiber coupling technologies, and advanced 2.5D and 3D packaging.\n\nThat said, this concept still appears to be at an extremely early stage—essentially just a roadmap. I interviewed someone involved in TSMC’s packaging operations today, and they were completely unaware of this initiative.",
+            "ticker": "000660"
+          },
           {
             "date": "2026-08-20",
             "url": "https://x.com/jukan05/status/2090409732049883501",
@@ -434,24 +452,6 @@
             "url": "https://x.com/jukan05/status/2090056506830114989",
             "text": "@Alex_Intel_ We need to build fabs in the United States. This has nothing to do with U.S.–Korea relations. If we let Micron reap all the rewards, we’re finished.",
             "ticker": "MU"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/jukan05/status/2090054484399669410",
-            "text": "$MRVL https://t.co/VRGTiIRvZ5",
-            "ticker": "MRVL"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/jukan05/status/2090045731864539387",
-            "text": "This is a worthwhile read. If I may add one point, products manufactured in the United States now command a premium. AAOI has said that U.S.-made optical modules carry a premium, and U.S. hyperscalers will also be willing to pay a premium for Micron’s U.S.-made DRAM.\n\nKorean memory companies need to respond by building memory fabs in the United States—and that is exactly what they are doing. Just look at how SK Group Chairman Chey Tae-won has repeatedly discussed building a front-end memory fab in the U.S. U.S.-made semiconductors will command a premium because their price will reflect the value of a stable and assured supply.",
-            "ticker": "034730"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/jukan05/status/2090018803384218030",
-            "text": "Korean media report that Samsung plans to increase the number of floors at its new fab under construction in Pyeongtaek from the originally planned two to three.\n\nMore specifically, the fabs being redesigned as three-story facilities are Pyeongtaek P5 Plants 1 and 2, which together will constitute the world’s largest semiconductor manufacturing facility at a single site. Construction first began in 2022, with final completion targeted for 2030. At peak construction, the site has employed as many as 50,000 workers.\n\nUp through P4, which recently began operations at Samsung Electronics’ Pyeongtaek campus, each building employed a double-fab configuration with four cleanrooms. If the revised plan is approved, however, P5 will adopt a triple-fab configuration accommodating up to six cleanrooms. With the number of cleanrooms increasing by 50%, production capacity is also expected to rise by at least 50%.\n\nFuture semiconductor fabs to be built by Samsung Electronics and SK hynix in the national and general industrial complexes planned for Yongin are also expected to adopt this triple-fab configuration.",
-            "ticker": "000660"
           }
         ]
       },
@@ -915,12 +915,12 @@
       "signal_type": "opinion",
       "sample": {
         "first_date": "2026-06-11",
-        "last_date": "2026-08-19",
-        "mentions": 540,
-        "unique_original_posts": 289,
+        "last_date": "2026-08-20",
+        "mentions": 542,
+        "unique_original_posts": 291,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
-          "bullish": 145,
+          "bullish": 147,
           "bearish": 79,
           "neutral": 42
         },
@@ -986,6 +986,18 @@
         ],
         "recent_posts": [
           {
+            "date": "2026-08-20",
+            "url": "https://x.com/octopusycc/status/2090450454132236605",
+            "text": "滞涨表现了\n\n黄金是对的",
+            "ticker": "GOLD"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/octopusycc/status/2090414057417551913",
+            "text": "21:30开播\n\n交易衰退了\n\n不做半导体了 \n\n重视黄金！\n\nhttps://t.co/7IQ6bHCWXE https://t.co/A6mBwxSREe",
+            "ticker": "GOLD"
+          },
+          {
             "date": "2026-08-19",
             "url": "https://x.com/octopusycc/status/2090061543887245510",
             "text": "AI 算力，正在变成一类新的可投资资产。\n\n太长不看版本：\n1. NVDA和顶级机构合作，算力可投资，开辟新交易品类\nFalcon意识到算力的流动性和资本效率空间\n2. 流动性的架构设计与稳定币相关联，又符合了RWA+稳定币的前沿方向\n3. 这也许会做大 AI算力的整体估值\n\n近期NVIDIA 宣布与多家头部顶级机构合作，计划长期撬动超过 5000 亿美元第三方资本，投入 AI 基础设施。\n\n这是全新的交易品类，而算力可投资只是第一步，Falcon却快速的想到之后的好几步\n\n这是falcon对流动性敏感的基因所在 @FalconFinance 把这件事往前又推了一步\n\n在萨尔瓦多启动受监管的 RWA Tokenization Pipeline。\n\n首个项目，目前结构设计的—— Tokenized GPU Forward即将上线\n\n这笔资产的真实底层：\n- 硬件供应已锁定合同与价格\n- NEAR AI 作为未来算力的 Anchor Buyer\n- 由萨尔瓦多持牌实体 NOTA S.A.S. de C.V.（PSAD-0088） 合规发行\n\n从设计阶段就考虑了流动性：\n未来可进入包括 Uniswap 在内的开放二级市场；\n形成足够交易深度后，有望进入 Falcon 的 Collateral Layer，作为抵押品铸造 USDf，释放新的链上流动性。\n\n——————————————\n\n当前 RWA 市场 Distributed Tokenized Value 已约 380 亿美元\n但大量资产上链后，仍缺乏真正可用的流动性与资本效率。\n很多 GPU / Compute Financing 至今还停留在私人银团或封闭 SPV 里，持有人很难提前退出。\n\n举例来说\n\n如果一个价值 $1M 的 RWA 只能被持有，那么它本质上仍是一项静态资产\n\n如果它能够继续作为抵押品释放新的流动性，它的真正资产属性才会得到质变\n\n同样也会真正做大整个RWA资产的估值体系\n\n这也是 Falcon 相比单纯 Tokenization Platform 更值得强调的地方\n\n所以这里存在了大量流动性定价的新机会，这也是Falcon敏锐的市场洞察力能看到的\n\nFalcon最终希望实现：\n\n现实资产 → 合规上链 → 可交易可定价 → 成为抵押品 → 释放新的链上资本。\n最好的核心定价，还是来自于最好的流动性和极佳的资本效率",
@@ -1044,18 +1056,6 @@
             "url": "https://x.com/octopusycc/status/2087984336532607070",
             "text": "Coinbase刚宣布在Deribit上线新的高性能撮合引擎，每秒能处理超过10万笔订单，延迟做到亚毫秒级，还让Deribit和Coinbase International Exchange用上同一套核心执行基础设施。 @coinbase \n\n他们还在继续为合并铺基建。这个TPS水平已经高于传统市场了，对普通交易者来说可能就感觉「成交更快」一点。\n\n但对做市、套利、量化和期权交易者来说，撮合速度、稳定性和流动性，才是交易所真正的核心竞争力。\n\n另外Coinbase刚拿到阿布扎比金融服务监管局发的金融服务牌照，启动国际代币化中心，又在推英国专业投资者可用的衍生品系统，正在把现货、永续、期货和期权一步步整合到同一套全球化交易基础设施里。\n\n感觉Coinbase下一阶段可能不只是个交易所，而是在搭建全球加密交易的Infra。\n\n如果你还没有Coinbase账户，可以来注册一下\n \nhttps://t.co/fnPSRsp1J8",
             "ticker": "COIN"
-          },
-          {
-            "date": "2026-08-13",
-            "url": "https://x.com/octopusycc/status/2087896831569367548",
-            "text": "AMD发债来了\n$AMD \n言出法随 https://t.co/AcEtL9blXH",
-            "ticker": "AMD"
-          },
-          {
-            "date": "2026-08-13",
-            "url": "https://x.com/octopusycc/status/2087852539962372292",
-            "text": "还要说啥呢？\n谢谢大家\n\nRKLB发新股了\n$RKLB \n\nRocket Lab宣布可能发行高达$19.4亿的普通股后，其股价在盘前交易中下跌3.1%",
-            "ticker": "RKLB"
           }
         ]
       },
@@ -1066,9 +1066,9 @@
       "signal_type": "flow",
       "sample": {
         "first_date": "2026-06-10",
-        "last_date": "2026-08-19",
-        "mentions": 724,
-        "unique_original_posts": 546,
+        "last_date": "2026-08-20",
+        "mentions": 729,
+        "unique_original_posts": 550,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1082,7 +1082,7 @@
           },
           {
             "ticker": "META",
-            "mentions": 34
+            "mentions": 36
           },
           {
             "ticker": "AAPL",
@@ -1098,7 +1098,7 @@
           },
           {
             "ticker": "MSFT",
-            "mentions": 21
+            "mentions": 22
           },
           {
             "ticker": "GOOGL",
@@ -1108,7 +1108,7 @@
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 102
+            "mentions": 105
           },
           {
             "industry": "AI Chips",
@@ -1132,6 +1132,30 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/unusual_whales/status/2090453048879698062",
+            "text": "Waymo is now doing over 1.4 million rides per month in California, a 10x increase over the past two years, per Charlie Bilello",
+            "ticker": "WAYMO"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/unusual_whales/status/2090442982331936956",
+            "text": "Meta, $META, has quietly become one of Microsoft’s, $MSFT, largest AI customers, per Bloomberg",
+            "ticker": "META"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/unusual_whales/status/2090422850129940887",
+            "text": "Uber, $UBER, aims to make 1 million drone deliveries daily by the end of 2029, per YF",
+            "ticker": "UBER"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/unusual_whales/status/2090417816809939173",
+            "text": "Meta, $META, is heading to trial over allegations it designed Facebook and Instagram to keep young users hooked while misleading the public about risks to children, per FOX",
+            "ticker": "META"
+          },
           {
             "date": "2026-08-19",
             "url": "https://x.com/unusual_whales/status/2090267331788488922",
@@ -1179,30 +1203,6 @@
             "url": "https://x.com/unusual_whales/status/2089887824392675621",
             "text": "JPMorgan already employs more people in Texas than in any other state, growing from 4,000 workers in the Dallas area in 2003 to about 18,500 today\n\nRead more: https://t.co/ZakaWNAQbR",
             "ticker": "JPM"
-          },
-          {
-            "date": "2026-08-18",
-            "url": "https://x.com/unusual_whales/status/2089866358645481720",
-            "text": "Get ready for this.\n\nWe are hosting @BlueMoonMetals and their CEO @AdventusCEO for a panel on critical metal, particularly tungsten.\n\nJoin the panel of speakers, including:\n\n@Teo_Sinamin\n@eqresourcesasx\n@AdventusCEO\n\nJoin Wednesday at 11 AM EST: https://t.co/RDHEDpyf2c",
-            "ticker": "MOON"
-          },
-          {
-            "date": "2026-08-18",
-            "url": "https://x.com/unusual_whales/status/2089857625496109563",
-            "text": "Look at this.\n\nBerkshire Hathaway pivoted on their strategy.\n\nThey started spending their cash pile.\n\nTake a look. https://t.co/AK2Gj2H9uq",
-            "ticker": "BRK.B"
-          },
-          {
-            "date": "2026-08-18",
-            "url": "https://x.com/unusual_whales/status/2089849320485036307",
-            "text": "Holy, look at this.\n\nKKR offered to buy $UGI at 42.50 a share  \n\nBut RIGHT BEFORE THE News, someone placed a huge, unsual trade.\n\nA trader place a little over 700 of the weekly 35c opened at .60 per.  \n\n5 minutes later the contracts were worth 4.50 a piece.\n\nUnusual. https://t.co/yhMhrqJwEj",
-            "ticker": "UGI"
-          },
-          {
-            "date": "2026-08-18",
-            "url": "https://x.com/unusual_whales/status/2089763253618434473",
-            "text": "BREAKING: Unusual Whales is partnering with Siebert Financial to launch a new series of ETFs.\n\nThe funds will combine Unusual Whales’ political trading data, options flow, institutional activity, and other “shadow data” with Siebert’s financial infrastructure.\n\nTurning the data we track every day into investable products.\n\nGet ready.",
-            "ticker": "SIEB"
           }
         ]
       },
@@ -1214,8 +1214,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-08-20",
-        "mentions": 4396,
-        "unique_original_posts": 1542,
+        "mentions": 4406,
+        "unique_original_posts": 1552,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1225,7 +1225,7 @@
           },
           {
             "ticker": "GOOGL",
-            "mentions": 129
+            "mentions": 131
           },
           {
             "ticker": "NVDA",
@@ -1237,7 +1237,7 @@
           },
           {
             "ticker": "MU",
-            "mentions": 91
+            "mentions": 92
           },
           {
             "ticker": "AMZN",
@@ -1255,7 +1255,7 @@
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 371
+            "mentions": 373
           },
           {
             "industry": "AI Chips",
@@ -1263,7 +1263,7 @@
           },
           {
             "industry": "Memory/HBM",
-            "mentions": 91
+            "mentions": 92
           },
           {
             "industry": "GPU/AI Chips",
@@ -1281,6 +1281,66 @@
         "recent_posts": [
           {
             "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090454982835286298",
+            "text": "Google’s $GOOGL Self driving car startup Waymo is now doing 1.4 Million monthly rides in California https://t.co/UxCetepShV",
+            "ticker": "GOOGL"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090452738756821463",
+            "text": "Coinbase $COIN CEO Brian Armstrong said today on CNBC\n\n“I think there's a good chance we're on the cusp of the next bull market for crypto” https://t.co/0raWEKRdcJ",
+            "ticker": "COIN"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090451785752162596",
+            "text": "Google $GOOGL owned Waymo just posted showed off its purpose built ASIC chip for its Robotaxi\n\n“we are excited to introduce our purpose-built 5nm ASIC. While this chip is just one of several exciting custom components we’re developing, it is a specialized ML powerhouse engineered exclusively to process, fuse, and run advanced neural networks on raw sensor data in real time.”",
+            "ticker": "GOOGL"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090434357081296988",
+            "text": "Walmart $WMT just started trading today down by more than 8% on pace for its worst day since 2022\n\n🔴 https://t.co/gJQHyFCdHd",
+            "ticker": "WMT"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090426508846514496",
+            "text": "Jim Cramer just said on CNBC that he thinks Walmart $WMT stock shouldn’t be down today and this move is a buying opportunity",
+            "ticker": "WMT"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090425977856008264",
+            "text": "Walmart $WMT is on pace to start trading today down by more than 7%\n\n🔴 https://t.co/9mbICk0RzW",
+            "ticker": "WMT"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090422062586409075",
+            "text": "Crypto is moving higher right now \n\nLETS FREAKING GO!!! https://t.co/qBNeMNxDq2",
+            "ticker": "CRYPTO"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090417988415697208",
+            "text": "Micron $MU just announced Micron Research Labs which it will invest $10 Billion into over the next decade \n\n“Micron Research Labs will unite academia, government, startups and industry to advance the memory and compute breakthroughs” https://t.co/jdy9igXOly",
+            "ticker": "MU"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090415471019409903",
+            "text": "ALIBABA $BABA JUST DAID IT EXPECTS:\n\n- AI-product annualized revenue to approach $10B next quarter, up from ~$7.3B currently",
+            "ticker": "BABA"
+          },
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/StockMKTNewz/status/2090414315375304709",
+            "text": "WALMART’S $WMT CEO JUST SAID: \n\n- WE HAVE SEEN CONTINUED GROWTH FROM WEALTHIER CONSUMERS",
+            "ticker": "WMT"
+          },
+          {
+            "date": "2026-08-20",
             "url": "https://x.com/StockMKTNewz/status/2090401451637891344",
             "text": "@WOLF_Financial Amazon is now larger than Walmart 👀",
             "ticker": "AMZN"
@@ -1290,66 +1350,6 @@
             "url": "https://x.com/StockMKTNewz/status/2090400956894642395",
             "text": "Unitree went public at a $9.1B valuation in China 🇨🇳 this week and after its first day is already worth almost $50 Billion",
             "ticker": "UNITREE"
-          },
-          {
-            "date": "2026-08-20",
-            "url": "https://x.com/StockMKTNewz/status/2090395269196030423",
-            "text": "WALMART $WMT JUST REPORTED EARNINGS \n\nEPS of $0.81 beating expectations of $0.75🟢\nTechie of $187.9B beating expectations of $187B🟢 https://t.co/78w5VLeoI5",
-            "ticker": "WMT"
-          },
-          {
-            "date": "2026-08-20",
-            "url": "https://x.com/StockMKTNewz/status/2090391965313515719",
-            "text": "Amazon’s Drone delivery expansion could be off to a better start  https://t.co/MViJKwr4O4",
-            "ticker": "AMZN"
-          },
-          {
-            "date": "2026-08-20",
-            "url": "https://x.com/StockMKTNewz/status/2090380867055108189",
-            "text": "DEERE $DE JUST REPORTED EARNINGS \n\nEPS of $5.10 beating expectations of $4.71🟢\nRevenue of $11B beating expectations of $10.7B🟢 https://t.co/MdHFUgZ8lf",
-            "ticker": "DE"
-          },
-          {
-            "date": "2026-08-20",
-            "url": "https://x.com/StockMKTNewz/status/2090374837671739568",
-            "text": "ALIBABA $BABA REPORTED EARNINGS \n\nEPS of $1.27 missing expectations of $1.69🔴\nRevenue of $39.96B beating expectations of $39.9B🟢 https://t.co/NzFTAAkOhf",
-            "ticker": "BABA"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090265067933614164",
-            "text": "This is what ChatGPT's portfolio looks like right now in the Rallies AI Arena\n\nGoogle $GOOGL: $30,993\nLeidos $LDOS: $22,814\nProgressive $PGR: $21,672\nVisa $V: $18,376\nCigna $CI: $18,143\nCredo $CRDO: $17,391\nExxon Mobil $XOM: $16,574\nAmphenol $APH: $16,429\nJPMorgan $JPM: $10,690\nNebius $NBIS: $4,393\nAvailable Cash: $2,127",
-            "ticker": "APH"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090260870295101850",
-            "text": "MODERNA $MRNA IS NOW THE 2ND BEST PERFORMING NAME IN THE S&amp;P 500 SO FAR IN 2026 BEHIND JUST SANDISK $SNDK https://t.co/Qnlwm7FPm8",
-            "ticker": "MRNA"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090246025214644619",
-            "text": "$UBER, Verne and Pony AI just announced they have launched autonomous rides in Zagreb, Croatia \n\nThis is the first European city where you can book a self driving car ride on the Uber App - Reuters https://t.co/xKEVlFVGkg",
-            "ticker": "UBER"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090243592170201460",
-            "text": "Here is how much revenue Tempus AI $TEM has brought in every quarter since going public\n\nQ2 2024: $166M\nQ3 2024: $180.9M\nQ4 2024: $200.7M\nQ1 2025: $255.7M\nQ2 2025: $314.6M\nQ3 2025: $334.2M\nQ4 2025: $367.2M\nQ1 2026: $348.1M\nQ2 2026: $382.5M https://t.co/xZ7tpeV0dU",
-            "ticker": "TEM"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090232418624000290",
-            "text": "Cathie Wood and Ark Invest bought 78,756 shares of Cerebras $CBRS today https://t.co/sS1bCg1y5Q",
-            "ticker": "CBRS"
-          },
-          {
-            "date": "2026-08-19",
-            "url": "https://x.com/StockMKTNewz/status/2090223272122061141",
-            "text": "Apple $AAPL effort to sell camera-equipped AirPods remains on track for 2027 - Bloomberg https://t.co/4lYGhINlLN",
-            "ticker": "AAPL"
           }
         ]
       },
@@ -1360,9 +1360,9 @@
       "signal_type": "disclosure",
       "sample": {
         "first_date": "2026-07-03",
-        "last_date": "2026-08-19",
-        "mentions": 192,
-        "unique_original_posts": 123,
+        "last_date": "2026-08-20",
+        "mentions": 193,
+        "unique_original_posts": 124,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1426,6 +1426,12 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-20",
+            "url": "https://x.com/DJTRadar/status/2090457404567609673",
+            "text": "Donald Trump bought this stock at $65 btw. https://t.co/t73DC2sWc3",
+            "ticker": "UNKNOWN"
+          },
           {
             "date": "2026-08-19",
             "url": "https://x.com/DJTRadar/status/2089966926621507645",
@@ -1491,12 +1497,6 @@
             "url": "https://x.com/DJTRadar/status/2085009035196039242",
             "text": "Trump praised $LLY in June (calling it “a great company” while highlighting its $3.5 billion Pennsylvania manufacturing investment).\n\nHis accounts purchased Eli Lilly stock in Q1 2026 totaling up to roughly $680,000.\n\nToday, Eli Lilly reported revenue of $22.97B against ~$20.62B expected, and non-GAAP EPS of $8.38 against estimates in the ~$6.00–$6.58 range. Stock up ~6%.\n\nGood quarter for the company.",
             "ticker": "LLY"
-          },
-          {
-            "date": "2026-08-03",
-            "url": "https://x.com/DJTRadar/status/2084275648198070409",
-            "text": "He called the EXACT bottom on $MSFT. Twice.\n\nSame for $PYPL, $MELI, and plenty more.\n\nAnd he just added a new stock to his portfolio today.\n\nI really hope you’re paying attention.",
-            "ticker": "MELI"
           }
         ]
       },

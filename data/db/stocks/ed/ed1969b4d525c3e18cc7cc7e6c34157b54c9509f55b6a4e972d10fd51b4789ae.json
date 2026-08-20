@@ -24,11 +24,11 @@
   "industry": "Wafer Foundry",
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-08-19",
-  "total_mentions": 352,
+  "last_mention": "2026-08-20",
+  "total_mentions": 353,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 234,
-    "jukan05": 60,
+    "jukan05": 61,
     "StockMKTNewz": 26,
     "zephyr_z9": 14,
     "unusual_whales": 7,
@@ -38,7 +38,7 @@
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 319,
+    "opinion": 320,
     "news": 26,
     "flow": 7
   },
@@ -8486,6 +8486,29 @@
         "likes": 31,
         "reposts": 0,
         "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090415402723791104",
+      "blogger_id": "jukan05",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T08:27:24-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSMC",
+      "text": "【Tianfeng Securities Overseas Tech】 SK hynix CPO\n\nAt first glance, SK hynix’s CPO technology roadmap appears to have one axis pointing toward HBM and another toward optical communications. The underlying logic, however, is that AI competition is shifting from the performance of individual chips to the efficiency of data movement across the entire system.\n\nOver the past several years, HBM has addressed the problem of GPUs not receiving data fast enough. Vertically stacking multiple layers of DRAM and placing them next to the GPU enables extremely high bandwidth. However, as more HBM stacks are placed around each GPU, packaging area, interposer-edge space, power delivery, and cooling are all approaching their limits. At the same time, AI clusters have already scaled to thousands or even tens of thousands of GPUs. No matter how fast each GPU can compute, the entire system will still hit the “bandwidth wall” if data cannot move efficiently between GPUs and racks.\n\nSK hynix’s vision is to extend optical interconnects to memory. Low-latency, high-bandwidth local HBM would remain next to the GPU, while optical fiber would connect it to a larger shared memory pool. This would eliminate the need to fit all memory capacity within a single GPU package and enable horizontal scaling at the rack level.\n\nThe investment implications are as follows.\n\nThis does not mean that HBM will be replaced anytime soon. Instead, a new memory hierarchy is more likely to emerge. The most frequently accessed data would remain in local HBM, while larger volumes of less frequently accessed data would be stored in an optically interconnected memory pool, HBF, or SSDs.\n\nSK hynix is repositioning itself. It is moving beyond selling standardized memory chips toward jointly designing HBM, controllers, advanced packaging, and system-level memory architectures with customers. If this roadmap materializes, SK hynix could strengthen customer stickiness, increase product value-added, and improve its ability to secure long-term contracts. It could also position the company to respond proactively to the potential disruption that future memory disaggregation may pose to the traditional HBM business model.\n\nAt the supply-chain level, areas likely to benefit over the long term include silicon photonics chips, optical engines, lasers, fiber coupling technologies, and advanced 2.5D and 3D packaging.\n\nThat said, this concept still appears to be at an extremely early stage—essentially just a roadmap. I interviewed someone involved in TSMC’s packaging operations today, and they were completely unaware of this initiative.",
+      "url": "https://x.com/jukan05/status/2090415402723791104",
+      "kind": "post",
+      "engagement": {
+        "views": 75049,
+        "likes": 177,
+        "reposts": 20,
+        "replies": 18
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
