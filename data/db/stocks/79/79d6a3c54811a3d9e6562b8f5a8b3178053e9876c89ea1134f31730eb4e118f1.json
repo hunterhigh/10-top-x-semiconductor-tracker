@@ -1,6 +1,6 @@
 {
   "ticker": "WMT",
-  "cashtag": "$WMT",
+  "cashtag": "Walmart",
   "instrument": {
     "instrument_id": "US:WMT",
     "display_code": "WMT",
@@ -24,18 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-10",
-  "last_mention": "2026-08-17",
-  "total_mentions": 25,
+  "last_mention": "2026-08-20",
+  "total_mentions": 27,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 13,
-    "StockMKTNewz": 9,
+    "StockMKTNewz": 11,
     "DJTRadar": 1,
     "ren_stocks": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 14,
-    "news": 9,
+    "news": 11,
     "disclosure": 1,
     "flow": 1
   },
@@ -633,6 +633,55 @@
         "likes": 213,
         "reposts": 33,
         "replies": 25
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090395269196030423",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T07:07:24-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "EPS of $0.81 beating expectations of $0.75",
+        "revenue of $187.9B beating expectations of $187B"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$WMT",
+      "text": "WALMART $WMT JUST REPORTED EARNINGS \n\nEPS of $0.81 beating expectations of $0.75🟢\nTechie of $187.9B beating expectations of $187B🟢 https://t.co/78w5VLeoI5",
+      "url": "https://x.com/StockMKTNewz/status/2090395269196030423",
+      "kind": "post",
+      "engagement": {
+        "views": 17368,
+        "likes": 90,
+        "reposts": 10,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090401451637891344",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T07:31:58-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Walmart",
+      "text": "@WOLF_Financial Amazon is now larger than Walmart 👀",
+      "url": "https://x.com/StockMKTNewz/status/2090401451637891344",
+      "kind": "reply",
+      "engagement": {
+        "views": 1523,
+        "likes": 4,
+        "reposts": 1,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1322,17 +1371,25 @@
     {
       "date": "2026-08-17",
       "close": 114.33
+    },
+    {
+      "date": "2026-08-18",
+      "close": 115.2
+    },
+    {
+      "date": "2026-08-19",
+      "close": 114.3
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-18T15:21:33.255674+00:00",
+  "price_updated_at": "2026-08-20T12:21:17.102669+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "WMT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-18T15:21:32.465232+00:00",
+    "checked_at": "2026-08-20T12:21:15.776094+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
