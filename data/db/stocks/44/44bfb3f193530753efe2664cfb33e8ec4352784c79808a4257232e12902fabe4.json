@@ -1014,25 +1014,25 @@
   "price_series": [],
   "price_status": "unavailable",
   "price_unit": "JPY",
-  "price_updated_at": "2026-08-20T06:18:54.271932+00:00",
-  "price_reason": "provider_symbol_not_found_after_search",
+  "price_updated_at": "2026-08-20T09:19:45.130374+00:00",
+  "price_reason": "EODHD 402 (search capacity unavailable)",
   "price_history_52w": {
-    "requested_start": "2025-08-18",
-    "asof": "2026-08-17",
-    "attempted_at": "2026-08-18T03:37:54.367707+00:00",
-    "status": "unavailable",
+    "requested_start": "2025-08-21",
+    "asof": "2026-08-20",
+    "attempted_at": "2026-08-20T09:19:44.846133+00:00",
+    "status": "pending",
     "first_available_date": null,
     "last_available_date": null,
-    "reason": "provider_symbol_not_found_after_search"
+    "reason": "EODHD 402 (search capacity unavailable)"
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "285A.TSE",
-    "status": "unsupported",
-    "reason": "provider_symbol_not_found_after_search",
-    "checked_at": "2026-07-21T08:24:31.985009+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-20T08:24:31.985009+00:00",
-    "http_status": 404
+    "provider_symbol": "285A.T",
+    "status": "deferred",
+    "reason": "EODHD 402 (search capacity unavailable)",
+    "checked_at": "2026-08-20T09:19:44.846133+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-08-20T12:19:44.846133+00:00",
+    "http_status": null
   }
 }

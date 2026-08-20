@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-20T06:19:49.784907+00:00",
+  "generated_at": "2026-08-20T09:20:45.192245+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2085,
-  "index_sha256": "f65b2dac297276649bfaa657e959bff1a7afa972fefb7a4cd2cf8d2422b9b361",
+  "index_sha256": "954c4ffb7f596a72e0c9f972edfac2cb6826ac2eb43812086da669edd70ac26b",
   "stocks_root": "stocks",
   "price_cache_count": 876,
   "price_cache_index_sha256": "dd8b01f986f846f09b3bc2b924236e95a862fc16e17e20436966acee05a492ad",
   "price_cache_root": "prices_cache",
   "tickers": 2085,
-  "total_mentions": 24534,
+  "total_mentions": 24535,
   "priced_tickers": 698,
   "date_range": [
     "2025-07-02",
@@ -26,7 +26,7 @@
     "zephyr_z9": 452,
     "KawzInvests": 423,
     "michaelsikand": 461,
-    "jukan05": 1028,
+    "jukan05": 1029,
     "DJTRadar": 192
   },
   "bloggers_missing_state_files": [],
@@ -69,8 +69,9 @@
     "reason_counts": {
       "EODHD 402 (account quota or subscription limit)": 18,
       "unverified_instrument_identity": 550,
-      "provider_symbol_not_found_after_search": 5,
+      "EODHD 402 (search capacity unavailable)": 1,
       "no_daily_closes_returned": 2,
+      "provider_symbol_not_found_after_search": 4,
       "stale_series_latest_close=2026-08-06": 1
     },
     "missing_reason": 0
@@ -84,13 +85,12 @@
     "status_counts": {
       "ok": 34,
       "insufficient_history": 2,
-      "unavailable": 1
+      "pending": 1
     },
     "missing_reason": 0,
     "provider_state_counts": {
       "supported": 33,
-      "deferred": 3,
-      "unsupported": 1
+      "deferred": 4
     },
     "retry_queue": 1,
     "scope_counts": {
