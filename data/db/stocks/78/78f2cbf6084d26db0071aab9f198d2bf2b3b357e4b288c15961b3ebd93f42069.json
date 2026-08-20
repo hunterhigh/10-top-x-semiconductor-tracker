@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-05-12",
-  "last_mention": "2026-08-18",
-  "total_mentions": 4,
+  "last_mention": "2026-08-20",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
-    "ren_stocks": 3,
+    "ren_stocks": 5,
     "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 4
+    "opinion": 6
   },
   "mentions": [
     {
@@ -126,6 +126,67 @@
         "likes": 9,
         "reposts": 0,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090505191510434123",
+      "blogger_id": "ren_stocks",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T14:24:12-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "image signal processors and radar chips for cars with emerging robotics demand",
+        "design wins at Unitree and Agibot confirmed by company",
+        "automotive perception tech directly applicable to robotics (same perception problem)",
+        "iND880 removes need for separate memory chip — advantage during NAND/DRAM shortage",
+        "CEO confirms customers using 880 to alleviate line-down situations due to memory shortage",
+        "iND881 adds local AI object identification",
+        "Q2 revenue $64m +24% YoY, $2m above midpoint",
+        "Q3 guided $70m midpoint, 30% YoY growth accelerating",
+        "stock comp 28% of revenue — structural dilution risk",
+        "cash runway ~4 quarters at current burn; Wuxi divestiture ($135m) extends to ~8 quarters but subject to Chinese regulatory approval",
+        "breakeven needs core revenue up ~46%; ~18 months at 30% growth if nothing slips"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$INDI",
+      "text": "$INDI I'm long.\n\nIndie Semiconductor is a ~$920m company in Aliso Viejo, California. They make the silicon that lets a machine see: image signal processors and radar chips for cars.\n\nAn ISP is their largest business. When a camera captures a frame, what it actually produces is a spreadsheet of brightness values, not a picture. Something has to reconstruct color, fuse multiple exposures so the pedestrian in a tunnel shadow doesn't vanish against sunlit tarmac outside, undistort a wide-angle lens, and finish it all in under thirty milliseconds, thirty times a second, on every camera in the vehicle. They also do automotive radar, the kind that sees through fog and rain when the camera can't.\n\nBoring, right? Then this happened.\n\nRobot companies came to them.\n\nThey went looking for a chip that could handle several camera feeds at once, in real time, on a battery, already proven reliable at scale. They found indie's automotive parts in a distributor's catalog and just bought them.\n\nNo robotics division. No robotics product. Not a dollar spent chasing a robotics customer. The orders showed up anyway.\n\nQ2 turned that into real design wins at Unitree and Agibot. Both confirmed by the company.\n\n@karpathy said the early Optimus once thought it was a car, because it ran the same computer, the same cameras and the same algorithms. Tesla runs eight autopilot-grade cameras on Optimus and an FSD-derived computer.\n\nThe robot and the car are the same perception problem.\n\nAutomotive spent fifteen years and enormous money building cameras that work at tunnel exits, radar that sees through fog, and processors that decide in thirty milliseconds, all qualified to survive twenty years of vibration and never fail in a way that hurts someone. Regulators forced them to. Nobody is paying that bill twice.\n\nThe part I, an AI bull, care the most about:\n\nThe iND880 processes a camera feed without a separate memory chip. Rolling window of scan lines, memory on the die, never holds a full frame. For years that was minor. One fewer component, a bit less power.\n\nI've spent this year on the NAND and DRAM shortage from the supply side. This is the same shortage from the other end. When memory is scarce, a chip that removes the need for a memory chip stops being a cost saving and becomes the reason a line keeps running.\n\nThat's not only what made me interested in this company. That is also the CEO's take:\n\n\"In many cases, our customers are unable to source memory at all and using the 880 allows them to alleviate line-down situations.\"\n\nThe iND881 adds local AI so the camera identifies objects before sending anything upstream. The ams OSRAM image sensor acquisition would add the sensor itself. \n\nThe Financials: Q2 reported August 7\n\nRevenue $64.0m, +24% YoY, $2m above the midpoint. Core $36m, up 5% sequentially. Wuxi $28m. Non-GAAP operating loss narrowed to $8.9m from $14.5m. Cash $149m, down $35.7m on the quarter.\n\nQ3 guided to $70m at the midpoint. Core $40m, Wuxi $30m. 30% YoY growth, accelerating.\n\nThree things that decide the outcome:\n\n+ Stock comp is 28% of revenue. $17.9m in Q2, up from $14.8m. That's the entire gap between the $8.9m non-GAAP loss everyone quotes and the $35.1m GAAP loss. Every \"progress toward profitability\" headline is non-GAAP. Dilution here is structural.\n\n+ Cash runway is about four quarters at the current burn. The Wuxi divestiture brings $135m and roughly doubles it to eight. It's subject to Chinese regulatory approval, in this trade environment. That's not a nice-to-have, that's the balance sheet.\n\n+ Breakeven needs core revenue up about 46%. Post-Wuxi opex around $33m. At 57% core gross margin, breakeven core revenue is roughly $58m against $40m guided this quarter. At 30% growth, call it 18 months if nothing slips.\n\nLet's see how this plays out in the future, but I'm liking what I'm seeing.\n\nSmall money bet for now until further developments but at todays price at 3.7 I'm liking it A LOT.\n\nBullish $INDI ⚡️\n\nDYOR. NFA",
+      "url": "https://x.com/ren_stocks/status/2090505191510434123",
+      "kind": "post",
+      "engagement": {
+        "views": 11488,
+        "likes": 80,
+        "reposts": 7,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090530712268996946",
+      "blogger_id": "ren_stocks",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T16:05:36-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "doesn't see how company isn't $10 already",
+        "green into the close"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INDI",
+      "text": "$INDI \n\nGreen into the close. \n\nI don't see how this company isn't $10 already.\n\nBullish ⚡️ https://t.co/JQqcTUnTwp",
+      "url": "https://x.com/ren_stocks/status/2090530712268996946",
+      "kind": "post",
+      "engagement": {
+        "views": 4468,
+        "likes": 21,
+        "reposts": 2,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -403,17 +464,21 @@
     {
       "date": "2026-08-18",
       "close": 4.34
+    },
+    {
+      "date": "2026-08-19",
+      "close": 4.005
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-19T03:19:41.924373+00:00",
+  "price_updated_at": "2026-08-20T21:22:06.639609+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "INDI",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-19T03:19:41.084717+00:00",
+    "checked_at": "2026-08-20T21:22:05.639377+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
