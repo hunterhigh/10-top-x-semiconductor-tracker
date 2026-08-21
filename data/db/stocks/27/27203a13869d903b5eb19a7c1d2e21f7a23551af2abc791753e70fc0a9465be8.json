@@ -1,6 +1,6 @@
 {
   "ticker": "DJT",
-  "cashtag": "this stock",
+  "cashtag": "DJT",
   "instrument": {
     "instrument_id": "US:DJT",
     "display_code": "DJT",
@@ -24,19 +24,19 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-28",
-  "last_mention": "2026-08-19",
-  "total_mentions": 21,
+  "last_mention": "2026-08-21",
+  "total_mentions": 22,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 12,
     "unusual_whales": 7,
-    "StockMKTNewz": 1,
-    "DJTRadar": 1
+    "DJTRadar": 2,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 12,
     "flow": 7,
     "news": 1,
-    "disclosure": 1
+    "disclosure": 2
   },
   "mentions": [
     {
@@ -549,6 +549,31 @@
         "likes": 305,
         "reposts": 8,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090779761014411737",
+      "blogger_id": "DJTRadar",
+      "date": "2026-08-21",
+      "created_at": "2026-08-21T08:35:14-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Trump bought at $71, current price is lower than what the President paid"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "DJT",
+      "text": "Trump bought this at $71 by the way.\n\nYou can get it cheaper than the President did. https://t.co/bCMP8TZuzn",
+      "url": "https://x.com/DJTRadar/status/2090779761014411737",
+      "kind": "post",
+      "engagement": {
+        "views": 52995,
+        "likes": 362,
+        "reposts": 16,
+        "replies": 48
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
