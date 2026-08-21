@@ -1,6 +1,6 @@
 {
   "ticker": "T",
-  "cashtag": "$T",
+  "cashtag": "AT&T",
   "instrument": {
     "instrument_id": "US:T",
     "display_code": "T",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-21",
-  "last_mention": "2026-07-27",
-  "total_mentions": 3,
+  "last_mention": "2026-08-21",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 2,
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 1,
-    "news": 2
+    "news": 2,
+    "flow": 1
   },
   "mentions": [
     {
@@ -102,6 +104,29 @@
         "likes": 83,
         "reposts": 4,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090826006278050256",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-21",
+      "created_at": "2026-08-21T11:39:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AT&T",
+      "text": "AT&amp;T is using open source models to decrease the costs of its Anthropic bills, per the Information",
+      "url": "https://x.com/unusual_whales/status/2090826006278050256",
+      "kind": "post",
+      "engagement": {
+        "views": 108989,
+        "likes": 702,
+        "reposts": 38,
+        "replies": 59
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

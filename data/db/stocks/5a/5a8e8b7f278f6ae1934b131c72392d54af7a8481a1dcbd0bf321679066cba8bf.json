@@ -1,6 +1,6 @@
 {
   "ticker": "ALM",
-  "cashtag": "$ALM",
+  "cashtag": "ALM",
   "instrument": {
     "instrument_id": "US:ALM",
     "display_code": "ALM",
@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-26",
-  "last_mention": "2026-08-19",
-  "total_mentions": 6,
+  "last_mention": "2026-08-21",
+  "total_mentions": 8,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 4,
-    "michaelsikand": 2
+    "michaelsikand": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 6
+    "opinion": 8
   },
   "mentions": [
     {
@@ -184,6 +184,63 @@
         "likes": 106,
         "reposts": 13,
         "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090845626510766366",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-21",
+      "created_at": "2026-08-21T12:56:58-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "has real operating mines unlike junior miners",
+        "every semiconductor needs tungsten gas during fabrication with zero substitutes",
+        "processing moat — turning ore into product is where competitors fail",
+        "geopolitical filter: mine would still supply US in extreme conflict scenarios",
+        "defense demand about to pull hard on supply that doesn't exist yet",
+        "China moving downstream creates urgency for Western tungsten supply"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ALM",
+      "text": "I recently sat down with a $4.5B critical metals CEO. Here's what I learned.\n\nIt's been a strong week for mining stocks, especially after the market got a reminder of the long game the Trump Admin is playing with another $3B in commitments. \n\nBut overall, many rare earth / mining stocks have underperformed heavily this year, even despite a massive rally in high beta stocks after the Iran ceasefire.\n\n$TMC: -42.3% YTD\n$LAC: -27.8% YTD\n$TMQ: -13.2% YTD\n$NB: -9.3% YTD\n$CRML: -5.3% YTD\n\nSo I thought it'd be interesting to share my takeaways from interviewing Lewis Black, CEO of Tungsten miner $ALM about the overall sector and of course Tungsten specifically.\n\n1) As for the sector's underperformance, Lewis attributed it to the \"dreaded junior miner\". Basically there's been a surge in mining companies, without any operating mines, getting funding or hype in the last year based on all the Trump funding. You need to find companies with real operating mines, growing revenue and profits, with management teams invested alongside. If there's no permits, it is a multi-year, long story...\n\n2) Why should retail care about critical metals at all? Because there's no AI without them. His analogy was that you can bake the greatest cake in the world but not without wheat. Every semiconductor on earth needs tungsten gas during fabrication, tiny amounts, zero substitutes. The AI trade has run through chips, then memory, now power. Almost nobody is pricing the raw inputs sitting underneath all of it.\n\n3) Permitting and processing are where the real moat lives, not in the ground. He's watched an enormous amount of capital get destroyed in this space, and his read is that basically every mine outside his own in Tungsten that has tried to open has failed, because processing is the hard part. That's the part promoters skip. The ore body is the easy story to sell. Turning it into product that a customer will actually take is where projects die.\n\n4) The best geopolitical filter I heard all year. Someone gave Lewis this framework and he passed it on. When you're assessing a critical metals project, ask whether in the event of World War Three it would still supply the United States. That single question kills most of the map. It's why a lot of headline projects in jurisdictions everyone is excited about right now don't clear the bar.\n\n5) The bigger picture is China moving downstream, and it applies to the whole complex. Defense demand is about to pull hard on supply that doesn't exist yet, and something has to give. Lewis's bet is that less essential sectors like autos lose access first, and Europe would rather accept Chinese finished components than slow their lines. China spent 30 years selling the West cheap raw material. Now they take the value-add layer. That's the shift investors should be positioning around, not just the spot price of any one metal.",
+      "url": "https://x.com/michaelsikand/status/2090845626510766366",
+      "kind": "post",
+      "engagement": {
+        "views": 9350,
+        "likes": 35,
+        "reposts": 4,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090855304863051855",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-21",
+      "created_at": "2026-08-21T13:35:25-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trading at 11x forward 2027 PE",
+        "PEG of 0.11",
+        "selected it over international alternative"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "ALM",
+      "text": "@JonahLupton I traded it and wrote about it extensively earlier in the year and selected it over ALM. I've found trading the international stock never works out. The liquidity and access isn't there. It's not worth dying on a hill over better fundamentals overseas.\n\nALM is trading at 11x forward 2027 PE... PEG of 0.11",
+      "url": "https://x.com/michaelsikand/status/2090855304863051855",
+      "kind": "reply",
+      "engagement": {
+        "views": 418,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -761,17 +818,21 @@
     {
       "date": "2026-08-19",
       "close": 16.18
+    },
+    {
+      "date": "2026-08-20",
+      "close": 17.69
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-20T15:21:09.206035+00:00",
+  "price_updated_at": "2026-08-21T18:16:38.393525+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ALM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-20T15:21:08.166102+00:00",
+    "checked_at": "2026-08-21T18:16:37.461916+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
