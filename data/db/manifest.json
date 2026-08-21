@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-20T21:22:38.424531+00:00",
+  "generated_at": "2026-08-21T00:16:14.704046+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2098,
-  "index_sha256": "db74b5ec5b0be44104bd6f8519361518ae3a02e98c83e03c73a3d1319ad104f5",
+  "index_sha256": "9d46aa706f37120180c6cd6b2905b40d3bd73ae920e105a5d2e3cd622437d5d4",
   "stocks_root": "stocks",
   "price_cache_count": 877,
   "price_cache_index_sha256": "9e0d067a724666a3da7b9851206a1ba2575364045532bd4ebc00ff6b47c9eb3a",
   "price_cache_root": "prices_cache",
   "tickers": 2098,
-  "total_mentions": 24655,
+  "total_mentions": 24659,
   "priced_tickers": 700,
   "date_range": [
     "2025-07-02",
@@ -26,7 +26,7 @@
     "zephyr_z9": 453,
     "KawzInvests": 428,
     "michaelsikand": 461,
-    "jukan05": 1041,
+    "jukan05": 1045,
     "DJTRadar": 194
   },
   "bloggers_missing_state_files": [],
@@ -60,18 +60,19 @@
     "min_mentions": 50,
     "tickers": 1036,
     "status_counts": {
-      "ok": 445,
-      "partial": 20,
+      "ok": 450,
+      "partial": 15,
       "unverified_symbol": 564,
       "unavailable": 7
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 19,
+      "EODHD 402 (account quota or subscription limit)": 14,
       "unverified_instrument_identity": 564,
-      "EODHD 402 (search capacity unavailable)": 2,
+      "EODHD 404 (symbol not found: 285A.TSE)": 1,
       "no_daily_closes_returned": 2,
-      "provider_symbol_not_found_after_search": 3,
+      "EODHD 402 (search capacity unavailable)": 3,
+      "provider_symbol_not_found_after_search": 1,
       "stale_series_latest_close=2026-08-06": 1
     },
     "missing_reason": 0
@@ -85,12 +86,12 @@
     "status_counts": {
       "ok": 34,
       "insufficient_history": 2,
-      "pending": 1
+      "unavailable": 1
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 33,
-      "deferred": 4
+      "supported": 36,
+      "unsupported": 1
     },
     "retry_queue": 1,
     "scope_counts": {
