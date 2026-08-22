@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-22T18:15:49.268553+00:00",
+  "generated_at": "2026-08-22T21:15:53.981164+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2108,
-    "total_mentions": 24846,
+    "total_tickers": 2109,
+    "total_mentions": 24853,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2108,
+      "files": 2109,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-22T18:17:40.030082+00:00"
+    "prices_updated_at": "2026-08-22T21:17:12.276116+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -100,11 +100,11 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-08-22",
-      "total_mentions": 918,
+      "total_mentions": 920,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 526,
-        "StockMKTNewz": 110,
+        "StockMKTNewz": 112,
         "jukan05": 96,
         "zephyr_z9": 52,
         "unusual_whales": 45,
@@ -770,11 +770,11 @@
       "company": "Marvell",
       "industry": "AI Semis/CPO",
       "first_mention": "2025-08-25",
-      "last_mention": "2026-08-21",
-      "total_mentions": 333,
+      "last_mention": "2026-08-22",
+      "total_mentions": 334,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 273,
+        "aleabitoreddit": 274,
         "StockMKTNewz": 14,
         "octopusycc": 13,
         "ren_stocks": 9,
@@ -1416,11 +1416,11 @@
       "company": "Reddit, Inc.",
       "industry": null,
       "first_mention": "2025-09-14",
-      "last_mention": "2026-08-14",
-      "total_mentions": 179,
+      "last_mention": "2026-08-22",
+      "total_mentions": 180,
       "blogger_count": 6,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 159,
+        "aleabitoreddit": 160,
         "KawzInvests": 8,
         "michaelsikand": 6,
         "StockMKTNewz": 4,
@@ -2622,8 +2622,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:JPM": {
       "ticker": "JPM",
@@ -3418,8 +3417,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:FLNC": {
       "ticker": "FLNC",
@@ -3967,6 +3965,49 @@
       "hash": "d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63",
       "path": "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json"
     },
+    "US:BE": {
+      "ticker": "BE",
+      "instrument": {
+        "instrument_id": "US:BE",
+        "display_code": "BE",
+        "display_name": "Bloom Energy Corp",
+        "display_market": "NYSE",
+        "aliases": [
+          "BE"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "BE",
+        "verification_status": "verified"
+      },
+      "cashtag": "BE",
+      "price_symbol": "BE",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Bloom Energy Corp",
+      "industry": null,
+      "first_mention": "2025-10-03",
+      "last_mention": "2026-08-22",
+      "total_mentions": 37,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 18,
+        "StockMKTNewz": 7,
+        "octopusycc": 5,
+        "michaelsikand": 3,
+        "KawzInvests": 2,
+        "ren_stocks": 1,
+        "jukan05": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:BE",
+      "hash": "454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c",
+      "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
+      "price_history_52w_status": "ok"
+    },
     "US:LASR": {
       "ticker": "LASR",
       "instrument": {
@@ -4047,49 +4088,6 @@
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
       "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
-      "price_history_52w_status": "ok"
-    },
-    "US:BE": {
-      "ticker": "BE",
-      "instrument": {
-        "instrument_id": "US:BE",
-        "display_code": "BE",
-        "display_name": "Bloom Energy Corp",
-        "display_market": "NYSE",
-        "aliases": [
-          "BE"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "BE",
-        "verification_status": "verified"
-      },
-      "cashtag": "Bloom Energy",
-      "price_symbol": "BE",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Bloom Energy Corp",
-      "industry": null,
-      "first_mention": "2025-10-03",
-      "last_mention": "2026-08-22",
-      "total_mentions": 36,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 18,
-        "StockMKTNewz": 7,
-        "octopusycc": 5,
-        "michaelsikand": 2,
-        "KawzInvests": 2,
-        "ren_stocks": 1,
-        "jukan05": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:BE",
-      "hash": "454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c",
-      "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
       "price_history_52w_status": "ok"
     },
     "US:GOOG": {
@@ -6209,7 +6207,8 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
+      "price_history_52w_status": "ok"
     },
     "US:IONQ": {
       "ticker": "IONQ",
@@ -7211,6 +7210,45 @@
       "hash": "bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927",
       "path": "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json"
     },
+    "UNVERIFIED:GOLD": {
+      "ticker": "GOLD",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:GOLD",
+        "display_code": "GOLD",
+        "display_name": "Gold",
+        "display_market": "Market unverified",
+        "aliases": [
+          "GOLD"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "gold",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Gold",
+      "industry": null,
+      "first_mention": "2026-02-23",
+      "last_mention": "2026-08-22",
+      "total_mentions": 17,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 11,
+        "octopusycc": 3,
+        "StockMKTNewz": 2,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:GOLD",
+      "hash": "1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca",
+      "path": "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json"
+    },
     "US:CSCO": {
       "ticker": "CSCO",
       "instrument": {
@@ -7513,45 +7551,6 @@
       "instrument_id": "XETRA:AIXA",
       "hash": "f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594",
       "path": "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json"
-    },
-    "UNVERIFIED:GOLD": {
-      "ticker": "GOLD",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:GOLD",
-        "display_code": "GOLD",
-        "display_name": "Gold",
-        "display_market": "Market unverified",
-        "aliases": [
-          "GOLD"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "gold",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Gold",
-      "industry": null,
-      "first_mention": "2026-02-23",
-      "last_mention": "2026-08-21",
-      "total_mentions": 16,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "unusual_whales": 10,
-        "octopusycc": 3,
-        "StockMKTNewz": 2,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:GOLD",
-      "hash": "1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca",
-      "path": "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json"
     },
     "UNVERIFIED:OPENAI": {
       "ticker": "OPENAI",
@@ -12519,8 +12518,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:BTBT": {
       "ticker": "BTBT",
@@ -49464,6 +49462,42 @@
       "hash": "10de576931851577d1c3008c99ba20d8d1e52a4dcfc6926642bfde6d8fcfa0dc",
       "path": "stocks/10/10de576931851577d1c3008c99ba20d8d1e52a4dcfc6926642bfde6d8fcfa0dc.json"
     },
+    "UNVERIFIED:BONDS": {
+      "ticker": "BONDS",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:BONDS",
+        "display_code": "BONDS",
+        "display_name": "Bonds (fixed income)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "BONDS"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "bonds",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Bonds (fixed income)",
+      "industry": null,
+      "first_mention": "2026-08-22",
+      "last_mention": "2026-08-22",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:BONDS",
+      "hash": "38e6502a5d7f2e167e77b0d8b9f1296094d6df9d89ee4faca284d0c8b0b42074",
+      "path": "stocks/38/38e6502a5d7f2e167e77b0d8b9f1296094d6df9d89ee4faca284d0c8b0b42074.json"
+    },
     "UNVERIFIED:BP": {
       "ticker": "BP",
       "instrument": {
@@ -78605,6 +78639,9 @@
     "$BOND": [
       "UNVERIFIED:BOND"
     ],
+    "$BONDS": [
+      "UNVERIFIED:BONDS"
+    ],
     "$BOT": [
       "US:BOT"
     ],
@@ -85678,9 +85715,6 @@
     "BLOCK, INC.": [
       "US:XYZ"
     ],
-    "BLOOM ENERGY": [
-      "US:BE"
-    ],
     "BLOOM ENERGY CORP": [
       "US:BE"
     ],
@@ -85774,8 +85808,12 @@
     "BOND": [
       "UNVERIFIED:BOND"
     ],
+    "BONDS": [
+      "UNVERIFIED:BONDS"
+    ],
     "BONDS (FIXED INCOME)": [
-      "UNVERIFIED:BOND"
+      "UNVERIFIED:BOND",
+      "UNVERIFIED:BONDS"
     ],
     "BOOKING HOLDINGS": [
       "UNVERIFIED:BKNG"
@@ -96066,6 +96104,9 @@
     "UNVERIFIED:BOND": [
       "UNVERIFIED:BOND"
     ],
+    "UNVERIFIED:BONDS": [
+      "UNVERIFIED:BONDS"
+    ],
     "UNVERIFIED:BP": [
       "UNVERIFIED:BP"
     ],
@@ -102510,9 +102551,9 @@
     "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json",
     "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json",
     "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
+    "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
     "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
-    "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
     "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
@@ -102594,6 +102635,7 @@
     "stocks/92/92e1fce370e2fb96057a9993f65b7502e14b08d10705e20b2200d2f6486cd6ad.json",
     "stocks/a1/a1a8dd5b8582b39ae0ac19aedd4733f54dfd1543f14cac9adfedd32ed115473c.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
+    "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json",
     "stocks/b6/b6c41dd354b0f46f94d740701812e622f9c9e0f0ff21237eb56c080e564a1217.json",
     "stocks/40/40aa8af4b789bfe5ba8f04ea4586a0fad64733a2a1a0e23320542cedc7938c21.json",
     "stocks/ec/ec67b1d8230647932e03dca6a96eeb310292d88827c1681031637c2e62d02042.json",
@@ -102602,7 +102644,6 @@
     "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
     "stocks/fd/fdb1b54852997681948cadac924dd931d5c2f77460a74e57dbb05b6acdab53d2.json",
     "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json",
-    "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json",
     "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
     "stocks/51/515819ad712489340efb63584e935c79a71dfee4471065e42d976d8fb2cbb977.json",
     "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json",
@@ -103752,6 +103793,7 @@
     "stocks/37/3731f816317a89bd7ffee2582686cecf14bff6ec9f62404cfe670c903661b277.json",
     "stocks/7f/7f019a0c9a8d7adf500490e3d26e42ea6322cf6a84a9328fa9fb78ccb23f9b66.json",
     "stocks/10/10de576931851577d1c3008c99ba20d8d1e52a4dcfc6926642bfde6d8fcfa0dc.json",
+    "stocks/38/38e6502a5d7f2e167e77b0d8b9f1296094d6df9d89ee4faca284d0c8b0b42074.json",
     "stocks/de/deab4a8447d5c823cc76f739509f8989d189b08a3abe7387e412444cb6459e63.json",
     "stocks/4e/4e13a0acef6f2c8bf7d47f1ebc5309a83aa4adc3187c0bb2ddca208423b75bd3.json",
     "stocks/94/9472195971e93a32d6687fcd66d33b773d99a6ca867c66228f3d749ca3680ab5.json",
