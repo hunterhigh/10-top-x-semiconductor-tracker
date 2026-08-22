@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-22T00:15:44.161497+00:00",
+  "generated_at": "2026-08-22T03:15:52.448320+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2108,
-    "total_mentions": 24815,
+    "total_mentions": 24819,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-22T00:17:07.790392+00:00"
+    "prices_updated_at": "2026-08-22T03:17:13.759536+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -188,11 +188,11 @@
       "industry": "Optical Comms/CPO",
       "first_mention": "2025-10-25",
       "last_mention": "2026-08-21",
-      "total_mentions": 709,
+      "total_mentions": 710,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 590,
-        "ren_stocks": 58,
+        "ren_stocks": 59,
         "KawzInvests": 23,
         "michaelsikand": 19,
         "StockMKTNewz": 7,
@@ -223,7 +223,7 @@
         "price_symbol": "AAOI",
         "verification_status": "verified"
       },
-      "cashtag": "AAOI",
+      "cashtag": "$AAOI",
       "price_symbol": "AAOI",
       "exchange": "US",
       "currency": "USD",
@@ -233,11 +233,11 @@
       "industry": "Optical Modules",
       "first_mention": "2025-12-11",
       "last_mention": "2026-08-21",
-      "total_mentions": 675,
+      "total_mentions": 676,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 525,
-        "ren_stocks": 80,
+        "ren_stocks": 81,
         "michaelsikand": 35,
         "KawzInvests": 25,
         "octopusycc": 4,
@@ -606,6 +606,52 @@
       "hash": "ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae",
       "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json"
     },
+    "US:SPCX": {
+      "ticker": "SPCX",
+      "instrument": {
+        "instrument_id": "US:SPCX",
+        "display_code": "SPCX",
+        "display_name": "Space Exploration Technologies Corp",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SPACEX",
+          "SPCE",
+          "SPCX"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SPCX",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SPCX",
+      "price_symbol": "SPCX",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Space Exploration Technologies Corp",
+      "industry": null,
+      "first_mention": "2025-12-02",
+      "last_mention": "2026-08-21",
+      "total_mentions": 341,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 168,
+        "unusual_whales": 80,
+        "aleabitoreddit": 45,
+        "octopusycc": 16,
+        "michaelsikand": 11,
+        "jukan05": 9,
+        "ren_stocks": 7,
+        "KawzInvests": 5
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SPCX",
+      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
+      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+      "price_history_52w_status": "insufficient_history"
+    },
     "US:SNDK": {
       "ticker": "SNDK",
       "instrument": {
@@ -650,52 +696,6 @@
       "hash": "61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22",
       "path": "stocks/61/61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22.json",
       "price_history_52w_status": "ok"
-    },
-    "US:SPCX": {
-      "ticker": "SPCX",
-      "instrument": {
-        "instrument_id": "US:SPCX",
-        "display_code": "SPCX",
-        "display_name": "Space Exploration Technologies Corp",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SPACEX",
-          "SPCE",
-          "SPCX"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SPCX",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SPCX",
-      "price_symbol": "SPCX",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Space Exploration Technologies Corp",
-      "industry": null,
-      "first_mention": "2025-12-02",
-      "last_mention": "2026-08-20",
-      "total_mentions": 340,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 167,
-        "unusual_whales": 80,
-        "aleabitoreddit": 45,
-        "octopusycc": 16,
-        "michaelsikand": 11,
-        "jukan05": 9,
-        "ren_stocks": 7,
-        "KawzInvests": 5
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SPCX",
-      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
-      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
-      "price_history_52w_status": "insufficient_history"
     },
     "KRX:000660": {
       "ticker": "000660",
@@ -1184,7 +1184,8 @@
       "price_status": "ok",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
+      "price_history_52w_status": "ok"
     },
     "US:CIFR": {
       "ticker": "CIFR",
@@ -1310,8 +1311,7 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
     },
     "London LSE:IQE": {
       "ticker": "IQE",
@@ -1473,7 +1473,8 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
+      "price_history_52w_status": "ok"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -3040,12 +3041,12 @@
       "industry": null,
       "first_mention": "2026-06-10",
       "last_mention": "2026-08-21",
-      "total_mentions": 43,
+      "total_mentions": 44,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 12,
         "jukan05": 10,
-        "unusual_whales": 9,
+        "unusual_whales": 10,
         "zephyr_z9": 4,
         "michaelsikand": 4,
         "aleabitoreddit": 2,
@@ -3334,7 +3335,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:CBRS": {
       "ticker": "CBRS",
@@ -7433,7 +7435,8 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
+      "price_history_52w_status": "ok"
     },
     "US:QBTS": {
       "ticker": "QBTS",
@@ -102417,8 +102420,8 @@
     "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
     "stocks/1a/1abfdf6ed893021c20c87f30c55ee285c684bfe175359d2e53c14494055660c3.json",
     "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
-    "stocks/61/61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22.json",
     "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+    "stocks/61/61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22.json",
     "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
     "stocks/02/02414f773ee9eafd8cde41ffccff81f8001057131fb34adc9710353b00a9172e.json",
     "stocks/e2/e2e1c8716b63c27f43b3354bb7d85d340ff7c81a665050cba2b254d319021844.json",
