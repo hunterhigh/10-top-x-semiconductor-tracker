@@ -25,12 +25,12 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-08-23",
-  "total_mentions": 926,
+  "total_mentions": 928,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 526,
-    "StockMKTNewz": 113,
+    "StockMKTNewz": 114,
     "jukan05": 97,
-    "zephyr_z9": 52,
+    "zephyr_z9": 53,
     "unusual_whales": 46,
     "octopusycc": 26,
     "KawzInvests": 24,
@@ -39,8 +39,8 @@
     "DJTRadar": 5
   },
   "total_mentions_by_signal_type": {
-    "opinion": 762,
-    "news": 113,
+    "opinion": 763,
+    "news": 114,
     "flow": 46,
     "disclosure": 5
   },
@@ -21726,6 +21726,56 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2091527293005189613",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-23",
+      "created_at": "2026-08-23T10:05:40-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "cherry-picks benchmarks",
+        "10x throughput claim only valid at extremely high interactivities not typical serving conditions",
+        "labs generally serve at 50-60 tokens/s making 10x Blackwell claim misleading"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Nvidia",
+      "text": "\"The Rubin will 10x Blackwell tokens.\"\nThis isn't true. Nvidia always likes to cherry-pick their benchmarks, and 10x throughput will be achieved only at extremely high interactivities (tokens/s/user)\nLabs generally serve at 50-60 tokens/s https://t.co/IoFmKu9YeL",
+      "url": "https://x.com/zephyr_z9/status/2091527293005189613",
+      "kind": "post",
+      "engagement": {
+        "views": 16552,
+        "likes": 77,
+        "reposts": 5,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2091537417106845752",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-23",
+      "created_at": "2026-08-23T10:45:53-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "Nvidia $NVDA earnings week is finally here https://t.co/Dhew7mPFk1",
+      "url": "https://x.com/StockMKTNewz/status/2091537417106845752",
+      "kind": "post",
+      "engagement": {
+        "views": 16523,
+        "likes": 38,
+        "reposts": 3,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -22832,11 +22882,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-23T12:17:27.473950+00:00",
+  "price_updated_at": "2026-08-23T15:16:29.997889+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-24",
     "asof": "2026-08-23",
-    "attempted_at": "2026-08-23T12:17:25.812107+00:00",
+    "attempted_at": "2026-08-23T15:16:28.948077+00:00",
     "status": "ok",
     "first_available_date": "2025-08-25",
     "last_available_date": "2026-08-21",
@@ -22847,7 +22897,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-23T12:17:25.812107+00:00",
+    "checked_at": "2026-08-23T15:16:28.948077+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
