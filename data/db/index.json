@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-23T00:15:19.339721+00:00",
+  "generated_at": "2026-08-23T03:16:33.080065+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2110,
-    "total_mentions": 24860,
+    "total_mentions": 24864,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-23T00:16:33.661682+00:00"
+    "prices_updated_at": "2026-08-23T03:18:11.903825+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -90,7 +90,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "Nvidia",
+      "cashtag": "nvidia",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -100,7 +100,7 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-08-22",
-      "total_mentions": 922,
+      "total_mentions": 923,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 526,
@@ -110,8 +110,8 @@
         "unusual_whales": 46,
         "octopusycc": 26,
         "KawzInvests": 24,
+        "michaelsikand": 18,
         "ren_stocks": 17,
-        "michaelsikand": 17,
         "DJTRadar": 5
       },
       "price_status": "ok",
@@ -156,7 +156,7 @@
         "michaelsikand": 1,
         "KawzInvests": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -178,7 +178,7 @@
         "price_symbol": "LITE",
         "verification_status": "verified"
       },
-      "cashtag": "$LITE",
+      "cashtag": "LITE",
       "price_symbol": "LITE",
       "exchange": "US",
       "currency": "USD",
@@ -187,14 +187,14 @@
       "company": "Lumentum",
       "industry": "Optical Comms/CPO",
       "first_mention": "2025-10-25",
-      "last_mention": "2026-08-21",
-      "total_mentions": 710,
+      "last_mention": "2026-08-22",
+      "total_mentions": 711,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 590,
         "ren_stocks": 59,
         "KawzInvests": 23,
-        "michaelsikand": 19,
+        "michaelsikand": 20,
         "StockMKTNewz": 7,
         "zephyr_z9": 5,
         "octopusycc": 3,
@@ -739,7 +739,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1010,7 +1010,7 @@
         "ren_stocks": 5,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -2081,7 +2081,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2781,7 +2782,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -3014,6 +3016,45 @@
       "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
       "price_history_52w_status": "ok"
     },
+    "US:SONY": {
+      "ticker": "SONY",
+      "instrument": {
+        "instrument_id": "US:SONY",
+        "display_code": "SONY",
+        "display_name": "Sony Group Corp",
+        "display_market": "NYSE",
+        "aliases": [
+          "SONY"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SONY",
+        "verification_status": "verified"
+      },
+      "cashtag": "Sony",
+      "price_symbol": "SONY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Sony Group Corp",
+      "industry": null,
+      "first_mention": "2026-03-22",
+      "last_mention": "2026-08-22",
+      "total_mentions": 45,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 38,
+        "StockMKTNewz": 5,
+        "aleabitoreddit": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SONY",
+      "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
+    },
     "UNVERIFIED:ANTHROPIC": {
       "ticker": "ANTHROPIC",
       "instrument": {
@@ -3056,45 +3097,6 @@
       "instrument_id": "UNVERIFIED:ANTHROPIC",
       "hash": "8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d",
       "path": "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json"
-    },
-    "US:SONY": {
-      "ticker": "SONY",
-      "instrument": {
-        "instrument_id": "US:SONY",
-        "display_code": "SONY",
-        "display_name": "Sony Group Corp",
-        "display_market": "NYSE",
-        "aliases": [
-          "SONY"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SONY",
-        "verification_status": "verified"
-      },
-      "cashtag": "Sony",
-      "price_symbol": "SONY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Sony Group Corp",
-      "industry": null,
-      "first_mention": "2026-03-22",
-      "last_mention": "2026-08-21",
-      "total_mentions": 43,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "michaelsikand": 36,
-        "StockMKTNewz": 5,
-        "aleabitoreddit": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SONY",
-      "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
     },
     "US:UPWK": {
       "ticker": "UPWK",
@@ -4208,8 +4210,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -13445,8 +13446,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "UNVERIFIED:8147": {
       "ticker": "8147",
@@ -102588,8 +102588,8 @@
     "stocks/4a/4a5a6ddbf7f22e56529177f4235382a7f81cdcdcaa7b8e25768696800604afad.json",
     "stocks/ed/eddb5f9f1b7f013ad1edfc42e7dd2a444297fb5876848cbe37acc8fe287358d5.json",
     "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
-    "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+    "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/ec/ec4d2fb06ecded17e0181bd232c8a948d5525d3666f2be2300620b9d697469a1.json",
     "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/ff/ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497.json",
