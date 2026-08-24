@@ -1,6 +1,6 @@
 {
   "ticker": "UBER",
-  "cashtag": "$UBER",
+  "cashtag": "Uber",
   "instrument": {
     "instrument_id": "US:UBER",
     "display_code": "UBER",
@@ -24,16 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-24",
-  "last_mention": "2026-08-21",
-  "total_mentions": 64,
+  "last_mention": "2026-08-23",
+  "total_mentions": 65,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 34,
     "StockMKTNewz": 26,
     "unusual_whales": 3,
-    "ren_stocks": 1
+    "ren_stocks": 1,
+    "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 35,
+    "opinion": 36,
     "news": 26,
     "flow": 3
   },
@@ -1553,6 +1554,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2091719046765199505",
+      "blogger_id": "michaelsikand",
+      "date": "2026-08-23",
+      "created_at": "2026-08-23T22:47:37-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Uber",
+      "text": "@ParadisLabs I like Uber.",
+      "url": "https://x.com/michaelsikand/status/2091719046765199505",
+      "kind": "reply",
+      "engagement": {
+        "views": 512,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2303,13 +2327,13 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-22T21:16:57.585909+00:00",
+  "price_updated_at": "2026-08-24T03:16:56.886492+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "UBER",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-22T21:16:56.908474+00:00",
+    "checked_at": "2026-08-24T03:16:56.051041+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
