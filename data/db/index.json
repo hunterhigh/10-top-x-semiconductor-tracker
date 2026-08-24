@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-24T03:15:50.862431+00:00",
+  "generated_at": "2026-08-24T06:16:55.070174+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2124,
-    "total_mentions": 24994,
+    "total_tickers": 2125,
+    "total_mentions": 24999,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2124,
+      "files": 2125,
       "shards": 256,
       "max_shard_width": 16,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-24T03:17:11.886638+00:00"
+    "prices_updated_at": "2026-08-24T06:18:05.013885+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -90,7 +90,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "NVDA",
+      "cashtag": "Nemotron",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -99,19 +99,19 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-08-23",
-      "total_mentions": 931,
+      "last_mention": "2026-08-24",
+      "total_mentions": 933,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 526,
-        "StockMKTNewz": 114,
+        "StockMKTNewz": 115,
         "jukan05": 97,
         "zephyr_z9": 53,
         "unusual_whales": 46,
         "KawzInvests": 26,
         "octopusycc": 26,
+        "michaelsikand": 20,
         "ren_stocks": 19,
-        "michaelsikand": 19,
         "DJTRadar": 5
       },
       "price_status": "ok",
@@ -4251,7 +4251,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -5521,6 +5522,46 @@
       "hash": "5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb",
       "path": "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json"
     },
+    "US:MRNA": {
+      "ticker": "MRNA",
+      "instrument": {
+        "instrument_id": "US:MRNA",
+        "display_code": "MRNA",
+        "display_name": "Moderna, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "MRNA"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "MRNA",
+        "verification_status": "verified"
+      },
+      "cashtag": "mrna",
+      "price_symbol": "MRNA",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Moderna, Inc.",
+      "industry": null,
+      "first_mention": "2026-06-18",
+      "last_mention": "2026-08-24",
+      "total_mentions": 25,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 14,
+        "unusual_whales": 8,
+        "ren_stocks": 1,
+        "aleabitoreddit": 1,
+        "octopusycc": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:MRNA",
+      "hash": "54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc",
+      "path": "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json"
+    },
     "US:RIOT": {
       "ticker": "RIOT",
       "instrument": {
@@ -5597,45 +5638,6 @@
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
       "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
-    },
-    "US:MRNA": {
-      "ticker": "MRNA",
-      "instrument": {
-        "instrument_id": "US:MRNA",
-        "display_code": "MRNA",
-        "display_name": "Moderna, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "MRNA"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "MRNA",
-        "verification_status": "verified"
-      },
-      "cashtag": "$MRNA",
-      "price_symbol": "MRNA",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Moderna, Inc.",
-      "industry": null,
-      "first_mention": "2026-06-18",
-      "last_mention": "2026-08-23",
-      "total_mentions": 24,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 14,
-        "unusual_whales": 8,
-        "ren_stocks": 1,
-        "aleabitoreddit": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:MRNA",
-      "hash": "54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc",
-      "path": "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json"
     },
     "US:TTD": {
       "ticker": "TTD",
@@ -6250,8 +6252,7 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
     },
     "US:IONQ": {
       "ticker": "IONQ",
@@ -6982,6 +6983,45 @@
       "hash": "93233d2d36ad8e2a9c9d13f4adef20cb01359ae383d141b0b4e0b89d8b669c5f",
       "path": "stocks/93/93233d2d36ad8e2a9c9d13f4adef20cb01359ae383d141b0b4e0b89d8b669c5f.json"
     },
+    "UNVERIFIED:GOLD": {
+      "ticker": "GOLD",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:GOLD",
+        "display_code": "GOLD",
+        "display_name": "Gold",
+        "display_market": "Market unverified",
+        "aliases": [
+          "GOLD"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "黄金",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Gold",
+      "industry": null,
+      "first_mention": "2026-02-23",
+      "last_mention": "2026-08-24",
+      "total_mentions": 18,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 11,
+        "octopusycc": 4,
+        "StockMKTNewz": 2,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:GOLD",
+      "hash": "1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca",
+      "path": "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json"
+    },
     "US:MXL": {
       "ticker": "MXL",
       "instrument": {
@@ -7214,45 +7254,6 @@
       "instrument_id": "UNVERIFIED:FIG",
       "hash": "bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927",
       "path": "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json"
-    },
-    "UNVERIFIED:GOLD": {
-      "ticker": "GOLD",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:GOLD",
-        "display_code": "GOLD",
-        "display_name": "Gold",
-        "display_market": "Market unverified",
-        "aliases": [
-          "GOLD"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "gold",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Gold",
-      "industry": null,
-      "first_mention": "2026-02-23",
-      "last_mention": "2026-08-22",
-      "total_mentions": 17,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "unusual_whales": 11,
-        "octopusycc": 3,
-        "StockMKTNewz": 2,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:GOLD",
-      "hash": "1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca",
-      "path": "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json"
     },
     "UNVERIFIED:UNIMICRON": {
       "ticker": "UNIMICRON",
@@ -62621,6 +62622,42 @@
       "hash": "411c50bd20873145c42e0181afc71ea8062919556c4c4dd6023a065cda56a1f5",
       "path": "stocks/41/411c50bd20873145c42e0181afc71ea8062919556c4c4dd6023a065cda56a1f5.json"
     },
+    "UNVERIFIED:PERPLEXITY": {
+      "ticker": "PERPLEXITY",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:PERPLEXITY",
+        "display_code": "PERPLEXITY",
+        "display_name": "Perplexity AI",
+        "display_market": "Market unverified",
+        "aliases": [
+          "PERPLEXITY"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Perplexity",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Perplexity AI",
+      "industry": null,
+      "first_mention": "2026-08-24",
+      "last_mention": "2026-08-24",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:PERPLEXITY",
+      "hash": "d7aebc471a84f1d5b0990a86a26146bdae752887cc8be62fa84a3dfe951d7edf",
+      "path": "stocks/d7/d7aebc471a84f1d5b0990a86a26146bdae752887cc8be62fa84a3dfe951d7edf.json"
+    },
     "UNVERIFIED:PH": {
       "ticker": "PH",
       "instrument": {
@@ -82288,6 +82325,9 @@
     "$PEP": [
       "US:PEP"
     ],
+    "$PERPLEXITY": [
+      "UNVERIFIED:PERPLEXITY"
+    ],
     "$PESI": [
       "US:PESI"
     ],
@@ -92117,6 +92157,9 @@
     "NEE": [
       "US:NEE"
     ],
+    "NEMOTRON": [
+      "US:NVDA"
+    ],
     "NEO": [
       "UNVERIFIED:NEO"
     ],
@@ -92975,6 +93018,12 @@
     ],
     "PERMIAN RESOURCES": [
       "UNVERIFIED:PR"
+    ],
+    "PERPLEXITY": [
+      "UNVERIFIED:PERPLEXITY"
+    ],
+    "PERPLEXITY AI": [
+      "UNVERIFIED:PERPLEXITY"
     ],
     "PERSHING SQUARE HOLDINGS": [
       "UNVERIFIED:PS"
@@ -98417,6 +98466,9 @@
     "UNVERIFIED:PEG": [
       "UNVERIFIED:PEG"
     ],
+    "UNVERIFIED:PERPLEXITY": [
+      "UNVERIFIED:PERPLEXITY"
+    ],
     "UNVERIFIED:PFE": [
       "UNVERIFIED:PFE"
     ],
@@ -103168,6 +103220,7 @@
       "UNVERIFIED:MEITUAN"
     ],
     "黄金": [
+      "UNVERIFIED:GOLD",
       "US:GLD"
     ],
     "닉스": [
@@ -103314,9 +103367,9 @@
     "stocks/93/930bbbb049ccbe5101c15ef46aaf9bb48b8fd614fdf88632debd8fd118f08e02.json",
     "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json",
+    "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json",
     "stocks/83/83fab30ad75a6f1bb8358b5312894c42444816b359fb71cb0c403aa7816288a0.json",
     "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
-    "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json",
     "stocks/3f/3fa9b223f5aaf5b036d1586b736f725970c8bcfc10cb31effdd7d845f34f81ec.json",
     "stocks/1f/1fc3a860e48d7950c68bac9172ee920ff96b64d32abc138353cfc6707d864af6.json",
     "stocks/35/359789d49d1b61acb217459efdbca623373f7e9be4e57e56745d34a3e8159775.json",
@@ -103352,13 +103405,13 @@
     "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
     "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json",
     "stocks/93/93233d2d36ad8e2a9c9d13f4adef20cb01359ae383d141b0b4e0b89d8b669c5f.json",
+    "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json",
     "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
     "stocks/18/18850cdcf0919ec7a7ac62aefc898c8fd2c5c531ac35b5123ce5a61bec556dbc.json",
     "stocks/7d/7d629440cccf6cb28cf467399e2d262ff5e2556e96b32c0fc9a169317e6d2dcb.json",
     "stocks/92/92e1fce370e2fb96057a9993f65b7502e14b08d10705e20b2200d2f6486cd6ad.json",
     "stocks/a1/a1a8dd5b8582b39ae0ac19aedd4733f54dfd1543f14cac9adfedd32ed115473c.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
-    "stocks/1c/1cb55ab67dd5927cf6b775a99919b7e32f339afba4e845f99b2b6739a4f451ca.json",
     "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json",
     "stocks/b6/b6c41dd354b0f46f94d740701812e622f9c9e0f0ff21237eb56c080e564a1217.json",
     "stocks/40/40aa8af4b789bfe5ba8f04ea4586a0fad64733a2a1a0e23320542cedc7938c21.json",
@@ -104881,6 +104934,7 @@
     "stocks/20/20b0420ee4d748118b3f24025f1a701546bfb7e8e22c0a903fb2704b1ca14839.json",
     "stocks/49/491c27c888b6e0c4747d5242e81bdf125f848f853f389902c0f0d9d7bee6dbaf.json",
     "stocks/41/411c50bd20873145c42e0181afc71ea8062919556c4c4dd6023a065cda56a1f5.json",
+    "stocks/d7/d7aebc471a84f1d5b0990a86a26146bdae752887cc8be62fa84a3dfe951d7edf.json",
     "stocks/14/14dcfc1d3683dc4f6373301027a3515faa90a0755e1bb565382c08379d898a1b.json",
     "stocks/05/05a3b8872e3f057859cccf4da20a9f5b823f3620d13e50aadb569f3cf412a668.json",
     "stocks/37/3796947ca7f73a30b831de6863126b8cab746fc15857982cc610ce8a3c1e4c35.json",
