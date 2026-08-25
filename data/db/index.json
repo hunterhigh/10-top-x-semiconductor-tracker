@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-25T06:17:40.860493+00:00",
+  "generated_at": "2026-08-25T09:16:44.889279+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2138,
-    "total_mentions": 25163,
+    "total_mentions": 25167,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-25T06:19:10.012340+00:00"
+    "prices_updated_at": "2026-08-25T09:18:22.199913+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -1741,11 +1741,11 @@
       "company": "ChangXin Memory Technologies",
       "industry": null,
       "first_mention": "2026-02-03",
-      "last_mention": "2026-08-22",
-      "total_mentions": 108,
+      "last_mention": "2026-08-25",
+      "total_mentions": 109,
       "blogger_count": 7,
       "total_mentions_by_blogger": {
-        "jukan05": 45,
+        "jukan05": 46,
         "zephyr_z9": 40,
         "StockMKTNewz": 12,
         "aleabitoreddit": 7,
@@ -2622,8 +2622,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:AVAV": {
       "ticker": "AVAV",
@@ -3585,8 +3584,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:FLNC": {
       "ticker": "FLNC",
@@ -3855,6 +3853,49 @@
       "hash": "47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6",
       "path": "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json"
     },
+    "UNVERIFIED:KOSPI": {
+      "ticker": "KOSPI",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:KOSPI",
+        "display_code": "KOSPI",
+        "display_name": "Korea Composite Stock Price Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "KOSPI"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$KOSPI",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Korea Composite Stock Price Index",
+      "industry": null,
+      "first_mention": "2026-02-26",
+      "last_mention": "2026-08-25",
+      "total_mentions": 38,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 16,
+        "aleabitoreddit": 7,
+        "StockMKTNewz": 7,
+        "jukan05": 3,
+        "michaelsikand": 2,
+        "octopusycc": 1,
+        "KawzInvests": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:KOSPI",
+      "hash": "d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63",
+      "path": "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json"
+    },
     "US:BABA": {
       "ticker": "BABA",
       "instrument": {
@@ -4052,49 +4093,6 @@
       "instrument_id": "US:QQQ",
       "hash": "062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b",
       "path": "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json"
-    },
-    "UNVERIFIED:KOSPI": {
-      "ticker": "KOSPI",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:KOSPI",
-        "display_code": "KOSPI",
-        "display_name": "Korea Composite Stock Price Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "KOSPI"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$KOSPI",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Korea Composite Stock Price Index",
-      "industry": null,
-      "first_mention": "2026-02-26",
-      "last_mention": "2026-08-20",
-      "total_mentions": 37,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 15,
-        "aleabitoreddit": 7,
-        "StockMKTNewz": 7,
-        "jukan05": 3,
-        "michaelsikand": 2,
-        "octopusycc": 1,
-        "KawzInvests": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:KOSPI",
-      "hash": "d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63",
-      "path": "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -6295,7 +6293,8 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
+      "price_history_52w_status": "ok"
     },
     "US:IONQ": {
       "ticker": "IONQ",
@@ -8508,7 +8507,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -12718,8 +12718,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:BTBT": {
       "ticker": "BTBT",
@@ -13612,6 +13611,43 @@
       "instrument_id": "US:VSH",
       "hash": "f4cb1dbad7b76e4279025e561d6306b3a4dc3f433cd03c02c3a5e4814edc48c3",
       "path": "stocks/f4/f4cb1dbad7b76e4279025e561d6306b3a4dc3f433cd03c02c3a5e4814edc48c3.json"
+    },
+    "TSE:2802": {
+      "ticker": "2802",
+      "instrument": {
+        "instrument_id": "TSE:2802",
+        "display_code": "2802",
+        "display_name": "Ajinomoto Co., Inc.",
+        "display_market": "Tokyo",
+        "aliases": [
+          "2802"
+        ],
+        "market": "Tokyo",
+        "country": "JP",
+        "currency": "JPY",
+        "price_symbol": "2802.T",
+        "verification_status": "verified"
+      },
+      "cashtag": "Ajinomoto",
+      "price_symbol": "2802.T",
+      "exchange": "Tokyo",
+      "currency": "JPY",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Ajinomoto Co., Inc.",
+      "industry": null,
+      "first_mention": "2026-04-11",
+      "last_mention": "2026-08-25",
+      "total_mentions": 7,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 5,
+        "jukan05": 2
+      },
+      "price_status": "unavailable",
+      "instrument_id": "TSE:2802",
+      "hash": "163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424",
+      "path": "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json"
     },
     "TSE:4062": {
       "ticker": "4062",
@@ -15523,43 +15559,6 @@
       "instrument_id": "US:Z",
       "hash": "4d791768019037d11d413c242325f39ea492c84d40b227efc0e1b2e0914dcba7",
       "path": "stocks/4d/4d791768019037d11d413c242325f39ea492c84d40b227efc0e1b2e0914dcba7.json"
-    },
-    "TSE:2802": {
-      "ticker": "2802",
-      "instrument": {
-        "instrument_id": "TSE:2802",
-        "display_code": "2802",
-        "display_name": "Ajinomoto Co., Inc.",
-        "display_market": "Tokyo",
-        "aliases": [
-          "2802"
-        ],
-        "market": "Tokyo",
-        "country": "JP",
-        "currency": "JPY",
-        "price_symbol": "2802.T",
-        "verification_status": "verified"
-      },
-      "cashtag": "2802",
-      "price_symbol": "2802.T",
-      "exchange": "Tokyo",
-      "currency": "JPY",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Ajinomoto Co., Inc.",
-      "industry": null,
-      "first_mention": "2026-04-11",
-      "last_mention": "2026-07-20",
-      "total_mentions": 6,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 5,
-        "jukan05": 1
-      },
-      "price_status": "unavailable",
-      "instrument_id": "TSE:2802",
-      "hash": "163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424",
-      "path": "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json"
     },
     "UNVERIFIED:011070": {
       "ticker": "011070",
@@ -21178,6 +21177,42 @@
       "hash": "feec4e4eb468cfdc68515e4a9992aeea4bbdf5f2544e58b686734495a6c5c112",
       "path": "stocks/fe/feec4e4eb468cfdc68515e4a9992aeea4bbdf5f2544e58b686734495a6c5c112.json"
     },
+    "UNVERIFIED:1810": {
+      "ticker": "1810",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:1810",
+        "display_code": "1810",
+        "display_name": "Xiaomi Corporation",
+        "display_market": "Market unverified",
+        "aliases": [
+          "1810"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Xiaomi",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Xiaomi Corporation",
+      "industry": null,
+      "first_mention": "2026-07-02",
+      "last_mention": "2026-08-25",
+      "total_mentions": 4,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "jukan05": 4
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:1810",
+      "hash": "da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f",
+      "path": "stocks/da/da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f.json"
+    },
     "UNVERIFIED:2316": {
       "ticker": "2316",
       "instrument": {
@@ -25969,42 +26004,6 @@
       "instrument_id": "UNVERIFIED:138080",
       "hash": "497b015f2be37a7e359b9540e4507182c013d3ec8ad17ad31af47ab9a6e45fbd",
       "path": "stocks/49/497b015f2be37a7e359b9540e4507182c013d3ec8ad17ad31af47ab9a6e45fbd.json"
-    },
-    "UNVERIFIED:1810": {
-      "ticker": "1810",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:1810",
-        "display_code": "1810",
-        "display_name": "Xiaomi Corporation",
-        "display_market": "Market unverified",
-        "aliases": [
-          "1810"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Xiaomi",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Xiaomi Corporation",
-      "industry": null,
-      "first_mention": "2026-07-02",
-      "last_mention": "2026-08-10",
-      "total_mentions": 3,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "jukan05": 3
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:1810",
-      "hash": "da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f",
-      "path": "stocks/da/da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f.json"
     },
     "UNVERIFIED:2308": {
       "ticker": "2308",
@@ -85770,6 +85769,7 @@
       "UNVERIFIED:AI_INFRA"
     ],
     "AJINOMOTO": [
+      "TSE:2802",
       "UNVERIFIED:AJINOMOTO"
     ],
     "AJINOMOTO CO., INC.": [
@@ -103968,12 +103968,12 @@
     "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
     "stocks/47/472b962c9af2ce642df8e709616591638a210698bc39c0d57918b6a53d10bccd.json",
     "stocks/47/47e27a0233a552eb26b22d4201106820298eaf44e6ae88f7d20ea3bf81b7c3b6.json",
+    "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
     "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
     "stocks/a7/a79a3d0d677e4415296fd8002f78fb73693628d23b38393374c0de2b72fdfb3c.json",
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
     "stocks/7e/7e3b8694b44e228974d2e6ba9dc8baadf9707affbc6894f44fdebd591c97d17a.json",
     "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json",
-    "stocks/d0/d0869b4e2c7533ac2a8b4d25cfea1d883c48736ce135fe406ef5abfd94b94e63.json",
     "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
     "stocks/79/79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1.json",
     "stocks/8b/8bc785f93b177707e0eadd9c4c2cf525fd972adb5a7242765b906aa955e1dc70.json",
@@ -104226,6 +104226,7 @@
     "stocks/15/15e67194849c7e8a675cc51621360bff4b8c03665a927a7fa233a768d58693aa.json",
     "stocks/a6/a626b4d610880a5afb1f2dd3dcea3cfeef98f943260661532d828453f3339da7.json",
     "stocks/f4/f4cb1dbad7b76e4279025e561d6306b3a4dc3f433cd03c02c3a5e4814edc48c3.json",
+    "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json",
     "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
     "stocks/1d/1d69a17fec921fdd44691f4ae3f8447f24b2ae85821beed72bb9ddd19622db29.json",
     "stocks/3b/3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86.json",
@@ -104278,7 +104279,6 @@
     "stocks/a8/a86de389d7782e31057d2135ea2ca8b6531118b45a7d8d13d7bf8869f00e1576.json",
     "stocks/79/793d2a063633b2d402e3e7ec15aa51726bbcf4e0a647f0efdf30e876a2da2e9f.json",
     "stocks/4d/4d791768019037d11d413c242325f39ea492c84d40b227efc0e1b2e0914dcba7.json",
-    "stocks/16/163ba3a685a401a774749700b29e4a1489227613948eff44f8f185c1776ba424.json",
     "stocks/81/817dc8e242cb37b7277fcc1ed11ae952e3faee92262074905dc6c85d1484fda6.json",
     "stocks/68/68d264851fcd8c49491b6102276ab9aba50822d302c3f536ac12c26de97a6798.json",
     "stocks/e8/e8719cceef1eb1a41a15c499b6397d870a9bd12b00a39140014a8979159567ca.json",
@@ -104432,6 +104432,7 @@
     "stocks/66/66581c9915cc0c476f14c8f238c195087846bb01bc9c5b74a8795ab0413f9562.json",
     "stocks/e2/e2f4c0594ce1aac9858ff6774ad64e25e476dd6d6516e8857b4baedec8916600.json",
     "stocks/fe/feec4e4eb468cfdc68515e4a9992aeea4bbdf5f2544e58b686734495a6c5c112.json",
+    "stocks/da/da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f.json",
     "stocks/2f/2fe40505fd86f4db32731c8120baaaf87129fc208c3177fc714dad3c38217c1a.json",
     "stocks/28/28b90f6f84308df00989cb06100ff1b481206c93215af9ded6dfd90067045bdc.json",
     "stocks/5c/5cf967c4f523af56a5b67b380273e992584b078d74d81d42ffb44d3becf19bc1.json",
@@ -104563,7 +104564,6 @@
     "stocks/5b/5b318d7b758b1b917605dea8f0f877382e109f71cdba90d9be3f656755eae47a.json",
     "stocks/aa/aa117443f77140b29a21419aa9f0bdb7ef01c905e87a337388bbd3ed6840451c.json",
     "stocks/49/497b015f2be37a7e359b9540e4507182c013d3ec8ad17ad31af47ab9a6e45fbd.json",
-    "stocks/da/da27ac86961378502f8a939f013b2eb2caf689a1a8f89a1144730e837ae7921f.json",
     "stocks/a3/a32acd91d649e11b59d047a6da8a9049a5f09e7aa637bd4455bba231077977f8.json",
     "stocks/8e/8e56c2c636ec26b889fc6c76ec530224f09098e840f880980c669be821a847dc.json",
     "stocks/cc/cc7d2b141e4bd0f6e8c44392e18de346e984a4f35023bcd7abd9bbb1adb280e5.json",
