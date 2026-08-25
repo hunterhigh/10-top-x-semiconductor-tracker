@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-08-25T03:18:25.230240+00:00",
+  "generated_at": "2026-08-25T06:19:26.264836+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2136,
-  "index_sha256": "595318a41e045c368febe998a13e029b16de66fe9eba8d796e4770942de7121d",
+  "stock_count": 2138,
+  "index_sha256": "2925d1fb19380e2f2a28eb32bb846b1773cebaaad45966450d476ac4eb201f8f",
   "stocks_root": "stocks",
   "price_cache_count": 880,
   "price_cache_index_sha256": "21b42699c6d9573ae99030f575e12cbf63d32827f972ba95d41f4e548a5ce91d",
   "price_cache_root": "prices_cache",
-  "tickers": 2136,
-  "total_mentions": 25155,
+  "tickers": 2138,
+  "total_mentions": 25163,
   "priced_tickers": 707,
   "date_range": [
     "2025-07-02",
-    "2026-08-24"
+    "2026-08-25"
   ],
   "size_mb": 45.5,
   "tracked_bloggers": 10,
@@ -21,9 +21,9 @@
     "aleabitoreddit": 15443,
     "unusual_whales": 770,
     "StockMKTNewz": 4656,
-    "ren_stocks": 1037,
+    "ren_stocks": 1044,
     "octopusycc": 572,
-    "zephyr_z9": 469,
+    "zephyr_z9": 470,
     "KawzInvests": 435,
     "michaelsikand": 516,
     "jukan05": 1061,
@@ -33,15 +33,15 @@
   "instrument_coverage": {
     "verified": 927,
     "identified": 336,
-    "unverified": 873,
-    "market_pending_review": 1209,
-    "price_unavailable_or_unverified": 907
+    "unverified": 875,
+    "market_pending_review": 1211,
+    "price_unavailable_or_unverified": 909
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2136,
+      "files": 2138,
       "shards": 256,
       "max_shard_width": 17,
       "warning": false,
@@ -58,17 +58,17 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 1063,
+    "tickers": 1062,
     "status_counts": {
-      "ok": 459,
-      "partial": 16,
-      "unverified_symbol": 582,
+      "ok": 455,
+      "partial": 18,
+      "unverified_symbol": 583,
       "unavailable": 6
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 14,
-      "unverified_instrument_identity": 582,
+      "EODHD 402 (account quota or subscription limit)": 16,
+      "unverified_instrument_identity": 583,
       "no_daily_closes_returned": 1,
       "provider_symbol_not_found_after_search": 2,
       "EODHD 402 (search capacity unavailable)": 1,
@@ -82,22 +82,23 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-08-24",
-    "target_start": "2025-08-25",
-    "tickers": 38,
+    "asof": "2026-08-25",
+    "target_start": "2025-08-26",
+    "tickers": 36,
     "status_counts": {
-      "ok": 35,
+      "ok": 33,
       "insufficient_history": 2,
       "unavailable": 1
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 37,
+      "supported": 33,
+      "deferred": 2,
       "unsupported": 1
     },
     "retry_queue": 1,
     "scope_counts": {
-      "monthly_consensus": 35,
+      "monthly_consensus": 33,
       "top_pick_cards": 10,
       "top_pick_unique": 10,
       "overlap": 7
