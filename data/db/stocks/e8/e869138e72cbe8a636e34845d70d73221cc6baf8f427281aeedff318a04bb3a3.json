@@ -1,6 +1,6 @@
 {
   "ticker": "000660",
-  "cashtag": "SK hynix",
+  "cashtag": "SK Hynix",
   "instrument": {
     "instrument_id": "KRX:000660",
     "display_code": "000660",
@@ -27,11 +27,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-08-20",
-  "total_mentions": 334,
+  "last_mention": "2026-08-24",
+  "total_mentions": 335,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 117,
-    "jukan05": 100,
+    "jukan05": 101,
     "StockMKTNewz": 41,
     "ren_stocks": 27,
     "zephyr_z9": 19,
@@ -41,7 +41,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 280,
+    "opinion": 281,
     "news": 41,
     "flow": 13
   },
@@ -8073,6 +8073,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2091999562340643274",
+      "blogger_id": "jukan05",
+      "date": "2026-08-24",
+      "created_at": "2026-08-24T17:22:17-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK Hynix",
+      "text": "Samsung, SK Hynix Step Up NAND Investment in China…Capex to Continue Through Next Year\n\nKorean memory chipmakers are stepping up investment in their NAND flash production bases in China. Samsung Electronics has detailed plans to convert its local production lines to its most advanced NAND technology this year and next, while SK Hynix is also expected to secure around 30,000 wafers per month of production capacity between the second half of this year and next year.\n\nAccording to industry sources on the 24th, Samsung Electronics and SK Hynix plan to actively carry out equipment investments for their NAND mass-production lines in China through next year.\n\nSamsung Electronics has been investing in converting its Xi’an X2 line in China to V9 NAND since the first half of this year. Samsung’s V9 NAND is a cutting-edge product with roughly 280 layers of stacked cells, and the company is expected to secure monthly production capacity of around 40,000–50,000 wafers.\n\nSamsung is also said to have recently finalized a supplementary investment plan aimed at strengthening V9 NAND production at the fab. The plan primarily involves bringing in additional equipment for the etching process, a critical step in NAND manufacturing.\n\nEtching is a semiconductor manufacturing process in which specific materials are removed from a wafer on which circuit patterns have been formed. In NAND, where hundreds of layers of cells—the smallest units used to store data—must be stacked, extremely deep channel holes have to be etched to allow electrons to move through the structure. This makes etching technology particularly important.\n\nSamsung therefore plans to begin supplementary investment from the second half of next year to ensure stable mass production of V9 NAND. Purchase orders for the relevant equipment are expected to be finalized around the end of this year.\n\nOne semiconductor industry source said, “Samsung Electronics plans to carry out investment in stages this year and next year to expand its most advanced NAND production capacity in China,” adding that the move is “a response to surging demand for advanced NAND products from AI servers and other applications.”\n\nSK Hynix, meanwhile, has been investing in equipment upgrades for more advanced NAND products at its Dalian Fab 2 since the third quarter of this year. The investment currently under discussion is understood to target production capacity of around 30,000 wafers per month.\n\nThe Dalian fab was acquired by SK Hynix as part of its acquisition of Intel’s NAND business in the second half of 2020. SK Hynix later held a groundbreaking ceremony for Dalian Fab 2 in 2022 to expand NAND production capacity, but subsequently postponed equipment investment due to market conditions and other factors.\n\nAnother industry source said, “SK Hynix plans to invest in NAND equipment at Dalian Fab 2 through the first half of next year, targeting monthly capacity of around 30,000 wafers,” adding that “key manufacturing equipment, including etching tools, will begin arriving in earnest starting next month.”",
+      "url": "https://x.com/jukan05/status/2091999562340643274",
+      "kind": "post",
+      "engagement": {
+        "views": 30866,
+        "likes": 176,
+        "reposts": 17,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9135,29 +9158,32 @@
     {
       "date": "2026-08-21",
       "close": 1730000.0
+    },
+    {
+      "date": "2026-08-24",
+      "close": 1671000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-24T21:18:59.246952+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-25T00:17:02.973264+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-25",
     "asof": "2026-08-24",
-    "attempted_at": "2026-08-24T21:18:58.983469+00:00",
+    "attempted_at": "2026-08-25T00:17:02.129402+00:00",
     "status": "ok",
     "first_available_date": "2025-08-25",
-    "last_available_date": "2026-08-21",
+    "last_available_date": "2026-08-24",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-24T21:18:58.983469+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-25T00:18:58.983469+00:00",
+    "provider_symbol": "000660.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-25T00:17:02.129402+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }
