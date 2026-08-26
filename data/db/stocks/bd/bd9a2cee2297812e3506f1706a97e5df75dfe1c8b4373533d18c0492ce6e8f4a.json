@@ -1,6 +1,6 @@
 {
   "ticker": "COIN",
-  "cashtag": "Coinbase",
+  "cashtag": "$COIN",
   "instrument": {
     "instrument_id": "US:COIN",
     "display_code": "COIN",
@@ -24,18 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-02",
-  "last_mention": "2026-08-20",
-  "total_mentions": 51,
+  "last_mention": "2026-08-25",
+  "total_mentions": 52,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 33,
     "octopusycc": 9,
     "StockMKTNewz": 5,
-    "unusual_whales": 3,
+    "unusual_whales": 4,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 43,
-    "flow": 3,
+    "flow": 4,
     "news": 5
   },
   "mentions": [
@@ -1309,6 +1309,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092402758230167734",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-25",
+      "created_at": "2026-08-25T20:04:27-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$COIN",
+      "text": "RT @TheBronxViking: On Tuesday I pointed out something we hadn’t seen in $COIN in months: large OTM call buying suddenly pouring into longe…",
+      "url": "https://x.com/unusual_whales/status/2092402758230167734",
+      "kind": "post",
+      "engagement": {
+        "views": 36198,
+        "likes": 171,
+        "reposts": 9,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2463,18 +2486,22 @@
     {
       "date": "2026-08-24",
       "close": 179.48
+    },
+    {
+      "date": "2026-08-25",
+      "close": 187.16
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-25T21:17:24.506919+00:00",
+  "price_updated_at": "2026-08-26T00:16:13.508803+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-26",
     "asof": "2026-08-25",
-    "attempted_at": "2026-08-25T21:17:23.878554+00:00",
+    "attempted_at": "2026-08-26T00:16:13.008522+00:00",
     "status": "ok",
     "first_available_date": "2025-08-26",
-    "last_available_date": "2026-08-24",
+    "last_available_date": "2026-08-25",
     "reason": null
   },
   "price_source_state": {
@@ -2482,7 +2509,7 @@
     "provider_symbol": "COIN",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-25T21:17:23.878554+00:00",
+    "checked_at": "2026-08-26T00:16:13.008522+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

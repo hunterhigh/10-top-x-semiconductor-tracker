@@ -1,6 +1,6 @@
 {
   "ticker": "AMD",
-  "cashtag": "$AMD",
+  "cashtag": "AMD",
   "instrument": {
     "instrument_id": "US:AMD",
     "display_code": "AMD",
@@ -25,21 +25,21 @@
   "thesis_summary": null,
   "first_mention": "2025-09-11",
   "last_mention": "2026-08-25",
-  "total_mentions": 308,
+  "total_mentions": 309,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 174,
     "StockMKTNewz": 51,
     "jukan05": 25,
     "ren_stocks": 19,
+    "zephyr_z9": 13,
     "octopusycc": 13,
-    "zephyr_z9": 12,
     "unusual_whales": 7,
     "KawzInvests": 3,
     "michaelsikand": 2,
     "DJTRadar": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 248,
+    "opinion": 249,
     "news": 51,
     "disclosure": 2,
     "flow": 7
@@ -7344,6 +7344,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092377713256587514",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-25",
+      "created_at": "2026-08-25T18:24:55-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AMD",
+      "text": "Very interesting\nFrontier labs can co-design and develop their hardware-software stack at a much faster pace compared to Nvidia/AMD due to them having access to cutting edge internal models",
+      "url": "https://x.com/zephyr_z9/status/2092377713256587514",
+      "kind": "post",
+      "engagement": {
+        "views": 26094,
+        "likes": 161,
+        "reposts": 15,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8446,18 +8469,22 @@
     {
       "date": "2026-08-24",
       "close": 456.745
+    },
+    {
+      "date": "2026-08-25",
+      "close": 479.18
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-25T21:17:19.241458+00:00",
+  "price_updated_at": "2026-08-26T00:16:08.362563+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-26",
     "asof": "2026-08-25",
-    "attempted_at": "2026-08-25T21:17:18.787186+00:00",
+    "attempted_at": "2026-08-26T00:16:07.797935+00:00",
     "status": "ok",
     "first_available_date": "2025-08-26",
-    "last_available_date": "2026-08-24",
+    "last_available_date": "2026-08-25",
     "reason": null
   },
   "price_source_state": {
@@ -8465,7 +8492,7 @@
     "provider_symbol": "AMD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-25T21:17:18.787186+00:00",
+    "checked_at": "2026-08-26T00:16:07.797935+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
