@@ -1,6 +1,6 @@
 {
   "ticker": "WFC",
-  "cashtag": "$WFC",
+  "cashtag": "Wells Fargo",
   "instrument": {
     "instrument_id": "US:WFC",
     "display_code": "WFC",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-21",
-  "last_mention": "2026-08-12",
-  "total_mentions": 11,
+  "last_mention": "2026-08-26",
+  "total_mentions": 12,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 7,
+    "StockMKTNewz": 8,
     "aleabitoreddit": 2,
     "octopusycc": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 3,
-    "news": 7,
+    "news": 8,
     "flow": 1
   },
   "mentions": [
@@ -297,6 +297,29 @@
         "likes": 89,
         "reposts": 4,
         "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092628485659365566",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-26",
+      "created_at": "2026-08-26T11:01:24-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Wells Fargo",
+      "text": "BIG BANKS INCLUDING BANK OF AMERICA AND WELLS FARGO MOVING FORWARD WITH GLOBAL STABLECOIN CONSORTIUM - WSJ",
+      "url": "https://x.com/StockMKTNewz/status/2092628485659365566",
+      "kind": "post",
+      "engagement": {
+        "views": 28603,
+        "likes": 74,
+        "reposts": 4,
+        "replies": 16
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -726,17 +749,25 @@
     {
       "date": "2026-08-21",
       "close": 83.84
+    },
+    {
+      "date": "2026-08-24",
+      "close": 84.72
+    },
+    {
+      "date": "2026-08-25",
+      "close": 84.79
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-24T21:19:39.464079+00:00",
+  "price_updated_at": "2026-08-26T18:25:18.114830+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "WFC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-24T21:19:38.244990+00:00",
+    "checked_at": "2026-08-26T18:25:16.941817+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

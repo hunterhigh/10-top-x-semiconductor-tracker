@@ -25,17 +25,17 @@
   "industry": "AI Photonics/CPO Lasers",
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
-  "last_mention": "2026-08-25",
-  "total_mentions": 898,
+  "last_mention": "2026-08-26",
+  "total_mentions": 899,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 835,
+    "aleabitoreddit": 836,
     "ren_stocks": 59,
     "jukan05": 2,
     "michaelsikand": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 898
+    "opinion": 899
   },
   "mentions": [
     {
@@ -23674,6 +23674,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092517102339162263",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-26",
+      "created_at": "2026-08-26T03:38:48-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "high demand for the stock prompting Saxo Japan to list it",
+        "excited for upcoming earnings",
+        "planned Nasdaq listing"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "I love how so many people requested  $SIVE that Saxo Japan went out of their way to list it!\n\nJust goes to show how much demand there is for this laser company.\n\nSpecial shoutout to Saxo. And of course, excited for Sivers earnings + planned Nasdaq listing coming up.",
+      "url": "https://x.com/aleabitoreddit/status/2092517102339162263",
+      "kind": "post",
+      "engagement": {
+        "views": 275137,
+        "likes": 984,
+        "reposts": 48,
+        "replies": 67
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -24774,26 +24801,27 @@
       "close": 35.04
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "SEK",
-  "price_updated_at": "2026-08-26T03:16:45.267837+00:00",
+  "price_updated_at": "2026-08-26T18:24:29.853475+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-26",
-    "asof": "2026-08-25",
-    "attempted_at": "2026-08-26T03:16:45.232997+00:00",
+    "requested_start": "2025-08-27",
+    "asof": "2026-08-26",
+    "attempted_at": "2026-08-26T18:24:29.485852+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-26",
+    "first_available_date": "2025-08-27",
     "last_available_date": "2026-08-25",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-08-26T03:16:45.232997+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-08-26T18:24:29.485852+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-08-26T21:24:29.485852+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
