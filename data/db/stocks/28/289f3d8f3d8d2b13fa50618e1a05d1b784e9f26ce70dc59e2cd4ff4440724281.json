@@ -1,6 +1,6 @@
 {
   "ticker": "MRK",
-  "cashtag": "$MRK",
+  "cashtag": "Merck",
   "instrument": {
     "instrument_id": "US:MRK",
     "display_code": "MRK",
@@ -25,16 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2026-06-25",
   "last_mention": "2026-08-25",
-  "total_mentions": 17,
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 15,
-    "DJTRadar": 1,
-    "unusual_whales": 1
+    "unusual_whales": 2,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "news": 15,
     "disclosure": 1,
-    "flow": 1
+    "flow": 2
   },
   "mentions": [
     {
@@ -429,6 +429,29 @@
         "likes": 55,
         "reposts": 7,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092431334039785570",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-25",
+      "created_at": "2026-08-25T21:58:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Merck",
+      "text": "The mRNA-based shot in combination with Merck’s immunotherapy Keytruda met key goals in the Phase 3 trial in more than 1,100 patients with higher-risk or advanced melanoma whose detectable cancer had been completely removed\n\nRead more: https://t.co/oNZqVX14O7",
+      "url": "https://x.com/unusual_whales/status/2092431334039785570",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 27896,
+        "likes": 20,
+        "reposts": 2,
+        "replies": 5
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

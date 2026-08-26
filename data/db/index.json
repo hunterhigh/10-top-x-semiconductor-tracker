@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-26T00:15:56.641191+00:00",
+  "generated_at": "2026-08-26T03:16:34.830311+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2145,
-    "total_mentions": 25279,
+    "total_mentions": 25285,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-26T00:17:16.610344+00:00"
+    "prices_updated_at": "2026-08-26T03:17:28.907588+00:00"
   },
   "stocks": {
     "US:NBIS": {
@@ -233,10 +233,10 @@
       "industry": "Optical Modules",
       "first_mention": "2025-12-11",
       "last_mention": "2026-08-25",
-      "total_mentions": 684,
+      "total_mentions": 685,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 530,
+        "aleabitoreddit": 531,
         "ren_stocks": 84,
         "michaelsikand": 35,
         "KawzInvests": 25,
@@ -449,12 +449,12 @@
       "company": "Meta Platforms, Inc.",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
-      "last_mention": "2026-08-24",
-      "total_mentions": 468,
+      "last_mention": "2026-08-25",
+      "total_mentions": 469,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 294,
-        "StockMKTNewz": 87,
+        "StockMKTNewz": 88,
         "unusual_whales": 37,
         "jukan05": 11,
         "zephyr_z9": 10,
@@ -634,10 +634,10 @@
       "industry": null,
       "first_mention": "2025-12-02",
       "last_mention": "2026-08-25",
-      "total_mentions": 347,
+      "total_mentions": 348,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 171,
+        "StockMKTNewz": 172,
         "unusual_whales": 81,
         "aleabitoreddit": 46,
         "octopusycc": 16,
@@ -1183,7 +1183,8 @@
       "price_status": "ok",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
+      "price_history_52w_status": "ok"
     },
     "US:CIFR": {
       "ticker": "CIFR",
@@ -1472,8 +1473,7 @@
       "price_status": "ok",
       "instrument_id": "US:ORCL",
       "hash": "56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa",
-      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -1716,7 +1716,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:CXMT": {
       "ticker": "CXMT",
@@ -3586,7 +3587,8 @@
       "price_status": "ok",
       "instrument_id": "US:AMAT",
       "hash": "1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd",
-      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json"
+      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
+      "price_history_52w_status": "ok"
     },
     "US:FLNC": {
       "ticker": "FLNC",
@@ -5909,6 +5911,47 @@
       "hash": "c48e3f8f9b167e865471ac0366f4445897372df141ac313cb2512291fad07203",
       "path": "stocks/c4/c48e3f8f9b167e865471ac0366f4445897372df141ac313cb2512291fad07203.json"
     },
+    "US:SMTC": {
+      "ticker": "SMTC",
+      "instrument": {
+        "instrument_id": "US:SMTC",
+        "display_code": "SMTC",
+        "display_name": "SEMTECH CORP",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SMTC"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SMTC",
+        "verification_status": "verified"
+      },
+      "cashtag": "transceiver",
+      "price_symbol": "SMTC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "SEMTECH CORP",
+      "industry": null,
+      "first_mention": "2026-01-22",
+      "last_mention": "2026-08-25",
+      "total_mentions": 23,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 14,
+        "KawzInvests": 3,
+        "StockMKTNewz": 3,
+        "zephyr_z9": 2,
+        "jukan05": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SMTC",
+      "hash": "e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9",
+      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
+      "price_history_52w_status": "ok"
+    },
     "SZSE:300308": {
       "ticker": "300308",
       "instrument": {
@@ -6331,7 +6374,7 @@
         "StockMKTNewz": 3,
         "aleabitoreddit": 1
       },
-      "price_status": "unverified_symbol",
+      "price_status": "ok",
       "instrument_id": "US:GOLD",
       "hash": "fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8",
       "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json"
@@ -6411,47 +6454,6 @@
       "instrument_id": "US:IONQ",
       "hash": "8406fc2e99e0ddbadff0405d78a4698ad7baef2a03687294971316ebfec80ec0",
       "path": "stocks/84/8406fc2e99e0ddbadff0405d78a4698ad7baef2a03687294971316ebfec80ec0.json"
-    },
-    "US:SMTC": {
-      "ticker": "SMTC",
-      "instrument": {
-        "instrument_id": "US:SMTC",
-        "display_code": "SMTC",
-        "display_name": "SEMTECH CORP",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SMTC"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SMTC",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SMTC",
-      "price_symbol": "SMTC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "SEMTECH CORP",
-      "industry": null,
-      "first_mention": "2026-01-22",
-      "last_mention": "2026-08-25",
-      "total_mentions": 21,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 12,
-        "KawzInvests": 3,
-        "StockMKTNewz": 3,
-        "zephyr_z9": 2,
-        "jukan05": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SMTC",
-      "hash": "e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9",
-      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
-      "price_history_52w_status": "ok"
     },
     "US:STX": {
       "ticker": "STX",
@@ -7063,6 +7065,44 @@
       "hash": "bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5",
       "path": "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json"
     },
+    "US:MRK": {
+      "ticker": "MRK",
+      "instrument": {
+        "instrument_id": "US:MRK",
+        "display_code": "MRK",
+        "display_name": "Merck & Co., Inc.",
+        "display_market": "NYSE",
+        "aliases": [
+          "MRK"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "MRK",
+        "verification_status": "verified"
+      },
+      "cashtag": "Merck",
+      "price_symbol": "MRK",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Merck & Co., Inc.",
+      "industry": null,
+      "first_mention": "2026-06-25",
+      "last_mention": "2026-08-25",
+      "total_mentions": 18,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 15,
+        "unusual_whales": 2,
+        "DJTRadar": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:MRK",
+      "hash": "289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281",
+      "path": "stocks/28/289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281.json"
+    },
     "US:MXL": {
       "ticker": "MXL",
       "instrument": {
@@ -7529,44 +7569,6 @@
       "hash": "5fb85d0dc750c3355fa950fc669a20cae2785283d35affb73aa52ae946167f1f",
       "path": "stocks/5f/5fb85d0dc750c3355fa950fc669a20cae2785283d35affb73aa52ae946167f1f.json"
     },
-    "US:MRK": {
-      "ticker": "MRK",
-      "instrument": {
-        "instrument_id": "US:MRK",
-        "display_code": "MRK",
-        "display_name": "Merck & Co., Inc.",
-        "display_market": "NYSE",
-        "aliases": [
-          "MRK"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "MRK",
-        "verification_status": "verified"
-      },
-      "cashtag": "$MRK",
-      "price_symbol": "MRK",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Merck & Co., Inc.",
-      "industry": null,
-      "first_mention": "2026-06-25",
-      "last_mention": "2026-08-25",
-      "total_mentions": 17,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 15,
-        "DJTRadar": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:MRK",
-      "hash": "289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281",
-      "path": "stocks/28/289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281.json"
-    },
     "US:NOC": {
       "ticker": "NOC",
       "instrument": {
@@ -7681,8 +7683,7 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
     },
     "US:QBTS": {
       "ticker": "QBTS",
@@ -92134,6 +92135,9 @@
     "MERCEDES-BENZ GROUP AG": [
       "UNVERIFIED:MBG"
     ],
+    "MERCK": [
+      "US:MRK"
+    ],
     "MERCK & CO., INC.": [
       "US:MRK"
     ],
@@ -96404,6 +96408,9 @@
     ],
     "TRANSALTA": [
       "UNVERIFIED:TAC"
+    ],
+    "TRANSCEIVER": [
+      "US:SMTC"
     ],
     "TRANSUNION": [
       "US:TRU"
@@ -104371,6 +104378,7 @@
     "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
     "stocks/8a/8a9e34b1529830191100ecaef156114f1c399a0a95a4242afa38c05e00ffc617.json",
     "stocks/c4/c48e3f8f9b167e865471ac0366f4445897372df141ac313cb2512291fad07203.json",
+    "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
     "stocks/a1/a1f2f4c3882094ac3f6e1c16da113684eebe9d74408e361e9de3fc5eb02716ed.json",
     "stocks/cf/cf9dc685dfefdecec65457850c071d47e1d633901ed08de3126db3259c02c857.json",
     "stocks/62/62e7dc54a256d73112abe986dcbaea7a359f0c4b1bf95e09fae4488ae387d87a.json",
@@ -104384,7 +104392,6 @@
     "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json",
     "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
     "stocks/84/8406fc2e99e0ddbadff0405d78a4698ad7baef2a03687294971316ebfec80ec0.json",
-    "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
     "stocks/46/46a5d3095c29f72e47b69c1b73e5eea34142a727e4d7a0c0211b90a64bda0d9f.json",
     "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json",
     "stocks/5c/5cf74f1ea8a9dbf1fca1e17760a94a408b81488bb14cebda872fc29e5139868a.json",
@@ -104401,6 +104408,7 @@
     "stocks/bf/bff968a164c0c33e402ec8a0736357419ee12099e6c6b7b279094a2d2db50bb8.json",
     "stocks/7d/7d629440cccf6cb28cf467399e2d262ff5e2556e96b32c0fc9a169317e6d2dcb.json",
     "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json",
+    "stocks/28/289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281.json",
     "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
     "stocks/18/18850cdcf0919ec7a7ac62aefc898c8fd2c5c531ac35b5123ce5a61bec556dbc.json",
     "stocks/92/92e1fce370e2fb96057a9993f65b7502e14b08d10705e20b2200d2f6486cd6ad.json",
@@ -104413,7 +104421,6 @@
     "stocks/40/40aa8af4b789bfe5ba8f04ea4586a0fad64733a2a1a0e23320542cedc7938c21.json",
     "stocks/ec/ec67b1d8230647932e03dca6a96eeb310292d88827c1681031637c2e62d02042.json",
     "stocks/5f/5fb85d0dc750c3355fa950fc669a20cae2785283d35affb73aa52ae946167f1f.json",
-    "stocks/28/289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281.json",
     "stocks/77/77104837be298a4fa635cfd033926fe22af9a12090f861b78b9636d0bfc78a11.json",
     "stocks/89/8967efbbb1b1623d8ac619d4670416faa545354e13cae5d0144a8d3ad1613110.json",
     "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
