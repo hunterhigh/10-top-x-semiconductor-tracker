@@ -25,20 +25,22 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-08-25",
   "last_mention": "2026-08-27",
-  "total_mentions": 340,
+  "total_mentions": 343,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 274,
-    "StockMKTNewz": 14,
+    "StockMKTNewz": 16,
     "octopusycc": 13,
     "ren_stocks": 13,
     "zephyr_z9": 8,
     "jukan05": 7,
     "KawzInvests": 7,
-    "michaelsikand": 4
+    "michaelsikand": 4,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 326,
-    "news": 14
+    "news": 16,
+    "flow": 1
   },
   "mentions": [
     {
@@ -8108,6 +8110,75 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093067910650445889",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T16:07:31-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "BREAKING: Marvell, $MRVL, earnings:\n\n- Revenue: $2.73 billion, est: $2.71 billion\n- EPS: $0.94. est: $0.93",
+      "url": "https://x.com/unusual_whales/status/2093067910650445889",
+      "kind": "post",
+      "engagement": {
+        "views": 92422,
+        "likes": 211,
+        "reposts": 12,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093068200078451025",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T16:08:40-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "RT @WOLF_Financial: MARVELL $MRVL JUST REPORTED Q2 EARNINGS\n\n- Revenue: $2.7B, beating est. of $2.71B 🟢\n- Adj EPS: $0.94, beating est. of $…",
+      "url": "https://x.com/StockMKTNewz/status/2093068200078451025",
+      "kind": "post",
+      "engagement": {
+        "views": 47050,
+        "likes": 67,
+        "reposts": 8,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093071864436264968",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T16:23:14-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "Marvell's $MRVL initial stock reaction following its earnings is\n\nDown 2% 🔴🔴 https://t.co/0rm2m5KBaK",
+      "url": "https://x.com/StockMKTNewz/status/2093071864436264968",
+      "kind": "post",
+      "engagement": {
+        "views": 34004,
+        "likes": 62,
+        "reposts": 4,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9222,11 +9293,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-27T18:18:21.028127+00:00",
+  "price_updated_at": "2026-08-27T21:17:42.102186+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-28",
     "asof": "2026-08-27",
-    "attempted_at": "2026-08-27T18:18:20.435589+00:00",
+    "attempted_at": "2026-08-27T21:17:41.363498+00:00",
     "status": "ok",
     "first_available_date": "2025-08-28",
     "last_available_date": "2026-08-26",
@@ -9237,7 +9308,7 @@
     "provider_symbol": "MRVL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-27T18:18:20.435589+00:00",
+    "checked_at": "2026-08-27T21:17:41.363498+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
