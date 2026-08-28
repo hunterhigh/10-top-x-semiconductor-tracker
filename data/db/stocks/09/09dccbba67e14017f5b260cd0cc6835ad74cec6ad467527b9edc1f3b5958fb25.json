@@ -1,6 +1,6 @@
 {
   "ticker": "SIVE",
-  "cashtag": "Sivers",
+  "cashtag": "$SIVE",
   "instrument": {
     "instrument_id": "Nasdaq Stockholm:SIVE",
     "display_code": "SIVE",
@@ -26,16 +26,16 @@
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
   "last_mention": "2026-08-27",
-  "total_mentions": 913,
+  "total_mentions": 914,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 848,
+    "aleabitoreddit": 849,
     "ren_stocks": 61,
     "jukan05": 2,
     "michaelsikand": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 913
+    "opinion": 914
   },
   "mentions": [
     {
@@ -24082,6 +24082,42 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093087267594314182",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T17:24:26-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "most unusual $1B photonics company they've seen",
+        "reference laser for GFS SCALE (CPO/NPO/pluggable)",
+        "7 pluggable engagements disclosed with JBL as primary ramp (H1 2027 timeline)",
+        "ELS path with O-Net",
+        "ELS path with POET",
+        "lasers to Ayar for CPO I/O in NVDA nvlink ecosystem",
+        "lasers for AEVA (NPO agreements with optical engine providers for hyperscalers)",
+        "likely customers Celestial/Lightmatter/Lightelligence in 2023/2024",
+        "InP lasers on TFLN with Lightium",
+        "two substantial CW DFB laser capacity allocations during industry shortage",
+        "one of few CPO-grade laser suppliers in industry",
+        "#1 for MC relative to qualification paths across industry"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$SIVE",
+      "text": "Nah, $SIVE is the most unusual $1B photonics company I've ever seen. \n\nJust for AI DCs alone:\n\n- Reference laser for $GFS SCALE (CPO/NPO/pluggable)\n- 7 pluggable engagements disclosed, with $JBL as primary ramp (with H1 2027 timeline)\n- ELS path with O-Net\n- ELS path with $POET \n- Lasers to Ayar for CPO I/O (now in $NVDA nvlink ecosystem)\n- Lasers for $AEVA (which now has NPO agreements with optical engine providers for hyperscalers)\n- Celestial/Lightmatter/Lightelligence (likely customers in 2023/2024)\n- InP lasers on TFLN with Lightium\n\nThen it has 2 substantial allocations for CW DFB laser capacity during an industry shortage. \n\nAs well as one of the few CPO-grade laser suppliers out in the industry. \n\nLet me know what other player around this range has so many ongoing qualifications, a large TAM, and in photonics. \n\n$SIVE is the #1 for me in terms of MC relative to qualifications paths across the industry.",
+      "url": "https://x.com/aleabitoreddit/status/2093087267594314182",
+      "kind": "post",
+      "engagement": {
+        "views": 136965,
+        "likes": 611,
+        "reposts": 41,
+        "replies": 67
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -25184,29 +25220,32 @@
     {
       "date": "2026-08-26",
       "close": 35.4
+    },
+    {
+      "date": "2026-08-27",
+      "close": 36.16
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "SEK",
-  "price_updated_at": "2026-08-27T21:17:50.049437+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-28T00:17:04.870833+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-28",
     "asof": "2026-08-27",
-    "attempted_at": "2026-08-27T21:17:49.826646+00:00",
+    "attempted_at": "2026-08-28T00:17:04.722369+00:00",
     "status": "ok",
     "first_available_date": "2025-08-28",
-    "last_available_date": "2026-08-26",
+    "last_available_date": "2026-08-27",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-27T21:17:49.826646+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-08-28T00:17:49.826646+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-08-28T00:17:04.722369+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }

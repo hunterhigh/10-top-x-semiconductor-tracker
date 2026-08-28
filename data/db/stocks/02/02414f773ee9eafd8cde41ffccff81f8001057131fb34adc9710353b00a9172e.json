@@ -25,20 +25,20 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-08-25",
   "last_mention": "2026-08-27",
-  "total_mentions": 343,
+  "total_mentions": 344,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 274,
     "StockMKTNewz": 16,
     "octopusycc": 13,
     "ren_stocks": 13,
+    "jukan05": 8,
     "zephyr_z9": 8,
-    "jukan05": 7,
     "KawzInvests": 7,
     "michaelsikand": 4,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 326,
+    "opinion": 327,
     "news": 16,
     "flow": 1
   },
@@ -8179,6 +8179,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093103613535289723",
+      "blogger_id": "jukan05",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T18:29:24-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MRVL",
+      "text": "From Marvell’s conference call:\n\nQ: What progress are you seeing in CXL and scale-up optics?\nA: CXL began as a server-centric memory architecture but has ultimately proven to be ideally suited for memory expansion and inference. It is now being deployed at scale by multiple hyperscalers. Amid growing inference demand and memory scarcity, customers are revising their plans to expand their use of the technology. Marvell also secured additional design wins in the latest quarter. Scale-up optics has accelerated further from the roughly $300 million FY28 outlook provided last quarter, including $150 million from Celestial AI CPO. CPO and NPO are not an either-or choice; both will coexist.\n\nQ: How are constraints such as surging memory prices affecting design wins?\nA: As supply, power, and architectural constraints converge, the need for fungibility across compute, networking, and memory is increasing. The ability to execute rapidly on custom and semi-custom solutions—and modify products to adapt to evolving architectures—is a critical asset. CXL memory expansion and AI inference accelerators are representative examples. Activity is increasing significantly as the market rapidly shifts from training to inference and then to monetization.\n\n$MRVL",
+      "url": "https://x.com/jukan05/status/2093103613535289723",
+      "kind": "post",
+      "engagement": {
+        "views": 26646,
+        "likes": 145,
+        "reposts": 15,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9289,18 +9312,22 @@
     {
       "date": "2026-08-26",
       "close": 245.11
+    },
+    {
+      "date": "2026-08-27",
+      "close": 241.45
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-27T21:17:42.102186+00:00",
+  "price_updated_at": "2026-08-28T00:16:54.077106+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-28",
     "asof": "2026-08-27",
-    "attempted_at": "2026-08-27T21:17:41.363498+00:00",
+    "attempted_at": "2026-08-28T00:16:53.151650+00:00",
     "status": "ok",
     "first_available_date": "2025-08-28",
-    "last_available_date": "2026-08-26",
+    "last_available_date": "2026-08-27",
     "reason": null
   },
   "price_source_state": {
@@ -9308,7 +9335,7 @@
     "provider_symbol": "MRVL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-27T21:17:41.363498+00:00",
+    "checked_at": "2026-08-28T00:16:53.151650+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

@@ -26,9 +26,9 @@
   "thesis_summary": null,
   "first_mention": "2025-12-28",
   "last_mention": "2026-08-27",
-  "total_mentions": 276,
+  "total_mentions": 277,
   "total_mentions_by_blogger": {
-    "jukan05": 130,
+    "jukan05": 131,
     "aleabitoreddit": 83,
     "zephyr_z9": 20,
     "StockMKTNewz": 16,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 251,
+    "opinion": 252,
     "flow": 9,
     "news": 16
   },
@@ -6582,6 +6582,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093122005897977940",
+      "blogger_id": "jukan05",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T19:42:29-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "Korean media reported that SK hynix’s NAND flash business continues to struggle to narrow the productivity gap with Samsung Electronics and other competitors, as it lags in transitioning older production lines to newer process generations.\n\nAs of the second quarter of this year, older-generation processes such as 176-layer NAND still accounted for more than half of SK hynix’s production, while Samsung Electronics had already completed the transition of its main production generation to 236-layer NAND.\n\nThe 176-layer generation currently accounts for around 50% of SK hynix’s NAND production in the second quarter. This high dependence on 176-layer NAND puts the company at a cost disadvantage because it produces relatively fewer bits per wafer.\n\nSome analysts also say that although SK hynix has emphasized progress on its technology roadmap, including expanding the share of 300-layer-class NAND, this has yet to translate clearly into revenue performance.\n\nNAND flash improves both capacity and cost efficiency by vertically stacking memory cells that store data. The greater the number of layers, the more data can be stored on a wafer of the same area, improving both output per wafer and cost competitiveness. Companies that fail to migrate to next-generation processes must therefore use more wafers and devote more production-line operating time to produce the same volume, inevitably placing them at a disadvantage in terms of profitability.\n\nAs of the end of the second quarter, 236-layer NAND accounted for more than 60% of Samsung Electronics’ production, establishing it as the company’s main production generation. Although both SK hynix and Samsung Electronics have NAND generations in the low-to-mid-200-layer range, there is a clear gap in the speed at which they have transitioned to mass production.\n\n“Samsung Electronics is pursuing a strategy of concentrating production volumes in a specific generation to improve both yields and costs, whereas SK hynix operates multiple generations simultaneously, which inevitably reduces the relative efficiency of its production-line operations,” an industry official said.\n\nSK hynix’s current NAND production structure also trails those of Micron and China’s YMTC, in addition to Samsung Electronics. According to market research firm Omdia, as of the end of the second quarter, 232-layer NAND accounted for 53% of Micron’s production, while the next-generation 276-layer product had expanded to 33%. At YMTC, 232-layer NAND represented 68% of production, indicating that the company had already established a production system centered on advanced processes.\n\nAt Kioxia and Sandisk, 162-layer BiCS6 accounted for 37% of production and 112-layer BiCS5 for 34% as of the second quarter, meaning older-generation processes still made up roughly 70% of total production. While their generation mix may appear similar to that of SK hynix, the share of their latest-generation BiCS8, a 218-layer product, nearly tripled in just two quarters, rising from 9% in the fourth quarter of last year to 24% in the second quarter of this year. Their transition pace is therefore considered relatively fast.\n\nThis trend is also evident in revenue market share.\n\nAccording to industry sources, SK hynix’s NAND revenue share, including Solidigm, rose to 21.4% in the fourth quarter of last year before plunging by nearly 5 percentage points to 16.4% in the first quarter of this year. Over the same period, China’s YMTC increased its share from 11.5% to 16.2%, nearly catching up with SK hynix. Some interpret this as evidence that SK hynix may have had relatively limited capacity to respond with additional volumes during a period of rising NAND prices.\n\n“When prices are rising, a higher share of newer-generation products allows increases in selling prices to combine with cost improvements, producing a greater uplift in profit margins,” an industry official said. “SK hynix’s market-share decline should be viewed not simply as a volume issue, but as the result of delays in its process-generation transition.”\n\nThe official added, however, that “given the recent continued rise in NAND prices, the impact on the company’s overall earnings is limited.”",
+      "url": "https://x.com/jukan05/status/2093122005897977940",
+      "kind": "post",
+      "engagement": {
+        "views": 11833,
+        "likes": 52,
+        "reposts": 6,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7660,12 +7683,12 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-27T21:17:49.793944+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-28T00:17:04.690095+00:00",
+  "price_reason": "EODHD 404 (symbol not found: 005930.KS)",
   "price_history_52w": {
     "requested_start": "2025-08-28",
     "asof": "2026-08-27",
-    "attempted_at": "2026-08-27T21:17:49.594807+00:00",
+    "attempted_at": "2026-08-28T00:17:04.259086+00:00",
     "status": "ok",
     "first_available_date": "2025-08-28",
     "last_available_date": "2026-08-26",
@@ -7674,11 +7697,11 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-27T21:17:49.594807+00:00",
+    "status": "unsupported",
+    "reason": "provider_symbol_not_found_after_search",
+    "checked_at": "2026-08-28T00:17:04.259086+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-08-28T00:17:49.594807+00:00",
-    "http_status": null
+    "next_retry_at": "2026-09-27T00:17:04.259086+00:00",
+    "http_status": 404
   }
 }

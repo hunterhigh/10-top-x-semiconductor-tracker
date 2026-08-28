@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-27T21:18:43.524446+00:00",
+  "generated_at": "2026-08-28T00:18:17.080502+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2162,
-  "index_sha256": "deed9c2f1e606cb6eed71e76ac375354343da2dcfb60e0f3d5cbd9abb3d46d57",
+  "stock_count": 2165,
+  "index_sha256": "58389588a1d6dea9207061a0286d1b36638baa2ac5fe8a2687af119d7b4809b4",
   "stocks_root": "stocks",
   "price_cache_count": 882,
   "price_cache_index_sha256": "8761668c3fbd9ecfb539369f3646fcf40dec1a43aa4868c5b3b8fb9cff611f6b",
   "price_cache_root": "prices_cache",
-  "tickers": 2162,
-  "total_mentions": 25628,
+  "tickers": 2165,
+  "total_mentions": 25649,
   "priced_tickers": 712,
   "date_range": [
     "2025-07-02",
@@ -18,14 +18,14 @@
   "size_mb": 46.3,
   "tracked_bloggers": 10,
   "mentions_by_blogger": {
-    "aleabitoreddit": 15516,
+    "aleabitoreddit": 15522,
     "zephyr_z9": 497,
-    "StockMKTNewz": 4866,
+    "StockMKTNewz": 4867,
     "KawzInvests": 452,
     "ren_stocks": 1090,
-    "jukan05": 1101,
+    "jukan05": 1114,
     "octopusycc": 576,
-    "unusual_whales": 795,
+    "unusual_whales": 796,
     "michaelsikand": 537,
     "DJTRadar": 198
   },
@@ -33,15 +33,15 @@
   "instrument_coverage": {
     "verified": 927,
     "identified": 336,
-    "unverified": 899,
-    "market_pending_review": 1235,
-    "price_unavailable_or_unverified": 932
+    "unverified": 902,
+    "market_pending_review": 1238,
+    "price_unavailable_or_unverified": 935
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2162,
+      "files": 2165,
       "shards": 256,
       "max_shard_width": 17,
       "warning": false,
@@ -58,17 +58,18 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 1077,
+    "tickers": 1080,
     "status_counts": {
-      "ok": 457,
-      "partial": 16,
-      "unverified_symbol": 597,
+      "ok": 459,
+      "partial": 14,
+      "unverified_symbol": 600,
       "unavailable": 7
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 13,
-      "unverified_instrument_identity": 597,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
+      "EODHD 402 (account quota or subscription limit)": 10,
+      "unverified_instrument_identity": 600,
       "provider_symbol_not_found_after_search": 4,
       "no_daily_closes_returned": 1,
       "EODHD 402 (search capacity unavailable)": 2,
@@ -91,9 +92,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 30,
-      "deferred": 3,
-      "unsupported": 1
+      "supported": 32,
+      "unsupported": 2
     },
     "retry_queue": 1,
     "scope_counts": {
