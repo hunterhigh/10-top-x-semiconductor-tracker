@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,12 +25,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-08-27",
-  "total_mentions": 277,
+  "last_mention": "2026-08-28",
+  "total_mentions": 280,
   "total_mentions_by_blogger": {
-    "jukan05": 131,
+    "jukan05": 133,
     "aleabitoreddit": 83,
-    "zephyr_z9": 20,
+    "zephyr_z9": 21,
     "StockMKTNewz": 16,
     "octopusycc": 10,
     "unusual_whales": 9,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 252,
+    "opinion": 255,
     "flow": 9,
     "news": 16
   },
@@ -6605,6 +6605,80 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093219540415168605",
+      "blogger_id": "jukan05",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T02:10:03-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "early lead in NVHBM custom HBM development",
+        "competitive advantage over SK hynix and Micron in custom-HBM market",
+        "possesses both memory and system-semiconductor capabilities for integrated solution",
+        "industry-leading HBM4 speeds position it well as competition shifts toward speed"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "[Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplier position for Nvidia’s customized high-bandwidth memory (HBM), dubbed “NVHBM.” Nvidia is pursuing a new AI memory strategy for its next-generation computing systems that favors fewer stacked DRAM layers and higher speeds rather than continuing to increase stack height.\n\nAccording to industry sources on August 28, Samsung Electronics is developing an 8-high HBM4E, or seventh-generation HBM, product tailored to Nvidia’s requirements. The new design has a lower stack height than the 12-high and 16-high products Samsung had originally been preparing.\n\nNvidia has also asked Samsung to target speeds of 17–18Gbps per pin, roughly 20% higher than the 14.4Gbps speed of Samsung’s initial HBM4E samples. The product is expected to be used for NVHBM optimized for Nvidia’s proprietary NVLink technology specification unveiled a day earlier.\n\nThe adoption of an 8-high configuration runs counter to the conventional direction of HBM development. HBM capacity has historically increased by moving from 4-high to 8-high and then to 12-high stacks. As the number of layers rises, however, DRAM dies must be thinned and stacked with greater precision, increasing back-end process complexity and creating additional yield challenges.\n\nAn 8-high design, by contrast, reduces manufacturing complexity and makes it easier to produce HBM in larger volumes. The move is therefore seen as part of Nvidia’s strategy to alleviate memory supply constraints.\n\nInstead, Nvidia plans to push memory speeds significantly higher. NVHBM could be introduced as early as Rubin Ultra, Nvidia’s next-generation AI GPU scheduled for launch next year.\n\nRubin Ultra will expand the scale of GPU interconnects from the current 72 GPUs to as many as 576, an eightfold increase. Nvidia’s strategy appears to be to accept lower memory capacity per GPU by reducing HBM stack height, while connecting hundreds of GPUs equipped with faster HBM into a single system to boost aggregate compute performance.\n\nSamsung is considered to have a competitive advantage over SK hynix and Micron in the emerging custom-HBM market. NVHBM requires not only DRAM capabilities but also the ability to design and manufacture logic-based base dies. Samsung possesses both memory and system-semiconductor capabilities, allowing it to provide an integrated solution.\n\n“Samsung has already demonstrated industry-leading speeds with HBM4, so it should be able to capitalize on its strengths as competition shifts toward speed rather than increasingly higher stack counts,” an industry source said.",
+      "url": "https://x.com/jukan05/status/2093219540415168605",
+      "kind": "post",
+      "engagement": {
+        "views": 36414,
+        "likes": 134,
+        "reposts": 13,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093233532760162523",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T03:05:39-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "RT @jukan05: [Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplie…",
+      "url": "https://x.com/zephyr_z9/status/2093233532760162523",
+      "kind": "post",
+      "engagement": {
+        "views": 36302,
+        "likes": 134,
+        "reposts": 13,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093264392678941094",
+      "blogger_id": "jukan05",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T05:08:16-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Korean media reports that Samsung is ramping up production of the Galaxy Z Fold 8 due to strong demand, but DDI supply has become a concern as UMC’s 22nm capacity, which produces the Fold 8’s DDIs, is currently fully utilized.\n\nSamsung Electronics reportedly requested a “super hot run” (expedited production service) from UMC for the Galaxy Z Fold 8 DDIs, but UMC said it would be difficult.",
+      "url": "https://x.com/jukan05/status/2093264392678941094",
+      "kind": "post",
+      "engagement": {
+        "views": 1405,
+        "likes": 1,
+        "reposts": 1,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7683,12 +7757,12 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-28T06:17:44.788302+00:00",
+  "price_updated_at": "2026-08-28T09:17:44.624091+00:00",
   "price_reason": "EODHD 402 (account quota or subscription limit)",
   "price_history_52w": {
     "requested_start": "2025-08-29",
     "asof": "2026-08-28",
-    "attempted_at": "2026-08-28T06:17:44.652697+00:00",
+    "attempted_at": "2026-08-28T09:17:44.524512+00:00",
     "status": "ok",
     "first_available_date": "2025-08-29",
     "last_available_date": "2026-08-26",
@@ -7699,9 +7773,9 @@
     "provider_symbol": "005930.KS",
     "status": "deferred",
     "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-28T06:17:44.652697+00:00",
+    "checked_at": "2026-08-28T09:17:44.524512+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-08-28T09:17:44.652697+00:00",
+    "next_retry_at": "2026-08-28T12:17:44.524512+00:00",
     "http_status": null
   }
 }

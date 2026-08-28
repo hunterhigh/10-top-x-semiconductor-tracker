@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "Nvidia",
+  "cashtag": "$NVDA",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -24,13 +24,13 @@
   "industry": "AI Chips",
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
-  "last_mention": "2026-08-27",
-  "total_mentions": 1040,
+  "last_mention": "2026-08-28",
+  "total_mentions": 1043,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 539,
+    "aleabitoreddit": 540,
     "StockMKTNewz": 157,
-    "jukan05": 108,
-    "zephyr_z9": 63,
+    "jukan05": 109,
+    "zephyr_z9": 64,
     "unusual_whales": 56,
     "KawzInvests": 30,
     "ren_stocks": 30,
@@ -39,7 +39,7 @@
     "DJTRadar": 5
   },
   "total_mentions_by_signal_type": {
-    "opinion": 822,
+    "opinion": 825,
     "news": 157,
     "flow": 56,
     "disclosure": 5
@@ -24435,6 +24435,75 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093219540415168605",
+      "blogger_id": "jukan05",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T02:10:03-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Nvidia",
+      "text": "[Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplier position for Nvidia’s customized high-bandwidth memory (HBM), dubbed “NVHBM.” Nvidia is pursuing a new AI memory strategy for its next-generation computing systems that favors fewer stacked DRAM layers and higher speeds rather than continuing to increase stack height.\n\nAccording to industry sources on August 28, Samsung Electronics is developing an 8-high HBM4E, or seventh-generation HBM, product tailored to Nvidia’s requirements. The new design has a lower stack height than the 12-high and 16-high products Samsung had originally been preparing.\n\nNvidia has also asked Samsung to target speeds of 17–18Gbps per pin, roughly 20% higher than the 14.4Gbps speed of Samsung’s initial HBM4E samples. The product is expected to be used for NVHBM optimized for Nvidia’s proprietary NVLink technology specification unveiled a day earlier.\n\nThe adoption of an 8-high configuration runs counter to the conventional direction of HBM development. HBM capacity has historically increased by moving from 4-high to 8-high and then to 12-high stacks. As the number of layers rises, however, DRAM dies must be thinned and stacked with greater precision, increasing back-end process complexity and creating additional yield challenges.\n\nAn 8-high design, by contrast, reduces manufacturing complexity and makes it easier to produce HBM in larger volumes. The move is therefore seen as part of Nvidia’s strategy to alleviate memory supply constraints.\n\nInstead, Nvidia plans to push memory speeds significantly higher. NVHBM could be introduced as early as Rubin Ultra, Nvidia’s next-generation AI GPU scheduled for launch next year.\n\nRubin Ultra will expand the scale of GPU interconnects from the current 72 GPUs to as many as 576, an eightfold increase. Nvidia’s strategy appears to be to accept lower memory capacity per GPU by reducing HBM stack height, while connecting hundreds of GPUs equipped with faster HBM into a single system to boost aggregate compute performance.\n\nSamsung is considered to have a competitive advantage over SK hynix and Micron in the emerging custom-HBM market. NVHBM requires not only DRAM capabilities but also the ability to design and manufacture logic-based base dies. Samsung possesses both memory and system-semiconductor capabilities, allowing it to provide an integrated solution.\n\n“Samsung has already demonstrated industry-leading speeds with HBM4, so it should be able to capitalize on its strengths as competition shifts toward speed rather than increasingly higher stack counts,” an industry source said.",
+      "url": "https://x.com/jukan05/status/2093219540415168605",
+      "kind": "post",
+      "engagement": {
+        "views": 36414,
+        "likes": 134,
+        "reposts": 13,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093233532760162523",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T03:05:39-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Nvidia",
+      "text": "RT @jukan05: [Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplie…",
+      "url": "https://x.com/zephyr_z9/status/2093233532760162523",
+      "kind": "post",
+      "engagement": {
+        "views": 36302,
+        "likes": 134,
+        "reposts": 13,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093252439973777674",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T04:20:47-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "所以… 回到存储这边我们现在有：\n\n$SKHY CEO 表示: “我们预计[存储]短缺将持续到 2030 年底”\n\n$SNDK 表示: “我们看到直到 2030 年，NAND 都存在结构性的巨大需求”非 GAAP 毛利率将维持在约 80%.\n\n$NVDA 表示 供应承诺从 1,190 亿美元增加到 2,790 亿美元，主要由存储采购推动…与此同时, 存储定价处于“极端”水平 而且还在继续上涨.\n\nWinbond 正在与多家客户就延伸至 2029-2030 年的配额展开讨论.\n\n我之前就说过, 存储需求看起来是结构性的, 而现在从传统 DRAM 到 HBM，需求可见度已经延伸到了未来数年..\n\n所以我确实认为, 整个板块的远期 p/e 倍数都有进一步上升的机会.",
+      "url": "https://x.com/aleabitoreddit/status/2093252439973777674",
+      "kind": "post",
+      "engagement": {
+        "views": 62787,
+        "likes": 338,
+        "reposts": 18,
+        "replies": 58
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -25557,11 +25626,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-28T06:17:36.489060+00:00",
+  "price_updated_at": "2026-08-28T09:17:35.941462+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-29",
     "asof": "2026-08-28",
-    "attempted_at": "2026-08-28T06:17:35.696199+00:00",
+    "attempted_at": "2026-08-28T09:17:35.141076+00:00",
     "status": "ok",
     "first_available_date": "2025-08-29",
     "last_available_date": "2026-08-27",
@@ -25572,7 +25641,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-28T06:17:35.696199+00:00",
+    "checked_at": "2026-08-28T09:17:35.141076+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

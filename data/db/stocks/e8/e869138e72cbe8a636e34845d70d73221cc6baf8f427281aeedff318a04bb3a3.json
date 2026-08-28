@@ -27,11 +27,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-08-27",
-  "total_mentions": 341,
+  "last_mention": "2026-08-28",
+  "total_mentions": 342,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 118,
-    "jukan05": 104,
+    "jukan05": 105,
     "StockMKTNewz": 42,
     "ren_stocks": 27,
     "zephyr_z9": 20,
@@ -41,7 +41,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 286,
+    "opinion": 287,
     "news": 42,
     "flow": 13
   },
@@ -8245,6 +8245,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093219540415168605",
+      "blogger_id": "jukan05",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T02:10:03-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK hynix",
+      "text": "[Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplier position for Nvidia’s customized high-bandwidth memory (HBM), dubbed “NVHBM.” Nvidia is pursuing a new AI memory strategy for its next-generation computing systems that favors fewer stacked DRAM layers and higher speeds rather than continuing to increase stack height.\n\nAccording to industry sources on August 28, Samsung Electronics is developing an 8-high HBM4E, or seventh-generation HBM, product tailored to Nvidia’s requirements. The new design has a lower stack height than the 12-high and 16-high products Samsung had originally been preparing.\n\nNvidia has also asked Samsung to target speeds of 17–18Gbps per pin, roughly 20% higher than the 14.4Gbps speed of Samsung’s initial HBM4E samples. The product is expected to be used for NVHBM optimized for Nvidia’s proprietary NVLink technology specification unveiled a day earlier.\n\nThe adoption of an 8-high configuration runs counter to the conventional direction of HBM development. HBM capacity has historically increased by moving from 4-high to 8-high and then to 12-high stacks. As the number of layers rises, however, DRAM dies must be thinned and stacked with greater precision, increasing back-end process complexity and creating additional yield challenges.\n\nAn 8-high design, by contrast, reduces manufacturing complexity and makes it easier to produce HBM in larger volumes. The move is therefore seen as part of Nvidia’s strategy to alleviate memory supply constraints.\n\nInstead, Nvidia plans to push memory speeds significantly higher. NVHBM could be introduced as early as Rubin Ultra, Nvidia’s next-generation AI GPU scheduled for launch next year.\n\nRubin Ultra will expand the scale of GPU interconnects from the current 72 GPUs to as many as 576, an eightfold increase. Nvidia’s strategy appears to be to accept lower memory capacity per GPU by reducing HBM stack height, while connecting hundreds of GPUs equipped with faster HBM into a single system to boost aggregate compute performance.\n\nSamsung is considered to have a competitive advantage over SK hynix and Micron in the emerging custom-HBM market. NVHBM requires not only DRAM capabilities but also the ability to design and manufacture logic-based base dies. Samsung possesses both memory and system-semiconductor capabilities, allowing it to provide an integrated solution.\n\n“Samsung has already demonstrated industry-leading speeds with HBM4, so it should be able to capitalize on its strengths as competition shifts toward speed rather than increasingly higher stack counts,” an industry source said.",
+      "url": "https://x.com/jukan05/status/2093219540415168605",
+      "kind": "post",
+      "engagement": {
+        "views": 36414,
+        "likes": 134,
+        "reposts": 13,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9327,11 +9350,12 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-28T06:17:44.643093+00:00",
+  "price_updated_at": "2026-08-28T09:17:44.516231+00:00",
+  "price_reason": "EODHD 402 (account quota or subscription limit)",
   "price_history_52w": {
     "requested_start": "2025-08-29",
     "asof": "2026-08-28",
-    "attempted_at": "2026-08-28T06:17:44.575280+00:00",
+    "attempted_at": "2026-08-28T09:17:44.410726+00:00",
     "status": "ok",
     "first_available_date": "2025-08-29",
     "last_available_date": "2026-08-27",
@@ -9342,10 +9366,9 @@
     "provider_symbol": "000660.KS",
     "status": "deferred",
     "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-28T06:17:44.575280+00:00",
+    "checked_at": "2026-08-28T09:17:44.410726+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-08-28T09:17:44.575280+00:00",
+    "next_retry_at": "2026-08-28T12:17:44.410726+00:00",
     "http_status": null
-  },
-  "price_reason": "EODHD 402 (account quota or subscription limit)"
+  }
 }
