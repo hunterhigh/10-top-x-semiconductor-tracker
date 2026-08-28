@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-28T15:18:03.160133+00:00",
+  "generated_at": "2026-08-28T18:18:28.850770+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2178,
-    "total_mentions": 25759,
+    "total_tickers": 2179,
+    "total_mentions": 25766,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2178,
+      "files": 2179,
       "shards": 256,
       "max_shard_width": 17,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-28T15:19:21.386812+00:00"
+    "prices_updated_at": "2026-08-28T18:20:09.036322+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -409,12 +409,12 @@
       "industry": "Bitcoin Miner→AI Datacenter (Neocloud)",
       "first_mention": "2025-08-31",
       "last_mention": "2026-08-28",
-      "total_mentions": 494,
+      "total_mentions": 495,
       "blogger_count": 6,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 462,
         "ren_stocks": 15,
-        "StockMKTNewz": 8,
+        "StockMKTNewz": 9,
         "octopusycc": 5,
         "michaelsikand": 3,
         "unusual_whales": 1
@@ -451,11 +451,11 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-08-28",
-      "total_mentions": 479,
+      "total_mentions": 480,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 294,
-        "StockMKTNewz": 94,
+        "StockMKTNewz": 95,
         "unusual_whales": 38,
         "jukan05": 12,
         "zephyr_z9": 10,
@@ -542,11 +542,11 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-08-28",
-      "total_mentions": 417,
+      "total_mentions": 418,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 247,
-        "StockMKTNewz": 94,
+        "StockMKTNewz": 95,
         "unusual_whales": 29,
         "octopusycc": 10,
         "jukan05": 9,
@@ -1312,7 +1312,8 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
+      "price_history_52w_status": "ok"
     },
     "London LSE:IQE": {
       "ticker": "IQE",
@@ -2083,8 +2084,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2310,13 +2310,13 @@
       "industry": null,
       "first_mention": "2025-10-01",
       "last_mention": "2026-08-28",
-      "total_mentions": 67,
+      "total_mentions": 68,
       "blogger_count": 6,
       "total_mentions_by_blogger": {
         "unusual_whales": 28,
         "StockMKTNewz": 21,
         "octopusycc": 12,
-        "michaelsikand": 3,
+        "michaelsikand": 4,
         "aleabitoreddit": 2,
         "ren_stocks": 1
       },
@@ -2428,12 +2428,12 @@
       "company": "LIGHTPATH TECHNOLOGIES INC",
       "industry": "Infrared Optics/Lenses",
       "first_mention": "2026-01-14",
-      "last_mention": "2026-08-25",
-      "total_mentions": 63,
+      "last_mention": "2026-08-28",
+      "total_mentions": 64,
       "blogger_count": 3,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 51,
-        "michaelsikand": 11,
+        "michaelsikand": 12,
         "KawzInvests": 1
       },
       "price_status": "ok",
@@ -4256,7 +4256,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -5060,6 +5061,46 @@
       "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
       "price_history_52w_status": "ok"
     },
+    "US:LMT": {
+      "ticker": "LMT",
+      "instrument": {
+        "instrument_id": "US:LMT",
+        "display_code": "LMT",
+        "display_name": "LOCKHEED MARTIN CORP",
+        "display_market": "NYSE",
+        "aliases": [
+          "LMT"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "LMT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$LMT",
+      "price_symbol": "LMT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "LOCKHEED MARTIN CORP",
+      "industry": null,
+      "first_mention": "2026-01-03",
+      "last_mention": "2026-08-28",
+      "total_mentions": 29,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 12,
+        "aleabitoreddit": 10,
+        "DJTRadar": 3,
+        "unusual_whales": 2,
+        "michaelsikand": 2
+      },
+      "price_status": "ok",
+      "instrument_id": "US:LMT",
+      "hash": "e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4",
+      "path": "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json"
+    },
     "US:LRCX": {
       "ticker": "LRCX",
       "instrument": {
@@ -5256,46 +5297,6 @@
       "instrument_id": "US:TER",
       "hash": "fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8",
       "path": "stocks/fb/fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8.json"
-    },
-    "US:LMT": {
-      "ticker": "LMT",
-      "instrument": {
-        "instrument_id": "US:LMT",
-        "display_code": "LMT",
-        "display_name": "LOCKHEED MARTIN CORP",
-        "display_market": "NYSE",
-        "aliases": [
-          "LMT"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "LMT",
-        "verification_status": "verified"
-      },
-      "cashtag": "$LMT",
-      "price_symbol": "LMT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "LOCKHEED MARTIN CORP",
-      "industry": null,
-      "first_mention": "2026-01-03",
-      "last_mention": "2026-08-25",
-      "total_mentions": 28,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 12,
-        "aleabitoreddit": 10,
-        "DJTRadar": 3,
-        "unusual_whales": 2,
-        "michaelsikand": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:LMT",
-      "hash": "e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4",
-      "path": "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json"
     },
     "US:FORM": {
       "ticker": "FORM",
@@ -8779,8 +8780,7 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -52885,6 +52885,42 @@
       "hash": "6ed48ebda9058e39f1d30d42782750d7c76e54122c37a1d3b2e774f8f082b05e",
       "path": "stocks/6e/6ed48ebda9058e39f1d30d42782750d7c76e54122c37a1d3b2e774f8f082b05e.json"
     },
+    "UNVERIFIED:CYBER_SECTOR": {
+      "ticker": "CYBER_SECTOR",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:CYBER_SECTOR",
+        "display_code": "CYBER_SECTOR",
+        "display_name": "Cybersecurity sector",
+        "display_market": "Market unverified",
+        "aliases": [
+          "CYBER_SECTOR"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "cyber",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Cybersecurity sector",
+      "industry": null,
+      "first_mention": "2026-08-28",
+      "last_mention": "2026-08-28",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:CYBER_SECTOR",
+      "hash": "9e2f44a69920fb089593634934e12bb7c117cca2116eb59341dd3d2c47a1861f",
+      "path": "stocks/9e/9e2f44a69920fb089593634934e12bb7c117cca2116eb59341dd3d2c47a1861f.json"
+    },
     "UNVERIFIED:CYMECHS": {
       "ticker": "CYMECHS",
       "instrument": {
@@ -81777,6 +81813,9 @@
     "$CXW": [
       "US:CXW"
     ],
+    "$CYBER_SECTOR": [
+      "UNVERIFIED:CYBER_SECTOR"
+    ],
     "$CYMECHS": [
       "UNVERIFIED:CYMECHS"
     ],
@@ -89735,6 +89774,15 @@
     ],
     "CXW": [
       "US:CXW"
+    ],
+    "CYBER": [
+      "UNVERIFIED:CYBER_SECTOR"
+    ],
+    "CYBERSECURITY SECTOR": [
+      "UNVERIFIED:CYBER_SECTOR"
+    ],
+    "CYBER_SECTOR": [
+      "UNVERIFIED:CYBER_SECTOR"
     ],
     "CYMECHS": [
       "UNVERIFIED:CYMECHS"
@@ -99570,6 +99618,9 @@
     "UNVERIFIED:CXV": [
       "UNVERIFIED:CXV"
     ],
+    "UNVERIFIED:CYBER_SECTOR": [
+      "UNVERIFIED:CYBER_SECTOR"
+    ],
     "UNVERIFIED:CYMECHS": [
       "UNVERIFIED:CYMECHS"
     ],
@@ -106031,12 +106082,12 @@
     "stocks/ad/ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77.json",
     "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json",
     "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
+    "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json",
     "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json",
     "stocks/dc/dc477484fe5fc6dc3a7b6046c6877009fe42155cb0f17022d93dbd1bf048ad0a.json",
     "stocks/03/0332837b414bda34374b93f2b5be80157f9c89dd81e13f2a116ce744bf3a7a20.json",
     "stocks/8c/8ca81d6978d448e0192ae1e35d2a3fd58b5a4b764f1b933b31daf0cb8f228b03.json",
     "stocks/fb/fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8.json",
-    "stocks/e2/e27f46bd2c9dfa1bea5a59509e5d18af3653cee9e0fbdaefaac91e183718c7e4.json",
     "stocks/c7/c7b70b6ae9993ee21f3ca85fb8b3faf91a3e7df04f8ed4783a7dfadc65effac5.json",
     "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json",
     "stocks/7d/7d87b50922cdf92a2a0504316773d0a718be353f2be0a62434ad0180b8e73f75.json",
@@ -107338,6 +107389,7 @@
     "stocks/6c/6c89d8c41db7fd3f35dd1b2a8dd24b8331170b8daca70304d621d45d9c5cdc72.json",
     "stocks/25/25ee4a17625bc13e42ac91e07d9eedd9565a215acf8be0793b490f06af39d9af.json",
     "stocks/6e/6ed48ebda9058e39f1d30d42782750d7c76e54122c37a1d3b2e774f8f082b05e.json",
+    "stocks/9e/9e2f44a69920fb089593634934e12bb7c117cca2116eb59341dd3d2c47a1861f.json",
     "stocks/54/54b681dcec347a046b4e95aa3cdc44e56b120228ace848cffab545c316255fee.json",
     "stocks/26/265368a772b13512561e0dbeb7084c102a693270cef159f587e9f8a193cfeb24.json",
     "stocks/8f/8f066002eafc3dadb6da143d5519f60918ba422bc7f0e580bf66cf48a0343969.json",
