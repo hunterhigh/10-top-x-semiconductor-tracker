@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-28T21:17:15.594012+00:00",
+  "generated_at": "2026-08-29T00:15:12.920809+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2179,
-    "total_mentions": 25770,
+    "total_mentions": 25772,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-28T21:18:22.697725+00:00"
+    "prices_updated_at": "2026-08-29T00:16:48.040598+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -156,7 +156,7 @@
         "michaelsikand": 1,
         "KawzInvests": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -784,7 +784,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1251,14 +1251,14 @@
       "company": "Rocket Lab Corp",
       "industry": null,
       "first_mention": "2025-07-03",
-      "last_mention": "2026-08-24",
-      "total_mentions": 203,
+      "last_mention": "2026-08-28",
+      "total_mentions": 204,
       "blogger_count": 7,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 172,
         "StockMKTNewz": 16,
         "octopusycc": 6,
-        "michaelsikand": 3,
+        "michaelsikand": 4,
         "unusual_whales": 3,
         "ren_stocks": 2,
         "KawzInvests": 1
@@ -1432,7 +1432,8 @@
       "price_status": "ok",
       "instrument_id": "US:RDDT",
       "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json"
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+      "price_history_52w_status": "ok"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -2824,7 +2825,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:ANTHROPIC": {
       "ticker": "ANTHROPIC",
@@ -3184,6 +3186,47 @@
       "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
       "price_history_52w_status": "ok"
     },
+    "US:ASTS": {
+      "ticker": "ASTS",
+      "instrument": {
+        "instrument_id": "US:ASTS",
+        "display_code": "ASTS",
+        "display_name": "AST SpaceMobile, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "ASTS"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ASTS",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ASTS",
+      "price_symbol": "ASTS",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "AST SpaceMobile, Inc.",
+      "industry": null,
+      "first_mention": "2025-09-10",
+      "last_mention": "2026-08-28",
+      "total_mentions": 44,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 31,
+        "StockMKTNewz": 6,
+        "michaelsikand": 4,
+        "octopusycc": 2,
+        "KawzInvests": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ASTS",
+      "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
+      "price_history_52w_status": "ok"
+    },
     "UNVERIFIED:DRAM": {
       "ticker": "DRAM",
       "instrument": {
@@ -3225,8 +3268,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:AMKR": {
       "ticker": "AMKR",
@@ -3267,47 +3309,6 @@
       "instrument_id": "US:AMKR",
       "hash": "70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1",
       "path": "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json"
-    },
-    "US:ASTS": {
-      "ticker": "ASTS",
-      "instrument": {
-        "instrument_id": "US:ASTS",
-        "display_code": "ASTS",
-        "display_name": "AST SpaceMobile, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "ASTS"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ASTS",
-        "verification_status": "verified"
-      },
-      "cashtag": "$ASTS",
-      "price_symbol": "ASTS",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "AST SpaceMobile, Inc.",
-      "industry": null,
-      "first_mention": "2025-09-10",
-      "last_mention": "2026-08-23",
-      "total_mentions": 43,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 31,
-        "StockMKTNewz": 6,
-        "michaelsikand": 3,
-        "octopusycc": 2,
-        "KawzInvests": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ASTS",
-      "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
-      "price_history_52w_status": "ok"
     },
     "US:BRK.B": {
       "ticker": "BRK.B",
@@ -14185,7 +14186,8 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
+      "price_history_52w_status": "unavailable"
     },
     "UNVERIFIED:8147": {
       "ticker": "8147",
@@ -106033,9 +106035,9 @@
     "stocks/4a/4a5a6ddbf7f22e56529177f4235382a7f81cdcdcaa7b8e25768696800604afad.json",
     "stocks/ed/eddb5f9f1b7f013ad1edfc42e7dd2a444297fb5876848cbe37acc8fe287358d5.json",
     "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
+    "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
     "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json",
-    "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
     "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json",
     "stocks/4c/4c67ef37c4c0382001b47bf1a426aafb23df698b8811a38902b7146790f4dad6.json",
     "stocks/ec/ec4d2fb06ecded17e0181bd232c8a948d5525d3666f2be2300620b9d697469a1.json",
