@@ -25,11 +25,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-08-28",
-  "total_mentions": 280,
+  "last_mention": "2026-08-29",
+  "total_mentions": 281,
   "total_mentions_by_blogger": {
     "jukan05": 133,
-    "aleabitoreddit": 83,
+    "aleabitoreddit": 84,
     "zephyr_z9": 21,
     "StockMKTNewz": 16,
     "octopusycc": 10,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 255,
+    "opinion": 256,
     "flow": 9,
     "news": 16
   },
@@ -6679,6 +6679,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093811019823132903",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-29",
+      "created_at": "2026-08-29T17:20:22-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Okay just to simplify this:\n\nThere is a guy who eats a lot called $NVDA. Nvidia only wants to buy high-priced potatos off the farmers.\n\nA potato farmer $MU, that was selling carrots... now shifted farmland to potatos. \n\nNvidia caused a great potato famine cause they can eat a lot. So everyone else who farmed carrots like SK Hynix and Samsung moved their farmland capacity to grow potato. \n\nBut... people still need to eat. And carrots are a healthy part of their everyday diet..\n\nNow there's no more carrots aside from a player like \"ESMT\", the legacy carrot farmer. \n\nSo now, because everyone buys carrots off ESMT, there's a shortage and the price goes up.\n\nSo ESMT needs more carrot seeds (from PSMC). But PSMC is running low on carrot seeds to grow the carrots. \n\nSo PSMC charges ESMT more for the seeds.\n\nBut the price ESMT sells the carrots at are much higher than what PSMC hikes the carrod seed price. \n\nnow... ESMT is making enough from selling carrots that it traded 1.9x P/E off July's earnings. \n\nCan ESMT keep selling these carrots through 2027?\n\nAll the other farmers thinks so since it's both hard + low incentive to migrate their valuable potato farms back to carrot farms.",
+      "url": "https://x.com/aleabitoreddit/status/2093811019823132903",
+      "kind": "post",
+      "engagement": {
+        "views": 121863,
+        "likes": 454,
+        "reposts": 21,
+        "replies": 46
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7757,12 +7780,12 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-29T21:17:22.484734+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-30T00:16:28.238011+00:00",
+  "price_reason": "EODHD 404 (symbol not found: 005930.KS)",
   "price_history_52w": {
     "requested_start": "2025-08-30",
     "asof": "2026-08-29",
-    "attempted_at": "2026-08-29T21:17:22.352018+00:00",
+    "attempted_at": "2026-08-30T00:16:27.747203+00:00",
     "status": "ok",
     "first_available_date": "2025-09-01",
     "last_available_date": "2026-08-26",
@@ -7771,11 +7794,11 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-29T21:17:22.352018+00:00",
+    "status": "unsupported",
+    "reason": "provider_symbol_not_found_after_search",
+    "checked_at": "2026-08-30T00:16:27.747203+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-08-30T00:17:22.352018+00:00",
-    "http_status": null
+    "next_retry_at": "2026-09-29T00:16:27.747203+00:00",
+    "http_status": 404
   }
 }
