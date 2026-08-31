@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-31T00:17:24.968111+00:00",
+    "generated_at": "2026-08-31T03:16:27.298647+00:00",
     "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."
   },
   "profiles": [
@@ -312,11 +312,11 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-08-30",
-        "mentions": 1146,
-        "unique_original_posts": 596,
+        "mentions": 1150,
+        "unique_original_posts": 599,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
-          "bullish": 131,
+          "bullish": 132,
           "bearish": 52,
           "neutral": 19
         },
@@ -335,7 +335,11 @@
           },
           {
             "ticker": "TSM",
-            "mentions": 64
+            "mentions": 65
+          },
+          {
+            "ticker": "INTC",
+            "mentions": 54
           },
           {
             "ticker": "MU",
@@ -343,10 +347,6 @@
           },
           {
             "ticker": "CXMT",
-            "mentions": 51
-          },
-          {
-            "ticker": "INTC",
             "mentions": 51
           },
           {
@@ -361,15 +361,15 @@
           },
           {
             "industry": "Wafer Foundry",
-            "mentions": 64
+            "mentions": 65
+          },
+          {
+            "industry": "CPU/Foundry/Glass Substrate",
+            "mentions": 54
           },
           {
             "industry": "Memory/HBM",
             "mentions": 54
-          },
-          {
-            "industry": "CPU/Foundry/Glass Substrate",
-            "mentions": 51
           },
           {
             "industry": "Hyperscaler",
@@ -381,6 +381,24 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-30",
+            "url": "https://x.com/jukan05/status/2094239670679040386",
+            "text": "@harukaze5719 Since it will likely use a node more advanced than 12nm, couldn’t Intel 18A-P also be a possibility?",
+            "ticker": "INTC"
+          },
+          {
+            "date": "2026-08-30",
+            "url": "https://x.com/jukan05/status/2094234328230482082",
+            "text": "[EXCLUSIVE] SK HYNIX CONSIDERS INTEL FOR NEXT-GENERATION HBM BASE DIES\n\nSK hynix is moving to diversify the foundry suppliers for the base dies used in high-bandwidth memory (HBM), which is built by vertically stacking multiple memory dies.\n\nThe company is reportedly considering outsourcing a portion of the base-die production for HBM4E, the seventh generation of HBM, to Intel Foundry. Until now, SK hynix has relied entirely on TSMC for outsourced base-die production.\n\nThe move is seen as an effort to establish a multi-vendor foundry strategy, reducing supply-chain concentration on TSMC while also strengthening SK hynix’s bargaining power on pricing.\n\nAccording to industry sources on August 31, SK hynix is pursuing a plan under which base dies for HBM4E could be manufactured by both TSMC and Intel, potentially beginning as early as the HBM4E generation.\n\nThe base die sits at the bottom of an HBM stack and functions as a controller chip that supports and manages the overall structure. It is also commonly referred to as a logic die. The base die is responsible for the high-speed interface that connects HBM with external processors such as GPUs and CPUs.\n\nUp through HBM3E, SK hynix manufactured its base dies using its own processes. However, as successive HBM generations have placed greater importance on the logic, control functionality, and performance of the base die, SK hynix began working with TSMC to manufacture base dies starting with HBM4. SK hynix’s HBM4 products currently in mass production use base dies manufactured on a TSMC 12nm-class process.\n\nThe key issue is the cost burden associated with the base die. According to industry sources, the TSMC-produced base die used in HBM4 is estimated to cost three to four times as much as the core dies—the DRAM dies stacked above the base die that directly store data—which SK hynix manufactures using its 10nm-class fifth-generation 1b process.\n\nThe base-die cost burden is expected to increase further with HBM4E. Because HBM products are heavily covered by long-term supply agreements (LTAs), it is also difficult for SK hynix to immediately pass higher foundry costs on to customers through higher product prices.\n\nFor this reason, industry observers believe that if Intel ultimately joins SK hynix’s base-die supply chain, the company would gain additional options in terms of both cost competitiveness and supply stability.\n\nThe move is also interpreted as part of a longer-term strategy to diversify a supply chain currently concentrated on TSMC. Beginning with HBM4, “custom HBM”—in which the base-die design is tailored to the architecture and performance requirements of individual customers’ AI accelerators—is becoming increasingly important.\n\nFor SK hynix, this creates a need to move away from an ecosystem concentrated around specific customers and foundries and broaden its ability to collaborate with a wider range of AI chip companies.\n\nThere is also speculation that SK hynix’s cooperation with Intel could eventually expand beyond base-die manufacturing into advanced packaging.\n\nAt Hot Chips, the high-performance semiconductor and computing architecture conference held in Silicon Valley, Lee Jae-sik, vice president of package engineering at SK hynix America, said the company is evaluating and comparing major advanced packaging technologies, including TSMC’s CoWoS-S and CoWoS-L as well as Intel’s EMIB.\n\n$INTC",
+            "ticker": "INTC"
+          },
+          {
+            "date": "2026-08-30",
+            "url": "https://x.com/jukan05/status/2094233685633782200",
+            "text": "KOREAN LOCAL MEDIA: SK HYNIX TO OUTSOURCE NEXT-GENERATION BASE DIE PRODUCTION TO INTEL\n\n$INTC",
+            "ticker": "INTC"
+          },
           {
             "date": "2026-08-30",
             "url": "https://x.com/jukan05/status/2094205894204825616",
@@ -434,24 +452,6 @@
             "url": "https://x.com/jukan05/status/2093836595560661426",
             "text": "Maybe EDA is like the Cloudflare of the semiconductor industry?",
             "ticker": "EDA"
-          },
-          {
-            "date": "2026-08-29",
-            "url": "https://x.com/jukan05/status/2093835652379103652",
-            "text": "Some of the people I’ve spoken with already see this future coming…",
-            "ticker": "EDA"
-          },
-          {
-            "date": "2026-08-29",
-            "url": "https://x.com/jukan05/status/2093835419515580876",
-            "text": "What sets EDA apart from other “replaceable software”:\n\nEDA’s moat fundamentally comes not from the data EDA holds, but from the verified tools themselves that only EDA has.\n\nBut once AI chip design takes off, it becomes possible to convert this verification work into tool revenue.\n\nIn other words, EDA that used to be sold per seat can be transitioned to a usage based billing model.\n\nThe countless design and verification iterations that used to be buried inside engineers’ labor costs can now be directly measured and billed as EDA compute and tool invocations consumed by AI agents.\n\nIt means EDA itself can be sold like Claude Code or an API. Especially now that AI chip design is starting to take hold in earnest, I see a strong possibility of a loop where AI chip design advances -> AI calls EDA more -> EDAmaxxing happens.",
-            "ticker": "EDA"
-          },
-          {
-            "date": "2026-08-28",
-            "url": "https://x.com/jukan05/status/2093529419398975813",
-            "text": "CXMT BEGINS MASS PRODUCTION OF LPDDR6 https://t.co/0fkumkwP1w",
-            "ticker": "CXMT"
           }
         ]
       },
@@ -764,9 +764,9 @@
       "signal_type": "opinion",
       "sample": {
         "first_date": "2026-06-10",
-        "last_date": "2026-08-29",
-        "mentions": 1101,
-        "unique_original_posts": 459,
+        "last_date": "2026-08-30",
+        "mentions": 1102,
+        "unique_original_posts": 460,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 592,
@@ -835,6 +835,12 @@
         ],
         "recent_posts": [
           {
+            "date": "2026-08-30",
+            "url": "https://x.com/ren_stocks/status/2094260481942798813",
+            "text": "If you feel like the AI trade has gone nowhere the last month, well, it hasn't.\n\nsolana:7Lob7rg43kWwmreuxfSTuohun2atBHCXBUkW6KSfpump +0.80%\n$SOXX +0.74%\n\nLet's see what September has in store. https://t.co/jeI3haS9Bk",
+            "ticker": "SOXX"
+          },
+          {
             "date": "2026-08-29",
             "url": "https://x.com/ren_stocks/status/2093869166272913733",
             "text": "I wonder which NeoCloud company could benefit from this…\n\nOh yeah $NBIS",
@@ -899,12 +905,6 @@
             "url": "https://x.com/ren_stocks/status/2092986690763723200",
             "text": "$CRM +20% on the day. If you've been bagholding this name forever, today's a great day.\n\nI go to Dreamforce every year, and it's one of our core platforms at work.\n\nI could short it purely on having one of the worst price-to-value, usability and ecosystem of any CRM out there. https://t.co/rUMF5ObEFC",
             "ticker": "CRM"
-          },
-          {
-            "date": "2026-08-27",
-            "url": "https://x.com/ren_stocks/status/2092976993897685218",
-            "text": "$SIVE\n\nHow are feeling, huge day ahead of us.",
-            "ticker": "SIVE"
           }
         ]
       },
@@ -1067,8 +1067,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-08-30",
-        "mentions": 804,
-        "unique_original_posts": 613,
+        "mentions": 806,
+        "unique_original_posts": 615,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1078,7 +1078,7 @@
           },
           {
             "ticker": "NVDA",
-            "mentions": 57
+            "mentions": 58
           },
           {
             "ticker": "META",
@@ -1112,7 +1112,7 @@
           },
           {
             "industry": "AI Chips",
-            "mentions": 57
+            "mentions": 58
           },
           {
             "industry": "Memory/HBM",
@@ -1132,6 +1132,18 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-08-30",
+            "url": "https://x.com/unusual_whales/status/2094244028749418496",
+            "text": "The $10 million in question originated from a larger $67 million Medicaid settlement in 2024 between Florida and Centene Corp\n\nRead more: https://t.co/ie4c1VtIBP",
+            "ticker": "CNC"
+          },
+          {
+            "date": "2026-08-30",
+            "url": "https://x.com/unusual_whales/status/2094228929288532258",
+            "text": "\"Nvidia, $NVDA, could be up to 50% undervalued,\" per Bank of America",
+            "ticker": "NVDA"
+          },
           {
             "date": "2026-08-30",
             "url": "https://x.com/unusual_whales/status/2094198730442330133",
@@ -1191,18 +1203,6 @@
             "url": "https://x.com/unusual_whales/status/2093081265041756202",
             "text": "BREAKING: $IREN earnings:\n\n- Revenue: $137 million, est: $135 million\n- EPS: -$0.61, est: -$2.04\n\nhttps://t.co/c0DtB2DyZ1",
             "ticker": "IREN"
-          },
-          {
-            "date": "2026-08-27",
-            "url": "https://x.com/unusual_whales/status/2093074069319254209",
-            "text": "This is not a memecoin.\n\nThis is Nvidia, $NVDA, one of the most valuable companies in the world.\n\nIt finished the day up more than 8% after a double earnings beat. https://t.co/y8oAMZR6FP",
-            "ticker": "NVDA"
-          },
-          {
-            "date": "2026-08-27",
-            "url": "https://x.com/unusual_whales/status/2093067910650445889",
-            "text": "BREAKING: Marvell, $MRVL, earnings:\n\n- Revenue: $2.73 billion, est: $2.71 billion\n- EPS: $0.94. est: $0.93",
-            "ticker": "MRVL"
           }
         ]
       },

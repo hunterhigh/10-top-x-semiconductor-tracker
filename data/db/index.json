@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-31T00:17:23.918062+00:00",
+  "generated_at": "2026-08-31T03:16:26.260816+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2190,
-    "total_mentions": 26015,
+    "total_mentions": 26022,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-31T00:19:08.117931+00:00"
+    "prices_updated_at": "2026-08-31T03:17:49.972576+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -45,7 +45,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "NVIDIA",
+      "cashtag": "$NVDA",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -55,14 +55,14 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-08-30",
-      "total_mentions": 1055,
+      "total_mentions": 1056,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 545,
         "StockMKTNewz": 161,
         "jukan05": 111,
         "zephyr_z9": 64,
-        "unusual_whales": 57,
+        "unusual_whales": 58,
         "KawzInvests": 30,
         "ren_stocks": 30,
         "octopusycc": 28,
@@ -156,7 +156,7 @@
         "michaelsikand": 1,
         "KawzInvests": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -578,7 +578,7 @@
         "price_symbol": "TSM",
         "verification_status": "verified"
       },
-      "cashtag": "$TSM",
+      "cashtag": "TSMC",
       "price_symbol": "TSM",
       "exchange": "US",
       "currency": "USD",
@@ -588,11 +588,11 @@
       "industry": "Wafer Foundry",
       "first_mention": "2025-09-09",
       "last_mention": "2026-08-30",
-      "total_mentions": 364,
+      "total_mentions": 365,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 237,
-        "jukan05": 64,
+        "jukan05": 65,
         "StockMKTNewz": 27,
         "zephyr_z9": 15,
         "ren_stocks": 8,
@@ -784,7 +784,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -942,7 +942,7 @@
         "price_symbol": "INTC",
         "verification_status": "verified"
       },
-      "cashtag": "$INTC",
+      "cashtag": "Intel 18A-P",
       "price_symbol": "INTC",
       "exchange": "US",
       "currency": "USD",
@@ -952,11 +952,11 @@
       "industry": "CPU/Foundry/Glass Substrate",
       "first_mention": "2025-09-23",
       "last_mention": "2026-08-30",
-      "total_mentions": 289,
+      "total_mentions": 292,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 147,
-        "jukan05": 51,
+        "jukan05": 54,
         "StockMKTNewz": 43,
         "octopusycc": 11,
         "unusual_whales": 10,
@@ -1101,7 +1101,8 @@
       "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
-      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json"
+      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
+      "price_history_52w_status": "ok"
     },
     "US:TSLA": {
       "ticker": "TSLA",
@@ -2084,7 +2085,8 @@
       "price_status": "ok",
       "instrument_id": "US:CRDO",
       "hash": "7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49",
-      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json"
+      "path": "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -4372,7 +4374,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "Toronto TSX:HPS.A": {
       "ticker": "HPS.A",
@@ -9009,6 +9012,44 @@
       "hash": "6c5156598cb58f0137989d1079f96718ef48c41033232a997301cc510df90b9e",
       "path": "stocks/6c/6c5156598cb58f0137989d1079f96718ef48c41033232a997301cc510df90b9e.json"
     },
+    "UNVERIFIED:SOXX": {
+      "ticker": "SOXX",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SOXX",
+        "display_code": "SOXX",
+        "display_name": "Semiconductor sector",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SOXX"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$SOXX",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Semiconductor sector",
+      "industry": null,
+      "first_mention": "2026-06-18",
+      "last_mention": "2026-08-30",
+      "total_mentions": 13,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 8,
+        "octopusycc": 4,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SOXX",
+      "hash": "7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049",
+      "path": "stocks/7d/7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049.json"
+    },
     "UNVERIFIED:UNKNOWN": {
       "ticker": "UNKNOWN",
       "instrument": {
@@ -9645,44 +9686,6 @@
       "instrument_id": "TSE:6324",
       "hash": "0da6f0fd349b85ae514f77c6d57a5d0d5490841ea0218edc604832e403c5d2c0",
       "path": "stocks/0d/0da6f0fd349b85ae514f77c6d57a5d0d5490841ea0218edc604832e403c5d2c0.json"
-    },
-    "UNVERIFIED:SOXX": {
-      "ticker": "SOXX",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:SOXX",
-        "display_code": "SOXX",
-        "display_name": "Semiconductor sector",
-        "display_market": "Market unverified",
-        "aliases": [
-          "SOXX"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Semi",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Semiconductor sector",
-      "industry": null,
-      "first_mention": "2026-06-18",
-      "last_mention": "2026-08-28",
-      "total_mentions": 12,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 7,
-        "octopusycc": 4,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:SOXX",
-      "hash": "7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049",
-      "path": "stocks/7d/7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049.json"
     },
     "US:ABNB": {
       "ticker": "ABNB",
@@ -24713,6 +24716,43 @@
       "hash": "3d89aaf3cf1364492563256d827794554eea6143f418ab626fd036205ece4764",
       "path": "stocks/3d/3d89aaf3cf1364492563256d827794554eea6143f418ab626fd036205ece4764.json"
     },
+    "US:CNC": {
+      "ticker": "CNC",
+      "instrument": {
+        "instrument_id": "US:CNC",
+        "display_code": "CNC",
+        "display_name": "CENTENE CORP",
+        "display_market": "NYSE",
+        "aliases": [
+          "CNC"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "CNC",
+        "verification_status": "verified"
+      },
+      "cashtag": "Centene Corp",
+      "price_symbol": "CNC",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "CENTENE CORP",
+      "industry": null,
+      "first_mention": "2026-07-01",
+      "last_mention": "2026-08-30",
+      "total_mentions": 4,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:CNC",
+      "hash": "9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113",
+      "path": "stocks/9b/9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113.json"
+    },
     "US:COLB": {
       "ticker": "COLB",
       "instrument": {
@@ -31134,42 +31174,6 @@
       "instrument_id": "US:CGNX",
       "hash": "e15be6f5051bf9e641404d670214eb8168ce4de7ce0f5451be884d2717c2c9ce",
       "path": "stocks/e1/e15be6f5051bf9e641404d670214eb8168ce4de7ce0f5451be884d2717c2c9ce.json"
-    },
-    "US:CNC": {
-      "ticker": "CNC",
-      "instrument": {
-        "instrument_id": "US:CNC",
-        "display_code": "CNC",
-        "display_name": "CENTENE CORP",
-        "display_market": "NYSE",
-        "aliases": [
-          "CNC"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "CNC",
-        "verification_status": "verified"
-      },
-      "cashtag": "$CNC",
-      "price_symbol": "CNC",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "CENTENE CORP",
-      "industry": null,
-      "first_mention": "2026-07-01",
-      "last_mention": "2026-07-14",
-      "total_mentions": 3,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 3
-      },
-      "price_status": "ok",
-      "instrument_id": "US:CNC",
-      "hash": "9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113",
-      "path": "stocks/9b/9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113.json"
     },
     "US:CNP": {
       "ticker": "CNP",
@@ -92644,6 +92648,9 @@
       "UNVERIFIED:INTEL",
       "US:INTC"
     ],
+    "INTEL 18A-P": [
+      "US:INTC"
+    ],
     "INTEL EMIB (EMBEDDED MULTI-DIE INTERCONNECT BRIDGE)": [
       "UNVERIFIED:EMIB"
     ],
@@ -97081,9 +97088,6 @@
     ],
     "SEMES CO. (SAMSUNG ELECTRONICS SUBSIDIARY)": [
       "UNVERIFIED:SEMES"
-    ],
-    "SEMI": [
-      "UNVERIFIED:SOXX"
     ],
     "SEMICONDUCTOR MANUFACTURING INTERNATIONAL CORPORATION": [
       "UNVERIFIED:SMIC"
@@ -106729,6 +106733,7 @@
     "stocks/3c/3cdacfe96252a081f4f52dff4519ae6b75ccae9fef3434aa140236ee34f9f7b2.json",
     "stocks/8a/8a7cc12b68211343150a9e740ad00ec12bbc532cf26074825bacb11e97873822.json",
     "stocks/6c/6c5156598cb58f0137989d1079f96718ef48c41033232a997301cc510df90b9e.json",
+    "stocks/7d/7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049.json",
     "stocks/fb/fbae39aa4854607d5b9422fe851d73e1da14a581e4f74078df1bffac8dab84d3.json",
     "stocks/29/294045b56a21eaea27eb3e79d43ca78e2ac1d59a8ea9bed260ceace95ebd1335.json",
     "stocks/1f/1f190be3981ce3b8ea03a1e25f9b84a64dbe4bd5ee32955fd63d815a919cd424.json",
@@ -106746,7 +106751,6 @@
     "stocks/cc/cc28e9e0a8d0f25c0a7f308f5af682bfb5fbd7c6d82c6cdd1208c456764d3d7c.json",
     "stocks/2e/2eb51ce56f24d70afca0f43c3cabad8b30df3f5149001a351e98a8982da9f9b3.json",
     "stocks/0d/0da6f0fd349b85ae514f77c6d57a5d0d5490841ea0218edc604832e403c5d2c0.json",
-    "stocks/7d/7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049.json",
     "stocks/75/7566d939779d040d3a32f69d99df844596568b4fce21785df8702a75e69f17a6.json",
     "stocks/0b/0b41f932f8aa1984233cc21ddb8efc7084c0625f16ca518b2841227ef6ee073b.json",
     "stocks/e8/e8a2207aba4aaa7755f62c415204ca1b5c886eede795f733fee450c8f2c081c5.json",
@@ -107155,6 +107159,7 @@
     "stocks/ad/adb4eb29d28385b5bc4711a1160d74093e0ddabda139e1254f9cabef96015f3c.json",
     "stocks/96/96fbd1dfa57d8d848b0babb6f3056aa9cc8174c93bd0be65f4d17cebfa38b3b0.json",
     "stocks/3d/3d89aaf3cf1364492563256d827794554eea6143f418ab626fd036205ece4764.json",
+    "stocks/9b/9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113.json",
     "stocks/33/33abd3e3771bb043d953efd7c6b0d8d481f0668b3eab8d2cec66d08b7516bbbb.json",
     "stocks/89/890e93de3d2195f2c5ce849bad2570ab8fdc561a676493ee19c53c850716806f.json",
     "stocks/fe/fe2b4445db9478b46c82f3c67bc6bf285b6fc7ce72b81b7ec6705fcde6da4353.json",
@@ -107331,7 +107336,6 @@
     "stocks/c5/c57d735cdac8030b0a3685ec93045e6017047cd8a62ec2f6784fb3e08ce4157b.json",
     "stocks/47/477e5c30e2c2a20f4fecec3b2a91a8dde464b5d8dca02e351d93c076cee74cbd.json",
     "stocks/e1/e15be6f5051bf9e641404d670214eb8168ce4de7ce0f5451be884d2717c2c9ce.json",
-    "stocks/9b/9be33381ed032bab93ece2f54c983db5eb4ece9b9a0785770835621ec0b81113.json",
     "stocks/fa/fac474cced3da5e2854d1ce38105facf3cd185b61a63e614390639a1285934d7.json",
     "stocks/d3/d35a070890fd6fa8f929a1877d0aa02b2225d0f00e1a1a66e8e219ed43048fab.json",
     "stocks/18/18dc326610dc1ca99820bf6283b6f2db289cc84bf265568df2830a649c5eee70.json",
