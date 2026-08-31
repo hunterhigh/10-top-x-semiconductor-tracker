@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-08-29",
-  "total_mentions": 281,
+  "last_mention": "2026-08-30",
+  "total_mentions": 282,
   "total_mentions_by_blogger": {
-    "jukan05": 133,
+    "jukan05": 134,
     "aleabitoreddit": 84,
     "zephyr_z9": 21,
     "StockMKTNewz": 16,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 256,
+    "opinion": 257,
     "flow": 9,
     "news": 16
   },
@@ -6702,6 +6702,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094204360800833602",
+      "blogger_id": "jukan05",
+      "date": "2026-08-30",
+      "created_at": "2026-08-30T19:23:22-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "SemiAnalysis:\n\nSK hynix and Micron have struggled to achieve the highest HBM4 speeds. In particular, SK hynix had to redesign its base die, delaying HBM4 shipments for NVIDIA’s Rubin platform.\n\nSamsung currently has the best HBM4 technology.\n\nBroadcom has traditionally relied heavily on Samsung for its HBM supply. Samsung’s underperformance in the HBM3E generation made this a disadvantage for Broadcom’s ASICs. However, now that Samsung has pulled ahead of its competitors with HBM4, the same sourcing relationship has become an advantage for Jalapeño.",
+      "url": "https://x.com/jukan05/status/2094204360800833602",
+      "kind": "post",
+      "engagement": {
+        "views": 27427,
+        "likes": 128,
+        "reposts": 10,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7780,12 +7803,12 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-08-30T21:17:50.259706+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-08-31T00:18:08.041362+00:00",
+  "price_reason": "EODHD 404 (symbol not found: 005930.KS)",
   "price_history_52w": {
     "requested_start": "2025-08-31",
     "asof": "2026-08-30",
-    "attempted_at": "2026-08-30T21:17:50.120724+00:00",
+    "attempted_at": "2026-08-31T00:18:07.706740+00:00",
     "status": "ok",
     "first_available_date": "2025-09-01",
     "last_available_date": "2026-08-26",
@@ -7794,11 +7817,11 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-08-30T21:17:50.120724+00:00",
+    "status": "unsupported",
+    "reason": "provider_symbol_not_found_after_search",
+    "checked_at": "2026-08-31T00:18:07.706740+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-08-31T00:17:50.120724+00:00",
-    "http_status": null
+    "next_retry_at": "2026-09-30T00:18:07.706740+00:00",
+    "http_status": 404
   }
 }
