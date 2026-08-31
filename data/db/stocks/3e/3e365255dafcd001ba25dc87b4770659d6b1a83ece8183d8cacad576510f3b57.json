@@ -1,6 +1,6 @@
 {
   "ticker": "TTWO",
-  "cashtag": "TTWO",
+  "cashtag": "GTA VI",
   "instrument": {
     "instrument_id": "US:TTWO",
     "display_code": "TTWO",
@@ -24,16 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-18",
-  "last_mention": "2026-08-30",
-  "total_mentions": 12,
+  "last_mention": "2026-08-31",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
     "michaelsikand": 7,
     "StockMKTNewz": 3,
-    "octopusycc": 2
+    "octopusycc": 2,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "news": 3,
-    "opinion": 9
+    "opinion": 9,
+    "flow": 1
   },
   "mentions": [
     {
@@ -318,6 +320,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094449633510686739",
+      "blogger_id": "unusual_whales",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T11:38:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "GTA VI",
+      "text": "“GTA VI” has already received about 4.6 million preorders, per SensorTower",
+      "url": "https://x.com/unusual_whales/status/2094449633510686739",
+      "kind": "post",
+      "engagement": {
+        "views": 137057,
+        "likes": 933,
+        "reposts": 49,
+        "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -524,13 +549,13 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-30T09:17:48.023949+00:00",
+  "price_updated_at": "2026-08-31T18:17:26.095195+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "TTWO",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-30T09:17:46.912769+00:00",
+    "checked_at": "2026-08-31T18:17:25.102540+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
