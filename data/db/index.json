@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-08-31T06:17:21.047563+00:00",
+  "generated_at": "2026-08-31T09:16:49.431646+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,7 +16,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2190,
-    "total_mentions": 26035,
+    "total_mentions": 26042,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -26,7 +26,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-08-31T06:18:46.102095+00:00"
+    "prices_updated_at": "2026-08-31T09:18:21.020354+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -45,7 +45,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "$NVDA",
+      "cashtag": "NVIDIA DGX Spark",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -54,13 +54,13 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-08-30",
-      "total_mentions": 1056,
+      "last_mention": "2026-08-31",
+      "total_mentions": 1057,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 545,
         "StockMKTNewz": 161,
-        "jukan05": 111,
+        "jukan05": 112,
         "zephyr_z9": 64,
         "unusual_whales": 58,
         "KawzInvests": 30,
@@ -541,11 +541,11 @@
       "company": "AMAZON COM INC",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
-      "last_mention": "2026-08-28",
-      "total_mentions": 418,
+      "last_mention": "2026-08-31",
+      "total_mentions": 419,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 247,
+        "aleabitoreddit": 248,
         "StockMKTNewz": 95,
         "unusual_whales": 29,
         "octopusycc": 10,
@@ -859,14 +859,14 @@
       "company": "Apple Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-08-30",
-      "total_mentions": 324,
+      "last_mention": "2026-08-31",
+      "total_mentions": 327,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 118,
-        "aleabitoreddit": 100,
+        "aleabitoreddit": 102,
         "unusual_whales": 37,
-        "jukan05": 34,
+        "jukan05": 35,
         "zephyr_z9": 11,
         "octopusycc": 8,
         "ren_stocks": 7,
@@ -1269,8 +1269,7 @@
       "price_status": "ok",
       "instrument_id": "US:AVGO",
       "hash": "32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e",
-      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/32/32f4b7b133d557548330ff9a779cd05ee3446e95ed6b05d95c9542e33862531e.json"
     },
     "US:RKLB": {
       "ticker": "RKLB",
@@ -1803,6 +1802,42 @@
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
       "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
     },
+    "London LSE:RPI": {
+      "ticker": "RPI",
+      "instrument": {
+        "instrument_id": "London LSE:RPI",
+        "display_code": "RPI",
+        "display_name": "Raspberry Pi Holdings",
+        "display_market": "London LSE",
+        "aliases": [
+          "RPI"
+        ],
+        "market": "London LSE",
+        "country": null,
+        "currency": "GBp",
+        "price_symbol": "RPI.L",
+        "verification_status": "verified"
+      },
+      "cashtag": "$RPI",
+      "price_symbol": "RPI.L",
+      "exchange": "London LSE",
+      "currency": "GBp",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Raspberry Pi Holdings",
+      "industry": null,
+      "first_mention": "2026-02-16",
+      "last_mention": "2026-08-31",
+      "total_mentions": 103,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 103
+      },
+      "price_status": "partial",
+      "instrument_id": "London LSE:RPI",
+      "hash": "bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab",
+      "path": "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json"
+    },
     "US:MTSI": {
       "ticker": "MTSI",
       "instrument": {
@@ -1841,42 +1876,6 @@
       "instrument_id": "US:MTSI",
       "hash": "775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae",
       "path": "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json"
-    },
-    "London LSE:RPI": {
-      "ticker": "RPI",
-      "instrument": {
-        "instrument_id": "London LSE:RPI",
-        "display_code": "RPI",
-        "display_name": "Raspberry Pi Holdings",
-        "display_market": "London LSE",
-        "aliases": [
-          "RPI"
-        ],
-        "market": "London LSE",
-        "country": null,
-        "currency": "GBp",
-        "price_symbol": "RPI.L",
-        "verification_status": "verified"
-      },
-      "cashtag": "$RPI",
-      "price_symbol": "RPI.L",
-      "exchange": "London LSE",
-      "currency": "GBp",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Raspberry Pi Holdings",
-      "industry": null,
-      "first_mention": "2026-02-16",
-      "last_mention": "2026-08-30",
-      "total_mentions": 101,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 101
-      },
-      "price_status": "partial",
-      "instrument_id": "London LSE:RPI",
-      "hash": "bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab",
-      "path": "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json"
     },
     "US:SMCI": {
       "ticker": "SMCI",
@@ -3387,7 +3386,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "UNVERIFIED:TE": {
       "ticker": "TE",
@@ -4293,8 +4293,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:NVO": {
       "ticker": "NVO",
@@ -8818,7 +8817,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VECO": {
       "ticker": "VECO",
@@ -95439,6 +95439,9 @@
     "NVIDIA": [
       "US:NVDA"
     ],
+    "NVIDIA DGX SPARK": [
+      "US:NVDA"
+    ],
     "NVIDIA GB300 (BLACKWELL ULTRA GPU)": [
       "UNVERIFIED:GB300"
     ],
@@ -106546,8 +106549,8 @@
     "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json",
     "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
     "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
-    "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json",
     "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json",
+    "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json",
     "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
     "stocks/0a/0a6a50b3e0798a170f5066f9d9394e43aa4458139aee1dee60f43eb4cf09cadf.json",
     "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
