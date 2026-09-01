@@ -1,6 +1,6 @@
 {
   "ticker": "GPRO",
-  "cashtag": "$GPRO",
+  "cashtag": "GPRO (implied)",
   "instrument": {
     "instrument_id": "UNVERIFIED:GPRO",
     "display_code": "GPRO",
@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-31",
-  "last_mention": "2026-08-31",
-  "total_mentions": 4,
+  "last_mention": "2026-09-01",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
     "unusual_whales": 3,
+    "aleabitoreddit": 2,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
     "flow": 3,
-    "opinion": 1
+    "opinion": 3
   },
   "mentions": [
     {
@@ -123,6 +124,56 @@
         "likes": 77,
         "reposts": 9,
         "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094786201605808566",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-01",
+      "created_at": "2026-09-01T09:55:24-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "planning to merge with photonics company Starman Optical to build US 800G/1.6T optical transceivers for AI data centers",
+        "up 79.17% on the news",
+        "not on their radar"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GPRO",
+      "text": "What... $GPRO is up 79.17% after planning to merge with a photonics company \"Starman Optical\"\n\nTo build US 800G/1.6T optical transceivers for AI data centers.\n\nGoPro trying to compete with $AAOI was definitely not on my radar. https://t.co/5z2XXHaxvs",
+      "url": "https://x.com/aleabitoreddit/status/2094786201605808566",
+      "kind": "post",
+      "engagement": {
+        "views": 115188,
+        "likes": 563,
+        "reposts": 25,
+        "replies": 82
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094787562774864039",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-01",
+      "created_at": "2026-09-01T10:00:48-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "GPRO (implied)",
+      "text": "@GreekFreakHoops ah... that makes things even more confusing than the dinosaur camera company entering the 1.6T optical transceiver market. \n\nI'm reading the news now, apparently it was because of the Youtuber's 8.5% stake?",
+      "url": "https://x.com/aleabitoreddit/status/2094787562774864039",
+      "kind": "reply",
+      "engagement": {
+        "views": 9295,
+        "likes": 51,
+        "reposts": 0,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
