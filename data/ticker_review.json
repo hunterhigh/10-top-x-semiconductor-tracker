@@ -2,6 +2,11 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "GPRO",
+      "mentions": 9,
+      "company_name_hint": "GoPro"
+    },
+    {
       "symbol": "CVNA",
       "mentions": 9,
       "company_name_hint": "Carvana"
@@ -10,11 +15,6 @@
       "symbol": "CRL",
       "mentions": 9,
       "company_name_hint": "Charles River Laboratories"
-    },
-    {
-      "symbol": "GPRO",
-      "mentions": 8,
-      "company_name_hint": "GoPro"
     },
     {
       "symbol": "SPGI",
@@ -157,6 +157,16 @@
       "company_name_hint": "Elite Semiconductor Memory Technology (ESMT)"
     },
     {
+      "symbol": "PFE",
+      "mentions": 4,
+      "company_name_hint": "Pfizer"
+    },
+    {
+      "symbol": "GTLB",
+      "mentions": 4,
+      "company_name_hint": "GitLab"
+    },
+    {
       "symbol": "NDAQ",
       "mentions": 4,
       "company_name_hint": "Nasdaq, Inc."
@@ -185,6 +195,11 @@
       "symbol": "GEHC",
       "mentions": 4,
       "company_name_hint": "GE HealthCare Technologies"
+    },
+    {
+      "symbol": "AU",
+      "mentions": 4,
+      "company_name_hint": "AngloGold Ashanti"
     },
     {
       "symbol": "FAST",
@@ -287,11 +302,6 @@
       "company_name_hint": "Cybersecurity sector"
     },
     {
-      "symbol": "PFE",
-      "mentions": 3,
-      "company_name_hint": "Pfizer"
-    },
-    {
       "symbol": "ALC",
       "mentions": 3,
       "company_name_hint": "Alcon"
@@ -347,19 +357,9 @@
       "company_name_hint": "Stanley Black & Decker"
     },
     {
-      "symbol": "AU",
-      "mentions": 3,
-      "company_name_hint": "AngloGold Ashanti"
-    },
-    {
       "symbol": "PRAX",
       "mentions": 3,
       "company_name_hint": "Praxis Precision Medicine"
-    },
-    {
-      "symbol": "GTLB",
-      "mentions": 3,
-      "company_name_hint": "GitLab"
     },
     {
       "symbol": "FERVO",
@@ -1085,6 +1085,11 @@
       "symbol": "3189",
       "mentions": 1,
       "company_name_hint": "Kinsus Interconnect Technology"
+    },
+    {
+      "symbol": "2768",
+      "mentions": 1,
+      "company_name_hint": "Sojitz Corporation"
     },
     {
       "symbol": "CAMBRICON",
@@ -2922,6 +2927,16 @@
       "company_name_hint": "Keurig Dr Pepper"
     },
     {
+      "symbol": "ABEV",
+      "mentions": 1,
+      "company_name_hint": "Ambev"
+    },
+    {
+      "symbol": "CDE",
+      "mentions": 1,
+      "company_name_hint": "Coeur Mining"
+    },
+    {
       "symbol": "RAI",
       "mentions": 1,
       "company_name_hint": "Reynolds American"
@@ -3186,6 +3201,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "GPRO",
+      "instrument_id": "UNVERIFIED:GPRO",
+      "company_name_hint": "GoPro",
+      "mentions": 9,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "LAZR",
       "instrument_id": "UNVERIFIED:LAZR",
       "company_name_hint": "Innovator Loup Frontier Tech ETF / LAZR ETF (upcoming optical ETF)",
@@ -3224,13 +3246,6 @@
       "symbol": "CI",
       "instrument_id": "UNVERIFIED:CI",
       "company_name_hint": "Cigna Group",
-      "mentions": 8,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "GPRO",
-      "instrument_id": "UNVERIFIED:GPRO",
-      "company_name_hint": "GoPro",
       "mentions": 8,
       "verification_status": "unverified"
     },
@@ -3886,6 +3901,13 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "AU",
+      "instrument_id": "UNVERIFIED:AU",
+      "company_name_hint": "AngloGold Ashanti",
+      "mentions": 4,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "BDX",
       "instrument_id": "UNVERIFIED:BDX",
       "company_name_hint": "Becton Dickinson",
@@ -3945,6 +3967,13 @@
       "symbol": "GEHC",
       "instrument_id": "UNVERIFIED:GEHC",
       "company_name_hint": "GE HealthCare Technologies",
+      "mentions": 4,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "GTLB",
+      "instrument_id": "UNVERIFIED:GTLB",
+      "company_name_hint": "GitLab",
       "mentions": 4,
       "verification_status": "unverified"
     },
@@ -4043,6 +4072,13 @@
       "symbol": "PAGP",
       "instrument_id": "UNVERIFIED:PAGP",
       "company_name_hint": "Plains GP Holdings",
+      "mentions": 4,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "PFE",
+      "instrument_id": "UNVERIFIED:PFE",
+      "company_name_hint": "Pfizer",
       "mentions": 4,
       "verification_status": "unverified"
     },
@@ -4320,13 +4356,6 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "AU",
-      "instrument_id": "UNVERIFIED:AU",
-      "company_name_hint": "AngloGold Ashanti",
-      "mentions": 3,
-      "verification_status": "unverified"
-    },
-    {
       "symbol": "AXTA",
       "instrument_id": "UNVERIFIED:AXTA",
       "company_name_hint": "Axalta Coating Systems",
@@ -4491,13 +4520,6 @@
       "symbol": "GRZ.V",
       "instrument_id": "UNVERIFIED:GRZ.V",
       "company_name_hint": null,
-      "mentions": 3,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "GTLB",
-      "instrument_id": "UNVERIFIED:GTLB",
-      "company_name_hint": "GitLab",
       "mentions": 3,
       "verification_status": "unverified"
     },
@@ -4680,13 +4702,6 @@
       "symbol": "ONON",
       "instrument_id": "UNVERIFIED:ONON",
       "company_name_hint": "On Holding",
-      "mentions": 3,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "PFE",
-      "instrument_id": "UNVERIFIED:PFE",
-      "company_name_hint": "Pfizer",
       "mentions": 3,
       "verification_status": "unverified"
     },
@@ -6392,6 +6407,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "2768",
+      "instrument_id": "UNVERIFIED:2768",
+      "company_name_hint": "Sojitz Corporation",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "277810",
       "instrument_id": "UNVERIFIED:277810",
       "company_name_hint": null,
@@ -7018,6 +7040,13 @@
       "symbol": "ABB",
       "instrument_id": "UNVERIFIED:ABB",
       "company_name_hint": null,
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "ABEV",
+      "instrument_id": "UNVERIFIED:ABEV",
+      "company_name_hint": "Ambev",
       "mentions": 1,
       "verification_status": "unverified"
     },
@@ -7655,6 +7684,13 @@
       "symbol": "CCI",
       "instrument_id": "UNVERIFIED:CCI",
       "company_name_hint": "Crown Castle Inc.",
+      "mentions": 1,
+      "verification_status": "unverified"
+    },
+    {
+      "symbol": "CDE",
+      "instrument_id": "UNVERIFIED:CDE",
+      "company_name_hint": "Coeur Mining",
       "mentions": 1,
       "verification_status": "unverified"
     },
