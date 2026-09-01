@@ -1,6 +1,6 @@
 {
   "ticker": "HUT",
-  "cashtag": "Hut 8",
+  "cashtag": "$HUT",
   "instrument": {
     "instrument_id": "US:HUT",
     "display_code": "HUT",
@@ -25,16 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2025-09-03",
   "last_mention": "2026-08-31",
-  "total_mentions": 22,
+  "total_mentions": 23,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 11,
+    "aleabitoreddit": 12,
     "ren_stocks": 5,
     "michaelsikand": 3,
     "KawzInvests": 2,
     "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 21,
+    "opinion": 22,
     "news": 1
   },
   "mentions": [
@@ -586,6 +586,29 @@
         "likes": 183,
         "reposts": 25,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094585395224981709",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T20:37:28-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$HUT",
+      "text": "Anthropic signs a $35B AI compute deal with $NVDA backed Lambda.\n\n$HUT / DC, with Lambda / GPUs. \n\nFrontier model demand is rapidly outpacing the ecosystem's ability to build capacity.\n\nIt also looks like Anthropic is securing more compute... Which neocloud/colo player is next? https://t.co/49yvFKjr49",
+      "url": "https://x.com/aleabitoreddit/status/2094585395224981709",
+      "kind": "post",
+      "engagement": {
+        "views": 86431,
+        "likes": 332,
+        "reposts": 16,
+        "replies": 56
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1703,11 +1726,15 @@
     {
       "date": "2026-08-28",
       "close": 79.42
+    },
+    {
+      "date": "2026-08-31",
+      "close": 78.64
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-30T21:17:56.488326+00:00",
+  "price_updated_at": "2026-09-01T03:15:51.563396+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-17",
     "asof": "2026-08-16",
@@ -1722,7 +1749,7 @@
     "provider_symbol": "HUT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-30T21:17:55.418147+00:00",
+    "checked_at": "2026-09-01T03:15:50.885729+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
