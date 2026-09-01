@@ -1,6 +1,6 @@
 {
   "ticker": "TTWO",
-  "cashtag": "GTA VI",
+  "cashtag": "$TTWO",
   "instrument": {
     "instrument_id": "US:TTWO",
     "display_code": "TTWO",
@@ -25,16 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2026-06-18",
   "last_mention": "2026-08-31",
-  "total_mentions": 13,
+  "total_mentions": 14,
   "total_mentions_by_blogger": {
     "michaelsikand": 7,
     "StockMKTNewz": 3,
     "octopusycc": 2,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
     "news": 3,
-    "opinion": 9,
+    "opinion": 10,
     "flow": 1
   },
   "mentions": [
@@ -340,6 +341,33 @@
         "likes": 933,
         "reposts": 49,
         "replies": 56
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094551767610466368",
+      "blogger_id": "ren_stocks",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T18:23:50-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trades at 93x FY2026 EPS and 53x FY2027",
+        "not their type of setup",
+        "questions whether GTA Online justifies built-in premium"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$TTWO",
+      "text": "GTA VI will be out in less than 3 months. Sink or swing for Take-Two Interactive $TTWO?\n\nBofA says there's 58% upside. They reiterate Buy with a $368 target against $233, off the back of the GTA 6 gameplay reveal that Netflix aired last week.\n\nThe funny part is in the risk section.\n\nSince August 18, an anonymous account called CyberLeek has been posting GTA 6 clips, and the details look consistent with someone having a real playable build. Rockstar acknowledged it on the 26th.\n\nBut the same account is also promoting its own meme coin, so BofA's reasoning for why this probably isn't catastrophic is that the motive looks financial, and monetizing through a token is a less direct path than just distributing pirated copies.\n\nThe bull case includes \"the leaker seems more interested in his shitcoin.\" You can't make this up.\n\nOn valuation, TTWO trades at 93x FY2026 EPS and 53x FY2027. I get that GTA Online is a machine, but I wonder whether it justifies that kind of built-in premium.\n\nNot my type of setup, but interesting nonetheless.",
+      "url": "https://x.com/ren_stocks/status/2094551767610466368",
+      "kind": "post",
+      "engagement": {
+        "views": 4912,
+        "likes": 8,
+        "reposts": 1,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
