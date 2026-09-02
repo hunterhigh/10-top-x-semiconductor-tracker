@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung",
+  "cashtag": "Samsung Electronics",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-09-01",
-  "total_mentions": 288,
+  "last_mention": "2026-09-02",
+  "total_mentions": 289,
   "total_mentions_by_blogger": {
-    "jukan05": 136,
+    "jukan05": 137,
     "aleabitoreddit": 85,
     "zephyr_z9": 22,
     "StockMKTNewz": 16,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 263,
+    "opinion": 264,
     "flow": 9,
     "news": 16
   },
@@ -6868,6 +6868,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095013103633313851",
+      "blogger_id": "jukan05",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T00:57:02-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "TSMC to Stick With Microbumps Over Hybrid Bonding for HBM Packaging for Now, Tasks Suppliers With 5μm Development\n\nTaiwan’s TSMC is expected to continue using conventional microbump technology, rather than hybrid bonding, for advanced packaging that connects high-bandwidth memory (HBM) with AI accelerators for the time being. Given the development cycle for related materials, finer-pitch microbumps are expected to remain in use through the later stages of HBM4 and into the early phase of HBM5.\n\nAccording to materials industry sources on September 2, TSMC has asked its materials and equipment partners to develop bonding and underfill solutions for approximately 5-micrometer (μm)-class bumps. In other words, TSMC wants the microbumps currently used in advanced packaging to become even shorter and finer. Korean and Japanese suppliers have begun development, with mass production of 5μm-class bumps estimated to begin in the second half of 2028.\n\nCurrently, bump heights are approximately 15–25μm for third-generation extended HBM, or HBM3E, while HBM4 is approaching roughly 10μm. Japanese materials suppliers have previously said they have difficulty guaranteeing quality below 15μm. A 5μm bump would therefore fall well below the current qualification threshold.\n\nThe reason for making the bumps shorter and finer is the height limit of the HBM cube and the need for higher interconnect density. Under JEDEC specifications, the maximum HBM stack height is 775μm. The number of I/O connections continues to increase, but the overall stack must remain within this height limit.\n\nIn TSMC’s advanced CoWoS packaging, the GPU and the HBM stack—already assembled by the memory supplier—are mounted onto a silicon interposer using microbumps. The stacking of 16 DRAM dies itself is performed within the HBM package by companies such as SK hynix and Samsung Electronics, rather than by TSMC. However, as the number of interconnects on the accelerator side increases, the microbumps used to mount the devices in CoWoS also need to become shorter and more densely packed.\n\nFirst- and second-generation HBM used relatively large solder bumps. As the number of stacked dies and I/O connections increased, microbumps became the mainstream approach around the HBM3 generation. SK hynix has used its MR-MUF process, in which liquid underfill is applied after mass reflow, while Samsung Electronics has used TC-NCF, which places a film-type underfill between the dies before thermocompression bonding.\n\nHybrid bonding has been discussed as the next step. By eliminating bumps and directly bonding copper pads, the interconnect can be made thinner and significantly denser. TSMC already uses this technology, under the SoIC platform, for stacking logic chips. However, HBM is still attached to the interposer using microbumps. The industry has been reluctant to abandon a process that is already proven in terms of yield, inspection, and high-volume manufacturing.\n\nAt the 5μm scale, manufacturers must simultaneously solve issues involving void-free underfill, residual flux, and bonding alignment. Given the level of difficulty, TSMC appears to have distributed different development tasks across its materials and equipment partners.\n\nThe direction within the HBM stack itself is similar. At Hot Chips 2026 last month, SK hynix indicated a roadmap under which it would continue using microbump-based MR-MUF through HBM4 and HBM4E, rather than adopting hybrid bonding. Direct bonding was positioned as a technology for HBM5 and for stacks exceeding 20 dies. Industry observers believe JEDEC’s decision to raise the maximum HBM stack height from 720μm to 775μm has provided additional headroom to extend the use of microbumps.\n\nA materials industry source said, “TSMC’s request to develop finer microbumps can be interpreted as a signal that, for this generation, it intends to use lower-profile microbumps rather than move to direct bonding.”\n\nThe source added, “Microbumps below 15μm have already been developed, but guaranteeing their quality remains difficult. The key challenge is not so much the bump itself, but developing an underfill solution that can reliably support and qualify it.”",
+      "url": "https://x.com/jukan05/status/2095013103633313851",
+      "kind": "post",
+      "engagement": {
+        "views": 20288,
+        "likes": 89,
+        "reposts": 11,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7946,14 +7969,14 @@
   ],
   "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-09-02T03:16:23.981526+00:00",
+  "price_updated_at": "2026-09-02T06:17:52.320432+00:00",
   "price_reason": "EODHD 402 (account quota or subscription limit)",
   "price_history_52w": {
-    "requested_start": "2025-09-02",
-    "asof": "2026-09-01",
-    "attempted_at": "2026-09-02T03:16:23.851340+00:00",
+    "requested_start": "2025-09-03",
+    "asof": "2026-09-02",
+    "attempted_at": "2026-09-02T06:17:52.213024+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-02",
+    "first_available_date": "2025-09-03",
     "last_available_date": "2026-08-26",
     "reason": null
   },
@@ -7962,9 +7985,9 @@
     "provider_symbol": "005930.KS",
     "status": "deferred",
     "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-09-02T03:16:23.851340+00:00",
+    "checked_at": "2026-09-02T06:17:52.213024+00:00",
     "attempts": 1,
-    "next_retry_at": "2026-09-02T06:16:23.851340+00:00",
+    "next_retry_at": "2026-09-02T09:17:52.213024+00:00",
     "http_status": null
   }
 }
