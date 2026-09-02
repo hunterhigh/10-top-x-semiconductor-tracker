@@ -15345,5 +15345,91 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-01T21:11:51.158082+00:00"
+  },
+  "2094909826577072206": {
+    "tweet_id": "2094909826577072206",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "GTLB",
+        "symbol": "GTLB",
+        "company_name": "GitLab",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "看涨判断命中，尾盘有暴力轰入的Call",
+          "实际波动+15.3%突破期权市场Expected Move",
+          "Revenue和EPS均超预期，Net ARR Growth >40% YoY",
+          "Call Flow捕捉到市场对财报偏多positioning"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "CRDO",
+        "symbol": "CRDO",
+        "company_name": "Credo Technology Group",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "中性偏负，负面程度较高",
+          "GAAP Gross Margin从68.2%下降至64.5%，下季度指引62.9%-64.9%",
+          "180是明确GEX Wall，暂不破",
+          "Marginal Economics开始恶化",
+          "实际下跌接近Expected Move下沿"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "MDB",
+        "symbol": "MDB",
+        "company_name": "MongoDB",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "整体偏负面判断命中",
+          "Atlas增速只有约29%，未能重新加速",
+          "Beat但没有Beat市场真正的Whisper Number",
+          "实际下跌略微突破期权市场Expected Move"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "DELL",
+        "symbol": "DELL",
+        "company_name": "Dell Technologies",
+        "stance": "neutral",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "中性偏弱但防Beat反包情景命中",
+          "日内-6.8%后财报Beat反包+8.3%",
+          "AI Server FY27指引提高至$74B，AI backlog达$95B"
+        ],
+        "is_risk": false,
+        "conviction_signal": "medium"
+      },
+      {
+        "raw_mention": "PANW",
+        "symbol": "PANW",
+        "company_name": "Palo Alto Networks",
+        "stance": "neutral",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "基本面判断偏积极正确，但股价反馈不配合",
+          "FCF Margin未达到高估值股票要求的更强现金流扩张",
+          "修正为中性偏积极/不值得赌方向",
+          "实际波动仅-1.6%，远小于Expected Move 8.07%"
+        ],
+        "is_risk": true,
+        "conviction_signal": "low"
+      }
+    ],
+    "confidence": 0.85,
+    "blogger_id": "octopusycc",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-02T00:12:52.684007+00:00"
   }
 }
