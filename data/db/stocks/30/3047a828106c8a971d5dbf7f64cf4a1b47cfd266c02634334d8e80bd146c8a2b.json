@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "$NVDA",
+  "cashtag": "Nvidia",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -25,12 +25,12 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-09-02",
-  "total_mentions": 1079,
+  "total_mentions": 1080,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 554,
     "StockMKTNewz": 167,
     "jukan05": 114,
-    "zephyr_z9": 65,
+    "zephyr_z9": 66,
     "unusual_whales": 60,
     "KawzInvests": 30,
     "ren_stocks": 30,
@@ -39,7 +39,7 @@
     "DJTRadar": 5
   },
   "total_mentions_by_signal_type": {
-    "opinion": 847,
+    "opinion": 848,
     "news": 167,
     "flow": 60,
     "disclosure": 5
@@ -25350,6 +25350,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095116870735294884",
+      "blogger_id": "zephyr_z9",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T07:49:22-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Nvidia",
+      "text": "@HyperTechInvest \"Models will keep scaling. Recurrence will be layered on top of larger MoEs, longer contexts and more agents\n\nEvery efficiency gain makes intelligence cheaper\"\n\nLooped transformer has 2 advantages. It cuts ur total parameters and increases depth of reasoning. It does not affect training compute, kv cache generated, bandwidth required compared to the vanilla baseline with higher parameters. My argument is/was never about \"models will stop parameter scaling\". (I gave the 100T vs 25T looped transformer example for a reason). I'm simply arguing that the magnitude of parameter scaling required (training compute remains unchanged) will go down. Looped transformer isn't a simple efficiency gain. \n\nU are simply unaware about model research from 2021-2023 or the reason why GPT-4 API price was 30/60 and fell to 5/15 with 4o (hint: it has to do with model size)\nGPT-4 was the biggest production grade model served till early 2026 (Nvidia mentioned, MSFT leaked it in their paper)\n\nI don't know why are u mixing KV cache sizes (depends on ur attention mechanism) with parameter scaling and citing DeepSeek as an example. The reduction in KV cache size per token comes from attention mechanism and those gains are eaten by longer context windows which keeps on scaling. (Real Jevon's paradox)\n\nThe same can't be applied to looped transformers cuz u are still paying the computation cost, bandwidth cost of the vanilla baseline. U are simply saving HBM capacity required compared to the vanilla baseline.",
+      "url": "https://x.com/zephyr_z9/status/2095116870735294884",
+      "kind": "reply",
+      "engagement": {
+        "views": 952,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -26484,11 +26507,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-02T09:17:04.645218+00:00",
+  "price_updated_at": "2026-09-02T12:18:44.239460+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-03",
     "asof": "2026-09-02",
-    "attempted_at": "2026-09-02T09:17:03.323621+00:00",
+    "attempted_at": "2026-09-02T12:18:43.533335+00:00",
     "status": "ok",
     "first_available_date": "2025-09-03",
     "last_available_date": "2026-09-01",
@@ -26499,7 +26522,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-02T09:17:03.323621+00:00",
+    "checked_at": "2026-09-02T12:18:43.533335+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
