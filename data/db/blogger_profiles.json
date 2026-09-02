@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-02T15:17:24.708121+00:00",
+    "generated_at": "2026-09-02T18:17:17.602746+00:00",
     "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."
   },
   "profiles": [
@@ -161,8 +161,8 @@
       "sample": {
         "first_date": "2026-06-11",
         "last_date": "2026-09-02",
-        "mentions": 516,
-        "unique_original_posts": 336,
+        "mentions": 518,
+        "unique_original_posts": 337,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 71,
@@ -232,6 +232,12 @@
         "recent_posts": [
           {
             "date": "2026-09-02",
+            "url": "https://x.com/zephyr_z9/status/2095173860144635997",
+            "text": "BIG\nWe finally have a list of EDA providers used for LogicFolding\nEmpyrean &amp; Xpeedic provided the majority of the EDA tools used https://t.co/9P5T8xYQUT",
+            "ticker": "301212"
+          },
+          {
+            "date": "2026-09-02",
             "url": "https://x.com/zephyr_z9/status/2095116870735294884",
             "text": "@HyperTechInvest \"Models will keep scaling. Recurrence will be layered on top of larger MoEs, longer contexts and more agents\n\nEvery efficiency gain makes intelligence cheaper\"\n\nLooped transformer has 2 advantages. It cuts ur total parameters and increases depth of reasoning. It does not affect training compute, kv cache generated, bandwidth required compared to the vanilla baseline with higher parameters. My argument is/was never about \"models will stop parameter scaling\". (I gave the 100T vs 25T looped transformer example for a reason). I'm simply arguing that the magnitude of parameter scaling required (training compute remains unchanged) will go down. Looped transformer isn't a simple efficiency gain. \n\nU are simply unaware about model research from 2021-2023 or the reason why GPT-4 API price was 30/60 and fell to 5/15 with 4o (hint: it has to do with model size)\nGPT-4 was the biggest production grade model served till early 2026 (Nvidia mentioned, MSFT leaked it in their paper)\n\nI don't know why are u mixing KV cache sizes (depends on ur attention mechanism) with parameter scaling and citing DeepSeek as an example. The reduction in KV cache size per token comes from attention mechanism and those gains are eaten by longer context windows which keeps on scaling. (Real Jevon's paradox)\n\nThe same can't be applied to looped transformers cuz u are still paying the computation cost, bandwidth cost of the vanilla baseline. U are simply saving HBM capacity required compared to the vanilla baseline.",
             "ticker": "NVDA"
@@ -295,12 +301,6 @@
             "url": "https://x.com/zephyr_z9/status/2093401909969469647",
             "text": "Well, the problem is a lack of inference capacity and cost\n\nThe frontier labs (Anthropic & OpenAI) have around 2.5GW-3GW dedicated to inference, and global inference capacity is probably sub 7-8GW (certainly under 10GW today)\nI think we will see real economic acceleration when this number passes 100GW (early 2029)",
             "ticker": "ANTHROPIC"
-          },
-          {
-            "date": "2026-08-28",
-            "url": "https://x.com/zephyr_z9/status/2093233532760162523",
-            "text": "RT @jukan05: [Exclusive] Samsung Takes Early Lead in Nvidia’s ‘NVHBM’ Following HBM4\n\nSamsung Electronics is poised to secure a key supplie…",
-            "ticker": "005930"
           }
         ]
       },
@@ -462,9 +462,9 @@
       "signal_type": "opinion",
       "sample": {
         "first_date": "2026-06-11",
-        "last_date": "2026-09-01",
-        "mentions": 465,
-        "unique_original_posts": 200,
+        "last_date": "2026-09-02",
+        "mentions": 466,
+        "unique_original_posts": 201,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 167,
@@ -533,6 +533,12 @@
         ],
         "recent_posts": [
           {
+            "date": "2026-09-02",
+            "url": "https://x.com/KawzInvests/status/2095178511451378120",
+            "text": "RT @michaelsikand: I just bought the FEAR on $CRDO after an 18% crash.\n\nIt's one of just 4 stocks in my hyper-concentrated Asymmetrical Bet…",
+            "ticker": "CRDO"
+          },
+          {
             "date": "2026-09-01",
             "url": "https://x.com/KawzInvests/status/2094913200957317195",
             "text": "$AAOI",
@@ -597,12 +603,6 @@
             "url": "https://x.com/KawzInvests/status/2091914054616944890",
             "text": "RT @demian_ai: you read that right, Nebius is the first AI cloud to put NVIDIA Groq 3 LPX into production on @nebiustf\n\nToday NVIDIA also c…",
             "ticker": "NBIS"
-          },
-          {
-            "date": "2026-08-24",
-            "url": "https://x.com/KawzInvests/status/2091865606702428173",
-            "text": "If I could invest into one private company right now it would be @FireworksAI_HQ\n\nFireworks AI serves 40 trillion tokens a day. They run inference for open-weight and customer-tuned models. Over 95% of those tokens come from models tuned on a customer's own data rather than off-the-shelf frontier models.\n\nRevenue passed $1B annualized in July, up 5x year over year. They raised $1.505B at a $17.5B valuation on July 15.\n\nEight months earlier they were valued at $4B.\n\n\"Fireworks is the TSMC of AI Factories.\" Jensen Huang",
-            "ticker": "TSM"
           }
         ]
       },
@@ -613,14 +613,14 @@
       "signal_type": "opinion",
       "sample": {
         "first_date": "2026-06-11",
-        "last_date": "2026-09-01",
-        "mentions": 591,
-        "unique_original_posts": 313,
+        "last_date": "2026-09-02",
+        "mentions": 594,
+        "unique_original_posts": 314,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
-          "bullish": 345,
+          "bullish": 346,
           "neutral": 15,
-          "bearish": 22
+          "bearish": 23
         },
         "top_tickers": [
           {
@@ -683,6 +683,12 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/michaelsikand/status/2095177394088997182",
+            "text": "I just bought the FEAR on $CRDO after an 18% crash.\n\nIt's one of just 4 stocks in my hyper-concentrated Asymmetrical Bets portfolio on @joinautopilot, focused on the couple stocks I think have the most upside in the AI buildout.\n\nNothing changed in that belief after their earnings.\n\nI understand that gross margin slipped a bit, but if that's from the optical business taking share isn't that a core part of the bull thesis? And declining sequential growth = the copper business settling into a steadier cadence while optical gets ready to ramp.\n\nThe 2027 ramp will be insane - $SPCX is supposedly Credo's biggest customer at 34% of revenue. SemiAnalysis estimates SpaceX could spend $300B to $500B on data centers in 2027 alone as they expand from 1.4 GW toward 6 to 10 GW of AI compute.\n\nAt the end of the day, this was a strong beat and raise quarter. Revenue grew 114.7% YoY, FY27 guidance was raised from 80% to 85% growth, and new NPO design wins show the DustPhotonics integration is ahead of schedule.\n\nReducing cash equivalent $SGOV by ~3% to buy into $CRDO, increasing from 14.34% allocation to ~17%.\n\nFor rationale on the investment, read the Substack article: https://t.co/CAkbXU3FsN\n\nTo follow along these trades in your brokerage: https://t.co/modqlAY3Jn",
+            "ticker": "CRDO"
+          },
           {
             "date": "2026-09-01",
             "url": "https://x.com/michaelsikand/status/2094958475805856233",
@@ -748,12 +754,6 @@
             "url": "https://x.com/michaelsikand/status/2094483946763657311",
             "text": "Two ways to play GTA 6 but only one stock doesn't have it priced in.\n\n$SONY is now my highest conviction trade for the rest of 2026, even after I'm +150% on my original options\n\nGTA 6 will return $SONY to gaming growth, mid 20's multiple while exploding earnings/top line. https://t.co/1Y3Wj9CYif",
             "ticker": "SONY"
-          },
-          {
-            "date": "2026-08-30",
-            "url": "https://x.com/michaelsikand/status/2094158477371523451",
-            "text": "@ReachForSuccess No this is about cyber stocks.",
-            "ticker": "CYBER_SECTOR"
           }
         ]
       },
@@ -1067,8 +1067,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-09-02",
-        "mentions": 830,
-        "unique_original_posts": 636,
+        "mentions": 834,
+        "unique_original_posts": 640,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1078,11 +1078,11 @@
           },
           {
             "ticker": "NVDA",
-            "mentions": 60
+            "mentions": 62
           },
           {
             "ticker": "AAPL",
-            "mentions": 45
+            "mentions": 46
           },
           {
             "ticker": "META",
@@ -1112,7 +1112,7 @@
           },
           {
             "industry": "AI Chips",
-            "mentions": 60
+            "mentions": 62
           },
           {
             "industry": "Memory/HBM",
@@ -1132,6 +1132,30 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/unusual_whales/status/2095194038286856236",
+            "text": "Nvidia, $NVDA, CEO: AI eliminating your job is \"nonsense.\"",
+            "ticker": "NVDA"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/unusual_whales/status/2095188250214428981",
+            "text": "Apple, $AAPL, has renamed Lake Ontario to “Lake America,\" per Bloomberg",
+            "ticker": "AAPL"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/unusual_whales/status/2095179191733903778",
+            "text": "Nvidia, $NVDA, CEO: “Every single country needs to build infrastructure so you can support your own local economy”\n\nHuang said that the “single worst outcome” for a country is “being left behind\" in AI race.",
+            "ticker": "NVDA"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/unusual_whales/status/2095174157332070483",
+            "text": "Uber, $UBER, to lay off 10% of its staff, per Reuters",
+            "ticker": "UBER"
+          },
           {
             "date": "2026-09-02",
             "url": "https://x.com/unusual_whales/status/2095151502574702905",
@@ -1179,30 +1203,6 @@
             "url": "https://x.com/unusual_whales/status/2094812021724184774",
             "text": "BREAKING: GoPro, $GPRO, is up 42% today.\n\nThis is after they announced a definitive merger agreement with Starman Optical.\n\nIf you followed the flow on Unusual Whales, you'd see how there was typical unusual options.\n\nTraders made millions.\n\nSomeone always knows.",
             "ticker": "GPRO"
-          },
-          {
-            "date": "2026-09-01",
-            "url": "https://x.com/unusual_whales/status/2094783608406061181",
-            "text": "Anthropic has signed a cloud-computing deal worth $35 billion with Nvidia-backed cloud provider Lambda, with Nvidia, $NVDA, itself holding the lease on the data center, per WSJ",
-            "ticker": "NVDA"
-          },
-          {
-            "date": "2026-08-31",
-            "url": "https://x.com/unusual_whales/status/2094631582045028850",
-            "text": "Apple touched the $5 trillion market capitalization mark on July 28, 2026\n\nRead more: https://t.co/K45cEwNctx",
-            "ticker": "AAPL"
-          },
-          {
-            "date": "2026-08-31",
-            "url": "https://x.com/unusual_whales/status/2094568667858010304",
-            "text": "Over the last 30 days, an average of three localities a day have torn up their contracts with Flock, per research by Secure Justice.\n\nRead more: https://t.co/qv76ekjqWk",
-            "ticker": "FLCK"
-          },
-          {
-            "date": "2026-08-31",
-            "url": "https://x.com/unusual_whales/status/2094548914284429374",
-            "text": "JUST IN: Apple, $AAPL, says OpenAI is destroying evidence in trade suit, per Bloomberg",
-            "ticker": "AAPL"
           }
         ]
       },
@@ -1214,8 +1214,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-09-02",
-        "mentions": 5098,
-        "unique_original_posts": 1830,
+        "mentions": 5102,
+        "unique_original_posts": 1834,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1281,6 +1281,30 @@
         "recent_posts": [
           {
             "date": "2026-09-02",
+            "url": "https://x.com/StockMKTNewz/status/2095183032831361384",
+            "text": "Uber Technologies $UBER is shutting down its services in Nigeria 🇳🇬 effective September 2nd, following a review of its operations in the West African nation - Bloomberg https://t.co/yBZXxCSkkO",
+            "ticker": "UBER"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/StockMKTNewz/status/2095179359199846611",
+            "text": "Southwest Airlines $LUV plans to roll out its first-ever lounge network next year - Bloomberg https://t.co/sL8Eou7lI1",
+            "ticker": "LUV"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/StockMKTNewz/status/2095174970171076698",
+            "text": "GE Vernova $GEV has committed to repairing large portions of Venezuela’s  🇻🇪 power grid - Bloomberg https://t.co/GD9iE9DMR5",
+            "ticker": "GEV"
+          },
+          {
+            "date": "2026-09-02",
+            "url": "https://x.com/StockMKTNewz/status/2095173158466654669",
+            "text": "Claude just fully sold out of its Adobe $ADBE stock in the Rallies AI Arena",
+            "ticker": "ADBE"
+          },
+          {
+            "date": "2026-09-02",
             "url": "https://x.com/StockMKTNewz/status/2095152899093389441",
             "text": "Nvidia $NVDA CEO Jensen Huang said this today to the leaders of the largest countries in the world:\n\n“Every single country needs to build infrastructure so that you could support your own local economy.” https://t.co/hSPu5jgDmN",
             "ticker": "NVDA"
@@ -1326,30 +1350,6 @@
             "url": "https://x.com/StockMKTNewz/status/2095121608797016364",
             "text": "CROWDSTRIKE $CRWD AND OPENAI EXPAND PARTNERSHIP TO SECURE THE AGENTIC ERA",
             "ticker": "CRWD"
-          },
-          {
-            "date": "2026-09-02",
-            "url": "https://x.com/StockMKTNewz/status/2095114357810098306",
-            "text": "$UBER just announced it's laying off 10% of its global workforce \n\nHere are the key changes via the post below\n\n• Number of managers reduced by ~20%\n• 1-2 person “micro-teams” cut nearly 50%\n• Employees sitting 7+ layers below the CEO reduced by 20%\n• Fully remote roles limited to ~1%\n• Delivery Ops across Restaurants, Retail and Direct consolidated\n• Savings to be reinvested in growth, innovation and Uber’s “autonomous future”",
-            "ticker": "UBER"
-          },
-          {
-            "date": "2026-09-02",
-            "url": "https://x.com/StockMKTNewz/status/2095111566865707203",
-            "text": "Taiwan Semiconductor's $TSM said its need for chipmaking tools has nearly doubled since the end of last year as it expands production to meet AI demand \n\nTSMC is also struggling with a lack of experienced construction workers in Taiwan\n\nTSMC is trying to build and furnish about 20 factories both at home and overseas - Bloomberg",
-            "ticker": "TSM"
-          },
-          {
-            "date": "2026-09-02",
-            "url": "https://x.com/StockMKTNewz/status/2095110930530988284",
-            "text": "Taiwan Semiconductor's $TSM said its need for chipmaking tools has nearly doubled since the end of last year as it expands production to meet AI demand \n\nTSMC is also struggling with a lack of experienced construction workers in Taiwan\n\nTSMC is trying to build and furnish about 20 factories both at home and overseas - Bloomberg",
-            "ticker": "TSM"
-          },
-          {
-            "date": "2026-09-02",
-            "url": "https://x.com/StockMKTNewz/status/2095105458663006677",
-            "text": "Piper Sandler today raised its price target on Robinhood $HOOD up to $145 from $135 while maintaining its Overweight rating",
-            "ticker": "HOOD"
           }
         ]
       },
