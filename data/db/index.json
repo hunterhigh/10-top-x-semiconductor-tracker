@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-03T06:17:22.466885+00:00",
+  "generated_at": "2026-09-03T09:16:17.909450+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -15,18 +15,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2210,
-    "total_mentions": 26506,
+    "total_tickers": 2212,
+    "total_mentions": 26508,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2210,
+      "files": 2212,
       "shards": 256,
       "max_shard_width": 17,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-03T06:18:19.500299+00:00"
+    "prices_updated_at": "2026-09-03T09:17:52.195820+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -156,7 +156,7 @@
         "michaelsikand": 1,
         "KawzInvests": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -381,8 +381,7 @@
       "price_status": "ok",
       "instrument_id": "US:GOOGL",
       "hash": "c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69",
-      "path": "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json"
     },
     "US:IREN": {
       "ticker": "IREN",
@@ -832,7 +831,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1475,7 +1474,8 @@
       "price_status": "ok",
       "instrument_id": "US:RDDT",
       "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json"
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+      "price_history_52w_status": "ok"
     },
     "US:ORCL": {
       "ticker": "ORCL",
@@ -2248,7 +2248,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
+      "price_history_52w_status": "ok"
     },
     "US:UBER": {
       "ticker": "UBER",
@@ -2329,7 +2330,8 @@
       "price_status": "ok",
       "instrument_id": "US:ARM",
       "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json"
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
     },
     "US:SONY": {
       "ticker": "SONY",
@@ -2795,7 +2797,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "US:BMNR": {
       "ticker": "BMNR",
@@ -3037,7 +3040,8 @@
       "price_status": "ok",
       "instrument_id": "US:BE",
       "hash": "454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c",
-      "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json"
+      "path": "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
+      "price_history_52w_status": "ok"
     },
     "TSE:285A": {
       "ticker": "285A",
@@ -5067,7 +5071,8 @@
       "price_status": "ok",
       "instrument_id": "US:VIAV",
       "hash": "7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b",
-      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json"
+      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:FOCI": {
       "ticker": "FOCI",
@@ -52274,6 +52279,42 @@
       "hash": "c6ce138845c337f0cf379c247944e8af9e7329fed633b6478d20929e668f377d",
       "path": "stocks/c6/c6ce138845c337f0cf379c247944e8af9e7329fed633b6478d20929e668f377d.json"
     },
+    "UNVERIFIED:CASHCAT": {
+      "ticker": "CASHCAT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:CASHCAT",
+        "display_code": "CASHCAT",
+        "display_name": "CASHCAT (Robinhood Chain meme token)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "CASHCAT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "CASHCAT",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "CASHCAT (Robinhood Chain meme token)",
+      "industry": null,
+      "first_mention": "2026-09-03",
+      "last_mention": "2026-09-03",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "octopusycc": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:CASHCAT",
+      "hash": "77d4414fe262003dc1d9ca9de87a9647aa2a1ab5b82ecadf2bcf9779bf95b397",
+      "path": "stocks/77/77d4414fe262003dc1d9ca9de87a9647aa2a1ab5b82ecadf2bcf9779bf95b397.json"
+    },
     "UNVERIFIED:CBSH": {
       "ticker": "CBSH",
       "instrument": {
@@ -65557,6 +65598,42 @@
       "instrument_id": "UNVERIFIED:PNR",
       "hash": "1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f",
       "path": "stocks/12/1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f.json"
+    },
+    "UNVERIFIED:PONS": {
+      "ticker": "PONS",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:PONS",
+        "display_code": "PONS",
+        "display_name": "PONS (Robinhood Chain meme token)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "PONS"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "PONS",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "PONS (Robinhood Chain meme token)",
+      "industry": null,
+      "first_mention": "2026-09-03",
+      "last_mention": "2026-09-03",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "octopusycc": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:PONS",
+      "hash": "adcd2e98dfe9d927ec6cfd73f688796f5bdfd312926485c0532122afe25310e1",
+      "path": "stocks/ad/adcd2e98dfe9d927ec6cfd73f688796f5bdfd312926485c0532122afe25310e1.json"
     },
     "UNVERIFIED:PRBX": {
       "ticker": "PRBX",
@@ -82588,6 +82665,9 @@
     "$CART": [
       "UNVERIFIED:CART"
     ],
+    "$CASHCAT": [
+      "UNVERIFIED:CASHCAT"
+    ],
     "$CAT": [
       "US:CAT"
     ],
@@ -85746,6 +85826,9 @@
     ],
     "$POET": [
       "US:POET"
+    ],
+    "$PONS": [
+      "UNVERIFIED:PONS"
     ],
     "$POOL": [
       "US:POOL"
@@ -90259,6 +90342,12 @@
     ],
     "CARVANA": [
       "UNVERIFIED:CVNA"
+    ],
+    "CASHCAT": [
+      "UNVERIFIED:CASHCAT"
+    ],
+    "CASHCAT (ROBINHOOD CHAIN MEME TOKEN)": [
+      "UNVERIFIED:CASHCAT"
     ],
     "CAT": [
       "US:CAT"
@@ -96989,6 +97078,12 @@
     "POLYMET MINING / GLM (UNKNOWN WITHOUT MORE CONTEXT)": [
       "UNVERIFIED:GLM"
     ],
+    "PONS": [
+      "UNVERIFIED:PONS"
+    ],
+    "PONS (ROBINHOOD CHAIN MEME TOKEN)": [
+      "UNVERIFIED:PONS"
+    ],
     "POOL": [
       "US:POOL"
     ],
@@ -100845,6 +100940,9 @@
     "UNVERIFIED:CART": [
       "UNVERIFIED:CART"
     ],
+    "UNVERIFIED:CASHCAT": [
+      "UNVERIFIED:CASHCAT"
+    ],
     "UNVERIFIED:CATL": [
       "UNVERIFIED:CATL"
     ],
@@ -102581,6 +102679,9 @@
     ],
     "UNVERIFIED:PNR": [
       "UNVERIFIED:PNR"
+    ],
+    "UNVERIFIED:PONS": [
+      "UNVERIFIED:PONS"
     ],
     "UNVERIFIED:PR": [
       "UNVERIFIED:PR"
@@ -108880,6 +108981,7 @@
     "stocks/23/23a96f1db819395dd7ff76429f42e5c1850fe0a466d1f76ce52415470afb8b5b.json",
     "stocks/d9/d969e84f33e8efc60239a1cbd01e8d1acff5b7043e4eb2f89cf53a3626fd81e2.json",
     "stocks/c6/c6ce138845c337f0cf379c247944e8af9e7329fed633b6478d20929e668f377d.json",
+    "stocks/77/77d4414fe262003dc1d9ca9de87a9647aa2a1ab5b82ecadf2bcf9779bf95b397.json",
     "stocks/75/753f44e748796bde7267db5702300df12fc90847791a0b689cb7a96bd4b1ff2c.json",
     "stocks/1a/1ad5eb8e44d19d176ac3a7a1dfe629043949c14f93874a16736e28b4c359e8c8.json",
     "stocks/c5/c598db4e58cfd5df90a6d461d5a7f160b38c107abd6398eaf152408c9c0727b6.json",
@@ -109249,6 +109351,7 @@
     "stocks/37/3796947ca7f73a30b831de6863126b8cab746fc15857982cc610ce8a3c1e4c35.json",
     "stocks/b0/b0e8ce8743f7915b4513b8c22c3ab2167439ea4818f1a0ac317cb66a8f551ffe.json",
     "stocks/12/1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f.json",
+    "stocks/ad/adcd2e98dfe9d927ec6cfd73f688796f5bdfd312926485c0532122afe25310e1.json",
     "stocks/62/627ad832654773d4d452de08e601c79c7a182986b766cb5fdc366600fbc7728e.json",
     "stocks/18/182436b7adc29d101ee50f78b7a3c9f0a24982cad4eb61dfaee140bdacf3a107.json",
     "stocks/cb/cbc3ba79727a71a1e85a8c2503f8c4237972c960efd8b95384f74fe9aa574233.json",
