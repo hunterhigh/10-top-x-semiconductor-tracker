@@ -1,6 +1,6 @@
 {
   "ticker": "DELL",
-  "cashtag": "dell",
+  "cashtag": "$DELL",
   "instrument": {
     "instrument_id": "US:DELL",
     "display_code": "DELL",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-09-16",
   "last_mention": "2026-09-02",
-  "total_mentions": 53,
+  "total_mentions": 54,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 17,
     "aleabitoreddit": 15,
@@ -33,10 +33,10 @@
     "DJTRadar": 5,
     "unusual_whales": 4,
     "jukan05": 2,
-    "ren_stocks": 1
+    "ren_stocks": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 27,
+    "opinion": 28,
     "news": 17,
     "flow": 4,
     "disclosure": 5
@@ -1297,6 +1297,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095329852270199220",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T21:55:40-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "negative reaction to something related to DELL"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$DELL",
+      "text": "God damn it $DELL \n\n@ichiro1992 https://t.co/dxabWWoDVL",
+      "url": "https://x.com/ren_stocks/status/2095329852270199220",
+      "kind": "post",
+      "engagement": {
+        "views": 3901,
+        "likes": 13,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2315,11 +2340,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-03T00:17:47.185575+00:00",
+  "price_updated_at": "2026-09-03T03:16:15.469539+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-03",
     "asof": "2026-09-02",
-    "attempted_at": "2026-09-03T00:17:45.798759+00:00",
+    "attempted_at": "2026-09-03T03:16:15.433006+00:00",
     "status": "ok",
     "first_available_date": "2025-09-03",
     "last_available_date": "2026-09-02",
@@ -2330,7 +2355,7 @@
     "provider_symbol": "DELL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-03T00:17:45.798759+00:00",
+    "checked_at": "2026-09-03T03:16:15.433006+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
