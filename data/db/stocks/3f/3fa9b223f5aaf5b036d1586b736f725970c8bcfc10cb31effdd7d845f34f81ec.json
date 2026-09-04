@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-26",
-  "last_mention": "2026-08-17",
-  "total_mentions": 24,
+  "last_mention": "2026-09-04",
+  "total_mentions": 25,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 13,
-    "StockMKTNewz": 11
+    "StockMKTNewz": 12
   },
   "total_mentions_by_signal_type": {
     "opinion": 13,
-    "news": 11
+    "news": 12
   },
   "mentions": [
     {
@@ -625,6 +625,31 @@
         "likes": 151,
         "reposts": 9,
         "replies": 26
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095838483235348731",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-04",
+      "created_at": "2026-09-04T07:36:47-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "announced plans to let go 15% of its global workforce"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$TTD",
+      "text": "THE TRADE DESK $TTD JUST ANNOUNCED PLANS TO LET GO 15% OFF ITS GLOBAL WORKFORCE",
+      "url": "https://x.com/StockMKTNewz/status/2095838483235348731",
+      "kind": "post",
+      "engagement": {
+        "views": 15390,
+        "likes": 44,
+        "reposts": 2,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1570,17 +1595,21 @@
     {
       "date": "2026-09-02",
       "close": 14.55
+    },
+    {
+      "date": "2026-09-03",
+      "close": 15.09
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-03T03:17:04.694803+00:00",
+  "price_updated_at": "2026-09-04T12:21:34.021146+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "TTD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-03T03:17:03.932133+00:00",
+    "checked_at": "2026-09-04T12:21:32.998515+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
