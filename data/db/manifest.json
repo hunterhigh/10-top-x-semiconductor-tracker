@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-03T21:20:07.274935+00:00",
+  "generated_at": "2026-09-04T00:18:55.486707+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2221,
-  "index_sha256": "33db481c24672863aea37654bdf42893d6575d6400dccf2d727565ec5b38c73f",
+  "stock_count": 2223,
+  "index_sha256": "1c76d9b2cf8fbc63bcfdd3e20a5250cb1ebfe6b30329b89d7eded0eaf74da1cc",
   "stocks_root": "stocks",
   "price_cache_count": 888,
   "price_cache_index_sha256": "5f9cd19a69f84a106ade3ec8a4d94e3c7561c3a69624763b30ea8258de88b427",
   "price_cache_root": "prices_cache",
-  "tickers": 2221,
-  "total_mentions": 26647,
+  "tickers": 2223,
+  "total_mentions": 26686,
   "priced_tickers": 722,
   "date_range": [
     "2025-07-02",
@@ -20,28 +20,28 @@
   "mentions_by_blogger": {
     "aleabitoreddit": 15856,
     "zephyr_z9": 521,
-    "StockMKTNewz": 5208,
-    "KawzInvests": 473,
-    "ren_stocks": 1134,
-    "jukan05": 1184,
+    "StockMKTNewz": 5212,
+    "KawzInvests": 474,
+    "ren_stocks": 1161,
+    "jukan05": 1188,
     "octopusycc": 629,
-    "unusual_whales": 843,
-    "michaelsikand": 600,
+    "unusual_whales": 844,
+    "michaelsikand": 602,
     "DJTRadar": 199
   },
   "bloggers_missing_state_files": [],
   "instrument_coverage": {
     "verified": 927,
     "identified": 336,
-    "unverified": 958,
-    "market_pending_review": 1294,
-    "price_unavailable_or_unverified": 993
+    "unverified": 960,
+    "market_pending_review": 1296,
+    "price_unavailable_or_unverified": 995
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2221,
+      "files": 2223,
       "shards": 256,
       "max_shard_width": 17,
       "warning": false,
@@ -58,17 +58,18 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 1107,
+    "tickers": 1109,
     "status_counts": {
-      "ok": 449,
-      "partial": 20,
-      "unverified_symbol": 631,
+      "ok": 453,
+      "partial": 16,
+      "unverified_symbol": 633,
       "unavailable": 7
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 18,
-      "unverified_instrument_identity": 631,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
+      "EODHD 402 (account quota or subscription limit)": 13,
+      "unverified_instrument_identity": 633,
       "provider_symbol_not_found_after_search": 5,
       "no_daily_closes_returned": 1,
       "EODHD 402 (search capacity unavailable)": 1,
@@ -89,15 +90,15 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 32,
-      "deferred": 3
+      "supported": 34,
+      "unsupported": 1
     },
     "retry_queue": 0,
     "scope_counts": {
       "monthly_consensus": 31,
       "top_pick_cards": 10,
-      "top_pick_unique": 10,
-      "overlap": 6
+      "top_pick_unique": 9,
+      "overlap": 5
     }
   },
   "profile_coverage": {
