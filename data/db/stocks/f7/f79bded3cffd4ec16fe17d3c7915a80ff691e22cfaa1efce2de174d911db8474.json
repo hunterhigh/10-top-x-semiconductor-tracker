@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-30",
-  "last_mention": "2026-09-04",
-  "total_mentions": 95,
+  "last_mention": "2026-09-07",
+  "total_mentions": 97,
   "total_mentions_by_blogger": {
-    "ren_stocks": 28,
+    "ren_stocks": 29,
     "StockMKTNewz": 19,
-    "aleabitoreddit": 16,
+    "aleabitoreddit": 17,
     "jukan05": 12,
     "KawzInvests": 9,
     "unusual_whales": 6,
@@ -38,7 +38,7 @@
   },
   "total_mentions_by_signal_type": {
     "flow": 6,
-    "opinion": 70,
+    "opinion": 72,
     "news": 19
   },
   "mentions": [
@@ -2335,6 +2335,60 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2096799137693888666",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-06",
+      "created_at": "2026-09-06T23:14:05-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "checkmark suggesting positive catalyst or confirmation"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SKHY",
+      "text": "$KOSPI ✅\n$Nikkei ✅\n$SKHY  ✅\n$Kioxia ✅\n\nTuesday can’t come fast enough ⚡️ https://t.co/8bCboKS6v5",
+      "url": "https://x.com/ren_stocks/status/2096799137693888666",
+      "kind": "post",
+      "engagement": {
+        "views": 10659,
+        "likes": 128,
+        "reposts": 3,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2096858276290015563",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-07",
+      "created_at": "2026-09-07T03:09:05-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "stockpiles fallen to less than 10 days of supply",
+        "severe shortage could emerge next year",
+        "memory market next year expected to see tightest supply conditions in history",
+        "memory's share of AI infrastructure costs projected to expand from 40% to 57-68% next year",
+        "P/E ratios down to about 3x next year's expected results"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SKHY",
+      "text": "Is there any other industry... Where every investor is cheering for shortages and price hikes? \n\nSED reported today that: Samsung / $SKHY \"stockpiles have fallen to less than 10 days of supply, and a severe shortage could emerge next year, according to a new forecast\"\n\nKB Securities said that the memory market next year will see \"the tightest supply conditions in history\"\n\nKB Securities projects memory's share of AI infrastructure costs to expand from 40% this year to 57% next year, with others like TrendForce placing next year's figure at 68% (total hyperscaler capex, pretty wild forecast attached)\n\n\"Both stocks have fallen 38% from their peaks over the past three months, pushing their price-to-earnings ratios based on next year's expected results down to about three times.\"\n\nLikewise, commentary around Phison stated they expect extremely tight NAND supply in 2027, so hard to see memory flooding the market or prices collapsing next year... \n\nThey gave some color that \"soaring NAND prices have forced some Chinese consumer module makers to liquidate inventory, giving Phison opportunities to buy lower-priced stock\", so it does show some price declines can coexist with broader shortages. \n\nTLDR: KOSPI + read through for other names like $MU / $SNDK might be happy for 2027 given demand causing shortages + infra spend share increase.",
+      "url": "https://x.com/aleabitoreddit/status/2096858276290015563",
+      "kind": "post",
+      "engagement": {
+        "views": 70637,
+        "likes": 285,
+        "reposts": 19,
+        "replies": 53
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2493,18 +2547,22 @@
     {
       "date": "2026-09-03",
       "close": 163.68
+    },
+    {
+      "date": "2026-09-04",
+      "close": 177.0
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-04T21:19:07.372716+00:00",
+  "price_updated_at": "2026-09-07T09:30:15.947488+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-05",
-    "asof": "2026-09-04",
-    "attempted_at": "2026-09-04T21:19:06.893604+00:00",
+    "requested_start": "2025-09-08",
+    "asof": "2026-09-07",
+    "attempted_at": "2026-09-07T09:30:15.056208+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-07-13",
-    "last_available_date": "2026-09-03",
+    "last_available_date": "2026-09-04",
     "reason": "first_available_close=2026-07-13"
   },
   "price_source_state": {
@@ -2512,7 +2570,7 @@
     "provider_symbol": "SKHY",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-04T21:19:06.893604+00:00",
+    "checked_at": "2026-09-07T09:30:15.056208+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

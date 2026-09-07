@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "UNVERIFIED:P",
     "display_code": "P",
-    "display_name": "Everpure",
+    "display_name": "Everi Holdings",
     "display_market": "Market unverified",
     "aliases": [
       "P"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Everpure",
+  "company": "Everi Holdings",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-10",
-  "last_mention": "2026-08-18",
-  "total_mentions": 5,
+  "last_mention": "2026-09-04",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 5
+    "StockMKTNewz": 6,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 5
+    "news": 6,
+    "flow": 1
   },
   "mentions": [
     {
@@ -144,6 +146,52 @@
         "likes": 79,
         "reposts": 11,
         "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095986051130990845",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-04",
+      "created_at": "2026-09-04T17:23:10-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$P",
+      "text": "JUST IN: THE S&amp;P 500 IS CHANGING \n\nThese stocks are being added to the index:\n\n- Bloomb Energy $BE \n- Everpure $P \n- Illumina $ILMN \n\nThese stocks are being removed from the index:\n\n- Molson Coors $TAP \n- Trade Desk $TTD \n- Builders $BLDR https://t.co/zfxoAin4BW",
+      "url": "https://x.com/StockMKTNewz/status/2095986051130990845",
+      "kind": "post",
+      "engagement": {
+        "views": 82089,
+        "likes": 433,
+        "reposts": 58,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2096003681971998779",
+      "blogger_id": "unusual_whales",
+      "date": "2026-09-04",
+      "created_at": "2026-09-04T18:33:14-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$P",
+      "text": "S&amp;P being reshuffled.\n\nThese stocks are being added:\n\nBloom Energy $BE\nEverpure $P\nIllumina $ILMN\n\nAnd removed:\n\nMolson Coors $TAP\nTrade Desk $TTD\nBuilders FirstSource $BLDR",
+      "url": "https://x.com/unusual_whales/status/2096003681971998779",
+      "kind": "post",
+      "engagement": {
+        "views": 354886,
+        "likes": 1120,
+        "reposts": 44,
+        "replies": 61
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
