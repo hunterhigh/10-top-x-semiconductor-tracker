@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-09T09:16:40.610552+00:00",
+    "generated_at": "2026-09-09T12:16:26.863796+00:00",
     "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."
   },
   "profiles": [
@@ -312,8 +312,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-09-09",
-        "mentions": 1269,
-        "unique_original_posts": 653,
+        "mentions": 1272,
+        "unique_original_posts": 655,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 136,
@@ -327,7 +327,7 @@
           },
           {
             "ticker": "NVDA",
-            "mentions": 120
+            "mentions": 121
           },
           {
             "ticker": "000660",
@@ -357,7 +357,7 @@
         "top_industries": [
           {
             "industry": "AI Chips",
-            "mentions": 120
+            "mentions": 121
           },
           {
             "industry": "Wafer Foundry",
@@ -381,6 +381,18 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/jukan05/status/2097623439565787395",
+            "text": "@bookwormengr @jaygoldberg Should I buy Cloudflare stock? Haha.",
+            "ticker": "NET"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/jukan05/status/2097618417067205107",
+            "text": "I learned a lot from this podcast episode.\n\nYou should all watch it.\n\nTo share the insights I took away:\n\n1. Even if you secure additional GPUs or memory, total system output cannot increase if other segments such as substrates, MLCCs, and wafer testing are in short supply. In other words, in the semiconductor industry, total shipments are determined by the single most constrained component or process.\n\n2. Substrate, power and analog semiconductor, foundry, and memory suppliers have historically been conservative and have not made new greenfield investments until they were confident in long term customer demand. In response, Broadcom, Nvidia, and others signed sufficiently long LTAs with their supply chains and gave them visibility, and that point in time was precisely late 2025 to early 2026. Working backward from there to when a new production fab comes online, meaningful new capacity ramp and production will begin in 2028, not 2027. That means next year, 2027, could be the most supply constrained year in history.\n\n3. In 2028, supply will still be short and the shortage will not be fully resolved, but it will be the year when the largest amount of new production capacity in the history of the semiconductor industry comes online at once. This is an opportunity for additional revenue.\n\n4. The current supply constraint is a safety net that delays overinvestment. In past capital intensive infrastructure booms such as railroads, canals, 3G, and mobile phones, people always overbuilt. But the difference between past cycles and this AI infrastructure cycle is that even with demand in place, production facilities and data centers cannot be built as quickly as desired. So the current supply constraint can paradoxically be seen as playing a positive role in the sense that it limits excessive investment. The explanation is that by the time the supply chain catches up (2028), demand and industry conditions may have normalized to some degree as well. In enterprise AI too, high token costs and limited access to compute are slowing the pace of deployment, and if costs were much lower, companies would have moved more experiments into production environments faster.",
+            "ticker": "AVGO"
+          },
           {
             "date": "2026-09-09",
             "url": "https://x.com/jukan05/status/2097572715893039563",
@@ -440,18 +452,6 @@
             "url": "https://x.com/jukan05/status/2097461162233438694",
             "text": "RT @dnystedt: The Taiwan supply chain rumor early this year was that Google might replace Nvidia as TSMC's biggest customer. Hard to believ…",
             "ticker": "GOOGL"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/jukan05/status/2097459601780441322",
-            "text": "According to Korean media reports, Samsung’s Taylor foundry fab has already begun operations.\n\nhttps://t.co/LjVcPSGzko",
-            "ticker": "005930"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/jukan05/status/2097451352310030599",
-            "text": "\"Three out of four are defective\"... China's CXMT struggles with HBM yields, with immature TSV technology to blame\n\nChangXin Memory Technologies (CXMT), China's largest DRAM maker, has begun trial production of fourth generation high bandwidth memory (HBM3), but initial yields are barely improving. Yields are reported to have stalled at 25%, roughly one third of the so called \"golden yield\" of 80% that the semiconductor industry treats as the threshold for volume production. The gap is stark compared with SK hynix, which has been mass producing the same product since 2022 and has secured yields above 90%. Industry sources point to the gap in maturity of through-silicon via (TSV) technology, the core process for stacking and connecting multiple DRAM layers, as the root cause.\n\n◇ \"DRAM has caught up, but HBM stacking is a different problem\"\n\nAccording to a senior official at a semiconductor equipment company familiar with CXMT's situation on the 9th, the yield of CXMT's HBM3 8-High product is stuck at around 30% in the front end process. Of the products that survive that stage, only about 70% are recognized as final good units after passing through the back end process. In simple terms, if 100 HBM3 units are started, close to 80 of them fail the final test.\n\nCXMT is reported to be supplying the small volumes of HBM samples it produces this way to Chinese companies such as Alibaba's T-Head and Cambricon while continuing its yield improvement work. The problem is that the issue does not lie in the fine process technology of the DRAM itself. A semiconductor equipment industry official explained, \"There is no major problem with the standard DRAM that CXMT makes on its 'G4' (17nm class) process used for HBM. However, the DRAM dies used for HBM are larger in area than standard products and have more demanding electrical specifications, so even on the same process they are much harder to pass the acceptance criteria.\"\n\nIn other words, CXMT's fundamental capability in making standard DRAM has risen to a considerable level, but a bottleneck is emerging at the stage of converting it into the high performance product that is HBM. At the heart of that bottleneck, according to industry sources, is the TSV process.\n\n◇ The real hurdle is TSV... \"Impossible to catch up without years of accumulated know how\"\n\nTSV stands for \"Through Silicon Via\" and refers to the microscopic copper wiring that passes vertically through each layer to carry electrical signals when DRAM is stacked in multiple layers, as in HBM. It is a highly demanding process in which a DRAM wafer is thinned down to several tens of micrometers, a fraction of the thickness of a human hair, after which thousands of tiny holes are drilled through that thin silicon plate and filled completely with copper. A single hole that is misaligned or not properly filled can cause the entire layer to be rejected, making it one of the semiconductor processes with the most stringent precision requirements.\n\nThe consensus in the industry is that this is the process where the technology gap between CXMT and the leading companies is widest. According to analysis by semiconductor research firm Nomad Semi, Samsung Electronics' HBM2 (second generation HBM) has more than 5,000 TSVs per die and SK hynix's HBM3 has more than 8,000, while CXMT's is understood to have only around 3,000. A smaller number of TSVs means sacrificing bandwidth (data processing speed) in exchange for lower process difficulty, yet even so CXMT's yields still fall far short of Samsung and SK hynix. TSV is a process that is challenging even for the industry leader: SK hynix itself publicly disclosed in 2024 that the yield of the standalone TSV process was only 40 to 60% at the time.\n\nOn top of this, yield losses also occur in the back end (stacking and bonding) stage where the dies are actually stacked and joined. If even one of the eight dies is misaligned, if a microscopic void forms at a bonding interface, or if a layer warps during the thermocompression bonding process (warpage), the entire stack is scrapped. Because the number of possible failure points grows with each additional layer, the difficulty rises exponentially. Given that CXMT is already showing such poor yields at 8-High, some expect it to face even greater difficulties when moving to higher stacks such as 12-High.\n\nA semiconductor industry official explained, \"The TSV process is an area that only stabilizes after years of accumulated wafer handling know how. Chinese companies have rapidly closed the gap in the fine process technology of DRAM itself, but back end know how such as TSV and bonding is difficult to catch up on in a short period.\" He added, \"That said, Samsung Electronics also had initial HBM4 (sixth generation HBM) production yields below 60% in February this year and raised them to 80% within six months, so it is too early to declare CXMT's 25% yield a 'failure.'\"",
-            "ticker": "000660"
           }
         ]
       },
@@ -1213,9 +1213,9 @@
       "signal_type": "news",
       "sample": {
         "first_date": "2026-06-10",
-        "last_date": "2026-09-08",
-        "mentions": 5341,
-        "unique_original_posts": 1974,
+        "last_date": "2026-09-09",
+        "mentions": 5351,
+        "unique_original_posts": 1982,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
@@ -1225,11 +1225,11 @@
           },
           {
             "ticker": "SPCX",
-            "mentions": 178
+            "mentions": 179
           },
           {
             "ticker": "GOOGL",
-            "mentions": 148
+            "mentions": 150
           },
           {
             "ticker": "AAPL",
@@ -1237,15 +1237,15 @@
           },
           {
             "ticker": "META",
-            "mentions": 106
+            "mentions": 108
+          },
+          {
+            "ticker": "AMZN",
+            "mentions": 102
           },
           {
             "ticker": "MU",
             "mentions": 102
-          },
-          {
-            "ticker": "AMZN",
-            "mentions": 101
           },
           {
             "ticker": "MSFT",
@@ -1255,7 +1255,7 @@
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 436
+            "mentions": 441
           },
           {
             "industry": "AI Chips",
@@ -1280,6 +1280,54 @@
         ],
         "recent_posts": [
           {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097657735793811529",
+            "text": "@ArkkDaily Cathie Wood and myself both bought some Robinhood $HOOD stock yesterday",
+            "ticker": "HOOD"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097656569513013637",
+            "text": "Meta Platforms $META Chief AI Officer Alexandr Wang posted:\n\n\"the early usage on muse has blown way past our projections. muse’s users today are using 10x more than our testing cohorts. enjoy!\"",
+            "ticker": "META"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097644554820165827",
+            "text": "Meta Platforms $META stock is up by more than 5% in pre market trading \n\n🟢🟢🟢🟢🟢 https://t.co/ZLXv0RqYK1",
+            "ticker": "META"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097643905885900979",
+            "text": "$LYFT is starting to offer robotaxi rides in Google $GOOGL owned Waymo cars in Nashville, Tennessee - Bloomberg https://t.co/TkiyUdiadK",
+            "ticker": "GOOGL"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097640742176846317",
+            "text": "Google $GOOGL today said it would invest more than $15 billion into AI infrastructure in Finland 🇫🇮 over the next 2 years https://t.co/vmm84uXpva",
+            "ticker": "GOOGL"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097637616556392674",
+            "text": "AMAZON $AMZN IS LOOKING TO RAISE AT LEAST £3 BILLION FROM ITS FIRST DEBT RAISE IN THE UNITED KINGDOM 🇬🇧\n\n$UBER WANTS TO RAISE ~€4 BILLION THROUGH ITS FIRST EUROPEAN 🇪🇺 BOND SALE",
+            "ticker": "AMZN"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097631348395479169",
+            "text": "HSBC now thinks the S&amp;P 500 will close the year at 8,100, up from its previous target of 7,650",
+            "ticker": "SPX"
+          },
+          {
+            "date": "2026-09-09",
+            "url": "https://x.com/StockMKTNewz/status/2097628486454170011",
+            "text": "SpaceX $SPCX is back to being valued at more than $2 Trillion https://t.co/ZqTRiJxdYo",
+            "ticker": "SPCX"
+          },
+          {
             "date": "2026-09-08",
             "url": "https://x.com/StockMKTNewz/status/2097492167849631928",
             "text": "WATCH OUT FOR APPLE'S $AAPL IPHONE EVENT AT 1PM ET TOMORROW",
@@ -1302,54 +1350,6 @@
             "url": "https://x.com/StockMKTNewz/status/2097414465733955650",
             "text": "🇺🇸 Transportation Secretary Sean Duffy blasted Ford $F for the automaker’s business ties to major players in China’s 🇨🇳 auto industry - Bloomberg https://t.co/kjVkItqUXI",
             "ticker": "F"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097402706411278438",
-            "text": "Meta Platforms $META just posted this:\n\n“today we're rolling out Muse, our new personal ai assistant. Muse is always-on, wicked fast, can use a browser, connect to your apps, and is designed to be secure.” https://t.co/tZGkKgesKh",
-            "ticker": "META"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097388417306829126",
-            "text": "RAMP is reportedly in talks to raise money at a $60 Billion valuation",
-            "ticker": "RAMP"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097365965235196026",
-            "text": "Tesla $TSLA is reportedly preparing to deploy 1,000 Cybercabs",
-            "ticker": "TSLA"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097361064912449586",
-            "text": "QUALCOMM $QCOM JUST SAID:\n\n- THE SMARTPHONE MARKET IS AT A LOW POINT IN ITS CYCLE",
-            "ticker": "QCOM"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097358581230121166",
-            "text": "SAMSUNG ACQUIRES EQUITY IN MISTRAL AI FOLLOWING FUNDING ROUND",
-            "ticker": "005930"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097350348318933244",
-            "text": "THIS IS WHO GAVE THE KEYNOTE AT EVERY APPLE $AAPL IPHONE LAUNCH EVENT\n\n2007: Steve Jobs\n2008: Steve Jobs\n2009: Steve Jobs\n2010: Steve Jobs\n2011: Tim Cook \n2012: Tim Cook\n2013: Tim Cook\n2014: Tim Cook\n2015: Tim Cook\n2016: Tim Cook\n2017: Tim Cook\n2018: Tim Cook\n2019: Tim Cook\n2020: Tim Cook\n2021: Tim Cook\n2022: Tim Cook\n2023: Tim Cook\n2024: Tim Cook\n2025: Tim Cook\n2026: John Ternus",
-            "ticker": "AAPL"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097339391756718541",
-            "text": "$AMD stock is now up by more than 5% and back over $500\n\n🟢🟢🟢🟢🟢 https://t.co/WU64anWiGl",
-            "ticker": "AMD"
-          },
-          {
-            "date": "2026-09-08",
-            "url": "https://x.com/StockMKTNewz/status/2097331343088578889",
-            "text": "I am now down just 28% on my $TE shares 🫡👜",
-            "ticker": "TE"
           }
         ]
       },
