@@ -26,6 +26,8 @@ concurrency:
 jobs:
   resolve-base:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       base_sha: ${{ steps.base.outputs.sha }}
     steps:
@@ -42,6 +44,11 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
           echo "## Trihourly source" >> "$GITHUB_STEP_SUMMARY"
           echo "- locked main revision: $sha" >> "$GITHUB_STEP_SUMMARY"
+      - name: Record sync start
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/write_sync_health.py start --source-sha "${{ steps.base.outputs.sha }}"
 
   fetch-extract:
     needs: resolve-base
@@ -49,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      # twitterapi.io free-tier traffic is shared.  Keep all ten accounts
+      # twitterapi.io free-tier traffic is shared. Keep all ten accounts
       # serial so a new run is reliable instead of concurrently rate-limited.
       max-parallel: 1
       matrix:
@@ -109,7 +116,6 @@ jobs:
         run: |
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json
-          from datetime import datetime
           from email.utils import parsedate_to_datetime
           from pathlib import Path
           from zoneinfo import ZoneInfo
@@ -155,17 +161,27 @@ jobs:
       contents: write
     env:
       BASE_SHA: ${{ needs.resolve-base.outputs.base_sha }}
+    outputs:
+      health_status: ${{ steps.health_outcome.outputs.status }}
+      health_severity: ${{ steps.health_outcome.outputs.severity }}
+      health_stage: ${{ steps.health_outcome.outputs.stage }}
+      health_error_code: ${{ steps.health_outcome.outputs.error_code }}
+      health_summary: ${{ steps.health_outcome.outputs.summary }}
     steps:
       - uses: actions/checkout@v4
+        id: checkout
         with:
           ref: ${{ needs.resolve-base.outputs.base_sha }}
           fetch-depth: 1
       - uses: actions/setup-python@v5
+        id: setup_python
         with:
           python-version: "3.12"
       - name: Install dependencies
+        id: install
         run: pip install -r requirements.txt
       - name: Fail closed on incomplete account refresh
+        id: gate
         run: |
           {
             echo "## Trihourly production gate"
@@ -181,12 +197,14 @@ jobs:
             exit 1
           }
       - name: Download all ten account snapshots
+        id: download
         uses: actions/download-artifact@v4
         with:
           pattern: blogger-data-*
           path: data/bloggers
           merge-multiple: false
       - name: Require exactly ten complete artifacts
+        id: artifacts
         run: |
           expected="aleabitoreddit zephyr_z9 jukan05 KawzInvests michaelsikand ren_stocks octopusycc unusual_whales StockMKTNewz DJTRadar"
           missing=""
@@ -196,6 +214,7 @@ jobs:
           test -z "$missing" || { echo "::error::Missing account artifacts:$missing"; exit 1; }
           echo "- account artifacts: 10/10" >> "$GITHUB_STEP_SUMMARY"
       - name: Flatten account snapshot directories
+        id: flatten
         run: |
           cd data/bloggers
           for d in blogger-data-*; do
@@ -204,22 +223,30 @@ jobs:
             mv "$d"/* "$id"/
             rmdir "$d"
           done
-      - name: Rebuild, resolve instrument identities, and validate data
+      - name: Rebuild and resolve instrument identities
+        id: database
         env:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
         run: |
           python scripts/build_db.py
           python scripts/resolve_tickers_eodhd.py --apply
           python scripts/build_db.py
-          python scripts/verify_data.py
-      - name: Refresh prices and embedded avatars
+      - name: Validate rebuilt data
+        id: data_validation
+        run: python scripts/verify_data.py
+      - name: Refresh prices
+        id: prices
         env:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
-        run: |
-          python scripts/prices.py --history-weeks 52 --history-scope recent-28d
-          python scripts/refresh_avatars.py
-          python scripts/verify_data.py --require-price-history-52w
+        run: python scripts/prices.py --history-weeks 52 --history-scope recent-28d
+      - name: Refresh embedded avatars
+        id: avatars
+        run: python scripts/refresh_avatars.py --status-output "$RUNNER_TEMP/avatar-health.json"
+      - name: Validate enriched data
+        id: enrichment_validation
+        run: python scripts/verify_data.py --require-price-history-52w
       - name: Choose latest ET data cutoff
+        id: cutoff
         run: |
           REPORT_DATE=$(python - <<'PY'
           import json
@@ -237,11 +264,13 @@ jobs:
               summary.write(f"- provider states: `{json.dumps(coverage.get('provider_state_counts', {}), sort_keys=True)}`\n")
               summary.write(f"- persistent price retry queue: {coverage.get('retry_queue', 0)}\n")
           PY
-      - name: Run approved rules and new pipeline tests
+      - name: Run approved rules and pipeline tests
+        id: tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope
+          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
+        id: dashboard
         run: |
           python -m playwright install --with-deps chromium
           mkdir -p "$RUNNER_TEMP/dashboard"
@@ -250,6 +279,7 @@ jobs:
           python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
           sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
       - name: Write build metadata
+        id: metadata
         run: |
           python - <<'PY'
           import json, os
@@ -265,6 +295,7 @@ jobs:
           }, ensure_ascii=False, indent=2), encoding="utf-8")
           PY
       - name: Commit complete data snapshot
+        id: publish_snapshot
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -279,18 +310,25 @@ jobs:
           git fetch --no-tags origin main
           remote_sha=$(git rev-parse FETCH_HEAD)
           if [ "$remote_sha" != "$BASE_SHA" ]; then
+            echo "PUBLISH_CONFLICT" > "$RUNNER_TEMP/publish-error-code"
             echo "::error::Main changed from $BASE_SHA to $remote_sha while this snapshot was building; no snapshot was pushed. Rerun from the new main revision."
             exit 1
           fi
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "PUBLISH_FAILED" > "$RUNNER_TEMP/publish-error-code"
+            exit 1
+          fi
           echo "- published commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload validated dashboard artifact
+        id: dashboard_artifact
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: dashboard-${{ needs.resolve-base.outputs.base_sha }}
           path: ${{ runner.temp }}/dashboard/
           retention-days: 30
       - name: Publish artifact summary
+        id: artifact_summary
         run: |
           {
             echo "## Published Dashboard"
@@ -298,3 +336,68 @@ jobs:
             echo "- HTML: dashboard-$REPORT_DATE-$BASE_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."
           } >> "$GITHUB_STEP_SUMMARY"
+      - name: Collect sync health outcome
+        id: health_outcome
+        if: always()
+        env:
+          FETCH_RESULT: ${{ needs.fetch-extract.result }}
+          CHECKOUT_OUTCOME: ${{ steps.checkout.outcome }}
+          SETUP_OUTCOME: ${{ steps.setup_python.outcome }}
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          GATE_OUTCOME: ${{ steps.gate.outcome }}
+          DOWNLOAD_OUTCOME: ${{ steps.download.outcome }}
+          ARTIFACTS_OUTCOME: ${{ steps.artifacts.outcome }}
+          FLATTEN_OUTCOME: ${{ steps.flatten.outcome }}
+          DATABASE_OUTCOME: ${{ steps.database.outcome }}
+          DATA_VALIDATION_OUTCOME: ${{ steps.data_validation.outcome }}
+          PRICES_OUTCOME: ${{ steps.prices.outcome }}
+          AVATARS_OUTCOME: ${{ steps.avatars.outcome }}
+          ENRICHMENT_VALIDATION_OUTCOME: ${{ steps.enrichment_validation.outcome }}
+          CUTOFF_OUTCOME: ${{ steps.cutoff.outcome }}
+          TESTS_OUTCOME: ${{ steps.tests.outcome }}
+          DASHBOARD_OUTCOME: ${{ steps.dashboard.outcome }}
+          METADATA_OUTCOME: ${{ steps.metadata.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish_snapshot.outcome }}
+          DASHBOARD_ARTIFACT_OUTCOME: ${{ steps.dashboard_artifact.outcome }}
+        run: >-
+          python scripts/write_sync_health.py classify
+          --avatar-status "$RUNNER_TEMP/avatar-health.json"
+          --publish-error-code "$RUNNER_TEMP/publish-error-code"
+
+  health-report:
+    needs: [resolve-base, fetch-extract, publish]
+    if: ${{ always() && needs.resolve-base.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Record terminal sync health
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEALTH_STATUS: ${{ needs.publish.outputs.health_status }}
+          HEALTH_SEVERITY: ${{ needs.publish.outputs.health_severity }}
+          HEALTH_STAGE: ${{ needs.publish.outputs.health_stage }}
+          HEALTH_ERROR_CODE: ${{ needs.publish.outputs.health_error_code }}
+          HEALTH_SUMMARY: ${{ needs.publish.outputs.health_summary }}
+          BASE_SHA: ${{ needs.resolve-base.outputs.base_sha }}
+        shell: bash
+        run: |
+          status="${HEALTH_STATUS:-failed}"
+          severity="${HEALTH_SEVERITY:-P1}"
+          stage="${HEALTH_STAGE:-unknown}"
+          error_code="${HEALTH_ERROR_CODE:-UNKNOWN_PIPELINE_ERROR}"
+          summary="${HEALTH_SUMMARY:-Pipeline ended without a health outcome}"
+          args=(finish --status "$status" --severity "$severity" --stage "$stage" --summary "$summary" --source-sha "$BASE_SHA")
+          if [ -n "$error_code" ]; then args+=(--error-code "$error_code"); fi
+          if [ "$status" = "healthy" ] || [ "$status" = "degraded" ]; then
+            args+=(--published-sha "$(git rev-parse HEAD)" --manifest data/db/manifest.json --avatar-cache data/avatar_cache.json)
+          fi
+          python scripts/write_sync_health.py "${args[@]}"

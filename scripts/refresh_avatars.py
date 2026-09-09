@@ -50,6 +50,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=ROOT / "config" / "bloggers.json")
     parser.add_argument("--output", type=Path, default=ROOT / "data" / "avatar_cache.json")
+    parser.add_argument("--status-output", type=Path)
     args = parser.parse_args()
     roster = json.loads(args.config.read_text(encoding="utf-8")).get("bloggers", [])
     previous = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else {}
@@ -73,13 +74,17 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     cached = sum(valid_cached_avatar(output.get(blogger["id"])) for blogger in roster)
-    print(json.dumps({
+    summary = {
         "cached": cached,
         "refreshed": refreshed,
         "stale_cache": stale_cache,
         "missing": missing,
         "errors": errors,
-    }, ensure_ascii=False))
+    }
+    print(json.dumps(summary, ensure_ascii=False))
+    if args.status_output:
+        args.status_output.parent.mkdir(parents=True, exist_ok=True)
+        args.status_output.write_text(json.dumps(summary, ensure_ascii=False), encoding="utf-8")
     if stale_cache:
         print(f"::warning::Avatar refresh failed for {len(stale_cache)} account(s); retained valid cached avatars.")
     if missing:
