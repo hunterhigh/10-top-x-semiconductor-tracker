@@ -1,6 +1,6 @@
 {
   "ticker": "USB",
-  "cashtag": "$USB",
+  "cashtag": "US Bancorp",
   "instrument": {
     "instrument_id": "US:USB",
     "display_code": "USB",
@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
-  "last_mention": "2026-08-17",
-  "total_mentions": 9,
+  "last_mention": "2026-09-09",
+  "total_mentions": 10,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 9
+    "StockMKTNewz": 9,
+    "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 9
+    "news": 9,
+    "flow": 1
   },
   "mentions": [
     {
@@ -236,6 +238,29 @@
         "likes": 100,
         "reposts": 12,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097695521364496568",
+      "blogger_id": "unusual_whales",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T10:36:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "US Bancorp",
+      "text": "JUST IN: US Bancorp executes first live transaction using dollar-backed USBDC stablecoin",
+      "url": "https://x.com/unusual_whales/status/2097695521364496568",
+      "kind": "post",
+      "engagement": {
+        "views": 62283,
+        "likes": 130,
+        "reposts": 22,
+        "replies": 34
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

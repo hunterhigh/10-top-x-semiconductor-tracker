@@ -1,6 +1,6 @@
 {
   "ticker": "5801",
-  "cashtag": "$5801",
+  "cashtag": "Furukawa",
   "instrument": {
     "instrument_id": "TSE:5801",
     "display_code": "5801",
@@ -25,15 +25,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-29",
-  "last_mention": "2026-07-18",
-  "total_mentions": 12,
+  "last_mention": "2026-09-09",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 10,
+    "aleabitoreddit": 11,
     "zephyr_z9": 1,
     "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 11,
+    "opinion": 12,
     "news": 1
   },
   "mentions": [
@@ -317,21 +317,49 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097660318369697875",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T08:16:07-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "lasers and optical fibers positioned as 'next HBM'",
+        "tight supply conditions will support scarcity premium",
+        "2027-2028 photonics supercycle expected",
+        "optical content per GPU-ASIC going up significantly per Goldman Sachs revised estimates"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Furukawa",
+      "text": "Citibank TMT:  \"lasers and optical fibers are being positioned as the \"next HBM.\" \n\nI've been talking about lasers like $LITE / $AAOI since 2025... and architectural shifts toward CW, ahead of the current industry consensus.\n\nAnd fully agree with Lightmatter/Citi.\n\nJust for reference: \n\nFor lasers: $LITE / $SIVE / $AAOI / $COHR / $MTSI / Furukawa / Sumitomo are your better known ones.\n\nFor fiber: $GLW / Furukawa / Fujikura / Sumitomo are your more well-known exposure (obviously a lot more in the supply chain) *disclosure, personal exposure to theme\n\nWith added commentary that: \"Tight supply conditions will support a scarcity premium for these assets.\"\n\nWe're already seeing price hikes with lasers as seen with $SIVE channel checks at CIOE 2026 Shenzhen today + $LITE commentary from earnings. \n\nSo I think the 2027–2028 photonics supercycle will look a lot like memory did in 2025–2026.\n\nEspecially as optical content/GPU-ASIC goes up significantly per Goldman Sachs revised estimates...",
+      "url": "https://x.com/aleabitoreddit/status/2097660318369697875",
+      "kind": "post",
+      "engagement": {
+        "views": 173686,
+        "likes": 704,
+        "reposts": 53,
+        "replies": 53
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unavailable",
   "price_unit": "JPY",
-  "price_updated_at": "2026-08-17T09:21:25.727470+00:00",
-  "price_reason": "provider_symbol_not_found_after_search",
+  "price_updated_at": "2026-09-09T15:18:40.452397+00:00",
+  "price_reason": "EODHD 402 (search capacity unavailable)",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "5801.TSE",
-    "status": "unsupported",
-    "reason": "provider_symbol_not_found_after_search",
-    "checked_at": "2026-07-21T09:16:27.468724+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-08-20T09:16:27.468724+00:00",
-    "http_status": 404
+    "provider_symbol": "5801.T",
+    "status": "deferred",
+    "reason": "EODHD 402 (search capacity unavailable)",
+    "checked_at": "2026-09-09T15:18:40.127098+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-09-09T18:18:40.127098+00:00",
+    "http_status": null
   }
 }
