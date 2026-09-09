@@ -148,6 +148,8 @@ def validate_state(state: dict[str, Any]) -> None:
         raise HealthStateError(f"invalid severity: {state['severity']}")
     if state["status"] in {"running", "healthy"} and state["severity"] != "none":
         raise HealthStateError("running and healthy states require severity=none")
+    if state["status"] in {"running", "healthy"} and state["error_code"] is not None:
+        raise HealthStateError("running and healthy states require error_code=null")
     if state["status"] == "failed" and state["severity"] not in {"P0", "P1"}:
         raise HealthStateError("failed state requires P0 or P1")
     if state["status"] == "degraded" and state["severity"] not in {"P2", "P3"}:
@@ -346,7 +348,7 @@ def classify_outcome(
         "status": "healthy",
         "severity": "none",
         "stage": "complete",
-        "error_code": "",
+        "error_code": None,
         "summary": "Sync and publication completed",
     }
 

@@ -157,6 +157,13 @@ class SyncHealthStateTests(unittest.TestCase):
         with self.assertRaises(health.HealthStateError):
             health.validate_state(state)
 
+    def test_healthy_state_rejects_error_code(self):
+        state = health.initial_state(NOW)
+        state["error_code"] = "UNKNOWN_PIPELINE_ERROR"
+
+        with self.assertRaises(health.HealthStateError):
+            health.validate_state(state)
+
     def test_reads_manifest_metrics_without_inventing_missing_values(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -259,6 +266,7 @@ class OutcomeClassificationTests(unittest.TestCase):
 
         self.assertEqual(result["status"], "healthy")
         self.assertEqual(result["severity"], "none")
+        self.assertIsNone(result["error_code"])
 
 
 if __name__ == "__main__":

@@ -393,7 +393,11 @@ jobs:
           status="${HEALTH_STATUS:-failed}"
           severity="${HEALTH_SEVERITY:-P1}"
           stage="${HEALTH_STAGE:-unknown}"
-          error_code="${HEALTH_ERROR_CODE:-UNKNOWN_PIPELINE_ERROR}"
+          if [ "$status" = "healthy" ]; then
+            error_code=""
+          else
+            error_code="${HEALTH_ERROR_CODE:-UNKNOWN_PIPELINE_ERROR}"
+          fi
           summary="${HEALTH_SUMMARY:-Pipeline ended without a health outcome}"
           args=(finish --status "$status" --severity "$severity" --stage "$stage" --summary "$summary" --source-sha "$BASE_SHA")
           if [ -n "$error_code" ]; then args+=(--error-code "$error_code"); fi
