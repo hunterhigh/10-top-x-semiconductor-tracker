@@ -25,17 +25,20 @@
   "thesis_summary": null,
   "first_mention": "2025-10-01",
   "last_mention": "2026-09-09",
-  "total_mentions": 72,
+  "total_mentions": 104,
   "total_mentions_by_blogger": {
     "unusual_whales": 28,
+    "balder": 26,
     "StockMKTNewz": 25,
     "octopusycc": 12,
     "michaelsikand": 4,
+    "asklivermore": 4,
     "aleabitoreddit": 2,
+    "frank_trading": 2,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 19,
+    "opinion": 51,
     "news": 25,
     "flow": 28
   },
@@ -1299,6 +1302,37 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087539725351739404",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T10:00:29-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "positive gamma environment — market makers long gamma, will sell rallies and buy dips, suppressing range",
+        "Call Wall at 7800 (0.66% above spot, 49% touch probability) acts as ceiling with dealer sell pressure",
+        "Put Wall at 7700 (0.63% below spot, 52% touch probability) acts as floor",
+        "symmetric probabilities suggest range day, not trend day",
+        "Gamma Flip at 7713 — breach would flip dealers from buying dips to chasing down, amplifying vol",
+        "VIX 15.3 vs realized vol 14.0, VRP only 1.3 — thin cushion for option sellers",
+        "model most likely close 7735 below current spot 7749, implying convergence/pullback"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n高开0.48%后，指数把自己顶在了 Call Wall 7800 的门口——但今天真正的主线不是冲高，而是「正 Gamma」的橡皮筋：做市商手里是多头 Gamma，涨了他们卖、跌了他们买，行情被主动摁平。模型给出的最可能收盘 7735，比现货 7749 还低，说明结构在暗示回落收敛，而不是延续跳空。\n\n1️⃣ 「上有顶」：Call Wall 7800 距现货 0.66%，触及概率 49%——接近抛硬币。这个位置的做市商为了对冲，会在上方持续卖压，冲到就容易被推回来。\n\n2️⃣ 「下有底」：Put Wall 7700 距现货 0.63%，触及概率 52%。两堵墙的概率几乎对称，这是典型的「区间日」画像，不是趋势日画像。\n\n3️⃣ 「安全线」：Gamma Flip 在 7713，现货高出 0.45%。只要不跌破 7713，压制波动的机制就还在；一旦失守，同一批做市商就会从买跌变成追跌，波动会瞬间放大。另外 VIX 15.3 对实际波动 14.0，VRP 仅 1.3，期权卖方的安全垫很薄——收溢价可以，别裸卖。\n\n现货 7749 · 90%概率区间 7674–7817 · 最可能收盘 7735",
+      "url": "https://x.com/Balder13946731/status/2087539725351739404",
+      "kind": "post",
+      "engagement": {
+        "views": 4831,
+        "likes": 5,
+        "reposts": 2,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2087899584139784521",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-13",
@@ -1317,6 +1351,35 @@
         "likes": 109,
         "reposts": 9,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087902118002962628",
+      "blogger_id": "balder",
+      "date": "2026-08-13",
+      "created_at": "2026-08-13T10:00:30-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Call Wall at 7750 acts as resistance, dealer hedging creates sell pressure above it",
+        "model projects most likely close at 7758, direction is downward pull not upward",
+        "positive gamma environment means dealers sell rallies and buy dips, suppressing upside",
+        "spot already 0.62% above Call Wall, more likely to be dragged back than hold",
+        "VRP only +0.5, options priced only slightly above realized vol at 13.9%, no big move expected"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n高开0.19%后，现货7798压在7750的「Call Wall」上方——这是今天的主线：不是趋势日，而是被期权做市商往回拽的一天。模型给出最可能收盘7758，方向是下拉、不是上冲。\n\n1️⃣ 正 Gamma 环境。现货比7729的「Gamma Flip」高0.88%，做市商处在多头 Gamma 一侧，涨了卖、跌了买，把波动压平。7729之上，回撤更像是被接住而不是被踩踏。\n\n2️⃣ 冲过 Call Wall = 逆风区。7750上方做市商的对冲盘变成卖压，触及概率50%——现货已经在墙外0.62%，这里更容易被磨回来，而不是站稳。7700的「Put Wall」触及概率只有17%，下方暂时不是战场。\n\n3️⃣ VRP +0.5，期权定价略高于13.9%的实际波动。溢价很薄，谈不上丰厚——卖波动没什么安全垫，追突破也别指望大行情。\n\n现货7798 · 90%概率区间7689–7796 · 最可能收盘7758",
+      "url": "https://x.com/Balder13946731/status/2087902118002962628",
+      "kind": "post",
+      "engagement": {
+        "views": 7888,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 15
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1368,6 +1431,52 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2088264513619673177",
+      "blogger_id": "balder",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T10:00:32-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n开盘贴着 7800 的「Call Wall」跳了 0.1%，现货 7806 已经骑在墙上——今天的主线不是方向，是这堵墙。做市商正 Gamma 环境下卖出这里的看涨期权，每涨一点就得卖出更多现货对冲，把价格往回按。最可能收盘 7791，比现在还低一点，就是这个「被按住」的结果。\n\n1️⃣ 「Call Wall」7800 = 天花板不是目标。触及概率 94%，但穿透并站稳很难，越往上抛压越重。追高的人往往买在日内最高点。\n\n2️⃣ 「Gamma Flip」7766 在脚下 0.51%，只要不跌破，做市商就一直是「减震器」，波动被压扁。7766 才是今天真正的开关——破了才轮到放大行情。\n\n3️⃣ 「Put Wall」7700 远在 1.36% 之外，触及概率仅 14%。VIX 14.7 对应日内预期波动 72 点（0.93%），VRP +1.5 说明期权定价略高于实际波动，卖方小占优，区间震荡比单边更合理。\n\n现货 7806 · 90% 概率区间 7695–7835 · 最可能收盘 7791",
+      "url": "https://x.com/Balder13946731/status/2088264513619673177",
+      "kind": "post",
+      "engagement": {
+        "views": 19387,
+        "likes": 14,
+        "reposts": 0,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088954384755695638",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-16",
+      "created_at": "2026-08-16T07:41:50-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "S&P",
+      "text": "A lot of people on X are new to the markets. So I'll make this as simple and harsh as possible.\n\nThe economy is not going up. It is not going down. It is doing both at the same time. This is called a \"K-shaped\neconomy\" and almost nobody talking about affordability on your timeline understands what it actually means.\n\nIf you own assets, stocks and real estate, you are on the upper arm of the K. Your wealth has compounded aggressively since 2020. The S&P is at all-time highs. Home prices are up 50% since the pandemic. Your 401k is the best it has ever been.\n\nIf you do NOT own assets, you are on the lower arm. Rent is higher. Groceries cost more. A home that cost 2.2x the median income in 1960 now costs 5 to 7x. You are working harder and falling further behind, and it is not your imagination.\n\nThe top 10% of Americans own 93% of all stocks. The bottom 50% own 1%. The top 10% hold 68% of total wealth. The bottom 50% hold 2.5%. This is not an opinion. This is Federal Reserve data.\n\nWhen the S&P goes up 25% in a year, the people who own stocks get 25% wealthier. The people who don't own stocks get nothing. That is the K. Same economy. \n\nTwo completely different outcomes based on one thing: whether you owned assets before the run started.\n\nThis is why your timeline is split in half. Half the people saying the economy has never been better. The other half saying they can't afford to live. Both are telling the truth. They are just on different arms of the K.\n\nHow long does this last? \nThe honest answer is that it has been going on for decades. The Richmond Fed traced this pattern back 30 years. It happened after 2001. It happened after 2008. It happened after COVID. Each time the gap widened and never fully closed before the next shock hit.\n\nThe last time wealth concentration looked like this was the Gilded Age, 1870 to 1900. That lasted 30 years before structural reform changed anything.\n\nWhat does this mean for you? \nThe K-shaped economy is not a reason to panic. It is a reason to understand where you sit and what you can control. \n\nThe people on the upper arm did not get lucky. They owned assets. That is the entire difference.\n\nChange your life and start small. No matter how small your account balance is. I only started with $10K, twenty years ago. This is your time to retire your whole family. They are counting on you.",
+      "url": "https://x.com/asklivermore/status/2088954384755695638",
+      "kind": "post",
+      "engagement": {
+        "views": 383070,
+        "likes": 4583,
+        "reposts": 564,
+        "replies": 219
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089110556091511266",
       "blogger_id": "michaelsikand",
       "date": "2026-08-16",
@@ -1391,6 +1500,52 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2089326920156807502",
+      "blogger_id": "frank_trading",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T08:22:10-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "本周 VIX 回到 14-15，大家可能觉得波动率没什么好说的了。但如果回头看 7 月中旬到 8 月中旬这一个月，个股端经历的不是普通的“财报后 IV crush”，而是一次极端拥挤的 dispersion 结构反向收敛。理解这件事对接下来怎么做期权至关重要。\n\n初始条件：极端的个股高 IV / 指数低 IV 错位\n\n7 月中旬，Cboe 的 DSPX（dispersion 指数）升到约 50%，创六年高位。与此同时 VIX 只有约 15。hyperscaler 个股 IV 约 40%，SPY 前端 IV 只有约 10%。COR1M（1 个月相关性）处于极低水平。\n\n这个错位是怎么来的？三层溢价叠在一起：①财报风险溢价，大科技股财报集中落地前，零售开仓中 call buying 占比 56%（接近年内最高），主动买权推高事件方差；②AI 内部剧烈分化，半导体，软件，大型云各走各的，极低的股票相关性让指数 IV 没有同步上升；③7 月 momentum unwind 的尾部风险溢价，7 月科技股经历历史级别的动量平仓，单名股 realized vol 被连续大涨大跌抬高。\n\n我们知道，指数方差 = 个股权重平方*个股方差之和 + 跨项相关系数。个股波动率很高，但隐含相关性极低，所以 VIX 可以很低。这个结构本身就是一个交易，买个股 vol、卖指数 vol、押注股票继续各走各的。这个交易在 2024-2026 年已经变得极度拥挤。\n\n8 月初开始，四个力量同时作用于这个拥挤结构：\n\n第一推动力：财报事件方差集中退出。 Microsoft、Google、Amazon、Meta、Apple 财报陆续落地。财报一出，事件方差几乎立刻消失。Cboe 在 8/3 就观察到 VIX 一周降 2.6 点但 VIXEQ 降 3.4 点，个股端跌得更快。但这只是触发器。普通财报季每季度都有，这次之所以这么猛，是因为财报前 DSPX 已经在六年极值。\n\n第二推动力：拥挤的 dispersion 被反向平仓，这是最重要的放大器。 此前主流 dispersion 交易是买个股 vol / 卖指数 vol。QVR 等波动率基金甚至已经转向 reverse dispersion（买指数 vol / 卖 single-name vol），因为单名股 IV 与指数 IV 的差已经到了极端水平。财报落地后，长个股 vol 的一方同时面临：事件方差消失、theta 流失、VIXEQ/DSPX 跌破趋势、止损触发。reverse-dispersion 交易者同时在卖个股 IV。这不是自然衰减，是一轮仓位反转，这解释了为什么没有财报、或财报已经过去的股票，IV 也一起遭到压缩。市场卖的不是单个事件，是整个 single-name vol asset class。\n\n第三推动力：7 月去杠杆结束，regime 从“怕个股爆炸”切换到“怕踏空上涨”。7 月发生历史级别科技 momentum unwind，相当一部分杠杆已被清理，去杠杆完成后市场反而具备更高质量反弹的条件。随后是典型的 underexposed chase，SPX 在截至 8/4 的四个交易日涨 5.8%，7 月 30 日至 8 月 5 日成为历史上 SPX call 成交量最高的五日窗口，短期 call skew 升至两年高位。\n\n第四推动力：系统资金 releveraging 的负反馈循环。 截至 8/10，SOX 前十大成分股的平均 3 个月 ATM IV 仅 8 月以来就降了近 20 %。低波动率允许系统策略重新增加敞口 -> 加仓推高股价 -> 上涨进一步压低下行波动率需求 -> 更低的波动率又释放更多系统资金购买能力。这是一轮典型的 vol-control 反馈：IV 下降 -> 预期风险下降 -> 系统资金加仓 -> 股价趋势改善 -> RV 下降 -> IV 进一步下降。\n\n这轮 crush需要让我们意识到方向正确 ≠ call 赚钱\n\n整体 ATM IV 可以暴跌，同时远端 OTM call 仍然变贵。call demand 很强不代表你持有的 ATM 或轻度 OTM call 不会被 IV crush。Cboe 发现 8/10 前后 SPX skew 降至一年低位，但 deep OTM puts 仍有需求——这是波动率曲面的重新定价，不是所有期权都没人买。\n\n这解释了为什么在这种环境里“方向正确”不等于“call 赚钱”。即使方向判断正确，IV 下跌带来的 Vega 损失与 Theta 损耗，仍然可能吃掉全部 Delta 收益。当 IV 变化大幅为负时，即使方向对了，总收益也可能是负的。\n\n这轮 crush 本质上更像一次投机杠杆清洗后的波动率正常化。7 月动量股回撤、杠杆 AI 产品清算、单名股期权仓位去化之后：短期期权需求下降、散户和动量资金减少追涨、个股 realized vol 回落、Dealer 不再需要持续追着 spot 做 gamma hedge、单名股 IV 系统性下压。\n\n现在的特殊之处在于期权结构的错位：single name stock的 ATM IV 相对便宜，但 25 Delta 和 10 Delta wings 仍然贵。 指数和个股的 term structure 都已经降到偏低区间。这对期权结构的含义很明确：想赌方向，ATM 附近的 call spread 仍然合理；想赌 IV 回归，优先买 ATM 或轻度 OTM 单腿期权吃最大 vega；不适合为了“便宜”去买很远的 wing，因为 wing skew 反而没有同步 crush。买的是被 crush 得最厉害的 ATM/轻度 OTM vol，而不是仍然昂贵的deep OTM put/call。\n\ncrush 是否已经结束？\n\n截至 8/14：VIX 约 14.25，DSPX 约 33.45，SPY IV 处于过去一年第 4 百分位。但中位数个股 IV 仍在第 31 百分位，个股 realized volatility 仍在第 61 百分位——implied dispersion 已经下降，但 realized dispersion 尚未明显下降。IV 可能开始跑在 RV 前面。\n\n接下来两种情景：\n\n如果个股实际波动也逐渐下降，IV crush 还能慢慢延续。如果 realized dispersion 继续高，当前低 IV 会重新吸引买盘。此外 8/19 VIX 到期和 8/21 月度 OPEX 会移除部分压制指数波动率的 gamma 仓位，而 NVDA 财报、Jackson Hole 等事件紧接着到来。届时如果相关性开始上升，修复路径可能从“个股 IV 下跌”切换成“指数 IV 上涨”。",
+      "url": "https://x.com/Franktradinglog/status/2089326920156807502",
+      "kind": "post",
+      "engagement": {
+        "views": 60399,
+        "likes": 136,
+        "reposts": 25,
+        "replies": 64
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089327245815165279",
+      "blogger_id": "frank_trading",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T08:23:27-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "spx",
+      "text": "tldr，我喜欢call nvda/qqq call spread，同时naked put spx/dia",
+      "url": "https://x.com/Franktradinglog/status/2089327245815165279",
+      "kind": "post",
+      "engagement": {
+        "views": 16550,
+        "likes": 35,
+        "reposts": 1,
+        "replies": 58
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089344350815662422",
       "blogger_id": "unusual_whales",
       "date": "2026-08-17",
@@ -1409,6 +1564,29 @@
         "likes": 74,
         "reposts": 7,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089351785504972920",
+      "blogger_id": "balder",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T10:00:58-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天大盘开局处于 7774，恰好被压在 7778 的「Gamma Flip」分水岭下方。尽管微幅跌破，但整体期权盘口依然是典型的正 Gamma 结构（做市商会抑制单边波动）。今天的主线剧情将是多头向上的「收复剧本」，模型测算最可能收盘位落在 7774，预示着多空双方将围绕当前点位展开激烈的震荡拉锯。\n\n1️⃣ **争夺「Gamma Flip」分水岭**：当前价格在 7778 之下，多头的首要任务是向上收复这一关键水位。一旦突破并站稳 7778，做市商的逆势对冲行为（高抛低吸）将重新接管盘面，大幅降低日内振幅。\n2️⃣ **强烈的「Call Wall」磁力**：上方核心阻力「Call Wall」位于 7800。虽然目前大盘被压制在分水岭下方，但数据显示今天触及 7800 的概率高达 71%。若分水岭被成功收复，这块巨大的磁铁将迅速把价格向上方天花板牵引。\n3️⃣ **遥远的「Put Wall」防线**：下方核心支撑「Put Wall」设在 7700。目前该位置距离较远（0.95%），日内触碰概率仅为 29%。同时当前 VRP 为 1.1，市场对风险已有充分定价，溢价的存在有效缓冲了向下试探的动能。\n\n现货 7774 · 90% 概率区间 7690-7828 · 最可能收盘 7774",
+      "url": "https://x.com/Balder13946731/status/2089351785504972920",
+      "kind": "post",
+      "engagement": {
+        "views": 23849,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1460,6 +1638,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2089391882552197409",
+      "blogger_id": "balder",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T12:40:18-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SPX",
+      "text": "我可以几乎很肯定的告诉大家今天 $SPX 就是会收在7775这个位置附近。\n\n但这并不意味着这个预测有蝴蝶策略的价值🫪因为今天指数展现出了很多“安静”的信号，这些信号都被Priced in了，导致蝴蝶非常贵，就算你Pin到了7775，收益也不会特别大。\n\n所以对于蝶子来说很多事情都要考虑，因为最近在不断调试这个策略就提一嘴，我知道大部分人并不做蝶子。",
+      "url": "https://x.com/Balder13946731/status/2089391882552197409",
+      "kind": "post",
+      "engagement": {
+        "views": 17044,
+        "likes": 13,
+        "reposts": 0,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089406150383149564",
       "blogger_id": "unusual_whales",
       "date": "2026-08-17",
@@ -1506,6 +1707,35 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2089714139631600008",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T10:00:50-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Put Wall at 7700 has 95% probability of being touched",
+        "market in negative Gamma state below 7752 Gamma Flip level",
+        "most likely closing price pinned near 7703",
+        "if 7700 holds, acts as strongest intraday magnet; if broken, accelerated dealer hedging selling chain reaction",
+        "VRP positive at 1.2 providing some buffer against unresisted crash"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n经历大幅低开后，今日市场的绝对核心主线是「Put Wall」悬崖保卫战与负 Gamma 效应的剧烈共振。目前指数直接砸至最重兵把守的看跌期权墙附近，被期权引力牢牢吸附，模型预计今日最可能收盘点位将钉在 7703 的现价附近。\n\n1️⃣ **「Put Wall」测试与负 Gamma 放大**：现货已被推入 7752 的「Gamma Flip」分水岭下方，做市商已进入追涨杀跌的负 Gamma 状态。下方 7700 的「Put Wall」近在咫尺，触及概率高达 95%。这是今日的绝对底线，一旦跌破将引发做市商对冲加速卖出的连锁反应；若能守住，则会成为日内最强的磁石。\n\n2️⃣ **多头的艰难收复剧本**：当前价格深陷分水岭下方，多头若想扭转趋势，必须依靠极强的买盘一路向上收复 7752 的分水岭。同时，该位置与 7750 的「Call Wall」高度重合，构成了今日上方难以逾越的穹顶。\n\n3️⃣ **波动率溢价缓冲**：目前 VRP 为正值 1.2，说明期权定价已包含了相对丰厚的风险溢价。这意味着虽然身处负 Gamma 区间，但只要 7700 阵地不被有效击穿，行情更有可能围绕此区域进行高波动的剧烈震荡，而非无抵抗暴跌。\n\n现货 7703 · 90% 概率区间 7583-7827 · 最可能收盘 7703",
+      "url": "https://x.com/Balder13946731/status/2089714139631600008",
+      "kind": "post",
+      "engagement": {
+        "views": 7032,
+        "likes": 6,
+        "reposts": 1,
+        "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089861247139238274",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-18",
@@ -1524,6 +1754,52 @@
         "likes": 33,
         "reposts": 4,
         "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090438910245831119",
+      "blogger_id": "balder",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T10:00:49-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天的主线剧本围绕「Put Wall」的争夺与「Gamma Flip」的收复展开。目前大盘以 7686 点低开，直接跌落至 7703 点的期权多空分水岭下方，并考验 7700 点的底部防线。当前模型测算最可能收盘于 7697 点，暗示全天大概率是围绕该防线拉锯的阵地战。\n\n1️⃣ 「跌破分水岭与收复剧本」\n当前现货位于「Gamma Flip」（7703）下方，市场结构相对脆弱。多头的首要任务是向上收复 7703 点，才能将做市商逼回缓冲波动的买入状态。若迟迟无法收复，需警惕跌势在负向反馈中被放大。\n\n2️⃣ 「Put Wall」防御战\n7700 点是今日的「Put Wall」，触达概率高达 85%。目前现货已经跌破该位置，7700 点正从支撑转化为日内反抽的阻力。如果无法迅速站回，卖压将进一步推动指数寻找 90% 概率区间的下沿 7660 点。\n\n3️⃣ 「Call Wall」压制与波动率溢价\n上方 7750 点的「Call Wall」触达概率仅为 38%，上行空间已被封锁。今日波动率风险溢价（VRP）为 2.3，期权仍维持一定的溢价，这表明做市商非常乐于在低位震荡中消耗期权的时间价值。\n\n现货 7686 · 90% 概率区间 7660-7767 · 最可能收盘 7697",
+      "url": "https://x.com/Balder13946731/status/2090438910245831119",
+      "kind": "post",
+      "engagement": {
+        "views": 6351,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090801281007002088",
+      "blogger_id": "balder",
+      "date": "2026-08-21",
+      "created_at": "2026-08-21T10:00:45-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n当前市场深陷「负 Gamma」状态，做市商的对冲行为将放大盘面的双向波动。今日现货开在分水岭下方，正面临强烈的向下引力，全天最可能收盘于 7662 附近，暗示今日大概率是一场剧烈颠簸的拉锯战。\n\n1️⃣ 「分水岭」收复战：今日的关键 Gamma Flip 位于 7677。由于目前现货（7664）处于该位置下方，做市商已切换至顺势追涨杀跌的模式。多头今天的首要剧本是尽力收复 7677，只有重新站上该点位才能重回稳定状态，否则任何弱反弹都容易被卖盘扑灭。\n\n2️⃣ 「Put Wall」磁吸测试：在负向 Gamma 的催化下，下方的 Put Wall（7600）正在发挥极强的磁石效应。该位置距离现货仅 0.83%，且日内触碰概率高达 41%。若多头无法迅速收复分水岭，指数极易向下俯冲，测试这一核心期权支撑的防守硬度。\n\n3️⃣ 波动缓冲与「Call Wall」：上方的 Call Wall 远在 7800，触碰概率仅有微弱的 8%。当前 VRP 为 2.9，说明期权定价已经包含了足够的风险溢价缓冲，并未低估实际波动，市场在今日直接单边逼空至顶部的难度极大。\n\n现货 7664 · 90% 概率区间 7536-7792 · 最可能收盘 7662",
+      "url": "https://x.com/Balder13946731/status/2090801281007002088",
+      "kind": "post",
+      "engagement": {
+        "views": 5536,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 13
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1575,6 +1851,89 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2091888573050155457",
+      "blogger_id": "balder",
+      "date": "2026-08-24",
+      "created_at": "2026-08-24T10:01:15-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\nSPX 现货目前处于 7652，深陷「负 Gamma」区间，今日的主线是做市商顺势对冲带来的「动能放大」。由于价格跌破了关键的 7698 分水岭，向下测试 Put Wall 的引力显著增强。今日最可能收盘价落在 7650 附近。\n\n1️⃣ 负 Gamma 放大效应：目前大盘在 7698 的「Gamma Flip」下方 0.61%。在这种环境下，做市商的对冲行为会表现为追涨杀跌。一旦跌破开盘区间（7638-7663），单边趋势将被显著放大，多头必须向上收复 7698 才能让市场重回平稳震荡模式。\n\n2️⃣ 7600 防线测试：目前价格距离上方的「Call Wall」（7750）较远，触及概率仅 18%。相反，距离下方的「Put Wall」（7600）仅有 0.68% 的空间，模型预估今日有高达 48% 的概率向下触及该位置。这里将是今天多空博弈与支撑测试的核心战场。\n\n3️⃣ 日内波幅预期：目前 VRP 为 2.0，表明期权定价仍包含一定的波动溢价。但叠加负 Gamma 效应，日内预期波幅（Expected Move）高达 74 点（0.96%），盘中需时刻警惕流动性真空导致的急跌急涨。\n\n现货 7652 · 90% 概率区间 7530-7774 · 最可能收盘 7650",
+      "url": "https://x.com/Balder13946731/status/2091888573050155457",
+      "kind": "post",
+      "engagement": {
+        "views": 15780,
+        "likes": 10,
+        "reposts": 1,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092304047672033299",
+      "blogger_id": "balder",
+      "date": "2026-08-25",
+      "created_at": "2026-08-25T13:32:12-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "negative Gamma environment amplifies intraday volatility",
+        "Put Wall at 7650 is 0.21% away with 83% probability of being touched intraday",
+        "Gamma Flip watershed at 7685; bulls need to reclaim it with volume to return to positive Gamma",
+        "model forecasts most likely close at 7665",
+        "VRP at 2.5 indicates some risk premium priced in options"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天的主线是「负 Gamma」环境下的「Put Wall」保卫战。目前现货在「Gamma Flip」分水岭（7685）下方，做市商的对冲行为将放大盘中波动，而下方紧挨着的就是 7650 的重磅支撑。模型预计，今天最可能的收盘位在 7665。\n\n1️⃣ 顺势推波助澜：由于身处「负 Gamma」区间，做市商会在下跌时卖出、上涨时买入，从而放大原本的单边走势。目前的 VRP 为 2.5，说明期权定价了一定的风险溢价，但趋势一旦形成依然容易自我强化。\n2️⃣ 兵临城下：下方的「Put Wall」位于 7650，距离现价仅 0.21%，日内触及概率高达 83%。这是今天的绝对防线，一旦有效跌破，结构性卖压将加速释放；若在此处企稳，空头回补则有望引发剧烈反弹。\n3️⃣ 艰难收复：上方的「Gamma Flip」位于 7685。要彻底扭转目前的防御姿态，多头必须带量收复这一分水岭，从而带领市场回到「正 Gamma」的安全区。上方的「Call Wall」目前远在 7750，日内触及概率仅 27%，暂不构成核心压制。\n\n现货 7666 · 50% 概率区间 [7614, 7717] · 最可能收盘 7665",
+      "url": "https://x.com/Balder13946731/status/2092304047672033299",
+      "kind": "post",
+      "engagement": {
+        "views": 3853,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092610690913829110",
+      "blogger_id": "balder",
+      "date": "2026-08-26",
+      "created_at": "2026-08-26T09:50:42-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "negative Gamma environment amplifies intraday volatility",
+        "price below Gamma Flip at 7683, bulls need to reclaim it",
+        "Call Wall at 7700 with 77% touch probability",
+        "Put Wall at 7600 with 30% touch probability",
+        "VRP of 3.8 indicates rich volatility premium in options",
+        "most likely closing price modeled at 7676",
+        "50% probability range 7650-7704"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天的主线是「负 Gamma」环境下的「分水岭」收复战。目前价格处于 Gamma Flip 之下，做市商的顺势对冲（追涨杀跌）将放大盘中波动。模型测算今日最可能收盘价为 7676，暗示市场大概率会在当前水位附近进行高波动的拉锯。\n\n1️⃣ 争夺「分水岭」：当前现货 7678 处于 7683 的 Gamma Flip 下方。多头今天的核心剧本是主动收复该位置；若迟迟无法突破，做市商在「负 Gamma」下的抛压会迅速放大跌幅。\n2️⃣ 「Call Wall」的强磁吸：上方 7700 是今天的「Call Wall」。尽管身处负 Gamma 区间，但价格距离此处极近，触及概率高达 77%。若成功收复分水岭，这里将是最大的多头目标位。\n3️⃣ 「Put Wall」与波动溢价：下方「Put Wall」防线在 7600，触及概率 30%。今日 VRP 为 3.8，说明期权定价蕴含了丰厚的波动溢价。请记住，50% 概率区间意味着有一半的交易日最终会收在区间之外；在负 Gamma 的加持下，切勿认为行情会被锁死在区间内，必须防范向两端极值的剧烈运动。\n\n现货 7678 · 50% 概率区间 7650-7704 · 最可能收盘 7676",
+      "url": "https://x.com/Balder13946731/status/2092610690913829110",
+      "kind": "post",
+      "engagement": {
+        "views": 11119,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2092618317026443770",
       "blogger_id": "unusual_whales",
       "date": "2026-08-26",
@@ -1593,6 +1952,81 @@
         "likes": 229,
         "reposts": 23,
         "replies": 49
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092973100283605295",
+      "blogger_id": "balder",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T09:50:47-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今日 SPX 现价 7699 恰好踩在关键的「Gamma Flip」分水岭上，配合目前的「负 Gamma」环境，今天注定是一场高波动的争夺战。造市商的顺势对冲会显著放大市场行情，今日最可能收盘价指向 7697，说明日内大概率将紧贴此分水岭展开剧烈拉锯。\n\n1️⃣ 分水岭攻防与放大效应\n7699 是今天的绝对枢纽。在「负 Gamma」机制下，一旦价格跌破 7699 并持续向下，造市商的对冲操作将加剧下跌动能；反之，若能站稳该位置，向上的动能也会被同等放大。\n\n2️⃣ 上方磁石与测试概率\n上方的「Call Wall」位于 7750（距离现价 0.66%）。数据模型显示今天有高达 49% 的概率会测试该位置。如果多头在 7699 的争夺中获胜并向上发力，7750 将成为日内强大的上行磁石。\n\n3️⃣ 波动溢价与下方防线\n下方的「Put Wall」位于 7600，日内触及概率为 18%。当前 VRP 达到 4.9，显示期权定价包含了丰厚的波动溢价。但考虑到负 Gamma 的推波助澜，日内交易仍需重点防范跌破 7699 后的加速回落。\n\n现货 7699 · 50% 概率区间 7671-7724 · 最可能收盘 7697",
+      "url": "https://x.com/Balder13946731/status/2092973100283605295",
+      "kind": "post",
+      "engagement": {
+        "views": 4547,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092975805165191470",
+      "blogger_id": "balder",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T10:01:32-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普 500",
+      "text": "标普 500 现价 7,703 只是歇脚，完全不用慌。\n\n距近期高点 7,799 仅 -1.24%。今日预计在 7,676 到 7,729 之间震荡，守住 7,643 的关键支撑就稳。\n\n历史上 2,767 次同类位置中，未来 20 个交易日有 87% 的概率摸回高点，不跌破 5% 的概率达 83%。\n\n后续四种走法里，回到高点且不深跌占 78%，横着磨占 5%，再跌一档 14%，跌破 10% 的可能仅 3%。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2092975805165191470",
+      "kind": "post",
+      "engagement": {
+        "views": 7253,
+        "likes": 17,
+        "reposts": 2,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093335494352585062",
+      "blogger_id": "balder",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T09:50:48-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "positive Gamma environment suppresses one-sided moves",
+        "Gamma Flip level at 7712 is key support",
+        "VRP at 4.1 indicates rich option premium strengthening seller force",
+        "Put Wall at 7700 with 58% touch probability as strong intraday support",
+        "most likely close at 7728 suggests mean-reversion tendency"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天的主线是典型的正 Gamma 区间震荡。现货 7739 稳站在分水岭上方，做市商的对冲行为将有效抑制单边行情。期权定价相对温和，模型计算的今日最可能收盘位在 7728，预示着日内价格更倾向于在支撑与阻力之间来回拉锯，并最终向此中枢回归。\n\n1️⃣ 「正 Gamma」镇压与「Gamma Flip」防线\n目前关键的「Gamma Flip」分水岭在 7712。只要现货守住该位置，市场就维持在「正 Gamma」环境，做市商会采取跌买涨卖的策略吸收波动。此外 VRP 为 4.1，说明期权溢价丰厚，卖方力量进一步强化了震荡格局，单边大跌或大涨的概率较低。\n\n2️⃣ 「Put Wall」引力与「Call Wall」阻力\n今日下方的「Put Wall」设在 7700，触及概率达 58%，是日内的关键强支撑带；而上方的「Call Wall」远在 7800，触及概率仅 39%。结合 7728 的最可能收盘位，如果盘中价格下探测试 7700 附近的墙体，极易触发做市商的机械性买盘托底。\n\n现货 7739 · 50% 概率区间 7706-7757 · 最可能收盘 7728",
+      "url": "https://x.com/Balder13946731/status/2093335494352585062",
+      "kind": "post",
+      "engagement": {
+        "views": 4560,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1618,6 +2052,29 @@
         "likes": 1,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093338263109218311",
+      "blogger_id": "balder",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T10:01:48-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普 500",
+      "text": "结合历史同类位置看，标普 500 只是正常歇脚，没到见顶的时候。\n\n现价 7,736，距近期高点 -0.81%。今日区间在 7,710 到 7,761，关键支撑 7,643。\n\n过去 2,767 次同样位置，未来 20 个交易日有 87% 摸回高点 7,799，不跌破 5% 的概率是 83%。\n\n具体四种走法：回到高点且不深跌 78%，横着磨 5%，再跌一档 14%，跌破 10% 仅 3%。往上再涨 2% 的概率是 54%，平常是 65%。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2093338263109218311",
+      "kind": "post",
+      "engagement": {
+        "views": 6100,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1649,6 +2106,88 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2093705222506135930",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-29",
+      "created_at": "2026-08-29T10:19:58-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "CAPE at 42.2x, second highest in 154 years",
+        "forward 10-year returns average only +2.3% when CAPE above 40x"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "S&P 500",
+      "text": "The Shiller CAPE ratio is at 42.2x. The only time it was higher in 154 years was the dot-com bubble at 43.8x.\n\nBut here's the thing most people get wrong: the CAPE can stay elevated for years. It crossed 25x in 1996 and didn't peak until 2000.\n\nWhat the CAPE actually tells you is not WHEN to sell. It tells you WHAT your forward returns will look like. When CAPE is above 40x, the S&P 500 has averaged +2.3% annually over the next 10 years. When it's below 15x, it averaged +10.7%.\n\nYou don't have to sell. But you should know what you're buying into.\n\nThe CAPE ratio measures how expensive the stock market is relative to the last 10 years of inflation adjusted earnings. Think of it as a price tag on the entire market. The higher the number, the more you're paying for each dollar of earnings.",
+      "url": "https://x.com/asklivermore/status/2093705222506135930",
+      "kind": "post",
+      "engagement": {
+        "views": 100417,
+        "likes": 845,
+        "reposts": 82,
+        "replies": 85
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093707189278134484",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-29",
+      "created_at": "2026-08-29T10:27:47-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "buy and hold still works but forward 10-year returns likely lower than last decade",
+        "keep core in SPX as foundation",
+        "raise more cash than usual at 42x CAPE"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "SPX",
+      "text": "@opportunityflow I think if you're more of a SPX guy, buy and hold still works. but from these levels, your forward 10 year returns will likely be lower than what we've seen the last decade.\n\nkeep your core in SPX. That's your foundation.\nthen use a portion of your portfolio for tactical positions. trim what's extended, add what's pulling back to support.\n\nRotate into sectors showing relative strength and can raise a little more cash than usual. Not because a crash is coming tomorrow, but because having dry powder at 42x CAPE gives you options when volatility shows up.\n\nAlso, if you have a mortgage, can pay off the mortgage or increase mortgage payments as well to offset lower gains in the markets.",
+      "url": "https://x.com/asklivermore/status/2093707189278134484",
+      "kind": "reply",
+      "engagement": {
+        "views": 1795,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094422721031700695",
+      "blogger_id": "balder",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T09:51:03-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "broke below key support at 7700 put wall, which now becomes resistance",
+        "spot below Gamma flip at 7719, market vulnerable until reclaimed",
+        "negative Gamma amplification effect active, market makers will hedge pro-trend accelerating downside",
+        "VRP at 5.0 implies elevated intraday volatility risk",
+        "call wall at 7750 has only 31% probability of being reached"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今天真正的主线故事是跌破关键支撑后的「负 Gamma 放大」效应。目前现货来到 7679，完全处于「Gamma 分水岭」下方。做市商的动态对冲将顺势放大行情，叠加期权隐含波动率存在溢价（VRP 为 5.0），日内宽幅震荡风险急剧攀升。今日最可能收盘于 7678。\n\n1️⃣ 失守「看跌期权墙」：大盘已跌穿 7700 的「看跌期权墙」。由于目前价格在墙下，7700 将从托底支撑转变为反抽阻力。日内测试该位置的概率高达 77%，若上攻受阻，做市商抛售对冲的机制将加速价格下行。\n\n2️⃣ 艰难的「收复剧本」：由于现货落后于 7719 的「Gamma 分水岭」，今天只能上演向上的收复剧本。在重返分水岭上方之前，盘面会十分脆弱。远在 7750 的「看涨期权墙」触及概率仅 31%，上行压制非常明显。\n\n3️⃣ 警惕宽幅震荡：预测给出的 50% 概率区间为 7653-7703，这意味着大约一半的交易日都会收在该区间外。在负 Gamma 主导的市场中，绝不能预设价格必然会在此区间内企稳，请随时做好防范大幅波动的准备。\n\n现货 7679 · 50% 概率区间 7653-7703 · 最可能收盘 7678",
+      "url": "https://x.com/Balder13946731/status/2094422721031700695",
+      "kind": "post",
+      "engagement": {
+        "views": 7833,
+        "likes": 3,
+        "reposts": 2,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2094778603313442849",
       "blogger_id": "StockMKTNewz",
       "date": "2026-09-01",
@@ -1667,6 +2206,213 @@
         "likes": 61,
         "reposts": 8,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094785069965783211",
+      "blogger_id": "balder",
+      "date": "2026-09-01",
+      "created_at": "2026-09-01T09:50:54-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "opened below key Gamma Flip level at 7638, now acting as resistance",
+        "Put Wall at 7600 has 61% intraday touch probability, acting as magnetic support/target",
+        "quantitative model suggests most likely close at 7649, implying downside pressure",
+        "VRP at 7.8 indicates rich volatility premium but positive Gamma environment dampens sharp directional moves"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今日现货低开至 7638，直接跌落于关键分水岭之下，今日的真正主线故事是「压在 Gamma Flip 下方测试支撑」。尽管大盘整体仍处于做市商提供缓冲的正 Gamma 环境，但由于开盘失守核心阵地，日内反弹将面临重重压制。量化模型显示今日最可能收盘点位为 7649，预示着行情倾向于在低位承压震荡。\n\n1️⃣ 「Put Wall」磁吸效应：下方 7600 的看跌期权墙距离现价仅有 0.5% 的空间，且模型测算的日内触碰概率高达 61%。这里是空头短线的核心磁铁，也是做市商日内对冲防守的重镇，需密切观察该点位的流动性承接。\n\n2️⃣ 阻力压制与收复剧本：7676 的「Gamma Flip」分水岭现已转化为上方沉重的阻力。多头若想化解今日的被动局面，必须上演强劲的收复剧本重新站上 7676。至于上方的 7800 「Call Wall」，今日触碰概率仅 2%，已完全退出日内博弈视野。\n\n3️⃣ 正 Gamma 与丰厚溢价：当前 VRP 高达 7.8，说明期权定价蕴含着丰厚的波动溢价。配合做市商在正 Gamma 状态下的高抛低吸行为，市场单边直线暴跌的动能会被削弱。需留意 50% 概率区间的上限精准重合于分水岭，且请记住，从概率设计上讲，大约有一半的交易日最终会收在该区间之外。\n\n现货 7638 · 50%概率区间 [7624, 7676] · 最可能收盘 7649",
+      "url": "https://x.com/Balder13946731/status/2094785069965783211",
+      "kind": "post",
+      "engagement": {
+        "views": 4608,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095147445881827827",
+      "blogger_id": "balder",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T09:50:51-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "market has broken below key Gamma Flip level (7661), entering negative Gamma zone",
+        "market makers hedge in same direction as price movement, amplifying downside",
+        "Put Wall at 7600 acts as magnet with 63% probability of being touched today",
+        "current spot (7638) below Gamma Flip watershed (7661), structure biased defensive",
+        "most likely closing price points to 7637"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今日主线故事非常明确：市场已跌破关键分水岭，进入做市商「推波助澜」的负 Gamma 区域，目前正向下测试看跌期权重镇。今日最可能收盘位指向 7637。\n\n1️⃣ 「负 Gamma 追涨杀跌」：当前市场结构处于负 Gamma 状态。做市商的对冲操作与市场走势同向，下跌抛售、上涨买入，这将显著放大日内波动。请注意，50% 概率区间的设计意味着大约一半的交易日最终会收在该区间之外，在负 Gamma 的环境催化下，大幅偏离区间的风险不容忽视。\n2️⃣ 「分水岭与收复剧本」：目前现货（7638）承压于 Gamma Flip 分水岭（7661）下方。多头今天的首要任务是上演「收复剧本」，只有重新站上 7661，才能让做市商的对冲盘由阻力转化为助力。在此之前，整体结构偏向防御。\n3️⃣ 「Put Wall 引力测试」：下方的 Put Wall 核心支撑位于 7600，距离现货仅 0.5%。更关键的是，今日触碰该防线的概率高达 63%，巨大的看跌期权敞口正如同磁铁般吸引价格向下测试。相对而言，上方的 Call Wall 高悬于 8000，今日触碰概率为 0。\n\n现货 7638 · 50% 概率区间 7609-7665 · 最可能收盘 7637",
+      "url": "https://x.com/Balder13946731/status/2095147445881827827",
+      "kind": "post",
+      "engagement": {
+        "views": 4481,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095150318644511118",
+      "blogger_id": "balder",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T10:02:16-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普 500",
+      "text": "如果犹豫今天该不该继续持有，下行风险其实正在快速收缩。标普 500 现价 7,646，距近期高点 7,799 回撤 1.96%。\n\n从 2,770 次同类历史看，上下的爆发力都在减弱。未来 20 天涨 2% 的概率降至 54%（低 11 个百分点），再跌 5% 和 10% 的风险也缩水到 12% 和 3%（低 8 和 3 个百分点）。但摸回高点的胜率高达 87%，飙升了 31 个百分点。这组数据说明深跌空间已被封死，快涨虽难，但向上的引力极大，是个跌不动只能慢慢熬回前高的格局。\n\n今天预计在 7,618 到 7,674 区间震荡（上下 0.7%），7,643 是够得着的关键位。\n\n只要不跌穿这个区间的下沿，这种缓慢修复的逻辑就不会变。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2095150318644511118",
+      "kind": "post",
+      "engagement": {
+        "views": 9517,
+        "likes": 30,
+        "reposts": 1,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095509814470398039",
+      "blogger_id": "balder",
+      "date": "2026-09-03",
+      "created_at": "2026-09-03T09:50:47-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "negative gamma environment amplifies moves in either direction",
+        "market maker delta hedging will force breakouts",
+        "most likely close at 7711",
+        "upside call wall at 7800 (24% probability)",
+        "downside put wall at 7600 (13% probability)",
+        "VRP at 7.3 indicating high implied volatility premium over realized"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今日的主线故事是「负 Gamma」环境下的动能放大与高溢价博弈。虽然现货 7713 稳固运行在分水岭上方，但做市商的顺势对冲行为将加剧任何方向的突破。模型推演今日的最可能收盘价为 7711，盘中需高度警惕随时可能爆发的单边趋势。\n\n1️⃣ 「负 Gamma」的追涨杀跌效应：目前市场处于「负 Gamma」状态，这意味着期权做市商必须顺势对冲——越跌越卖，越涨越买。这种机制会直接放大市场波动，导致盘中的支撑和阻力位更容易被暴力击穿。\n\n2️⃣ 守住「分水岭」与测试期权墙：现价已运行在「Gamma 分水岭」7672 之上，多方只要守住此处就能维持主动权。若向上发力，多头的终极磁吸目标是 7800 的「Call Wall」（触及概率 24%）；若意外跌穿分水岭，下方的最后防线则是 7600 的「Put Wall」（触及概率 13%）。\n\n3️⃣ 丰厚的「VRP」溢价：今日 VRP 高达 7.3，说明期权定价的隐含波动远远超出了近期的实际情况。虽然溢价丰厚，但在负 Gamma 助推下极易产生剧烈震荡。请注意，50% 区间意味着大约一半的交易日会收在区间外，这是有意为之的概率设计，并非绝对的安全带。\n\n现货 7713 · 50% 概率区间 7685-7738 · 最可能收盘 7711",
+      "url": "https://x.com/Balder13946731/status/2095509814470398039",
+      "kind": "post",
+      "engagement": {
+        "views": 4458,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095512788953424307",
+      "blogger_id": "balder",
+      "date": "2026-09-03",
+      "created_at": "2026-09-03T10:02:36-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普 500",
+      "text": "在 7,709 这个位置，标普 500 最大的变化是下行风险消退。现价距近期 7,799 高点仅 -1.16%。\n\n看 2,771 次同类位置，未来 20 个交易日涨 2% 的概率为 54%，比平时低 11 个百分点。但这并非弱势，因为再跌 5% 和 10% 的概率仅剩 12% 和 3%，分别比平时低 8 和 3 个百分点。\n\n核心在于，20 天内摸回高点的概率高达 87%，比平时高出 31 个百分点。这说明市场缺乏大起大落的动能，真正的剧本是靠韧性缓慢磨回前高。\n\n今天预计区间 7,682 到 7,735（上下 0.7%），附近无关键位。跌破这个范围，才是你改变温和修复判断的触发点。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2095512788953424307",
+      "kind": "post",
+      "engagement": {
+        "views": 5410,
+        "likes": 10,
+        "reposts": 0,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095872224851071152",
+      "blogger_id": "balder",
+      "date": "2026-09-04",
+      "created_at": "2026-09-04T09:50:52-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SPX",
+      "text": "📊 SPX 今日日内区间预测\n\n今日市场主线是典型的「正 Gamma」区间震荡格局。现货 7740 稳居分水岭上方，做市商的机械对冲将充当大盘的减震器。量化模型预判，今日指数更倾向于在震荡中回踩中枢，最可能收盘点位指向 7726。\n\n1️⃣ **「Gamma 分水岭」与防线共振**\n当前「Gamma 分水岭」为 7701，而下方的核心支撑「Put Wall」（看跌期权墙）紧邻其下重合于 7700。只要价格维持在这道防线上方，做市商逢低买入、逢高卖出的特性就会持续抑制单边大趋势。\n\n2️⃣ **高溢价下的时间价值收割**\n目前 VRP（波动率风险溢价）高达 6.2，期权隐含波动率明显高于近期的实际波动。丰厚的期权溢价意味着卖方有充足动力在日内双向洗盘，从而收割期权买方的时间价值。\n\n3️⃣ **向上动能受限与概率区间**\n上方的主要阻力「Call Wall」（看涨期权墙）远在 7800，今日触及概率仅有 41%。在缺乏强劲上行催化的情况下，日内走势易受下方重心牵引。需要注意的是，今日测算的 50% 概率区间意味着从统计上讲，有大约一半的交易日最终会收在该范围之外，请勿将其视为绝对的边界。\n\n现货 7740 · 50% 概率区间 7705-7755 · 最可能收盘 7726",
+      "url": "https://x.com/Balder13946731/status/2095872224851071152",
+      "kind": "post",
+      "engagement": {
+        "views": 20120,
+        "likes": 27,
+        "reposts": 1,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095874852309864891",
+      "blogger_id": "balder",
+      "date": "2026-09-04",
+      "created_at": "2026-09-04T10:01:18-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "2772 historical analogues show downside cushion is very thick",
+        "probability of dropping 5% or 10% is well below historical average (12% vs 20%, 3% vs 6%)",
+        "probability of recovering to highs is 87% vs historical 56%",
+        "extremely hard to fall deeply"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "标普 500",
+      "text": "历史上 2,772 次同类位置表明，今天的特征是上下波动都在衰减，向下安全垫极厚。\n\n标普 500 现价 7,739，距高点 7,799 仅 -0.77%。\n\n未来 20 天的概率呈现出极度收敛。涨 2% 的概率为 53%（比平常 65% 低 12 个百分点）；再跌 5% 和 10% 的概率仅 12% 和 3%（平常为 20% 和 6%）。双向空间同受压制，造就了极强的修复力，摸回高点的概率高达 87%（比平常 56% 高出 31 个百分点）。这意味着市场向上爆发力不足，但极难深跌。\n\n今日预计区间为 7,714 到 7,764（上下 0.7%）。\n\n一旦跌穿 7,714 的区间下沿，就会打破这种抗跌修复的判断。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2095874852309864891",
+      "kind": "post",
+      "engagement": {
+        "views": 5794,
+        "likes": 10,
+        "reposts": 1,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097084080911450323",
+      "blogger_id": "balder",
+      "date": "2026-09-07",
+      "created_at": "2026-09-07T18:06:21-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普",
+      "text": "大家好，期货开门啦🤤 目前发现道指出现了比较大的下跌，但是板块分化，纳斯达克和标普保持了稳定，VIX无明显指向。\n\n结合链上半导体指数，半导体将会延续反弹。 https://t.co/CdtFb8yJEQ",
+      "url": "https://x.com/Balder13946731/status/2097084080911450323",
+      "kind": "post",
+      "engagement": {
+        "views": 12103,
+        "likes": 44,
+        "reposts": 2,
+        "replies": 44
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1718,6 +2464,33 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2097324501751271765",
+      "blogger_id": "balder",
+      "date": "2026-09-08",
+      "created_at": "2026-09-08T10:01:42-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "87% probability of recovering to recent highs within 20 days (31 percentage points above normal), indicating strong recovery intent",
+        "probability of further 5% decline is only 12% (8 percentage points below normal), downside risk is very low",
+        "structure is slowly creeping toward highs with compressed volatility on both ends"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "标普500",
+      "text": "如果今天在想该不该继续持有，这87%的20天内摸回高点概率（比平常高31个百分点）说明修复意愿极强。\n\n标普500现价7,691，距近期高点-1.39%（高点7,799）。\n\n涨2%的概率53%（低12个百分点），短线缺乏爆发力；但再跌5%的概率12%（低8个百分点），再跌10%的概率3%（低3个百分点）。两端波动都被压缩，这是个下行风险极小、正缓慢向高点蠕动的结构。\n\n今日区间在7,665到7,716。\n\n只要没跌破区间下沿，这个判断就不会变。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2097324501751271765",
+      "kind": "post",
+      "engagement": {
+        "views": 9921,
+        "likes": 20,
+        "reposts": 0,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2097631348395479169",
       "blogger_id": "StockMKTNewz",
       "date": "2026-09-09",
@@ -1736,6 +2509,52 @@
         "likes": 45,
         "reposts": 5,
         "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097686894272520515",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T10:01:43-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "标普 500",
+      "text": "当下的盘面有着反常的修复惯性，未来 20 个交易日摸回高点的概率高达 87%，比平常高出 31 个百分点。\n\n标普 500 现价 7,656，距 7,799 的高点 -1.84%。\n\n把其他几个概率放在一起看：上涨 2% 的概率为 53%（低 12 个百分点），再跌 5% 和 10% 的概率是 12% 和 3%（低 8 个和 3 个百分点）。双向波动都在大幅收缩，说明市场既无大涨动能也无深跌意愿，现阶段就是单纯的定向修复。\n\n今日预计区间 7,629 到 7,683，上下 0.7%。今天够得着的关键位是 7,643。\n\n这条修复路径会不会被打断，直接看 7,643 这个触发点就行。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2097686894272520515",
+      "kind": "post",
+      "engagement": {
+        "views": 7901,
+        "likes": 34,
+        "reposts": 0,
+        "replies": 25
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097722583517200419",
+      "blogger_id": "asklivermore",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T12:23:32-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "S&P 500",
+      "text": "S&P 500 down\nNasdaq down\nDOW down\nRussell 2000 down\n\nMarkets have been choppy, flat, and slow.\n\nStay patient, once mid-term elections finish and markets price in potential Fed rate hikes, the bull-run starts. \n\nUntil then, it's going to be frustrating. Slow daily grinds and fake outs both sides.",
+      "url": "https://x.com/asklivermore/status/2097722583517200419",
+      "kind": "post",
+      "engagement": {
+        "views": 67789,
+        "likes": 596,
+        "reposts": 26,
+        "replies": 40
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

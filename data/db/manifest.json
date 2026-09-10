@@ -1,22 +1,26 @@
 {
-  "generated_at": "2026-09-10T04:02:41.187321+00:00",
+  "generated_at": "2026-09-10T07:22:14.784601+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2258,
-  "index_sha256": "137d5408f720c66c84d25d3287e770993214318b0705c766ad6e007f8ad2cc6a",
+  "stock_count": 2323,
+  "index_sha256": "2c31b17e8d379dd586616cf7bbccc1650597414be1e66afa2767f39774a5f3e4",
+  "blogger_profiles_sha256": "827f7aa9b3fcdaabe6d4fdc500fc1effb1aca21440e75bd90ca5f0c2f54a4fa7",
+  "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
+  "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
+  "avatar_cache_sha256": "21fe15bb2c2b370d2f8dfd8924051c48ab4c9cd92a505cf3cd29feb0c7b877b6",
   "stocks_root": "stocks",
-  "price_cache_count": 890,
-  "price_cache_index_sha256": "f39b65fbb260edbe342e90ad42ea4808f9dadcf5820eeccb33e915cc18a536bc",
+  "price_cache_count": 895,
+  "price_cache_index_sha256": "78747af4b29d5bbc4b58ca1b0a442da991ee595e46b3c8daeb805bad48264898",
   "price_cache_root": "prices_cache",
-  "tickers": 2258,
-  "total_mentions": 27329,
-  "priced_tickers": 726,
+  "tickers": 2323,
+  "total_mentions": 28589,
+  "priced_tickers": 732,
   "date_range": [
     "2025-07-02",
-    "2026-09-09"
+    "2026-09-10"
   ],
-  "size_mb": 49.2,
-  "tracked_bloggers": 10,
+  "size_mb": 51.5,
+  "tracked_bloggers": 11,
   "mentions_by_blogger": {
     "aleabitoreddit": 16004,
     "zephyr_z9": 552,
@@ -27,28 +31,31 @@
     "octopusycc": 631,
     "unusual_whales": 887,
     "michaelsikand": 648,
-    "DJTRadar": 206
+    "DJTRadar": 206,
+    "balder": 910,
+    "frank_trading": 50,
+    "asklivermore": 300
   },
   "bloggers_missing_state_files": [],
   "instrument_coverage": {
     "verified": 927,
     "identified": 336,
-    "unverified": 995,
-    "market_pending_review": 1331,
-    "price_unavailable_or_unverified": 1035
+    "unverified": 1060,
+    "market_pending_review": 1396,
+    "price_unavailable_or_unverified": 1102
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2258,
+      "files": 2323,
       "shards": 256,
-      "max_shard_width": 17,
+      "max_shard_width": 18,
       "warning": false,
       "within_limit": true
     },
     "price_cache": {
-      "files": 890,
+      "files": 895,
       "shards": 250,
       "max_shard_width": 10,
       "warning": false,
@@ -58,19 +65,19 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 1069,
+    "tickers": 1175,
     "status_counts": {
-      "ok": 430,
-      "partial": 18,
-      "unverified_symbol": 612,
-      "unavailable": 9
+      "ok": 456,
+      "partial": 20,
+      "unverified_symbol": 689,
+      "unavailable": 10
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 15,
-      "unverified_instrument_identity": 612,
+      "EODHD 402 (account quota or subscription limit)": 17,
+      "unverified_instrument_identity": 689,
       "provider_symbol_not_found_after_search": 5,
-      "no_daily_closes_returned": 2,
+      "no_daily_closes_returned": 3,
       "EODHD 402 (search capacity unavailable)": 2,
       "stale_series_latest_close=2026-08-31": 1,
       "stale_series_latest_close=2026-09-02": 1,
@@ -81,29 +88,29 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-09-09",
-    "target_start": "2025-09-10",
-    "tickers": 30,
+    "asof": "2026-09-10",
+    "target_start": "2025-09-11",
+    "tickers": 34,
     "status_counts": {
-      "ok": 28,
+      "ok": 32,
       "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 29,
-      "deferred": 1
+      "supported": 31,
+      "deferred": 3
     },
     "retry_queue": 0,
     "scope_counts": {
-      "monthly_consensus": 25,
-      "top_pick_cards": 10,
-      "top_pick_unique": 10,
-      "overlap": 5
+      "monthly_consensus": 29,
+      "top_pick_cards": 11,
+      "top_pick_unique": 9,
+      "overlap": 4
     }
   },
   "profile_coverage": {
-    "editorial_profiles": 10,
-    "statistical_profiles": 10,
+    "editorial_profiles": 11,
+    "statistical_profiles": 11,
     "profile_errors": 0
   }
 }

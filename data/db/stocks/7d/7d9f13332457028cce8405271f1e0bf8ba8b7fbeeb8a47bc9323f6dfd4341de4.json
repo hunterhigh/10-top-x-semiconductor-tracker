@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-05",
-  "last_mention": "2026-08-13",
-  "total_mentions": 5,
+  "last_mention": "2026-09-02",
+  "total_mentions": 8,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 4,
+    "balder": 3,
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
     "news": 4,
-    "opinion": 1
+    "opinion": 4
   },
   "mentions": [
     {
@@ -128,6 +129,32 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087465203823005843",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T05:04:22-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "no pricing power as assemblers",
+        "cost increases from upstream suppliers are being absorbed by OEMs"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "惠普",
+      "text": "微软据说在给 Windows 11 的授权费涨价。\n\n这轮涨价已经从内存一路传到操作系统了。上游每一环都在提价，只有组装整机那一环没有定价权——成本全砸在惠普、戴尔、联想身上，最后砸到买电脑的人身上。\n\n我一直说AI周期里钱最实在的地方是存储，现在连微软都跟着一起收租，说明整台PC的BOM已经绷不住了。明年换电脑，价格大概率比今年高一截。",
+      "url": "https://x.com/Balder13946731/status/2087465203823005843",
+      "kind": "post",
+      "engagement": {
+        "views": 8656,
+        "likes": 20,
+        "reposts": 0,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2087981844243374335",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-13",
@@ -146,6 +173,52 @@
         "likes": 83,
         "reposts": 12,
         "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094877142995919050",
+      "blogger_id": "balder",
+      "date": "2026-09-01",
+      "created_at": "2026-09-01T15:56:46-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$HPQ",
+      "text": "$HPQ 财报侧击还没开始，直接吃成巨人观🫪 https://t.co/bf5F2Qg4PR",
+      "url": "https://x.com/Balder13946731/status/2094877142995919050",
+      "kind": "post",
+      "engagement": {
+        "views": 19882,
+        "likes": 14,
+        "reposts": 0,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095207399774994928",
+      "blogger_id": "balder",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T13:49:05-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$HPQ",
+      "text": "$HPQ 已经完全吃撑，走不动道了🤤 成本0.7 https://t.co/0fVNRDfz9o",
+      "url": "https://x.com/Balder13946731/status/2095207399774994928",
+      "kind": "post",
+      "engagement": {
+        "views": 7494,
+        "likes": 19,
+        "reposts": 0,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

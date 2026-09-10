@@ -25,21 +25,23 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-28",
   "last_mention": "2026-09-09",
-  "total_mentions": 503,
+  "total_mentions": 526,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 295,
     "StockMKTNewz": 111,
     "unusual_whales": 39,
+    "balder": 22,
     "jukan05": 13,
     "zephyr_z9": 12,
     "ren_stocks": 9,
     "michaelsikand": 9,
     "KawzInvests": 7,
     "octopusycc": 7,
-    "DJTRadar": 1
+    "DJTRadar": 1,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 352,
+    "opinion": 375,
     "news": 111,
     "flow": 39,
     "disclosure": 1
@@ -10750,6 +10752,56 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087393749769101347",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T00:20:26-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "capex increasingly off-balance-sheet via SPVs and private credit",
+        "true risk exposure moved to private credit markets that don't mark to market",
+        "credit market willingness to lend may drive stock more than earnings going forward"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "买GPU的钱早就换来源了，很多人没注意。前两年是账上的经营现金流，有钱就买了；现在是发债，是跟Blue Owl这种私募信贷合伙搭SPV——Meta路易斯安那那个数据中心，270亿美元，绝大部分压根不进它自己的表。\n\n所以你翻财报数capex、数折旧，其实已经数不全了。真正的风险敞口挪去了私募信贷那边，不做市、不报价、不用天天mark to market，出事之前安静得很。\n\n倒不是说AI要崩，订单是真的，存储那边赚的也是真金白银。但往后决定这批股票的，可能不再是英伟达的财报，而是信用市场还愿不愿意继续借。等哪天有人开始给数据中心报CDS，谁在裸泳就一目了然了🌚 $META",
+      "url": "https://x.com/Balder13946731/status/2087393749769101347",
+      "kind": "post",
+      "engagement": {
+        "views": 13500,
+        "likes": 60,
+        "reposts": 2,
+        "replies": 28
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087653113012630002",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T17:31:03-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "META",
+      "text": "【美股复盘 · 8月12日】\n\n**大市**｜环球算力链资金再度归队，美股周三高开高走，三大指数连同小型股全线造好。标指ETF $SPY 收报773.14，升0.34%；以科网股为主的 QQQ 一枝独秀，收报724.63，升0.86%，为四大指数之首；道指ETF DIA 反复偏软后仅微升0.07%，收报537.65；罗素小型股 IWM 收报303.32，升0.77%，跑赢大型蓝筹。市宽同步转强，76只观察股中53只上升、23只下跌，升跌比逾二比一，反映升势并非只靠个别重磅股拉抬。\n\n**板块**｜盘面呈明显的「配套强、主角弱」格局。围绕GPU一圈的算力出租、服务器、光模块、发电、内存与闪存股集体急升，为大市主要贡献；通讯设备与太空概念亦有资金追捧。另一边厢，大型平台股与软件股沽压沉重，广告科技、出行平台、社交平台齐齐领跌，工业汽车股与中概股同告偏软，防守类的保险综合企业亦未能逆市造好。指数得以上扬，全靠算力配套一脉独力支撑。\n\n**焦点**｜算力房东股 NBIS 暴涨29.20%，为全日最大异动；服务器组装商 SMCI 急升20.08%，光模块股 LITE 与 COHR 分别升14.31%及9.11%，燃料电池发电股 BE 升13.34%，太空概念 SPCX 升11.01%，通讯设备股 NOK 升9.38%，存储双雄 SKHY 及 SNDK 分别升9.19%和6.00%，整机厂 DELL 亦升7.72%——由供电、机架、光互连到存储，全条链无一缺席。跌方则集中于估值最贵的一端： APP 挫4.11%， UBER 泻4.06%， META 重挫3.13%， GM 跌2.46%， BABA 软2.35%， MSFT 与 PLTR 同告跌2.11%， TSLA 跌1.69%， IBM 跌1.42%，价值股代表 BRK-B 亦跌1.29%。市场焦点续集中于AI基建的成本传导：由内存、硬盘一路涨到操作系统授权费，上游每一环均在提价，而无定价权的整机组装环节反成今日资金追捧对象；另据市场关注，个别英伟达挑战者的收入高度集中于单一海外客户，其财报披露将成下一个验证点。\n\n**小结**｜全日走势可归纳为资金由AI叙事的「表层」向「基建层」再分配：出钱买算力的平台股与软件股遭减持，收租的机房、供电与零部件商则被重新定价，指数升幅集中而不广泛，惟市宽同步改善，短线动能未见衰竭。分析指，升势能否延续，关键在 QQQ 能否企稳724点关口之上，以及算力配套股在连日急升后可否消化获利回吐；若大型科技股沽压持续扩散，单靠一条产业链难以长期支撑大市。",
+      "url": "https://x.com/Balder13946731/status/2087653113012630002",
+      "kind": "post",
+      "engagement": {
+        "views": 4881,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2087877760857333980",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-13",
@@ -10768,6 +10820,29 @@
         "likes": 201,
         "reposts": 19,
         "replies": 28
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088154064525860960",
+      "blogger_id": "balder",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T02:41:39-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "META",
+      "text": "以前买 MSFT GOOGL META 这些，图的就是它们是印钞机——赚的钱拿去回购、分红，绕一圈回到股东口袋。现在呢？几千亿美元的现金流不再绕回来了，直接变成机房里一排排 GPU，落在英伟达和几家存储厂的财报上。所以你拿着 hyperscaler，某种意义上是在替黄仁勋和韩国欧巴打工🌚 我不觉得这是坏事，回调该布局还是布局。只是钱最后都流到那一头去了，我干嘛不站在收钱的那一端？",
+      "url": "https://x.com/Balder13946731/status/2088154064525860960",
+      "kind": "post",
+      "engagement": {
+        "views": 22667,
+        "likes": 51,
+        "reposts": 1,
+        "replies": 50
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -10911,6 +10986,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2089326920156807502",
+      "blogger_id": "frank_trading",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T08:22:10-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Meta",
+      "text": "本周 VIX 回到 14-15，大家可能觉得波动率没什么好说的了。但如果回头看 7 月中旬到 8 月中旬这一个月，个股端经历的不是普通的“财报后 IV crush”，而是一次极端拥挤的 dispersion 结构反向收敛。理解这件事对接下来怎么做期权至关重要。\n\n初始条件：极端的个股高 IV / 指数低 IV 错位\n\n7 月中旬，Cboe 的 DSPX（dispersion 指数）升到约 50%，创六年高位。与此同时 VIX 只有约 15。hyperscaler 个股 IV 约 40%，SPY 前端 IV 只有约 10%。COR1M（1 个月相关性）处于极低水平。\n\n这个错位是怎么来的？三层溢价叠在一起：①财报风险溢价，大科技股财报集中落地前，零售开仓中 call buying 占比 56%（接近年内最高），主动买权推高事件方差；②AI 内部剧烈分化，半导体，软件，大型云各走各的，极低的股票相关性让指数 IV 没有同步上升；③7 月 momentum unwind 的尾部风险溢价，7 月科技股经历历史级别的动量平仓，单名股 realized vol 被连续大涨大跌抬高。\n\n我们知道，指数方差 = 个股权重平方*个股方差之和 + 跨项相关系数。个股波动率很高，但隐含相关性极低，所以 VIX 可以很低。这个结构本身就是一个交易，买个股 vol、卖指数 vol、押注股票继续各走各的。这个交易在 2024-2026 年已经变得极度拥挤。\n\n8 月初开始，四个力量同时作用于这个拥挤结构：\n\n第一推动力：财报事件方差集中退出。 Microsoft、Google、Amazon、Meta、Apple 财报陆续落地。财报一出，事件方差几乎立刻消失。Cboe 在 8/3 就观察到 VIX 一周降 2.6 点但 VIXEQ 降 3.4 点，个股端跌得更快。但这只是触发器。普通财报季每季度都有，这次之所以这么猛，是因为财报前 DSPX 已经在六年极值。\n\n第二推动力：拥挤的 dispersion 被反向平仓，这是最重要的放大器。 此前主流 dispersion 交易是买个股 vol / 卖指数 vol。QVR 等波动率基金甚至已经转向 reverse dispersion（买指数 vol / 卖 single-name vol），因为单名股 IV 与指数 IV 的差已经到了极端水平。财报落地后，长个股 vol 的一方同时面临：事件方差消失、theta 流失、VIXEQ/DSPX 跌破趋势、止损触发。reverse-dispersion 交易者同时在卖个股 IV。这不是自然衰减，是一轮仓位反转，这解释了为什么没有财报、或财报已经过去的股票，IV 也一起遭到压缩。市场卖的不是单个事件，是整个 single-name vol asset class。\n\n第三推动力：7 月去杠杆结束，regime 从“怕个股爆炸”切换到“怕踏空上涨”。7 月发生历史级别科技 momentum unwind，相当一部分杠杆已被清理，去杠杆完成后市场反而具备更高质量反弹的条件。随后是典型的 underexposed chase，SPX 在截至 8/4 的四个交易日涨 5.8%，7 月 30 日至 8 月 5 日成为历史上 SPX call 成交量最高的五日窗口，短期 call skew 升至两年高位。\n\n第四推动力：系统资金 releveraging 的负反馈循环。 截至 8/10，SOX 前十大成分股的平均 3 个月 ATM IV 仅 8 月以来就降了近 20 %。低波动率允许系统策略重新增加敞口 -> 加仓推高股价 -> 上涨进一步压低下行波动率需求 -> 更低的波动率又释放更多系统资金购买能力。这是一轮典型的 vol-control 反馈：IV 下降 -> 预期风险下降 -> 系统资金加仓 -> 股价趋势改善 -> RV 下降 -> IV 进一步下降。\n\n这轮 crush需要让我们意识到方向正确 ≠ call 赚钱\n\n整体 ATM IV 可以暴跌，同时远端 OTM call 仍然变贵。call demand 很强不代表你持有的 ATM 或轻度 OTM call 不会被 IV crush。Cboe 发现 8/10 前后 SPX skew 降至一年低位，但 deep OTM puts 仍有需求——这是波动率曲面的重新定价，不是所有期权都没人买。\n\n这解释了为什么在这种环境里“方向正确”不等于“call 赚钱”。即使方向判断正确，IV 下跌带来的 Vega 损失与 Theta 损耗，仍然可能吃掉全部 Delta 收益。当 IV 变化大幅为负时，即使方向对了，总收益也可能是负的。\n\n这轮 crush 本质上更像一次投机杠杆清洗后的波动率正常化。7 月动量股回撤、杠杆 AI 产品清算、单名股期权仓位去化之后：短期期权需求下降、散户和动量资金减少追涨、个股 realized vol 回落、Dealer 不再需要持续追着 spot 做 gamma hedge、单名股 IV 系统性下压。\n\n现在的特殊之处在于期权结构的错位：single name stock的 ATM IV 相对便宜，但 25 Delta 和 10 Delta wings 仍然贵。 指数和个股的 term structure 都已经降到偏低区间。这对期权结构的含义很明确：想赌方向，ATM 附近的 call spread 仍然合理；想赌 IV 回归，优先买 ATM 或轻度 OTM 单腿期权吃最大 vega；不适合为了“便宜”去买很远的 wing，因为 wing skew 反而没有同步 crush。买的是被 crush 得最厉害的 ATM/轻度 OTM vol，而不是仍然昂贵的deep OTM put/call。\n\ncrush 是否已经结束？\n\n截至 8/14：VIX 约 14.25，DSPX 约 33.45，SPY IV 处于过去一年第 4 百分位。但中位数个股 IV 仍在第 31 百分位，个股 realized volatility 仍在第 61 百分位——implied dispersion 已经下降，但 realized dispersion 尚未明显下降。IV 可能开始跑在 RV 前面。\n\n接下来两种情景：\n\n如果个股实际波动也逐渐下降，IV crush 还能慢慢延续。如果 realized dispersion 继续高，当前低 IV 会重新吸引买盘。此外 8/19 VIX 到期和 8/21 月度 OPEX 会移除部分压制指数波动率的 gamma 仓位，而 NVDA 财报、Jackson Hole 等事件紧接着到来。届时如果相关性开始上升，修复路径可能从“个股 IV 下跌”切换成“指数 IV 上涨”。",
+      "url": "https://x.com/Franktradinglog/status/2089326920156807502",
+      "kind": "post",
+      "engagement": {
+        "views": 60399,
+        "likes": 136,
+        "reposts": 25,
+        "replies": 64
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089330879038410805",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-17",
@@ -10959,6 +11057,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2089464981448462428",
+      "blogger_id": "balder",
+      "date": "2026-08-17",
+      "created_at": "2026-08-17T17:30:46-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "META",
+      "text": "【美股复盘 · 8月17日】\n\n大市\n美股周一受观望气氛及期权市场波动率抽升影响，三大指数表现反复偏软。道指全日收报534.55点，跌0.42%；标普500指数( $SPY )收报773.38点，跌0.38%；以科技股为主的纳指(QQQ)亦跟随大市向下，收报729.91点，微跌0.16%。反映中小型股的罗素2000指数(IWM)则收报303.75点，挫0.44%。整体市宽略显疲弱，80只观察股中，仅37只录得升幅，43只下跌。\n\n板块\n板块方面，表现呈现极端分化。光通讯及存储芯片股逆市造好，表现一枝独秀；相反，传统软件服务（SaaS）及部分大型科技巨头则面临沉重沽压。市场有分析指出，尽管数据中心在电力供应上面临瓶颈，但光传输技术正成为资金追捧的核心方向。受惠于此，光通讯概念股强劲拉升，其中 COHR 急飙7.67%，GLW 及 LITE 亦分别抽升4.97%及4.45%。另一方面，存储芯片板块受大举流入的资金带动而全线走强，SNDK 大涨7.64%，半导体设备股 AMAT 升5.32%，MRVL 及 MU 亦分别上扬5.05%及3.89%。\n\n焦点\n焦点个股方面，科技及云端巨头普遍受压。其中，服务器设备商 SMCI 领跌，全日重挫3.71%；META 及 NFLX 亦分别急泻3.40%及3.08%。市场分析关注，传统SaaS企业试图在旧有系统中添加人工智能功能以期提升订阅费用的商业模式，正面临B端企业客户转向开源模型的严峻挑战。受此估值重塑情绪拖累，MSFT 及 IBM 等软件相关股份表现疲弱，分别跌2.82%及2.42%。此外，消费股 MCD 跌2.62%，芯片股 ARM 与 QCOM 亦未能幸免，分别录得2.66%及2.20%的跌幅。\n\n小结\n纵观全日市况，大市指数看似波幅受限，惟底层资金流向极其剧烈。分析指，在标普等大盘指数未见大幅异动之际，波动率指标却逆市抽升，反映期权市场内正发生平仓踩踏，刚好为大资金腾出空间。资金明显自拥挤的大型科技权重股及SaaS板块流出，大举换马至光通讯及存储芯片等具备确定性的硬科技板块。后市需密切留意资金在各科技子板块间的轮动情况，以及指数能否在波动市况下守稳关键技术位。",
+      "url": "https://x.com/Balder13946731/status/2089464981448462428",
+      "kind": "post",
+      "engagement": {
+        "views": 6386,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2089683108660486407",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-18",
@@ -10979,6 +11100,29 @@
         "likes": 3,
         "reposts": 0,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089759842269594037",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T13:02:26-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "加州联邦法院纠集29个州对 $META 展开索赔高达1.4万亿美元的庭审，创下人类历史记录，以惩罚Meta在社交媒体上对青少年的损害。\n\n🫪我怎么记得每日比赛只可以在X上看到。\n\n这些巨头的庭审最终都会以和解结束，Meta的今天就是Google的昨天。但需要有人一直追踪这个庭审，某一天可以吃个10%的大暴涨，百倍期权。",
+      "url": "https://x.com/Balder13946731/status/2089759842269594037",
+      "kind": "post",
+      "engagement": {
+        "views": 39485,
+        "likes": 41,
+        "reposts": 0,
+        "replies": 13
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11025,6 +11169,106 @@
         "likes": 44,
         "reposts": 5,
         "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089810465094582664",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T16:23:36-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "tracking legal case for precise entry",
+        "expects 100x options play on settlement outcome"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$META",
+      "text": "好的 $META 这件事情就交给我了，我来追踪这个案件🥵🥵 🤤 我会悄悄告诉订阅我的宝宝。到时候炸一手百倍期权🥵 一起发财。\n\n***\n\n核心案件信息（用于精准检索）\n 主审法院：加州北区联邦地区法院奥克兰分院（U.S. District Court for the Northern District of California, Oakland Division）\n 主审法官：Judge Yvonne Gonzalez Rogers\n 核心案号/案名：\n 州检察长联合诉讼：State of California et al v. Meta Platforms, Inc.（Case No. 4:23-cv-05448-YGR）\n 全国多地区汇总母案 (MDL)：In re Social Media Adolescent Addiction/Personal Injury Products Liability Litigation（MDL No. 3047）",
+      "url": "https://x.com/Balder13946731/status/2089810465094582664",
+      "kind": "post",
+      "engagement": {
+        "views": 25430,
+        "likes": 64,
+        "reposts": 0,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089822750643036430",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T17:12:25-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "$META 的事情已经被我24小时追踪起来，一旦出消息就可以交易了，一般庭审还是有时间的可以交易的。\n\nhttps://t.co/IrkYtnUMCm",
+      "url": "https://x.com/Balder13946731/status/2089822750643036430",
+      "kind": "post",
+      "engagement": {
+        "views": 15649,
+        "likes": 39,
+        "reposts": 1,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089833325766848516",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T17:54:26-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expects 100% chance of settlement",
+        "thesis hinges on timing the settlement date precisely"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "META",
+      "text": "@mat78704 100%和解，问题在于什么时候，能不能精准抓住那一天",
+      "url": "https://x.com/Balder13946731/status/2089833325766848516",
+      "kind": "reply",
+      "engagement": {
+        "views": 2433,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089835006361538634",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T18:01:07-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expects settlement around early October"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "META",
+      "text": "@mat78704 差不多十月初应该在",
+      "url": "https://x.com/Balder13946731/status/2089835006361538634",
+      "kind": "reply",
+      "engagement": {
+        "views": 1121,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11402,6 +11646,59 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2092627490095464871",
+      "blogger_id": "balder",
+      "date": "2026-08-26",
+      "created_at": "2026-08-26T10:57:27-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "settlement removes largest regulatory overhang",
+        "market treated bad news as exhausted (利空出尽), stock rallied 3% even as Nasdaq fell",
+        "after paying the settlement, regulatory risk largely behind them"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "META刚刚同意交 166.8亿美元，把全美各州的青少年上瘾案和解了。今天纳指盘中在跌，它自己反而拉了 3%。\n\n百亿美金级别的血包，资金直接按利空出尽来买了。想想也是，这笔天价账单结了以后，一直担心的那个最大的监管麻烦差不多就算是过去了吧。至于后面，Zuck估计也就是继续回去买他的卡了。 $META",
+      "url": "https://x.com/Balder13946731/status/2092627490095464871",
+      "kind": "post",
+      "engagement": {
+        "views": 40586,
+        "likes": 45,
+        "reposts": 2,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092631136094781712",
+      "blogger_id": "balder",
+      "date": "2026-08-26",
+      "created_at": "2026-08-26T11:11:56-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "told followers to enter on the big drop day",
+        "case suddenly resolved"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "$META 的案件突然结束了，不过大跌当天我已经让大家进去了🫪 理论上应该所有人都赚钱了。",
+      "url": "https://x.com/Balder13946731/status/2092631136094781712",
+      "kind": "post",
+      "engagement": {
+        "views": 14932,
+        "likes": 23,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2092904967329951772",
       "blogger_id": "jukan05",
       "date": "2026-08-27",
@@ -11546,6 +11843,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2094046130644320538",
+      "blogger_id": "balder",
+      "date": "2026-08-30",
+      "created_at": "2026-08-30T08:54:37-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "就像我们说过 $MSFT $NFLX 一定会涨回去一样， $META 也会涨回去，这不是会不会，而是早或晚。 https://t.co/PLGzYsoQPj",
+      "url": "https://x.com/Balder13946731/status/2094046130644320538",
+      "kind": "post",
+      "engagement": {
+        "views": 6433,
+        "likes": 31,
+        "reposts": 0,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2094490737547067842",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-31",
@@ -11566,6 +11886,29 @@
         "likes": 289,
         "reposts": 6,
         "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094494213438394378",
+      "blogger_id": "balder",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T14:35:08-04:00",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "'FTC to File Lawsuit Alleging Amazon Deceived Advertisers' - Wall Street Journal\n\n出现了类 $META 交易机会，录入系统🤤",
+      "url": "https://x.com/Balder13946731/status/2094494213438394378",
+      "kind": "post",
+      "engagement": {
+        "views": 8911,
+        "likes": 16,
+        "reposts": 1,
+        "replies": 10
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11612,6 +11955,31 @@
         "likes": 104,
         "reposts": 2,
         "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2094522076174733776",
+      "blogger_id": "balder",
+      "date": "2026-08-31",
+      "created_at": "2026-08-31T16:25:51-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "will surpass Google to become the world's largest advertising company"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "$META 将超过 $GOOG 成为世界上最大的广告公司。",
+      "url": "https://x.com/Balder13946731/status/2094522076174733776",
+      "kind": "post",
+      "engagement": {
+        "views": 11523,
+        "likes": 22,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11683,6 +12051,29 @@
         "likes": 173,
         "reposts": 3,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095276795247677544",
+      "blogger_id": "balder",
+      "date": "2026-09-02",
+      "created_at": "2026-09-02T18:24:51-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "$GOOG AI 能力疑似被 $META 彻底击败。",
+      "url": "https://x.com/Balder13946731/status/2095276795247677544",
+      "kind": "post",
+      "engagement": {
+        "views": 16348,
+        "likes": 27,
+        "reposts": 1,
+        "replies": 12
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11805,6 +12196,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2096874802468577497",
+      "blogger_id": "balder",
+      "date": "2026-09-07",
+      "created_at": "2026-09-07T04:14:45-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Meta",
+      "text": "看到有机构在聊，Meta和亚马逊为了买卡发的AI债，规模已经大到开始跟美国财政部抢流动性了。正好今天盘前10年期美债收益率被顶到了4.8%。\n\n这些巨头以前账上躺着几千亿现金，可以说是买美债最稳的金主。结果现在为了拼基建去发债，倒变成了在市场上跟华盛顿互抢资金的对手。\n\n大厂这边如果接着卷Capex，债市的抽水压力估计就……反正一时半会也看不清什么时候是个头。",
+      "url": "https://x.com/Balder13946731/status/2096874802468577497",
+      "kind": "post",
+      "engagement": {
+        "views": 26028,
+        "likes": 88,
+        "reposts": 4,
+        "replies": 37
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2097009717994242070",
       "blogger_id": "StockMKTNewz",
       "date": "2026-09-07",
@@ -11846,6 +12260,29 @@
         "likes": 181,
         "reposts": 17,
         "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097437598151295044",
+      "blogger_id": "balder",
+      "date": "2026-09-08",
+      "created_at": "2026-09-08T17:31:06-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "META",
+      "text": "【美股复盘 · 9月8日】\n\n大市：\n受中东地缘局势升温及沙特能源设施遇袭拖累，环球宏观避险情绪升温，美股今日表现反复偏软。传统蓝筹面临沉重沽压，道指( $DIA )全日领跌，收报528.38点，挫1.07%；标普500指数(SPY)收报766.70点，跌0.45%；罗素小型股指数(IWM)亦未能幸免，收报295.54点，微跌0.16%。惟纳指(QQQ)在硬件科技股走强的带动下表现相对靠稳，全日收报718.89点，微跌0.01%，走势跑赢大市。市宽表现尚算平稳，101只观察股中，54只上升，47只下跌。\n\n板块：\n大市走势分化，光互联及硬件设备板块表现一枝独秀。市场对人工智能（AI）基础设施的需求持续发酵，资金无视复杂的宏观博弈，大举流入具实质订单支持的光通信硬件厂；Lumentum(LITE)造好，大幅急升11.72%；Semtech(SMTC)亦弹11.02%；康宁(GLW)及Coherent(COHR)分别造好升9.24%及8.96%。相反，软件即服务（SaaS）板块则遭遇显著沽压，Salesforce(CRM)重挫4.08%，MongoDB(MDB)亦挫3.21%。传统汽车股表现疲弱，福特汽车(F)急泻5.06%。\n\n焦点：\n个股方面，英特尔(INTC)受资金追捧，全日造好升9.80%。消息面上，市场聚焦高通(QCOM)以发行认股权证为代价换取亚马逊(AMZN)AI大单，反映在算力战中，巨头间的议价权正发生转移。另一方面，受地缘局势及通胀预期上升拖累，加密货币相关股份走势疲软，Coinbase(COIN)跌2.75%，Robinhood(HOOD)跌2.66%；早前持续增持比特币的微策略(MSTR)亦面临调整压力。\n\n小结：\n分析指，面对地缘冲突与能源价格急升的不确定性，大市资金正加速换马，紧抱具高确定性的AI硬件主线。纳指(QQQ)于关键位暂见支撑，惟需留意科技巨头如Alphabet(GOOG)及Meta(META)延长AI服务器折旧期的做法，或掩盖部分成本压力并为未来盈利埋下隐忧。短期内美股料续于区间反复偏软，板块间的强弱分化势将加剧。",
+      "url": "https://x.com/Balder13946731/status/2097437598151295044",
+      "kind": "post",
+      "engagement": {
+        "views": 8032,
+        "likes": 16,
+        "reposts": 0,
+        "replies": 19
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11920,6 +12357,52 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2097678908342915176",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T09:29:59-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "在宣布Muse用量远超预期以后， $META 大涨5%",
+      "url": "https://x.com/Balder13946731/status/2097678908342915176",
+      "kind": "post",
+      "engagement": {
+        "views": 9737,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097689343091699837",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T10:11:27-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "RT @seneca_wc630: $META 因为 #muse 智能电脑助手，盘前暴涨5%，提前三周前给的的 #马前炮 判断开始兑现😄，恭喜各位。",
+      "url": "https://x.com/Balder13946731/status/2097689343091699837",
+      "kind": "post",
+      "engagement": {
+        "views": 4261,
+        "likes": 3,
+        "reposts": 1,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2097716037126951139",
       "blogger_id": "StockMKTNewz",
       "date": "2026-09-09",
@@ -11938,6 +12421,29 @@
         "likes": 206,
         "reposts": 9,
         "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097740494805868710",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T13:34:42-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "RT @wallstengine: $META ACQUIRES SWEDISH AI STARTUP STILLA\n\nMeta is buying Stilla AI to accelerate Meta Business Agent, its AI system for h…",
+      "url": "https://x.com/Balder13946731/status/2097740494805868710",
+      "kind": "post",
+      "engagement": {
+        "views": 49158,
+        "likes": 539,
+        "reposts": 36,
+        "replies": 23
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -11995,6 +12501,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2097800005654638633",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T17:31:11-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "META",
+      "text": "【美股复盘 · 9月9日】\n\n大市：\n美股周三遭遇广泛沽压，三大指数全线走低，盘面缺乏统领性利好，大市交投气氛偏向审慎。市宽表现疲弱，101只观察股中仅38只上升，63只下跌。标普500指数( $SPY )反复偏软，收报763.27，跌0.35%；纳指(QQQ)抗跌力相对较强，收报716.64，微挫0.24%；道指(DIA)走势失色，收报524.68，跌0.63%；罗素小型股指数(IWM)领跌大市，显著下挫，收报290.78，单日跌幅达1.32%。\n\n板块：\n板块表现呈分化格局，科技网路与部分半导体概念逆市造好，而部分航天及服务器硬件股则承压急泻。受中东油轮战局势升温，以及有产油国寻求加密货币作为外贸结算避险工具等宏观事件催化，能源股逆市靠稳，埃克森美孚(XOM)升2.61%。此外，加密货币圈动作频频，MicroStrategy(MSTR)推联名鞋却拒用加密币结算，而稳定币龙头Tether则跨界购入传统黄金资产。算力基建端方面，部分晶片股受资金追捧，美光(MU)及超威半导体(AMD)分别造好，升2.58%及3.08%；惟前期热门的维谛技术(VRT)遭遇重挫，暴跌10.15%，超微电脑(SMCI)亦跌2.97%。\n\n焦点：\n个股方面，Meta(META)表现一枝独秀，全日急涨6.75%。其新推出的AI智能体Agent Muse具备代客网购及填表功能，市场憧憬集团借开源底层模型降维打击后，通过应用端直接锁死海量用户的交易入口，商业变现路径获资金认可。另一方面，芯片赛道竞争加剧，随着苹果(AAPL)新款定制芯片确认转向类似Mac的封装路线，端侧AI运算直面物理散热及封装瓶颈，市场预料其将与英伟达(NVDA)争夺台积电(TSM)先进封装产能。尽管华尔街有知名沽空机构质疑英伟达芯片的经济效益，惟无碍科网及半导体股走强，Cloudflare(NET)暴涨10.87%，SK海力士(SKHY)急升7.16%，美满电子(MRVL)亦升4.55%。\n\n小结：\n分析指，美股大市目前处于震荡整固阶段，资金明显向具备清晰商业化路径的AI应用头部企业，以及具备产能护城河的硬件股集中。大盘指数虽然全线受压，但主要由小型股及传统周期股拖累，核心科技股仍具承接力。后市需密切留意地缘局势对全球通胀预期的传导，以及先进封装产能争夺战下半导体供应链的价值重估。",
+      "url": "https://x.com/Balder13946731/status/2097800005654638633",
+      "kind": "post",
+      "engagement": {
+        "views": 6093,
+        "likes": 10,
+        "reposts": 0,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2097815176838017066",
       "blogger_id": "aleabitoreddit",
       "date": "2026-09-09",
@@ -12036,6 +12565,29 @@
         "likes": 15,
         "reposts": 2,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2097892778084835470",
+      "blogger_id": "balder",
+      "date": "2026-09-09",
+      "created_at": "2026-09-09T23:39:49-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$META",
+      "text": "RT @StockSavvyShay: $NET is up more than 10% today as $META Muse momentum spreads into the infrastructure that carries AI agent traffic acr…",
+      "url": "https://x.com/Balder13946731/status/2097892778084835470",
+      "kind": "post",
+      "engagement": {
+        "views": 92717,
+        "likes": 408,
+        "reposts": 38,
+        "replies": 20
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -13189,13 +13741,13 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-10T04:01:38.980584+00:00",
+  "price_updated_at": "2026-09-10T07:21:13.328934+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-10",
-    "asof": "2026-09-09",
-    "attempted_at": "2026-09-10T04:01:38.934346+00:00",
+    "requested_start": "2025-09-11",
+    "asof": "2026-09-10",
+    "attempted_at": "2026-09-10T07:21:12.510329+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-10",
+    "first_available_date": "2025-09-11",
     "last_available_date": "2026-09-09",
     "reason": null
   },
@@ -13204,7 +13756,7 @@
     "provider_symbol": "META",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-10T04:01:38.934346+00:00",
+    "checked_at": "2026-09-10T07:21:12.510329+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

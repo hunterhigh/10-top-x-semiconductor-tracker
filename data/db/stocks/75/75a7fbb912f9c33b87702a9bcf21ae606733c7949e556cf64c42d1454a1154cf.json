@@ -26,18 +26,19 @@
   "thesis_summary": null,
   "first_mention": "2026-04-16",
   "last_mention": "2026-08-25",
-  "total_mentions": 42,
+  "total_mentions": 44,
   "total_mentions_by_blogger": {
     "octopusycc": 11,
     "StockMKTNewz": 11,
     "aleabitoreddit": 10,
     "jukan05": 6,
+    "balder": 2,
     "zephyr_z9": 2,
     "KawzInvests": 1,
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 31,
+    "opinion": 33,
     "news": 11
   },
   "mentions": [
@@ -629,6 +630,33 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087445252907192711",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T03:45:05-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "majority of revenue concentrated in G42 (UAE) as single customer",
+        "IPO delayed by CFIUS scrutiny over this concentration",
+        "key metric to watch is revenue outside G42"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "Cerebras",
+      "text": "Cerebras 要出财报了，大家都在盯它能不能从英伟达手里抠下推理那块。我更想看招股书里那行不太起眼的字：绝大部分收入来自阿联酋的 G42 一家。\n美国最被看好的英伟达挑战者，真金白银是阿布扎比在掏，当年 IPO 被 CFIUS 拖那么久，卡的就是这个。这份财报我只看一个数——G42 以外的收入有多少。",
+      "url": "https://x.com/Balder13946731/status/2087445252907192711",
+      "kind": "post",
+      "engagement": {
+        "views": 13716,
+        "likes": 29,
+        "reposts": 2,
+        "replies": 39
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2087623075747836299",
       "blogger_id": "octopusycc",
       "date": "2026-08-12",
@@ -980,6 +1008,32 @@
         "likes": 16,
         "reposts": 2,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2089901921415131487",
+      "blogger_id": "balder",
+      "date": "2026-08-18",
+      "created_at": "2026-08-18T22:27:01-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "~87% of revenue from single customer G42 in Abu Dhabi",
+        "can't understand why fastest inference chip has basically only one real buyer"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$CBRS",
+      "text": "Cerebras unveiled the CS-4 — claims it puts out tokens several times faster than NVIDIA. Their speed numbers have checked out before.\n\nBut when they filed to go public, ~87% of revenue came from a single customer, G42 in Abu Dhabi. \n\nI just don't really get how they can have the fastest inference chip out there but basically only one real buyer. $CBRS",
+      "url": "https://x.com/Balder13946731/status/2089901921415131487",
+      "kind": "post",
+      "engagement": {
+        "views": 5382,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

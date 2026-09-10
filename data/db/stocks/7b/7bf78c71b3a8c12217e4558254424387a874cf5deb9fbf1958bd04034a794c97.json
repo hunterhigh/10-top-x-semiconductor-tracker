@@ -1,6 +1,6 @@
 {
   "ticker": "ICE",
-  "cashtag": "NYSE",
+  "cashtag": "$ICE",
   "instrument": {
     "instrument_id": "US:ICE",
     "display_code": "ICE",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
-  "last_mention": "2026-08-27",
-  "total_mentions": 8,
+  "last_mention": "2026-09-03",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 7,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
     "news": 7,
-    "flow": 1
+    "flow": 1,
+    "opinion": 1
   },
   "mentions": [
     {
@@ -217,6 +219,29 @@
         "likes": 42,
         "reposts": 2,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2095468346275697060",
+      "blogger_id": "asklivermore",
+      "date": "2026-09-03",
+      "created_at": "2026-09-03T07:06:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ICE",
+      "text": "Here is the #1 performing stock in the S&P 500 every single year since 2000:\n\n2000: $DYN Dynegy +223%\n2001: $ODP Office Depot +160%\n2002: $BSX Boston Scientific +76%\n2003: $AV Avaya +379%\n2004: $AAPL Apple +199%\n2005: $VLO Valero Energy +127%\n2006: $ICE Intercontinental Exchange +196%\n2007: $AMZN Amazon +140%\n2008: $DLTR Dollar Tree +61%\n2009: $XL XL Capital +395%\n2010: $NFLX Netflix +216%\n2011: $EXPE Expedia +184%\n2012: $REGN Regeneron +203%\n2013: $NFLX Netflix +298%\n2014: $SWKS Skyworks Solutions +159%\n2015: $NFLX Netflix +133%\n2016: $NVDA Nvidia +224%\n2017: $NRG NRG Energy +132%\n2018: $AMD AMD +81%\n2019: $AMD AMD +148%\n2020: $TSLA Tesla +743%\n2021: $DVN Devon Energy +194%\n2022: $OXY Occidental Petroleum +119%\n2023: $NVDA Nvidia +239%\n2024: $PLTR Palantir +340%\n2025: $WDC Western Digital +283%\n2026 YTD: SanDisk +526%\n\nWhat's your pick for 2027?",
+      "url": "https://x.com/asklivermore/status/2095468346275697060",
+      "kind": "post",
+      "engagement": {
+        "views": 99980,
+        "likes": 500,
+        "reposts": 34,
+        "replies": 54
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

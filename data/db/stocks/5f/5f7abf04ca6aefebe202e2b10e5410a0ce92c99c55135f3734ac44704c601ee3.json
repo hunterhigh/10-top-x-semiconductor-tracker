@@ -1,6 +1,6 @@
 {
   "ticker": "992",
-  "cashtag": "Lenovo",
+  "cashtag": "联想",
   "instrument": {
     "instrument_id": "UNVERIFIED:992",
     "display_code": "992",
@@ -24,14 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
-  "last_mention": "2026-07-09",
-  "total_mentions": 4,
+  "last_mention": "2026-08-12",
+  "total_mentions": 5,
   "total_mentions_by_blogger": {
     "octopusycc": 2,
-    "jukan05": 2
+    "jukan05": 2,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 4
+    "opinion": 5
   },
   "mentions": [
     {
@@ -127,20 +128,46 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2087465203823005843",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T05:04:22-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "no pricing power as assemblers",
+        "cost increases from upstream suppliers are being absorbed by OEMs"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "联想",
+      "text": "微软据说在给 Windows 11 的授权费涨价。\n\n这轮涨价已经从内存一路传到操作系统了。上游每一环都在提价，只有组装整机那一环没有定价权——成本全砸在惠普、戴尔、联想身上，最后砸到买电脑的人身上。\n\n我一直说AI周期里钱最实在的地方是存储，现在连微软都跟着一起收租，说明整台PC的BOM已经绷不住了。明年换电脑，价格大概率比今年高一截。",
+      "url": "https://x.com/Balder13946731/status/2087465203823005843",
+      "kind": "post",
+      "engagement": {
+        "views": 8656,
+        "likes": 20,
+        "reposts": 0,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-08-09T03:16:40.487186+00:00",
+  "price_updated_at": "2026-09-10T07:21:29.629903+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-08-09T03:16:40.487172+00:00",
-    "attempts": 19,
+    "checked_at": "2026-09-10T07:21:29.629887+00:00",
+    "attempts": 20,
     "next_retry_at": null,
     "http_status": null
   }

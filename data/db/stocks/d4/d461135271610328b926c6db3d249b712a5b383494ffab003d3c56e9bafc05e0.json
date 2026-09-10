@@ -1,6 +1,6 @@
 {
   "ticker": "NU",
-  "cashtag": "$NU",
+  "cashtag": "NU",
   "instrument": {
     "instrument_id": "UNVERIFIED:NU",
     "display_code": "NU",
@@ -24,13 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-14",
-  "last_mention": "2026-08-14",
-  "total_mentions": 1,
+  "last_mention": "2026-08-27",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1
+    "balder": 2,
+    "StockMKTNewz": 1,
+    "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1
+    "news": 1,
+    "opinion": 3
   },
   "mentions": [
     {
@@ -52,6 +55,78 @@
         "likes": 21,
         "reposts": 2,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088377881659625906",
+      "blogger_id": "balder",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T17:31:01-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NU",
+      "text": "【美股复盘 · 8月14日】\n\n**大市**｜美股周五反复偏软，主要指数低位靠稳收市，全日缺乏方向。标普500指数ETF( $SPY )收报776.00点，跌0.24%；纳指ETF( QQQ )收报729.70点，跌0.32%，为三大指数中跌幅最深；道指ETF( DIA )收报537.10点，跌0.15%，跌势相对受控。资金转向中小型股，罗素2000ETF( IWM )收报304.47点，逆市升0.32%，一枝独秀。市宽偏淡，77只观察股中37只上升、40只下跌，升跌比接近对半，反映大市并非单边沽压，而是板块之间的资金搬迁。\n\n**板块**｜半导体内部严重分化，成为全日主轴。存储链造好， SNDK 急升6.75%、 STX 升4.88%；光通信同步走强， AAOI 暴升14.56%、 LITE 升3.92%、 GLW 升4.14%。反观半导体设备股遭沽压， AMAT 挫5.38%领跌板块。软件股偏软，软件ETF( IGV )跌1.95%； ORCL 重挫4.54%， PLTR 跌2.45%。加密货币概念全线失守， CRCL 泻5.19%、 HOOD 跌3.81%、 COIN 跌3.78%。防守类未见资金流入，药股 LLY 跌2.40%。新能源股 BE 跌3.18%。个别中小型股逆市抽升， NU 升8.18%、 NBIS 升6.80%、 F 升3.85%、 IONQ 升2.42%。\n\n**焦点**｜AI芯片股同日走出两极行情。 AVGO 全日泻6.32%，为跌幅榜首； AMD 同一时段升5.29%，两者相差逾11个百分点。市场今年主流论述为客制化ASIC蚕食通用GPU厂商的份额，惟当日资金流向与该论述相反,通用GPU一方造好、ASIC一方领跌。半导体链上下游亦现背驰： AMAT 跌5.38%,而其下游存储厂 SNDK 升6.75%、 STX 升4.88%。市场解读为，本轮存储周期的利润来自售价上升而非产能扩张,盈利当季即反映于存储厂账上;设备商须待下一轮资本开支上调方能受惠，两者之间存在时间差。同日光模块股同告走强， AAOI 单日升14.56%,为全日表现最佳个股。\n\n**小结**｜全日属典型的板块轮动市，指数跌幅有限而个股波幅显著,资金由大型软件及加密概念,流向存储、光通信及中小型股。分析指,标普500指数ETF 776点、纳指ETF 730点为短线争持关键位,若纳指ETF失守730关,科技股弱势或进一步扩散;小型股连续跑赢大市能否延续,以及半导体设备股的沽压是否只属存储周期错配下的短期现象,为后市两大观察点。",
+      "url": "https://x.com/Balder13946731/status/2088377881659625906",
+      "kind": "post",
+      "engagement": {
+        "views": 4944,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2091853963398365218",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-24",
+      "created_at": "2026-08-24T07:43:44-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "fintech bottoming",
+        "potential breakout candidate forming"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NU",
+      "text": "$SOFI, $HOOD, $NU and $PYPL\n\nFintech is trying to bottom forever. Potential breakout candidates forming. \n\nDisclaimer: I am already in SoFi and Robinhood with the subs since June of this year. https://t.co/sJAAZfHmt1",
+      "url": "https://x.com/asklivermore/status/2091853963398365218",
+      "kind": "post",
+      "engagement": {
+        "views": 72453,
+        "likes": 497,
+        "reposts": 15,
+        "replies": 33
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093088963661869366",
+      "blogger_id": "balder",
+      "date": "2026-08-27",
+      "created_at": "2026-08-27T17:31:11-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NU",
+      "text": "【美股复盘 · 8月27日】\n\n大市：\n地缘政治局势暂未对美股构成显著冲击，大市在一众科网股走强的带动下，表现反复向好。纳指( $QQQ )全日表现一枝独秀，收报718.94，升1.06%；标普(SPY)收报770.19，升0.54%。传统蓝筹及小型股表现靠稳，道指(DIA)收报534.97，微升0.14%；罗素小型股(IWM)收报299.95，升0.34%。大市整体买盘尚算积极，观察名单内的91只个股之中，有51只录得上升，40只下跌，市宽表现平稳。\n\n板块：\n科技类股份全日表现凌厉，软件板块掀起炒作热潮，CRM 飙升22.57%，CRWD 急涨19.67%，带动软件ETF IGV 全日急弹7.51%。相关概念股如 MDB、NET 及 SNOW 亦分别录得9.24%、7.16%及4.90%的显著升幅。其他科技及概念股亦见追捧，IONQ、COIN 及 CRCL 分别升6.35%、5.21%及5.12%。芯片板块表现个别发展，龙头股领涨，惟存储芯片股逆市受压，MU 跌2.09%，WDC 挫3.31%。消费、医药及部分权重股见沽压，MRNA 急泻6.45%领跌，NVO 跌2.04%；传统零售及餐饮巨头 HD 及 MCD 走势反复偏软，分别跌1.94%及2.36%；网约车 UBER 及流媒体 NFLX 分别跌2.36%及1.86%；金融科技股 NU 跌2.41%。中概股整体受压，BABA 挫3.39%。\n\n焦点：\n个股消息方面，市场盛传 NVDA 拟斥资129亿美元收购开源社区巨头Hugging Face。分析指出，此举意味AI芯片巨头正透过资本手段直接整合开源生态阵地，该股全日受资金追捧，收市急升8.14%。此外，宏观焦点落在能源博弈，市场对中东重开霍尔木兹海峡的要挟已趋麻木，资金焦点转向据报美国政府正就委内瑞拉石油资源股份进行直接谈判。此举打破以往透过制裁或交由传统石油巨头介入的惯例，相关破格动作引发市场关注。\n\n小结：\n分析指，美股大市目前高度集中于科网及软件板块的强劲走势，资金对AI及软件生态的并购题材尤为敏感。整体而言，虽然传统板块走势反复偏软，但纳指强劲动能暂时足以支撑大市维持高位震荡格局，后市宜密切留意地缘政治演变及科技权重股的关键技术位表现。",
+      "url": "https://x.com/Balder13946731/status/2093088963661869366",
+      "kind": "post",
+      "engagement": {
+        "views": 5517,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

@@ -25,15 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2026-02-23",
   "last_mention": "2026-09-07",
-  "total_mentions": 23,
+  "total_mentions": 26,
   "total_mentions_by_blogger": {
     "unusual_whales": 14,
     "octopusycc": 5,
     "StockMKTNewz": 3,
-    "aleabitoreddit": 1
+    "balder": 2,
+    "aleabitoreddit": 1,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 6,
+    "opinion": 9,
     "news": 3,
     "flow": 14
   },
@@ -319,6 +321,52 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087616221999169789",
+      "blogger_id": "balder",
+      "date": "2026-08-12",
+      "created_at": "2026-08-12T15:04:28-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "黄金",
+      "text": "Saylor 出来跟投资人讲了 Strategy 的比特币什么时候会盖不住债务。\n\n一个把\"永不卖\"讲了这么多年的人，自己把临界条件说出口了。杠杆盘的痛点摆在那儿，本来是市场自己去猜的东西，现在他替所有人标了出来，做空的知道该往哪个位置瞄。\n\n至于他为什么选在这个时候说，我没太想明白。\n\n今天黄金 +2%，BTC 在 63K 附近没什么动静。",
+      "url": "https://x.com/Balder13946731/status/2087616221999169789",
+      "kind": "post",
+      "engagement": {
+        "views": 17286,
+        "likes": 12,
+        "reposts": 0,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088307280739807708",
+      "blogger_id": "balder",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T12:50:29-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "黄金",
+      "text": "霍尔木兹的油轮被袭，WTI 今天才涨0.7%。同一时间黄金涨1.8%，4442。\n\n真断供恐慌的话，冲在前面的该是油。结果油那边0.7%，跟没事一样，钱全跑黄金去了。这个我还没完全想明白——0.7%单看也不算小，只是跟金比起来实在不像在定价一条海峡。\n\nVIX 14.5，股市那边连眼皮都没抬。",
+      "url": "https://x.com/Balder13946731/status/2088307280739807708",
+      "kind": "post",
+      "engagement": {
+        "views": 13805,
+        "likes": 28,
+        "reposts": 0,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2090414057417551913",
       "blogger_id": "octopusycc",
       "date": "2026-08-20",
@@ -339,6 +387,31 @@
         "likes": 10,
         "reposts": 0,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090424758026617257",
+      "blogger_id": "frank_trading",
+      "date": "2026-08-20",
+      "created_at": "2026-08-20T09:04:35-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "long gold"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "long gold\nshort iwm or long qqq同时short iwm 做pair trade\n2s10s / 2s30s steepener\n等待拐点确认Outright short QQQ/SMH",
+      "url": "https://x.com/Franktradinglog/status/2090424758026617257",
+      "kind": "post",
+      "engagement": {
+        "views": 69992,
+        "likes": 79,
+        "reposts": 5,
+        "replies": 24
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1606,18 +1679,22 @@
     {
       "date": "2026-09-08",
       "close": 47.47
+    },
+    {
+      "date": "2026-09-09",
+      "close": 49.33
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-09T18:18:42.067174+00:00",
+  "price_updated_at": "2026-09-10T07:21:06.604193+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-04",
-    "asof": "2026-09-03",
-    "attempted_at": "2026-09-03T12:20:06.511879+00:00",
+    "requested_start": "2025-09-11",
+    "asof": "2026-09-10",
+    "attempted_at": "2026-09-10T07:21:05.115699+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-04",
-    "last_available_date": "2026-09-02",
+    "first_available_date": "2025-09-11",
+    "last_available_date": "2026-09-09",
     "reason": null
   },
   "price_source_state": {
@@ -1625,7 +1702,7 @@
     "provider_symbol": "GOLD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-09T18:18:40.533047+00:00",
+    "checked_at": "2026-09-10T07:21:05.115699+00:00",
     "attempts": 31,
     "next_retry_at": null,
     "http_status": null

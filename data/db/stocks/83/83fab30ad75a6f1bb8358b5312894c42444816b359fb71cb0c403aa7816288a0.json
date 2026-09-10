@@ -25,14 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2025-09-03",
   "last_mention": "2026-09-02",
-  "total_mentions": 26,
+  "total_mentions": 28,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 22,
     "StockMKTNewz": 3,
-    "KawzInvests": 1
+    "KawzInvests": 1,
+    "balder": 1,
+    "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 23,
+    "opinion": 25,
     "news": 3
   },
   "mentions": [
@@ -622,6 +624,29 @@
       "prompt_version": "extract-v2"
     },
     {
+      "tweet_id": "2087225602164347353",
+      "blogger_id": "balder",
+      "date": "2026-08-11",
+      "created_at": "2026-08-11T13:12:16-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Riot",
+      "text": "CoinDesk：Riot 跟 Anthropic 签了 91 亿美元的 AI 合同。一家挖比特币的公司。\n\n矿工这几年真正囤下来的其实是电。园区、变电站、并网排队的位置——尤其是最后这个，排队排到 2029 年的那种位置，你有钱也插不进去。这批东西当年是为了挖币才买的，币价怎么走跟它们关系不大，反正就摆在那。现在 Anthropic 直接来接盘了。\n\nBTC 还在 6.3 万晃悠，矿企的估值已经改跟算力需求走了。我一直没太想明白这算不算转型——他们没换设备，也没换地方，就是把电卖给了另一个客户。合同签的是 91 亿🌚",
+      "url": "https://x.com/Balder13946731/status/2087225602164347353",
+      "kind": "post",
+      "engagement": {
+        "views": 5175,
+        "likes": 4,
+        "reposts": 1,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
       "tweet_id": "2088648431078109559",
       "blogger_id": "StockMKTNewz",
       "date": "2026-08-15",
@@ -640,6 +665,33 @@
         "likes": 63,
         "reposts": 8,
         "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2093328288320209323",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-28",
+      "created_at": "2026-08-28T09:22:10-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trying to find a low",
+        "no confirmation yet of a low",
+        "on radar moving forward"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$RIOT",
+      "text": "Bitcoin miners like $CORZ, $WULF, $CIFR, $RIOT, $KEEL, $MARA, $HUT, and others are trying to find a low, and stop going down.\n\nStill no confirmation yet of a low, but on my radar moving forward. https://t.co/s5w0y15O6T",
+      "url": "https://x.com/asklivermore/status/2093328288320209323",
+      "kind": "post",
+      "engagement": {
+        "views": 53662,
+        "likes": 352,
+        "reposts": 15,
+        "replies": 10
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

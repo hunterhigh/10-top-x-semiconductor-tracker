@@ -1,6 +1,6 @@
 {
   "ticker": "KHC",
-  "cashtag": "$KHC",
+  "cashtag": "卡夫",
   "instrument": {
     "instrument_id": "US:KHC",
     "display_code": "KHC",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-04",
-  "last_mention": "2026-07-21",
-  "total_mentions": 2,
+  "last_mention": "2026-08-16",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
     "unusual_whales": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
     "flow": 1,
-    "news": 1
+    "news": 1,
+    "opinion": 1
   },
   "mentions": [
     {
@@ -77,6 +79,29 @@
         "likes": 46,
         "reposts": 3,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088960450822291725",
+      "blogger_id": "balder",
+      "date": "2026-08-16",
+      "created_at": "2026-08-16T08:05:57-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "卡夫",
+      "text": "卡夫、麦当劳、惠而浦，三家CEO最近说的是同一件事：美国消费者快没钱了。\n\n这三家卖的东西完全不搭界，几块钱的芝士片、几块钱的汉堡、几百上千的洗衣机，从最便宜到最贵的价格带一起喊淡。那就不是哪家产品不行了，是钱本身出问题。\n\n10年期4.7，VIX 14。市场这边一点反应都没有。",
+      "url": "https://x.com/Balder13946731/status/2088960450822291725",
+      "kind": "post",
+      "engagement": {
+        "views": 114759,
+        "likes": 467,
+        "reposts": 32,
+        "replies": 52
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -214,17 +239,73 @@
     {
       "date": "2026-08-19",
       "close": 25.68
+    },
+    {
+      "date": "2026-08-20",
+      "close": 25.57
+    },
+    {
+      "date": "2026-08-21",
+      "close": 25.58
+    },
+    {
+      "date": "2026-08-24",
+      "close": 25.67
+    },
+    {
+      "date": "2026-08-25",
+      "close": 25.32
+    },
+    {
+      "date": "2026-08-26",
+      "close": 24.79
+    },
+    {
+      "date": "2026-08-27",
+      "close": 25.13
+    },
+    {
+      "date": "2026-08-28",
+      "close": 25.7
+    },
+    {
+      "date": "2026-08-31",
+      "close": 25.67
+    },
+    {
+      "date": "2026-09-01",
+      "close": 25.87
+    },
+    {
+      "date": "2026-09-02",
+      "close": 26.26
+    },
+    {
+      "date": "2026-09-03",
+      "close": 25.42
+    },
+    {
+      "date": "2026-09-04",
+      "close": 24.85
+    },
+    {
+      "date": "2026-09-08",
+      "close": 24.9
+    },
+    {
+      "date": "2026-09-09",
+      "close": 24.61
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-20T06:19:19.816961+00:00",
+  "price_updated_at": "2026-09-10T07:21:55.084064+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "KHC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-20T06:19:18.908476+00:00",
+    "checked_at": "2026-09-10T07:21:53.863430+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

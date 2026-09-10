@@ -24,13 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-12",
-  "last_mention": "2026-08-15",
-  "total_mentions": 5,
+  "last_mention": "2026-08-19",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 5
+    "StockMKTNewz": 5,
+    "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 5
+    "news": 5,
+    "opinion": 1
   },
   "mentions": [
     {
@@ -144,6 +146,31 @@
         "likes": 105,
         "reposts": 14,
         "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2090229457697358106",
+      "blogger_id": "asklivermore",
+      "date": "2026-08-19",
+      "created_at": "2026-08-19T20:08:31-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "consumer stocks getting interesting"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$MAR",
+      "text": "Consumer stocks are getting interesting to me.\n\nFast food chains, $WEN, $SHAK, etc. \nClothing brands, $LULU, $NKE, etc. \nFast casual chains, $CMG, $CAVA, etc. \nHotels. $MAR, $H, $HLT\nLuxury hotels/casinos. $WYNN, $MGM \nAirlines. $DAL, $UAL",
+      "url": "https://x.com/asklivermore/status/2090229457697358106",
+      "kind": "post",
+      "engagement": {
+        "views": 87243,
+        "likes": 535,
+        "reposts": 25,
+        "replies": 65
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

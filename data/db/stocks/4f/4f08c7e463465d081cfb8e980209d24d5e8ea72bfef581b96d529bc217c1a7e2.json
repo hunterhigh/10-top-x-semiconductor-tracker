@@ -1,6 +1,6 @@
 {
   "ticker": "BX",
-  "cashtag": "Blackstone",
+  "cashtag": "黑石（Blackstone）",
   "instrument": {
     "instrument_id": "US:BX",
     "display_code": "BX",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
-  "last_mention": "2026-07-29",
-  "total_mentions": 3,
+  "last_mention": "2026-08-25",
+  "total_mentions": 5,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 2,
+    "balder": 2,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "news": 2,
-    "flow": 1
+    "flow": 1,
+    "opinion": 2
   },
   "mentions": [
     {
@@ -100,6 +102,57 @@
         "likes": 25,
         "reposts": 7,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2088413836118552882",
+      "blogger_id": "balder",
+      "date": "2026-08-14",
+      "created_at": "2026-08-14T19:53:54-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "黑石",
+      "text": "英伟达拉上高盛和黑石，搭了个5000亿美元的结构化融资盘，专门借钱给客户买自己的卡。\n\n这等于把自己的收入先垫出去。1999年朗讯干过一模一样的事，给运营商垫钱买自己的设备，规模连这个的零头都不到，后来运营商还不上钱，朗讯自己先垮了。\n\n我还是看多，需求和租金都是真金白银。只是从今天起看英伟达，毛利率不再是最重要的那一栏，得先知道这5000亿最后是谁在扛。",
+      "url": "https://x.com/Balder13946731/status/2088413836118552882",
+      "kind": "post",
+      "engagement": {
+        "views": 11378,
+        "likes": 21,
+        "reposts": 4,
+        "replies": 24
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2092239268618097069",
+      "blogger_id": "balder",
+      "date": "2026-08-25",
+      "created_at": "2026-08-25T09:14:48-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "used parent company account to inject $54.5M into its own real estate credit fund",
+        "ownership stake in the fund was forced up to 47.7%, suggesting external investors are not buying in",
+        "publicly calling a bottom while privately propping up liquidity with internal capital",
+        "limited remaining headroom before further self-dealing becomes untenable"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "黑石（Blackstone）",
+      "text": "美债收益率掉回4.7，全市场都在指望降息能把商业地产救活。但我劝你看一眼今天刚出的SEC报备。\n\n黑石（Blackstone）刚用母公司的账户，紧急往自家的房地产信贷基金里硬塞了5450万美金。这也直接导致，黑石对自己这只基金的持股比例，被强行顶到了47.7%。\n\n对外发研报喊见底，对内靠左手倒右手死扛流动性。外部资金不接盘，顶级PE最后也只能母公司亲自下场垫资填底层资产的窟窿。\n\n我想不明白的是47.7%这个数——再往上垫，还剩多少空间。",
+      "url": "https://x.com/Balder13946731/status/2092239268618097069",
+      "kind": "post",
+      "engagement": {
+        "views": 23034,
+        "likes": 64,
+        "reposts": 6,
+        "replies": 7
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -293,17 +346,49 @@
     {
       "date": "2026-08-27",
       "close": 143.64
+    },
+    {
+      "date": "2026-08-28",
+      "close": 142.39
+    },
+    {
+      "date": "2026-08-31",
+      "close": 143.24
+    },
+    {
+      "date": "2026-09-01",
+      "close": 136.66
+    },
+    {
+      "date": "2026-09-02",
+      "close": 136.82
+    },
+    {
+      "date": "2026-09-03",
+      "close": 137.68
+    },
+    {
+      "date": "2026-09-04",
+      "close": 136.15
+    },
+    {
+      "date": "2026-09-08",
+      "close": 133.97
+    },
+    {
+      "date": "2026-09-09",
+      "close": 129.07
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-08-28T21:17:54.053040+00:00",
+  "price_updated_at": "2026-09-10T07:21:39.892677+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "BX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-08-28T21:17:53.047704+00:00",
+    "checked_at": "2026-09-10T07:21:38.201883+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
