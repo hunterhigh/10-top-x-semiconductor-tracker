@@ -331,6 +331,29 @@ def call_model(client, provider, model, system_prompt, convo_tweets):
     return None
 
 
+def extract_with_adaptive_chunks(convo_tweets, extractor):
+    """Retry an oversized failed batch as smaller, ordered batches.
+
+    Model gateways can occasionally truncate otherwise valid JSON when a long
+    conversation produces a large response.  Retrying the same payload cannot
+    fix a deterministic output-size failure, so bisect the batch until it
+    succeeds or reaches one tweet.  Returning every leaf (including a failed
+    singleton) lets the caller preserve the existing resumable error contract.
+    """
+    tweets = list(convo_tweets)
+    results = extractor(tweets)
+    if results is not None or len(tweets) <= 1:
+        return [(tweets, results)]
+
+    midpoint = len(tweets) // 2
+    log(f"    batch of {len(tweets)} failed; retrying as "
+        f"{midpoint} + {len(tweets) - midpoint} tweets")
+    return (
+        extract_with_adaptive_chunks(tweets[:midpoint], extractor)
+        + extract_with_adaptive_chunks(tweets[midpoint:], extractor)
+    )
+
+
 # --------------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
@@ -419,31 +442,38 @@ def main():
         # chunk overly long conversations
         for start in range(0, len(convo), MAX_TWEETS_PER_CALL):
             chunk = convo[start:start + MAX_TWEETS_PER_CALL]
-            results = call_model(client, provider, model, system_prompt, chunk)
-            if results is None:
-                # mark as error so we can find them, but keep going
-                for t in chunk:
-                    done[t["tweet_id"]] = {
-                        "tweet_id": t["tweet_id"], "error": True,
-                        "blogger_id": args.user,
-                        "extractor_model": model, "prompt_version": "extract-v2",
-                        "extracted_at": now,
+            leaves = extract_with_adaptive_chunks(
+                chunk,
+                lambda part: call_model(
+                    client, provider, model, system_prompt, part
+                ),
+            )
+            for leaf, results in leaves:
+                if results is None:
+                    # mark as error so we can find them, but keep going
+                    for t in leaf:
+                        done[t["tweet_id"]] = {
+                            "tweet_id": t["tweet_id"], "error": True,
+                            "blogger_id": args.user,
+                            "extractor_model": model, "prompt_version": "extract-v2",
+                            "extracted_at": now,
+                        }
+                    save_json(out_path, done)
+                    continue
+                by_id = {r.get("tweet_id"): r for r in results}
+                for t in leaf:
+                    r = by_id.get(t["tweet_id"]) or {
+                        "tweet_id": t["tweet_id"], "has_investment_content": False,
+                        "tickers": [], "confidence": 0.0, "missing_from_model": True,
                     }
-                continue
-            by_id = {r.get("tweet_id"): r for r in results}
-            for t in chunk:
-                r = by_id.get(t["tweet_id"]) or {
-                    "tweet_id": t["tweet_id"], "has_investment_content": False,
-                    "tickers": [], "confidence": 0.0, "missing_from_model": True,
-                }
-                r["blogger_id"] = args.user
-                r["extractor_model"] = model
-                r["prompt_version"] = "extract-v2"
-                r["extracted_at"] = now
-                done[t["tweet_id"]] = r
-                processed += 1
-            save_json(out_path, done)   # incremental save = resumable
-            time.sleep(REQUEST_PACING_SEC)   # polite pace to avoid tripping rate limits
+                    r["blogger_id"] = args.user
+                    r["extractor_model"] = model
+                    r["prompt_version"] = "extract-v2"
+                    r["extracted_at"] = now
+                    done[t["tweet_id"]] = r
+                    processed += 1
+                save_json(out_path, done)   # incremental save = resumable
+                time.sleep(REQUEST_PACING_SEC)   # polite pace to avoid tripping rate limits
         if gi % 25 == 0 or gi == total_groups:
             log(f"  group {gi}/{total_groups} | tweets done this run: {processed}")
 
