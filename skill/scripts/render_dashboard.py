@@ -11953,10 +11953,25 @@ def _pack_html(html: str) -> str:
 """
 
 
+def _enable_dynamic_people(runtime: str) -> str:
+    """Replace the demo-card roster with every person from the payload."""
+    marker = "for(const v of voices){\n const canonicalId=String(v.h||'').replace(/^@/,'');"
+    replacement = """const templateVoices=[...voices];
+voices.splice(0,voices.length,...PAYLOAD.people.map(p=>templateVoices.find(v=>{
+ const canonicalId=String(v.h||'').replace(/^@/,'');
+ return String(p.blogger_id).toLowerCase()===canonicalId.toLowerCase()||p.handle===v.h||p.display_name===v.n;
+})||{n:p.display_name,h:p.handle,x:p.x_url,img:p.avatar_data_uri,type:p.signal_type,role:roleLabel[p.signal_type]||p.signal_type,bio:p.profile_summary||'',stockLists:{bull:[],bear:[],neutral:[]},up:0,down:0,neutral:0,stocks:0}));
+for(const v of voices){
+ const canonicalId=String(v.h||'').replace(/^@/,'');"""
+    if runtime.count(marker) != 1:
+        raise RuntimeError("embedded runtime dynamic-roster insertion point is unavailable")
+    return runtime.replace(marker, replacement, 1)
+
+
 def render(input_path: Path, output_path: Path) -> None:
     payload = load_payload(input_path)
     template = _unpack(_FINAL_UI_B85, FINAL_UI_SHA256)
-    runtime = _unpack(_RUNTIME_B85, RUNTIME_SHA256)
+    runtime = _enable_dynamic_people(_unpack(_RUNTIME_B85, RUNTIME_SHA256))
     overflow_guard = (
         '<style id="productionOverflowGuard">'
         'html,body{max-width:100%;overflow-x:hidden}'
