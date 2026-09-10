@@ -1,6 +1,6 @@
 ---
 name: x-traders-consensus
-description: "Track public X posts from 10 market accounts, compare all ten accounts' structured bullish, bearish, or neutral records, answer source-linked company questions, and build the validated dashboard with monthly top picks. Never use for investment advice."
+description: "Track public X posts from a dynamic roster of notable traders and market-analysis accounts, compare opinion sources' explicit bullish, bearish, or unclear records, answer source-linked company questions, and build the validated dashboard. Never use for investment advice."
 ---
 
 # X Traders Consensus
@@ -16,7 +16,7 @@ Every answer and dashboard must include this disclaimer, or a faithful translati
 - Describe only what an account expressed or posted. Never recommend buying, selling, holding, or predict a security's price.
 - Retain original post text, company names, reasons, dates, figures, and URLs. Do not translate them.
 - Each claim about an account must remain traceable to its `blogger_id` and original-post URL.
-- Only records whose `mention_type` is `explicit_stance` contribute to dashboard stance counts. All ten tracked accounts are scored by the production dashboard contract; `signal_type` remains source metadata and does not exclude an account from the calculation.
+- Only records whose `mention_type` is `explicit_stance` and whose active account has `signal_type=opinion` contribute to dashboard stance counts. Flow, news, and disclosure sources never become synthetic opinions.
 - Describe flow, news, and disclosure records in their actual source context. Attribute disclosure trades to Trump, not to `DJTRadar`, even though the structured record participates in deterministic dashboard counts.
 - Use gender-neutral account references unless the account self-identifies otherwise.
 - All report dates and windows use `America/New_York` (ET), including daylight-saving transitions.
@@ -77,10 +77,10 @@ refresh → extract → build_db → EODHD identity resolution → build_db → 
 - Reuse the packaged `report_rules.py` for weekly changes and the shared `report_scope.py` for equity eligibility, monthly rows, top-pick ranking, and 52-week price scope. Do not reimplement or infer those rules in a renderer.
 - `skill/scripts/dashboard_payload.py` builds the sole render input and validates the Draft 2020-12 Schema by default.
 - `skill/scripts/render_dashboard.py` accepts only the validated deterministic payload; it does not infer stance, reasons, or database fields.
-- `monthly.top_picks` always contains one card for each of the ten tracked accounts. Ranking is deterministic: unique bullish posts, all explicit posts for that instrument, latest bullish time, then ticker alphabetically. A person with no eligible bullish record receives an explicit empty card.
-- The rolling 52-week price scope is the union of monthly report rows and the ten monthly top-pick instruments. Short listed histories use the available stored range and must carry `basis=available_history_fallback` and `history_status=insufficient_history`.
+- `monthly.top_picks` always contains one card for every active account. Ranking is deterministic for opinion accounts: unique bullish posts, all explicit posts for that instrument, latest bullish time, then ticker alphabetically. An account with no eligible opinion record receives an explicit empty card.
+- The rolling 52-week price scope is the union of monthly report rows and active-account monthly top-pick instruments. Short listed histories use the available stored range and must carry `basis=available_history_fallback` and `history_status=insufficient_history`.
 - The delivered page is one self-contained HTML file, embeds each visible avatar, supports `#stock=<display_code>` drilldowns and the final sidebar interactions, and may use JavaScript as required by the approved final UI.
-- `skill/scripts/validate_dashboard.py` must pass with `--browser required --expected-avatars 10` at 320, 768, and 1440 px before delivery.
+- `skill/scripts/validate_dashboard.py` must pass with `--browser required` at 320, 768, and 1440 px before delivery; the expected account count is read from the payload.
 - Generated HTML is an Actions Artifact, never a Git-tracked production file. Retain the HTML, payload, validation JSON, and SHA-256 for 30 days.
 - Price enrichment is provider-aware. Global authentication or contract failures stop publication; a per-instrument unsupported, deferred, or retryable state may publish only with a machine-readable reason and scheduled retry in `data/price_enrichment_queue.json`. Never add ticker-specific exceptions to bypass this gate.
 
@@ -101,7 +101,7 @@ python scripts/prices.py --asof <YYYY-MM-DD> --history-weeks 52 --history-scope 
 python scripts/refresh_avatars.py
 python skill/scripts/dashboard_payload.py <YYYY-MM-DD> --output payload.json
 python skill/scripts/render_dashboard.py --input payload.json --output dashboard.html
-python skill/scripts/validate_dashboard.py dashboard.html --browser required --expected-avatars 10
+python skill/scripts/validate_dashboard.py dashboard.html --browser required
 ```
 
 For an installed local Skill without a repository checkout, these commands
@@ -118,7 +118,7 @@ python scripts/query_stock.py NVDA --blogger aleabitoreddit
 For production, GitHub Actions is the only publisher. Cloudflare Cron dispatches
 the one atomic three-hour workflow at `5 */3 * * *` UTC; GitHub's own
 `schedule` must remain absent. The workflow has a shared concurrency group,
-all ten API fetches, and one remote rebase-and-publish job. A failure in any
+all active-account API fetches, and one remote rebase-and-publish job. A failure in any
 account stops extraction, database rebuild, prices, rendering, artifact upload,
 and data commit. The Cloudflare dispatcher records one idempotency key per UTC
 slot and GitHub records the trigger provenance in its Step Summary.
@@ -133,7 +133,7 @@ For a single-account question from an installed Skill, run:
 python scripts/query_stock.py <TICKER> --blogger <BLOGGER_ID>
 ```
 
-For a cross-account question, omit `--blogger`, then show all ten tracked accounts individually: bullish, bearish, neutral/no clear direction, or not covered in the requested ET window. Preserve each account's `signal_type` context and never describe a flow, news, or disclosure item as an independent analyst recommendation.
+For a cross-account question, omit `--blogger`, then show every active account individually: bullish, bearish, no direction / unclear, or not mentioned in the requested ET window. Preserve each account's `signal_type` context and never describe a flow, news, or disclosure item as an independent analyst recommendation.
 
 For every narrative, include the report date/window, original links, account attribution, and the required disclaimer. If a ticker has fewer than three explicit stances, say that there is insufficient structured opinion history rather than inventing a thesis. If there are no records for an account or date, say so plainly.
 

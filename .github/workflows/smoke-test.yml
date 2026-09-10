@@ -21,6 +21,9 @@ on:
       - "scripts/resolve_tickers_eodhd.py"
       - "scripts/refresh_avatars.py"
       - "scripts/write_sync_health.py"
+      - "scripts/roster.py"
+      - "config/bloggers.json"
+      - "config/blogger_profiles.json"
       - "tests/test_dashboard_payload.py"
       - "tests/test_report_scope.py"
       - "tests/test_price_history.py"
@@ -30,6 +33,10 @@ on:
       - "tests/test_eodhd_instrument_resolver.py"
       - "tests/test_refresh_avatars.py"
       - "tests/test_write_sync_health.py"
+      - "tests/test_roster.py"
+      - "tests/test_fetch_tweets.py"
+      - "tests/test_analyze_stock.py"
+      - "tests/test_render_dashboard.py"
       - "handoff/10V-dashboard-backend-handoff-final-2026-07-17/**"
       - "requirements.txt"
       - ".github/workflows/smoke-test.yml"
@@ -59,4 +66,4 @@ jobs:
           )
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/payload.json"
           python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/payload.json" --output "$RUNNER_TEMP/dashboard.html"
-          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard.html" --browser required --expected-avatars 10
+          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard.html" --browser required

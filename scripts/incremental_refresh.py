@@ -8,13 +8,14 @@ then rebuilds the factual database.  It never requests a full backfill.
 from __future__ import annotations
 
 import argparse
-import json
 import subprocess
 import sys
 from datetime import timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from roster import load_bloggers
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -41,13 +42,22 @@ def main() -> int:
     parser.add_argument("--skip-prices", action="store_true")
     parser.add_argument("--report-date", help="also render this ET cutoff after a successful rebuild")
     args = parser.parse_args()
-    bloggers = json.loads((ROOT / "config" / "bloggers.json").read_text(encoding="utf-8")).get("bloggers", [])
+    bloggers = load_bloggers()
     steps: list[tuple[str, list[str]]] = []
     for blogger in bloggers:
         bid = blogger["id"]
         since = watermark(ROOT / "data" / "bloggers" / bid / "raw_tweets.json")
         if not since: raise RuntimeError(f"No raw-data watermark for {bid}; use the explicit backfill workflow instead")
-        steps += [(f"fetch {bid}", command("scripts/fetch_tweets.py", "--user", bid)), (f"extract {bid} since {since}", command("scripts/extract.py", "--user", bid, "--since", since))]
+        steps += [
+            (
+                f"fetch {bid}",
+                command(
+                    "scripts/fetch_tweets.py", "--user", blogger["username"],
+                    "--blogger-id", bid,
+                ),
+            ),
+            (f"extract {bid} since {since}", command("scripts/extract.py", "--user", bid, "--since", since)),
+        ]
     steps.append(("rebuild database", command("scripts/build_db.py")))
     steps.append(("resolve instrument identities", command("scripts/resolve_tickers_eodhd.py", "--apply")))
     steps.append(("rebuild verified database", command("scripts/build_db.py")))

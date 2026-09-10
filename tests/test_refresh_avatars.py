@@ -59,7 +59,11 @@ class RefreshAvatarsTests(unittest.TestCase):
             output = root / "avatar_cache.json"
             status_output = root / "avatar_status.json"
             config.write_text(json.dumps({
-                "bloggers": [{"id": "account", "x_url": "https://x.com/account"}],
+                "bloggers": [{
+                    "id": "account", "display_name": "Account", "handle": "@account",
+                    "x_url": "https://x.com/account", "signal_type": "opinion",
+                    "avatar_letter": "A", "color": "#123456",
+                }],
             }), encoding="utf-8")
             if write_profile:
                 account_dir = profiles_root / "account"
@@ -104,16 +108,18 @@ class RefreshAvatarsTests(unittest.TestCase):
         self.assertIn('"stale_cache": ["account"]', log)
         self.assertIn("::warning::", log)
 
-    def test_fails_when_neither_fresh_nor_cached_avatar_is_valid(self):
-        status, _, report, log, _ = self.run_refresh(
+    def test_uses_letter_avatar_when_neither_fresh_nor_cached_avatar_is_valid(self):
+        status, output, report, log, _ = self.run_refresh(
             {"account": "not-an-image"},
             (None, "AvatarValidationError: unsupported image signature"),
         )
 
-        self.assertEqual(status, 2)
-        self.assertEqual(report["missing"], ["account"])
-        self.assertIn('"missing": ["account"]', log)
-        self.assertIn("::error::", log)
+        self.assertEqual(status, 0)
+        self.assertEqual(report["fallback"], ["account"])
+        self.assertEqual(report["missing"], [])
+        self.assertTrue(output["account"].startswith("data:image/svg+xml;base64,"))
+        self.assertTrue(refresh_avatars.valid_cached_avatar(output["account"]))
+        self.assertIn("::warning::", log)
 
     def test_replaces_cache_after_successful_refresh(self):
         fresh_avatar = "data:image/jpeg;base64," + base64.b64encode(JPEG_BYTES).decode("ascii")

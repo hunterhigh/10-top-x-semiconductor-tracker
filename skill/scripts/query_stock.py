@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from analyze_stock import analyze
+from analyze_stock import active_blogger_ids, analyze
 from snapshot_sync import sync
 from stock_store import StockStore, StockStoreError
 
@@ -25,7 +25,13 @@ def main() -> int:
     except StockStoreError as exc:
         raise SystemExit(str(exc)) from exc
     import datetime
-    result = analyze(stock, datetime.date.fromisoformat(args.as_of) if args.as_of else None, args.blogger)
+    allowed = None if args.blogger else active_blogger_ids(cache / "config" / "bloggers.json")
+    result = analyze(
+        stock,
+        datetime.date.fromisoformat(args.as_of) if args.as_of else None,
+        args.blogger,
+        allowed,
+    )
     import json
     print(json.dumps({"manifest": manifest, "analysis": result}, ensure_ascii=False, indent=2))
     return 0

@@ -3,7 +3,7 @@
 fetch_tweets.py — multi-blogger tracker, P2 step 1
 
 Pulls tweets for a single X user from twitterapi.io. Multi-blogger support:
-each --user gets its own state/raw store under data/bloggers/{username}/, so
+each stable blogger id gets its own state/raw store under data/bloggers/{blogger_id}/, so
 running this once per tracked influencer (see config/bloggers.json) never
 cross-contaminates incremental watermarks — Twitter snowflake ids are globally
 increasing but NOT safe to compare across different users' "newest seen" ids.
@@ -49,20 +49,21 @@ import requests
 BASE_URL = "https://api.twitterapi.io"
 DEFAULT_USER = "aleabitoreddit"
 
-# files live under data/bloggers/{username}/ so each tracked influencer's
+# Files live under data/bloggers/{blogger_id}/ so a mutable X handle never
+# changes historical storage identity.
 # incremental state and raw tweet store are fully isolated.
 SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
 
 
-def blogger_paths(username: str) -> tuple[Path, Path]:
-    """Return (raw_tweets_path, state_path) for a given blogger username."""
-    d = DATA_DIR / "bloggers" / username
+def blogger_paths(blogger_id: str) -> tuple[Path, Path]:
+    """Return (raw_tweets_path, state_path) for a stable blogger id."""
+    d = DATA_DIR / "bloggers" / blogger_id
     return d / "raw_tweets.json", d / "state.json"
 
 
-def blogger_profile_path(username: str) -> Path:
-    return DATA_DIR / "bloggers" / username / "profile.json"
+def blogger_profile_path(blogger_id: str) -> Path:
+    return DATA_DIR / "bloggers" / blogger_id / "profile.json"
 
 PAGE_SLEEP_SEC = 5.5           # twitterapi.io free tier: max 1 request / 5s (QPS-limited); small margin added
 MAX_BACKFILL_PAGES = 2000      # explicit backfills may intentionally traverse a large bounded history
@@ -278,11 +279,13 @@ def _newest_tweet_id(*values):
 
 
 # ----------------------------------------------------------------------------- main fetch
-def fetch(username: str, backfill: bool, since_date=None) -> None:
+def fetch(username: str, backfill: bool, since_date=None, blogger_id: str | None = None) -> None:
+    blogger_id = blogger_id or username
     key = get_api_key()
     s = session_with_key(key)
 
-    raw_path, state_path = blogger_paths(username)
+    raw_path, state_path = blogger_paths(blogger_id)
+    profile_path = blogger_profile_path(blogger_id)
     state = load_json(state_path, {})
     stop_at_id = None if backfill else state.get("newest_tweet_id")
     stop_at_numeric_id = _numeric_tweet_id(stop_at_id)
@@ -304,6 +307,18 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
         profile = get_user_profile(s, username)
     except FetchError as exc:
         log(f"FAILING: @{username} was not fetched; {exc}")
+        sys.exit(1)
+    returned_username = str(profile.get("user_name") or "")
+    if returned_username.casefold() != username.casefold():
+        log(f"FAILING: @{username} resolved to unexpected username @{returned_username}")
+        sys.exit(1)
+    previous_profile = load_json(profile_path, {})
+    previous_id = str(previous_profile.get("id") or "") if isinstance(previous_profile, dict) else ""
+    if previous_id and previous_id != str(profile["id"]):
+        log(
+            f"FAILING: stable blogger_id {blogger_id} changed X identity "
+            f"from userId {previous_id} to {profile['id']}"
+        )
         sys.exit(1)
     uid = profile["id"]
     base_params = {"includeReplies": "true"}         # pull everything, filter locally
@@ -522,7 +537,7 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
         )
     successful_at = datetime.now(timezone.utc).isoformat()
     profile["observed_at"] = successful_at
-    save_json(blogger_profile_path(username), profile)
+    save_json(profile_path, profile)
     state["last_run_utc"] = successful_at  # legacy compatibility
     state["last_successful_fetch_utc"] = successful_at
     state["last_api_tweets_seen"] = seen_total
@@ -531,6 +546,7 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
     state["last_fetch_stop_reason"] = stop_reason or "completed"
     state["last_anchor_seen"] = reached_known
     state["username"] = username
+    state["blogger_id"] = blogger_id
     save_json(state_path, state)
 
     # ----- summary
@@ -551,6 +567,7 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
 def main():
     ap = argparse.ArgumentParser(description="Fetch @user tweets from twitterapi.io")
     ap.add_argument("--user", default=DEFAULT_USER, help="screen name (no @)")
+    ap.add_argument("--blogger-id", default="", help="stable storage/database id; defaults to --user")
     ap.add_argument("--backfill", action="store_true",
                     help="ignore saved state and pull full history")
     ap.add_argument("--since-date", default="", metavar="YYYY-MM-DD",
@@ -559,7 +576,7 @@ def main():
                           "account's ENTIRE history when only recent days are needed)")
     args = ap.parse_args()
     since_date = date.fromisoformat(args.since_date) if args.since_date else None
-    fetch(args.user, args.backfill, since_date=since_date)
+    fetch(args.user, args.backfill, since_date=since_date, blogger_id=args.blogger_id or args.user)
 
 
 if __name__ == "__main__":

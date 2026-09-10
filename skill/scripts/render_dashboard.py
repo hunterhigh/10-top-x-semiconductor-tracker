@@ -11892,13 +11892,12 @@ def load_payload(path: Path) -> dict[str, Any]:
     missing = [key for key in required if key not in payload]
     if missing:
         raise ValueError(f"render payload missing fields: {', '.join(missing)}")
-    if len(payload.get("people", [])) != 10:
-        raise ValueError("render payload must contain exactly 10 tracked accounts")
-    if payload.get("meta", {}).get("tracked_account_count") != 10:
-        raise ValueError("render payload must contain exactly 10 tracked accounts")
+    expected = payload.get("meta", {}).get("tracked_account_count")
+    if not isinstance(expected, int) or expected < 1 or len(payload.get("people", [])) != expected:
+        raise ValueError("render payload people must match tracked_account_count")
     ids = [str(person.get("blogger_id", "")) for person in payload["people"]]
-    if len(set(ids)) != 10 or "" in ids:
-        raise ValueError("people must contain 10 unique blogger_id values")
+    if len(set(ids)) != expected or "" in ids:
+        raise ValueError("people must contain unique blogger_id values")
     for person in payload["people"]:
         if not str(person.get("avatar_data_uri", "")).startswith("data:image/"):
             raise ValueError(f"avatar is not embedded for {person.get('blogger_id')}")
@@ -11907,8 +11906,8 @@ def load_payload(path: Path) -> dict[str, Any]:
             raise ValueError(f"{symbol}: default_person_window must be days_7")
         for key in ("today", "days_7", "days_28"):
             rows = detail.get("people_by_window", {}).get(key, [])
-            if len(rows) != 10:
-                raise ValueError(f"{symbol}.{key} must contain exactly 10 people")
+            if len(rows) != expected or {str(row.get("blogger_id", "")) for row in rows} != set(ids):
+                raise ValueError(f"{symbol}.{key} must contain the active roster")
     return payload
 
 
@@ -11954,10 +11953,25 @@ def _pack_html(html: str) -> str:
 """
 
 
+def _enable_dynamic_people(runtime: str) -> str:
+    """Replace the demo-card roster with every person from the payload."""
+    marker = "for(const v of voices){\n const canonicalId=String(v.h||'').replace(/^@/,'');"
+    replacement = """const templateVoices=[...voices];
+voices.splice(0,voices.length,...PAYLOAD.people.map(p=>templateVoices.find(v=>{
+ const canonicalId=String(v.h||'').replace(/^@/,'');
+ return String(p.blogger_id).toLowerCase()===canonicalId.toLowerCase()||p.handle===v.h||p.display_name===v.n;
+})||{n:p.display_name,h:p.handle,x:p.x_url,img:p.avatar_data_uri,type:p.signal_type,role:roleLabel[p.signal_type]||p.signal_type,bio:p.profile_summary||'',stockLists:{bull:[],bear:[],neutral:[]},up:0,down:0,neutral:0,stocks:0}));
+for(const v of voices){
+ const canonicalId=String(v.h||'').replace(/^@/,'');"""
+    if runtime.count(marker) != 1:
+        raise RuntimeError("embedded runtime dynamic-roster insertion point is unavailable")
+    return runtime.replace(marker, replacement, 1)
+
+
 def render(input_path: Path, output_path: Path) -> None:
     payload = load_payload(input_path)
     template = _unpack(_FINAL_UI_B85, FINAL_UI_SHA256)
-    runtime = _unpack(_RUNTIME_B85, RUNTIME_SHA256)
+    runtime = _enable_dynamic_people(_unpack(_RUNTIME_B85, RUNTIME_SHA256))
     overflow_guard = (
         '<style id="productionOverflowGuard">'
         'html,body{max-width:100%;overflow-x:hidden}'

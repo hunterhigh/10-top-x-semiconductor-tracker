@@ -69,6 +69,7 @@ from storage_layout import (
     stock_document_path,
     write_price_cache_index,
 )
+from roster import load_bloggers
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
@@ -181,16 +182,12 @@ def in_scope(row, min_mentions, asof_date):
 
 
 def tracked_account_ids():
-    """Load the ten accounts scored by the supplied dashboard contract."""
-    config = load_json(BLOGGERS_PATH, default={}) or {}
-    account_ids = [
+    """Load active opinion ids used by monthly consensus and favorite scope."""
+    return [
         str(row["id"])
-        for row in config.get("bloggers", [])
-        if row.get("id")
+        for row in load_bloggers(BLOGGERS_PATH)
+        if row.get("signal_type") == "opinion"
     ]
-    if len(account_ids) != 10 or len(set(account_ids)) != 10:
-        raise RuntimeError(f"Expected 10 unique tracked accounts, found {len(set(account_ids))}")
-    return account_ids
 
 
 def history_coverage(series, requested_start, asof, attempted_at, failure=None):
@@ -782,7 +779,7 @@ def main():
     ap.add_argument("--history-weeks", type=int, choices=(52,), default=0,
                     help="extend report-scope caches backwards for a rolling 52-week return")
     ap.add_argument("--history-scope", choices=("recent-28d",), default="recent-28d",
-                    help="scope for --history-weeks (monthly rows union all ten monthly top picks)")
+                    help="scope for --history-weeks (monthly rows union active-account monthly top picks)")
     ap.add_argument("--force", action="store_true", help="ignore cache; full re-fetch from first_mention")
     ap.add_argument("--provider-test", action="store_true", help="just check provider connectivity")
     ap.add_argument("--all-codes", action="store_true", help="provider-test: hit ALL non-US codes, not just unverified")

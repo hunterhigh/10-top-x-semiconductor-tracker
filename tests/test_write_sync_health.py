@@ -169,15 +169,21 @@ class SyncHealthStateTests(unittest.TestCase):
             root = Path(directory)
             manifest = root / "manifest.json"
             avatars = root / "avatars.json"
+            roster = root / "bloggers.json"
             manifest.write_text(json.dumps({
                 "date_range": ["2025-07-02", "2026-09-08"],
                 "tickers": 2248,
                 "total_mentions": 27187,
+                "tracked_bloggers": 2,
                 "mentions_by_blogger": {"one": 1, "two": 2},
             }), encoding="utf-8")
             avatars.write_text(json.dumps({"one": AVATAR, "two": "invalid"}), encoding="utf-8")
+            roster.write_text(json.dumps({"bloggers": [
+                {"id": "one", "display_name": "One", "handle": "@one", "x_url": "https://x.com/one", "signal_type": "opinion"},
+                {"id": "two", "display_name": "Two", "handle": "@two", "x_url": "https://x.com/two", "signal_type": "opinion"},
+            ]}), encoding="utf-8")
 
-            cutoff, metrics = health.read_metrics(manifest, avatars)
+            cutoff, metrics = health.read_metrics(manifest, avatars, roster)
 
         self.assertEqual(cutoff, "2026-09-08")
         self.assertEqual(metrics["accounts_complete"], 2)
@@ -245,6 +251,15 @@ class OutcomeClassificationTests(unittest.TestCase):
         self.assertEqual(result["status"], "degraded")
         self.assertEqual(result["error_code"], "AVATAR_REFRESH_DEGRADED")
         self.assertIn("2 account(s)", result["summary"])
+
+    def test_letter_avatar_fallback_is_p2_degradation(self):
+        result = health.classify_outcome(
+            {},
+            avatar_report={"stale_cache": [], "fallback": ["one"], "missing": []},
+        )
+
+        self.assertEqual(result["status"], "degraded")
+        self.assertEqual(result["error_code"], "AVATAR_REFRESH_DEGRADED")
 
     def test_missing_avatar_report_is_actionable(self):
         result = health.classify_outcome({}, avatar_report=None)

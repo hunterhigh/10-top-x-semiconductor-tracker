@@ -35,7 +35,7 @@ must retain the following surfaces and states.
 
 1. Payload Schema and data invariants pass.
 2. Browser opens a real `#stock=` route into `single-stock-view`; its iframe
-   has chart, three window tabs, and the 10-person detail grid.
+   has chart, three window tabs, and the active-roster detail grid.
 3. Browser opens an account drawer with directional counters and an instrument
    list.
 4. 320, 768 and 1440px have no page-level horizontal overflow.

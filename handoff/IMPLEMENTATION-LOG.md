@@ -213,3 +213,27 @@ following recoverable baseline supersedes the earlier “not yet rebuilt” note
   rows, and 800 stock drilldowns. Draft 2020-12 Schema/invariants passed; the
   compressed HTML passed Chromium validation at 320, 768, and 1440 px with no
   page-level horizontal overflow.
+
+## 2026-09-10 - dynamic X-account roster
+
+- Replaced fixed ten-account arrays and exact-cardinality checks with the
+  validated active registry in `config/bloggers.json`. Workflow matrices,
+  artifact gates, database metadata, price scope, avatars, payloads, renderer,
+  stock queries, JSON Schema, and browser validation now derive their account
+  count from that registry or its payload metadata.
+- Added stable `blogger_id` values `frank_trading`, `asklivermore`, and
+  `balder`; their mutable X handles are passed separately to the fetcher and
+  the numeric X user id is persisted and checked against identity changes.
+- Marked `zephyr_z9` and `unusual_whales` inactive while retaining their
+  configuration, profile copy, source folders, and database history.
+- Consensus math now uses active `opinion` accounts only. News, flow, and
+  disclosure sources remain visible but never become synthetic analyst views;
+  every active account still receives one monthly card, with an empty card
+  when no eligible opinion exists.
+- Added deterministic letter-avatar fallback after real-avatar and valid-cache
+  attempts. The manifest now hashes the index, database profiles, active/history
+  registry, editorial profiles, price-cache index, and avatar cache.
+- Local verification passed for Python compilation, workflow YAML parsing,
+  dynamic roster sizes, stable-id fetch storage, identity-change rejection,
+  opinion-only payload aggregation, renderer/validator cardinality, avatar
+  fallback, stock-query filtering, and all seven handoff aggregation rules.

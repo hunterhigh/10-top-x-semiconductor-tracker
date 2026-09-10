@@ -18,7 +18,7 @@
 | 月报账号集合 | 窗口 mentions | distinct blogger_id，另输出 bullish/bearish 账号集合供悬浮 |
 | `price_change` | `price_series` + `price_status` | 取窗口内首末可用交易日；不可用时 percentage=null |
 | 下钻 `mention_days` | 28 日 mentions | 按 date 分组，保留完整 evidence |
-| 下钻 `person_windows` | 每股 mentions + 10 人 roster | 调用 `person_window_state()`；每窗必须恰好 10 人 |
+| 下钻 `person_windows` | 每股 mentions + 活跃 roster | 调用 `person_window_state()`；每窗账号集合必须与活跃 roster 完全一致 |
 | 下钻 `default_person_window` | 产品定稿常量 | 固定输出 `today`，首次打开激活“今日” |
 | 下钻 `window_summaries` | 每股价格与 mentions | 分别输出今日/7日/28日概览数字和窗口涨跌幅 |
 | 下钻 `people_by_window` | 三个窗口内每人每股 mentions | 每窗分别输出次数、构成、最近记录、反转、窗口内 evidence |

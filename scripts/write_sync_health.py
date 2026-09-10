@@ -16,6 +16,11 @@ from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+try:
+    from roster import load_bloggers
+except ModuleNotFoundError:  # imported as scripts.write_sync_health in tests
+    from scripts.roster import load_bloggers
+
 
 SCHEMA_VERSION = 1
 MAX_FILE_BYTES = 4096
@@ -286,18 +291,26 @@ def valid_avatar(value: object) -> bool:
         return False
 
 
-def read_metrics(manifest_path: Path, avatar_cache_path: Path) -> tuple[str | None, dict[str, int | None]]:
+def read_metrics(
+    manifest_path: Path,
+    avatar_cache_path: Path,
+    roster_path: Path | None = None,
+) -> tuple[str | None, dict[str, int | None]]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     avatars = json.loads(avatar_cache_path.read_text(encoding="utf-8"))
     date_range = manifest.get("date_range") or []
     cutoff = date_range[-1] if date_range else None
-    bloggers = manifest.get("mentions_by_blogger")
+    roster_path = roster_path or manifest_path.parents[2] / "config" / "bloggers.json"
+    active_ids = [row["id"] for row in load_bloggers(roster_path)]
     return cutoff, {
-        "accounts_complete": len(bloggers) if isinstance(bloggers, dict) else None,
+        "accounts_complete": manifest.get("tracked_bloggers"),
         "tickers": manifest.get("tickers"),
         "mentions": manifest.get("total_mentions"),
         "priced_tickers": manifest.get("priced_tickers"),
-        "valid_avatars": sum(valid_avatar(value) for value in avatars.values()) if isinstance(avatars, dict) else None,
+        "valid_avatars": (
+            sum(valid_avatar(avatars.get(blogger_id)) for blogger_id in active_ids)
+            if isinstance(avatars, dict) else None
+        ),
     }
 
 
@@ -328,13 +341,17 @@ def classify_outcome(
             "summary": "Avatar health result is missing after a successful avatar step",
         }
     stale_cache = avatar_report.get("stale_cache") or []
-    if stale_cache:
+    fallback = avatar_report.get("fallback") or []
+    if stale_cache or fallback:
         return {
             "status": "degraded",
             "severity": "P2",
             "stage": "avatars",
             "error_code": "AVATAR_REFRESH_DEGRADED",
-            "summary": f"Avatar refresh failed for {len(stale_cache)} account(s); valid cache retained",
+            "summary": (
+                f"Avatar refresh degraded for {len(stale_cache) + len(fallback)} account(s); "
+                f"cached={len(stale_cache)} letter_fallback={len(fallback)}"
+            ),
         }
     if outcomes.get("DASHBOARD_ARTIFACT_OUTCOME") == "failure":
         return {

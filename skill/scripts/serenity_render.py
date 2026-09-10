@@ -26,12 +26,12 @@ SCRIPT_DIR=Path(__file__).resolve().parent
 _config_override=_argval('--config') or os.environ.get('SERENITY_CONFIG')
 CONFIG_PATH=Path(_config_override).resolve() if _config_override else SCRIPT_DIR.parent/'config'/'bloggers.json'
 try:
-    _BLOGGERS=json.load(open(CONFIG_PATH,encoding='utf-8')).get('bloggers',[])
+    _BLOGGERS=[b for b in json.load(open(CONFIG_PATH,encoding='utf-8')).get('bloggers',[]) if b.get('active',True)]
 except Exception:
     _BLOGGERS=[]
 _BLOGGERS_BY_ID={b['id']:b for b in _BLOGGERS}
-# Consensus math ("N of 7 bullish") only draws from opinion-type bloggers — the
-# other 3 tracked accounts (unusual_whales/StockMKTNewz/DJTRadar) report options
+# Consensus math only draws from the current opinion-type bloggers; other
+# signal accounts report flow, news, or disclosures
 # flow / news / third-party disclosures, not their own stance (see SKILL.md
 # compliance rule 8). Default to 'opinion' if a config entry predates this field.
 _OPINION_IDS={b['id'] for b in _BLOGGERS if b.get('signal_type','opinion')=='opinion'}
@@ -90,10 +90,10 @@ elif LANG in ('zh-cn','zh-sg','zh-hans','simplified','sc'):
     LANG='zh'
 STR={
  'en':{
-  'doc_title_tmpl':"@{handle} — Stock Opinion Tracker",'doc_title_all':"Top 10 Trackers — Stock Opinion Consensus",
-  'brand':"Stock Opinion<br>Tracker",'brand_all':"Top 10<br>Trackers",
-  'consensus_brand_sub':"10 accounts · 7-analyst consensus",
-  'disc_top_all':"⚠️ Aggregation and tracking of public posts from the 10 tracked accounts, summarized automatically by AI. It may contain errors or omissions and is not guaranteed accurate — refer to the original posts and verify independently. This tracker does not constitute investment advice of any kind.",
+  'doc_title_tmpl':"@{handle} — Stock Opinion Tracker",'doc_title_all':"X Account Trackers — Stock Opinion Consensus",
+  'brand':"Stock Opinion<br>Tracker",'brand_all':"X Account<br>Trackers",
+  'consensus_brand_sub':"Dynamic account roster · opinion-source consensus",
+  'disc_top_all':"⚠️ Aggregation and tracking of public posts from active tracked accounts, summarized automatically by AI. It may contain errors or omissions and is not guaranteed accurate — refer to the original posts and verify independently. This tracker does not constitute investment advice of any kind.",
   'nav_day':"Daily",'nav_week':"Weekly",'nav_month':"Monthly",'nav_quarter':"Quarterly",'nav_consensus':"Consensus",
   'consensus_title':"Cross-Tracker Consensus",
   'consensus_subhd_day':"▼ Most agreed-upon today (net bullish/bearish across ≥2 of the 7 tracked analysts; the 3 independent-signal accounts are shown separately, not counted here)",
@@ -163,10 +163,10 @@ STR={
   'disc_top_sub':"Stance labels (bull / bear / neutral) are AI-inferred from the original text and may be inaccurate · No stance = mentioned only, no view expressed",
  },
  'zh':{
-  'doc_title_tmpl':"@{handle} 个股评论追踪",'doc_title_all':"十大网红 个股共识追踪",
-  'brand':"个股评论<br>追踪",'brand_all':"十大网红<br>共识追踪",
-  'consensus_brand_sub':"追踪 10 位博主 · 7 人共识",
-  'disc_top_all':"⚠️ 本页为对 10 位追踪博主公开推文的整理与追踪，由 AI 自动归纳，可能存在错误或遗漏，不保证信息绝对准确，请以原推文为准并自行核实。本追踪不构成任何投资建议。",
+  'doc_title_tmpl':"@{handle} 个股评论追踪",'doc_title_all':"X 账号个股共识追踪",
+  'brand':"个股评论<br>追踪",'brand_all':"X 账号<br>共识追踪",
+  'consensus_brand_sub':"动态账号清单 · 观点来源共识",
+  'disc_top_all':"⚠️ 本页为对活跃追踪账号公开推文的整理与追踪，由 AI 自动归纳，可能存在错误或遗漏，不保证信息绝对准确，请以原推文为准并自行核实。本追踪不构成任何投资建议。",
   'nav_day':"日报",'nav_week':"周报",'nav_month':"月报",'nav_quarter':"季报",'nav_consensus':"共识",
   'consensus_title':"跨博主共识",
   'consensus_subhd_day':"▼ 今日最一致的标的(≥2 位分析师净看多/看空，仅统计 7 位意见博主，另外 3 位独立信号账号单独展示、不计入此项)",

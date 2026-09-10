@@ -1,7 +1,7 @@
 """Shared deterministic scope rules for the rolling 28-day report.
 
 The payload builder, price backfill, and verification gate must select the
-same listed-equity documents.  The July 22 renderer contract scores all ten
+same listed-equity documents. The renderer contract scores active opinion
 tracked accounts and adds one deterministic bullish favorite per account.
 """
 from __future__ import annotations
@@ -65,7 +65,7 @@ def explicit_directional_rows(
     scored_account_ids: set[str],
     asof: date,
 ) -> list[dict[str, Any]]:
-    """Return all ten-account explicit directional records in the 28-day window."""
+    """Return active-account explicit directional records in the 28-day window."""
     return [
         row for row in in_report_window(rows, asof)
         if row.get("blogger_id") in scored_account_ids
@@ -134,7 +134,7 @@ def monthly_history_scope(
     tracked_account_ids: Iterable[str],
     asof: date,
 ) -> dict[str, Any]:
-    """Return the union of monthly rows and ten-account favorite instruments."""
+    """Return the union of monthly rows and active-account favorite instruments."""
     docs = list(docs)
     account_ids = {str(value) for value in tracked_account_ids}
     monthly_docs = [

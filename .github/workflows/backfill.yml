@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       bloggers:
-        description: "Comma-separated blogger ids to backfill"
+        description: "Comma-separated active blogger ids; blank means all active accounts"
         required: false
-        default: "zephyr_z9,jukan05,KawzInvests,michaelsikand,ren_stocks,octopusycc,unusual_whales,StockMKTNewz,DJTRadar"
+        default: ""
       since_days:
         description: "How many days of history to pull"
         required: false
@@ -22,12 +22,20 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      count: ${{ steps.set-matrix.outputs.count }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - id: set-matrix
+        env:
+          BLOGGER_IDS: ${{ inputs.bloggers }}
         run: |
-          IFS=',' read -ra IDS <<< "${{ inputs.bloggers }}"
-          json=$(printf '"%s",' "${IDS[@]}" | sed 's/,$//')
-          echo "matrix=[$json]" >> "$GITHUB_OUTPUT"
+          matrix=$(python scripts/roster.py --matrix --ids "$BLOGGER_IDS")
+          count=$(python scripts/roster.py --count --ids "$BLOGGER_IDS")
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
 
   fetch-extract:
     needs: prepare
@@ -36,8 +44,7 @@ jobs:
       fail-fast: false
       # The free-tier API is shared across accounts; serialize fetches.
       max-parallel: 1
-      matrix:
-        blogger: ${{ fromJson(needs.prepare.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,19 +60,19 @@ jobs:
       - name: Fetch bounded history
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
-        run: python scripts/fetch_tweets.py --user ${{ matrix.blogger }} --backfill --since-date $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
+        run: python scripts/fetch_tweets.py --user "${{ matrix.username }}" --blogger-id "${{ matrix.blogger_id }}" --backfill --since-date $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
       - name: Extract opinions
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           EXTRACT_PROVIDER: auto
-        run: python scripts/extract.py --user ${{ matrix.blogger }} --since $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
+        run: python scripts/extract.py --user "${{ matrix.blogger_id }}" --since $(date -u -d "${{ inputs.since_days }} days ago" +%Y-%m-%d)
       - name: Upload blogger snapshot
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: blogger-data-${{ matrix.blogger }}
-          path: data/bloggers/${{ matrix.blogger }}/
+          name: blogger-data-${{ matrix.blogger_id }}
+          path: data/bloggers/${{ matrix.blogger_id }}/
           retention-days: 1
 
   aggregate:
@@ -89,13 +96,10 @@ jobs:
           path: data/bloggers
           merge-multiple: false
       - name: Require every requested artifact and flatten them
+        env:
+          BLOGGER_IDS: ${{ inputs.bloggers }}
         run: |
-          IFS=',' read -ra IDS <<< "${{ inputs.bloggers }}"
-          missing=""
-          for id in "${IDS[@]}"; do
-            test -d "data/bloggers/blogger-data-$id" || missing="$missing $id"
-          done
-          test -z "$missing" || { echo "::error::Missing account artifacts:$missing"; exit 1; }
+          count=$(python scripts/roster.py --verify-artifacts data/bloggers --ids "$BLOGGER_IDS")
           cd data/bloggers
           for d in blogger-data-*; do
             id="${d#blogger-data-}"
@@ -103,7 +107,7 @@ jobs:
             mv "$d"/* "$id"/
             rmdir "$d"
           done
-          echo "- requested account artifacts: ${#IDS[@]}/${#IDS[@]}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- requested account artifacts: $count/$count" >> "$GITHUB_STEP_SUMMARY"
       - name: Rebuild, price, and validate factual data
         env:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
@@ -114,6 +118,7 @@ jobs:
           python scripts/verify_data.py
           python scripts/prices.py --history-weeks 52 --history-scope recent-28d
           python scripts/refresh_avatars.py
+          python scripts/verify_data.py --require-price-history-52w
       - name: Choose latest ET data cutoff
         run: |
           REPORT_DATE=$(python - <<'PY'
@@ -126,14 +131,14 @@ jobs:
       - name: Run approved rules and pipeline tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope
+          python -m unittest tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
         run: |
           python -m playwright install --with-deps chromium
           mkdir -p "$RUNNER_TEMP/dashboard"
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json"
           python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html"
-          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
+          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" --browser required | tee "$RUNNER_TEMP/dashboard/validation.json"
           sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$GITHUB_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
       - name: Write build metadata
         run: |

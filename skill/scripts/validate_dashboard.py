@@ -50,7 +50,7 @@ def embedded_payload(html: str) -> dict[str, object] | None:
     return None
 
 
-def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dict[str, object]]:
+def structural_checks(path: Path, expected_avatars: int | None = None) -> tuple[list[str], dict[str, object]]:
     raw_html = path.read_text(encoding="utf-8")
     errors: list[str] = []
     try:
@@ -65,6 +65,14 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
     # validate the deterministic embedded payload and routing contract here.
     if isinstance(payload, dict):
         people = payload.get("people", []) if isinstance(payload, dict) else []
+        tracked = payload.get("meta", {}).get("tracked_account_count")
+        if expected_avatars is None:
+            expected_avatars = tracked if isinstance(tracked, int) else len(people)
+        if not isinstance(expected_avatars, int) or expected_avatars < 1:
+            fail(errors, "payload must define a positive tracked account count")
+            expected_avatars = len(people)
+        if tracked != expected_avatars:
+            fail(errors, "meta.tracked_account_count does not match the payload roster")
         drills = payload.get("stock_drilldowns", {}) if isinstance(payload, dict) else {}
         if len(people) != expected_avatars:
             fail(errors, f"expected {expected_avatars} people in payload, found {len(people)}")
@@ -75,7 +83,8 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
             fail(errors, "v2 payload has no stock drilldowns")
         for symbol, drill in drills.items():
             for key in ("today", "days_7", "days_28"):
-                if len(drill.get("person_windows", {}).get(key, [])) != expected_avatars:
+                rows = drill.get("person_windows", {}).get(key, [])
+                if len(rows) != expected_avatars or {row.get("blogger_id") for row in rows} != {p.get("blogger_id") for p in people}:
                     fail(errors, f"{symbol} {key} does not contain {expected_avatars} person states")
                     break
         if "#stock=" not in html or "openStock" not in html:
@@ -103,7 +112,7 @@ def structural_checks(path: Path, expected_avatars: int) -> tuple[list[str], dic
         people_ids = {person.get("blogger_id") for person in people}
         top_pick_ids = {item.get("blogger_id") for item in top_picks}
         if len(top_picks) != expected_avatars or top_pick_ids != people_ids:
-            fail(errors, "monthly top picks must contain exactly the ten tracked accounts")
+            fail(errors, "monthly top picks must contain each active account exactly once")
         return errors, {
             "embedded_avatars": len(avatars), "avatar_identities": len(avatars),
             "stock_profiles": len(drills), "account_profiles": len(people),
@@ -395,7 +404,7 @@ def browser_checks(path: Path, mode: str, expected_avatars: int) -> tuple[list[s
                     if not frame or not frame.locator("#chartLine").count() or not frame.locator("#kolGrid").count():
                         fail(errors, "v2 stock drilldown lacks the frozen stock-detail components")
                     elif frame.locator(".window-tab").count() != 3 or frame.locator(".kol-person-block").count() != expected_avatars:
-                        fail(errors, "v2 stock drilldown does not retain its three windows and 10-person detail grid")
+                        fail(errors, "v2 stock drilldown does not retain its three windows and active-account detail grid")
                     else:
                         frame.locator('.window-tab[data-window="week"]').click()
                         event_rows = frame.locator("#chartEvents .event-row")
@@ -501,7 +510,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("html", type=Path)
     parser.add_argument("--browser", choices=("required", "auto", "skip"), default="required")
-    parser.add_argument("--expected-avatars", type=int, default=10)
+    parser.add_argument("--expected-avatars", type=int, default=None, help="optional explicit roster-count assertion")
     args = parser.parse_args()
     if not args.html.is_file():
         parser.error(f"report not found: {args.html}")
@@ -509,7 +518,8 @@ def main() -> int:
     errors, summary = structural_checks(args.html, args.expected_avatars)
     browser_summary: dict[str, object] = {"browser_checked": False}
     if args.browser != "skip":
-        browser_errors, browser_summary = browser_checks(args.html, args.browser, args.expected_avatars)
+        expected_avatars = args.expected_avatars or int(summary.get("account_profiles") or 0)
+        browser_errors, browser_summary = browser_checks(args.html, args.browser, expected_avatars)
         errors.extend(browser_errors)
     summary.update(browser_summary)
     summary["ok"] = not errors

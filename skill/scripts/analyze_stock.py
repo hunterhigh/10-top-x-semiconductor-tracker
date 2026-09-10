@@ -22,6 +22,7 @@ Usage:
 
 import json, sys, datetime, os
 from collections import defaultdict, Counter
+from pathlib import Path
 
 
 # ---------------------------------------------------------------------------
@@ -103,7 +104,19 @@ def _bull_ratio(ms):
 # Main
 # ---------------------------------------------------------------------------
 
-def analyze(path, as_of=None, blogger_id=None):
+def active_blogger_ids(roster_path):
+    """Return active stable ids without imposing a roster cardinality."""
+    try:
+        rows = json.loads(Path(roster_path).read_text(encoding="utf-8")).get("bloggers", [])
+    except (OSError, json.JSONDecodeError, AttributeError) as exc:
+        raise ValueError(f"cannot read active roster {roster_path}: {exc}") from exc
+    ids = [str(row.get("id")) for row in rows if isinstance(row, dict) and row.get("active", True) is True and row.get("id")]
+    if not ids or len(ids) != len(set(ids)):
+        raise ValueError("active roster must contain unique blogger_id values")
+    return set(ids)
+
+
+def analyze(path, as_of=None, blogger_id=None, allowed_bloggers=None):
     with open(path, encoding='utf-8') as f:
         data = json.load(f)
 
@@ -120,6 +133,8 @@ def analyze(path, as_of=None, blogger_id=None):
         mentions = [m for m in mentions if m.get('date') and m['date'] <= as_of.isoformat()]
     if blogger_id:
         mentions = [m for m in mentions if m.get('blogger_id') == blogger_id]
+    elif allowed_bloggers is not None:
+        mentions = [m for m in mentions if m.get('blogger_id') in set(allowed_bloggers)]
 
     all_sorted = sorted([m for m in mentions if m.get('date')], key=lambda m: m['date'])
     explicit = [m for m in all_sorted if m.get('mention_type') == 'explicit_stance']
@@ -401,7 +416,9 @@ def main():
     as_of = datetime.date.fromisoformat(as_of_str) if as_of_str else None
     blogger_id = _argval('--blogger')
 
-    result = analyze(path, as_of, blogger_id)
+    roster_path = Path(__file__).resolve().parents[2] / "config" / "bloggers.json"
+    allowed = None if blogger_id else active_blogger_ids(roster_path)
+    result = analyze(path, as_of, blogger_id, allowed)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

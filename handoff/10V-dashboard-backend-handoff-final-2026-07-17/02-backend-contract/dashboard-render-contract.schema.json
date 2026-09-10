@@ -14,13 +14,13 @@
         "report_date_et": {"type": "string", "format": "date"},
         "timezone": {"const": "America/New_York"},
         "generated_at": {"type": "string", "format": "date-time"},
-        "tracked_account_count": {"const": 10},
-        "scored_account_count": {"const": 10},
+        "tracked_account_count": {"type": "integer", "minimum": 1},
+        "scored_account_count": {"type": "integer", "minimum": 0},
         "data_cutoff_at": {"type": ["string", "null"], "format": "date-time"},
         "data_snapshot_id": {"type": ["string", "null"]}
       }
     },
-    "people": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/person"}},
+    "people": {"type": "array", "items": {"$ref": "#/$defs/person"}},
     "daily": {"$ref": "#/$defs/mainReport"},
     "weekly": {
       "allOf": [
@@ -50,7 +50,7 @@
       "properties": {
         "window": {"$ref": "#/$defs/window"},
         "rows": {"type": "array", "items": {"$ref": "#/$defs/monthlyRow"}},
-        "top_picks": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/monthlyTopPick"}}
+        "top_picks": {"type": "array", "items": {"$ref": "#/$defs/monthlyTopPick"}}
       }
     },
     "stock_drilldowns": {
@@ -335,9 +335,9 @@
           "additionalProperties": false,
           "required": ["today", "days_7", "days_28"],
           "properties": {
-            "today": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowState"}},
-            "days_7": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowState"}},
-            "days_28": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowState"}}
+            "today": {"type": "array", "items": {"$ref": "#/$defs/personWindowState"}},
+            "days_7": {"type": "array", "items": {"$ref": "#/$defs/personWindowState"}},
+            "days_28": {"type": "array", "items": {"$ref": "#/$defs/personWindowState"}}
           }
         },
         "people_by_window": {
@@ -345,9 +345,9 @@
           "additionalProperties": false,
           "required": ["today", "days_7", "days_28"],
           "properties": {
-            "today": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowStats"}},
-            "days_7": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowStats"}},
-            "days_28": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/personWindowStats"}}
+            "today": {"type": "array", "items": {"$ref": "#/$defs/personWindowStats"}},
+            "days_7": {"type": "array", "items": {"$ref": "#/$defs/personWindowStats"}},
+            "days_28": {"type": "array", "items": {"$ref": "#/$defs/personWindowStats"}}
           }
         }
       }
@@ -358,7 +358,7 @@
       "required": ["window", "participant_count", "mention_count", "bullish_count", "bearish_count", "price_change"],
       "properties": {
         "window": {"$ref": "#/$defs/window"},
-        "participant_count": {"type": "integer", "minimum": 0, "maximum": 10},
+        "participant_count": {"type": "integer", "minimum": 0},
         "mention_count": {"type": "integer", "minimum": 0},
         "bullish_count": {"type": "integer", "minimum": 0},
         "bearish_count": {"type": "integer", "minimum": 0},
