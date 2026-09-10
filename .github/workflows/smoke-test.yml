@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - ".github/workflows/smoke-test.yml"
       - "skill/scripts/dashboard_payload.py"
       - "skill/scripts/stock_store.py"
       - "skill/scripts/report_scope.py"
@@ -14,6 +15,7 @@ on:
       - "skill/SKILL.md"
       - "skill/references/**"
       - "scripts/build_db.py"
+      - "scripts/extract.py"
       - "scripts/storage_layout.py"
       - "scripts/verify_data.py"
       - "scripts/incremental_refresh.py"
@@ -35,6 +37,7 @@ on:
       - "tests/test_write_sync_health.py"
       - "tests/test_roster.py"
       - "tests/test_fetch_tweets.py"
+      - "tests/test_extract.py"
       - "tests/test_analyze_stock.py"
       - "tests/test_render_dashboard.py"
       - "handoff/10V-dashboard-backend-handoff-final-2026-07-17/**"
