@@ -30,8 +30,10 @@ class Response:
 class Session:
     def __init__(self, outcomes):
         self.outcomes = iter(outcomes)
+        self.calls = []
 
-    def get(self, *_args, **_kwargs):
+    def get(self, *args, **kwargs):
+        self.calls.append((args, kwargs))
         outcome = next(self.outcomes)
         if isinstance(outcome, Exception):
             raise outcome
@@ -62,6 +64,7 @@ class FetchIntegrityTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.data_dir = Path(self.temp.name) / "data"
         self.raw, self.state = self._paths()
+        self.profile = self.raw.parent / "profile.json"
         self.raw.parent.mkdir(parents=True)
         self.raw.write_text(json.dumps([{"tweet_id": "10", "created_at": "Thu Jul 10 00:00:00 +0000 2026"}]), encoding="utf-8")
         self.state.write_text(json.dumps({"newest_tweet_id": "10", "last_run_utc": "old"}), encoding="utf-8")
@@ -76,10 +79,11 @@ class FetchIntegrityTests(unittest.TestCase):
         return directory / "raw_tweets.json", directory / "state.json"
 
     def run_fetch(self, outcomes, *, backfill=False, since_date=None):
+        self.last_session = Session(outcomes)
         with (
             patch.object(FETCH, "DATA_DIR", self.data_dir),
             patch.object(FETCH, "get_api_key", return_value="test-key"),
-            patch.object(FETCH, "session_with_key", return_value=Session(outcomes)),
+            patch.object(FETCH, "session_with_key", return_value=self.last_session),
             patch.object(FETCH.time, "sleep"),
         ):
             FETCH.fetch("tester", backfill=backfill, since_date=since_date)
@@ -90,6 +94,7 @@ class FetchIntegrityTests(unittest.TestCase):
         self.assertEqual(exit_code.exception.code, 1)
         self.assertEqual(self.raw.read_bytes(), self.before_raw)
         self.assertEqual(self.state.read_bytes(), self.before_state)
+        self.assertFalse(self.profile.exists())
 
     def test_401_preserves_existing_raw_and_state(self):
         self.assert_failure_preserves_watermark(Response(401, text="bad key"))
@@ -117,6 +122,39 @@ class FetchIntegrityTests(unittest.TestCase):
         self.assertEqual(state["last_api_tweets_seen"], 0)
         self.assertEqual(state["last_new_tweets_added"], 0)
         self.assertIn("last_successful_fetch_utc", state)
+
+    def test_existing_user_lookup_persists_avatar_without_an_extra_api_call(self):
+        self.run_fetch([
+            Response(200, {"data": {
+                "id": "1",
+                "userName": "tester",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1/avatar.jpg",
+                "description": "must not be persisted",
+            }}),
+            Response(200, {"data": {"tweets": [], "has_next_page": False}}),
+        ])
+
+        profile = json.loads(self.profile.read_text(encoding="utf-8"))
+        self.assertEqual(profile["id"], "1")
+        self.assertEqual(profile["user_name"], "tester")
+        self.assertEqual(
+            profile["avatar_url"],
+            "https://pbs.twimg.com/profile_images/1/avatar.jpg",
+        )
+        self.assertIn("observed_at", profile)
+        self.assertNotIn("description", profile)
+        self.assertEqual(len(self.last_session.calls), 2)
+        self.assertTrue(self.last_session.calls[0][0][0].endswith("/twitter/user/info"))
+        self.assertTrue(self.last_session.calls[1][0][0].endswith("/twitter/user/last_tweets"))
+
+    def test_missing_profile_picture_is_recorded_without_failing_tweets(self):
+        self.run_fetch([
+            Response(200, {"data": {"id": "1", "userName": "tester"}}),
+            Response(200, {"data": {"tweets": [], "has_next_page": False}}),
+        ])
+
+        profile = json.loads(self.profile.read_text(encoding="utf-8"))
+        self.assertIsNone(profile["avatar_url"])
 
     def test_deleted_anchor_stops_after_crossing_id_watermark(self):
         self.run_fetch([

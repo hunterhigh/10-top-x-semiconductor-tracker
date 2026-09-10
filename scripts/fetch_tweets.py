@@ -60,6 +60,10 @@ def blogger_paths(username: str) -> tuple[Path, Path]:
     d = DATA_DIR / "bloggers" / username
     return d / "raw_tweets.json", d / "state.json"
 
+
+def blogger_profile_path(username: str) -> Path:
+    return DATA_DIR / "bloggers" / username / "profile.json"
+
 PAGE_SLEEP_SEC = 5.5           # twitterapi.io free tier: max 1 request / 5s (QPS-limited); small margin added
 MAX_BACKFILL_PAGES = 2000      # explicit backfills may intentionally traverse a large bounded history
 MAX_INCREMENTAL_PAGES = 50     # incremental runs must never degrade into an accidental full-history pull
@@ -114,8 +118,8 @@ class FetchError(RuntimeError):
     """An API/network failure that makes this incremental snapshot unpublishable."""
 
 
-def get_user_id(s: requests.Session, username: str) -> str:
-    """Resolve screen name -> numeric user id or fail without mutating a watermark."""
+def get_user_profile(s: requests.Session, username: str) -> dict:
+    """Read and normalize the public profile using the existing user-info request."""
     for attempt in range(1, RATE_LIMIT_RETRIES + 2):
         try:
             r = s.get(f"{BASE_URL}/twitter/user/info",
@@ -124,7 +128,7 @@ def get_user_id(s: requests.Session, username: str) -> str:
             raise FetchError(f"user lookup network error: {exc}") from exc
         if r.status_code == 429 and attempt <= RATE_LIMIT_RETRIES:
             wait = RATE_LIMIT_BACKOFF_SEC * attempt
-            log(f"  user id lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
+            log(f"  user lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
             time.sleep(wait)
             continue
         if r.status_code != 200:
@@ -136,9 +140,18 @@ def get_user_id(s: requests.Session, username: str) -> str:
         if payload.get("status") == "error":
             raise FetchError(f"user lookup API error: {payload.get('message') or payload.get('msg') or 'unknown'}")
         data = payload.get("data") or payload
-        uid = data.get("id") or (data.get("user") or {}).get("id")
+        nested_user = data.get("user") or {}
+        uid = data.get("id") or nested_user.get("id")
         if uid:
-            return str(uid)
+            return {
+                "schema_version": 1,
+                "id": str(uid),
+                "user_name": str(
+                    data.get("userName") or nested_user.get("userName") or username
+                ),
+                "avatar_url": data.get("profilePicture") or nested_user.get("profilePicture"),
+                "observed_at": None,
+            }
         raise FetchError("user lookup response did not contain an id")
     raise FetchError("user lookup exhausted rate-limit retries")
 
@@ -288,10 +301,11 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
             f"(bounds pagination instead of pulling full account history)")
 
     try:
-        uid = get_user_id(s, username)
+        profile = get_user_profile(s, username)
     except FetchError as exc:
         log(f"FAILING: @{username} was not fetched; {exc}")
         sys.exit(1)
+    uid = profile["id"]
     base_params = {"includeReplies": "true"}         # pull everything, filter locally
     base_params["userId"] = uid
     log(f"Resolved @{username} -> userId {uid}")
@@ -507,6 +521,8 @@ def fetch(username: str, backfill: bool, since_date=None) -> None:
             newest_id_this_run,
         )
     successful_at = datetime.now(timezone.utc).isoformat()
+    profile["observed_at"] = successful_at
+    save_json(blogger_profile_path(username), profile)
     state["last_run_utc"] = successful_at  # legacy compatibility
     state["last_successful_fetch_utc"] = successful_at
     state["last_api_tweets_seen"] = seen_total

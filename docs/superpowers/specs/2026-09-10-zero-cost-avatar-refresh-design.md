@@ -2,7 +2,7 @@
 
 Date: 2026-09-10
 
-Status: Approved for implementation pending final written-spec review
+Status: Approved for implementation
 
 ## Context
 
