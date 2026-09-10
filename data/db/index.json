@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-10T12:18:29.895417+00:00",
+  "generated_at": "2026-09-10T15:17:36.178042+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,18 +16,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2341,
-    "total_mentions": 28698,
+    "total_tickers": 2342,
+    "total_mentions": 28709,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2341,
+      "files": 2342,
       "shards": 256,
       "max_shard_width": 18,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-10T12:19:33.273131+00:00"
+    "prices_updated_at": "2026-09-10T15:19:10.400639+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -601,7 +601,7 @@
         "price_symbol": "AAPL",
         "verification_status": "verified"
       },
-      "cashtag": "AAPL",
+      "cashtag": "$AAPL",
       "price_symbol": "AAPL",
       "exchange": "US",
       "currency": "USD",
@@ -610,11 +610,11 @@
       "company": "Apple Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-09-09",
-      "total_mentions": 428,
+      "last_mention": "2026-09-10",
+      "total_mentions": 429,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 166,
+        "StockMKTNewz": 167,
         "aleabitoreddit": 104,
         "unusual_whales": 52,
         "jukan05": 39,
@@ -1868,6 +1868,50 @@
       "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
       "price_history_52w_status": "insufficient_history"
     },
+    "UNVERIFIED:SPX": {
+      "ticker": "SPX",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SPX",
+        "display_code": "SPX",
+        "display_name": "S&P 500 Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SPX"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "S&P 500",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "S&P 500 Index",
+      "industry": null,
+      "first_mention": "2025-10-01",
+      "last_mention": "2026-09-10",
+      "total_mentions": 107,
+      "blogger_count": 9,
+      "total_mentions_by_blogger": {
+        "unusual_whales": 28,
+        "balder": 28,
+        "StockMKTNewz": 26,
+        "octopusycc": 12,
+        "michaelsikand": 4,
+        "asklivermore": 4,
+        "aleabitoreddit": 2,
+        "frank_trading": 2,
+        "ren_stocks": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SPX",
+      "hash": "3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3",
+      "path": "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json"
+    },
     "US:PLTR": {
       "ticker": "PLTR",
       "instrument": {
@@ -2076,50 +2120,6 @@
       "instrument_id": "London LSE:RPI",
       "hash": "bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab",
       "path": "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json"
-    },
-    "UNVERIFIED:SPX": {
-      "ticker": "SPX",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:SPX",
-        "display_code": "SPX",
-        "display_name": "S&P 500 Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "SPX"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "S&P 500",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "S&P 500 Index",
-      "industry": null,
-      "first_mention": "2025-10-01",
-      "last_mention": "2026-09-09",
-      "total_mentions": 104,
-      "blogger_count": 9,
-      "total_mentions_by_blogger": {
-        "unusual_whales": 28,
-        "balder": 26,
-        "StockMKTNewz": 25,
-        "octopusycc": 12,
-        "michaelsikand": 4,
-        "asklivermore": 4,
-        "aleabitoreddit": 2,
-        "frank_trading": 2,
-        "ren_stocks": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:SPX",
-      "hash": "3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3",
-      "path": "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json"
     },
     "US:CRDO": {
       "ticker": "CRDO",
@@ -2457,6 +2457,48 @@
       "hash": "8ed487ccc8589966cab3815f282ae828b475c813c014e5359b0af9371c8b4b48",
       "path": "stocks/8e/8ed487ccc8589966cab3815f282ae828b475c813c014e5359b0af9371c8b4b48.json"
     },
+    "US:MSTR": {
+      "ticker": "MSTR",
+      "instrument": {
+        "instrument_id": "US:MSTR",
+        "display_code": "MSTR",
+        "display_name": "Strategy Inc",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "MSTR"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "MSTR",
+        "verification_status": "verified"
+      },
+      "cashtag": "$MSTR",
+      "price_symbol": "MSTR",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Strategy Inc",
+      "industry": null,
+      "first_mention": "2025-07-02",
+      "last_mention": "2026-09-10",
+      "total_mentions": 76,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 40,
+        "octopusycc": 12,
+        "StockMKTNewz": 12,
+        "asklivermore": 8,
+        "balder": 3,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:MSTR",
+      "hash": "0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab",
+      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json",
+      "price_history_52w_status": "ok"
+    },
     "US:SNAP": {
       "ticker": "SNAP",
       "instrument": {
@@ -2495,48 +2537,6 @@
       "instrument_id": "US:SNAP",
       "hash": "dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0",
       "path": "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json"
-    },
-    "US:MSTR": {
-      "ticker": "MSTR",
-      "instrument": {
-        "instrument_id": "US:MSTR",
-        "display_code": "MSTR",
-        "display_name": "Strategy Inc",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "MSTR"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "MSTR",
-        "verification_status": "verified"
-      },
-      "cashtag": "MSTR",
-      "price_symbol": "MSTR",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Strategy Inc",
-      "industry": null,
-      "first_mention": "2025-07-02",
-      "last_mention": "2026-09-09",
-      "total_mentions": 75,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 40,
-        "octopusycc": 12,
-        "StockMKTNewz": 11,
-        "asklivermore": 8,
-        "balder": 3,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:MSTR",
-      "hash": "0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab",
-      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json",
-      "price_history_52w_status": "ok"
     },
     "US:QQQ": {
       "ticker": "QQQ",
@@ -3146,6 +3146,49 @@
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
       "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
+    "US:WMT": {
+      "ticker": "WMT",
+      "instrument": {
+        "instrument_id": "US:WMT",
+        "display_code": "WMT",
+        "display_name": "Walmart Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "WMT"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "WMT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$WMT",
+      "price_symbol": "WMT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Walmart Inc.",
+      "industry": null,
+      "first_mention": "2025-12-10",
+      "last_mention": "2026-09-10",
+      "total_mentions": 58,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 19,
+        "balder": 18,
+        "aleabitoreddit": 13,
+        "unusual_whales": 4,
+        "DJTRadar": 1,
+        "ren_stocks": 1,
+        "frank_trading": 1,
+        "octopusycc": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:WMT",
+      "hash": "79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1",
+      "path": "stocks/79/79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1.json"
+    },
     "US:AVAV": {
       "ticker": "AVAV",
       "instrument": {
@@ -3184,49 +3227,6 @@
       "instrument_id": "US:AVAV",
       "hash": "3b7b2b5f6a198ddf7e091747fdc230c89790f218a6f020f7a8e0e6c6f1b9aaed",
       "path": "stocks/3b/3b7b2b5f6a198ddf7e091747fdc230c89790f218a6f020f7a8e0e6c6f1b9aaed.json"
-    },
-    "US:WMT": {
-      "ticker": "WMT",
-      "instrument": {
-        "instrument_id": "US:WMT",
-        "display_code": "WMT",
-        "display_name": "Walmart Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "WMT"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "WMT",
-        "verification_status": "verified"
-      },
-      "cashtag": "WMT",
-      "price_symbol": "WMT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Walmart Inc.",
-      "industry": null,
-      "first_mention": "2025-12-10",
-      "last_mention": "2026-09-03",
-      "total_mentions": 57,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 18,
-        "balder": 18,
-        "aleabitoreddit": 13,
-        "unusual_whales": 4,
-        "DJTRadar": 1,
-        "ren_stocks": 1,
-        "frank_trading": 1,
-        "octopusycc": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:WMT",
-      "hash": "79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1",
-      "path": "stocks/79/79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1.json"
     },
     "US:ASTS": {
       "ticker": "ASTS",
@@ -3469,7 +3469,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -3712,8 +3713,7 @@
       "price_status": "ok",
       "instrument_id": "US:AMAT",
       "hash": "1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd",
-      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json"
     },
     "US:BABA": {
       "ticker": "BABA",
@@ -3801,7 +3801,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:TE": {
       "ticker": "TE",
@@ -4662,7 +4663,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:SHUNSIN": {
       "ticker": "SHUNSIN",
@@ -8701,6 +8703,45 @@
       "hash": "f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594",
       "path": "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json"
     },
+    "UNVERIFIED:NDX": {
+      "ticker": "NDX",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:NDX",
+        "display_code": "NDX",
+        "display_name": "Nasdaq-100 Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "NDX"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "纳斯达克 100",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Nasdaq-100 Index",
+      "industry": null,
+      "first_mention": "2026-06-14",
+      "last_mention": "2026-09-10",
+      "total_mentions": 16,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "balder": 9,
+        "StockMKTNewz": 5,
+        "octopusycc": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:NDX",
+      "hash": "3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072",
+      "path": "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json"
+    },
     "UNVERIFIED:SKHX": {
       "ticker": "SKHX",
       "instrument": {
@@ -8853,45 +8894,6 @@
       "instrument_id": "UNVERIFIED:HUAWEI",
       "hash": "a790a35827c9fdf8f3e2b24d4893131dbe2a1d3a125cb988326f37b7e4ec78cd",
       "path": "stocks/a7/a790a35827c9fdf8f3e2b24d4893131dbe2a1d3a125cb988326f37b7e4ec78cd.json"
-    },
-    "UNVERIFIED:NDX": {
-      "ticker": "NDX",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:NDX",
-        "display_code": "NDX",
-        "display_name": "Nasdaq-100 Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "NDX"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "纳指 100",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Nasdaq-100 Index",
-      "industry": null,
-      "first_mention": "2026-06-14",
-      "last_mention": "2026-09-09",
-      "total_mentions": 15,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "balder": 8,
-        "StockMKTNewz": 5,
-        "octopusycc": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:NDX",
-      "hash": "3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072",
-      "path": "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json"
     },
     "UNVERIFIED:UNKNOWN": {
       "ticker": "UNKNOWN",
@@ -18881,6 +18883,44 @@
       "hash": "d76f6e551547cb017417d10fd080805270ccaccd5bbf00ec2591b14b247a4ed7",
       "path": "stocks/d7/d76f6e551547cb017417d10fd080805270ccaccd5bbf00ec2591b14b247a4ed7.json"
     },
+    "UNVERIFIED:RUT": {
+      "ticker": "RUT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:RUT",
+        "display_code": "RUT",
+        "display_name": "Russell 2000 Index",
+        "display_market": "Market unverified",
+        "aliases": [
+          "RUT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Russell 2000",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Russell 2000 Index",
+      "industry": null,
+      "first_mention": "2025-09-18",
+      "last_mention": "2026-09-10",
+      "total_mentions": 6,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 3,
+        "StockMKTNewz": 2,
+        "asklivermore": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:RUT",
+      "hash": "5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255",
+      "path": "stocks/5e/5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255.json"
+    },
     "UNVERIFIED:SILVER": {
       "ticker": "SILVER",
       "instrument": {
@@ -21943,44 +21983,6 @@
       "instrument_id": "UNVERIFIED:PSMC",
       "hash": "e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1",
       "path": "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json"
-    },
-    "UNVERIFIED:RUT": {
-      "ticker": "RUT",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:RUT",
-        "display_code": "RUT",
-        "display_name": "Russell 2000 Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "RUT"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "Russell 2000",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Russell 2000 Index",
-      "industry": null,
-      "first_mention": "2025-09-18",
-      "last_mention": "2026-09-09",
-      "total_mentions": 5,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 3,
-        "StockMKTNewz": 1,
-        "asklivermore": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:RUT",
-      "hash": "5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255",
-      "path": "stocks/5e/5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255.json"
     },
     "UNVERIFIED:RVTY": {
       "ticker": "RVTY",
@@ -32339,6 +32341,44 @@
       "hash": "91fcd4a4c4f6d2a44a55a37e2ffa8f3256cafc8e66b0b3d17d726c9ed703d807",
       "path": "stocks/91/91fcd4a4c4f6d2a44a55a37e2ffa8f3256cafc8e66b0b3d17d726c9ed703d807.json"
     },
+    "UNVERIFIED:PZZA": {
+      "ticker": "PZZA",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:PZZA",
+        "display_code": "PZZA",
+        "display_name": "Papa John's International",
+        "display_market": "Market unverified",
+        "aliases": [
+          "PZZA"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$PZZA",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Papa John's International",
+      "industry": null,
+      "first_mention": "2026-08-17",
+      "last_mention": "2026-09-10",
+      "total_mentions": 3,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "asklivermore": 1,
+        "aleabitoreddit": 1,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:PZZA",
+      "hash": "9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5",
+      "path": "stocks/9c/9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5.json"
+    },
     "UNVERIFIED:RACE": {
       "ticker": "RACE",
       "instrument": {
@@ -37220,6 +37260,42 @@
       "instrument_id": "UNVERIFIED:4958",
       "hash": "1f0abb2993a75f2a82ee5a51f786e3a18ace9703f3536f4cb3307792288b35d9",
       "path": "stocks/1f/1f0abb2993a75f2a82ee5a51f786e3a18ace9703f3536f4cb3307792288b35d9.json"
+    },
+    "UNVERIFIED:5332": {
+      "ticker": "5332",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:5332",
+        "display_code": "5332",
+        "display_name": "TOTO Ltd.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "5332"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "TOTO（5332.T）",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "TOTO Ltd.",
+      "industry": null,
+      "first_mention": "2026-02-24",
+      "last_mention": "2026-09-10",
+      "total_mentions": 2,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 2
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:5332",
+      "hash": "448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac",
+      "path": "stocks/44/448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac.json"
     },
     "UNVERIFIED:5765": {
       "ticker": "5765",
@@ -42152,43 +42228,6 @@
       "instrument_id": "UNVERIFIED:PSTG",
       "hash": "c4b0816566a52a729f6fcfa87bae162682c40cf986a650fa28204895d1ffa399",
       "path": "stocks/c4/c4b0816566a52a729f6fcfa87bae162682c40cf986a650fa28204895d1ffa399.json"
-    },
-    "UNVERIFIED:PZZA": {
-      "ticker": "PZZA",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:PZZA",
-        "display_code": "PZZA",
-        "display_name": "Papa John's International",
-        "display_market": "Market unverified",
-        "aliases": [
-          "PZZA"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "Papa John's",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Papa John's International",
-      "industry": null,
-      "first_mention": "2026-08-17",
-      "last_mention": "2026-08-28",
-      "total_mentions": 2,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "asklivermore": 1,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:PZZA",
-      "hash": "9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5",
-      "path": "stocks/9c/9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5.json"
     },
     "UNVERIFIED:QNT": {
       "ticker": "QNT",
@@ -50662,42 +50701,6 @@
       "instrument_id": "UNVERIFIED:5289",
       "hash": "761a704d5d13d8f7a2a262909a2ecb4d0d3d60d7189fd81379f1ed68adc10931",
       "path": "stocks/76/761a704d5d13d8f7a2a262909a2ecb4d0d3d60d7189fd81379f1ed68adc10931.json"
-    },
-    "UNVERIFIED:5332": {
-      "ticker": "5332",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:5332",
-        "display_code": "5332",
-        "display_name": "Name unverified",
-        "display_market": "Market unverified",
-        "aliases": [
-          "5332"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "Toto the toilet maker",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": null,
-      "industry": null,
-      "first_mention": "2026-02-24",
-      "last_mention": "2026-02-24",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 1
-      },
-      "price_status": "pending",
-      "instrument_id": "UNVERIFIED:5332",
-      "hash": "448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac",
-      "path": "stocks/44/448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac.json"
     },
     "UNVERIFIED:5333": {
       "ticker": "5333",
@@ -62182,6 +62185,42 @@
       "instrument_id": "UNVERIFIED:HOLYSTONE",
       "hash": "3066c04c5224e094b5a6b88698813133cf7ba404e9fb7bd55919fc707ab50770",
       "path": "stocks/30/3066c04c5224e094b5a6b88698813133cf7ba404e9fb7bd55919fc707ab50770.json"
+    },
+    "UNVERIFIED:HOMEBUILDER": {
+      "ticker": "HOMEBUILDER",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:HOMEBUILDER",
+        "display_code": "HOMEBUILDER",
+        "display_name": "Homebuilder sector (unspecified)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "HOMEBUILDER"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "homebuilder",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Homebuilder sector (unspecified)",
+      "industry": null,
+      "first_mention": "2026-09-10",
+      "last_mention": "2026-09-10",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "asklivermore": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:HOMEBUILDER",
+      "hash": "a1398e9df87281aa2780abfe1315acd8aea10f0b82a723e7a189bcb9eb31b2ac",
+      "path": "stocks/a1/a1398e9df87281aa2780abfe1315acd8aea10f0b82a723e7a189bcb9eb31b2ac.json"
     },
     "UNVERIFIED:HOMEBUILDERS": {
       "ticker": "HOMEBUILDERS",
@@ -89269,6 +89308,9 @@
     "$HOMB": [
       "US:HOMB"
     ],
+    "$HOMEBUILDER": [
+      "UNVERIFIED:HOMEBUILDER"
+    ],
     "$HOMEBUILDERS": [
       "UNVERIFIED:HOMEBUILDERS"
     ],
@@ -98973,6 +99015,12 @@
     "HOME DEPOT, INC.": [
       "US:HD"
     ],
+    "HOMEBUILDER": [
+      "UNVERIFIED:HOMEBUILDER"
+    ],
+    "HOMEBUILDER SECTOR (UNSPECIFIED)": [
+      "UNVERIFIED:HOMEBUILDER"
+    ],
     "HOMEBUILDERS": [
       "UNVERIFIED:HOMEBUILDERS"
     ],
@@ -101553,7 +101601,6 @@
       "UNVERIFIED:5020",
       "UNVERIFIED:5210",
       "UNVERIFIED:5289",
-      "UNVERIFIED:5332",
       "UNVERIFIED:5333",
       "UNVERIFIED:5N",
       "UNVERIFIED:6187",
@@ -102801,9 +102848,6 @@
     ],
     "PANW": [
       "US:PANW"
-    ],
-    "PAPA JOHN'S": [
-      "UNVERIFIED:PZZA"
     ],
     "PAPA JOHN'S INTERNATIONAL": [
       "UNVERIFIED:PZZA"
@@ -105684,9 +105728,14 @@
     "TOTO": [
       "UNVERIFIED:TOTO"
     ],
+    "TOTO LTD.": [
+      "UNVERIFIED:5332"
+    ],
     "TOTO THE TOILET MAKER": [
-      "UNVERIFIED:5332",
       "UNVERIFIED:TOTO"
+    ],
+    "TOTO（5332.T）": [
+      "UNVERIFIED:5332"
     ],
     "TOWA": [
       "TSE:6315"
@@ -108119,6 +108168,9 @@
     ],
     "UNVERIFIED:HOLYSTONE": [
       "UNVERIFIED:HOLYSTONE"
+    ],
+    "UNVERIFIED:HOMEBUILDER": [
+      "UNVERIFIED:HOMEBUILDER"
     ],
     "UNVERIFIED:HOMEBUILDERS": [
       "UNVERIFIED:HOMEBUILDERS"
@@ -114329,11 +114381,11 @@
     "现代汽车": [
       "UNVERIFIED:005380"
     ],
-    "纳指 100": [
-      "UNVERIFIED:NDX"
-    ],
     "纳斯达克": [
       "UNVERIFIED:NASDAQ"
+    ],
+    "纳斯达克 100": [
+      "UNVERIFIED:NDX"
     ],
     "美团": [
       "UNVERIFIED:MEITUAN"
@@ -114411,12 +114463,12 @@
     "stocks/4f/4fef2cdb4b77220b21fbc17314cf6ced1fdcdc89cd67388e549cc95252bce0d1.json",
     "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
     "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
+    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
     "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
     "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json",
     "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
     "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json",
-    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
     "stocks/0a/0a6a50b3e0798a170f5066f9d9394e43aa4458139aee1dee60f43eb4cf09cadf.json",
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
@@ -114425,8 +114477,8 @@
     "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
     "stocks/8e/8ed487ccc8589966cab3815f282ae828b475c813c014e5359b0af9371c8b4b48.json",
-    "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json",
     "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json",
+    "stocks/dc/dc72446f971eda3eb6b55056eec12a4a852d19ea7cab995582375eaef15c5cc0.json",
     "stocks/06/062eab0764197b52bd4a75142d2cda7ef77740752d4342c2ba1fb93fb75d014b.json",
     "stocks/7a/7a6293a23f0f511e2a62f38f1d350965603edd5fc6713b00a9fd761b2b13e6b4.json",
     "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
@@ -114442,8 +114494,8 @@
     "stocks/c9/c99003b5b2daf205169a1e83674b4b24c955c67e0a4a2c15fd6f41aa87f63bd2.json",
     "stocks/d2/d2d76618ad57717246f762e870beaa14f4ea84fc449b9dbb104541bebf4b1d89.json",
     "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-    "stocks/3b/3b7b2b5f6a198ddf7e091747fdc230c89790f218a6f020f7a8e0e6c6f1b9aaed.json",
     "stocks/79/79d6a3c54811a3d9e6562b8f5a8b3178053e9876c89ea1134f31730eb4e118f1.json",
+    "stocks/3b/3b7b2b5f6a198ddf7e091747fdc230c89790f218a6f020f7a8e0e6c6f1b9aaed.json",
     "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
     "stocks/e5/e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281.json",
     "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json",
@@ -114583,11 +114635,11 @@
     "stocks/89/8967efbbb1b1623d8ac619d4670416faa545354e13cae5d0144a8d3ad1613110.json",
     "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
     "stocks/f1/f1571977ce3e1bb466dcb3d13597063a30e43b0e04ad69e76a9c7786d0963594.json",
+    "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json",
     "stocks/51/515819ad712489340efb63584e935c79a71dfee4471065e42d976d8fb2cbb977.json",
     "stocks/9e/9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463.json",
     "stocks/e5/e5e3ca7132956910be89e1f37cb9eaa8216e3c29917b03b79ea8f5cf0095e856.json",
     "stocks/a7/a790a35827c9fdf8f3e2b24d4893131dbe2a1d3a125cb988326f37b7e4ec78cd.json",
-    "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json",
     "stocks/fb/fbae39aa4854607d5b9422fe851d73e1da14a581e4f74078df1bffac8dab84d3.json",
     "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json",
     "stocks/8e/8e9e433326ddc820c9462e9f6855abfe7a05b69a1de0c81f7a9d437b81ce5d66.json",
@@ -114855,6 +114907,7 @@
     "stocks/82/82568717c9a82595a3aa6748cef16f54e06c3e1665bd101e53209868f8f4dbaf.json",
     "stocks/7e/7eba12c65767b16ae9c80fb3778135d74e6db655ab7be8ac5b84cbbe869ce67b.json",
     "stocks/d7/d76f6e551547cb017417d10fd080805270ccaccd5bbf00ec2591b14b247a4ed7.json",
+    "stocks/5e/5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255.json",
     "stocks/c4/c4cdd3f19eb40f0e38414d2df440fcc47468f0700ffe43ac0b417c349073836c.json",
     "stocks/e9/e91ac8f58ec499f03771cf93ac8cd4983175a039506ca14a17de02866370c5f2.json",
     "stocks/ce/ce4e7798ff6c00df40039bd8e83509e0d9652548603e3e2b77deb3111224497b.json",
@@ -114938,7 +114991,6 @@
     "stocks/19/19fa1c776000927a8f1e68e0bd2ade129a5b67f39aa5b46f377143b324b55e6b.json",
     "stocks/1c/1ceca2302c4288681386d8a13c2cd944039fd985001a082d2f415024c7efaaca.json",
     "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json",
-    "stocks/5e/5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255.json",
     "stocks/18/18f19db69c562b6860b54f56e92af99188d6d2308fcd0c5139742e6e13ced78e.json",
     "stocks/8e/8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3.json",
     "stocks/c1/c1533c0826094415d4b0855bb7a1442c9d141b2ba7277e2180087d42260548cb.json",
@@ -115222,6 +115274,7 @@
     "stocks/f3/f30f2e9636a5573cca52dcba0747462f809b03f302b636540cf1fc6477c00761.json",
     "stocks/9e/9ebc030ae7781dd355d5cc0da4c1510d185c26c433e52f1b218245b7616d5f69.json",
     "stocks/91/91fcd4a4c4f6d2a44a55a37e2ffa8f3256cafc8e66b0b3d17d726c9ed703d807.json",
+    "stocks/9c/9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5.json",
     "stocks/25/25155dbd8053abf3e26e8b595cbc65bdbcf204a01a5b00ee26725ca0914ec265.json",
     "stocks/7b/7b2dcb5c15d235ed78115acc5ac013bc30a464cf1c8d68f6921dbc2a7f5523fc.json",
     "stocks/01/017e6babf242dfef26a7b47abd0aeaa6068af277dc6b9388a0a9e826684958fe.json",
@@ -115356,6 +115409,7 @@
     "stocks/6e/6efe7fd0eb3b07fe2db1ccffc4b6545e9afd14fa286cae158898d61806b116fd.json",
     "stocks/2b/2bf4172a314288f9f18ab967be2f11ef5507345d685af81b48dc2f69983a39b6.json",
     "stocks/1f/1f0abb2993a75f2a82ee5a51f786e3a18ace9703f3536f4cb3307792288b35d9.json",
+    "stocks/44/448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac.json",
     "stocks/37/372724b6664c1a9f7b1ec0996d67ac806c7dffb0f1eeb0b7cc8030227826d19d.json",
     "stocks/a5/a52b66aedd0bf25a5c017643871bf3eaeee972430d0e9b36fde6620e27c41551.json",
     "stocks/d5/d50de19c5f77eefaa9fbee4c0346d82e62fb8917a319771edae3c2c4bba7f2df.json",
@@ -115492,7 +115546,6 @@
     "stocks/91/912f11962aeff1d947e1476e6929c588bbaf82270c6f3729cdee4b615a554d54.json",
     "stocks/69/690d1ccd14e26b2e9b697c2a30c1bdd4676682e163410e695d54f7209d57c05d.json",
     "stocks/c4/c4b0816566a52a729f6fcfa87bae162682c40cf986a650fa28204895d1ffa399.json",
-    "stocks/9c/9c684c8ab2e5754d4aec4ae238679fa6c22f515ba4a0fc611b4921f3d2d208d5.json",
     "stocks/55/55a94652a4cce47ad7739a548ea906aadab71f3904c9a8584f164d7ccb837e83.json",
     "stocks/02/025f6bf511d3d0ab63b954451c8bc2ae29d376db6c71e8a5cc7e595110809d23.json",
     "stocks/a7/a792402ab2ca94b8825704ebae8ffe250b5c26b062d1b98d0a55f952202df1f3.json",
@@ -115727,7 +115780,6 @@
     "stocks/f9/f957b39b9f78caf464abde2307a2da1ae3ba97d92fdacc3a6908e53683f6d04d.json",
     "stocks/f2/f29c4b1bf3b1f9ba536a5eefa455fddddd750f65fc1d05b5bb3f55ed58a2c625.json",
     "stocks/76/761a704d5d13d8f7a2a262909a2ecb4d0d3d60d7189fd81379f1ed68adc10931.json",
-    "stocks/44/448d91b7ce8c7449faccbdc3b4985adadff6700c3d4814cee53f550692fc74ac.json",
     "stocks/54/54f8d0c79ab3ac626c29d970000a8e42309be08224da1db297621b186fc475cd.json",
     "stocks/11/11871a3b3e0648c3a6e41898928b8114733bcf0adfa540e929891c0ec3c3ccc2.json",
     "stocks/97/979ae055ed3eef852dbf189f08b64f1906759bf052253bd72c09241a0f275184.json",
@@ -116047,6 +116099,7 @@
     "stocks/5e/5efc8ebee740645975f99f91eeb7293911032cdd29c1e2a248735ea9ea91693d.json",
     "stocks/26/268572bdffc99eb16f0804982de9b57c04b00c6bef9a7fdb8eb9f94cb95286bf.json",
     "stocks/30/3066c04c5224e094b5a6b88698813133cf7ba404e9fb7bd55919fc707ab50770.json",
+    "stocks/a1/a1398e9df87281aa2780abfe1315acd8aea10f0b82a723e7a189bcb9eb31b2ac.json",
     "stocks/45/45d043f2f4f46b6c5a77854f981e85c969c1da5600c3c3c47757fa53c4d7d067.json",
     "stocks/f2/f26f61fe29476a2f73cfaf8f01a5c36991c6a83f8f2915bc9342b8d89a4608aa.json",
     "stocks/53/53bfcd0fed21ce8901ca08c1d236f255c00f7c14b7ce55b07018cac65c43c752.json",
