@@ -11892,13 +11892,12 @@ def load_payload(path: Path) -> dict[str, Any]:
     missing = [key for key in required if key not in payload]
     if missing:
         raise ValueError(f"render payload missing fields: {', '.join(missing)}")
-    if len(payload.get("people", [])) != 10:
-        raise ValueError("render payload must contain exactly 10 tracked accounts")
-    if payload.get("meta", {}).get("tracked_account_count") != 10:
-        raise ValueError("render payload must contain exactly 10 tracked accounts")
+    expected = payload.get("meta", {}).get("tracked_account_count")
+    if not isinstance(expected, int) or expected < 1 or len(payload.get("people", [])) != expected:
+        raise ValueError("render payload people must match tracked_account_count")
     ids = [str(person.get("blogger_id", "")) for person in payload["people"]]
-    if len(set(ids)) != 10 or "" in ids:
-        raise ValueError("people must contain 10 unique blogger_id values")
+    if len(set(ids)) != expected or "" in ids:
+        raise ValueError("people must contain unique blogger_id values")
     for person in payload["people"]:
         if not str(person.get("avatar_data_uri", "")).startswith("data:image/"):
             raise ValueError(f"avatar is not embedded for {person.get('blogger_id')}")
@@ -11907,8 +11906,8 @@ def load_payload(path: Path) -> dict[str, Any]:
             raise ValueError(f"{symbol}: default_person_window must be days_7")
         for key in ("today", "days_7", "days_28"):
             rows = detail.get("people_by_window", {}).get(key, [])
-            if len(rows) != 10:
-                raise ValueError(f"{symbol}.{key} must contain exactly 10 people")
+            if len(rows) != expected or {str(row.get("blogger_id", "")) for row in rows} != set(ids):
+                raise ValueError(f"{symbol}.{key} must contain the active roster")
     return payload
 
 

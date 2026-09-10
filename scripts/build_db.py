@@ -9,8 +9,8 @@ source tweet + its blogger. That's it.
 Multi-blogger / shared-schema design (per project plan): a ticker mentioned by
 several bloggers gets ONE stocks/{TICKER}.json file with a merged mentions[]
 list, each mention tagged "blogger_id". This is what makes the cross-blogger
-consensus view possible ("7 of 10 trackers are bullish on $NVDA") without
-re-processing raw data later. The actual windowed consensus math (N/10 bullish
+consensus view possible ("N active opinion accounts are bullish on $NVDA") without
+re-processing raw data later. The actual windowed consensus math
 today, this week, etc.) is NOT computed here — same rationale as before: it's
 render's job because report windows are dynamic/as-of. What build_db adds for
 consensus is only a window-independent fact per ticker: which bloggers have
@@ -86,6 +86,7 @@ from storage_layout import (
     stock_document_path,
     stock_document_relative,
 )
+from roster import load_bloggers as load_roster
 
 DATA_DIR = SCRIPT_DIR.parent / "data"
 CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
@@ -240,11 +241,6 @@ def instrument_identity(sym, res, editorial_fields, aliases):
     }
 
 
-def load_bloggers():
-    cfg = load_json(CONFIG_PATH, {}) or {}
-    return cfg.get("bloggers", [])
-
-
 def load_profile_copy():
     """Read editorial profile copy without mixing it into the factual stock data."""
     cfg = load_json(PROFILE_CONFIG_PATH, {}) or {}
@@ -283,8 +279,9 @@ def main():
     storage_version = detect_storage_layout(DB_DIR, index=previous_index)
     previous_rows = index_rows_by_ticker(previous_index)
 
-    bloggers = load_bloggers()
-    if not bloggers:
+    bloggers = load_roster(CONFIG_PATH, active_only=False)
+    active_bloggers = [blogger for blogger in bloggers if blogger.get("active", True)]
+    if not active_bloggers:
         log(f"No bloggers configured in {CONFIG_PATH}. Nothing to build.")
         sys.exit(1)
     # signal_type: "opinion" bloggers express personal stance (feeds consensus);
@@ -304,7 +301,8 @@ def main():
     aliases_by_canonical = defaultdict(set)
     for alias, canonical in aliases.items():
         aliases_by_canonical[canonical].add(alias)
-    log(f"Loaded {len(extracted)} extracted (across {len(bloggers)} bloggers), {len(raw)} raw, "
+    log(f"Loaded {len(extracted)} extracted (across {len(bloggers)} current/historical bloggers; "
+        f"{len(active_bloggers)} active), {len(raw)} raw, "
         f"{sum(1 for k in tmap if not k.startswith('_'))} mapped tickers, {len(aliases)} aliases.")
     for bid, n in per_blogger_counts.items():
         log(f"  @{bid}: {n} extracted records")
@@ -518,7 +516,7 @@ def main():
         index_rows,
         generated_at=generated_at,
         meta={
-            "tracked_bloggers": [b["id"] for b in bloggers],
+            "tracked_bloggers": [b["id"] for b in active_bloggers],
             "total_tickers": len(index_rows),
             "total_mentions": sum(r["total_mentions"] for r in index_rows),
             "dates": "ET (US Eastern); matches render/pipeline.py",
@@ -596,6 +594,9 @@ def main():
         "storage_layout": "hash-sharded-v1",
         "stock_count": len(index_rows),
         "index_sha256": file_sha256(INDEX_PATH),
+        "blogger_profiles_sha256": file_sha256(DB_DIR / "blogger_profiles.json"),
+        "blogger_roster_sha256": file_sha256(CONFIG_PATH),
+        "profile_config_sha256": file_sha256(PROFILE_CONFIG_PATH),
         "stocks_root": "stocks",
     })
     save_json(manifest_path, manifest)

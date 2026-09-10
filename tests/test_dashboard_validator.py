@@ -13,8 +13,8 @@ assert SPEC.loader
 SPEC.loader.exec_module(VALIDATOR)
 
 
-def report_html(missing_avatar=False):
-    account_ids = [f"account-{index}" for index in range(10)]
+def report_html(missing_avatar=False, account_count=12):
+    account_ids = [f"account-{index}" for index in range(account_count)]
     people = [
         {
             "blogger_id": account,
@@ -24,6 +24,7 @@ def report_html(missing_avatar=False):
     ]
     states = [{"blogger_id": account, "state": "not_mentioned"} for account in account_ids]
     payload = {
+        "meta": {"tracked_account_count": account_count},
         "people": people,
         "monthly": {
             "rows": [],
@@ -47,14 +48,14 @@ class DashboardValidatorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "report.html"
             path.write_text(html, encoding="utf-8")
-            return VALIDATOR.structural_checks(path, 10)
+            return VALIDATOR.structural_checks(path)
 
     def test_accepts_new_embedded_payload_and_routes(self):
         errors, summary = self.validate(report_html())
         self.assertEqual(errors, [])
         self.assertTrue(summary["v2_payload"])
-        self.assertEqual(summary["embedded_avatars"], 10)
-        self.assertEqual(summary["monthly_top_picks"], 10)
+        self.assertEqual(summary["embedded_avatars"], 12)
+        self.assertEqual(summary["monthly_top_picks"], 12)
 
     def test_rejects_missing_embedded_avatar(self):
         errors, _ = self.validate(report_html(missing_avatar=True))

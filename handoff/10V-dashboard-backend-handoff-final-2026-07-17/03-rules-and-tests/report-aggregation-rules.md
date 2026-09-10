@@ -92,7 +92,7 @@ Counts across these five states must always equal the number of tracked accounts
 
 ## Stock drilldown shared window and person statistics
 
-The overview metrics, person-stance distribution and primary 10-person table share one selected window: `day`, rolling 7 calendar days, or rolling 28 calendar days. The drilldown defaults to `day` / 今日. Switching the window must recompute all three blocks and the prominent window price return together. The approximately-28-day price chart remains fixed and does not shrink when the statistics window changes.
+The overview metrics, person-stance distribution and dynamic active-account table share one selected window: `day`, rolling 7 calendar days, or rolling 28 calendar days. The drilldown defaults to `day` / 今日. Switching the window must recompute all three blocks and the prominent window price return together. The approximately-28-day price chart remains fixed and does not shrink when the statistics window changes.
 
 The person table reports public-content statistics only and must never infer a position, purchase, sale, holding period, return, hit rate, or investment performance.
 

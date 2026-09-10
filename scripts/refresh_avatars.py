@@ -10,10 +10,17 @@ from __future__ import annotations
 import argparse
 import base64
 import binascii
+import html
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
+
+try:
+    from roster import load_bloggers
+except ModuleNotFoundError:  # imported as scripts.refresh_avatars in tests
+    from scripts.roster import load_bloggers
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -90,7 +97,7 @@ def fetch(url: str) -> tuple[str | None, str | None]:
         return None, clean_error(exc)
 
 
-def profile_avatar_url(profiles_root: Path, blogger_id: str) -> tuple[str | None, str | None]:
+def profile_avatar_url(profiles_root: Path, blogger_id: str, username: str) -> tuple[str | None, str | None]:
     path = profiles_root / blogger_id / "profile.json"
     try:
         profile = json.loads(path.read_text(encoding="utf-8"))
@@ -98,7 +105,7 @@ def profile_avatar_url(profiles_root: Path, blogger_id: str) -> tuple[str | None
             raise AvatarValidationError("unsupported profile schema")
         if not str(profile.get("id", "")).isdigit():
             raise AvatarValidationError("profile did not contain a numeric user id")
-        if str(profile.get("user_name", "")).lower() != blogger_id.lower():
+        if str(profile.get("user_name", "")).casefold() != username.casefold():
             raise AvatarValidationError("profile username does not match the configured account")
         if not isinstance(profile.get("observed_at"), str) or not profile["observed_at"]:
             raise AvatarValidationError("profile did not contain an observation time")
@@ -113,9 +120,25 @@ def valid_cached_avatar(value: object) -> bool:
     try:
         declared_mime = value[5:].split(";", 1)[0]
         raw = base64.b64decode(value.split(",", 1)[1], validate=True)
+        if declared_mime == "image/svg+xml":
+            return raw.lstrip().startswith(b"<svg") and b"<script" not in raw.lower()
         return detected_image_mime(raw) == declared_mime
     except (ValueError, binascii.Error):
         return False
+
+
+def letter_avatar(letter: object, color: object) -> str:
+    glyph = html.escape(str(letter or "?")[:2])
+    fill = str(color or "#52616b")
+    if not re.fullmatch(r"#[0-9A-Fa-f]{6}", fill):
+        fill = "#52616b"
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">'
+        f'<rect width="160" height="160" rx="80" fill="{fill}"/>'
+        f'<text x="80" y="102" text-anchor="middle" font-family="Arial,sans-serif" '
+        f'font-size="72" font-weight="700" fill="#fff">{glyph}</text></svg>'
+    )
+    return "data:image/svg+xml;base64," + base64.b64encode(svg.encode("utf-8")).decode("ascii")
 
 
 def main() -> int:
@@ -125,16 +148,17 @@ def main() -> int:
     parser.add_argument("--profiles-root", type=Path, default=ROOT / "data" / "bloggers")
     parser.add_argument("--status-output", type=Path)
     args = parser.parse_args()
-    roster = json.loads(args.config.read_text(encoding="utf-8")).get("bloggers", [])
+    roster = load_bloggers(args.config)
     previous = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else {}
     output = dict(previous)
     refreshed = []
     stale_cache = []
+    fallback = []
     missing = []
     errors = {}
     for blogger in roster:
         blogger_id = blogger["id"]
-        avatar_url, profile_error = profile_avatar_url(args.profiles_root, blogger_id)
+        avatar_url, profile_error = profile_avatar_url(args.profiles_root, blogger_id, blogger["username"])
         image, error = fetch(avatar_url) if avatar_url else (None, profile_error)
         if image:
             output[blogger_id] = image
@@ -144,7 +168,11 @@ def main() -> int:
             if valid_cached_avatar(previous.get(blogger_id)):
                 stale_cache.append(blogger_id)
             else:
-                missing.append(blogger_id)
+                output[blogger_id] = letter_avatar(
+                    blogger.get("avatar_letter") or blogger.get("display_name") or blogger_id,
+                    blogger.get("color"),
+                )
+                fallback.append(blogger_id)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     cached = sum(valid_cached_avatar(output.get(blogger["id"])) for blogger in roster)
@@ -152,6 +180,7 @@ def main() -> int:
         "cached": cached,
         "refreshed": refreshed,
         "stale_cache": stale_cache,
+        "fallback": fallback,
         "missing": missing,
         "errors": errors,
     }
@@ -161,6 +190,8 @@ def main() -> int:
         args.status_output.write_text(json.dumps(summary, ensure_ascii=False), encoding="utf-8")
     if stale_cache:
         print(f"::warning::Avatar refresh failed for {len(stale_cache)} account(s); retained valid cached avatars.")
+    if fallback:
+        print(f"::warning::Using deterministic letter avatars for: {', '.join(fallback)}")
     if missing:
         print(f"::error::No valid current or cached avatar for: {', '.join(missing)}")
     return 0 if not missing else 2

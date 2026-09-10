@@ -13,20 +13,13 @@ Run:
 """
 
 import argparse
-import json
 import subprocess
 import sys
 from pathlib import Path
 
+from roster import load_bloggers
+
 SCRIPT_DIR = Path(__file__).resolve().parent
-CONFIG_PATH = SCRIPT_DIR.parent / "config" / "bloggers.json"
-
-
-def load_bloggers() -> list[dict]:
-    cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
-    return cfg["bloggers"]
-
-
 def main():
     ap = argparse.ArgumentParser(description="Extract stances for all tracked bloggers")
     ap.add_argument("--since", default="", help="only process tweets on/after YYYY-MM-DD")

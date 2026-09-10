@@ -30,6 +30,8 @@ jobs:
       contents: write
     outputs:
       base_sha: ${{ steps.base.outputs.sha }}
+      account_matrix: ${{ steps.roster.outputs.matrix }}
+      account_count: ${{ steps.roster.outputs.count }}
     steps:
       # A queued workflow keeps the SHA from when it was dispatched. Resolve
       # main only after this run owns the shared concurrency slot instead.
@@ -44,6 +46,11 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
           echo "## Trihourly source" >> "$GITHUB_STEP_SUMMARY"
           echo "- locked main revision: $sha" >> "$GITHUB_STEP_SUMMARY"
+      - name: Validate active account roster
+        id: roster
+        run: |
+          echo "matrix=$(python scripts/roster.py --matrix)" >> "$GITHUB_OUTPUT"
+          echo "count=$(python scripts/roster.py --count)" >> "$GITHUB_OUTPUT"
       - name: Record sync start
         continue-on-error: true
         env:
@@ -52,25 +59,14 @@ jobs:
 
   fetch-extract:
     needs: resolve-base
-    name: fetch-extract (${{ matrix.blogger }})
+    name: fetch-extract (${{ matrix.blogger_id }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      # twitterapi.io free-tier traffic is shared. Keep all ten accounts
+      # twitterapi.io free-tier traffic is shared. Keep active accounts
       # serial so a new run is reliable instead of concurrently rate-limited.
       max-parallel: 1
-      matrix:
-        blogger:
-          - aleabitoreddit
-          - zephyr_z9
-          - jukan05
-          - KawzInvests
-          - michaelsikand
-          - ren_stocks
-          - octopusycc
-          - unusual_whales
-          - StockMKTNewz
-          - DJTRadar
+      matrix: ${{ fromJson(needs.resolve-base.outputs.account_matrix) }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -100,7 +96,7 @@ jobs:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
         run: |
           set -o pipefail
-          python scripts/fetch_tweets.py --user ${{ matrix.blogger }} 2>&1 | tee "$RUNNER_TEMP/fetch-${{ matrix.blogger }}.log"
+          python scripts/fetch_tweets.py --user "${{ matrix.username }}" --blogger-id "${{ matrix.blogger_id }}" 2>&1 | tee "$RUNNER_TEMP/fetch-${{ matrix.blogger_id }}.log"
       - name: Extract new and overlap-day mentions
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -108,7 +104,7 @@ jobs:
           EXTRACT_PROVIDER: ${{ inputs.extraction_provider || 'auto' }}
           EXTRACT_MODEL: ${{ inputs.extraction_model || '' }}
         run: |
-          args=(--user "${{ matrix.blogger }}" --since "$(date -u -d '7 days ago' +%Y-%m-%d)")
+          args=(--user "${{ matrix.blogger_id }}" --since "$(date -u -d '7 days ago' +%Y-%m-%d)")
           if [ -n "$EXTRACT_MODEL" ]; then args+=(--model "$EXTRACT_MODEL"); fi
           python scripts/extract.py "${args[@]}"
       - name: Record account watermarks
@@ -119,16 +115,17 @@ jobs:
           from email.utils import parsedate_to_datetime
           from pathlib import Path
           from zoneinfo import ZoneInfo
-          account = "${{ matrix.blogger }}"
-          path = Path("data/bloggers") / account / "raw_tweets.json"
-          state_path = Path("data/bloggers") / account / "state.json"
+          account_id = "${{ matrix.blogger_id }}"
+          username = "${{ matrix.username }}"
+          path = Path("data/bloggers") / account_id / "raw_tweets.json"
+          state_path = Path("data/bloggers") / account_id / "state.json"
           rows = json.loads(path.read_text()) if path.exists() else []
           state = json.loads(state_path.read_text()) if state_path.exists() else {}
           dates = []
           for row in rows:
               try: dates.append(parsedate_to_datetime(row.get("created_at") or row.get("createdAt")).astimezone(ZoneInfo("America/New_York")))
               except Exception: pass
-          print(f"### @{account}")
+          print(f"### @{username} (`{account_id}`)")
           print(f"- fetch outcome: ${{ steps.fetch.outcome }}")
           print(f"- raw records: {len(rows)}")
           print(f"- latest ET timestamp: {max(dates).isoformat() if dates else 'unavailable'}")
@@ -142,15 +139,15 @@ jobs:
           if [ "${{ steps.fetch.outcome }}" != "success" ]; then
             echo "- failure detail:" >> "$GITHUB_STEP_SUMMARY"
             echo '```text' >> "$GITHUB_STEP_SUMMARY"
-            tail -n 12 "$RUNNER_TEMP/fetch-${{ matrix.blogger }}.log" >> "$GITHUB_STEP_SUMMARY" || true
+            tail -n 12 "$RUNNER_TEMP/fetch-${{ matrix.blogger_id }}.log" >> "$GITHUB_STEP_SUMMARY" || true
             echo '```' >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload account snapshot
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: blogger-data-${{ matrix.blogger }}
-          path: data/bloggers/${{ matrix.blogger }}/
+          name: blogger-data-${{ matrix.blogger_id }}
+          path: data/bloggers/${{ matrix.blogger_id }}/
           retention-days: 1
 
   publish:
@@ -196,23 +193,18 @@ jobs:
             echo "::error::One or more account refreshes failed; no database, dashboard, artifact, or commit was published."
             exit 1
           }
-      - name: Download all ten account snapshots
+      - name: Download active account snapshots
         id: download
         uses: actions/download-artifact@v4
         with:
           pattern: blogger-data-*
           path: data/bloggers
           merge-multiple: false
-      - name: Require exactly ten complete artifacts
+      - name: Require the exact active artifact set
         id: artifacts
         run: |
-          expected="aleabitoreddit zephyr_z9 jukan05 KawzInvests michaelsikand ren_stocks octopusycc unusual_whales StockMKTNewz DJTRadar"
-          missing=""
-          for id in $expected; do
-            test -d "data/bloggers/blogger-data-$id" || missing="$missing $id"
-          done
-          test -z "$missing" || { echo "::error::Missing account artifacts:$missing"; exit 1; }
-          echo "- account artifacts: 10/10" >> "$GITHUB_STEP_SUMMARY"
+          count=$(python scripts/roster.py --verify-artifacts data/bloggers)
+          echo "- account artifacts: $count/$count" >> "$GITHUB_STEP_SUMMARY"
       - name: Flatten account snapshot directories
         id: flatten
         run: |
@@ -268,7 +260,7 @@ jobs:
         id: tests
         run: |
           python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
+          python -m unittest tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
         id: dashboard
         run: |
@@ -276,7 +268,7 @@ jobs:
           mkdir -p "$RUNNER_TEMP/dashboard"
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json"
           python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html"
-          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" --browser required --expected-avatars 10 | tee "$RUNNER_TEMP/dashboard/validation.json"
+          python skill/scripts/validate_dashboard.py "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" --browser required | tee "$RUNNER_TEMP/dashboard/validation.json"
           sha256sum "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html" | tee "$RUNNER_TEMP/dashboard/SHA256SUMS.txt"
       - name: Write build metadata
         id: metadata

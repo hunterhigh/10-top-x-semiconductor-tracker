@@ -51,7 +51,11 @@ def validate_manifest(payload: dict) -> None:
         raise RuntimeError(
             f"Unsupported database storage_layout: {payload.get('storage_layout')!r}"
         )
-    for field in ("index_sha256", "price_cache_index_sha256", "stock_count"):
+    for field in (
+        "index_sha256", "price_cache_index_sha256", "blogger_profiles_sha256",
+        "blogger_roster_sha256", "profile_config_sha256", "avatar_cache_sha256",
+        "stock_count",
+    ):
         if payload.get(field) is None:
             raise RuntimeError(f"Production manifest is missing {field}")
 
@@ -132,6 +136,15 @@ def sync(cache: Path | None = None) -> tuple[Path, dict, bool]:
         index_path = staging / "data" / "db" / "index.json"
         if sha256(index_path) != downloaded.get("index_sha256"):
             raise RuntimeError("Downloaded index.json does not match manifest.index_sha256")
+        hashed_files = {
+            "blogger_profiles_sha256": staging / "data" / "db" / "blogger_profiles.json",
+            "blogger_roster_sha256": staging / "config" / "bloggers.json",
+            "profile_config_sha256": staging / "config" / "blogger_profiles.json",
+            "avatar_cache_sha256": staging / "data" / "avatar_cache.json",
+        }
+        for field, path in hashed_files.items():
+            if sha256(path) != downloaded.get(field):
+                raise RuntimeError(f"Downloaded {path.name} does not match manifest.{field}")
         for required in ("config/bloggers.json", "config/blogger_profiles.json", "data/avatar_cache.json"):
             if not (staging / required).is_file():
                 raise RuntimeError(f"Snapshot is missing required file: {required}")

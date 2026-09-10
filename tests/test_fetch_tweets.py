@@ -78,7 +78,7 @@ class FetchIntegrityTests(unittest.TestCase):
         directory = self.data_dir / "bloggers" / "tester"
         return directory / "raw_tweets.json", directory / "state.json"
 
-    def run_fetch(self, outcomes, *, backfill=False, since_date=None):
+    def run_fetch(self, outcomes, *, backfill=False, since_date=None, username="tester", blogger_id=None):
         self.last_session = Session(outcomes)
         with (
             patch.object(FETCH, "DATA_DIR", self.data_dir),
@@ -86,7 +86,7 @@ class FetchIntegrityTests(unittest.TestCase):
             patch.object(FETCH, "session_with_key", return_value=self.last_session),
             patch.object(FETCH.time, "sleep"),
         ):
-            FETCH.fetch("tester", backfill=backfill, since_date=since_date)
+            FETCH.fetch(username, backfill=backfill, since_date=since_date, blogger_id=blogger_id)
 
     def assert_failure_preserves_watermark(self, outcome):
         with self.assertRaises(SystemExit) as exit_code:
@@ -155,6 +155,27 @@ class FetchIntegrityTests(unittest.TestCase):
 
         profile = json.loads(self.profile.read_text(encoding="utf-8"))
         self.assertIsNone(profile["avatar_url"])
+
+    def test_mutable_handle_uses_stable_blogger_id_storage(self):
+        stable_dir = self.data_dir / "bloggers" / "stable_account"
+        self.run_fetch([
+            Response(200, {"data": {"id": "1", "userName": "CurrentHandle"}}),
+            Response(200, {"data": {"tweets": [], "has_next_page": False}}),
+        ], username="CurrentHandle", blogger_id="stable_account")
+
+        profile = json.loads((stable_dir / "profile.json").read_text(encoding="utf-8"))
+        state = json.loads((stable_dir / "state.json").read_text(encoding="utf-8"))
+        self.assertEqual(profile["id"], "1")
+        self.assertEqual(state["username"], "CurrentHandle")
+        self.assertEqual(state["blogger_id"], "stable_account")
+
+    def test_stable_blogger_id_rejects_numeric_identity_change(self):
+        self.profile.write_text(json.dumps({"id": "99", "user_name": "tester"}), encoding="utf-8")
+        with self.assertRaises(SystemExit) as exit_code:
+            self.run_fetch([Response(200, {"data": {"id": "1", "userName": "tester"}})])
+        self.assertEqual(exit_code.exception.code, 1)
+        self.assertEqual(self.raw.read_bytes(), self.before_raw)
+        self.assertEqual(self.state.read_bytes(), self.before_state)
 
     def test_deleted_anchor_stops_after_crossing_id_watermark(self):
         self.run_fetch([

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build the deterministic 10V Dashboard render payload.
+"""Build the deterministic X-account Dashboard render payload.
 
 This is the only place where dashboard aggregation is performed. It reads a
 local ``data/db`` snapshot and never downloads data or infers stance from text.
-The 10 tracked account ids and approved aggregation rules are embedded; person
-identity fields come from database profile metadata and the avatar cache.
+The active account ids come from ``config/bloggers.json``; person identity
+fields are enriched from database profile metadata and the avatar cache.
 """
 from __future__ import annotations
 
@@ -30,21 +30,6 @@ PACKAGE_DIR = SCRIPT_DIR.parent
 REPOSITORY_DIR = SCRIPT_DIR.parents[1]
 PROJECT_DIR = REPOSITORY_DIR if (REPOSITORY_DIR / "skill").is_dir() else PACKAGE_DIR
 SCHEMA_PATH = PACKAGE_DIR / "references" / "dashboard-render-contract.schema.json"
-
-LEGACY_ROSTER = [
-    {"id": "aleabitoreddit", "handle": "@aleabitoreddit", "display_name": "Serenity", "x_url": "https://x.com/aleabitoreddit", "avatar_letter": "S", "color": "#1F5C4D", "signal_type": "opinion"},
-    {"id": "zephyr_z9", "handle": "@zephyr_z9", "display_name": "Zephyr", "x_url": "https://x.com/zephyr_z9", "avatar_letter": "Z", "color": "#4E79A7", "signal_type": "opinion"},
-    {"id": "jukan05", "handle": "@jukan05", "display_name": "Jukan", "x_url": "https://x.com/jukan05", "avatar_letter": "J", "color": "#F28E2B", "signal_type": "opinion"},
-    {"id": "KawzInvests", "handle": "@KawzInvests", "display_name": "KawzInvests", "x_url": "https://x.com/KawzInvests", "avatar_letter": "K", "color": "#76B7B2", "signal_type": "opinion"},
-    {"id": "michaelsikand", "handle": "@michaelsikand", "display_name": "Michael Sikand", "x_url": "https://x.com/michaelsikand", "avatar_letter": "M", "color": "#17BECF", "signal_type": "opinion"},
-    {"id": "ren_stocks", "handle": "@ren_stocks", "display_name": "Ren", "x_url": "https://x.com/ren_stocks", "avatar_letter": "R", "color": "#FF9DA7", "signal_type": "opinion"},
-    {"id": "octopusycc", "handle": "@octopusycc", "display_name": "大老师", "x_url": "https://x.com/octopusycc", "avatar_letter": "大", "color": "#9C755F", "signal_type": "opinion"},
-    {"id": "unusual_whales", "handle": "@unusual_whales", "display_name": "Unusual Whales", "x_url": "https://x.com/unusual_whales", "avatar_letter": "U", "color": "#E15759", "signal_type": "flow"},
-    {"id": "StockMKTNewz", "handle": "@StockMKTNewz", "display_name": "Evan", "x_url": "https://x.com/StockMKTNewz", "avatar_letter": "E", "color": "#B07AA1", "signal_type": "news"},
-    {"id": "DJTRadar", "handle": "@DJTRadar", "display_name": "DJT Radar", "x_url": "https://x.com/DJTRadar", "avatar_letter": "D", "color": "#EDC948", "signal_type": "disclosure"},
-]
-TRACKED_ACCOUNT_IDS = tuple(item["id"] for item in LEGACY_ROSTER)
-
 
 class _Rules:
     """Approved deterministic UI aggregation rules, embedded for portability."""
@@ -147,14 +132,40 @@ def _profile_rows(document: Any) -> list[dict[str, Any]]:
     return []
 
 
-def load_roster(db: Path, avatar_cache: Path | None) -> list[dict[str, Any]]:
-    """Merge fixed account ids with database-owned identity fields."""
-    legacy = {item["id"]: dict(item) for item in LEGACY_ROSTER}
+def load_roster(db: Path, avatar_cache: Path | None, roster_path: Path) -> list[dict[str, Any]]:
+    """Merge the validated active registry with database-owned identity fields."""
+    document = load(roster_path, {})
+    configured = document.get("bloggers") if isinstance(document, dict) else None
+    if not isinstance(configured, list) or not configured:
+        raise ValueError(f"Active account roster is unavailable or empty: {roster_path}")
+    active = [dict(item) for item in configured if isinstance(item, dict) and item.get("active", True) is True]
+    if not active:
+        raise ValueError("Active account roster must contain at least one account")
+    required = {"id", "display_name", "handle", "x_url", "signal_type"}
+    for index, item in enumerate(active):
+        missing = sorted(required - set(item))
+        if missing:
+            raise ValueError(f"Active roster entry {index} is missing: {', '.join(missing)}")
+        handle = str(item["handle"])
+        if not handle.startswith("@") or str(item["x_url"]).rstrip("/").casefold() != f"https://x.com/{handle[1:]}".casefold():
+            raise ValueError(f"{item['id']}: x_url must match handle")
+        if item["signal_type"] not in {"opinion", "flow", "news", "disclosure"}:
+            raise ValueError(f"{item['id']}: invalid signal_type")
+    ids = [str(item["id"]) for item in active]
+    handles = [str(item["handle"]).casefold() for item in active]
+    if len(ids) != len(set(ids)) or len(handles) != len(set(handles)):
+        raise ValueError("Active roster ids and handles must be unique")
+    configured_by_id = {str(item["id"]): item for item in active}
     profiles: dict[str, dict[str, Any]] = {}
+    editorial_path = roster_path.with_name("blogger_profiles.json")
+    for row in _profile_rows(load(editorial_path, {})):
+        blogger_id = str(row.get("blogger_id") or row.get("id") or "")
+        if blogger_id in configured_by_id:
+            profiles[blogger_id] = {**profiles.get(blogger_id, {}), **row}
     for path in (db / "blogger_profiles.json", db / "blogger_identities.json"):
         for row in _profile_rows(load(path, {})):
             blogger_id = str(row.get("blogger_id") or row.get("id") or "")
-            if blogger_id in legacy:
+            if blogger_id in configured_by_id:
                 profiles[blogger_id] = {**profiles.get(blogger_id, {}), **row}
 
     cache = load(avatar_cache, {}) if avatar_cache else {}
@@ -162,8 +173,8 @@ def load_roster(db: Path, avatar_cache: Path | None) -> list[dict[str, Any]]:
         cache = {}
 
     roster: list[dict[str, Any]] = []
-    for blogger_id in TRACKED_ACCOUNT_IDS:
-        fallback = legacy[blogger_id]
+    for fallback in active:
+        blogger_id = str(fallback["id"])
         source = dict(profiles.get(blogger_id, {}))
         cached = cache.get(blogger_id)
         if isinstance(cached, dict):
@@ -194,7 +205,12 @@ def load_roster(db: Path, avatar_cache: Path | None) -> list[dict[str, Any]]:
     return roster
 
 
-def snapshot_id(manifest_path: Path, db: Path, avatar_cache: Path | None) -> str | None:
+def snapshot_id(
+    manifest_path: Path,
+    db: Path,
+    avatar_cache: Path | None,
+    extra_paths: Iterable[Path] = (),
+) -> str | None:
     paths = [
         manifest_path,
         db / "index.json",
@@ -203,6 +219,7 @@ def snapshot_id(manifest_path: Path, db: Path, avatar_cache: Path | None) -> str
     ]
     if avatar_cache:
         paths.append(avatar_cache)
+    paths.extend(extra_paths)
     existing = [path for path in paths if path.is_file()]
     if not existing:
         return None
@@ -333,7 +350,7 @@ def price_change_52_weeks(doc: dict[str, Any], end: date) -> dict[str, Any]:
 
 
 def explicit_directional(rows: Iterable[dict[str, Any]], scored_accounts: set[str]) -> list[dict[str, Any]]:
-    """Return directional records from every tracked account, including signal accounts."""
+    """Return directional records from active opinion accounts only."""
     return [r for r in rows if r.get("blogger_id") in scored_accounts and r.get("mention_type") == "explicit_stance"]
 
 
@@ -367,12 +384,17 @@ def monthly_top_picks(
     item_window: dict[str, Any],
     end: date,
 ) -> list[dict[str, Any]]:
-    """Choose one deterministic 28-day bullish favorite for every tracked account."""
-    selected_by_account = monthly_top_pick_candidates(docs, [b["id"] for b in roster], end)
+    """Choose one deterministic 28-day favorite card per active account.
+
+    Non-opinion signal accounts retain an empty card and never contribute a
+    synthetic opinion to the consensus.
+    """
+    opinion_ids = [b["id"] for b in roster if b.get("signal_type") == "opinion"]
+    selected_by_account = monthly_top_pick_candidates(docs, opinion_ids, end)
     picks = []
     for blogger in roster:
         blogger_id = blogger["id"]
-        choice = selected_by_account[blogger_id]
+        choice = selected_by_account.get(blogger_id, {})
         selected = choice.get("doc")
         if not selected:
             picks.append({"blogger_id": blogger_id, "instrument": None, "bullish_mention_count": 0,
@@ -466,15 +488,19 @@ def drilldown(doc: dict[str, Any], end: date, roster: list[dict[str, Any]]) -> d
             "person_windows": person_windows, "people_by_window": people_by_window}
 
 
-def build_payload(db: Path, report_day: str, avatar_cache: Path | None = None) -> dict[str, Any]:
+def build_payload(
+    db: Path,
+    report_day: str,
+    avatar_cache: Path | None = None,
+    roster_path: Path | None = None,
+) -> dict[str, Any]:
     end = iso_day(report_day)
     manifest_path = db / "manifest.json"
     manifest = load(manifest_path, {}) if manifest_path.exists() else {}
-    roster = load_roster(db, avatar_cache)
-    if len(roster) != 10:
-        raise ValueError(f"Expected exactly 10 tracked accounts, found {len(roster)}")
-    scored_accounts = {b["id"] for b in roster}
-    if len(scored_accounts) != 10: raise ValueError(f"Expected exactly 10 scored accounts, found {len(scored_accounts)}")
+    roster_path = roster_path or PROJECT_DIR / "config" / "bloggers.json"
+    roster = load_roster(db, avatar_cache, roster_path)
+    tracked_accounts = {b["id"] for b in roster}
+    scored_accounts = {b["id"] for b in roster if b.get("signal_type") == "opinion"}
     store = StockStore(db)
     docs = [load(path, {}) for path in store.iter_stock_paths()]
     docs = [doc for doc in docs if doc.get("ticker")]
@@ -502,9 +528,12 @@ def build_payload(db: Path, report_day: str, avatar_cache: Path | None = None) -
                   "avatar_data_uri": avatar, "daily_stock_lists": daily_lists, "personal_view": personal}
         people.append(person)
     weekly = main_report(consensus_docs, week, scored_accounts); weekly["changes"] = weekly_changes(consensus_docs, week, previous_week, scored_accounts)
-    payload = {"meta": {"report_date_et": end.isoformat(), "timezone": "America/New_York", "generated_at": datetime.now(timezone.utc).isoformat(), "tracked_account_count": 10, "scored_account_count": 10,
+    payload = {"meta": {"report_date_et": end.isoformat(), "timezone": "America/New_York", "generated_at": datetime.now(timezone.utc).isoformat(), "tracked_account_count": len(tracked_accounts), "scored_account_count": len(scored_accounts),
                         "data_cutoff_at": manifest.get("generated_at"),
-                        "data_snapshot_id": snapshot_id(manifest_path, db, avatar_cache)},
+                        "data_snapshot_id": snapshot_id(
+                            manifest_path, db, avatar_cache,
+                            (roster_path, roster_path.with_name("blogger_profiles.json")),
+                        )},
                "people": people, "daily": main_report(consensus_docs, today, scored_accounts), "weekly": weekly,
                "monthly": {"window": month, "rows": [], "top_picks": monthly_top_picks(consensus_docs, roster, month, end)},
                "stock_drilldowns": {}}
@@ -538,20 +567,28 @@ def build_payload(db: Path, report_day: str, avatar_cache: Path | None = None) -
 
 
 def validate_invariants(payload: dict[str, Any]) -> None:
-    if len(payload.get("people", [])) != 10: raise ValueError("Payload must contain 10 people")
+    people = payload.get("people", [])
+    people_ids = {person.get("blogger_id") for person in people}
+    expected = payload.get("meta", {}).get("tracked_account_count")
+    if not isinstance(expected, int) or expected < 1 or len(people) != expected or len(people_ids) != expected:
+        raise ValueError("Payload people must equal the unique active roster")
+    scored = payload.get("meta", {}).get("scored_account_count")
+    if not isinstance(scored, int) or scored < 0 or scored > expected:
+        raise ValueError("Payload scored account count is invalid")
     monthly = payload.get("monthly", {})
     for row in monthly.get("rows", []):
         if len(set(row.get("directional_account_ids", []))) < 3:
             raise ValueError("Monthly consensus rows require at least 3 directional accounts")
     top_picks = monthly.get("top_picks", [])
-    if len(top_picks) != 10 or len({x.get("blogger_id") for x in top_picks}) != 10:
-        raise ValueError("Monthly top picks must contain exactly 10 unique tracked accounts")
+    if len(top_picks) != expected or {x.get("blogger_id") for x in top_picks} != people_ids:
+        raise ValueError("Monthly top picks must contain each active account exactly once")
     for drill in payload.get("stock_drilldowns", {}).values():
         for key in ("today", "days_7", "days_28"):
             states = drill["person_windows"][key]
             stats = drill["people_by_window"][key]
-            if len(states) != 10 or len(stats) != 10: raise ValueError(f"{key} must contain exactly 10 people")
-            if len({x["blogger_id"] for x in states}) != 10: raise ValueError(f"{key} person states are not unique")
+            if len(states) != expected or len(stats) != expected: raise ValueError(f"{key} must contain every active account")
+            if {x["blogger_id"] for x in states} != people_ids: raise ValueError(f"{key} person states do not match the active roster")
+            if {x["blogger_id"] for x in stats} != people_ids: raise ValueError(f"{key} person statistics do not match the active roster")
             for stat in stats:
                 for item in stat["evidence"]:
                     if not item["url"] or item["tweet_id"] == "": raise ValueError("Evidence must retain tweet id and URL")
@@ -572,10 +609,11 @@ def validate_schema(payload: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Aggregate a local x-traders database into the 10V dashboard payload")
+    parser = argparse.ArgumentParser(description="Aggregate a local x-traders database into the dashboard payload")
     parser.add_argument("date", help="Report cutoff date in America/New_York (YYYY-MM-DD)")
     parser.add_argument("--db", type=Path, default=PROJECT_DIR / "data" / "db")
     parser.add_argument("--avatar-cache", type=Path, default=PROJECT_DIR / "data" / "avatar_cache.json")
+    parser.add_argument("--roster", type=Path, default=PROJECT_DIR / "config" / "bloggers.json")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if not args.db.is_dir():
@@ -584,11 +622,17 @@ def main() -> int:
             cache, _, _ = sync()
             args.db = cache / "data" / "db"
             args.avatar_cache = cache / "data" / "avatar_cache.json"
+            args.roster = cache / "config" / "bloggers.json"
         except Exception as exc:
             parser.error(f"database directory does not exist and cloud sync failed: {exc}")
     if not (args.db / "stocks").is_dir():
         parser.error(f"database is missing stocks/: {args.db}")
-    payload = build_payload(args.db.resolve(), args.date, args.avatar_cache.resolve() if args.avatar_cache.exists() else None)
+    payload = build_payload(
+        args.db.resolve(),
+        args.date,
+        args.avatar_cache.resolve() if args.avatar_cache.exists() else None,
+        args.roster.resolve(),
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(args.output)

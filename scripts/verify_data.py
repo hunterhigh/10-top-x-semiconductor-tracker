@@ -15,6 +15,7 @@ from storage_layout import (
     stock_document_path,
     validate_snapshot_layout,
 )
+from roster import RosterError, load_bloggers as load_roster
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')   # Windows console defaults to GBK, which can't print ✅/⚠️
@@ -70,6 +71,13 @@ latest = None
 errors = []
 tickers = []
 mentions_by_blogger = {}   # blogger_id -> mention count, tallied across ALL stock files
+try:
+    all_bloggers = load_roster(CONFIG_PATH, active_only=False)
+    bloggers = [blogger for blogger in all_bloggers if blogger.get("active", True)]
+except RosterError as exc:
+    all_bloggers = []
+    bloggers = []
+    errors.append(f"config/bloggers.json: {exc}")
 instrument_counts = {"verified": 0, "identified": 0, "unverified": 0}
 market_missing = 0
 price_unavailable = 0
@@ -224,7 +232,7 @@ price_history_52w = {
     "retry_queue": 0,
     "scope_counts": {
         "monthly_consensus": 0,
-        "top_pick_cards": 10,
+        "top_pick_cards": len(bloggers),
         "top_pick_unique": 0,
         "overlap": 0,
     },
@@ -232,14 +240,9 @@ price_history_52w = {
 if index_data and latest:
     history_asof = datetime.date.fromisoformat(latest)
     target_start = history_asof - datetime.timedelta(weeks=52)
-    try:
-        blogger_config = json.load(open(CONFIG_PATH, encoding='utf-8'))
-        tracked_ids = [str(row['id']) for row in blogger_config.get('bloggers', []) if row.get('id')]
-    except Exception as exc:
-        tracked_ids = []
-        errors.append(f"cannot load tracked account roster for 52-week scope: {exc}")
-    if len(tracked_ids) != 10 or len(set(tracked_ids)) != 10:
-        errors.append(f"52-week scope expected 10 unique tracked accounts, found {len(set(tracked_ids))}")
+    tracked_ids = [str(row['id']) for row in bloggers if row.get('signal_type') == 'opinion']
+    if not tracked_ids:
+        errors.append("52-week scope requires a non-empty active roster")
 
     all_stock_rows = []
     for row in index_stock_rows(index_data):
@@ -304,7 +307,7 @@ if index_data and latest:
         "retry_queue": retry_queue,
         "scope_counts": {
             "monthly_consensus": len(scope['monthly_instrument_ids']),
-            "top_pick_cards": len(scope['top_picks']),
+            "top_pick_cards": len(bloggers),
             "top_pick_unique": len(scope['top_pick_instrument_ids']),
             "overlap": len(scope['overlap_instrument_ids']),
         },
@@ -320,15 +323,6 @@ elif REQUIRE_PRICE_HISTORY_52W:
     errors.append("cannot verify 52-week price history without index.json and a data cutoff")
 
 # per-blogger state file check (needed for daily automation) + mention breakdown
-bloggers = []
-if CONFIG_PATH.exists():
-    try:
-        bloggers = json.load(open(CONFIG_PATH, encoding='utf-8')).get('bloggers', [])
-    except Exception as e:
-        errors.append(f"config/bloggers.json: invalid JSON — {e}")
-else:
-    print(f"\nWARNING: {CONFIG_PATH} not found — cannot check per-blogger state files.")
-
 # Source profiles are a first-class public interface.  Validate the editorial
 # copy separately from factual coverage stats, and never silently publish a
 # directory where a tracked account lacks a profile or a valid X destination.
@@ -341,9 +335,10 @@ else:
     except Exception as e:
         errors.append(f"blogger_profiles.json: invalid JSON — {e}")
 expected_ids = {b.get('id') for b in bloggers}
-if bloggers and set(profile_copy) != expected_ids:
-    errors.append(f"profile roster mismatch: config={sorted(profile_copy)} tracked={sorted(expected_ids)}")
-for b in bloggers:
+configured_ids = {b.get('id') for b in all_bloggers}
+if all_bloggers and set(profile_copy) != configured_ids:
+    errors.append(f"profile registry mismatch: profiles={sorted(profile_copy)} configured={sorted(configured_ids)}")
+for b in all_bloggers:
     bid = b['id']; p = profile_copy.get(bid, {})
     if not str(b.get('x_url') or '').startswith('https://x.com/'):
         errors.append(f"{bid}: invalid or missing X URL")
@@ -365,9 +360,9 @@ else:
         profile_stats = {p.get('blogger_id'): p for p in json.load(open(PROFILE_DB_PATH, encoding='utf-8')).get('profiles', []) if p.get('blogger_id')}
     except Exception as e:
         errors.append(f"blogger_profiles.json in db: invalid JSON — {e}")
-if bloggers and set(profile_stats) != expected_ids:
-    errors.append(f"profile statistics roster mismatch: stats={sorted(profile_stats)} tracked={sorted(expected_ids)}")
-for b in bloggers:
+if all_bloggers and set(profile_stats) != configured_ids:
+    errors.append(f"profile statistics registry mismatch: stats={sorted(profile_stats)} configured={sorted(configured_ids)}")
+for b in all_bloggers:
     stat = profile_stats.get(b['id'], {})
     sample = stat.get('sample') or {}
     if sample.get('mentions') != mentions_by_blogger.get(b['id'], 0):
@@ -394,7 +389,7 @@ for b in bloggers:
     if not (raw_ok and ext_ok):
         missing_state.append(bid)
 
-unaccounted = set(mentions_by_blogger) - {b['id'] for b in bloggers}
+unaccounted = set(mentions_by_blogger) - configured_ids
 if unaccounted:
     print(f"\nWARNING: mentions found for blogger_id(s) not in config/bloggers.json: {sorted(unaccounted)}")
 
@@ -412,6 +407,10 @@ manifest = {
     "storage_layout": "hash-sharded-v1",
     "stock_count": len(tickers),
     "index_sha256": file_sha256(idx),
+    "blogger_profiles_sha256": file_sha256(PROFILE_DB_PATH),
+    "blogger_roster_sha256": file_sha256(CONFIG_PATH),
+    "profile_config_sha256": file_sha256(PROFILE_CONFIG_PATH),
+    "avatar_cache_sha256": file_sha256(DATA_DIR / "avatar_cache.json") if (DATA_DIR / "avatar_cache.json").is_file() else None,
     "stocks_root": "stocks",
     "price_cache_count": storage_summary.get("price_cache", {}).get("files", 0),
     "price_cache_index_sha256": file_sha256(DATA_DIR / "prices_cache" / "index.json"),
@@ -433,8 +432,8 @@ manifest = {
     "price_scope": price_scope,
     "price_history_52w": price_history_52w,
     "profile_coverage": {
-        "editorial_profiles": len(profile_copy),
-        "statistical_profiles": len(profile_stats),
+        "editorial_profiles": len(expected_ids & set(profile_copy)),
+        "statistical_profiles": len(expected_ids & set(profile_stats)),
         "profile_errors": len([e for e in errors if 'profile' in e.lower()]),
     },
 }
