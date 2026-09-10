@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-09T21:18:53.034702+00:00",
+  "generated_at": "2026-09-10T00:18:09.153590+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2253,
-  "index_sha256": "9d35392847d69f026aa3f6838b25a7e1ca502a33e01243b7e42e59553964d920",
+  "index_sha256": "6ebbe29d5a360184b5f3992d23d6e09362c450d603af227ed6631a8bd037af51",
   "stocks_root": "stocks",
   "price_cache_count": 890,
   "price_cache_index_sha256": "f39b65fbb260edbe342e90ad42ea4808f9dadcf5820eeccb33e915cc18a536bc",
   "price_cache_root": "prices_cache",
   "tickers": 2253,
-  "total_mentions": 27297,
+  "total_mentions": 27311,
   "priced_tickers": 726,
   "date_range": [
     "2025-07-02",
@@ -18,15 +18,15 @@
   "size_mb": 49.2,
   "tracked_bloggers": 10,
   "mentions_by_blogger": {
-    "aleabitoreddit": 16001,
+    "aleabitoreddit": 16004,
     "zephyr_z9": 537,
-    "StockMKTNewz": 5384,
+    "StockMKTNewz": 5387,
     "KawzInvests": 497,
-    "ren_stocks": 1236,
+    "ren_stocks": 1243,
     "jukan05": 1272,
     "octopusycc": 631,
     "unusual_whales": 886,
-    "michaelsikand": 647,
+    "michaelsikand": 648,
     "DJTRadar": 206
   },
   "bloggers_missing_state_files": [],
@@ -60,14 +60,15 @@
     "min_mentions": 50,
     "tickers": 1073,
     "status_counts": {
-      "ok": 431,
-      "partial": 21,
+      "ok": 434,
+      "partial": 18,
       "unverified_symbol": 612,
       "unavailable": 9
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 18,
+      "EODHD 402 (account quota or subscription limit)": 14,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
       "unverified_instrument_identity": 612,
       "provider_symbol_not_found_after_search": 5,
       "no_daily_closes_returned": 2,
@@ -90,8 +91,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 27,
-      "deferred": 3
+      "supported": 29,
+      "unsupported": 1
     },
     "retry_queue": 0,
     "scope_counts": {
