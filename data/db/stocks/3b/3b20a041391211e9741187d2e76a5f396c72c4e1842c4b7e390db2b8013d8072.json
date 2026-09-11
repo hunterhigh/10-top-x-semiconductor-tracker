@@ -1,6 +1,6 @@
 {
   "ticker": "NDX",
-  "cashtag": "纳斯达克 100",
+  "cashtag": "纳斯达克100",
   "instrument": {
     "instrument_id": "UNVERIFIED:NDX",
     "display_code": "NDX",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-14",
-  "last_mention": "2026-09-10",
-  "total_mentions": 16,
+  "last_mention": "2026-09-11",
+  "total_mentions": 17,
   "total_mentions_by_blogger": {
-    "balder": 9,
+    "balder": 10,
     "StockMKTNewz": 5,
     "octopusycc": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "news": 5,
-    "opinion": 10,
+    "opinion": 11,
     "flow": 1
   },
   "mentions": [
@@ -432,6 +432,34 @@
         "likes": 5,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2098414030239228189",
+      "blogger_id": "balder",
+      "date": "2026-09-11",
+      "created_at": "2026-09-11T10:11:06-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "probability of recovering to recent highs in 20 days is only 28%, 27 percentage points below normal",
+        "short-term rebound likely but downside risk increasing",
+        "market recovery capacity is extremely weak",
+        "volatility is being amplified in both directions"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "纳斯达克100",
+      "text": "大家现在普遍担心反弹无力，数据证实了这一点：未来20天摸回高点的概率只有28%，比平常低了整整27个百分点。\n\n纳斯达克100现价29,373，距近期高点30,661回撤4.20%。\n\n波动正在被双向放大。历史上1,233次同类位置中，未来涨2%的概率达79%，比平常高5个百分点；但再跌5%和10%的概率也升至33%和11%，分别高出6个和3个百分点。这意味着短期反弹会有，但向下的风险也在加剧，市场整体修复能力极弱。\n\n今日预计区间在29,209到29,538，上下1.1%。\n\n只要走势没能脱离这个区间，当前的震荡格局就不会改变。\n\nhttps://t.co/hzrdMzUyd6",
+      "url": "https://x.com/Balder13946731/status/2098414030239228189",
+      "kind": "post",
+      "engagement": {
+        "views": 6339,
+        "likes": 18,
+        "reposts": 4,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
