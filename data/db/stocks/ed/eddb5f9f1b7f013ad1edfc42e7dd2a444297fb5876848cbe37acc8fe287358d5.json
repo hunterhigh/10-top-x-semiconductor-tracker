@@ -1694,17 +1694,18 @@
       "close": 8.77
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-09-10T00:18:03.057614+00:00",
+  "price_updated_at": "2026-09-11T06:17:39.740440+00:00",
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "ALRIB.PA",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-09-10T00:18:02.839704+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-09-11T06:17:39.662362+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-09-11T09:17:39.662362+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
