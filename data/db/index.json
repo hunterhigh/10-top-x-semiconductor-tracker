@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-12T09:16:32.370635+00:00",
+  "generated_at": "2026-09-12T12:15:20.564274+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2352,
-    "total_mentions": 28921,
+    "total_mentions": 28922,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-12T09:17:53.808206+00:00"
+    "prices_updated_at": "2026-09-12T12:16:45.811655+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -393,7 +393,8 @@
       "price_status": "ok",
       "instrument_id": "US:GOOGL",
       "hash": "c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69",
-      "path": "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json"
+      "path": "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json",
+      "price_history_52w_status": "ok"
     },
     "US:META": {
       "ticker": "META",
@@ -1382,7 +1383,7 @@
         "price_symbol": "ORCL",
         "verification_status": "verified"
       },
-      "cashtag": "ORCL",
+      "cashtag": "$ORCL",
       "price_symbol": "ORCL",
       "exchange": "US",
       "currency": "USD",
@@ -1391,12 +1392,12 @@
       "company": "ORACLE CORP",
       "industry": "Cloud/AI Cloud Infra (OCI)",
       "first_mention": "2025-09-09",
-      "last_mention": "2026-09-11",
-      "total_mentions": 207,
+      "last_mention": "2026-09-12",
+      "total_mentions": 208,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 130,
-        "StockMKTNewz": 24,
+        "StockMKTNewz": 25,
         "balder": 15,
         "michaelsikand": 10,
         "octopusycc": 9,
@@ -3184,7 +3185,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:WMT": {
       "ticker": "WMT",
@@ -3801,7 +3803,8 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:TE": {
       "ticker": "TE",
@@ -4002,7 +4005,8 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:IBM": {
       "ticker": "IBM",
@@ -5097,7 +5101,8 @@
       "price_status": "ok",
       "instrument_id": "US:CIEN",
       "hash": "de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262",
-      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json"
+      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRWD": {
       "ticker": "CRWD",
@@ -9542,7 +9547,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VST": {
       "ticker": "VST",
@@ -13636,8 +13642,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:DKNG": {
       "ticker": "DKNG",
