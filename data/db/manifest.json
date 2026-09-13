@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-12T21:19:24.533075+00:00",
+  "generated_at": "2026-09-13T00:18:31.346696+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2352,
-  "index_sha256": "040cff728951dce300ae48eab0e833efcaac0b937c4e501c1728f109a8e1c7d1",
-  "blogger_profiles_sha256": "746a8339f81eba5bbf85b5e4735e6c361c68773e60a1b92feca98d3092cc795d",
+  "index_sha256": "a8e2029723838389b244b895b613a9b37b46641a04e525d72b5cebeed79cb298",
+  "blogger_profiles_sha256": "7dcd302b7b71b268f5d584766e32281e58461f15f937c46306d19155b972f594",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "21fe15bb2c2b370d2f8dfd8924051c48ab4c9cd92a505cf3cd29feb0c7b877b6",
@@ -67,14 +67,15 @@
     "min_mentions": 50,
     "tickers": 1157,
     "status_counts": {
-      "ok": 456,
-      "partial": 16,
+      "ok": 458,
+      "partial": 14,
       "unverified_symbol": 676,
       "unavailable": 9
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 13,
+      "EODHD 402 (account quota or subscription limit)": 10,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
       "unverified_instrument_identity": 676,
       "provider_symbol_not_found_after_search": 4,
       "no_daily_closes_returned": 3,
@@ -97,8 +98,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 33,
-      "deferred": 3
+      "supported": 35,
+      "unsupported": 1
     },
     "retry_queue": 0,
     "scope_counts": {
