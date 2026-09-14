@@ -1,6 +1,6 @@
 {
   "ticker": "SKHY",
-  "cashtag": "$SKHY",
+  "cashtag": "SKHY",
   "instrument": {
     "instrument_id": "US:SKHY",
     "display_code": "SKHY",
@@ -24,8 +24,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-30",
-  "last_mention": "2026-09-11",
-  "total_mentions": 118,
+  "last_mention": "2026-09-14",
+  "total_mentions": 120,
   "total_mentions_by_blogger": {
     "ren_stocks": 31,
     "aleabitoreddit": 20,
@@ -34,13 +34,13 @@
     "jukan05": 12,
     "KawzInvests": 9,
     "unusual_whales": 6,
+    "frank_trading": 4,
     "octopusycc": 3,
-    "michaelsikand": 2,
-    "frank_trading": 2
+    "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
     "flow": 6,
-    "opinion": 93,
+    "opinion": 95,
     "news": 19
   },
   "mentions": [
@@ -2894,6 +2894,56 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2099471768566325734",
+      "blogger_id": "frank_trading",
+      "date": "2026-09-14",
+      "created_at": "2026-09-14T08:14:10-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "took profits on long position"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SKHY",
+      "text": "上周交易不多，但几次关键操作的节奏都比较顺。我们先逐步止盈了 SNDK 和 SKHY 的多头，随后也获利了结了用于对冲的 SPX put spread，把前期利润逐步落袋。\n\n9 月 10 日，我们开始布局次日的“9·11 爱国盘”反弹。先通过 call spread 实现翻倍，再将仓位 roll 成 7665 的末日butterfly，后续又拿到 6 倍收益。出于对passive flow的认知，我们又在911当天清理了短线的仓位，非常幸运的避开了周一的大跌。从兑现原有仓位，到参与反弹，再到调整期权结构，这一轮交易的节奏和执行都比较到位。\n本周的一切马前炮：\nhttps://t.co/x4YcAmcpix\n谢谢大家！",
+      "url": "https://x.com/Franktradinglog/status/2099471768566325734",
+      "kind": "post",
+      "engagement": {
+        "views": 6100,
+        "likes": 10,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2099472192362975659",
+      "blogger_id": "frank_trading",
+      "date": "2026-09-14",
+      "created_at": "2026-09-14T08:15:51-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "took profits on long position"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SKHY",
+      "text": "We did not trade much last week, but the timing of the key moves worked out well. We first gradually took profits on our SNDK and SKHY longs, then closed the SPX put spread hedge at a profit, steadily banking our earlier gains.\n\nOn September 10, we began positioning for the next day’s September 11 “patriotic bid” bounce. We first doubled our money on a call spread, then rolled the position into a 7665 butterfly and went on to make another 6x. Based on our understanding of passive flows, we also closed out our short-term positions on September 11, fortunately sidestepping Monday’s sharp selloff.\nFrom taking profits on existing positions to trading the rebound and adjusting the options structure, both the timing and execution worked out well.\nThis Week’s Global Equity + Commodity Rotation Playbook  As always, the pre-market roadmap is in the comments.  Thank you!",
+      "url": "https://x.com/Franktradinglog/status/2099472192362975659",
+      "kind": "post",
+      "engagement": {
+        "views": 4167,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3076,11 +3126,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-14T12:16:53.025352+00:00",
+  "price_updated_at": "2026-09-14T15:18:24.848655+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-15",
     "asof": "2026-09-14",
-    "attempted_at": "2026-09-14T12:16:52.263675+00:00",
+    "attempted_at": "2026-09-14T15:18:24.619583+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-07-13",
     "last_available_date": "2026-09-11",
@@ -3091,7 +3141,7 @@
     "provider_symbol": "SKHY",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-14T12:16:52.263675+00:00",
+    "checked_at": "2026-09-14T15:18:24.619583+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
