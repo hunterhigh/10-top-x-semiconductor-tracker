@@ -1,10 +1,10 @@
 {
   "ticker": "TECH",
-  "cashtag": "$TECH",
+  "cashtag": "科技股",
   "instrument": {
     "instrument_id": "UNVERIFIED:TECH",
     "display_code": "TECH",
-    "display_name": "Bio-Techne",
+    "display_name": "Technology stocks (general)",
     "display_market": "Market unverified",
     "aliases": [
       "TECH"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Bio-Techne",
+  "company": "Technology stocks (general)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-29",
-  "last_mention": "2026-08-17",
-  "total_mentions": 3,
+  "last_mention": "2026-09-13",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 3
+    "StockMKTNewz": 3,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 3
+    "news": 3,
+    "opinion": 1
   },
   "mentions": [
     {
@@ -98,6 +100,33 @@
         "likes": 100,
         "reposts": 12,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2099261200710377870",
+      "blogger_id": "balder",
+      "date": "2026-09-13",
+      "created_at": "2026-09-13T18:17:27-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "VIX very high",
+        "tech stocks falling hardest",
+        "panic sell-off likely at next open"
+      ],
+      "is_risk": true,
+      "conviction": "medium",
+      "raw_mention": "科技股",
+      "text": "大家好，期货市场开门啦🥹🥹\n\nVIX好高，科技股果然是下杀最狠，不用看半导体肯定被干烂了，VIX这么高，明天开盘恐慌性大跌的可能性很大。 https://t.co/uND3Vx5IWs",
+      "url": "https://x.com/Balder13946731/status/2099261200710377870",
+      "kind": "post",
+      "engagement": {
+        "views": 10395,
+        "likes": 38,
+        "reposts": 3,
+        "replies": 4
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
