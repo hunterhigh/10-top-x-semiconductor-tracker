@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-14T21:17:59.054756+00:00",
+  "generated_at": "2026-09-15T00:20:07.718079+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2366,
-  "index_sha256": "bbb86a87a50e5bf481ec203c7c27afefca3b24f1c41053d8be8d53d738baa876",
-  "blogger_profiles_sha256": "627c8c9710f83bc9a68142c137a6d7a3838066847da1923e09c1f0255d402431",
+  "index_sha256": "5eb8660ee231be9d6ffea557153e1cc2aa9ce9fa61caddc3fc540c6ebf46f1ef",
+  "blogger_profiles_sha256": "14b8fec50e38ea47a95283aa69025180943b16ae51801606ac0e18d729adba7e",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "21fe15bb2c2b370d2f8dfd8924051c48ab4c9cd92a505cf3cd29feb0c7b877b6",
@@ -13,7 +13,7 @@
   "price_cache_index_sha256": "b8bbae7423a28b0e342a0c990dcceb8c25538c942eb226f68a54356c6e97063a",
   "price_cache_root": "prices_cache",
   "tickers": 2366,
-  "total_mentions": 29072,
+  "total_mentions": 29101,
   "priced_tickers": 737,
   "date_range": [
     "2025-07-02",
@@ -24,15 +24,15 @@
   "mentions_by_blogger": {
     "aleabitoreddit": 16066,
     "zephyr_z9": 552,
-    "StockMKTNewz": 5521,
+    "StockMKTNewz": 5522,
     "KawzInvests": 511,
     "ren_stocks": 1268,
     "jukan05": 1311,
     "octopusycc": 638,
     "unusual_whales": 887,
-    "michaelsikand": 672,
+    "michaelsikand": 675,
     "DJTRadar": 210,
-    "balder": 1000,
+    "balder": 1025,
     "frank_trading": 57,
     "asklivermore": 379
   },
@@ -67,19 +67,21 @@
     "min_mentions": 50,
     "tickers": 990,
     "status_counts": {
-      "ok": 412,
-      "partial": 19,
+      "ok": 417,
+      "partial": 14,
       "unverified_symbol": 549,
       "unavailable": 10
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 16,
+      "EODHD 402 (account quota or subscription limit)": 10,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
       "unverified_instrument_identity": 549,
       "provider_symbol_not_found_after_search": 5,
       "no_daily_closes_returned": 3,
-      "EODHD 402 (search capacity unavailable)": 2,
+      "EODHD 404 (symbol not found: 5802.TSE)": 1,
       "stale_series_latest_close=2026-08-31": 1,
+      "EODHD 402 (search capacity unavailable)": 1,
       "stale_series_latest_close=2026-09-02": 1,
       "stale_series_latest_close=2026-08-17": 1
     },
@@ -97,8 +99,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 31,
-      "deferred": 2
+      "supported": 32,
+      "unsupported": 1
     },
     "retry_queue": 0,
     "scope_counts": {
