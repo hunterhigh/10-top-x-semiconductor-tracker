@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "Nvidia",
+  "cashtag": "英伟达",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -25,14 +25,14 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-09-15",
-  "total_mentions": 1217,
+  "total_mentions": 1219,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 570,
     "StockMKTNewz": 198,
-    "jukan05": 124,
+    "jukan05": 125,
     "zephyr_z9": 70,
     "unusual_whales": 70,
-    "balder": 50,
+    "balder": 51,
     "ren_stocks": 33,
     "KawzInvests": 32,
     "octopusycc": 32,
@@ -42,7 +42,7 @@
     "asklivermore": 4
   },
   "total_mentions_by_signal_type": {
-    "opinion": 944,
+    "opinion": 946,
     "news": 198,
     "flow": 70,
     "disclosure": 5
@@ -28622,6 +28622,58 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2099831344499233181",
+      "blogger_id": "jukan05",
+      "date": "2026-09-15",
+      "created_at": "2026-09-15T08:03:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [
+        "Rubin Ultra has been pushed back to 2028"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Rubin Ultra",
+      "text": "Wait, what? Rubin Ultra has been pushed back to 2028? via @TMTBreakout https://t.co/WeVyiPGmdS",
+      "url": "https://x.com/jukan05/status/2099831344499233181",
+      "kind": "post",
+      "engagement": {
+        "views": 5655,
+        "likes": 25,
+        "reposts": 1,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2099832750564069564",
+      "blogger_id": "balder",
+      "date": "2026-09-15",
+      "created_at": "2026-09-15T08:08:35-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Blackwell mass delivery will reprice compute costs, causing H100 rental prices to crash",
+        "H100 chips used as ABS collateral are like perishables with ~18-month shelf life, not real estate",
+        "leveraged GPU hoarding scheme will blow up when collateral value collapses"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "英伟达",
+      "text": "我发现华尔街现在有个极度离谱的错觉，就是把英伟达的GPU当成曼哈顿的写字楼在放贷。\n\n现在外面那批Tier 2的算力二道贩子去借钱，底层抵押物全是手里的H100。搞固收的老钱们一看租金流水这么高，直接把它当商业不动产来批ABS。\n\n但芯片根本不是收租的楼，它本质上就是保质期极短的生鲜。等后面Blackwell大批量交货，算力成本一重估，老卡的租赁价绝对要跳水🌚 到时候抵押物价值直接穿仓，加杠杆囤卡的局肯定要爆。\n\n用摩尔定律去玩次贷杠杆，就像一个做债的朋友昨天吐槽的原话：华尔街这帮人是真的疯，居然给一堆保质期18个月的海鲜批了5年期的长期贷款！",
+      "url": "https://x.com/Balder13946731/status/2099832750564069564",
+      "kind": "post",
+      "engagement": {
+        "views": 757,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -29788,11 +29840,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-15T09:18:47.863612+00:00",
+  "price_updated_at": "2026-09-15T12:17:54.234076+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-16",
     "asof": "2026-09-15",
-    "attempted_at": "2026-09-15T09:18:47.151636+00:00",
+    "attempted_at": "2026-09-15T12:17:53.836493+00:00",
     "status": "ok",
     "first_available_date": "2025-09-16",
     "last_available_date": "2026-09-14",
@@ -29803,7 +29855,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-15T09:18:47.151636+00:00",
+    "checked_at": "2026-09-15T12:17:53.836493+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
