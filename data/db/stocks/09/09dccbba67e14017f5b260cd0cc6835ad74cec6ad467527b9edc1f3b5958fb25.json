@@ -1,6 +1,6 @@
 {
   "ticker": "SIVE",
-  "cashtag": "Sivers",
+  "cashtag": "$SIVE",
   "instrument": {
     "instrument_id": "Nasdaq Stockholm:SIVE",
     "display_code": "SIVE",
@@ -25,17 +25,17 @@
   "industry": "AI Photonics/CPO Lasers",
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
-  "last_mention": "2026-09-11",
-  "total_mentions": 968,
+  "last_mention": "2026-09-15",
+  "total_mentions": 970,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 895,
+    "aleabitoreddit": 897,
     "ren_stocks": 67,
     "jukan05": 3,
     "KawzInvests": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 968
+    "opinion": 970
   },
   "mentions": [
     {
@@ -25572,6 +25572,59 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2100008575229976995",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-15",
+      "created_at": "2026-09-15T19:47:15-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "100M+ CW DFB laser capacity buildout puts them in T1 laser capacity conversation",
+        "working with Chinese pluggable players and setting up local office",
+        "previously linked with JBL at OFC for 1.6T LRO before press release confirmed it",
+        "industry recognition from Digitimes coverage"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$SIVE",
+      "text": "$SIVE has its own piece in Digitimes btw, which is appreciated industry recognition outside of Sweden. \n\nI think Sivers 100M+ CW DFB laser capacity buildout forced the industry to revisit its models and generated considerably more coverage. \n\nBC it puts Sivers into T1 laser capacity convo w/ $COHR, Sumitomo, Furukawa, $AVGO, Landmark, and $LITE if it executes on its ramp. \n\nBut outside of that, CIOE 2026 channel checks were really meaningful since the community found Sivers is working with Chinese pluggable players + setting up an office locally. \n\nI'm getting dejavu to the time I pointed out $SIVE + $JBL at OFC for their 1.6T LRO, but nobody believed the link until there was an actual press release. \n\nAnyway, proud to see this little company growing up",
+      "url": "https://x.com/aleabitoreddit/status/2100008575229976995",
+      "kind": "post",
+      "engagement": {
+        "views": 33474,
+        "likes": 96,
+        "reposts": 9,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2100009535264194890",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-09-15",
+      "created_at": "2026-09-15T19:51:04-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Trendforce has standalone piece on SIVE capacity projections"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "@two3pro Trendforce also has a standalone piece for $SIVE capacity projections https://t.co/9SD8tUN87h",
+      "url": "https://x.com/aleabitoreddit/status/2100009535264194890",
+      "kind": "reply",
+      "engagement": {
+        "views": 2061,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -26726,29 +26779,32 @@
     {
       "date": "2026-09-14",
       "close": 27.38
+    },
+    {
+      "date": "2026-09-15",
+      "close": 27.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "SEK",
-  "price_updated_at": "2026-09-15T21:17:26.652140+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-09-16T00:16:40.910314+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-16",
     "asof": "2026-09-15",
-    "attempted_at": "2026-09-15T21:17:26.479695+00:00",
+    "attempted_at": "2026-09-16T00:16:40.683499+00:00",
     "status": "ok",
     "first_available_date": "2025-09-16",
-    "last_available_date": "2026-09-14",
+    "last_available_date": "2026-09-15",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-09-15T21:17:26.479695+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-09-16T00:17:26.479695+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-09-16T00:16:40.683499+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-15T21:18:12.469740+00:00",
+  "generated_at": "2026-09-16T00:17:10.661476+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2367,
-  "index_sha256": "a3b597ecf227fda544080e2228d40f8b78286a68d2722d71b890fc5f5a1bbbd4",
-  "blogger_profiles_sha256": "201baf2b7cb9b3dc4dcfa60b0c705867ea2680ad6b480caa44987cec95c85068",
+  "index_sha256": "4915033844232a371931d20b68dc90a30b1345707e585a469bcb29a324aeae39",
+  "blogger_profiles_sha256": "9545fd30be0d22f673676b272b2ec1e758cbd5efdd95d9dc8fa71109ca6a2f30",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "21fe15bb2c2b370d2f8dfd8924051c48ab4c9cd92a505cf3cd29feb0c7b877b6",
@@ -13,7 +13,7 @@
   "price_cache_index_sha256": "b8bbae7423a28b0e342a0c990dcceb8c25538c942eb226f68a54356c6e97063a",
   "price_cache_root": "prices_cache",
   "tickers": 2367,
-  "total_mentions": 29171,
+  "total_mentions": 29202,
   "priced_tickers": 737,
   "date_range": [
     "2025-07-02",
@@ -22,9 +22,9 @@
   "size_mb": 52.7,
   "tracked_bloggers": 11,
   "mentions_by_blogger": {
-    "aleabitoreddit": 16082,
+    "aleabitoreddit": 16091,
     "zephyr_z9": 552,
-    "StockMKTNewz": 5528,
+    "StockMKTNewz": 5529,
     "KawzInvests": 517,
     "ren_stocks": 1277,
     "jukan05": 1328,
@@ -32,7 +32,7 @@
     "unusual_whales": 887,
     "michaelsikand": 681,
     "DJTRadar": 210,
-    "balder": 1030,
+    "balder": 1051,
     "frank_trading": 57,
     "asklivermore": 381
   },
@@ -67,20 +67,21 @@
     "min_mentions": 50,
     "tickers": 956,
     "status_counts": {
-      "ok": 404,
-      "partial": 16,
+      "ok": 405,
+      "partial": 15,
       "unverified_symbol": 526,
       "unavailable": 10
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 13,
+      "EODHD 402 (account quota or subscription limit)": 11,
+      "EODHD 404 (symbol not found: 005930.KS)": 1,
       "unverified_instrument_identity": 526,
       "provider_symbol_not_found_after_search": 5,
       "no_daily_closes_returned": 3,
       "EODHD 404 (symbol not found: 5802.TSE)": 1,
-      "stale_series_latest_close=2026-08-31": 1,
       "EODHD 402 (search capacity unavailable)": 1,
+      "stale_series_latest_close=2026-08-31": 1,
       "stale_series_latest_close=2026-09-02": 1,
       "stale_series_latest_close=2026-08-17": 1
     },
@@ -98,8 +99,8 @@
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 32,
-      "deferred": 2
+      "supported": 33,
+      "unsupported": 1
     },
     "retry_queue": 0,
     "scope_counts": {
