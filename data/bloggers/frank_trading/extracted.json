@@ -1385,5 +1385,55 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-14T15:12:09.715514+00:00"
+  },
+  "2100285723131969543": {
+    "tweet_id": "2100285723131969543",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.5,
+    "blogger_id": "frank_trading",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-16T18:12:30.271846+00:00"
+  },
+  "2100256263804490198": {
+    "tweet_id": "2100256263804490198",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "GLD",
+        "symbol": "GLD",
+        "company_name": "SPDR Gold Shares ETF",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "expects rate pressure to ease after FOMC hike is delivered",
+          "watching for USD and real yields to stop rising",
+          "gold not making new lows on rate hike news as confirmation signal",
+          "price reclaiming pre-meeting consolidation range as entry trigger",
+          "plans to use GLD or call spreads for 1-10 trading day recovery trade"
+        ],
+        "is_risk": false,
+        "conviction_signal": "medium"
+      },
+      {
+        "raw_mention": "QQQ",
+        "symbol": "QQQ",
+        "company_name": "Invesco QQQ Trust",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "easing rate pressure and stable credit sufficient to drive a rebound in rate-sensitive sectors short-term",
+          "when bearish catalysts land but price can't fall, existing shorts must reassess risk"
+        ],
+        "is_risk": false,
+        "conviction_signal": "low"
+      }
+    ],
+    "confidence": 0.75,
+    "blogger_id": "frank_trading",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-16T18:12:30.271846+00:00"
   }
 }
