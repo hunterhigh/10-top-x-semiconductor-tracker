@@ -1,6 +1,6 @@
 {
   "ticker": "DJIA",
-  "cashtag": "DOW",
+  "cashtag": "Dow",
   "instrument": {
     "instrument_id": "UNVERIFIED:DJIA",
     "display_code": "DJIA",
@@ -24,18 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-29",
-  "last_mention": "2026-09-09",
-  "total_mentions": 6,
+  "last_mention": "2026-09-16",
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 2,
     "unusual_whales": 2,
-    "balder": 1,
-    "asklivermore": 1
+    "asklivermore": 2,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
     "news": 2,
     "flow": 2,
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -175,20 +175,43 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2100369081983701049",
+      "blogger_id": "asklivermore",
+      "date": "2026-09-16",
+      "created_at": "2026-09-16T19:39:46-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Dow",
+      "text": "This market is pretty awful right now.\n\nThe S&amp;P 500, Nasdaq, and Dow has gone nowhere in the past 4 months. \n\nIf you can stay patient and survive this, you can survive anything.",
+      "url": "https://x.com/asklivermore/status/2100369081983701049",
+      "kind": "post",
+      "engagement": {
+        "views": 13498,
+        "likes": 148,
+        "reposts": 3,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-09-15T21:17:38.320526+00:00",
+  "price_updated_at": "2026-09-17T00:18:10.725573+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-09-15T21:17:38.320513+00:00",
-    "attempts": 27,
+    "checked_at": "2026-09-17T00:18:10.725559+00:00",
+    "attempts": 28,
     "next_retry_at": null,
     "http_status": null
   }
