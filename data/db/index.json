@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-17T00:17:38.742880+00:00",
+  "generated_at": "2026-09-17T03:16:28.961401+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2368,
-    "total_mentions": 29274,
+    "total_mentions": 29275,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-17T00:18:27.421947+00:00"
+    "prices_updated_at": "2026-09-17T03:17:14.932630+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -1146,7 +1146,8 @@
       "price_status": "ok",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
+      "price_history_52w_status": "ok"
     },
     "US:AVGO": {
       "ticker": "AVGO",
@@ -3430,7 +3431,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -3722,8 +3724,7 @@
       "price_status": "ok",
       "instrument_id": "US:AMAT",
       "hash": "1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd",
-      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json"
     },
     "EPA:ALRIB": {
       "ticker": "ALRIB",
@@ -5683,6 +5684,49 @@
       "hash": "698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e",
       "path": "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json"
     },
+    "US:ADBE": {
+      "ticker": "ADBE",
+      "instrument": {
+        "instrument_id": "US:ADBE",
+        "display_code": "ADBE",
+        "display_name": "ADOBE INC.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "ADBE"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ADBE",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ADBE",
+      "price_symbol": "ADBE",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "ADOBE INC.",
+      "industry": null,
+      "first_mention": "2025-09-10",
+      "last_mention": "2026-09-16",
+      "total_mentions": 31,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 15,
+        "aleabitoreddit": 5,
+        "octopusycc": 4,
+        "asklivermore": 2,
+        "balder": 2,
+        "unusual_whales": 1,
+        "ren_stocks": 1,
+        "michaelsikand": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ADBE",
+      "hash": "ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a",
+      "path": "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json"
+    },
     "US:LRCX": {
       "ticker": "LRCX",
       "instrument": {
@@ -5885,48 +5929,6 @@
       "instrument_id": "UNVERIFIED:YMTC",
       "hash": "840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5",
       "path": "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json"
-    },
-    "US:ADBE": {
-      "ticker": "ADBE",
-      "instrument": {
-        "instrument_id": "US:ADBE",
-        "display_code": "ADBE",
-        "display_name": "ADOBE INC.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "ADBE"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ADBE",
-        "verification_status": "verified"
-      },
-      "cashtag": "ADBE",
-      "price_symbol": "ADBE",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "ADOBE INC.",
-      "industry": null,
-      "first_mention": "2025-09-10",
-      "last_mention": "2026-09-14",
-      "total_mentions": 30,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 15,
-        "aleabitoreddit": 5,
-        "octopusycc": 4,
-        "asklivermore": 2,
-        "balder": 2,
-        "unusual_whales": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ADBE",
-      "hash": "ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a",
-      "path": "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json"
     },
     "US:BAC": {
       "ticker": "BAC",
@@ -6568,8 +6570,7 @@
       "price_status": "ok",
       "instrument_id": "US:SMTC",
       "hash": "e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9",
-      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json"
     },
     "US:APP": {
       "ticker": "APP",
@@ -115827,12 +115828,12 @@
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
     "stocks/15/15934c8eba8e809e2de8ddf72743c163eb1ea00a2e771e73e2cdb9f3d6108230.json",
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
+    "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json",
     "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json",
     "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
     "stocks/e1/e1fd17585f36d453de0276417a7f59d3690c541c567ed7f456f667362741ea53.json",
     "stocks/fb/fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8.json",
     "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
-    "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json",
     "stocks/ad/ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77.json",
     "stocks/3f/3fa9b223f5aaf5b036d1586b736f725970c8bcfc10cb31effdd7d845f34f81ec.json",
     "stocks/30/309c54f4a9393010842029a5b0dac8492a96528d4ac33a1664f6df59c5f23bbe.json",
