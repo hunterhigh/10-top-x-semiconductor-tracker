@@ -1,6 +1,6 @@
 {
   "ticker": "NOK",
-  "cashtag": "NOK",
+  "cashtag": "$NOK",
   "instrument": {
     "instrument_id": "US:NOK",
     "display_code": "NOK",
@@ -24,20 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-18",
-  "last_mention": "2026-09-15",
-  "total_mentions": 85,
+  "last_mention": "2026-09-17",
+  "total_mentions": 87,
   "total_mentions_by_blogger": {
-    "KawzInvests": 28,
+    "KawzInvests": 29,
     "aleabitoreddit": 24,
     "michaelsikand": 12,
-    "ren_stocks": 7,
+    "ren_stocks": 8,
     "balder": 5,
     "octopusycc": 4,
     "StockMKTNewz": 3,
     "DJTRadar": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 80,
+    "opinion": 82,
     "disclosure": 2,
     "news": 3
   },
@@ -2159,6 +2159,56 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2100597976007876734",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-17",
+      "created_at": "2026-09-17T10:49:19-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "perpetually undervalued regardless of fundamental achievements"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NOK",
+      "text": "$NOK\n\nCould find the cure for cancer and still trade at $10.",
+      "url": "https://x.com/ren_stocks/status/2100597976007876734",
+      "kind": "post",
+      "engagement": {
+        "views": 5364,
+        "likes": 34,
+        "reposts": 0,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2100602168935862560",
+      "blogger_id": "KawzInvests",
+      "date": "2026-09-17",
+      "created_at": "2026-09-17T11:05:59-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "gathering hyperscaler partnerships"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NOK",
+      "text": "$NOK gathering hyperscaler partnerships like infinity stones",
+      "url": "https://x.com/KawzInvests/status/2100602168935862560",
+      "kind": "post",
+      "engagement": {
+        "views": 2717,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3321,18 +3371,22 @@
     {
       "date": "2026-09-15",
       "close": 9.84
+    },
+    {
+      "date": "2026-09-16",
+      "close": 10.14
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-16T21:18:48.016184+00:00",
+  "price_updated_at": "2026-09-17T15:20:46.279016+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-12",
-    "asof": "2026-09-11",
-    "attempted_at": "2026-09-11T12:17:25.885761+00:00",
+    "requested_start": "2025-09-18",
+    "asof": "2026-09-17",
+    "attempted_at": "2026-09-17T15:20:45.231812+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-12",
-    "last_available_date": "2026-09-10",
+    "first_available_date": "2025-09-18",
+    "last_available_date": "2026-09-16",
     "reason": null
   },
   "price_source_state": {
@@ -3340,7 +3394,7 @@
     "provider_symbol": "NOK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-16T21:18:46.798526+00:00",
+    "checked_at": "2026-09-17T15:20:45.231812+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
