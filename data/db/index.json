@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-17T09:17:17.222725+00:00",
+  "generated_at": "2026-09-17T12:16:48.341668+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2368,
-    "total_mentions": 29275,
+    "total_mentions": 29277,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-17T09:18:24.734027+00:00"
+    "prices_updated_at": "2026-09-17T12:18:09.224132+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -104,11 +104,11 @@
       "company": "Nebius",
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-09-16",
-      "total_mentions": 1053,
+      "last_mention": "2026-09-17",
+      "total_mentions": 1054,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 817,
+        "aleabitoreddit": 818,
         "ren_stocks": 147,
         "StockMKTNewz": 37,
         "balder": 14,
@@ -161,7 +161,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -298,7 +298,8 @@
       "price_status": "ok",
       "instrument_id": "US:AXTI",
       "hash": "d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b",
-      "path": "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json"
+      "path": "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
+      "price_history_52w_status": "ok"
     },
     "US:MU": {
       "ticker": "MU",
@@ -485,8 +486,7 @@
       "price_status": "ok",
       "instrument_id": "US:IREN",
       "hash": "8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb",
-      "path": "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json"
     },
     "US:MSFT": {
       "ticker": "MSFT",
@@ -1324,7 +1324,8 @@
       "price_status": "ok",
       "instrument_id": "US:RKLB",
       "hash": "e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0",
-      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json"
+      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
+      "price_history_52w_status": "ok"
     },
     "US:CIFR": {
       "ticker": "CIFR",
@@ -2045,8 +2046,7 @@
       "price_status": "ok",
       "instrument_id": "US:WULF",
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
-      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
     },
     "US:MTSI": {
       "ticker": "MTSI",
@@ -3038,8 +3038,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:IBKR": {
       "ticker": "IBKR",
@@ -3273,7 +3272,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASTS",
       "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json"
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
+      "price_history_52w_status": "ok"
     },
     "US:BMNR": {
       "ticker": "BMNR",
@@ -3352,8 +3352,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:285A",
       "hash": "44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4",
-      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json"
     },
     "Euronext Paris:XFAB": {
       "ticker": "XFAB",
@@ -3477,7 +3476,8 @@
       "price_status": "ok",
       "instrument_id": "US:GOOG",
       "hash": "96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b",
-      "path": "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json"
+      "path": "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
+      "price_history_52w_status": "ok"
     },
     "US:BRK.B": {
       "ticker": "BRK.B",
@@ -3646,7 +3646,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:WLAC": {
       "ticker": "WLAC",
@@ -3805,8 +3806,7 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
     },
     "UNVERIFIED:TE": {
       "ticker": "TE",
@@ -4007,8 +4007,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:IBM": {
       "ticker": "IBM",
@@ -4791,7 +4790,8 @@
       "price_status": "ok",
       "instrument_id": "US:CIEN",
       "hash": "de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262",
-      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json"
+      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRM": {
       "ticker": "CRM",
@@ -6929,7 +6929,8 @@
       "price_status": "ok",
       "instrument_id": "US:DJT",
       "hash": "27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8",
-      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json"
+      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
+      "price_history_52w_status": "ok"
     },
     "US:LWLG": {
       "ticker": "LWLG",
@@ -13641,8 +13642,7 @@
       "price_status": "ok",
       "instrument_id": "US:BB",
       "hash": "9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1",
-      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/9e/9e887d39c1b6e2bd4074e721f131ac59084379a4d31e147b948b4ca03178bcc1.json"
     },
     "US:CMG": {
       "ticker": "CMG",
@@ -18895,6 +18895,43 @@
       "hash": "82568717c9a82595a3aa6748cef16f54e06c3e1665bd101e53209868f8f4dbaf",
       "path": "stocks/82/82568717c9a82595a3aa6748cef16f54e06c3e1665bd101e53209868f8f4dbaf.json"
     },
+    "UNVERIFIED:PSMC": {
+      "ticker": "PSMC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:PSMC",
+        "display_code": "PSMC",
+        "display_name": "Powerchip Semiconductor Manufacturing Corporation",
+        "display_market": "Market unverified",
+        "aliases": [
+          "PSMC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$PSMC",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Powerchip Semiconductor Manufacturing Corporation",
+      "industry": null,
+      "first_mention": "2026-08-13",
+      "last_mention": "2026-09-17",
+      "total_mentions": 6,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 5,
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:PSMC",
+      "hash": "e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1",
+      "path": "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json"
+    },
     "UNVERIFIED:RDFN": {
       "ticker": "RDFN",
       "instrument": {
@@ -22144,43 +22181,6 @@
       "instrument_id": "UNVERIFIED:OXY",
       "hash": "fc50987cba05c60ceb2c6f714fadcf71a4fabd5468fd1c1b2999662b428b9375",
       "path": "stocks/fc/fc50987cba05c60ceb2c6f714fadcf71a4fabd5468fd1c1b2999662b428b9375.json"
-    },
-    "UNVERIFIED:PSMC": {
-      "ticker": "PSMC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:PSMC",
-        "display_code": "PSMC",
-        "display_name": "Powerchip Semiconductor Manufacturing Corporation",
-        "display_market": "Market unverified",
-        "aliases": [
-          "PSMC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "PSMC",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Powerchip Semiconductor Manufacturing Corporation",
-      "industry": null,
-      "first_mention": "2026-08-13",
-      "last_mention": "2026-08-30",
-      "total_mentions": 5,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 4,
-        "jukan05": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:PSMC",
-      "hash": "e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1",
-      "path": "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json"
     },
     "UNVERIFIED:RVTY": {
       "ticker": "RVTY",
@@ -116181,6 +116181,7 @@
     "stocks/e5/e5fde178cafa2d6a07b1570beeb60253e0774752bd526d8d242ac43134ea4b1f.json",
     "stocks/43/4359020f80ecd69282168dc658090fcc34fe6125471fb0ef61a5d1d010c1733a.json",
     "stocks/82/82568717c9a82595a3aa6748cef16f54e06c3e1665bd101e53209868f8f4dbaf.json",
+    "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json",
     "stocks/7e/7eba12c65767b16ae9c80fb3778135d74e6db655ab7be8ac5b84cbbe869ce67b.json",
     "stocks/d7/d76f6e551547cb017417d10fd080805270ccaccd5bbf00ec2591b14b247a4ed7.json",
     "stocks/5e/5ef7819e47729fae16b7ab5eeb5d1fc3748b46020ca2648b682b1791907ee255.json",
@@ -116269,7 +116270,6 @@
     "stocks/19/19fa1c776000927a8f1e68e0bd2ade129a5b67f39aa5b46f377143b324b55e6b.json",
     "stocks/1c/1ceca2302c4288681386d8a13c2cd944039fd985001a082d2f415024c7efaaca.json",
     "stocks/fc/fc50987cba05c60ceb2c6f714fadcf71a4fabd5468fd1c1b2999662b428b9375.json",
-    "stocks/e0/e09194154a33c17239aab372f31f552ec410c5bb02e42bdf0f43ee4ceaacfda1.json",
     "stocks/18/18f19db69c562b6860b54f56e92af99188d6d2308fcd0c5139742e6e13ced78e.json",
     "stocks/8e/8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3.json",
     "stocks/c1/c1533c0826094415d4b0855bb7a1442c9d141b2ba7277e2180087d42260548cb.json",
