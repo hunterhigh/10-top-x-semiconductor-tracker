@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-18T15:17:22.569414+00:00",
+  "generated_at": "2026-09-18T18:17:40.800041+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,18 +16,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2374,
-    "total_mentions": 29362,
+    "total_tickers": 2375,
+    "total_mentions": 29368,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2374,
+      "files": 2375,
       "shards": 256,
       "max_shard_width": 18,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-18T15:18:28.177626+00:00"
+    "prices_updated_at": "2026-09-18T18:18:56.899872+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -240,11 +240,11 @@
       "industry": "Optical Modules",
       "first_mention": "2025-12-11",
       "last_mention": "2026-09-18",
-      "total_mentions": 735,
+      "total_mentions": 736,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 554,
-        "ren_stocks": 91,
+        "ren_stocks": 92,
         "michaelsikand": 37,
         "KawzInvests": 30,
         "balder": 13,
@@ -422,14 +422,14 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-09-18",
-      "total_mentions": 553,
+      "total_mentions": 554,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 296,
         "StockMKTNewz": 117,
         "unusual_whales": 39,
         "balder": 28,
-        "michaelsikand": 22,
+        "michaelsikand": 23,
         "jukan05": 13,
         "zephyr_z9": 12,
         "ren_stocks": 10,
@@ -533,7 +533,8 @@
       "price_status": "ok",
       "instrument_id": "US:MSFT",
       "hash": "2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c",
-      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json"
+      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
+      "price_history_52w_status": "ok"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -803,11 +804,11 @@
       "company": "Space Exploration Technologies Corp",
       "industry": null,
       "first_mention": "2025-12-02",
-      "last_mention": "2026-09-17",
-      "total_mentions": 387,
+      "last_mention": "2026-09-18",
+      "total_mentions": 388,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 184,
+        "StockMKTNewz": 185,
         "unusual_whales": 81,
         "aleabitoreddit": 51,
         "balder": 17,
@@ -1323,8 +1324,7 @@
       "price_status": "ok",
       "instrument_id": "US:RKLB",
       "hash": "e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0",
-      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json"
     },
     "US:CIFR": {
       "ticker": "CIFR",
@@ -2902,11 +2902,11 @@
       "company": "JPMORGAN CHASE & CO",
       "industry": null,
       "first_mention": "2025-12-22",
-      "last_mention": "2026-09-16",
-      "total_mentions": 65,
+      "last_mention": "2026-09-18",
+      "total_mentions": 66,
       "blogger_count": 5,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 44,
+        "StockMKTNewz": 45,
         "unusual_whales": 12,
         "aleabitoreddit": 7,
         "octopusycc": 1,
@@ -3212,11 +3212,11 @@
       "company": "Walmart Inc.",
       "industry": null,
       "first_mention": "2025-12-10",
-      "last_mention": "2026-09-10",
-      "total_mentions": 58,
+      "last_mention": "2026-09-18",
+      "total_mentions": 59,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 19,
+        "StockMKTNewz": 20,
         "balder": 18,
         "aleabitoreddit": 13,
         "unusual_whales": 4,
@@ -3514,8 +3514,7 @@
       "price_status": "ok",
       "instrument_id": "US:GOOG",
       "hash": "96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b",
-      "path": "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/96/96e9bc8f26aef0a7ab5de83716b297d0fa0a65c626e0afc4a8d65a679e08a29b.json"
     },
     "US:NFLX": {
       "ticker": "NFLX",
@@ -3643,8 +3642,7 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
     },
     "UNVERIFIED:WLAC": {
       "ticker": "WLAC",
@@ -6848,7 +6846,8 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
+      "price_history_52w_status": "ok"
     },
     "TSE:6981": {
       "ticker": "6981",
@@ -9129,7 +9128,8 @@
       "price_status": "ok",
       "instrument_id": "US:DAL",
       "hash": "65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9",
-      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json"
+      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json",
+      "price_history_52w_status": "ok"
     },
     "US:EOSE": {
       "ticker": "EOSE",
@@ -9696,7 +9696,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VST": {
       "ticker": "VST",
@@ -60403,6 +60404,42 @@
       "hash": "6b5eaea43318ab19e1e389aa78555cc40c8bf81942d84997e139f2d611ba6073",
       "path": "stocks/6b/6b5eaea43318ab19e1e389aa78555cc40c8bf81942d84997e139f2d611ba6073.json"
     },
+    "UNVERIFIED:EXEQ": {
+      "ticker": "EXEQ",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:EXEQ",
+        "display_code": "EXEQ",
+        "display_name": "EXEQ ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "EXEQ"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$EXEQ",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "EXEQ ETF",
+      "industry": null,
+      "first_mention": "2026-09-18",
+      "last_mention": "2026-09-18",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:EXEQ",
+      "hash": "50094ec63d3183fc60a3b2fd8b5ae00ca045609b13ff01bacde3e19bea0e9291",
+      "path": "stocks/50/50094ec63d3183fc60a3b2fd8b5ae00ca045609b13ff01bacde3e19bea0e9291.json"
+    },
     "UNVERIFIED:EXP": {
       "ticker": "EXP",
       "instrument": {
@@ -89949,6 +89986,9 @@
     "$EXEL": [
       "US:EXEL"
     ],
+    "$EXEQ": [
+      "UNVERIFIED:EXEQ"
+    ],
     "$EXP": [
       "UNVERIFIED:EXP"
     ],
@@ -99172,6 +99212,12 @@
     ],
     "EXELIXIS, INC.": [
       "US:EXEL"
+    ],
+    "EXEQ": [
+      "UNVERIFIED:EXEQ"
+    ],
+    "EXEQ ETF": [
+      "UNVERIFIED:EXEQ"
     ],
     "EXP": [
       "UNVERIFIED:EXP"
@@ -109296,6 +109342,9 @@
     "UNVERIFIED:EXALF": [
       "UNVERIFIED:EXALF"
     ],
+    "UNVERIFIED:EXEQ": [
+      "UNVERIFIED:EXEQ"
+    ],
     "UNVERIFIED:EXP": [
       "UNVERIFIED:EXP"
     ],
@@ -117614,6 +117663,7 @@
     "stocks/de/de2a465637a68c758a3a65da3e3879c761a661d8044f0c3c071cce25d153ee89.json",
     "stocks/f9/f9a390d54b4f6b746c743f34e76b591f8fc2195b48ebf351ad00d1f3e41f2c38.json",
     "stocks/6b/6b5eaea43318ab19e1e389aa78555cc40c8bf81942d84997e139f2d611ba6073.json",
+    "stocks/50/50094ec63d3183fc60a3b2fd8b5ae00ca045609b13ff01bacde3e19bea0e9291.json",
     "stocks/9c/9c825f82a265fb6083abe03586063b741931b87ae4a05156fa30bd2c47844f7f.json",
     "stocks/29/29d867937f3dfe6c7f13ce9b700d44d0eff9bd504fbcbf688d00c2365e83b9a4.json",
     "stocks/7d/7de33a5900840080a8cd51746ecf9beb890d8956afae03f8990369cbfd468ac3.json",
