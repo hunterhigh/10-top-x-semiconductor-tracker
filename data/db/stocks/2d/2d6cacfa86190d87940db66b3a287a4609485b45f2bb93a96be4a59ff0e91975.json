@@ -1,10 +1,10 @@
 {
   "ticker": "SEMI",
-  "cashtag": "半导体",
+  "cashtag": "semi",
   "instrument": {
     "instrument_id": "UNVERIFIED:SEMI",
     "display_code": "SEMI",
-    "display_name": "Semiconductor stocks (general)",
+    "display_name": "SEMI (semiconductor index/ETF context)",
     "display_market": "Market unverified",
     "aliases": [
       "SEMI"
@@ -20,17 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Semiconductor stocks (general)",
+  "company": "SEMI (semiconductor index/ETF context)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-09-13",
-  "last_mention": "2026-09-13",
-  "total_mentions": 2,
+  "last_mention": "2026-09-18",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "balder": 2
+    "balder": 2,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -77,6 +78,31 @@
         "likes": 4,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2101046896299290914",
+      "blogger_id": "frank_trading",
+      "date": "2026-09-18",
+      "created_at": "2026-09-18T16:33:10-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "aggressively added long positions after FOMC tail-end low"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "semi",
+      "text": "本周已经杀心成焚！\n周一夜盘和 @labubu_trader 做多网安，做空soxx到500支撑位发现跌不动反手做多。\n周三看到苹果服务器和nvlink的消息直接大仓位轰进去cohr+lite，fomc尾盘最低点关了put，反手暴力加仓semi+gc+长债。Thanks @whz20024117 \n周四开盘直接轰入sndk+googl（我觉得fomc到10月开始炒作中选之前会是一次难得的适合大仓位做多的宏观出清的时间点）。\n周五美滋滋收菜。\n一切马前炮，谢谢大家！",
+      "url": "https://x.com/Franktradinglog/status/2101046896299290914",
+      "kind": "post",
+      "engagement": {
+        "views": 1366,
+        "likes": 7,
+        "reposts": 2,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

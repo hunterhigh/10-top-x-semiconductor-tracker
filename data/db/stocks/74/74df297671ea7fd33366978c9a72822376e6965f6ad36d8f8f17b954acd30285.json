@@ -1,10 +1,10 @@
 {
   "ticker": "LVS",
-  "cashtag": "Las Vegas Sands",
+  "cashtag": "$LVS",
   "instrument": {
     "instrument_id": "UNVERIFIED:LVS",
     "display_code": "LVS",
-    "display_name": "Las Vegas Sands Corp.",
+    "display_name": "Las Vegas Sands",
     "display_market": "Market unverified",
     "aliases": [
       "LVS"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Las Vegas Sands Corp.",
+  "company": "Las Vegas Sands",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-08-13",
-  "last_mention": "2026-08-25",
-  "total_mentions": 2,
+  "last_mention": "2026-09-18",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "asklivermore": 2
+    "asklivermore": 2,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 2,
+    "news": 1
   },
   "mentions": [
     {
@@ -78,6 +80,29 @@
         "likes": 336,
         "reposts": 14,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2101037703341203606",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-18",
+      "created_at": "2026-09-18T15:56:38-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LVS",
+      "text": "All these stocks hit new 52 WEEK LOWS at some point today\n\nNike $NKE \nMcDonald's $MCD  \nPepsiCo $PEP\nCarnival $CCL\nGrab Holdings $GRAB\nStellantis $STLA\nNorwegian Cruise Line $NCLH\nVICI Properties $VICI\nAmer Sports $AS\nT-Mobile US $TMUS\nTencent Music Entertainment $TME\nLennar $LEN\nLas Vegas Sands $LVS\nFidelity National Information Services $FIS\nDutch Bros $BROS\nExelon $EXC\nTelus $TU\nRollins $ROL\nIonis Pharmaceuticals $IONS\nBuilders FirstSource $BLDR\nAmrize $AMRZ\nClorox $CLX\nStandardAero $SARO\nCMS Energy $CMS\nWynn Resorts $WYNN\nPublic Service Enterprise Group $PEG\nEssential Properties Realty Trust $EPRT\nServiceTitan $TTAN\nLowe's $LOW\nYum! Brands $YUM\nNRG Energy $NRG\nGaming and Leisure Properties $GLPI\nConstellation Brands $STZ\nAon $AON\nPentair $PNR\nRentokil Initial $RTO\nSmithfield Foods $SFD\nWyndham Hotels & Resorts $WH\nAutoNation $AN\nAgree Realty $ADC\nVulcan Materials $VMC",
+      "url": "https://x.com/StockMKTNewz/status/2101037703341203606",
+      "kind": "post",
+      "engagement": {
+        "views": 24123,
+        "likes": 82,
+        "reposts": 13,
+        "replies": 18
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
