@@ -1,6 +1,6 @@
 {
   "ticker": "LITE",
-  "cashtag": "lite",
+  "cashtag": "$LITE",
   "instrument": {
     "instrument_id": "US:LITE",
     "display_code": "LITE",
@@ -25,11 +25,11 @@
   "thesis_summary": "他视 Lumentum 为 CPO 战略受益者,认为已大幅上涨但仍有空间,是光通信主线标的。",
   "first_mention": "2025-10-25",
   "last_mention": "2026-09-18",
-  "total_mentions": 792,
+  "total_mentions": 793,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 615,
     "ren_stocks": 79,
-    "KawzInvests": 31,
+    "KawzInvests": 32,
     "michaelsikand": 24,
     "balder": 20,
     "StockMKTNewz": 8,
@@ -40,7 +40,7 @@
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 783,
+    "opinion": 784,
     "news": 8,
     "flow": 1
   },
@@ -19092,6 +19092,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2101057160537084356",
+      "blogger_id": "KawzInvests",
+      "date": "2026-09-18",
+      "created_at": "2026-09-18T17:13:57-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "GPUs wait on network to send results across",
+        "adding compute without upgrading network pipes yields diminishing returns on capex",
+        "networking is the bottleneck not raw compute"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$LITE",
+      "text": "Why am I so focused on networking over raw compute?\n\nLook at GPU utilization 53% of surveyed data center operators report running at only 50–70% capacity during peak demand.\n\nGPUs aren't sitting idle because they lack compute power, they're sitting idle because they're waiting for data. They wait on storage, they wait on CPUs, and above all, they wait on other GPUs to send results back across the network.\n\nIf you add more compute to a cluster without upgrading the pipes, you just get diminishing returns on your capex. \n\n$LITE $COHR $AAOI $CRDO",
+      "url": "https://x.com/KawzInvests/status/2101057160537084356",
+      "kind": "post",
+      "engagement": {
+        "views": 8530,
+        "likes": 40,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -20262,18 +20289,22 @@
     {
       "date": "2026-09-17",
       "close": 893.61
+    },
+    {
+      "date": "2026-09-18",
+      "close": 930.91
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-18T21:18:29.222273+00:00",
+  "price_updated_at": "2026-09-19T00:16:45.288248+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-19",
     "asof": "2026-09-18",
-    "attempted_at": "2026-09-18T21:18:28.472430+00:00",
+    "attempted_at": "2026-09-19T00:16:44.759873+00:00",
     "status": "ok",
     "first_available_date": "2025-09-19",
-    "last_available_date": "2026-09-17",
+    "last_available_date": "2026-09-18",
     "reason": null
   },
   "price_source_state": {
@@ -20281,7 +20312,7 @@
     "provider_symbol": "LITE",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-18T21:18:28.472430+00:00",
+    "checked_at": "2026-09-19T00:16:44.759873+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
