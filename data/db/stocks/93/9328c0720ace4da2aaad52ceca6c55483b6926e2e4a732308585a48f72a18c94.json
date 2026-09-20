@@ -1,10 +1,10 @@
 {
   "ticker": "MKTX",
-  "cashtag": "$MKTX",
+  "cashtag": "MKTX",
   "instrument": {
     "instrument_id": "UNVERIFIED:MKTX",
     "display_code": "MKTX",
-    "display_name": "MarketAxess",
+    "display_name": "MarketAxess Holdings",
     "display_market": "Market unverified",
     "aliases": [
       "MKTX"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "MarketAxess",
+  "company": "MarketAxess Holdings",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-30",
-  "last_mention": "2026-07-30",
-  "total_mentions": 1,
+  "last_mention": "2026-09-20",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1
+    "news": 1,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -55,20 +57,43 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2101606795168878653",
+      "blogger_id": "DJTRadar",
+      "date": "2026-09-20",
+      "created_at": "2026-09-20T05:38:00-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MKTX",
+      "text": "MKTX\n\nJune 22. $15,001 to $50,000.\n\nMarketAxess runs an electronic marketplace for bonds.\n\nOn July 30, ICE announced a $167 a share cash takeover.\n\n38 days after the purchase.",
+      "url": "https://x.com/DJTRadar/status/2101606795168878653",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 4789,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-08-29T03:17:05.937557+00:00",
+  "price_updated_at": "2026-09-20T12:17:21.990886+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-08-29T03:17:05.937547+00:00",
-    "attempts": 26,
+    "checked_at": "2026-09-20T12:17:21.990871+00:00",
+    "attempts": 27,
     "next_retry_at": null,
     "http_status": null
   }
