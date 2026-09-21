@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-20T21:16:22.547272+00:00",
+  "generated_at": "2026-09-21T00:16:16.772616+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2384,
-    "total_mentions": 29490,
+    "total_mentions": 29497,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-20T21:17:32.399209+00:00"
+    "prices_updated_at": "2026-09-21T00:17:30.274961+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -152,16 +152,16 @@
       "industry": "AI Photonics/CPO Lasers",
       "first_mention": "2025-12-23",
       "last_mention": "2026-09-20",
-      "total_mentions": 974,
+      "total_mentions": 975,
       "blogger_count": 5,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 901,
+        "aleabitoreddit": 902,
         "ren_stocks": 67,
         "jukan05": 3,
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -422,18 +422,18 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-09-20",
-      "total_mentions": 556,
+      "total_mentions": 558,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 296,
         "StockMKTNewz": 117,
         "unusual_whales": 39,
         "balder": 29,
-        "michaelsikand": 24,
+        "michaelsikand": 25,
         "jukan05": 13,
         "zephyr_z9": 12,
         "ren_stocks": 10,
-        "KawzInvests": 7,
+        "KawzInvests": 8,
         "octopusycc": 7,
         "DJTRadar": 1,
         "frank_trading": 1
@@ -533,8 +533,7 @@
       "price_status": "ok",
       "instrument_id": "US:MSFT",
       "hash": "2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c",
-      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -1325,8 +1324,7 @@
       "price_status": "ok",
       "instrument_id": "US:RKLB",
       "hash": "e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0",
-      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json"
     },
     "US:CIFR": {
       "ticker": "CIFR",
@@ -1494,6 +1492,49 @@
       "hash": "cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753",
       "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json"
     },
+    "US:RDDT": {
+      "ticker": "RDDT",
+      "instrument": {
+        "instrument_id": "US:RDDT",
+        "display_code": "RDDT",
+        "display_name": "Reddit, Inc.",
+        "display_market": "NYSE",
+        "aliases": [
+          "RDDT"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "RDDT",
+        "verification_status": "verified"
+      },
+      "cashtag": "$RDDT",
+      "price_symbol": "RDDT",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Reddit, Inc.",
+      "industry": null,
+      "first_mention": "2025-09-14",
+      "last_mention": "2026-09-20",
+      "total_mentions": 188,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 166,
+        "KawzInvests": 8,
+        "michaelsikand": 6,
+        "StockMKTNewz": 4,
+        "asklivermore": 2,
+        "octopusycc": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:RDDT",
+      "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+      "price_history_52w_status": "ok"
+    },
     "US:JBL": {
       "ticker": "JBL",
       "instrument": {
@@ -1532,48 +1573,6 @@
       "instrument_id": "US:JBL",
       "hash": "c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d",
       "path": "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json"
-    },
-    "US:RDDT": {
-      "ticker": "RDDT",
-      "instrument": {
-        "instrument_id": "US:RDDT",
-        "display_code": "RDDT",
-        "display_name": "Reddit, Inc.",
-        "display_market": "NYSE",
-        "aliases": [
-          "RDDT"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "RDDT",
-        "verification_status": "verified"
-      },
-      "cashtag": "$RDDT",
-      "price_symbol": "RDDT",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Reddit, Inc.",
-      "industry": null,
-      "first_mention": "2025-09-14",
-      "last_mention": "2026-09-20",
-      "total_mentions": 185,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 163,
-        "KawzInvests": 8,
-        "michaelsikand": 6,
-        "StockMKTNewz": 4,
-        "asklivermore": 2,
-        "octopusycc": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:RDDT",
-      "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json"
     },
     "US:AEHR": {
       "ticker": "AEHR",
@@ -2118,7 +2117,7 @@
       "total_mentions_by_blogger": {
         "aleabitoreddit": 104
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "London LSE:RPI",
       "hash": "bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab",
       "path": "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json"
@@ -2334,8 +2333,7 @@
       "price_status": "ok",
       "instrument_id": "US:NOK",
       "hash": "5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c",
-      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json"
     },
     "US:QQQ": {
       "ticker": "QQQ",
@@ -2592,7 +2590,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "US:MSTR": {
       "ticker": "MSTR",
@@ -2874,7 +2873,7 @@
         "aleabitoreddit": 66,
         "ren_stocks": 2
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Frankfurt Xetra:LPK",
       "hash": "2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278",
       "path": "stocks/2b/2b82cd70a94f5394f0483d92d49ab8760652e1947557805edc255c9937e84278.json"
@@ -3644,8 +3643,7 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
     },
     "UNVERIFIED:WLAC": {
       "ticker": "WLAC",
@@ -4046,7 +4044,8 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
+      "price_history_52w_status": "ok"
     },
     "US:UPWK": {
       "ticker": "UPWK",
@@ -6890,8 +6889,7 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
     },
     "TSE:6981": {
       "ticker": "6981",
@@ -7589,7 +7587,7 @@
         "jukan05": 1,
         "zephyr_z9": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "TWSE:2408",
       "hash": "bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5",
       "path": "stocks/bf/bff1ca2833fb4f19d0025e47d163f674b0fff7497170d57530ed6d5df4103ee5.json"
@@ -9699,7 +9697,8 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
+      "price_history_52w_status": "ok"
     },
     "US:VST": {
       "ticker": "VST",
@@ -13874,8 +13873,7 @@
       "price_status": "ok",
       "instrument_id": "US:FCX",
       "hash": "1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315",
-      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json"
     },
     "US:GDRZF": {
       "ticker": "GDRZF",
@@ -15159,6 +15157,44 @@
       "instrument_id": "US:AMBA",
       "hash": "764d6d284494ae05313b105f3662e6a6dec50ac1a278c78c9307b364ce471c5a",
       "path": "stocks/76/764d6d284494ae05313b105f3662e6a6dec50ac1a278c78c9307b364ce471c5a.json"
+    },
+    "US:APO": {
+      "ticker": "APO",
+      "instrument": {
+        "instrument_id": "US:APO",
+        "display_code": "APO",
+        "display_name": "Apollo Global Management, Inc.",
+        "display_market": "NYSE",
+        "aliases": [
+          "APO"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "APO",
+        "verification_status": "verified"
+      },
+      "cashtag": "$APO",
+      "price_symbol": "APO",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Apollo Global Management, Inc.",
+      "industry": null,
+      "first_mention": "2026-03-23",
+      "last_mention": "2026-09-20",
+      "total_mentions": 8,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 6,
+        "aleabitoreddit": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:APO",
+      "hash": "f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7",
+      "path": "stocks/f3/f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7.json"
     },
     "US:ASB": {
       "ticker": "ASB",
@@ -16836,44 +16872,6 @@
       "instrument_id": "UNVERIFIED:XLE",
       "hash": "f8b5c05a07e87b14f9186b45f3ef9316720da7e5083098b9ebaae357cf4b65c8",
       "path": "stocks/f8/f8b5c05a07e87b14f9186b45f3ef9316720da7e5083098b9ebaae357cf4b65c8.json"
-    },
-    "US:APO": {
-      "ticker": "APO",
-      "instrument": {
-        "instrument_id": "US:APO",
-        "display_code": "APO",
-        "display_name": "Apollo Global Management, Inc.",
-        "display_market": "NYSE",
-        "aliases": [
-          "APO"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "APO",
-        "verification_status": "verified"
-      },
-      "cashtag": "$APO",
-      "price_symbol": "APO",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Apollo Global Management, Inc.",
-      "industry": null,
-      "first_mention": "2026-03-23",
-      "last_mention": "2026-09-01",
-      "total_mentions": 7,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 5,
-        "aleabitoreddit": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:APO",
-      "hash": "f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7",
-      "path": "stocks/f3/f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7.json"
     },
     "US:ARMK": {
       "ticker": "ARMK",
@@ -116497,8 +116495,8 @@
     "stocks/56/56285cce376839487619a801999abee980caf106d54c35c8a9e3c6480bc384aa.json",
     "stocks/14/145b35d89d36a50db9514b08f40d741b719d35bee046a0869878c7da934f3c4c.json",
     "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
-    "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json",
     "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+    "stocks/c4/c4e304af660a92f868e5cfe06ea36b9739d27b413f3f8570bd4a1b6c8eefa78d.json",
     "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
     "stocks/a6/a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f.json",
     "stocks/d1/d109b81e630da934747fbbbb58102276d25b19e31b19c5a63542878c516cda18.json",
@@ -116849,6 +116847,7 @@
     "stocks/89/89b010e126be13514be8ee2dd22a9738373c93617b70eb954c8a2e66814f6bce.json",
     "stocks/8f/8fc822c950bb10a35f6385f05bbf12f2d2d55ada1222d948cbe3e6528d4ecc49.json",
     "stocks/76/764d6d284494ae05313b105f3662e6a6dec50ac1a278c78c9307b364ce471c5a.json",
+    "stocks/f3/f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7.json",
     "stocks/82/825c86dd1add6fea885b42aec8063ffe650d5a6db0517114949f80332fe1bd81.json",
     "stocks/b8/b89ac1ab6e9b795bd88d9f75464411b7e43072d33a7035fc3f2e40b7887ab83a.json",
     "stocks/03/03ce7e170c101c4bd0bf30a4df283021dd26ddcbdf8bd47dc8b37d8b8f9c2647.json",
@@ -116894,7 +116893,6 @@
     "stocks/74/74acd6ac386c998191e2e5cc160a722b6dfbba081b95a060440164cc021505a4.json",
     "stocks/e9/e9c536c2d3467eccb30177cb2d5c1f01ebe075ecc204b1b9a357f2b49e790a9f.json",
     "stocks/f8/f8b5c05a07e87b14f9186b45f3ef9316720da7e5083098b9ebaae357cf4b65c8.json",
-    "stocks/f3/f3775dd19a3a95158025f354294850682f3d0e3292ba08935d69494d8a6597d7.json",
     "stocks/08/08ad4434b7ba51cba0c7ea575356b96dfc5d81139507c2d433ea6b4547938596.json",
     "stocks/d1/d169385492cdca9eadb47d3d54318fcb391dbf306aa5133c9b64df797e4153d8.json",
     "stocks/96/96fbd1dfa57d8d848b0babb6f3056aa9cc8174c93bd0be65f4d17cebfa38b3b0.json",
