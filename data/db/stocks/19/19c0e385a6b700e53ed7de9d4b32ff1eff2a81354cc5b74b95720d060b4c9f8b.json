@@ -1,6 +1,6 @@
 {
   "ticker": "SHOP",
-  "cashtag": "Shop",
+  "cashtag": "$SHOP",
   "instrument": {
     "instrument_id": "US:SHOP",
     "display_code": "SHOP",
@@ -24,19 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-17",
-  "last_mention": "2026-09-20",
-  "total_mentions": 10,
+  "last_mention": "2026-09-21",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
+    "StockMKTNewz": 5,
     "aleabitoreddit": 3,
-    "StockMKTNewz": 3,
     "ren_stocks": 1,
     "asklivermore": 1,
     "unusual_whales": 1,
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 6,
-    "news": 3,
+    "opinion": 7,
+    "news": 5,
     "flow": 1
   },
   "mentions": [
@@ -275,6 +276,79 @@
         "likes": 0,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102092061922984019",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-21",
+      "created_at": "2026-09-21T13:46:17-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SHOP",
+      "text": "Shopify $SHOP CEO Tobi Lutke just posted this:\n\n“We are excited to announce we are partnering deeply with Muse to enable agentic checkout with Shop Pay on all Shopify stores” $META https://t.co/6sNwMpdnDm",
+      "url": "https://x.com/StockMKTNewz/status/2102092061922984019",
+      "kind": "post",
+      "engagement": {
+        "views": 28210,
+        "likes": 52,
+        "reposts": 7,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102093948739064036",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-21",
+      "created_at": "2026-09-21T13:53:47-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "moving higher on the news"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SHOP",
+      "text": "Shopify $SHOP stock is moving higher on the news \n\n🟢🟢🟢🟢🟢 https://t.co/liKRJSjR9N",
+      "url": "https://x.com/StockMKTNewz/status/2102093948739064036",
+      "kind": "post",
+      "engagement": {
+        "views": 16940,
+        "likes": 39,
+        "reposts": 3,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102095491538509883",
+      "blogger_id": "frank_trading",
+      "date": "2026-09-21",
+      "created_at": "2026-09-21T13:59:54-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "bought SHOP; shortly after, SHOP announced partnership with MUSE"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SHOP",
+      "text": "在我买入 $SHOP 后半个交易日，SHOP即和MUSE达成合作。 https://t.co/yVRLx3NlUF",
+      "url": "https://x.com/Franktradinglog/status/2102095491538509883",
+      "kind": "post",
+      "engagement": {
+        "views": 933,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
