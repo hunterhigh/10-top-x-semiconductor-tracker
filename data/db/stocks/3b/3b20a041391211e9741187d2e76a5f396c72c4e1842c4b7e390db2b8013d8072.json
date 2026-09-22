@@ -1,6 +1,6 @@
 {
   "ticker": "NDX",
-  "cashtag": "纳斯达克100",
+  "cashtag": "NASDAQ 100",
   "instrument": {
     "instrument_id": "UNVERIFIED:NDX",
     "display_code": "NDX",
@@ -25,15 +25,15 @@
   "thesis_summary": null,
   "first_mention": "2026-06-14",
   "last_mention": "2026-09-22",
-  "total_mentions": 22,
+  "total_mentions": 23,
   "total_mentions_by_blogger": {
     "balder": 15,
-    "StockMKTNewz": 5,
+    "StockMKTNewz": 6,
     "octopusycc": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 5,
+    "news": 6,
     "opinion": 16,
     "flow": 1
   },
@@ -579,6 +579,31 @@
         "likes": 13,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102477501645586748",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-22",
+      "created_at": "2026-09-22T15:17:53-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "on pace to set a new all time high closing price"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NASDAQ 100",
+      "text": "THE NASDAQ 100 IS ON PACE TO SET A NEW ALL TIME HIGH CLOSING PRICE TODAY",
+      "url": "https://x.com/StockMKTNewz/status/2102477501645586748",
+      "kind": "post",
+      "engagement": {
+        "views": 21421,
+        "likes": 139,
+        "reposts": 6,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

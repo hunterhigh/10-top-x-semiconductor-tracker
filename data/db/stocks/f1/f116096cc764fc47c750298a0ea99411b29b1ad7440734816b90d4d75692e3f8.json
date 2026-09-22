@@ -1,10 +1,10 @@
 {
   "ticker": "TECH",
-  "cashtag": "科技股",
+  "cashtag": "$TECH",
   "instrument": {
     "instrument_id": "UNVERIFIED:TECH",
     "display_code": "TECH",
-    "display_name": "Technology stocks (general)",
+    "display_name": "Bio-Techne",
     "display_market": "Market unverified",
     "aliases": [
       "TECH"
@@ -20,18 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Technology stocks (general)",
+  "company": "Bio-Techne",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-29",
-  "last_mention": "2026-09-13",
-  "total_mentions": 4,
+  "last_mention": "2026-09-22",
+  "total_mentions": 5,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 3,
+    "StockMKTNewz": 4,
     "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 3,
+    "news": 4,
     "opinion": 1
   },
   "mentions": [
@@ -130,20 +130,43 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102483845933039623",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-22",
+      "created_at": "2026-09-22T15:43:05-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$TECH",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nApple $AAPL\nAMD $AMD\nModerna $MRNA\nCrowdStrike $CRWD\nOkta $OKTA\nTwilio $TWLO\nBio-Techne $TECH\n10x Genomics $TXG\nCloudflare $NET\nAtlassian $TEAM\nHalozyme Therapeutics $HALO\nTwist Bioscience $TWST\nRubrik $RBRK\nAgilent Technologies $A\nRingCentral $RNG\nBank of Nova Scotia $BNS\nNatera $NTRA\nBiogen $BIIB\nWaters $WAT\nF5 $FFIV\nFreedom Holding $FRHC",
+      "url": "https://x.com/StockMKTNewz/status/2102483845933039623",
+      "kind": "post",
+      "engagement": {
+        "views": 21759,
+        "likes": 79,
+        "reposts": 7,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-09-21T18:20:45.545570+00:00",
+  "price_updated_at": "2026-09-22T21:18:43.869030+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-09-21T18:20:45.545556+00:00",
-    "attempts": 41,
+    "checked_at": "2026-09-22T21:18:43.869016+00:00",
+    "attempts": 42,
     "next_retry_at": null,
     "http_status": null
   }
