@@ -3316,17 +3316,18 @@
       "close": 547.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "GBp",
-  "price_updated_at": "2026-09-21T00:17:30.100892+00:00",
+  "price_updated_at": "2026-09-22T03:18:53.264766+00:00",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "RPI.L",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-09-21T00:17:30.007331+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "provider_symbol": "RPI.LSE",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-09-22T03:18:53.039884+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-09-22T06:18:53.039884+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
