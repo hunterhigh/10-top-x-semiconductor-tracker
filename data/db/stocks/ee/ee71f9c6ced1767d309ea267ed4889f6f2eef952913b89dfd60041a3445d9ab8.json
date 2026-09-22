@@ -271,8 +271,8 @@
   "price_series": [],
   "price_status": "unavailable",
   "price_unit": "JPY",
-  "price_updated_at": "2026-09-21T09:18:05.168551+00:00",
-  "price_reason": "provider_symbol_not_found_after_search",
+  "price_updated_at": "2026-09-22T12:18:46.649758+00:00",
+  "price_reason": "EODHD 402 (search capacity unavailable)",
   "price_history_52w": {
     "requested_start": "2025-08-06",
     "asof": "2026-08-05",
@@ -284,12 +284,12 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "4062.TSE",
-    "status": "unsupported",
-    "reason": "provider_symbol_not_found_after_search",
-    "checked_at": "2026-08-23T00:16:32.678796+00:00",
-    "attempts": 4,
-    "next_retry_at": "2026-09-22T00:16:32.678796+00:00",
-    "http_status": 404
+    "provider_symbol": "4062.T",
+    "status": "deferred",
+    "reason": "EODHD 402 (search capacity unavailable)",
+    "checked_at": "2026-09-22T12:18:46.086591+00:00",
+    "attempts": 5,
+    "next_retry_at": "2026-09-22T15:18:46.086591+00:00",
+    "http_status": null
   }
 }
