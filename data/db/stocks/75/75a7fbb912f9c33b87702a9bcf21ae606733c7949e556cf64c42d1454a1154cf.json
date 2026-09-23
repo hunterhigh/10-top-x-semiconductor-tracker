@@ -1,6 +1,6 @@
 {
   "ticker": "CBRS",
-  "cashtag": "$CBRS",
+  "cashtag": "Cerebras",
   "instrument": {
     "instrument_id": "US:CBRS",
     "display_code": "CBRS",
@@ -25,20 +25,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-16",
-  "last_mention": "2026-09-22",
-  "total_mentions": 45,
+  "last_mention": "2026-09-23",
+  "total_mentions": 46,
   "total_mentions_by_blogger": {
     "octopusycc": 11,
     "StockMKTNewz": 11,
     "aleabitoreddit": 10,
     "jukan05": 6,
-    "ren_stocks": 2,
+    "ren_stocks": 3,
     "balder": 2,
     "zephyr_z9": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 34,
+    "opinion": 35,
     "news": 11
   },
   "mentions": [
@@ -1129,6 +1129,29 @@
         "likes": 68,
         "reposts": 3,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102856917974499385",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-23",
+      "created_at": "2026-09-23T16:25:33-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Cerebras",
+      "text": "$VICR is up ~50% in the last month and it might be one of the most underrated toll roads in the whole AI buildout, and the stock's run over the last ten days has made that pretty hard to ignore.\n\nBut who has actually looked at the last few millimeters before the power reaches the chip?\n\nThat's where 48 volts has to be stepped down to less than 1 volt, right under the die, and if you get it wrong the best chip in the world just throttles. Power loss grows with the square of the current, so with how much current today's accelerators pull, power delivery went from an electrical footnote to a real performance problem.\n\nVicor's answer is Vertical Power Delivery, which basically means putting the current multiplier directly underneath the processor. On the Q1 call they gave numbers on the second generation for the first time: 3 A/mm², up to 40x current multiplication and 1.5mm thick. The 40x is the one I care about, because it means you can feed a chip 2,000 amps with a 50 amp input instead of needing 1,000.\n\nTHE EDGE IS THE PATENT, NOT THE MODULE\n\nOn September 11 they bought two sites in New Hampshire for Fab-2 and Fab-3, which nearly triples their capacity, because Fab-1 is close to full. On September 16 a leading AI OEM took a non-exclusive license for VPD, which brings them to four licensees between OEMs and hyperscalers. And on September 21 they raised Q3 guidance from around 10% to more than 20% sequential growth, on royalties from that one license.\n\nThe CEO's comment in that release is worth a closer look. Hyperscalers started calling after systems with infringing modules got banned from import, and now he's basically telling the rest to sign while the royalty rate is still low.\n\nWHY IT PASSES MY SECOND TEST\n\nWhat I always ask is whether a layer keeps its pricing power once the constraint eases, and most don't, because capacity eventually catches up and margins get squeezed.  Royalties are different. \n\nThe license lets OEMs buy VPD modules from anyone, which at first sounds like Vicor giving its moat away, until you realize they get paid either way. More suppliers means more VPD shipped, and more VPD shipped means more royalties, so competition actually grows their revenue instead of eating it.\n\nTHE NUMBERS\n\nA few weeks ago the bear case was a royalty cliff, with contracted royalties guided sharply lower in Q3 after the $30M they booked in Q2. This took a turn for the better. Going from about 10% to more than 20% growth on Q2's $143M of revenue works out to roughly $14M extra in a single quarter, from a single deal, at close to 100% margin. On top of that there's a backlog around $380M, about $454M in cash and no debt.\n\nIn my framework this sits in the Power cross-cut, where I already own BE on the generation side. Vicor is the delivery side, the very last step before the silicon, and the lead compute customer, from every clue they've dropped on the calls, is most likely Cerebras, which I also hold.\n\nIT'S NOT ALL SUNSHINE\n\nPatent fights are slow and never a sure thing, the stock has already run hard this month, and a good chunk of the licensing story is probably priced in by now. Earnings are on October 27.\n\nEveryone's watching the chips, but Vicor is sitting on the last millimeter, and that's where the toll gets paid.\n\nIf you want to find gems like this ahead of the curve, this dude @VantixResearch is the one to follow. He told me about it three weeks ago, and I've been sleeping on it.\n\nI don't have a position in $VICR, but I'll be following closely how this technology develops.\n\nBullish ⚡",
+      "url": "https://x.com/ren_stocks/status/2102856917974499385",
+      "kind": "post",
+      "engagement": {
+        "views": 3895,
+        "likes": 16,
+        "reposts": 1,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

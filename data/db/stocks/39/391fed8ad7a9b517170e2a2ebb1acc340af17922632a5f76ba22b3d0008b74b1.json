@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-15",
-  "last_mention": "2026-06-29",
-  "total_mentions": 13,
+  "last_mention": "2026-09-23",
+  "total_mentions": 14,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 11,
     "KawzInvests": 1,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 12,
+    "opinion": 13,
     "news": 1
   },
   "mentions": [
@@ -342,6 +343,40 @@
         "likes": 314,
         "reposts": 28,
         "replies": 35
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2102856917974499385",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-23",
+      "created_at": "2026-09-23T16:25:33-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Vertical Power Delivery patent moat — royalty model means competition grows revenue instead of eroding it",
+        "Second-gen VPD specs: 3 A/mm², 40x current multiplication, 1.5mm thick",
+        "Four licensees between OEMs and hyperscalers",
+        "Raised Q3 guidance from ~10% to >20% sequential growth on a single new license",
+        "~$14M extra revenue in one quarter at close to 100% margin from one deal",
+        "Fab-2 and Fab-3 acquisitions nearly triple capacity",
+        "Backlog ~$380M, ~$454M cash, no debt",
+        "Royalty model retains pricing power even as capacity constraints ease",
+        "Hyperscalers signing after infringing modules banned from import",
+        "Lead compute customer likely Cerebras"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$VICR",
+      "text": "$VICR is up ~50% in the last month and it might be one of the most underrated toll roads in the whole AI buildout, and the stock's run over the last ten days has made that pretty hard to ignore.\n\nBut who has actually looked at the last few millimeters before the power reaches the chip?\n\nThat's where 48 volts has to be stepped down to less than 1 volt, right under the die, and if you get it wrong the best chip in the world just throttles. Power loss grows with the square of the current, so with how much current today's accelerators pull, power delivery went from an electrical footnote to a real performance problem.\n\nVicor's answer is Vertical Power Delivery, which basically means putting the current multiplier directly underneath the processor. On the Q1 call they gave numbers on the second generation for the first time: 3 A/mm², up to 40x current multiplication and 1.5mm thick. The 40x is the one I care about, because it means you can feed a chip 2,000 amps with a 50 amp input instead of needing 1,000.\n\nTHE EDGE IS THE PATENT, NOT THE MODULE\n\nOn September 11 they bought two sites in New Hampshire for Fab-2 and Fab-3, which nearly triples their capacity, because Fab-1 is close to full. On September 16 a leading AI OEM took a non-exclusive license for VPD, which brings them to four licensees between OEMs and hyperscalers. And on September 21 they raised Q3 guidance from around 10% to more than 20% sequential growth, on royalties from that one license.\n\nThe CEO's comment in that release is worth a closer look. Hyperscalers started calling after systems with infringing modules got banned from import, and now he's basically telling the rest to sign while the royalty rate is still low.\n\nWHY IT PASSES MY SECOND TEST\n\nWhat I always ask is whether a layer keeps its pricing power once the constraint eases, and most don't, because capacity eventually catches up and margins get squeezed.  Royalties are different. \n\nThe license lets OEMs buy VPD modules from anyone, which at first sounds like Vicor giving its moat away, until you realize they get paid either way. More suppliers means more VPD shipped, and more VPD shipped means more royalties, so competition actually grows their revenue instead of eating it.\n\nTHE NUMBERS\n\nA few weeks ago the bear case was a royalty cliff, with contracted royalties guided sharply lower in Q3 after the $30M they booked in Q2. This took a turn for the better. Going from about 10% to more than 20% growth on Q2's $143M of revenue works out to roughly $14M extra in a single quarter, from a single deal, at close to 100% margin. On top of that there's a backlog around $380M, about $454M in cash and no debt.\n\nIn my framework this sits in the Power cross-cut, where I already own BE on the generation side. Vicor is the delivery side, the very last step before the silicon, and the lead compute customer, from every clue they've dropped on the calls, is most likely Cerebras, which I also hold.\n\nIT'S NOT ALL SUNSHINE\n\nPatent fights are slow and never a sure thing, the stock has already run hard this month, and a good chunk of the licensing story is probably priced in by now. Earnings are on October 27.\n\nEveryone's watching the chips, but Vicor is sitting on the last millimeter, and that's where the toll gets paid.\n\nIf you want to find gems like this ahead of the curve, this dude @VantixResearch is the one to follow. He told me about it three weeks ago, and I've been sleeping on it.\n\nI don't have a position in $VICR, but I'll be following closely how this technology develops.\n\nBullish ⚡",
+      "url": "https://x.com/ren_stocks/status/2102856917974499385",
+      "kind": "post",
+      "engagement": {
+        "views": 3895,
+        "likes": 16,
+        "reposts": 1,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -871,17 +906,181 @@
     {
       "date": "2026-07-24",
       "close": 211.01
+    },
+    {
+      "date": "2026-07-27",
+      "close": 206.44
+    },
+    {
+      "date": "2026-07-28",
+      "close": 192.12
+    },
+    {
+      "date": "2026-07-29",
+      "close": 182.765
+    },
+    {
+      "date": "2026-07-30",
+      "close": 206.67
+    },
+    {
+      "date": "2026-07-31",
+      "close": 207.37
+    },
+    {
+      "date": "2026-08-03",
+      "close": 213.54
+    },
+    {
+      "date": "2026-08-04",
+      "close": 226.48
+    },
+    {
+      "date": "2026-08-05",
+      "close": 219.08
+    },
+    {
+      "date": "2026-08-06",
+      "close": 218.72
+    },
+    {
+      "date": "2026-08-07",
+      "close": 221.2
+    },
+    {
+      "date": "2026-08-10",
+      "close": 208.81
+    },
+    {
+      "date": "2026-08-11",
+      "close": 210.88
+    },
+    {
+      "date": "2026-08-12",
+      "close": 226.12
+    },
+    {
+      "date": "2026-08-13",
+      "close": 226.64
+    },
+    {
+      "date": "2026-08-14",
+      "close": 234.74
+    },
+    {
+      "date": "2026-08-17",
+      "close": 253.5
+    },
+    {
+      "date": "2026-08-18",
+      "close": 242.41
+    },
+    {
+      "date": "2026-08-19",
+      "close": 217.35
+    },
+    {
+      "date": "2026-08-20",
+      "close": 207.64
+    },
+    {
+      "date": "2026-08-21",
+      "close": 200.54
+    },
+    {
+      "date": "2026-08-24",
+      "close": 189.99
+    },
+    {
+      "date": "2026-08-25",
+      "close": 194.62
+    },
+    {
+      "date": "2026-08-26",
+      "close": 197.23
+    },
+    {
+      "date": "2026-08-27",
+      "close": 203.64
+    },
+    {
+      "date": "2026-08-28",
+      "close": 187.75
+    },
+    {
+      "date": "2026-08-31",
+      "close": 187.68
+    },
+    {
+      "date": "2026-09-01",
+      "close": 175.99
+    },
+    {
+      "date": "2026-09-02",
+      "close": 181.59
+    },
+    {
+      "date": "2026-09-03",
+      "close": 178.76
+    },
+    {
+      "date": "2026-09-04",
+      "close": 188.55
+    },
+    {
+      "date": "2026-09-08",
+      "close": 193.32
+    },
+    {
+      "date": "2026-09-09",
+      "close": 183.87
+    },
+    {
+      "date": "2026-09-10",
+      "close": 178.05
+    },
+    {
+      "date": "2026-09-11",
+      "close": 197.91
+    },
+    {
+      "date": "2026-09-14",
+      "close": 184.73
+    },
+    {
+      "date": "2026-09-15",
+      "close": 183.97
+    },
+    {
+      "date": "2026-09-16",
+      "close": 183.91
+    },
+    {
+      "date": "2026-09-17",
+      "close": 216.39
+    },
+    {
+      "date": "2026-09-18",
+      "close": 222.72
+    },
+    {
+      "date": "2026-09-21",
+      "close": 223.9
+    },
+    {
+      "date": "2026-09-22",
+      "close": 268.34
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-27T18:18:46.254981+00:00",
+  "price_updated_at": "2026-09-23T21:18:17.705819+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "VICR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-27T18:18:43.649060+00:00",
+    "checked_at": "2026-09-23T21:18:16.238442+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

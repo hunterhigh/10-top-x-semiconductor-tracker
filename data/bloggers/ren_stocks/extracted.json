@@ -35484,5 +35484,67 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-23T18:10:33.778129+00:00"
+  },
+  "2102867397342540141": {
+    "tweet_id": "2102867397342540141",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.5,
+    "blogger_id": "ren_stocks",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-23T21:09:56.145743+00:00"
+  },
+  "2102856917974499385": {
+    "tweet_id": "2102856917974499385",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$VICR",
+        "symbol": "VICR",
+        "company_name": "Vicor Corporation",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "Vertical Power Delivery patent moat — royalty model means competition grows revenue instead of eroding it",
+          "Second-gen VPD specs: 3 A/mm², 40x current multiplication, 1.5mm thick",
+          "Four licensees between OEMs and hyperscalers",
+          "Raised Q3 guidance from ~10% to >20% sequential growth on a single new license",
+          "~$14M extra revenue in one quarter at close to 100% margin from one deal",
+          "Fab-2 and Fab-3 acquisitions nearly triple capacity",
+          "Backlog ~$380M, ~$454M cash, no debt",
+          "Royalty model retains pricing power even as capacity constraints ease",
+          "Hyperscalers signing after infringing modules banned from import",
+          "Lead compute customer likely Cerebras"
+        ],
+        "is_risk": false,
+        "conviction_signal": "low"
+      },
+      {
+        "raw_mention": "BE",
+        "symbol": "BE",
+        "company_name": "Bloom Energy",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "Cerebras",
+        "symbol": "CBRS",
+        "company_name": "Cerebras Systems",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.85,
+    "blogger_id": "ren_stocks",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-23T21:09:56.145743+00:00"
   }
 }
