@@ -1666,17 +1666,18 @@
       "close": 5010.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "TWD",
-  "price_updated_at": "2026-09-22T00:17:17.640788+00:00",
+  "price_updated_at": "2026-09-23T03:17:24.024890+00:00",
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "2454.TW",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-09-22T00:17:16.960019+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-09-23T03:17:23.850140+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-09-23T06:17:23.850140+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
