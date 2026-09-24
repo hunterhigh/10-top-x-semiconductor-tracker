@@ -1621,5 +1621,39 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-22T00:11:55.523084+00:00"
+  },
+  "2103110757026341085": {
+    "tweet_id": "2103110757026341085",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "orcl",
+        "symbol": "ORCL",
+        "company_name": "Oracle Corporation",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "soxx",
+        "symbol": "SOXX",
+        "company_name": "iShares Semiconductor ETF",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "ORCL data center construction halted raising growth concerns",
+          "if this narrative continues semiconductors suffer"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.72,
+    "blogger_id": "frank_trading",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-24T15:12:58.627548+00:00"
   }
 }
