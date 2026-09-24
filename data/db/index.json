@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-23T21:16:45.349251+00:00",
+  "generated_at": "2026-09-24T00:16:30.142053+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2404,
-    "total_mentions": 29983,
+    "total_mentions": 29999,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-23T21:18:20.097079+00:00"
+    "prices_updated_at": "2026-09-24T00:17:33.469746+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -105,11 +105,11 @@
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
       "last_mention": "2026-09-23",
-      "total_mentions": 1071,
+      "total_mentions": 1072,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 825,
-        "ren_stocks": 155,
+        "ren_stocks": 156,
         "StockMKTNewz": 38,
         "balder": 14,
         "KawzInvests": 13,
@@ -161,7 +161,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -308,6 +308,54 @@
       "path": "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
       "price_history_52w_status": "ok"
     },
+    "US:META": {
+      "ticker": "META",
+      "instrument": {
+        "instrument_id": "US:META",
+        "display_code": "META",
+        "display_name": "Meta Platforms, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "META"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "META",
+        "verification_status": "verified"
+      },
+      "cashtag": "$META",
+      "price_symbol": "META",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Meta Platforms, Inc.",
+      "industry": "Hyperscaler",
+      "first_mention": "2025-07-28",
+      "last_mention": "2026-09-23",
+      "total_mentions": 607,
+      "blogger_count": 12,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 297,
+        "StockMKTNewz": 139,
+        "unusual_whales": 39,
+        "michaelsikand": 36,
+        "balder": 36,
+        "ren_stocks": 15,
+        "jukan05": 13,
+        "zephyr_z9": 12,
+        "KawzInvests": 9,
+        "octopusycc": 7,
+        "DJTRadar": 3,
+        "frank_trading": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:META",
+      "hash": "aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2",
+      "path": "stocks/aa/aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2.json",
+      "price_history_52w_status": "ok"
+    },
     "US:AXTI": {
       "ticker": "AXTI",
       "instrument": {
@@ -348,54 +396,6 @@
       "instrument_id": "US:AXTI",
       "hash": "d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b",
       "path": "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json"
-    },
-    "US:META": {
-      "ticker": "META",
-      "instrument": {
-        "instrument_id": "US:META",
-        "display_code": "META",
-        "display_name": "Meta Platforms, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "META"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "META",
-        "verification_status": "verified"
-      },
-      "cashtag": "$META",
-      "price_symbol": "META",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Meta Platforms, Inc.",
-      "industry": "Hyperscaler",
-      "first_mention": "2025-07-28",
-      "last_mention": "2026-09-23",
-      "total_mentions": 597,
-      "blogger_count": 12,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 297,
-        "StockMKTNewz": 129,
-        "unusual_whales": 39,
-        "michaelsikand": 36,
-        "balder": 36,
-        "ren_stocks": 15,
-        "jukan05": 13,
-        "zephyr_z9": 12,
-        "KawzInvests": 9,
-        "octopusycc": 7,
-        "DJTRadar": 3,
-        "frank_trading": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:META",
-      "hash": "aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2",
-      "path": "stocks/aa/aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2.json",
-      "price_history_52w_status": "ok"
     },
     "US:GOOGL": {
       "ticker": "GOOGL",
@@ -1053,7 +1053,7 @@
         "unusual_whales": 9,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -1148,8 +1148,7 @@
       "price_status": "ok",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
     },
     "US:AVGO": {
       "ticker": "AVGO",
@@ -1854,8 +1853,8 @@
       "company": "Astera Labs",
       "industry": "AI Interconnect Semis (PCIe/CXL)",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-09-08",
-      "total_mentions": 127,
+      "last_mention": "2026-09-23",
+      "total_mentions": 128,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 87,
@@ -1864,8 +1863,8 @@
         "octopusycc": 7,
         "unusual_whales": 2,
         "zephyr_z9": 2,
-        "jukan05": 1,
-        "michaelsikand": 1
+        "michaelsikand": 2,
+        "jukan05": 1
       },
       "price_status": "ok",
       "instrument_id": "US:ALAB",
@@ -1941,12 +1940,12 @@
       "company": "Palantir Technologies Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-09-22",
-      "total_mentions": 118,
+      "last_mention": "2026-09-23",
+      "total_mentions": 119,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 52,
-        "StockMKTNewz": 31,
+        "StockMKTNewz": 32,
         "unusual_whales": 11,
         "balder": 6,
         "octopusycc": 5,
@@ -2149,8 +2148,8 @@
       "company": "Credo Technology",
       "industry": "High-Speed Optical Interconnect/AEC",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-09-18",
-      "total_mentions": 102,
+      "last_mention": "2026-09-23",
+      "total_mentions": 103,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 62,
@@ -2158,7 +2157,7 @@
         "KawzInvests": 10,
         "octopusycc": 7,
         "ren_stocks": 6,
-        "michaelsikand": 3,
+        "michaelsikand": 4,
         "balder": 2,
         "asklivermore": 1
       },
@@ -3032,11 +3031,11 @@
       "industry": null,
       "first_mention": "2026-06-29",
       "last_mention": "2026-09-23",
-      "total_mentions": 62,
+      "total_mentions": 63,
       "blogger_count": 3,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 47,
-        "ren_stocks": 14,
+        "ren_stocks": 15,
         "michaelsikand": 1
       },
       "price_status": "unverified_symbol",
@@ -4169,7 +4168,8 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:WYFI": {
       "ticker": "WYFI",
@@ -6939,7 +6939,8 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVTS": {
       "ticker": "NVTS",
@@ -13442,6 +13443,43 @@
       "hash": "37ef1bf6a8ddb9755bb5bc8e3623f83534435c74fe5aed7b889f44adbc7082c8",
       "path": "stocks/37/37ef1bf6a8ddb9755bb5bc8e3623f83534435c74fe5aed7b889f44adbc7082c8.json"
     },
+    "UNVERIFIED:AGLT": {
+      "ticker": "AGLT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:AGLT",
+        "display_code": "AGLT",
+        "display_name": "Agiliti",
+        "display_market": "Market unverified",
+        "aliases": [
+          "AGLT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$AGLT",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Agiliti",
+      "industry": null,
+      "first_mention": "2026-06-29",
+      "last_mention": "2026-09-23",
+      "total_mentions": 9,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 8,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:AGLT",
+      "hash": "3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86",
+      "path": "stocks/3b/3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86.json"
+    },
     "UNVERIFIED:CL": {
       "ticker": "CL",
       "instrument": {
@@ -14194,8 +14232,7 @@
       "price_status": "ok",
       "instrument_id": "US:FCX",
       "hash": "1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315",
-      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json"
     },
     "US:GDRZF": {
       "ticker": "GDRZF",
@@ -14949,43 +14986,6 @@
       "instrument_id": "UNVERIFIED:011070",
       "hash": "817dc8e242cb37b7277fcc1ed11ae952e3faee92262074905dc6c85d1484fda6",
       "path": "stocks/81/817dc8e242cb37b7277fcc1ed11ae952e3faee92262074905dc6c85d1484fda6.json"
-    },
-    "UNVERIFIED:AGLT": {
-      "ticker": "AGLT",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:AGLT",
-        "display_code": "AGLT",
-        "display_name": "Agiliti",
-        "display_market": "Market unverified",
-        "aliases": [
-          "AGLT"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$AGLT",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Agiliti",
-      "industry": null,
-      "first_mention": "2026-06-29",
-      "last_mention": "2026-09-22",
-      "total_mentions": 8,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 7,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:AGLT",
-      "hash": "3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86",
-      "path": "stocks/3b/3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86.json"
     },
     "UNVERIFIED:ARKK": {
       "ticker": "ARKK",
@@ -29572,8 +29572,7 @@
       "price_status": "ok",
       "instrument_id": "US:SUNB",
       "hash": "3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785",
-      "path": "stocks/3f/3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/3f/3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785.json"
     },
     "US:SYM": {
       "ticker": "SYM",
@@ -117449,8 +117448,8 @@
     "stocks/23/236f2594e193c6e8b14c6783b002d15277b44061577c36007ce0aec5d4df34b5.json",
     "stocks/9e/9ef2ef131f049fea80a49b67cd2a9c48ca7b0d5ccc01c2e2c9cf38c4b8b4912e.json",
     "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
-    "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
     "stocks/aa/aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2.json",
+    "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
     "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json",
     "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json",
     "stocks/1a/1abfdf6ed893021c20c87f30c55ee285c684bfe175359d2e53c14494055660c3.json",
@@ -117781,6 +117780,7 @@
     "stocks/02/0274a31285020f2930bd67736c4d536616712e06936b8db29489b969ba5ae137.json",
     "stocks/a2/a2d1a0465f2bfc8a3b49df230df5015ac6002ac23af3766abaf6f105f51708dd.json",
     "stocks/37/37ef1bf6a8ddb9755bb5bc8e3623f83534435c74fe5aed7b889f44adbc7082c8.json",
+    "stocks/3b/3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86.json",
     "stocks/84/8459ff07b49b0f33a04e577c661830dd2da606664ecf83c2418fded66207d205.json",
     "stocks/6a/6af798deaa0054a1c89678808cd89aead6600d43a87915157eb68e32f001c834.json",
     "stocks/32/3242d8ac755e414f452969e631e6da4525463b5e61ed6d44572c0c8bf9ce262b.json",
@@ -117821,7 +117821,6 @@
     "stocks/e1/e1af85a0a70951eae36b23c75eb8b14393aeeee408d371021000c0b9e3cdc1fd.json",
     "stocks/c2/c24b5dd3dfab173b6c380e175619fe104ef5ad2fcf262cf6d908b6f58e57b124.json",
     "stocks/81/817dc8e242cb37b7277fcc1ed11ae952e3faee92262074905dc6c85d1484fda6.json",
-    "stocks/3b/3b82b7144563cb1001ce2eaca191579af42f615ea499ad3c6d183400abb05e86.json",
     "stocks/bd/bdf16ede871f40e2f20be1deade817db9e700614f59359cb999a12cac0b1972e.json",
     "stocks/f4/f4e32112e5d4b40fc0c4fcd2865d9de27a633e9d578f3b1c746331803a7f5a0d.json",
     "stocks/52/524f0d443006dda199df879a7c901f55513884b2ff8b15fcb467e24c72e22e01.json",
