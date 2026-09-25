@@ -23005,5 +23005,53 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-25T06:13:47.860847+00:00"
+  },
+  "2103485614616399873": {
+    "tweet_id": "2103485614616399873",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "纳斯达克 100",
+        "symbol": "NDX",
+        "company_name": "Nasdaq 100 Index",
+        "stance": "neutral",
+        "mention_type": "quote_or_other",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.5,
+    "blogger_id": "balder",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-25T15:14:27.240566+00:00"
+  },
+  "2103485065447846286": {
+    "tweet_id": "2103485065447846286",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "标普500",
+        "symbol": "SPX",
+        "company_name": "S&P 500 Index",
+        "stance": "neutral",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "87% probability of touching prior high within 20 days vs 56% unconditional base rate",
+          "probability of further 5% and 10% declines compressed to 12% and 3% respectively, below normal levels",
+          "upside momentum suppressed but downside risk more significantly contracted",
+          "market assessed as slow recovery with stable floor",
+          "intraday range estimated 7,699–7,754, logic toward prior high intact unless range breaks"
+        ],
+        "is_risk": false,
+        "conviction_signal": "medium"
+      }
+    ],
+    "confidence": 0.72,
+    "blogger_id": "balder",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-25T15:14:27.240566+00:00"
   }
 }
