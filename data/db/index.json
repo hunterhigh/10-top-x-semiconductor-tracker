@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-25T21:18:14.434706+00:00",
+  "generated_at": "2026-09-26T00:15:10.954245+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2418,
-    "total_mentions": 30271,
+    "total_mentions": 30272,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-25T21:19:14.246549+00:00"
+    "prices_updated_at": "2026-09-26T00:16:28.086539+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -105,7 +105,7 @@
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
       "last_mention": "2026-09-25",
-      "total_mentions": 1076,
+      "total_mentions": 1077,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 827,
@@ -113,7 +113,7 @@
         "StockMKTNewz": 38,
         "balder": 14,
         "KawzInvests": 13,
-        "michaelsikand": 11,
+        "michaelsikand": 12,
         "octopusycc": 10,
         "unusual_whales": 3,
         "zephyr_z9": 1,
@@ -161,7 +161,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -1147,7 +1147,8 @@
       "price_status": "ok",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
+      "price_history_52w_status": "ok"
     },
     "US:AVGO": {
       "ticker": "AVGO",
@@ -4167,7 +4168,8 @@
       "price_status": "ok",
       "instrument_id": "US:IBM",
       "hash": "b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8",
-      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json"
+      "path": "stocks/b4/b403dcdc371ab9ee9d4c52bce4fe74eb56dc76a79e8b67bae44d330efa1a5ee8.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:WYFI": {
       "ticker": "WYFI",
@@ -7015,7 +7017,8 @@
       "price_status": "ok",
       "instrument_id": "US:HUT",
       "hash": "702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110",
-      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json"
+      "path": "stocks/70/702d8339e60ea4ff7d34091129de99fe3f00ad60fc32bc01ddc56b6a486c3110.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVTS": {
       "ticker": "NVTS",
@@ -12432,8 +12435,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "Tokyo:4092": {
       "ticker": "4092",
@@ -30011,7 +30013,8 @@
       "price_status": "ok",
       "instrument_id": "US:SUNB",
       "hash": "3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785",
-      "path": "stocks/3f/3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785.json"
+      "path": "stocks/3f/3fa596fdd3bc3c8d94cc05d853c0ab3cfcb89c0ecb61e291126da5fe90aa3785.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:SYM": {
       "ticker": "SYM",
