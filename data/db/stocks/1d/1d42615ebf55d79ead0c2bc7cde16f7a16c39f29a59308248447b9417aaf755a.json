@@ -1,6 +1,6 @@
 {
   "ticker": "USAR",
-  "cashtag": "$USAR",
+  "cashtag": "USAR",
   "instrument": {
     "instrument_id": "US:USAR",
     "display_code": "USAR",
@@ -24,19 +24,19 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-26",
-  "last_mention": "2026-09-22",
-  "total_mentions": 17,
+  "last_mention": "2026-09-28",
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 9,
     "ren_stocks": 4,
+    "DJTRadar": 2,
     "octopusycc": 1,
-    "DJTRadar": 1,
     "asklivermore": 1,
     "balder": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 16,
-    "disclosure": 1
+    "disclosure": 2
   },
   "mentions": [
     {
@@ -451,6 +451,31 @@
         "likes": 109,
         "reposts": 8,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104545319320998167",
+      "blogger_id": "DJTRadar",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T08:14:39-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Trump administration bought at $17.17, currently trading ~13% cheaper at $15.00"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "USAR",
+      "text": "The Trump administration bought USAR at $17.17.\n\nYou can buy it at $15.00 today, nearly 13% cheaper than they did.\n\nWe spend HOURS tracking this stuff for you. If you want to win, follow us. https://t.co/RyZUHDn8B1",
+      "url": "https://x.com/DJTRadar/status/2104545319320998167",
+      "kind": "post",
+      "engagement": {
+        "views": 4332,
+        "likes": 18,
+        "reposts": 1,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
