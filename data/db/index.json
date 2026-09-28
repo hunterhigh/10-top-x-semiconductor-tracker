@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-09-28T12:20:43.383848+00:00",
+  "generated_at": "2026-09-28T15:22:52.917692+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2422,
-    "total_mentions": 30413,
+    "total_mentions": 30452,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-09-28T12:21:58.289604+00:00"
+    "prices_updated_at": "2026-09-28T15:24:22.530440+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -46,7 +46,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "$NVDA",
+      "cashtag": "NVDA",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -56,15 +56,15 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-09-28",
-      "total_mentions": 1274,
+      "total_mentions": 1279,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 579,
-        "StockMKTNewz": 217,
+        "StockMKTNewz": 221,
         "jukan05": 132,
         "zephyr_z9": 70,
         "unusual_whales": 70,
-        "balder": 53,
+        "balder": 54,
         "ren_stocks": 45,
         "KawzInvests": 33,
         "octopusycc": 32,
@@ -260,54 +260,6 @@
       "path": "stocks/9e/9ef2ef131f049fea80a49b67cd2a9c48ca7b0d5ccc01c2e2c9cf38c4b8b4912e.json",
       "price_history_52w_status": "ok"
     },
-    "US:MU": {
-      "ticker": "MU",
-      "instrument": {
-        "instrument_id": "US:MU",
-        "display_code": "MU",
-        "display_name": "Micron",
-        "display_market": "US",
-        "aliases": [
-          "MU"
-        ],
-        "market": "US",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "MU",
-        "verification_status": "verified"
-      },
-      "cashtag": "MU",
-      "price_symbol": "MU",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Micron",
-      "industry": "Memory/HBM",
-      "first_mention": "2025-09-25",
-      "last_mention": "2026-09-27",
-      "total_mentions": 626,
-      "blogger_count": 12,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 230,
-        "StockMKTNewz": 108,
-        "ren_stocks": 83,
-        "jukan05": 64,
-        "octopusycc": 45,
-        "balder": 25,
-        "michaelsikand": 18,
-        "KawzInvests": 17,
-        "unusual_whales": 17,
-        "zephyr_z9": 10,
-        "asklivermore": 7,
-        "DJTRadar": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:MU",
-      "hash": "5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2",
-      "path": "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
-      "price_history_52w_status": "ok"
-    },
     "US:META": {
       "ticker": "META",
       "instrument": {
@@ -333,20 +285,20 @@
       "company": "Meta Platforms, Inc.",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
-      "last_mention": "2026-09-26",
-      "total_mentions": 622,
+      "last_mention": "2026-09-28",
+      "total_mentions": 627,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 297,
-        "StockMKTNewz": 145,
+        "StockMKTNewz": 148,
         "unusual_whales": 39,
         "michaelsikand": 39,
         "balder": 37,
         "ren_stocks": 17,
         "jukan05": 14,
+        "KawzInvests": 12,
         "zephyr_z9": 12,
-        "KawzInvests": 11,
-        "octopusycc": 7,
+        "octopusycc": 8,
         "DJTRadar": 3,
         "frank_trading": 1
       },
@@ -354,6 +306,54 @@
       "instrument_id": "US:META",
       "hash": "aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2",
       "path": "stocks/aa/aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2.json",
+      "price_history_52w_status": "ok"
+    },
+    "US:MU": {
+      "ticker": "MU",
+      "instrument": {
+        "instrument_id": "US:MU",
+        "display_code": "MU",
+        "display_name": "Micron",
+        "display_market": "US",
+        "aliases": [
+          "MU"
+        ],
+        "market": "US",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "MU",
+        "verification_status": "verified"
+      },
+      "cashtag": "MU",
+      "price_symbol": "MU",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Micron",
+      "industry": "Memory/HBM",
+      "first_mention": "2025-09-25",
+      "last_mention": "2026-09-28",
+      "total_mentions": 627,
+      "blogger_count": 12,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 230,
+        "StockMKTNewz": 108,
+        "ren_stocks": 83,
+        "jukan05": 64,
+        "octopusycc": 46,
+        "balder": 25,
+        "michaelsikand": 18,
+        "KawzInvests": 17,
+        "unusual_whales": 17,
+        "zephyr_z9": 10,
+        "asklivermore": 7,
+        "DJTRadar": 2
+      },
+      "price_status": "ok",
+      "instrument_id": "US:MU",
+      "hash": "5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2",
+      "path": "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
       "price_history_52w_status": "ok"
     },
     "US:AXTI": {
@@ -424,12 +424,12 @@
       "company": "Alphabet Inc.",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-03",
-      "last_mention": "2026-09-25",
-      "total_mentions": 572,
+      "last_mention": "2026-09-28",
+      "total_mentions": 573,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 310,
-        "StockMKTNewz": 162,
+        "StockMKTNewz": 163,
         "unusual_whales": 23,
         "jukan05": 21,
         "KawzInvests": 14,
@@ -516,15 +516,15 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-09-28",
-      "total_mentions": 476,
+      "total_mentions": 478,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 300,
-        "StockMKTNewz": 92,
+        "StockMKTNewz": 93,
         "unusual_whales": 23,
+        "octopusycc": 11,
         "balder": 11,
         "KawzInvests": 10,
-        "octopusycc": 10,
         "DJTRadar": 8,
         "zephyr_z9": 6,
         "ren_stocks": 6,
@@ -536,8 +536,7 @@
       "price_status": "ok",
       "instrument_id": "US:MSFT",
       "hash": "2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c",
-      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -565,15 +564,15 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-09-28",
-      "total_mentions": 474,
+      "total_mentions": 476,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 255,
-        "StockMKTNewz": 113,
+        "StockMKTNewz": 114,
         "unusual_whales": 30,
         "balder": 12,
+        "octopusycc": 11,
         "KawzInvests": 10,
-        "octopusycc": 10,
         "jukan05": 10,
         "michaelsikand": 10,
         "ren_stocks": 8,
@@ -605,7 +604,7 @@
         "price_symbol": "AAPL",
         "verification_status": "verified"
       },
-      "cashtag": "Apple",
+      "cashtag": "$AAPL",
       "price_symbol": "AAPL",
       "exchange": "US",
       "currency": "USD",
@@ -614,15 +613,15 @@
       "company": "Apple Inc.",
       "industry": null,
       "first_mention": "2025-07-28",
-      "last_mention": "2026-09-27",
-      "total_mentions": 454,
+      "last_mention": "2026-09-28",
+      "total_mentions": 455,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 187,
         "aleabitoreddit": 104,
         "unusual_whales": 52,
         "jukan05": 42,
-        "balder": 23,
+        "balder": 24,
         "zephyr_z9": 11,
         "octopusycc": 10,
         "ren_stocks": 7,
@@ -702,7 +701,7 @@
         "price_symbol": "TSM",
         "verification_status": "verified"
       },
-      "cashtag": "TSMC",
+      "cashtag": "$TSM",
       "price_symbol": "TSM",
       "exchange": "US",
       "currency": "USD",
@@ -711,13 +710,13 @@
       "company": "TSMC",
       "industry": "Wafer Foundry",
       "first_mention": "2025-09-09",
-      "last_mention": "2026-09-27",
-      "total_mentions": 413,
+      "last_mention": "2026-09-28",
+      "total_mentions": 414,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 246,
         "jukan05": 80,
-        "StockMKTNewz": 34,
+        "StockMKTNewz": 35,
         "zephyr_z9": 16,
         "balder": 13,
         "ren_stocks": 8,
@@ -730,7 +729,57 @@
       "price_status": "ok",
       "instrument_id": "US:TSM",
       "hash": "ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae",
-      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json"
+      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
+      "price_history_52w_status": "ok"
+    },
+    "US:SPCX": {
+      "ticker": "SPCX",
+      "instrument": {
+        "instrument_id": "US:SPCX",
+        "display_code": "SPCX",
+        "display_name": "Space Exploration Technologies Corp",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SPACEX",
+          "SPCE",
+          "SPCX"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SPCX",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SPCX",
+      "price_symbol": "SPCX",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Space Exploration Technologies Corp",
+      "industry": null,
+      "first_mention": "2025-12-02",
+      "last_mention": "2026-09-28",
+      "total_mentions": 410,
+      "blogger_count": 11,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 196,
+        "unusual_whales": 81,
+        "aleabitoreddit": 51,
+        "octopusycc": 20,
+        "balder": 19,
+        "michaelsikand": 15,
+        "jukan05": 9,
+        "ren_stocks": 8,
+        "KawzInvests": 5,
+        "asklivermore": 5,
+        "frank_trading": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SPCX",
+      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
+      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+      "price_history_52w_status": "insufficient_history"
     },
     "US:MRVL": {
       "ticker": "MRVL",
@@ -779,55 +828,6 @@
       "hash": "02414f773ee9eafd8cde41ffccff81f8001057131fb34adc9710353b00a9172e",
       "path": "stocks/02/02414f773ee9eafd8cde41ffccff81f8001057131fb34adc9710353b00a9172e.json",
       "price_history_52w_status": "ok"
-    },
-    "US:SPCX": {
-      "ticker": "SPCX",
-      "instrument": {
-        "instrument_id": "US:SPCX",
-        "display_code": "SPCX",
-        "display_name": "Space Exploration Technologies Corp",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SPACEX",
-          "SPCE",
-          "SPCX"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SPCX",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SPCX",
-      "price_symbol": "SPCX",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Space Exploration Technologies Corp",
-      "industry": null,
-      "first_mention": "2025-12-02",
-      "last_mention": "2026-09-28",
-      "total_mentions": 407,
-      "blogger_count": 11,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 194,
-        "unusual_whales": 81,
-        "aleabitoreddit": 51,
-        "octopusycc": 19,
-        "balder": 19,
-        "michaelsikand": 15,
-        "jukan05": 9,
-        "ren_stocks": 8,
-        "KawzInvests": 5,
-        "asklivermore": 5,
-        "frank_trading": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SPCX",
-      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
-      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
-      "price_history_52w_status": "insufficient_history"
     },
     "US:AMD": {
       "ticker": "AMD",
@@ -995,8 +995,8 @@
       "company": "Intel",
       "industry": "CPU/Foundry/Glass Substrate",
       "first_mention": "2025-09-23",
-      "last_mention": "2026-09-26",
-      "total_mentions": 355,
+      "last_mention": "2026-09-28",
+      "total_mentions": 356,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 159,
@@ -1007,7 +1007,7 @@
         "octopusycc": 12,
         "unusual_whales": 11,
         "zephyr_z9": 10,
-        "KawzInvests": 6,
+        "KawzInvests": 7,
         "michaelsikand": 4,
         "DJTRadar": 4
       },
@@ -1059,8 +1059,7 @@
       "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
     },
     "US:CRWV": {
       "ticker": "CRWV",
@@ -1169,7 +1168,7 @@
         "price_symbol": "AVGO",
         "verification_status": "verified"
       },
-      "cashtag": "Broadcom",
+      "cashtag": "$AVGO",
       "price_symbol": "AVGO",
       "exchange": "US",
       "currency": "USD",
@@ -1179,11 +1178,11 @@
       "industry": "AI ASIC/Networking Chips",
       "first_mention": "2025-09-09",
       "last_mention": "2026-09-28",
-      "total_mentions": 271,
+      "total_mentions": 272,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 161,
-        "StockMKTNewz": 27,
+        "StockMKTNewz": 28,
         "jukan05": 23,
         "balder": 23,
         "octopusycc": 8,
@@ -1830,8 +1829,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
     },
     "US:ALAB": {
       "ticker": "ALAB",
@@ -1892,7 +1890,7 @@
         "price_symbol": null,
         "verification_status": "identified"
       },
-      "cashtag": "标普500",
+      "cashtag": "标普 500",
       "price_symbol": null,
       "exchange": null,
       "currency": null,
@@ -1901,11 +1899,11 @@
       "company": "S&P 500 Index",
       "industry": null,
       "first_mention": "2025-10-01",
-      "last_mention": "2026-09-25",
-      "total_mentions": 127,
+      "last_mention": "2026-09-28",
+      "total_mentions": 128,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
-        "balder": 41,
+        "balder": 42,
         "StockMKTNewz": 29,
         "unusual_whales": 28,
         "octopusycc": 13,
@@ -2056,6 +2054,51 @@
       "hash": "dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece",
       "path": "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json"
     },
+    "US:ARM": {
+      "ticker": "ARM",
+      "instrument": {
+        "instrument_id": "US:ARM",
+        "display_code": "ARM",
+        "display_name": "ARM HOLDINGS PLC /UK",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "ARM"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ARM",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ARM",
+      "price_symbol": "ARM",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "ARM HOLDINGS PLC /UK",
+      "industry": null,
+      "first_mention": "2025-09-28",
+      "last_mention": "2026-09-28",
+      "total_mentions": 107,
+      "blogger_count": 9,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 61,
+        "balder": 18,
+        "StockMKTNewz": 8,
+        "ren_stocks": 6,
+        "KawzInvests": 5,
+        "jukan05": 4,
+        "octopusycc": 2,
+        "michaelsikand": 2,
+        "asklivermore": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ARM",
+      "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
+      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "price_history_52w_status": "ok"
+    },
     "US:WULF": {
       "ticker": "WULF",
       "instrument": {
@@ -2095,50 +2138,7 @@
       "price_status": "ok",
       "instrument_id": "US:WULF",
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
-      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
-    },
-    "US:ARM": {
-      "ticker": "ARM",
-      "instrument": {
-        "instrument_id": "US:ARM",
-        "display_code": "ARM",
-        "display_name": "ARM HOLDINGS PLC /UK",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "ARM"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ARM",
-        "verification_status": "verified"
-      },
-      "cashtag": "$ARM",
-      "price_symbol": "ARM",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "ARM HOLDINGS PLC /UK",
-      "industry": null,
-      "first_mention": "2025-09-28",
-      "last_mention": "2026-09-26",
-      "total_mentions": 105,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 61,
-        "balder": 18,
-        "StockMKTNewz": 8,
-        "ren_stocks": 6,
-        "KawzInvests": 4,
-        "jukan05": 4,
-        "octopusycc": 2,
-        "michaelsikand": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ARM",
-      "hash": "7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c",
-      "path": "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
       "price_history_52w_status": "ok"
     },
     "US:MTSI": {
@@ -2325,13 +2325,13 @@
       "company": "INVESCO QQQ TRUST, SERIES 1",
       "industry": null,
       "first_mention": "2025-11-23",
-      "last_mention": "2026-09-27",
-      "total_mentions": 94,
+      "last_mention": "2026-09-28",
+      "total_mentions": 95,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 27,
         "balder": 27,
-        "ren_stocks": 11,
+        "ren_stocks": 12,
         "asklivermore": 10,
         "frank_trading": 6,
         "aleabitoreddit": 5,
@@ -2359,7 +2359,7 @@
         "price_symbol": "QCOM",
         "verification_status": "verified"
       },
-      "cashtag": "Qualcomm",
+      "cashtag": "$QCOM",
       "price_symbol": "QCOM",
       "exchange": "US",
       "currency": "USD",
@@ -2368,8 +2368,8 @@
       "company": "QUALCOMM INC/DE",
       "industry": null,
       "first_mention": "2026-02-12",
-      "last_mention": "2026-09-27",
-      "total_mentions": 92,
+      "last_mention": "2026-09-28",
+      "total_mentions": 93,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "jukan05": 22,
@@ -2377,7 +2377,7 @@
         "michaelsikand": 13,
         "aleabitoreddit": 11,
         "balder": 11,
-        "KawzInvests": 7,
+        "KawzInvests": 8,
         "zephyr_z9": 4,
         "ren_stocks": 3,
         "unusual_whales": 2,
@@ -2387,7 +2387,8 @@
       "price_status": "ok",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "US:ASML": {
       "ticker": "ASML",
@@ -2429,8 +2430,7 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2556,7 +2556,8 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+      "price_history_52w_status": "ok"
     },
     "US:UBER": {
       "ticker": "UBER",
@@ -2683,7 +2684,8 @@
       "price_status": "ok",
       "instrument_id": "US:MSTR",
       "hash": "0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab",
-      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json"
+      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json",
+      "price_history_52w_status": "ok"
     },
     "US:SNAP": {
       "ticker": "SNAP",
@@ -2828,11 +2830,11 @@
       "company": "Anthropic PBC",
       "industry": null,
       "first_mention": "2026-06-10",
-      "last_mention": "2026-09-19",
-      "total_mentions": 72,
+      "last_mention": "2026-09-28",
+      "total_mentions": 73,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 25,
+        "StockMKTNewz": 26,
         "jukan05": 13,
         "unusual_whales": 11,
         "michaelsikand": 7,
@@ -3046,8 +3048,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
     },
     "US:AVAV": {
       "ticker": "AVAV",
@@ -3202,7 +3203,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASTS",
       "hash": "9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f",
-      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json"
+      "path": "stocks/9b/9bc9a92d8b448a28f3907c75d3dd155e9c33e68b625a577d1dd53053a4a7249f.json",
+      "price_history_52w_status": "ok"
     },
     "US:OSS": {
       "ticker": "OSS",
@@ -3404,7 +3406,8 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:285A",
       "hash": "44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4",
-      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json"
+      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
+      "price_history_52w_status": "unavailable"
     },
     "UNVERIFIED:DRAM": {
       "ticker": "DRAM",
@@ -3448,8 +3451,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:BRK.B": {
       "ticker": "BRK.B",
@@ -3492,6 +3494,49 @@
       "hash": "61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04",
       "path": "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json"
     },
+    "US:V": {
+      "ticker": "V",
+      "instrument": {
+        "instrument_id": "US:V",
+        "display_code": "V",
+        "display_name": "VISA INC.",
+        "display_market": "NYSE",
+        "aliases": [
+          "V"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "V",
+        "verification_status": "verified"
+      },
+      "cashtag": "$V",
+      "price_symbol": "V",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "VISA INC.",
+      "industry": null,
+      "first_mention": "2025-12-16",
+      "last_mention": "2026-09-28",
+      "total_mentions": 53,
+      "blogger_count": 8,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 35,
+        "unusual_whales": 8,
+        "aleabitoreddit": 5,
+        "ren_stocks": 1,
+        "KawzInvests": 1,
+        "asklivermore": 1,
+        "balder": 1,
+        "michaelsikand": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:V",
+      "hash": "90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1",
+      "path": "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json"
+    },
     "Euronext Paris:XFAB": {
       "ticker": "XFAB",
       "instrument": {
@@ -3527,49 +3572,6 @@
       "instrument_id": "Euronext Paris:XFAB",
       "hash": "a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4",
       "path": "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json"
-    },
-    "US:V": {
-      "ticker": "V",
-      "instrument": {
-        "instrument_id": "US:V",
-        "display_code": "V",
-        "display_name": "VISA INC.",
-        "display_market": "NYSE",
-        "aliases": [
-          "V"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "V",
-        "verification_status": "verified"
-      },
-      "cashtag": "$V",
-      "price_symbol": "V",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "VISA INC.",
-      "industry": null,
-      "first_mention": "2025-12-16",
-      "last_mention": "2026-09-25",
-      "total_mentions": 52,
-      "blogger_count": 8,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 34,
-        "unusual_whales": 8,
-        "aleabitoreddit": 5,
-        "ren_stocks": 1,
-        "KawzInvests": 1,
-        "asklivermore": 1,
-        "balder": 1,
-        "michaelsikand": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:V",
-      "hash": "90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1",
-      "path": "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json"
     },
     "US:WDC": {
       "ticker": "WDC",
@@ -3657,8 +3659,7 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
     },
     "US:NFLX": {
       "ticker": "NFLX",
@@ -3817,6 +3818,45 @@
       "hash": "eddb5f9f1b7f013ad1edfc42e7dd2a444297fb5876848cbe37acc8fe287358d5",
       "path": "stocks/ed/eddb5f9f1b7f013ad1edfc42e7dd2a444297fb5876848cbe37acc8fe287358d5.json"
     },
+    "UNVERIFIED:TE": {
+      "ticker": "TE",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:TE",
+        "display_code": "TE",
+        "display_name": "Tronox Holdings",
+        "display_market": "Market unverified",
+        "aliases": [
+          "TE"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$TE",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Tronox Holdings",
+      "industry": null,
+      "first_mention": "2025-10-19",
+      "last_mention": "2026-09-28",
+      "total_mentions": 47,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 30,
+        "StockMKTNewz": 14,
+        "DJTRadar": 2,
+        "KawzInvests": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:TE",
+      "hash": "ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497",
+      "path": "stocks/ff/ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497.json"
+    },
     "US:AMKR": {
       "ticker": "AMKR",
       "instrument": {
@@ -3856,45 +3896,6 @@
       "instrument_id": "US:AMKR",
       "hash": "70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1",
       "path": "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json"
-    },
-    "UNVERIFIED:TE": {
-      "ticker": "TE",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:TE",
-        "display_code": "TE",
-        "display_name": "Tronox Holdings",
-        "display_market": "Market unverified",
-        "aliases": [
-          "TE"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$TE",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Tronox Holdings",
-      "industry": null,
-      "first_mention": "2025-10-19",
-      "last_mention": "2026-09-08",
-      "total_mentions": 46,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 30,
-        "StockMKTNewz": 13,
-        "DJTRadar": 2,
-        "KawzInvests": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:TE",
-      "hash": "ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497",
-      "path": "stocks/ff/ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497.json"
     },
     "US:CBRS": {
       "ticker": "CBRS",
@@ -3938,8 +3939,7 @@
       "price_status": "ok",
       "instrument_id": "US:CBRS",
       "hash": "75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf",
-      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
-      "price_history_52w_status": "insufficient_history"
+      "path": "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json"
     },
     "US:CVX": {
       "ticker": "CVX",
@@ -4806,7 +4806,8 @@
       "price_status": "ok",
       "instrument_id": "US:CIEN",
       "hash": "de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262",
-      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json"
+      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRM": {
       "ticker": "CRM",
@@ -5093,6 +5094,45 @@
       "hash": "ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77",
       "path": "stocks/ad/ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77.json"
     },
+    "US:LLY": {
+      "ticker": "LLY",
+      "instrument": {
+        "instrument_id": "US:LLY",
+        "display_code": "LLY",
+        "display_name": "ELI LILLY & Co",
+        "display_market": "NYSE",
+        "aliases": [
+          "LLY"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "LLY",
+        "verification_status": "verified"
+      },
+      "cashtag": "$LLY",
+      "price_symbol": "LLY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "ELI LILLY & Co",
+      "industry": null,
+      "first_mention": "2026-06-14",
+      "last_mention": "2026-09-28",
+      "total_mentions": 37,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 23,
+        "balder": 9,
+        "DJTRadar": 3,
+        "asklivermore": 2
+      },
+      "price_status": "ok",
+      "instrument_id": "US:LLY",
+      "hash": "157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798",
+      "path": "stocks/15/157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798.json"
+    },
     "TWSE:2454": {
       "ticker": "2454",
       "instrument": {
@@ -5210,45 +5250,6 @@
       "instrument_id": "US:CAT",
       "hash": "3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f",
       "path": "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json"
-    },
-    "US:LLY": {
-      "ticker": "LLY",
-      "instrument": {
-        "instrument_id": "US:LLY",
-        "display_code": "LLY",
-        "display_name": "ELI LILLY & Co",
-        "display_market": "NYSE",
-        "aliases": [
-          "LLY"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "LLY",
-        "verification_status": "verified"
-      },
-      "cashtag": "$LLY",
-      "price_symbol": "LLY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "ELI LILLY & Co",
-      "industry": null,
-      "first_mention": "2026-06-14",
-      "last_mention": "2026-09-28",
-      "total_mentions": 36,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 22,
-        "balder": 9,
-        "DJTRadar": 3,
-        "asklivermore": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:LLY",
-      "hash": "157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798",
-      "path": "stocks/15/157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798.json"
     },
     "US:TGT": {
       "ticker": "TGT",
@@ -5596,8 +5597,7 @@
       "price_status": "ok",
       "instrument_id": "US:PANW",
       "hash": "259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7",
-      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json"
     },
     "US:SNOW": {
       "ticker": "SNOW",
@@ -6670,7 +6670,8 @@
       "price_status": "ok",
       "instrument_id": "US:DJT",
       "hash": "27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8",
-      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json"
+      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
+      "price_history_52w_status": "ok"
     },
     "US:QBTS": {
       "ticker": "QBTS",
@@ -6789,8 +6790,7 @@
       "price_status": "ok",
       "instrument_id": "US:GOLD",
       "hash": "fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8",
-      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json"
     },
     "US:VRT": {
       "ticker": "VRT",
@@ -7850,6 +7850,87 @@
       "hash": "e33f092582163448e63dfa9631ebfad520005f29f627b0ffc65ea853b49776f4",
       "path": "stocks/e3/e33f092582163448e63dfa9631ebfad520005f29f627b0ffc65ea853b49776f4.json"
     },
+    "US:MDB": {
+      "ticker": "MDB",
+      "instrument": {
+        "instrument_id": "US:MDB",
+        "display_code": "MDB",
+        "display_name": "MongoDB, Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "MDB"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "MDB",
+        "verification_status": "verified"
+      },
+      "cashtag": "$MDB",
+      "price_symbol": "MDB",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "MongoDB, Inc.",
+      "industry": null,
+      "first_mention": "2026-06-20",
+      "last_mention": "2026-09-28",
+      "total_mentions": 21,
+      "blogger_count": 5,
+      "total_mentions_by_blogger": {
+        "balder": 9,
+        "StockMKTNewz": 7,
+        "octopusycc": 3,
+        "asklivermore": 1,
+        "ren_stocks": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:MDB",
+      "hash": "9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463",
+      "path": "stocks/9e/9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463.json"
+    },
+    "UNVERIFIED:IGV": {
+      "ticker": "IGV",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:IGV",
+        "display_code": "IGV",
+        "display_name": "iShares Expanded Tech-Software Sector ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "IGV"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$IGV",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "iShares Expanded Tech-Software Sector ETF",
+      "industry": null,
+      "first_mention": "2026-06-19",
+      "last_mention": "2026-09-28",
+      "total_mentions": 20,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "balder": 11,
+        "octopusycc": 3,
+        "StockMKTNewz": 3,
+        "michaelsikand": 1,
+        "jukan05": 1,
+        "KawzInvests": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:IGV",
+      "hash": "108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4",
+      "path": "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json"
+    },
     "US:DUOL": {
       "ticker": "DUOL",
       "instrument": {
@@ -7926,7 +8007,8 @@
       "price_status": "ok",
       "instrument_id": "US:MXL",
       "hash": "e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc",
-      "path": "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json"
+      "path": "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOC": {
       "ticker": "NOC",
@@ -8188,46 +8270,6 @@
       "hash": "5395a5d4838d42d3ac9000cdb228dd1876f54e22642439e20f82a32a10cb29b4",
       "path": "stocks/53/5395a5d4838d42d3ac9000cdb228dd1876f54e22642439e20f82a32a10cb29b4.json"
     },
-    "UNVERIFIED:IGV": {
-      "ticker": "IGV",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:IGV",
-        "display_code": "IGV",
-        "display_name": "iShares Expanded Tech-Software Sector ETF",
-        "display_market": "Market unverified",
-        "aliases": [
-          "IGV"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "IGV",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "iShares Expanded Tech-Software Sector ETF",
-      "industry": null,
-      "first_mention": "2026-06-19",
-      "last_mention": "2026-09-14",
-      "total_mentions": 19,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "balder": 11,
-        "octopusycc": 3,
-        "StockMKTNewz": 3,
-        "michaelsikand": 1,
-        "jukan05": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:IGV",
-      "hash": "108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4",
-      "path": "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json"
-    },
     "UNVERIFIED:SOXX": {
       "ticker": "SOXX",
       "instrument": {
@@ -8382,46 +8424,6 @@
       "instrument_id": "US:KO",
       "hash": "737f423a83712b10c8a250a5e6116dafa9eae3becc48194bbc2ed5d42df06c98",
       "path": "stocks/73/737f423a83712b10c8a250a5e6116dafa9eae3becc48194bbc2ed5d42df06c98.json"
-    },
-    "US:MDB": {
-      "ticker": "MDB",
-      "instrument": {
-        "instrument_id": "US:MDB",
-        "display_code": "MDB",
-        "display_name": "MongoDB, Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "MDB"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "MDB",
-        "verification_status": "verified"
-      },
-      "cashtag": "MDB",
-      "price_symbol": "MDB",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "MongoDB, Inc.",
-      "industry": null,
-      "first_mention": "2026-06-20",
-      "last_mention": "2026-09-14",
-      "total_mentions": 19,
-      "blogger_count": 5,
-      "total_mentions_by_blogger": {
-        "balder": 9,
-        "StockMKTNewz": 5,
-        "octopusycc": 3,
-        "asklivermore": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:MDB",
-      "hash": "9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463",
-      "path": "stocks/9e/9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463.json"
     },
     "US:TTWO": {
       "ticker": "TTWO",
@@ -8652,7 +8654,8 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
+      "price_history_52w_status": "ok"
     },
     "US:PL": {
       "ticker": "PL",
@@ -10336,6 +10339,44 @@
       "hash": "a41bd19b632d98ade1db1cc2c75de5154cb4eb8874c38049e5509b98e76e6d48",
       "path": "stocks/a4/a41bd19b632d98ade1db1cc2c75de5154cb4eb8874c38049e5509b98e76e6d48.json"
     },
+    "US:ETN": {
+      "ticker": "ETN",
+      "instrument": {
+        "instrument_id": "US:ETN",
+        "display_code": "ETN",
+        "display_name": "Eaton Corp plc",
+        "display_market": "NYSE",
+        "aliases": [
+          "ETN"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ETN",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ETN",
+      "price_symbol": "ETN",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Eaton Corp plc",
+      "industry": null,
+      "first_mention": "2026-02-07",
+      "last_mention": "2026-09-28",
+      "total_mentions": 14,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 7,
+        "StockMKTNewz": 5,
+        "asklivermore": 2
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ETN",
+      "hash": "1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a",
+      "path": "stocks/1e/1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a.json"
+    },
     "US:NOW": {
       "ticker": "NOW",
       "instrument": {
@@ -10978,44 +11019,6 @@
       "instrument_id": "US:CME",
       "hash": "c1444647f19ba8e431fef845d04468c5b86d7d246cd6e5a7b0ad73e078fb2bbc",
       "path": "stocks/c1/c1444647f19ba8e431fef845d04468c5b86d7d246cd6e5a7b0ad73e078fb2bbc.json"
-    },
-    "US:ETN": {
-      "ticker": "ETN",
-      "instrument": {
-        "instrument_id": "US:ETN",
-        "display_code": "ETN",
-        "display_name": "Eaton Corp plc",
-        "display_market": "NYSE",
-        "aliases": [
-          "ETN"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ETN",
-        "verification_status": "verified"
-      },
-      "cashtag": "$ETN",
-      "price_symbol": "ETN",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Eaton Corp plc",
-      "industry": null,
-      "first_mention": "2026-02-07",
-      "last_mention": "2026-09-25",
-      "total_mentions": 13,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 7,
-        "StockMKTNewz": 4,
-        "asklivermore": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ETN",
-      "hash": "1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a",
-      "path": "stocks/1e/1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a.json"
     },
     "US:HPE": {
       "ticker": "HPE",
@@ -13041,6 +13044,44 @@
       "hash": "6191665f57d55f206d50b2d54a69aca381f2ce01aad56de1b298b2f6a54fe55c",
       "path": "stocks/61/6191665f57d55f206d50b2d54a69aca381f2ce01aad56de1b298b2f6a54fe55c.json"
     },
+    "US:ISRG": {
+      "ticker": "ISRG",
+      "instrument": {
+        "instrument_id": "US:ISRG",
+        "display_code": "ISRG",
+        "display_name": "INTUITIVE SURGICAL INC",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "ISRG"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "ISRG",
+        "verification_status": "verified"
+      },
+      "cashtag": "$ISRG",
+      "price_symbol": "ISRG",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "INTUITIVE SURGICAL INC",
+      "industry": null,
+      "first_mention": "2026-05-12",
+      "last_mention": "2026-09-28",
+      "total_mentions": 10,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 8,
+        "aleabitoreddit": 1,
+        "asklivermore": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:ISRG",
+      "hash": "dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011",
+      "path": "stocks/dd/dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011.json"
+    },
     "US:KEYS": {
       "ticker": "KEYS",
       "instrument": {
@@ -13869,6 +13910,44 @@
       "hash": "8528eead937fc7c29e4485f889d196bdd331ae43ff71bb99dfacc6102790f98e",
       "path": "stocks/85/8528eead937fc7c29e4485f889d196bdd331ae43ff71bb99dfacc6102790f98e.json"
     },
+    "UNVERIFIED:SOXS": {
+      "ticker": "SOXS",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SOXS",
+        "display_code": "SOXS",
+        "display_name": "Direxion Daily Semiconductor Bear 3X Shares",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SOXS"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "SOXS",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Direxion Daily Semiconductor Bear 3X Shares",
+      "industry": null,
+      "first_mention": "2026-06-18",
+      "last_mention": "2026-09-28",
+      "total_mentions": 9,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "balder": 6,
+        "ren_stocks": 2,
+        "octopusycc": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SOXS",
+      "hash": "1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6",
+      "path": "stocks/1d/1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6.json"
+    },
     "UNVERIFIED:SPGI": {
       "ticker": "SPGI",
       "instrument": {
@@ -14509,44 +14588,6 @@
       "instrument_id": "US:ICE",
       "hash": "7bf78c71b3a8c12217e4558254424387a874cf5deb9fbf1958bd04034a794c97",
       "path": "stocks/7b/7bf78c71b3a8c12217e4558254424387a874cf5deb9fbf1958bd04034a794c97.json"
-    },
-    "US:ISRG": {
-      "ticker": "ISRG",
-      "instrument": {
-        "instrument_id": "US:ISRG",
-        "display_code": "ISRG",
-        "display_name": "INTUITIVE SURGICAL INC",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "ISRG"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "ISRG",
-        "verification_status": "verified"
-      },
-      "cashtag": "$ISRG",
-      "price_symbol": "ISRG",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "INTUITIVE SURGICAL INC",
-      "industry": null,
-      "first_mention": "2026-05-12",
-      "last_mention": "2026-09-25",
-      "total_mentions": 9,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 7,
-        "aleabitoreddit": 1,
-        "asklivermore": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:ISRG",
-      "hash": "dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011",
-      "path": "stocks/dd/dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011.json"
     },
     "US:IVZ": {
       "ticker": "IVZ",
@@ -15564,44 +15605,6 @@
       "instrument_id": "UNVERIFIED:SOX",
       "hash": "725ec99220bee540827a856a2cdb768a16da6ba27b814a045af90844639449d2",
       "path": "stocks/72/725ec99220bee540827a856a2cdb768a16da6ba27b814a045af90844639449d2.json"
-    },
-    "UNVERIFIED:SOXS": {
-      "ticker": "SOXS",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:SOXS",
-        "display_code": "SOXS",
-        "display_name": "Direxion Daily Semiconductor Bear 3X Shares",
-        "display_market": "Market unverified",
-        "aliases": [
-          "SOXS"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "SOXS",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Direxion Daily Semiconductor Bear 3X Shares",
-      "industry": null,
-      "first_mention": "2026-06-18",
-      "last_mention": "2026-09-28",
-      "total_mentions": 8,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "balder": 6,
-        "octopusycc": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:SOXS",
-      "hash": "1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6",
-      "path": "stocks/1d/1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6.json"
     },
     "UNVERIFIED:TRUMP": {
       "ticker": "TRUMP",
@@ -23282,6 +23285,44 @@
       "hash": "8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3",
       "path": "stocks/8e/8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3.json"
     },
+    "UNVERIFIED:SQQQ": {
+      "ticker": "SQQQ",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:SQQQ",
+        "display_code": "SQQQ",
+        "display_name": "ProShares UltraPro Short QQQ",
+        "display_market": "Market unverified",
+        "aliases": [
+          "SQQQ"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "SQQQ",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "ProShares UltraPro Short QQQ",
+      "industry": null,
+      "first_mention": "2026-03-28",
+      "last_mention": "2026-09-28",
+      "total_mentions": 5,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "balder": 2,
+        "ren_stocks": 2,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:SQQQ",
+      "hash": "324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40",
+      "path": "stocks/32/324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40.json"
+    },
     "UNVERIFIED:SSRM": {
       "ticker": "SSRM",
       "instrument": {
@@ -27541,44 +27582,6 @@
       "instrument_id": "UNVERIFIED:SKC",
       "hash": "b7e148324878031f780b81fa29b83f279090f8b8d6a7cfd9c023de15c5f80cb2",
       "path": "stocks/b7/b7e148324878031f780b81fa29b83f279090f8b8d6a7cfd9c023de15c5f80cb2.json"
-    },
-    "UNVERIFIED:SQQQ": {
-      "ticker": "SQQQ",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:SQQQ",
-        "display_code": "SQQQ",
-        "display_name": "ProShares UltraPro Short QQQ",
-        "display_market": "Market unverified",
-        "aliases": [
-          "SQQQ"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "SQQQ",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "ProShares UltraPro Short QQQ",
-      "industry": null,
-      "first_mention": "2026-03-28",
-      "last_mention": "2026-09-28",
-      "total_mentions": 4,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "balder": 2,
-        "aleabitoreddit": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:SQQQ",
-      "hash": "324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40",
-      "path": "stocks/32/324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40.json"
     },
     "UNVERIFIED:SSB": {
       "ticker": "SSB",
@@ -97933,9 +97936,6 @@
     "APPL": [
       "US:AAPL"
     ],
-    "APPLE": [
-      "US:AAPL"
-    ],
     "APPLE BEES": [
       "UNVERIFIED:DIN"
     ],
@@ -106937,9 +106937,6 @@
     ],
     "QUAD/GRAPHICS INC.": [
       "UNVERIFIED:QUAD"
-    ],
-    "QUALCOMM": [
-      "US:QCOM"
     ],
     "QUALCOMM INC/DE": [
       "US:QCOM"
@@ -118265,7 +118262,7 @@
     "惠而浦": [
       "UNVERIFIED:WHR"
     ],
-    "标普500": [
+    "标普 500": [
       "UNVERIFIED:SPX"
     ],
     "核能": [
@@ -118314,8 +118311,8 @@
     "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
     "stocks/23/236f2594e193c6e8b14c6783b002d15277b44061577c36007ce0aec5d4df34b5.json",
     "stocks/9e/9ef2ef131f049fea80a49b67cd2a9c48ca7b0d5ccc01c2e2c9cf38c4b8b4912e.json",
-    "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
     "stocks/aa/aa6d0aedaa2c6612699a4fafcc97d3a3f62e90adfd420e7c4fc7169feefd40b2.json",
+    "stocks/5f/5ffbec39102323aa11489704428a828a5882df674c3b4eb7bcdca1a3f8972cd2.json",
     "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
     "stocks/c6/c6cf19caac21ccf13a9e13f26096b96b19c96a996817f08233675426290fba69.json",
     "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json",
@@ -118324,8 +118321,8 @@
     "stocks/1e/1ed11c3d73eb5139fadbf6c51f5b3ea6242ffb98b7e9f528995ea09703679ac5.json",
     "stocks/61/61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22.json",
     "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
-    "stocks/02/02414f773ee9eafd8cde41ffccff81f8001057131fb34adc9710353b00a9172e.json",
     "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+    "stocks/02/02414f773ee9eafd8cde41ffccff81f8001057131fb34adc9710353b00a9172e.json",
     "stocks/5d/5dceebc96a2f515c0ac70f2ad6135d6fec5554f08f35363792e2f52843c95e1b.json",
     "stocks/e2/e2e1c8716b63c27f43b3354bb7d85d340ff7c81a665050cba2b254d319021844.json",
     "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -118354,8 +118351,8 @@
     "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
     "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
     "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
-    "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
     "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
+    "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
     "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json",
     "stocks/bf/bffb674b0d6173e265702bf77ac4f1f0e03810cc6fa5c977367fe2c904073aab.json",
     "stocks/0a/0a6a50b3e0798a170f5066f9d9394e43aa4458139aee1dee60f43eb4cf09cadf.json",
@@ -118389,16 +118386,16 @@
     "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
     "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/61/61c49d77cecfe3979f84f6a932be4d90e123f8893753814c207747b8d1badc04.json",
-    "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json",
     "stocks/90/90e6f1a549abc098285870f55c10b0e48a470fbeb80b70f62b4664ca36db24f1.json",
+    "stocks/a7/a7f9ad44150ba289e416e9a48772a7dda331bcc4efaa7b906261db035c6d4ab4.json",
     "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
     "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
     "stocks/dc/dc477484fe5fc6dc3a7b6046c6877009fe42155cb0f17022d93dbd1bf048ad0a.json",
     "stocks/0b/0b17fe123647e22d16db3828a0ebe2d206c76beb10f22008e1754a0e262bb944.json",
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/ed/eddb5f9f1b7f013ad1edfc42e7dd2a444297fb5876848cbe37acc8fe287358d5.json",
-    "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json",
     "stocks/ff/ffcc8528efc3114f4bf386191995da31cc11d732ddd798f3fc29e8bfb88f6497.json",
+    "stocks/70/70f85fe2b51378b07958251d89d0edcefaf53d7d39ba6e53a567e37d95347cc1.json",
     "stocks/75/75a7fbb912f9c33b87702a9bcf21ae606733c7949e556cf64c42d1454a1154cf.json",
     "stocks/d1/d12dd1a315c81eac1f9ff094432aed811f9790f0c07247d5227c3eafa27c061f.json",
     "stocks/4a/4a5a6ddbf7f22e56529177f4235382a7f81cdcdcaa7b8e25768696800604afad.json",
@@ -118429,10 +118426,10 @@
     "stocks/4e/4ee3293836805cb62c187d20b8463de9181394df642ae0de237251b4d421094e.json",
     "stocks/46/46a5d3095c29f72e47b69c1b73e5eea34142a727e4d7a0c0211b90a64bda0d9f.json",
     "stocks/ad/ad37299187e759d0c74feb08a19f0378b436b971cd94d23b604f7063d2f88d77.json",
+    "stocks/15/157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798.json",
     "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
     "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json",
     "stocks/30/3021c24dead095028b8b989d617dd055fa35877e7c57ccb09f4d4b06e6a26e9f.json",
-    "stocks/15/157a39c86bffee489aeed7608f7af0b2523cdd36046f4b794f49a7fe6d075798.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
     "stocks/8b/8bd42cfd3c8ce078abbe115d1588aed7dfb083fb7441766580713ed3bb78bdab.json",
     "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json",
@@ -118499,6 +118496,8 @@
     "stocks/aa/aada254b2336821fdda90a6212df1f926266c68ed2f9f4a66b413050147d0b6a.json",
     "stocks/b0/b04d34f20091527853b0989f3f7a4a51b57bb5b6baa7928ae3978fe81700f9de.json",
     "stocks/e3/e33f092582163448e63dfa9631ebfad520005f29f627b0ffc65ea853b49776f4.json",
+    "stocks/9e/9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463.json",
+    "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json",
     "stocks/ce/cea14c4ceaed7c14f344f29046ef4c0b2dae1ebefd940d3ec83c18ae4597532f.json",
     "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
     "stocks/77/77104837be298a4fa635cfd033926fe22af9a12090f861b78b9636d0bfc78a11.json",
@@ -118508,12 +118507,10 @@
     "stocks/94/94f4fc3f8e0468e2e451d9c92034fa8b3fa5b4e06ceb630cf4d58ffa9cf541a4.json",
     "stocks/93/93233d2d36ad8e2a9c9d13f4adef20cb01359ae383d141b0b4e0b89d8b669c5f.json",
     "stocks/53/5395a5d4838d42d3ac9000cdb228dd1876f54e22642439e20f82a32a10cb29b4.json",
-    "stocks/10/108b15f2ea7fa6660fc836a21fb93c7e65a3afae3742d3ad00a2cfe6f48c4da4.json",
     "stocks/7d/7d5ad0878b4f9e5714f3b07580de6693232e0ca6d272f182d7258f6ba32db049.json",
     "stocks/71/71cadc4f1c9f555289a89cedcec5c39c778e9bff33eda560894dd1ee3e206ca2.json",
     "stocks/3b/3be3dd57193f8c859550d03cfdbe6fd74e062f845f03f2b55bd2b489984b64e0.json",
     "stocks/73/737f423a83712b10c8a250a5e6116dafa9eae3becc48194bbc2ed5d42df06c98.json",
-    "stocks/9e/9e9ea29bf10ca1c1baa0492db90c8d96336539c0b030c57bbf5e60c9ba939463.json",
     "stocks/3e/3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57.json",
     "stocks/26/26c712e8bd9c77da45b59aed6cbca68376eb29bfe159e91ebd0d8f1f1ba04416.json",
     "stocks/40/40aa8af4b789bfe5ba8f04ea4586a0fad64733a2a1a0e23320542cedc7938c21.json",
@@ -118564,6 +118561,7 @@
     "stocks/a6/a6867265454a85ca35aa4fa6afd079b01ec940a34dc2f7d4a4765ee731588047.json",
     "stocks/01/01f8409b518156f19ba8121fbbe5a7b7b7e6181c5cc6f4d8a245a2edbb99321a.json",
     "stocks/a4/a41bd19b632d98ade1db1cc2c75de5154cb4eb8874c38049e5509b98e76e6d48.json",
+    "stocks/1e/1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a.json",
     "stocks/e8/e8a2207aba4aaa7755f62c415204ca1b5c886eede795f733fee450c8f2c081c5.json",
     "stocks/c0/c02015409c15281f886ce724224d45901264f97c17525bc705c78a2bf441ca96.json",
     "stocks/96/9679c67162a2aa4f2e00c40b65b7bf5df50c3c806a344e659b38a8ba05c194cc.json",
@@ -118581,7 +118579,6 @@
     "stocks/55/55df7026ba582d70ff4d259d0211c42131d478cf415f8fcbca97b79d63b64302.json",
     "stocks/6c/6c00cebc3e0d8a00c71b63c90dbeccff1d466ffb24309fe99cdf5d2e34d36a05.json",
     "stocks/c1/c1444647f19ba8e431fef845d04468c5b86d7d246cd6e5a7b0ad73e078fb2bbc.json",
-    "stocks/1e/1e27f8f2ab58b857fa66ff93a88a2f9169a7ec74784fe73dc67aa6739516076a.json",
     "stocks/d4/d4ec74c824d69aa281cd3ffe8f67172db3f462c8b30e394180fb94645e98cbe4.json",
     "stocks/65/65251915cfc4d231be5b39c16e9a2e52470d2c41053d70c6cbdf5f48e5587675.json",
     "stocks/76/765cf44ffb7b234103dfb444113b2ebae97660ca1f0be9922b23d51bc6371397.json",
@@ -118636,6 +118633,7 @@
     "stocks/41/416b8f103773df3a9d8e6804d53b3d2abc3843820e7e5c0fdf06ef0c7af9ad2c.json",
     "stocks/40/4037c29a3075729a6f4d5115c3647e7e625a33aa48f9c59adc5a4daeb9c3ec6a.json",
     "stocks/61/6191665f57d55f206d50b2d54a69aca381f2ce01aad56de1b298b2f6a54fe55c.json",
+    "stocks/dd/dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011.json",
     "stocks/5a/5a5f6eb16b8fc198a236554615c9f6c25bd28ca69acf39b92e166b0a7a8889b2.json",
     "stocks/7d/7d0905baab27d22a4a7a4dcf9ba05822a3a8141c660400e4dc6a120e78c4f450.json",
     "stocks/8e/8ea4ee246ed7dd78beb25362a9d07683f21db8883d087525be838ea22fc6f261.json",
@@ -118658,6 +118656,7 @@
     "stocks/7b/7b19e7195580f32ad6f4a642d95f346ca3f169c2be8a23de44be347e0503a037.json",
     "stocks/e9/e9419b6c2f7c9e1f239518ed441b09610135a8744dec5d8bd9a0f3eb64263215.json",
     "stocks/85/8528eead937fc7c29e4485f889d196bdd331ae43ff71bb99dfacc6102790f98e.json",
+    "stocks/1d/1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6.json",
     "stocks/3f/3f21a7b2da268ddd693d67965a0d7dd159f999b6bba1bf8ce86d695b336a7596.json",
     "stocks/74/74acd6ac386c998191e2e5cc160a722b6dfbba081b95a060440164cc021505a4.json",
     "stocks/ca/cae2c45a7d94a7ad5f6203e5a362ca312c1942f7d6d6f47b9707397861f91498.json",
@@ -118675,7 +118674,6 @@
     "stocks/92/92d0497b53f7d4858523bf0067ee05691da866480f6cd48040112cb384b24ced.json",
     "stocks/91/916fe305a6018d359523f465034c626273b0353ad1a6db477803b74cbd6f0f3b.json",
     "stocks/7b/7bf78c71b3a8c12217e4558254424387a874cf5deb9fbf1958bd04034a794c97.json",
-    "stocks/dd/dd48e9d12a7d0a992c1f2abfe52d4687b341760e718eeaeb37560dbcd805a011.json",
     "stocks/34/3472957fe997e8283491e22179f8e2e17bfec0bee1e09762c8106e79d67d5d69.json",
     "stocks/d8/d86e038ff16bf38bc72b260e7635c88493eb870796dc0a3696a76b48f1a835ac.json",
     "stocks/03/03fa5d5f01d394ee27b368d152ae2abd0133ef419f3b1264f857e88567f3cd79.json",
@@ -118703,7 +118701,6 @@
     "stocks/84/84a2dd37a5c4f9fe0ce579da5d7ed9d170d51cf1943169967ae252b97b89cf02.json",
     "stocks/77/778970bd4f86ff591260bd76c093cfd75fb50dde2a82ce8b49c8adcef1cf3ac0.json",
     "stocks/72/725ec99220bee540827a856a2cdb768a16da6ba27b814a045af90844639449d2.json",
-    "stocks/1d/1d499c4303896262e3d8d8e939c84ec79a4e0d959aa2d5ed7f08ca5ff93bb9d6.json",
     "stocks/89/89b010e126be13514be8ee2dd22a9738373c93617b70eb954c8a2e66814f6bce.json",
     "stocks/24/247154a98f4431b3672d52d3eaa917ad9301efffe50af03a423ab16fe6ed1f84.json",
     "stocks/b7/b7b75df2119ef6a74fe3ee1816c5286146ea58b69e826918fbbb8c3599878825.json",
@@ -118912,6 +118909,7 @@
     "stocks/65/6569e78bcffd0c84edfa05f74a2c516a609d971df84868cba15290c3da998350.json",
     "stocks/18/18f19db69c562b6860b54f56e92af99188d6d2308fcd0c5139742e6e13ced78e.json",
     "stocks/8e/8e83df57309b245299db869de4b15fabee644353fdf9acaceafededc9eee20c3.json",
+    "stocks/32/324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40.json",
     "stocks/c1/c1533c0826094415d4b0855bb7a1442c9d141b2ba7277e2180087d42260548cb.json",
     "stocks/86/867263524870c75548ee70adc87ee26575aab04da09ad277c0449e4c62a7ea07.json",
     "stocks/f1/f116096cc764fc47c750298a0ea99411b29b1ad7440734816b90d4d75692e3f8.json",
@@ -119028,7 +119026,6 @@
     "stocks/40/40e8cae41f91cc1663582baaacce95d45a0e0c305e34a1567704406470cb7500.json",
     "stocks/31/312d3566234f461702802953645ea5ab263eebc76db95c93edab9e8168f079bc.json",
     "stocks/b7/b7e148324878031f780b81fa29b83f279090f8b8d6a7cfd9c023de15c5f80cb2.json",
-    "stocks/32/324c28d75987debe41e133229251f13df36a622e3625571c995d7e1795d0cf40.json",
     "stocks/32/3233eabbc709b86b9962e312039ec6fb756f4a7c9cf4d240ba3b13a1a123692f.json",
     "stocks/58/5864182e085c82787139d1836c0852029aa9cc3232cc0b5da3d48bb0e06971a1.json",
     "stocks/3a/3a2bb5847646abee1bec012dc60d3bebc7fd1e6391dad096b660d91fd6dab319.json",

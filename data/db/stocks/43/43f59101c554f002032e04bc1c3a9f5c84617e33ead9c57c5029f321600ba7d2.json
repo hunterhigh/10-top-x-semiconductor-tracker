@@ -1,6 +1,6 @@
 {
   "ticker": "QCOM",
-  "cashtag": "Qualcomm",
+  "cashtag": "$QCOM",
   "instrument": {
     "instrument_id": "US:QCOM",
     "display_code": "QCOM",
@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-12",
-  "last_mention": "2026-09-27",
-  "total_mentions": 92,
+  "last_mention": "2026-09-28",
+  "total_mentions": 93,
   "total_mentions_by_blogger": {
     "jukan05": 22,
     "StockMKTNewz": 16,
     "michaelsikand": 13,
     "aleabitoreddit": 11,
     "balder": 11,
-    "KawzInvests": 7,
+    "KawzInvests": 8,
     "zephyr_z9": 4,
     "ren_stocks": 3,
     "unusual_whales": 2,
@@ -40,7 +40,7 @@
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 74,
+    "opinion": 75,
     "flow": 2,
     "news": 16
   },
@@ -2229,6 +2229,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104562166292525353",
+      "blogger_id": "KawzInvests",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T09:21:35-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "server CPU market already sold out with 25–30 week lead times driven by AI agent workloads from OpenAI Meta and Google"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "$META’s Muse proved ordinary consumers want AI agents (2.8M downloads in 12 days). \n\nNow comes the next catalyst: OpenAI DevDay on Tuesday.\n\n> Server CPU lead times have stretched out to 25–30 weeks (vs. normal 16–20). \n\n> Intel’s CEO admitted they can currently only fill ~50% of customer CPU requests. \n\n> AMD EPYC data center revenue has more than doubled YoY.\n\n> Trend Force CPU status as Tight Supply\n\nWhen OpenAI, Meta, and Google compete to give hundreds of millions of users free, always-on digital workers, they are slamming a consumer agent workload onto a server CPU market that is already sold out with 25–30 week lead times. $META $INTC $ARM $QCOM",
+      "url": "https://x.com/KawzInvests/status/2104562166292525353",
+      "kind": "post",
+      "engagement": {
+        "views": 9701,
+        "likes": 31,
+        "reposts": 3,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3427,14 +3452,14 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-26T09:17:15.446090+00:00",
+  "price_updated_at": "2026-09-28T15:23:27.503593+00:00",
   "price_history_52w": {
-    "requested_start": "2025-07-26",
-    "asof": "2026-07-25",
-    "attempted_at": "2026-07-26T03:18:35.330032+00:00",
+    "requested_start": "2025-09-29",
+    "asof": "2026-09-28",
+    "attempted_at": "2026-09-28T15:23:25.969796+00:00",
     "status": "ok",
-    "first_available_date": "2025-07-28",
-    "last_available_date": "2026-07-24",
+    "first_available_date": "2025-09-29",
+    "last_available_date": "2026-09-25",
     "reason": null
   },
   "price_source_state": {
@@ -3442,7 +3467,7 @@
     "provider_symbol": "QCOM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-26T09:17:13.935886+00:00",
+    "checked_at": "2026-09-28T15:23:25.969796+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
