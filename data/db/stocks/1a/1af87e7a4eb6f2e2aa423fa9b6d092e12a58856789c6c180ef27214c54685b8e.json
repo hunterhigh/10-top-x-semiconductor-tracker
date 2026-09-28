@@ -1,10 +1,10 @@
 {
   "ticker": "NSCL",
-  "cashtag": "$NSCL",
+  "cashtag": "NSCL",
   "instrument": {
     "instrument_id": "UNVERIFIED:NSCL",
     "display_code": "NSCL",
-    "display_name": "Nscale",
+    "display_name": "NSCL (upcoming neocloud IPO)",
     "display_market": "Market unverified",
     "aliases": [
       "NSCL"
@@ -20,17 +20,17 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Nscale",
+  "company": "NSCL (upcoming neocloud IPO)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-09-26",
-  "last_mention": "2026-09-26",
-  "total_mentions": 1,
+  "last_mention": "2026-09-28",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "michaelsikand": 1
+    "michaelsikand": 3
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 3
   },
   "mentions": [
     {
@@ -52,6 +52,55 @@
         "likes": 24,
         "reposts": 1,
         "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104639012329894287",
+      "blogger_id": "michaelsikand",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T14:26:57-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "stacked board with high-profile members",
+        "$100B backlog"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$NSCL",
+      "text": "Chat have we ever seen a neocloud board this stacked?\n\n$NSCL is an upcoming neocloud IPO with $100B backlog. Board highlights:\n\nFrank Slootman - ex-$SNOW CEO ($3.7B NW)\nSheryl Sandberg - ex-$META COO ($2.6B NW)\nFidji Simo - ex-OpenAI AGI deployment https://t.co/3thPxHL5pO",
+      "url": "https://x.com/michaelsikand/status/2104639012329894287",
+      "kind": "post",
+      "engagement": {
+        "views": 23751,
+        "likes": 43,
+        "reposts": 2,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104650826056913365",
+      "blogger_id": "michaelsikand",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T15:13:54-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NSCL",
+      "text": "@optionscjp Let's see what price they go out at",
+      "url": "https://x.com/michaelsikand/status/2104650826056913365",
+      "kind": "reply",
+      "engagement": {
+        "views": 556,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

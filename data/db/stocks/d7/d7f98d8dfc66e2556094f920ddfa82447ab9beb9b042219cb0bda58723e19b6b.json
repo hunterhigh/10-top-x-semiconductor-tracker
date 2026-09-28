@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-17",
-  "last_mention": "2026-09-22",
-  "total_mentions": 25,
+  "last_mention": "2026-09-28",
+  "total_mentions": 28,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 17,
-    "ren_stocks": 6,
-    "KawzInvests": 2
+    "ren_stocks": 8,
+    "KawzInvests": 2,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 25
+    "opinion": 28
   },
   "mentions": [
     {
@@ -636,6 +637,80 @@
         "likes": 109,
         "reposts": 8,
         "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104670676774986130",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T16:32:46-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "sold earlier this month",
+        "10 kV devices still years away from real volume revenue",
+        "wait-and-see name",
+        "watching from sidelines"
+      ],
+      "is_risk": true,
+      "conviction": "low",
+      "raw_mention": "$NVTS",
+      "text": "$NVTS \n\nThe US Army just picked Navitas for ALATTIS, a program to develop 10 kV silicon carbide power semiconductors, sponsored by the Army Research Laboratory.\n\nThe goal is to build a domestic manufacturing process for ultra-high-voltage SiC IGBTs that doesn't exist today, which says a lot about where Navitas' engineering sits, and it fits the same roadmap the company is pointing at solid-state transformers for AI data centers and grid storage.\n\nThat's the bridge to the AI trade: as racks move toward 800 V DC and megawatt scale, the conversion from the grid keeps moving to higher voltages, which is exactly where ultra-high-voltage SiC comes in. Navitas already works with Nvidia on the 800 V architecture for the Kyber racks behind Rubin Ultra.\n\nThis is a prototype development program with no dollar value disclosed, and 10 kV devices are still years away from real volume revenue. \n\nThat timeline is the reason I sold $NVTS earlier this month, and this news doesn't change it.\n\nGreat validation for the tech, but for me it's still a wait-and-see name, so I'll keep watching from the sidelines.\n\nGood news are always bullish ⚡️",
+      "url": "https://x.com/ren_stocks/status/2104670676774986130",
+      "kind": "post",
+      "engagement": {
+        "views": 4781,
+        "likes": 21,
+        "reposts": 5,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104674386342986012",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T16:47:31-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "it",
+      "text": "@CifrOracle I bought it at $12 and watched it go to $30… and didn't sell it... 🫠",
+      "url": "https://x.com/ren_stocks/status/2104674386342986012",
+      "kind": "reply",
+      "engagement": {
+        "views": 164,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104675700116734041",
+      "blogger_id": "balder",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T16:52:44-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVTS",
+      "text": "RT @wallstengine: Navitas $NVTS has been selected by the U.S. Army to develop next-gen 10 kV silicon carbide power semiconductors.\n\nThe pro…",
+      "url": "https://x.com/Balder13946731/status/2104675700116734041",
+      "kind": "post",
+      "engagement": {
+        "views": 16396,
+        "likes": 92,
+        "reposts": 14,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
