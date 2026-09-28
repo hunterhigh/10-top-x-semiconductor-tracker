@@ -1,6 +1,6 @@
 {
   "ticker": "SIVE",
-  "cashtag": "$SIVE",
+  "cashtag": "SIVE",
   "instrument": {
     "instrument_id": "Nasdaq Stockholm:SIVE",
     "display_code": "SIVE",
@@ -25,17 +25,17 @@
   "industry": "AI Photonics/CPO Lasers",
   "thesis_summary": "他把 SIVE 当作硅光/CPO 的上游激光瓶颈,反复强调它是产业链核心受益者,通过 POET 供货给 Ayar、Celestial 等光引擎厂商。",
   "first_mention": "2025-12-23",
-  "last_mention": "2026-09-23",
-  "total_mentions": 981,
+  "last_mention": "2026-09-28",
+  "total_mentions": 983,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 907,
-    "ren_stocks": 68,
+    "ren_stocks": 70,
     "jukan05": 3,
     "KawzInvests": 2,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 981
+    "opinion": 983
   },
   "mentions": [
     {
@@ -25901,6 +25901,58 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104442430875472363",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T01:25:48-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "CPO debuts H2 2027 and scales from there",
+        "market looks 6-12 months ahead so interconnect trade starts well before ramp"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SIVE",
+      "text": "$LITE $COHR $GLW $MRVL $AAOI $SIVE\n\nYou're not bullish enough on interconnect. \n\nJefferies latest report is just the latest example of how the BOM is shifting massively from the GPU toward memory and then interconnect.\n\nIn today's GB300 NVL72, the GPU is 62.5% of the rack and networking just 8.6%. By the Rubin Ultra NVL576 pod, the GPU falls to 46% and networking climbs to 22.4%, because once you link eight racks into a single 576-GPU domain, the interconnect between them becomes part of the computer itself. \n\nTo put that in perspective, networking goes from roughly $5K per GPU in GB300 to about $21K in NVL576, more than 4x.\n\nBut getting the timeline right is the most important part if you want to ride each wave, and right now that wave is memory. \n\nJust look at Vera Rubin: it ramps from the second half of this year, and in Fubon's model it's the memory peak, with memory at a third of the rack thanks to HBM4, Vera's system memory and NAND. \n\nRubin Ultra NVL576 lands in the second half of 2027, and that's where networking takes over: CPO debuts in H2 2027 and scales from there. But remember, the market looks 6 to 12 months ahead, so the interconnect trade starts well before then.\n\nMemory and pluggables are the present, CPO is the future, and the rack tells us where the money goes.\n\nBullish ⚡️",
+      "url": "https://x.com/ren_stocks/status/2104442430875472363",
+      "kind": "post",
+      "engagement": {
+        "views": 11664,
+        "likes": 125,
+        "reposts": 5,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104444754339533051",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T01:35:02-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "H2 2027 CPO story",
+        "retail got ahead of itself implying current dislocation is temporary"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SIVE",
+      "text": "@Omer231ew Timing the ramp-up is the most important part. Get ahead of yourself and you lose most of those gains; be too late and the re-rating will already be behind you.\n\nAAOI should, all things considered, make it back to its ATH and then some, if they can find a proper way to finance their growth other than constant ATM offerings.\n\nSIVE is an H2 2027 CPO story; it's just that retail got ahead of itself.",
+      "url": "https://x.com/ren_stocks/status/2104444754339533051",
+      "kind": "reply",
+      "engagement": {
+        "views": 458,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -27093,14 +27145,13 @@
       "close": 32.78
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "SEK",
-  "price_updated_at": "2026-09-26T21:17:11.240539+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-09-28T09:39:56.682879+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-27",
-    "asof": "2026-09-26",
-    "attempted_at": "2026-09-26T21:17:11.162072+00:00",
+    "requested_start": "2025-09-29",
+    "asof": "2026-09-28",
+    "attempted_at": "2026-09-28T09:39:56.533022+00:00",
     "status": "ok",
     "first_available_date": "2025-09-29",
     "last_available_date": "2026-09-25",
@@ -27109,11 +27160,11 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-09-26T21:17:11.162072+00:00",
-    "attempts": 2,
-    "next_retry_at": "2026-09-27T00:17:11.162072+00:00",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-09-28T09:39:56.533022+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
     "http_status": null
   }
 }

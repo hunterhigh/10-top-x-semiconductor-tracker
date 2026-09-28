@@ -1,6 +1,6 @@
 {
   "ticker": "BE",
-  "cashtag": "BE",
+  "cashtag": "$BE",
   "instrument": {
     "instrument_id": "US:BE",
     "display_code": "BE",
@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-03",
-  "last_mention": "2026-09-23",
-  "total_mentions": 93,
+  "last_mention": "2026-09-28",
+  "total_mentions": 95,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 22,
-    "ren_stocks": 20,
-    "StockMKTNewz": 12,
+    "ren_stocks": 21,
+    "StockMKTNewz": 13,
     "balder": 12,
     "michaelsikand": 9,
     "octopusycc": 7,
@@ -38,8 +38,8 @@
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 74,
-    "news": 12,
+    "opinion": 75,
+    "news": 13,
     "flow": 7
   },
   "mentions": [
@@ -2281,6 +2281,55 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104162164671963294",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-27",
+      "created_at": "2026-09-27T06:52:08-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$BE",
+      "text": "Bloom Energy $BE stock is currently the 2nd best-performing stock in the S&amp;P 500 over the last 5 years\n\n🟢🟢🟢🟢🟢 https://t.co/osNJucwIYG",
+      "url": "https://x.com/StockMKTNewz/status/2104162164671963294",
+      "kind": "post",
+      "engagement": {
+        "views": 62347,
+        "likes": 735,
+        "reposts": 26,
+        "replies": 27
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104449426710249796",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T01:53:36-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "AI data center capacity needs to grow from 24 GW to 100 GW by 2030",
+        "where the grid can't deliver power fast enough, BE comes into play"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$BE",
+      "text": "$NBIS $BE\n\nTruist estimates AI cloud revenue goes from $310B of annual run-rate in 2025 to over $2.1T by 2030, roughly 7x in five years, and they believe inference already became the bigger AI workload this year.\n\nThat lines up with what I keep saying about frontier training being a small slice of global compute: the real demand is everyone using these models every single day, and that demand doesn't stop.\n\nThe light slice in those bars is the AI clouds, names like Nebius and CoreWeave, and by my read of the chart, it grows from a sliver in 2025 to roughly 30% of the market by 2030.\n\nThe numbers imply about $21B of AI cloud revenue per gigawatt in 2030, up from about $13B today, and $NBIS raising prices on some GPU instances by 17 to 21% and on some CPU services by 25% is one sign of that pricing power.\n\nAI data center capacity goes from 24 GW to 100 GW, so we need to add more than three times what exists today in five years. Just remember that those gigawatts need power first, and where the grid can't deliver fast enough, a name like $BE comes into play.\n\nThere is no stopping this train.\n\nBullish ⚡",
+      "url": "https://x.com/ren_stocks/status/2104449426710249796",
+      "kind": "post",
+      "engagement": {
+        "views": 8302,
+        "likes": 66,
+        "reposts": 3,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3479,11 +3528,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-26T21:16:50.966188+00:00",
+  "price_updated_at": "2026-09-28T09:39:41.000625+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-27",
-    "asof": "2026-09-26",
-    "attempted_at": "2026-09-26T21:16:50.073160+00:00",
+    "requested_start": "2025-09-29",
+    "asof": "2026-09-28",
+    "attempted_at": "2026-09-28T09:39:40.097331+00:00",
     "status": "ok",
     "first_available_date": "2025-09-29",
     "last_available_date": "2026-09-25",
@@ -3494,7 +3543,7 @@
     "provider_symbol": "BE",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-26T21:16:50.073160+00:00",
+    "checked_at": "2026-09-28T09:39:40.097331+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
