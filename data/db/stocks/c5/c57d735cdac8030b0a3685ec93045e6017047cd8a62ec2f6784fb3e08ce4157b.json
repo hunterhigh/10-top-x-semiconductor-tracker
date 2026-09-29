@@ -1,6 +1,6 @@
 {
   "ticker": "CBOE",
-  "cashtag": "CBOE",
+  "cashtag": "$CBOE",
   "instrument": {
     "instrument_id": "US:CBOE",
     "display_code": "CBOE",
@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
-  "last_mention": "2026-08-15",
-  "total_mentions": 3,
+  "last_mention": "2026-09-29",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 2,
+    "StockMKTNewz": 3,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 2,
+    "news": 3,
     "flow": 1
   },
   "mentions": [
@@ -99,6 +99,32 @@
         "views": 10879,
         "likes": 16,
         "reposts": 3,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104920748095881443",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-09-29",
+      "created_at": "2026-09-29T09:06:28-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "extended exclusive licensing deal with S&P Dow Jones Indices through 2051",
+        "retains exclusive rights to offer S&P 500 Index (SPX) options"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CBOE",
+      "text": "$CBOE and S&amp;P Dow Jones Indices just extended their exclusive licensing deal through 2051, \n\nThis continues to give Cboe as the exclusive rights to offer S&amp;P 500 Index (SPX) options",
+      "url": "https://x.com/StockMKTNewz/status/2104920748095881443",
+      "kind": "post",
+      "engagement": {
+        "views": 28992,
+        "likes": 54,
+        "reposts": 4,
         "replies": 12
       },
       "extractor_model": "claude-sonnet-4-6",
@@ -337,17 +363,57 @@
     {
       "date": "2026-09-14",
       "close": 284.5
+    },
+    {
+      "date": "2026-09-15",
+      "close": 270.44
+    },
+    {
+      "date": "2026-09-16",
+      "close": 270.43
+    },
+    {
+      "date": "2026-09-17",
+      "close": 266.67
+    },
+    {
+      "date": "2026-09-18",
+      "close": 272.86
+    },
+    {
+      "date": "2026-09-21",
+      "close": 271.43
+    },
+    {
+      "date": "2026-09-22",
+      "close": 266.83
+    },
+    {
+      "date": "2026-09-23",
+      "close": 268.87
+    },
+    {
+      "date": "2026-09-24",
+      "close": 267.57
+    },
+    {
+      "date": "2026-09-25",
+      "close": 258.03
+    },
+    {
+      "date": "2026-09-28",
+      "close": 253.26
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-15T03:17:21.966334+00:00",
+  "price_updated_at": "2026-09-29T15:18:56.292363+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "CBOE",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-15T03:17:20.861283+00:00",
+    "checked_at": "2026-09-29T15:18:55.402959+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
