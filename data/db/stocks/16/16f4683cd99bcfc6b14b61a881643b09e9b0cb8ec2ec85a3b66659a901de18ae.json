@@ -25,18 +25,18 @@
   "thesis_summary": null,
   "first_mention": "2026-06-16",
   "last_mention": "2026-09-28",
-  "total_mentions": 31,
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 16,
     "balder": 9,
+    "ren_stocks": 3,
     "asklivermore": 3,
-    "ren_stocks": 2,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "flow": 1,
     "news": 16,
-    "opinion": 14
+    "opinion": 15
   },
   "mentions": [
     {
@@ -769,6 +769,31 @@
         "likes": 148,
         "reposts": 21,
         "replies": 28
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2104772909021753491",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-28",
+      "created_at": "2026-09-28T23:19:00-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "going all in at the open"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$MCD",
+      "text": "I need to go all in $MCD at the open.",
+      "url": "https://x.com/ren_stocks/status/2104772909021753491",
+      "kind": "post",
+      "engagement": {
+        "views": 8677,
+        "likes": 27,
+        "reposts": 0,
+        "replies": 5
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
