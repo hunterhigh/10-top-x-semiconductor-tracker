@@ -1,6 +1,6 @@
 {
   "ticker": "VST",
-  "cashtag": "$VST",
+  "cashtag": "VST",
   "instrument": {
     "instrument_id": "US:VST",
     "display_code": "VST",
@@ -24,16 +24,18 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-17",
-  "last_mention": "2026-09-04",
-  "total_mentions": 15,
+  "last_mention": "2026-09-30",
+  "total_mentions": 16,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 10,
     "StockMKTNewz": 3,
-    "michaelsikand": 2
+    "michaelsikand": 2,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 12,
-    "news": 3
+    "news": 3,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -394,6 +396,31 @@
         "likes": 147,
         "reposts": 2,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105300192522109416",
+      "blogger_id": "DJTRadar",
+      "date": "2026-09-30",
+      "created_at": "2026-09-30T10:14:15-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "both Donald Trump and Nancy Pelosi are buying it"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "VST",
+      "text": "There's a very specific reason Donald Trump AND Nancy Pelosi are both buying VST…\n\nand you’re about to find out. https://t.co/JSHzAOdK1q",
+      "url": "https://x.com/DJTRadar/status/2105300192522109416",
+      "kind": "post",
+      "engagement": {
+        "views": 42472,
+        "likes": 229,
+        "reposts": 18,
+        "replies": 13
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
