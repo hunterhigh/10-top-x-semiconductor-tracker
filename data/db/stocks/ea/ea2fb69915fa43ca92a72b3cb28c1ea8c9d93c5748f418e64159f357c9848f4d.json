@@ -24,13 +24,13 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-15",
-  "last_mention": "2026-09-26",
-  "total_mentions": 51,
+  "last_mention": "2026-09-29",
+  "total_mentions": 52,
   "total_mentions_by_blogger": {
     "balder": 12,
     "StockMKTNewz": 11,
     "octopusycc": 9,
-    "ren_stocks": 6,
+    "ren_stocks": 7,
     "michaelsikand": 5,
     "aleabitoreddit": 4,
     "asklivermore": 2,
@@ -38,7 +38,7 @@
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 40,
+    "opinion": 41,
     "news": 11
   },
   "mentions": [
@@ -1254,6 +1254,32 @@
         "likes": 20,
         "reposts": 0,
         "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105080061087170737",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-29",
+      "created_at": "2026-09-29T19:39:31-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "HDD lead times 3x normal",
+        "AI data storage demand driving deficit expected to last until at least 2027"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$WDC",
+      "text": "$INTC $ARM $AMD $MU $SNDK\n\nSo now that pretty much every bottleneck has been discovered, from GPUs, CPUs and DRAM to NAND, HDDs, ABF substrates and MLCCs, what really matters is which one is the tightest.\n\nTrendForce tracks seven parts of the AI server every week, and only one of them is balanced right now: the GPU. \n\nEverything that has to ship around it is tight or very tight, which means owning GPUs no longer guarantees you can build a server.\n\nHere's the list ranked by how stretched lead times are versus a balanced market, with the timeline and the names for each:\n\nABF substrates // 48 to 56 weeks vs 12, about 4x normal. Bigger AI chips need more substrate layers, and while the glass fiber cloth shortage should ease gradually in 2027, yields on high-layer substrates keep supply tight beyond that. Ibiden (4062.T), Unimicron (https://t.co/AANrerOpo9), Kinsus (https://t.co/mWwb5BhOMJ), Nan Ya PCB (https://t.co/BQ6F6jvv9R), AT&S (https://t.co/tvexo6DkwA), and Nittobo (3110.T) for the glass cloth.\n\nHDD // 50 weeks vs 16, about 3x. All that AI data has to live somewhere cheap, and vendors are adding capacity through HAMR, but the deficit is expected to last until at least 2027. $STX Seagate, $WDC Western Digital.\n\nMLCC // 32 weeks vs 12, about 2.7x. The Vera Rubin ramp pulls high-end capacitors, and new capacity once planned for 4Q26 has slipped into 2027. $MRAAY Murata, Samsung Electro-Mechanics (009150.KS), Taiyo Yuden (6976.T), Yageo (https://t.co/yXXDTFGgaV), $TTDKY TDK.\n\nDRAM // 20 weeks vs 8, about 2.5x. Talk of more price increases for 4Q26 into 1Q27 is building, especially for low-capacity modules. $MU Micron, $SKHY SK hynix, Samsung (005930.KS).\n\nNAND / enterprise SSD // 16 weeks vs 8, 2x. Suppliers are shifting capacity toward enterprise SSDs for US cloud providers, and it still isn't enough. $SNDK SanDisk, Kioxia (285A.T), plus Samsung, SK hynix and Micron.\n\nCPU // 25 to 30 weeks vs 16 to 20, about 1.5x, and new to the radar this week. Agentic AI is pulling server CPU demand while the big clouds speed up their own Arm-based chips. $AMD, $INTC, $ARM.\n\nGPU // balanced at 30 to 40 weeks. Blackwell ships on schedule through 2026, and Rubin volumes scale from 2027. So now that pretty much every bottleneck has been discovered, from GPUs to memory to CPUs, what really matters is which one is the tightest.\n\nThe alpha now comes from spotting which part tightens next, and from knowing when relief is coming.\n\nBullish ⚡️",
+      "url": "https://x.com/ren_stocks/status/2105080061087170737",
+      "kind": "post",
+      "engagement": {
+        "views": 2616,
+        "likes": 8,
+        "reposts": 2,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
