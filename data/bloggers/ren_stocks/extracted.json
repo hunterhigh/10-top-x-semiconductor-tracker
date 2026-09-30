@@ -37751,5 +37751,64 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-09-30T00:10:32.422609+00:00"
+  },
+  "2105128873121714549": {
+    "tweet_id": "2105128873121714549",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$NVDA",
+        "symbol": "NVDA",
+        "company_name": "Nvidia",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "GPUs proved they can serve the speed tier, weakening the case for wafer-scale chips or custom ASICs for fast inference",
+          "low batch size means more GPUs per token, so if speed tiers grow, so does the GPU bill",
+          "not leaving scraps for anyone"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "$CBRS",
+        "symbol": "CBRS",
+        "company_name": "Cerebras Systems",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "lost exclusivity on OpenAI's speed tier",
+          "if GPT-6 Astra Ultrafast runs on Nvidia, it's a real problem for CBRS",
+          "watching closely whether Cerebras retains the flagship speed tier"
+        ],
+        "is_risk": true,
+        "conviction_signal": "low"
+      }
+    ],
+    "confidence": 0.82,
+    "blogger_id": "ren_stocks",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-30T03:10:47.692346+00:00"
+  },
+  "2105128695753277751": {
+    "tweet_id": "2105128695753277751",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.95,
+    "blogger_id": "ren_stocks",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-30T03:10:47.692346+00:00"
+  },
+  "2105128778816999912": {
+    "tweet_id": "2105128778816999912",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.95,
+    "blogger_id": "ren_stocks",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-09-30T03:10:47.692346+00:00"
   }
 }

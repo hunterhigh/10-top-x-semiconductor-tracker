@@ -26,19 +26,19 @@
   "thesis_summary": null,
   "first_mention": "2026-04-16",
   "last_mention": "2026-09-29",
-  "total_mentions": 48,
+  "total_mentions": 49,
   "total_mentions_by_blogger": {
     "octopusycc": 12,
     "StockMKTNewz": 11,
     "aleabitoreddit": 10,
     "jukan05": 6,
-    "ren_stocks": 3,
+    "ren_stocks": 4,
     "balder": 3,
     "zephyr_z9": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 37,
+    "opinion": 38,
     "news": 11
   },
   "mentions": [
@@ -1203,6 +1203,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105128873121714549",
+      "blogger_id": "ren_stocks",
+      "date": "2026-09-29",
+      "created_at": "2026-09-29T22:53:29-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "lost exclusivity on OpenAI's speed tier",
+        "if GPT-6 Astra Ultrafast runs on Nvidia, it's a real problem for CBRS",
+        "watching closely whether Cerebras retains the flagship speed tier"
+      ],
+      "is_risk": true,
+      "conviction": "low",
+      "raw_mention": "$CBRS",
+      "text": "$NVDA $CBRS\n\nThe implications of this are REALLY interesting for fast inference.\n\nOpenAI's new GPT-6.1 Sol Ultrafast tier is reportedly running on Nvidia GPUs at low batch size, while the previous version ran on Cerebras at up to 750 tokens per second.\n\nFor Nvidia, the win is less about volume and more about the moat. \n\nUltrafast is a small premium tier for now, but GPUs just showed they can serve the speed tier too, which weakens the case that you need wafer-scale chips or custom ASICs for fast inference. And low batch means more GPUs for every token, so if speed tiers grow, so does the GPU bill.\n\nFor Cerebras, it's lost its exclusivity on OpenAI's speed tier, but not its speed lead. Nvidia runs the new model at about 300 tokens per second, while Cerebras ran the previous one at 750, and OpenAI still has up to 750 MW of Cerebras systems staged through 2028. \n\nI'm watching closely now which hardware powers Ultrafast for GPT-6 Astra, OpenAI's flagship. If it's Cerebras, this is a capacity story. If it's Nvidia, it's a real problem for CBRS. Nvidia really isn’t leaving scraps for anyone.",
+      "url": "https://x.com/ren_stocks/status/2105128873121714549",
+      "kind": "post",
+      "engagement": {
+        "views": 2697,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -1581,11 +1608,15 @@
     {
       "date": "2026-09-28",
       "close": 196.74
+    },
+    {
+      "date": "2026-09-29",
+      "close": 194.95
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-29T09:11:33.578730+00:00",
+  "price_updated_at": "2026-09-30T03:17:23.989455+00:00",
   "price_history_52w": {
     "requested_start": "2025-07-25",
     "asof": "2026-07-24",
@@ -1600,7 +1631,7 @@
     "provider_symbol": "CBRS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-29T09:11:32.536715+00:00",
+    "checked_at": "2026-09-30T03:17:23.601910+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
