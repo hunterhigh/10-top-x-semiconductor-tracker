@@ -1,6 +1,6 @@
 {
   "ticker": "KRE",
-  "cashtag": "KRE",
+  "cashtag": "kre",
   "instrument": {
     "instrument_id": "UNVERIFIED:KRE",
     "display_code": "KRE",
@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-30",
-  "last_mention": "2026-09-27",
-  "total_mentions": 2,
+  "last_mention": "2026-10-01",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1,
-    "frank_trading": 1
+    "frank_trading": 2,
+    "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -84,20 +84,45 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105736279925325850",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T15:07:06-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "attempting to buy the dip after being flat/empty for about a week"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "kre",
+      "text": "空仓了差不多一个礼拜\n今天尝试抄底了iwm，kre",
+      "url": "https://x.com/Franktradinglog/status/2105736279925325850",
+      "kind": "post",
+      "engagement": {
+        "views": 4612,
+        "likes": 17,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-10-01T00:20:51.669853+00:00",
+  "price_updated_at": "2026-10-01T21:19:27.332616+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-10-01T00:20:51.669840+00:00",
-    "attempts": 4,
+    "checked_at": "2026-10-01T21:19:27.332602+00:00",
+    "attempts": 5,
     "next_retry_at": null,
     "http_status": null
   }
