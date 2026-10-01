@@ -1,6 +1,6 @@
 {
   "ticker": "SPX",
-  "cashtag": "标普 500",
+  "cashtag": "S&P",
   "instrument": {
     "instrument_id": "UNVERIFIED:SPX",
     "display_code": "SPX",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-10-01",
   "last_mention": "2026-10-01",
-  "total_mentions": 131,
+  "total_mentions": 132,
   "total_mentions_by_blogger": {
     "balder": 45,
     "StockMKTNewz": 29,
@@ -35,10 +35,11 @@
     "michaelsikand": 4,
     "frank_trading": 4,
     "aleabitoreddit": 2,
-    "ren_stocks": 1
+    "ren_stocks": 1,
+    "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 74,
+    "opinion": 75,
     "news": 29,
     "flow": 28
   },
@@ -3206,6 +3207,34 @@
         "likes": 3,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105711210213912755",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T13:27:29-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "high yields and big rallies have coexisted before",
+        "historical precedent: 1985 ~10.6% 10-year yet S&P returned ~32%",
+        "historical precedent: 1989 ~8.5% 10-year yet S&P returned ~32%",
+        "historical precedent: 1995 after Fed hiked 300 bps S&P returned ~37%"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "S&P",
+      "text": "\"Rates are too high for stocks.\"\n\n1985: 10-year averaged ~10.6%. S&amp;P returned ~32%.\n1989: 10-year ~8.5%. S&amp;P ~32%.\n1995: right after the Fed hiked 300 bps. S&amp;P ~37%.\n\nHigh yields and big rallies have coexisted before.\n\nZOOM OUT https://t.co/zBnAx4pg4H",
+      "url": "https://x.com/KawzInvests/status/2105711210213912755",
+      "kind": "post",
+      "engagement": {
+        "views": 8026,
+        "likes": 32,
+        "reposts": 1,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
