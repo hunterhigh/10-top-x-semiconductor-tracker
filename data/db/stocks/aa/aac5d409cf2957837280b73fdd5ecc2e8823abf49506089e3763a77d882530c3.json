@@ -1,6 +1,6 @@
 {
   "ticker": "SNPS",
-  "cashtag": "Synopsys",
+  "cashtag": "$SNPS",
   "instrument": {
     "instrument_id": "US:SNPS",
     "display_code": "SNPS",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-30",
-  "last_mention": "2026-08-29",
-  "total_mentions": 8,
+  "last_mention": "2026-10-01",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 3,
     "aleabitoreddit": 2,
-    "KawzInvests": 1,
+    "KawzInvests": 2,
     "balder": 1,
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 5,
+    "opinion": 6,
     "news": 3
   },
   "mentions": [
@@ -218,6 +218,31 @@
         "likes": 5,
         "reposts": 0,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105655693969670599",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T09:46:53-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "contrary to bearish narrative, stock up significantly"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SNPS",
+      "text": "but i ThouUght EDA wAs COoKED???\n\n$SNPS +10%\n\n$CDNS +5%",
+      "url": "https://x.com/KawzInvests/status/2105655693969670599",
+      "kind": "post",
+      "engagement": {
+        "views": 7653,
+        "likes": 16,
+        "reposts": 0,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -727,17 +752,25 @@
     {
       "date": "2026-09-28",
       "close": 417.61
+    },
+    {
+      "date": "2026-09-29",
+      "close": 415.09
+    },
+    {
+      "date": "2026-09-30",
+      "close": 434.94
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-29T03:17:22.917406+00:00",
+  "price_updated_at": "2026-10-01T15:20:26.904113+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "SNPS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-29T03:17:21.328541+00:00",
+    "checked_at": "2026-10-01T15:20:26.462799+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

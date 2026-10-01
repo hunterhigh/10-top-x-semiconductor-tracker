@@ -1,6 +1,6 @@
 {
   "ticker": "SCHW",
-  "cashtag": "$SCHW",
+  "cashtag": "$SCWH",
   "instrument": {
     "instrument_id": "US:SCHW",
     "display_code": "SCHW",
@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-05-08",
-  "last_mention": "2026-08-24",
-  "total_mentions": 10,
+  "last_mention": "2026-10-01",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 9,
+    "StockMKTNewz": 10,
     "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 1,
-    "news": 9
+    "news": 10
   },
   "mentions": [
     {
@@ -261,6 +261,29 @@
         "likes": 77,
         "reposts": 10,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105653292365947004",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T09:37:20-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SCWH",
+      "text": "CHARLES SCHWAB $SCWH TO BEGIN DUAL LISTING ON TEXAS STOCK EXCHANGE - Bloomberg https://t.co/R64xlo203v",
+      "url": "https://x.com/StockMKTNewz/status/2105653292365947004",
+      "kind": "post",
+      "engagement": {
+        "views": 20041,
+        "likes": 70,
+        "reposts": 4,
+        "replies": 23
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -646,17 +669,37 @@
     {
       "date": "2026-09-23",
       "close": 99.5
+    },
+    {
+      "date": "2026-09-24",
+      "close": 99.49
+    },
+    {
+      "date": "2026-09-25",
+      "close": 99.03
+    },
+    {
+      "date": "2026-09-28",
+      "close": 98.3
+    },
+    {
+      "date": "2026-09-29",
+      "close": 99.1
+    },
+    {
+      "date": "2026-09-30",
+      "close": 97.74
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-24T06:17:34.749527+00:00",
+  "price_updated_at": "2026-10-01T15:20:24.837408+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "SCHW",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-24T06:17:32.990092+00:00",
+    "checked_at": "2026-10-01T15:20:23.875072+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
