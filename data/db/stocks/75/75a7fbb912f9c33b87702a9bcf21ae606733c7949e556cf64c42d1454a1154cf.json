@@ -1,6 +1,6 @@
 {
   "ticker": "CBRS",
-  "cashtag": "$CBRS",
+  "cashtag": "Cerebras",
   "instrument": {
     "instrument_id": "US:CBRS",
     "display_code": "CBRS",
@@ -26,19 +26,19 @@
   "thesis_summary": null,
   "first_mention": "2026-04-16",
   "last_mention": "2026-10-01",
-  "total_mentions": 53,
+  "total_mentions": 56,
   "total_mentions_by_blogger": {
     "octopusycc": 12,
     "aleabitoreddit": 11,
     "StockMKTNewz": 11,
-    "ren_stocks": 7,
+    "ren_stocks": 10,
     "jukan05": 6,
     "balder": 3,
     "zephyr_z9": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 42,
+    "opinion": 45,
     "news": 11
   },
   "mentions": [
@@ -1323,6 +1323,85 @@
         "likes": 11,
         "reposts": 1,
         "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105848503952117973",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T22:33:02-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Nvidia taking share from Cerebras in inference"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$CBRS",
+      "text": "Oh boy…\n\n$NVDA is eating $CBRS's lunch, and then some.",
+      "url": "https://x.com/ren_stocks/status/2105848503952117973",
+      "kind": "post",
+      "engagement": {
+        "views": 4418,
+        "likes": 20,
+        "reposts": 1,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105850817630920866",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T22:42:14-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "was alone in the inference market just a week ago, now faces competition"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$CBRS",
+      "text": "@norriswalker I know, I know but I mean $CBRS was alone in this market just a week ago...",
+      "url": "https://x.com/ren_stocks/status/2105850817630920866",
+      "kind": "reply",
+      "engagement": {
+        "views": 178,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105854916971405529",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T22:58:31-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "OpenAI showed it can ship flagship speed tier on GPUs at a price customers will pay",
+        "removes exclusivity Cerebras was priced on",
+        "OpenAI now has a second source",
+        "Cerebras moat deteriorated with this release",
+        "must be fastest by a margin worth paying a big premium for to justify valuation"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "Cerebras",
+      "text": "I clearly hit a nerver here...\n\nHere is a longer take: \n\nCerebras is still the faster inference, don't get me wrong, and capacity was probably part of why OpenAI went with Nvidia.\n\nI love their technology and I've been invested in their trajectory.\n\nBut sold out or not OpenAI just showed it can ship its flagship speed tier on GPUs at a speed customers will pay for, and that removes a bit of the exclusivity Cerebras was priced on. \n\nThey now have a second source they didn't have before.\n\nCerebras moat deteriorated with this release.\n\nWill they endure? I think so, and I'll invest in this company again, but from here they have to be the fastest by a margin worth paying a big premium for.\n\nThis is bullish news for inference.",
+      "url": "https://x.com/ren_stocks/status/2105854916971405529",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 444,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

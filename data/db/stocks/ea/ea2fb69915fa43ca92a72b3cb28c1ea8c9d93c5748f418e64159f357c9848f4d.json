@@ -24,8 +24,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-15",
-  "last_mention": "2026-09-29",
-  "total_mentions": 52,
+  "last_mention": "2026-10-01",
+  "total_mentions": 53,
   "total_mentions_by_blogger": {
     "balder": 12,
     "StockMKTNewz": 11,
@@ -33,12 +33,12 @@
     "ren_stocks": 7,
     "michaelsikand": 5,
     "aleabitoreddit": 4,
-    "asklivermore": 2,
+    "asklivermore": 3,
     "zephyr_z9": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 41,
+    "opinion": 42,
     "news": 11
   },
   "mentions": [
@@ -1283,6 +1283,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2105830573545779613",
+      "blogger_id": "asklivermore",
+      "date": "2026-10-01",
+      "created_at": "2026-10-01T21:21:47-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "potential breakout candidate",
+        "holding low",
+        "already up on position and continuing to hold"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$WDC",
+      "text": "$MU, $STX, $WDC, and $SNDK \n\nSetting up as potential breakout candidates in the future if they can continue to hold its low. \n\nDisclaimer: we're up on our positions already, and will continue to hold unless proven otherwise. https://t.co/InNvu6PlSa",
+      "url": "https://x.com/asklivermore/status/2105830573545779613",
+      "kind": "post",
+      "engagement": {
+        "views": 18852,
+        "likes": 137,
+        "reposts": 9,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2489,18 +2516,22 @@
     {
       "date": "2026-09-30",
       "close": 454.46
+    },
+    {
+      "date": "2026-10-01",
+      "close": 462.56
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-01T18:19:26.811807+00:00",
+  "price_updated_at": "2026-10-02T03:18:08.056777+00:00",
   "price_history_52w": {
-    "requested_start": "2025-08-13",
-    "asof": "2026-08-12",
-    "attempted_at": "2026-08-13T03:19:09.440859+00:00",
+    "requested_start": "2025-10-02",
+    "asof": "2026-10-01",
+    "attempted_at": "2026-10-02T03:18:07.592667+00:00",
     "status": "ok",
-    "first_available_date": "2025-08-13",
-    "last_available_date": "2026-08-12",
+    "first_available_date": "2025-10-02",
+    "last_available_date": "2026-10-01",
     "reason": null
   },
   "price_source_state": {
@@ -2508,7 +2539,7 @@
     "provider_symbol": "WDC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-01T18:19:26.093192+00:00",
+    "checked_at": "2026-10-02T03:18:07.592667+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
