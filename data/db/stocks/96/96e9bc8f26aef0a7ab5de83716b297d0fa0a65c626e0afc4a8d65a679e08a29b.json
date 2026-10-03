@@ -1,6 +1,6 @@
 {
   "ticker": "GOOG",
-  "cashtag": "GOOG",
+  "cashtag": "$GOOG",
   "instrument": {
     "instrument_id": "US:GOOG",
     "display_code": "GOOG",
@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-10",
-  "last_mention": "2026-09-30",
-  "total_mentions": 63,
+  "last_mention": "2026-10-02",
+  "total_mentions": 64,
   "total_mentions_by_blogger": {
     "octopusycc": 16,
     "balder": 16,
-    "michaelsikand": 11,
+    "michaelsikand": 12,
     "KawzInvests": 10,
     "StockMKTNewz": 4,
     "aleabitoreddit": 2,
@@ -38,7 +38,7 @@
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 58,
+    "opinion": 59,
     "news": 4,
     "flow": 1
   },
@@ -1571,6 +1571,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2106133816935088623",
+      "blogger_id": "michaelsikand",
+      "date": "2026-10-02",
+      "created_at": "2026-10-02T17:26:46-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "already has all user passwords removing sign-in friction for agents",
+        "sign-in friction is holding agents back from seamless usefulness",
+        "password/auth moat will be a real competitive advantage for agentic products"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$GOOG",
+      "text": "I can't stop thinking about how good $GOOG's agentic product could be. Mainly on one vector. It already has all your passwords. Sign in friction is holding agents back from real seamless usefulness and will be the real moat.",
+      "url": "https://x.com/michaelsikand/status/2106133816935088623",
+      "kind": "post",
+      "engagement": {
+        "views": 13519,
+        "likes": 117,
+        "reposts": 5,
+        "replies": 22
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2773,18 +2800,22 @@
     {
       "date": "2026-10-01",
       "close": 334.93
+    },
+    {
+      "date": "2026-10-02",
+      "close": 340.35
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-02T21:17:49.680733+00:00",
+  "price_updated_at": "2026-10-03T00:17:20.337995+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-03",
     "asof": "2026-10-02",
-    "attempted_at": "2026-10-02T21:17:48.974222+00:00",
+    "attempted_at": "2026-10-03T00:17:19.482894+00:00",
     "status": "ok",
     "first_available_date": "2025-10-03",
-    "last_available_date": "2026-10-01",
+    "last_available_date": "2026-10-02",
     "reason": null
   },
   "price_source_state": {
@@ -2792,7 +2823,7 @@
     "provider_symbol": "GOOG",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-02T21:17:48.974222+00:00",
+    "checked_at": "2026-10-03T00:17:19.482894+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
