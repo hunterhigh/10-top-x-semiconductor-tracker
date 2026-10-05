@@ -1,6 +1,6 @@
 {
   "ticker": "SPX",
-  "cashtag": "S&P 500",
+  "cashtag": "标普500",
   "instrument": {
     "instrument_id": "UNVERIFIED:SPX",
     "display_code": "SPX",
@@ -24,10 +24,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-01",
-  "last_mention": "2026-10-03",
-  "total_mentions": 136,
+  "last_mention": "2026-10-05",
+  "total_mentions": 137,
   "total_mentions_by_blogger": {
-    "balder": 46,
+    "balder": 47,
     "StockMKTNewz": 31,
     "unusual_whales": 28,
     "octopusycc": 14,
@@ -39,7 +39,7 @@
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 77,
+    "opinion": 78,
     "news": 31,
     "flow": 28
   },
@@ -3330,20 +3330,48 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2107108837836959942",
+      "blogger_id": "balder",
+      "date": "2026-10-05",
+      "created_at": "2026-10-05T10:01:09-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "downside dispersion is constrained while upside recovery probability is far above normal",
+        "probability of recovering recent highs within 20-day window is 87%, 31 percentage points above unconditional baseline",
+        "probability of further -5% and -10% drops are below baseline at 12% and 3%",
+        "no trending momentum in either direction; core dynamic is mean-reversion of existing decline"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "标普500",
+      "text": "盘面向下发散的空间受阻，而向上修复的概率远高于常态。在20天的时间窗口内，摸回高点的概率达到87%，较无条件基准高出31个百分点。\n\n标普500现价7,734，距离近期高点7,799偏离-0.84%。\n\n另外三个方向的预期呈现同步收缩。再跌5%和跌10%的概率分别为12%与3%，较平常低8和3个百分点；同时涨2%的概率为53%，比65%的基准低12个百分点。下行概率与上涨概率同时受到抑制，表明当前不具备趋势性发散的动能，核心运动特征是对既有跌幅的填补。\n\n今日预计运行区间界定在7,707到7,761，上下波动0.7%。\n\n破坏这一修复结构的先决条件是现价实质性脱离今日区间。跌破区间下沿将使原有的高点收敛逻辑失效。\n\nhttps://t.co/pKOt6FXWB0",
+      "url": "https://x.com/Balder13946731/status/2107108837836959942",
+      "kind": "post",
+      "engagement": {
+        "views": 2989,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-10-04T18:17:26.468619+00:00",
+  "price_updated_at": "2026-10-05T15:20:46.045921+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-10-04T18:17:26.468605+00:00",
-    "attempts": 60,
+    "checked_at": "2026-10-05T15:20:46.045910+00:00",
+    "attempts": 61,
     "next_retry_at": null,
     "http_status": null
   }
