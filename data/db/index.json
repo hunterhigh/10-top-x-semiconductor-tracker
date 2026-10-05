@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-04T21:16:28.470211+00:00",
+  "generated_at": "2026-10-05T00:16:45.734710+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2445,
-    "total_mentions": 31074,
+    "total_mentions": 31079,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-04T21:17:41.695158+00:00"
+    "prices_updated_at": "2026-10-05T00:18:25.910350+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -162,7 +162,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -489,8 +489,7 @@
       "price_status": "ok",
       "instrument_id": "US:IREN",
       "hash": "8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb",
-      "path": "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -731,7 +730,8 @@
       "price_status": "ok",
       "instrument_id": "US:TSM",
       "hash": "ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae",
-      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json"
+      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
+      "price_history_52w_status": "ok"
     },
     "US:SPCX": {
       "ticker": "SPCX",
@@ -1057,7 +1057,7 @@
         "unusual_whales": 9,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -1967,7 +1967,8 @@
       "price_status": "ok",
       "instrument_id": "US:PLTR",
       "hash": "3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a",
-      "path": "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json"
+      "path": "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRDO": {
       "ticker": "CRDO",
@@ -2274,7 +2275,7 @@
         "price_symbol": "QQQ",
         "verification_status": "verified"
       },
-      "cashtag": "$QQQ",
+      "cashtag": "QQQ",
       "price_symbol": "QQQ",
       "exchange": "US",
       "currency": "USD",
@@ -2283,11 +2284,11 @@
       "company": "INVESCO QQQ TRUST, SERIES 1",
       "industry": null,
       "first_mention": "2025-11-23",
-      "last_mention": "2026-10-02",
-      "total_mentions": 99,
+      "last_mention": "2026-10-04",
+      "total_mentions": 100,
       "blogger_count": 8,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 28,
+        "StockMKTNewz": 29,
         "balder": 27,
         "ren_stocks": 13,
         "asklivermore": 12,
@@ -2476,7 +2477,46 @@
       "price_status": "ok",
       "instrument_id": "US:NOK",
       "hash": "5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c",
-      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
+      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json"
+    },
+    "US:SONY": {
+      "ticker": "SONY",
+      "instrument": {
+        "instrument_id": "US:SONY",
+        "display_code": "SONY",
+        "display_name": "Sony Group Corp",
+        "display_market": "NYSE",
+        "aliases": [
+          "SONY"
+        ],
+        "market": "NYSE",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SONY",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SONY",
+      "price_symbol": "SONY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Sony Group Corp",
+      "industry": null,
+      "first_mention": "2026-03-22",
+      "last_mention": "2026-10-04",
+      "total_mentions": 83,
+      "blogger_count": 4,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 76,
+        "StockMKTNewz": 5,
+        "aleabitoreddit": 1,
+        "unusual_whales": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SONY",
+      "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
       "price_history_52w_status": "ok"
     },
     "US:DELL": {
@@ -2521,45 +2561,6 @@
       "instrument_id": "US:DELL",
       "hash": "a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b",
       "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json"
-    },
-    "US:SONY": {
-      "ticker": "SONY",
-      "instrument": {
-        "instrument_id": "US:SONY",
-        "display_code": "SONY",
-        "display_name": "Sony Group Corp",
-        "display_market": "NYSE",
-        "aliases": [
-          "SONY"
-        ],
-        "market": "NYSE",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SONY",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SONY",
-      "price_symbol": "SONY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Sony Group Corp",
-      "industry": null,
-      "first_mention": "2026-03-22",
-      "last_mention": "2026-10-01",
-      "total_mentions": 82,
-      "blogger_count": 4,
-      "total_mentions_by_blogger": {
-        "michaelsikand": 75,
-        "StockMKTNewz": 5,
-        "aleabitoreddit": 1,
-        "unusual_whales": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SONY",
-      "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
     },
     "US:UBER": {
       "ticker": "UBER",
@@ -3627,7 +3628,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "Euronext Paris:XFAB": {
       "ticker": "XFAB",
@@ -4696,8 +4698,7 @@
       "price_status": "ok",
       "instrument_id": "US:OKLO",
       "hash": "366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8",
-      "path": "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/36/366c17da50ce4e8c3616c1bdd9acbc453a1e3f9c08436d2d25eb923a32afd8a8.json"
     },
     "US:RGTI": {
       "ticker": "RGTI",
@@ -4865,7 +4866,8 @@
       "price_status": "ok",
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
-      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
+      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
+      "price_history_52w_status": "ok"
     },
     "US:MP": {
       "ticker": "MP",
@@ -4907,7 +4909,8 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
+      "price_history_52w_status": "ok"
     },
     "US:AEVA": {
       "ticker": "AEVA",
@@ -5763,8 +5766,7 @@
       "price_status": "ok",
       "instrument_id": "US:PANW",
       "hash": "259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7",
-      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json"
     },
     "US:SMTC": {
       "ticker": "SMTC",
@@ -8364,6 +8366,47 @@
       "hash": "fc80dd898554335f6ff218dcd6305f64e27566bc0d51d928b753516f8471c174",
       "path": "stocks/fc/fc80dd898554335f6ff218dcd6305f64e27566bc0d51d928b753516f8471c174.json"
     },
+    "US:TTWO": {
+      "ticker": "TTWO",
+      "instrument": {
+        "instrument_id": "US:TTWO",
+        "display_code": "TTWO",
+        "display_name": "TAKE TWO INTERACTIVE SOFTWARE INC",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "TTWO"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "TTWO",
+        "verification_status": "verified"
+      },
+      "cashtag": "$TTWO",
+      "price_symbol": "TTWO",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "TAKE TWO INTERACTIVE SOFTWARE INC",
+      "industry": null,
+      "first_mention": "2026-06-18",
+      "last_mention": "2026-10-04",
+      "total_mentions": 20,
+      "blogger_count": 6,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 11,
+        "StockMKTNewz": 4,
+        "octopusycc": 2,
+        "unusual_whales": 1,
+        "ren_stocks": 1,
+        "KawzInvests": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:TTWO",
+      "hash": "3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57",
+      "path": "stocks/3e/3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57.json"
+    },
     "UNVERIFIED:3105": {
       "ticker": "3105",
       "instrument": {
@@ -8665,7 +8708,8 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
+      "price_history_52w_status": "ok"
     },
     "US:PL": {
       "ticker": "PL",
@@ -8705,46 +8749,46 @@
       "hash": "009bcd6dc868ecc747546ad02983c34fe69960db738014e89eecc4cc3e4639be",
       "path": "stocks/00/009bcd6dc868ecc747546ad02983c34fe69960db738014e89eecc4cc3e4639be.json"
     },
-    "US:TTWO": {
-      "ticker": "TTWO",
+    "UNVERIFIED:VIX": {
+      "ticker": "VIX",
       "instrument": {
-        "instrument_id": "US:TTWO",
-        "display_code": "TTWO",
-        "display_name": "TAKE TWO INTERACTIVE SOFTWARE INC",
-        "display_market": "NASDAQ",
+        "instrument_id": "UNVERIFIED:VIX",
+        "display_code": "VIX",
+        "display_name": "Cboe Volatility Index",
+        "display_market": "Market unverified",
         "aliases": [
-          "TTWO"
+          "VIX"
         ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "TTWO",
-        "verification_status": "verified"
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
       },
-      "cashtag": "GTA 6",
-      "price_symbol": "TTWO",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "TAKE TWO INTERACTIVE SOFTWARE INC",
+      "cashtag": "VIX",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Cboe Volatility Index",
       "industry": null,
-      "first_mention": "2026-06-18",
-      "last_mention": "2026-09-07",
-      "total_mentions": 19,
+      "first_mention": "2025-09-14",
+      "last_mention": "2026-10-04",
+      "total_mentions": 18,
       "blogger_count": 6,
       "total_mentions_by_blogger": {
-        "michaelsikand": 10,
-        "StockMKTNewz": 4,
+        "balder": 8,
+        "aleabitoreddit": 4,
         "octopusycc": 2,
-        "unusual_whales": 1,
-        "ren_stocks": 1,
-        "KawzInvests": 1
+        "frank_trading": 2,
+        "asklivermore": 1,
+        "StockMKTNewz": 1
       },
-      "price_status": "ok",
-      "instrument_id": "US:TTWO",
-      "hash": "3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57",
-      "path": "stocks/3e/3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57.json"
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:VIX",
+      "hash": "bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f",
+      "path": "stocks/bd/bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f.json"
     },
     "US:GE": {
       "ticker": "GE",
@@ -8903,47 +8947,6 @@
       "instrument_id": "UNVERIFIED:FIG",
       "hash": "bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927",
       "path": "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json"
-    },
-    "UNVERIFIED:VIX": {
-      "ticker": "VIX",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:VIX",
-        "display_code": "VIX",
-        "display_name": "Cboe Volatility Index",
-        "display_market": "Market unverified",
-        "aliases": [
-          "VIX"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$VIX",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Cboe Volatility Index",
-      "industry": null,
-      "first_mention": "2025-09-14",
-      "last_mention": "2026-10-01",
-      "total_mentions": 17,
-      "blogger_count": 6,
-      "total_mentions_by_blogger": {
-        "balder": 7,
-        "aleabitoreddit": 4,
-        "octopusycc": 2,
-        "frank_trading": 2,
-        "asklivermore": 1,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:VIX",
-      "hash": "bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f",
-      "path": "stocks/bd/bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f.json"
     },
     "US:ALMU": {
       "ticker": "ALMU",
@@ -9363,8 +9366,7 @@
       "price_status": "ok",
       "instrument_id": "US:DAL",
       "hash": "65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9",
-      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json"
     },
     "US:ETN": {
       "ticker": "ETN",
@@ -9554,7 +9556,8 @@
       "price_status": "ok",
       "instrument_id": "US:OUST",
       "hash": "8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093",
-      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json"
+      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
+      "price_history_52w_status": "ok"
     },
     "US:SHOP": {
       "ticker": "SHOP",
@@ -11879,8 +11882,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "UNVERIFIED:DOWA": {
       "ticker": "DOWA",
@@ -36458,6 +36460,42 @@
       "hash": "f028c713820e6b9b61e1533c714f9283242709ef9b70cc92b60c75926d80f84e",
       "path": "stocks/f0/f028c713820e6b9b61e1533c714f9283242709ef9b70cc92b60c75926d80f84e.json"
     },
+    "UNVERIFIED:VGT": {
+      "ticker": "VGT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:VGT",
+        "display_code": "VGT",
+        "display_name": "Vanguard Information Technology ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "VGT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$VGT",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Vanguard Information Technology ETF",
+      "industry": null,
+      "first_mention": "2026-09-13",
+      "last_mention": "2026-10-04",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 3
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:VGT",
+      "hash": "d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9",
+      "path": "stocks/d8/d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9.json"
+    },
     "UNVERIFIED:VSCEL": {
       "ticker": "VSCEL",
       "instrument": {
@@ -46768,42 +46806,6 @@
       "instrument_id": "UNVERIFIED:VDE",
       "hash": "082756371fa5b40530ffe1b6d4e7de28bd61ae1f67e8a16b81930688c9c9ec78",
       "path": "stocks/08/082756371fa5b40530ffe1b6d4e7de28bd61ae1f67e8a16b81930688c9c9ec78.json"
-    },
-    "UNVERIFIED:VGT": {
-      "ticker": "VGT",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:VGT",
-        "display_code": "VGT",
-        "display_name": "Vanguard Information Technology ETF",
-        "display_market": "Market unverified",
-        "aliases": [
-          "VGT"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "$VGT",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Vanguard Information Technology ETF",
-      "industry": null,
-      "first_mention": "2026-09-13",
-      "last_mention": "2026-09-27",
-      "total_mentions": 2,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 2
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:VGT",
-      "hash": "d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9",
-      "path": "stocks/d8/d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9.json"
     },
     "UNVERIFIED:VIG": {
       "ticker": "VIG",
@@ -103091,9 +103093,6 @@
     "GSM": [
       "US:GSM"
     ],
-    "GTA 6": [
-      "US:TTWO"
-    ],
     "GTES": [
       "US:GTES"
     ],
@@ -119489,8 +119488,8 @@
     "stocks/45/454b85ce97fee5aa52bf618ec91544d8dae0a60285c1c487a87ccec4d27d830c.json",
     "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
     "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
-    "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
     "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+    "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
     "stocks/8e/8ed487ccc8589966cab3815f282ae828b475c813c014e5359b0af9371c8b4b48.json",
     "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
     "stocks/4c/4c67ef37c4c0382001b47bf1a426aafb23df698b8811a38902b7146790f4dad6.json",
@@ -119637,6 +119636,7 @@
     "stocks/18/18850cdcf0919ec7a7ac62aefc898c8fd2c5c531ac35b5123ce5a61bec556dbc.json",
     "stocks/d1/d107222657b8e1f8a1e2c03e303ef909dc0e75edf68d9b6adab6f088ae8484e8.json",
     "stocks/fc/fc80dd898554335f6ff218dcd6305f64e27566bc0d51d928b753516f8471c174.json",
+    "stocks/3e/3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57.json",
     "stocks/94/94f4fc3f8e0468e2e451d9c92034fa8b3fa5b4e06ceb630cf4d58ffa9cf541a4.json",
     "stocks/93/93233d2d36ad8e2a9c9d13f4adef20cb01359ae383d141b0b4e0b89d8b669c5f.json",
     "stocks/53/5395a5d4838d42d3ac9000cdb228dd1876f54e22642439e20f82a32a10cb29b4.json",
@@ -119646,12 +119646,11 @@
     "stocks/5f/5fb85d0dc750c3355fa950fc669a20cae2785283d35affb73aa52ae946167f1f.json",
     "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
     "stocks/00/009bcd6dc868ecc747546ad02983c34fe69960db738014e89eecc4cc3e4639be.json",
-    "stocks/3e/3e365255dafcd001ba25dc87b4770659d6b1a83ece8183d8cacad576510f3b57.json",
+    "stocks/bd/bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f.json",
     "stocks/40/40aa8af4b789bfe5ba8f04ea4586a0fad64733a2a1a0e23320542cedc7938c21.json",
     "stocks/36/36d4a95ca86db7a5853632ae4e2f28cf47a0c385b2740e470507edc8953ad628.json",
     "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
     "stocks/bb/bb9802b1e9ebf3ceaf813fb3ac145ec23546c13bad58e7238cf2f7b704640927.json",
-    "stocks/bd/bd70b251a798217bbac265a672781706e54dab72f6263c236fb4b64468e0ee5f.json",
     "stocks/a7/a7b7c7c6514b0197564b45c69665a340a2fac26ccac231c973b20f6cc1970e7f.json",
     "stocks/b4/b4b56d16666d465963ac08d36e0b5540be65b78fc290e024313b52cdf87be230.json",
     "stocks/4b/4bf9fbdbf7be8d3d154cd4351564aa3db51e425cdc9f55943da9aeb5c4296371.json",
@@ -120396,6 +120395,7 @@
     "stocks/21/21643f0f11a9b7e4ae544704f0d5382f3b53be1ef2c19aa39047849847a178e0.json",
     "stocks/5e/5ed44182707e8e925ab613bf83323827d37efcdfc0c556f3ab07412f7c576122.json",
     "stocks/f0/f028c713820e6b9b61e1533c714f9283242709ef9b70cc92b60c75926d80f84e.json",
+    "stocks/d8/d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9.json",
     "stocks/a0/a0ab869c265d878270d19050ede6e7922dcc40fa2a6206eeaf42f4849deb7602.json",
     "stocks/58/582b3198e1caec266a213d8d197970be2f02be539cd8a5a0f4650d91d0329243.json",
     "stocks/9a/9a502b94846d4823eaa3500b722305e6094141de313507f42b1bef820addbeeb.json",
@@ -120680,7 +120680,6 @@
     "stocks/ba/bad9ae277c7100effa49528c4d8ca17139e4eede662f648479c0f6fea015d1ec.json",
     "stocks/01/018e0f7b22bef0111aa427c6f769fc77e687d4b6f67f02d6cc7f9761eaa25dfd.json",
     "stocks/08/082756371fa5b40530ffe1b6d4e7de28bd61ae1f67e8a16b81930688c9c9ec78.json",
-    "stocks/d8/d82ac093e0e53db5d732b599f0f18e53e86b45dc992f79effcaabdf844f1b4f9.json",
     "stocks/37/37ce450ce1183a56669dda6ec8725bbf9ec6f758393a1967010b8bf1c97ae8a8.json",
     "stocks/0c/0c7ac0b4ee7e1ba86db1b710082600b6687abfe017f886b0195d3598b3b5138b.json",
     "stocks/8f/8f09c401339138b3fbfb3d9df1fccec3ee0ebade60352cce5b199542c0319640.json",
