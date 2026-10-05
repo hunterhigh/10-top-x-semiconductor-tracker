@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-05T00:16:45.734710+00:00",
+  "generated_at": "2026-10-05T03:16:17.368615+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2445,
-    "total_mentions": 31079,
+    "total_mentions": 31083,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-05T00:18:25.910350+00:00"
+    "prices_updated_at": "2026-10-05T03:17:44.338438+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -162,7 +162,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -730,8 +730,7 @@
       "price_status": "ok",
       "instrument_id": "US:TSM",
       "hash": "ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae",
-      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json"
     },
     "US:SPCX": {
       "ticker": "SPCX",
@@ -751,7 +750,7 @@
         "price_symbol": "SPCX",
         "verification_status": "verified"
       },
-      "cashtag": "$SPCX",
+      "cashtag": "SPCX",
       "price_symbol": "SPCX",
       "exchange": "US",
       "currency": "USD",
@@ -760,8 +759,8 @@
       "company": "Space Exploration Technologies Corp",
       "industry": null,
       "first_mention": "2025-12-02",
-      "last_mention": "2026-10-02",
-      "total_mentions": 415,
+      "last_mention": "2026-10-04",
+      "total_mentions": 418,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 198,
@@ -770,7 +769,7 @@
         "octopusycc": 21,
         "balder": 19,
         "michaelsikand": 15,
-        "jukan05": 9,
+        "jukan05": 12,
         "ren_stocks": 8,
         "asklivermore": 6,
         "KawzInvests": 5,
@@ -1057,7 +1056,7 @@
         "unusual_whales": 9,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -1331,7 +1330,8 @@
       "price_status": "ok",
       "instrument_id": "US:RKLB",
       "hash": "e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0",
-      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json"
+      "path": "stocks/e4/e4f1303b8737d62c75e4defb1e88ad760853d8733343d6f133371d33530046c0.json",
+      "price_history_52w_status": "ok"
     },
     "US:ORCL": {
       "ticker": "ORCL",
@@ -1499,7 +1499,8 @@
       "price_status": "ok",
       "instrument_id": "US:POET",
       "hash": "cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753",
-      "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json"
+      "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
+      "price_history_52w_status": "ok"
     },
     "US:JBL": {
       "ticker": "JBL",
@@ -1580,7 +1581,8 @@
       "price_status": "ok",
       "instrument_id": "US:RDDT",
       "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json"
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
+      "price_history_52w_status": "ok"
     },
     "US:AEHR": {
       "ticker": "AEHR",
@@ -1967,8 +1969,7 @@
       "price_status": "ok",
       "instrument_id": "US:PLTR",
       "hash": "3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a",
-      "path": "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/3e/3ed3f358610143fbd1af235ab132822e4673c19c0ea4cb56d4012a893bd1ef5a.json"
     },
     "US:CRDO": {
       "ticker": "CRDO",
@@ -2143,7 +2144,8 @@
       "price_status": "ok",
       "instrument_id": "US:WULF",
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
-      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
+      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
+      "price_history_52w_status": "ok"
     },
     "US:MTSI": {
       "ticker": "MTSI",
@@ -2434,7 +2436,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
+      "price_history_52w_status": "ok"
     },
     "US:NOK": {
       "ticker": "NOK",
@@ -2516,8 +2519,7 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
     },
     "US:DELL": {
       "ticker": "DELL",
@@ -2560,7 +2562,8 @@
       "price_status": "ok",
       "instrument_id": "US:DELL",
       "hash": "a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b",
-      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json"
+      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
+      "price_history_52w_status": "ok"
     },
     "US:UBER": {
       "ticker": "UBER",
@@ -3628,8 +3631,7 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
     },
     "Euronext Paris:XFAB": {
       "ticker": "XFAB",
@@ -3869,7 +3871,8 @@
       "price_status": "ok",
       "instrument_id": "US:AMAT",
       "hash": "1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd",
-      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json"
+      "path": "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
+      "price_history_52w_status": "ok"
     },
     "EPA:ALRIB": {
       "ticker": "ALRIB",
@@ -4866,8 +4869,7 @@
       "price_status": "ok",
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
-      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
     },
     "US:MP": {
       "ticker": "MP",
@@ -4909,8 +4911,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:AEVA": {
       "ticker": "AEVA",
@@ -5885,6 +5886,44 @@
       "hash": "8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918",
       "path": "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json"
     },
+    "UNVERIFIED:YMTC": {
+      "ticker": "YMTC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:YMTC",
+        "display_code": "YMTC",
+        "display_name": "Yangtze Memory Technologies Co.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "YMTC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "YMTC",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Yangtze Memory Technologies Co.",
+      "industry": null,
+      "first_mention": "2026-02-03",
+      "last_mention": "2026-10-04",
+      "total_mentions": 32,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "zephyr_z9": 14,
+        "jukan05": 13,
+        "aleabitoreddit": 5
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:YMTC",
+      "hash": "840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5",
+      "path": "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json"
+    },
     "US:APLD": {
       "ticker": "APLD",
       "instrument": {
@@ -6198,44 +6237,6 @@
       "instrument_id": "UNVERIFIED:IWM",
       "hash": "06c0ccf3b5365127556a043cd302ef59d58a65ba54852153454525103d05852b",
       "path": "stocks/06/06c0ccf3b5365127556a043cd302ef59d58a65ba54852153454525103d05852b.json"
-    },
-    "UNVERIFIED:YMTC": {
-      "ticker": "YMTC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:YMTC",
-        "display_code": "YMTC",
-        "display_name": "Yangtze Memory Technologies Co.",
-        "display_market": "Market unverified",
-        "aliases": [
-          "YMTC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "YMTC",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Yangtze Memory Technologies Co.",
-      "industry": null,
-      "first_mention": "2026-02-03",
-      "last_mention": "2026-09-21",
-      "total_mentions": 31,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "zephyr_z9": 14,
-        "jukan05": 12,
-        "aleabitoreddit": 5
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:YMTC",
-      "hash": "840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5",
-      "path": "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json"
     },
     "US:ADBE": {
       "ticker": "ADBE",
@@ -8708,8 +8709,7 @@
       "price_status": "ok",
       "instrument_id": "US:PENG",
       "hash": "25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482",
-      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json"
     },
     "US:PL": {
       "ticker": "PL",
@@ -9556,8 +9556,7 @@
       "price_status": "ok",
       "instrument_id": "US:OUST",
       "hash": "8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093",
-      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/8d/8d4fc22e95ed891abf6da44372b8f7029a9c1fcbd30e6c1def4defc6ecb50093.json"
     },
     "US:SHOP": {
       "ticker": "SHOP",
@@ -119573,6 +119572,7 @@
     "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
     "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
     "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json",
+    "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
     "stocks/f5/f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00.json",
     "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
@@ -119581,7 +119581,6 @@
     "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/fb/fbfeff48b4016758cc47fd294e894e853c401d2911fe7f6dae5297783449b9a8.json",
     "stocks/06/06c0ccf3b5365127556a043cd302ef59d58a65ba54852153454525103d05852b.json",
-    "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
     "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json",
     "stocks/92/92e1fce370e2fb96057a9993f65b7502e14b08d10705e20b2200d2f6486cd6ad.json",
     "stocks/3b/3b20a041391211e9741187d2e76a5f396c72c4e1842c4b7e390db2b8013d8072.json",
