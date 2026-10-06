@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-06T09:16:42.222072+00:00",
+  "generated_at": "2026-10-06T12:17:25.282259+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,18 +16,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2462,
-    "total_mentions": 31282,
+    "total_tickers": 2463,
+    "total_mentions": 31288,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2462,
+      "files": 2463,
       "shards": 256,
       "max_shard_width": 18,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-06T09:17:40.660814+00:00"
+    "prices_updated_at": "2026-10-06T12:18:31.351675+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -537,7 +537,8 @@
       "price_status": "ok",
       "instrument_id": "US:MSFT",
       "hash": "2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c",
-      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json"
+      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
+      "price_history_52w_status": "ok"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -845,7 +846,7 @@
         "price_symbol": "AMD",
         "verification_status": "verified"
       },
-      "cashtag": "AMD",
+      "cashtag": "$AMD",
       "price_symbol": "AMD",
       "exchange": "US",
       "currency": "USD",
@@ -854,12 +855,12 @@
       "company": "AMD",
       "industry": "GPU/AI Chips",
       "first_mention": "2025-09-11",
-      "last_mention": "2026-10-05",
-      "total_mentions": 400,
+      "last_mention": "2026-10-06",
+      "total_mentions": 401,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 188,
-        "StockMKTNewz": 70,
+        "StockMKTNewz": 71,
         "ren_stocks": 38,
         "jukan05": 37,
         "balder": 18,
@@ -1168,7 +1169,7 @@
         "price_symbol": "AVGO",
         "verification_status": "verified"
       },
-      "cashtag": "$AVGO",
+      "cashtag": "Broadcom",
       "price_symbol": "AVGO",
       "exchange": "US",
       "currency": "USD",
@@ -1177,13 +1178,13 @@
       "company": "Broadcom",
       "industry": "AI ASIC/Networking Chips",
       "first_mention": "2025-09-09",
-      "last_mention": "2026-10-05",
-      "total_mentions": 282,
+      "last_mention": "2026-10-06",
+      "total_mentions": 284,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 161,
         "StockMKTNewz": 32,
-        "jukan05": 25,
+        "jukan05": 27,
         "balder": 25,
         "octopusycc": 8,
         "KawzInvests": 7,
@@ -1285,7 +1286,8 @@
       "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
-      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json"
+      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
+      "price_history_52w_status": "ok"
     },
     "US:RKLB": {
       "ticker": "RKLB",
@@ -2727,7 +2729,8 @@
       "price_status": "ok",
       "instrument_id": "US:MSTR",
       "hash": "0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab",
-      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json"
+      "path": "stocks/0c/0c8a9852ef66f3c84c60c77232756b356f8bc538a216b832d1512bf39a121eab.json",
+      "price_history_52w_status": "ok"
     },
     "US:COIN": {
       "ticker": "COIN",
@@ -5797,8 +5800,7 @@
       "price_status": "ok",
       "instrument_id": "US:SMTC",
       "hash": "e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9",
-      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json"
     },
     "US:VIAV": {
       "ticker": "VIAV",
@@ -6955,8 +6957,7 @@
       "price_status": "ok",
       "instrument_id": "US:GOLD",
       "hash": "fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8",
-      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json"
     },
     "TWSE:2344": {
       "ticker": "2344",
@@ -7895,7 +7896,8 @@
       "price_status": "ok",
       "instrument_id": "US:MXL",
       "hash": "e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc",
-      "path": "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json"
+      "path": "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
+      "price_history_52w_status": "ok"
     },
     "TWSE:2408": {
       "ticker": "2408",
@@ -8936,8 +8938,7 @@
       "price_status": "ok",
       "instrument_id": "US:USAR",
       "hash": "1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a",
-      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1d/1d42615ebf55d79ead0c2bc7cde16f7a16c39f29a59308248447b9417aaf755a.json"
     },
     "UNVERIFIED:FIG": {
       "ticker": "FIG",
@@ -34343,6 +34344,42 @@
       "instrument_id": "UNVERIFIED:JHICC",
       "hash": "cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2",
       "path": "stocks/cb/cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2.json"
+    },
+    "UNVERIFIED:JNTC": {
+      "ticker": "JNTC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:JNTC",
+        "display_code": "JNTC",
+        "display_name": "JNTC Co., Ltd.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "JNTC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "JNTC",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "JNTC Co., Ltd.",
+      "industry": null,
+      "first_mention": "2026-10-02",
+      "last_mention": "2026-10-06",
+      "total_mentions": 3,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "jukan05": 3
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:JNTC",
+      "hash": "7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3",
+      "path": "stocks/7c/7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3.json"
     },
     "UNVERIFIED:JXAM": {
       "ticker": "JXAM",
@@ -68410,42 +68447,6 @@
       "hash": "f85ccaa4181ca26750c28df80c17a27410b8614e735c028c2e7e4bdb769c0bfc",
       "path": "stocks/f8/f85ccaa4181ca26750c28df80c17a27410b8614e735c028c2e7e4bdb769c0bfc.json"
     },
-    "UNVERIFIED:JNTC": {
-      "ticker": "JNTC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:JNTC",
-        "display_code": "JNTC",
-        "display_name": "JNTC",
-        "display_market": "Market unverified",
-        "aliases": [
-          "JNTC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "JNTC",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "JNTC",
-      "industry": null,
-      "first_mention": "2026-10-02",
-      "last_mention": "2026-10-02",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "jukan05": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:JNTC",
-      "hash": "7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3",
-      "path": "stocks/7c/7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3.json"
-    },
     "UNVERIFIED:JOE": {
       "ticker": "JOE",
       "instrument": {
@@ -80613,6 +80614,42 @@
       "instrument_id": "UNVERIFIED:TNK",
       "hash": "40358786eff9cebd85ea98a35de7c0bd7b640653513be33cfc8d9b3029f8d2ad",
       "path": "stocks/40/40358786eff9cebd85ea98a35de7c0bd7b640653513be33cfc8d9b3029f8d2ad.json"
+    },
+    "UNVERIFIED:TOPPAN": {
+      "ticker": "TOPPAN",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:TOPPAN",
+        "display_code": "TOPPAN",
+        "display_name": "Toppan Inc.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "TOPPAN"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "Toppan",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Toppan Inc.",
+      "industry": null,
+      "first_mention": "2026-10-06",
+      "last_mention": "2026-10-06",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:TOPPAN",
+      "hash": "e904b19ab7cb8906f8462a830ff31c6f76c7b0980fdebc4251d6f9731ebe7ec6",
+      "path": "stocks/e9/e904b19ab7cb8906f8462a830ff31c6f76c7b0980fdebc4251d6f9731ebe7ec6.json"
     },
     "UNVERIFIED:TOSBF": {
       "ticker": "TOSBF",
@@ -97095,6 +97132,9 @@
     "$TNK": [
       "UNVERIFIED:TNK"
     ],
+    "$TOPPAN": [
+      "UNVERIFIED:TOPPAN"
+    ],
     "$TOSBF": [
       "UNVERIFIED:TOSBF"
     ],
@@ -104994,6 +105034,9 @@
     "JNTC": [
       "UNVERIFIED:JNTC"
     ],
+    "JNTC CO., LTD.": [
+      "UNVERIFIED:JNTC"
+    ],
     "JOBY": [
       "US:JOBY"
     ],
@@ -111033,11 +111076,15 @@
     "TOKYO:4092": [
       "Tokyo:4092"
     ],
+    "TOPPAN": [
+      "UNVERIFIED:TOPPAN"
+    ],
     "TOPPAN HOLDINGS": [
       "UNVERIFIED:7911"
     ],
     "TOPPAN INC.": [
-      "UNVERIFIED:7911"
+      "UNVERIFIED:7911",
+      "UNVERIFIED:TOPPAN"
     ],
     "TORM": [
       "UNVERIFIED:TRMD"
@@ -115592,6 +115639,9 @@
     ],
     "UNVERIFIED:TNK": [
       "UNVERIFIED:TNK"
+    ],
+    "UNVERIFIED:TOPPAN": [
+      "UNVERIFIED:TOPPAN"
     ],
     "UNVERIFIED:TOSBF": [
       "UNVERIFIED:TOSBF"
@@ -121154,6 +121204,7 @@
     "stocks/07/07cc7c7f7c89b35c6dffc280d288f69990dc0880d017dc75038187365b54dcf0.json",
     "stocks/c4/c444f3e5420fea90d885ba7d556499fa1ac30720178a421c6e21251269462ccf.json",
     "stocks/cb/cbab78ebd5381c36ade2365cbd9ace8eb1764fcf22ff67d532cd4a7a233ad9e2.json",
+    "stocks/7c/7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3.json",
     "stocks/79/796d1785227533a8184d03a72e7243423c1a11a88a13aed01fa9642eaa740fcc.json",
     "stocks/26/2697596935a3af180e4a05bb8bec1590c22e5ac43e37a95b7a05624a2279a421.json",
     "stocks/79/798636ba794a478c43f4e8f097a5db446f6e1a776772cb654da27a11264eaa93.json",
@@ -122096,7 +122147,6 @@
     "stocks/b4/b404370f7c95d2542bd445e12e26b9afb319278d09dda02dc38793736fafc0fd.json",
     "stocks/56/560a88eb666c6fef5aba3f2423061215b78ab22d38e032df634fb709fe1d1796.json",
     "stocks/f8/f85ccaa4181ca26750c28df80c17a27410b8614e735c028c2e7e4bdb769c0bfc.json",
-    "stocks/7c/7c4fbc982ced8bb6e637771f5c89a66980535318baf00d0d08130560c119b1d3.json",
     "stocks/52/527c6a7058005632f188ddaceaad0117bc71b70e60b0d56309eb99f634e0b567.json",
     "stocks/56/560a086c7ea1a3a26f01cb8ba505d2db8799b9d6492945157be6621a29006455.json",
     "stocks/5a/5a07ba9cbcdd2f60b39606425eb886fed011060a36d6c066ac1a65b0179f27cd.json",
@@ -122435,6 +122485,7 @@
     "stocks/64/64ec4c3ebb0cd5786c8b835bad4833aa73555d851fa3ae59efbf50f5b288732b.json",
     "stocks/09/097c4dabd296201df9654abdbdb7e744a4a56a4b8d0003c244fac42402793cb5.json",
     "stocks/40/40358786eff9cebd85ea98a35de7c0bd7b640653513be33cfc8d9b3029f8d2ad.json",
+    "stocks/e9/e904b19ab7cb8906f8462a830ff31c6f76c7b0980fdebc4251d6f9731ebe7ec6.json",
     "stocks/3d/3d992a272e68f311bea4ade914b14b18912ce7b642064d460fa391c080d48156.json",
     "stocks/59/59ebc875e9fa22bca49f28d28940197a21eba44408ce19ac433d0938739816d6.json",
     "stocks/5e/5ea8d0271c4e9039389fcda7803d8db8db38225f10999aa68ca34f969d8aa54b.json",
