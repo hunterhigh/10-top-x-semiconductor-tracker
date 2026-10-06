@@ -1,6 +1,6 @@
 {
   "ticker": "HPQ",
-  "cashtag": "HPQ",
+  "cashtag": "$HPQ",
   "instrument": {
     "instrument_id": "US:HPQ",
     "display_code": "HPQ",
@@ -25,15 +25,15 @@
   "thesis_summary": null,
   "first_mention": "2026-07-05",
   "last_mention": "2026-10-06",
-  "total_mentions": 9,
+  "total_mentions": 10,
   "total_mentions_by_blogger": {
+    "balder": 5,
     "StockMKTNewz": 4,
-    "balder": 4,
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
     "news": 4,
-    "opinion": 5
+    "opinion": 6
   },
   "mentions": [
     {
@@ -242,6 +242,34 @@
         "likes": 2,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2107499725226434906",
+      "blogger_id": "balder",
+      "date": "2026-10-06",
+      "created_at": "2026-10-06T11:54:24-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "PE only 10, low valuation",
+        "EPS doubled alongside ~100% price rise, so not speculative",
+        "AI PC could further improve valuation logic",
+        "potential upside to 100"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$HPQ",
+      "text": "其实 $HPQ 这个股票本身可能是值得长期持有的，PE才10，近一年虽然涨了100%，但是其EPS也翻倍了，所以其低估值逻辑还没有改善。并不是炒作上去的。\n\n如果AI PC 可以进一步修复其估值逻辑，那么他甚至涨到100也是可能的。",
+      "url": "https://x.com/Balder13946731/status/2107499725226434906",
+      "kind": "post",
+      "engagement": {
+        "views": 4404,
+        "likes": 18,
+        "reposts": 0,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
