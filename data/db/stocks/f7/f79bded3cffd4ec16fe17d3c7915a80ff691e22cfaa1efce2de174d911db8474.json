@@ -1,6 +1,6 @@
 {
   "ticker": "SKHY",
-  "cashtag": "SKHY",
+  "cashtag": "$SKHY",
   "instrument": {
     "instrument_id": "US:SKHY",
     "display_code": "SKHY",
@@ -25,9 +25,9 @@
   "thesis_summary": null,
   "first_mention": "2026-06-30",
   "last_mention": "2026-10-06",
-  "total_mentions": 138,
+  "total_mentions": 139,
   "total_mentions_by_blogger": {
-    "ren_stocks": 36,
+    "ren_stocks": 37,
     "aleabitoreddit": 25,
     "StockMKTNewz": 19,
     "jukan05": 18,
@@ -40,7 +40,7 @@
   },
   "total_mentions_by_signal_type": {
     "flow": 6,
-    "opinion": 113,
+    "opinion": 114,
     "news": 19
   },
   "mentions": [
@@ -3381,6 +3381,34 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2107653638709489678",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-06",
+      "created_at": "2026-10-06T22:06:00-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "memory per GPU increasing each generation (Rubin 288GB→384GB, Rubin Ultra ~1000GB)",
+        "most supply-constrained component being designed in at higher content into more chips",
+        "BofA forecasts DRAM/NAND rising to $2.0T by 2030, nearly doubling from current pace",
+        "mix shifting toward HBM where SK Hynix is a key player"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$SKHY",
+      "text": "$SKHY $MU $SNDK\n\nMemory per GPU is going up, and the math is getting silly.\n\nThe fear with memory at these prices has always been \"de-spec,\" the idea that chip designers respond to expensive memory by using less of it. \n\nBofA's memory team is assuming the opposite. \n\nRubin moves from 288GB to 384GB, a third more per chip, and Rubin Ultra goes to 1,000GB, which is about 3.5x what ships today.\n\nSo the most supply-constrained component in the stack is getting designed in at higher content, into more chips, every generation. \n\nThat is how you get to their new 2030 forecast of $2.0 trillion in DRAM and NAND sales, raised from $1.8 trillion. For scale, the 2018 cloud boom peaked at $170 billion, and last year did about $210 billion.\n\nThe industry is already running above a $1 trillion annual pace, based on $278 billion of sales in the third quarter alone. \n\nGetting to $2 trillion from here is a doubling in four years, with bit growth in the high teens and the mix shifting toward HBM and enterprise SSDs.\n\nBullish memory ⚡️",
+      "url": "https://x.com/ren_stocks/status/2107653638709489678",
+      "kind": "post",
+      "engagement": {
+        "views": 3611,
+        "likes": 58,
+        "reposts": 2,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3631,11 +3659,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-07T00:17:26.722261+00:00",
+  "price_updated_at": "2026-10-07T03:16:44.476021+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-07",
     "asof": "2026-10-06",
-    "attempted_at": "2026-10-07T00:17:26.212535+00:00",
+    "attempted_at": "2026-10-07T03:16:42.698975+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-07-13",
     "last_available_date": "2026-10-06",
@@ -3646,7 +3674,7 @@
     "provider_symbol": "SKHY",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-07T00:17:26.212535+00:00",
+    "checked_at": "2026-10-07T03:16:42.698975+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
