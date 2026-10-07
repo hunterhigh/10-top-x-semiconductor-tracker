@@ -25,11 +25,11 @@
   "thesis_summary": null,
   "first_mention": "2025-09-25",
   "last_mention": "2026-10-06",
-  "total_mentions": 665,
+  "total_mentions": 666,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 231,
     "StockMKTNewz": 112,
-    "ren_stocks": 93,
+    "ren_stocks": 94,
     "jukan05": 65,
     "octopusycc": 54,
     "balder": 31,
@@ -41,7 +41,7 @@
     "DJTRadar": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 534,
+    "opinion": 535,
     "news": 112,
     "flow": 17,
     "disclosure": 2
@@ -16240,6 +16240,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2107584541020037544",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-06",
+      "created_at": "2026-10-06T17:31:26-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "each token needs memory to hold the model and its context",
+        "60x increase in inference tokens drives memory demand"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MU",
+      "text": "$NBIS $MU $SNDK $LITE $AAOI\n\nChina is on track to use roughly 64,000 trillion inference tokens this year. The projection for 2030 is about 3.85 million trillion, which is close to 60x in four years, or nearly a tripling every single year until the end of the decade.\n\nConsumption more than triples in 2027, more than triples again in 2028, and then still doubles in each of the following two years off a base that is already enormous. The jump from 2029 to 2030 alone adds about 30 times what the whole country is consuming today.\n\nIt leaves out the US hyperscalers, the model labs, Europe, the Gulf buildouts and every sovereign program being announced right now.\n\nTokens are the unit that everything else follows. \n\nEach one needs a chip to compute it, memory to hold the model and its context, and optics to move the data, so a 60x increase in tokens pulls on every layer of the stack at once. \n\nPeople keep asking me when AI demand peaks, I rather they draw their own conclusion.\n\nLook at the bar for 2026, now look back at me.\n\nExactly ⚡️",
+      "url": "https://x.com/ren_stocks/status/2107584541020037544",
+      "kind": "post",
+      "engagement": {
+        "views": 7273,
+        "likes": 77,
+        "reposts": 8,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -17458,18 +17484,22 @@
     {
       "date": "2026-10-05",
       "close": 1063.96
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1045.5601
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-06T21:19:35.753979+00:00",
+  "price_updated_at": "2026-10-07T00:17:24.106507+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-07",
     "asof": "2026-10-06",
-    "attempted_at": "2026-10-06T21:19:35.134056+00:00",
+    "attempted_at": "2026-10-07T00:17:23.301852+00:00",
     "status": "ok",
     "first_available_date": "2025-10-07",
-    "last_available_date": "2026-10-05",
+    "last_available_date": "2026-10-06",
     "reason": null
   },
   "price_source_state": {
@@ -17477,7 +17507,7 @@
     "provider_symbol": "MU",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-06T21:19:35.134056+00:00",
+    "checked_at": "2026-10-07T00:17:23.301852+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
