@@ -13712,5 +13712,65 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-10-06T18:08:38.068329+00:00"
+  },
+  "2107863012111499494": {
+    "tweet_id": "2107863012111499494",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$AEHR",
+        "symbol": "AEHR",
+        "company_name": "Aehr Test Systems",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "announced ~$6M in follow-on orders from lead hyperscale customer",
+          "customer ordering more equipment for a second, newer processor with production ramp in 2027",
+          "demonstrates continued expansion of relationship with hyperscale customer",
+          "selling may be driven by wrong earnings date on Google (not fundamentals)"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.82,
+    "blogger_id": "KawzInvests",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-10-07T18:08:38.243019+00:00"
+  },
+  "2107876207446384655": {
+    "tweet_id": "2107876207446384655",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$TER",
+        "symbol": "TER",
+        "company_name": "Teradyne",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "$AEHR",
+        "symbol": "AEHR",
+        "company_name": "Aehr Test Systems",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "Teradyne's Titan HP competes with Sonoma in post-packaging burn-in but does not replace Aehr's wafer-level burn-in",
+          "wafer-level burn-in catches defective chips before expensive packaging, a step Titan HP does not cover"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.85,
+    "blogger_id": "KawzInvests",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-10-07T18:08:38.243019+00:00"
   }
 }
