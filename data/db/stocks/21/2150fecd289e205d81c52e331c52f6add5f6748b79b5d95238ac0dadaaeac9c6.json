@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -26,19 +26,19 @@
   "thesis_summary": null,
   "first_mention": "2025-12-28",
   "last_mention": "2026-10-07",
-  "total_mentions": 331,
+  "total_mentions": 332,
   "total_mentions_by_blogger": {
     "jukan05": 168,
     "aleabitoreddit": 90,
     "zephyr_z9": 22,
     "StockMKTNewz": 19,
-    "ren_stocks": 11,
+    "ren_stocks": 12,
     "octopusycc": 11,
     "unusual_whales": 9,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 303,
+    "opinion": 304,
     "flow": 9,
     "news": 19
   },
@@ -7872,6 +7872,35 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2108025455559246324",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-07",
+      "created_at": "2026-10-07T22:43:28-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "otherworldly numbers",
+        "Q3 operating profit guided to ₩107.4 trillion (~$80B)",
+        "no technology company has ever earned this much in one quarter",
+        "9x what Samsung made a year ago",
+        "driven by AI memory demand"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Holy hell, otherworldly numbers for Samsung!!\n\nSamsung just guided Q3 operating profit to ₩107.4 trillion.\n\nThat's about $80 billion in three months, or roughly $870 million every single day.\n\nNo technology company has ever earned this much in one quarter. The previous record was $NVDA at $63.7 billion.\n\nIt's also about 9x what Samsung made a year ago, driven by AI memory demand.\n\nYou are not bullish enough ⚡️",
+      "url": "https://x.com/ren_stocks/status/2108025455559246324",
+      "kind": "post",
+      "engagement": {
+        "views": 2767,
+        "likes": 27,
+        "reposts": 1,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9058,11 +9087,11 @@
   ],
   "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-08T00:16:56.764686+00:00",
+  "price_updated_at": "2026-10-08T03:16:43.726338+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-08",
     "asof": "2026-10-07",
-    "attempted_at": "2026-10-08T00:16:56.126130+00:00",
+    "attempted_at": "2026-10-08T03:16:43.684489+00:00",
     "status": "ok",
     "first_available_date": "2025-10-10",
     "last_available_date": "2026-10-07",
@@ -9070,10 +9099,10 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KO",
+    "provider_symbol": "005930.KS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-08T00:16:56.126130+00:00",
+    "checked_at": "2026-10-08T03:16:43.684489+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
