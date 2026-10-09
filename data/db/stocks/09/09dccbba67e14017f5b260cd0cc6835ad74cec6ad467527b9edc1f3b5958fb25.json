@@ -27313,9 +27313,9 @@
       "close": 31.08
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "SEK",
-  "price_updated_at": "2026-10-09T03:16:59.975992+00:00",
+  "price_updated_at": "2026-10-09T21:17:07.576193+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-09",
     "asof": "2026-10-08",
@@ -27328,11 +27328,12 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SIVE.ST",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-09T03:16:59.922548+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-09T21:17:07.237626+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-10-10T00:17:07.237626+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
