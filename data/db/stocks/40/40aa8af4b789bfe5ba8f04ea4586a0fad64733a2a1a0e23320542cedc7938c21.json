@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-15",
-  "last_mention": "2026-09-08",
-  "total_mentions": 18,
+  "last_mention": "2026-10-10",
+  "total_mentions": 19,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 14,
-    "DJTRadar": 4
+    "DJTRadar": 4,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
     "news": 14,
-    "disclosure": 4
+    "disclosure": 4,
+    "opinion": 1
   },
   "mentions": [
     {
@@ -448,6 +450,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2108945401105764516",
+      "blogger_id": "balder",
+      "date": "2026-10-10",
+      "created_at": "2026-10-10T11:39:00-04:00",
+      "stance": "neutral",
+      "mention_type": "comparison",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GE",
+      "text": "什么时候 $NKE 被踢出道指，他就可以起飞了 。\n\n参考 $XOM $INTC $GE\n\n等他的最后一击吧。",
+      "url": "https://x.com/Balder13946731/status/2108945401105764516",
+      "kind": "post",
+      "engagement": {
+        "views": 4591,
+        "likes": 21,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -774,17 +799,21 @@
     {
       "date": "2026-10-08",
       "close": 305.62
+    },
+    {
+      "date": "2026-10-09",
+      "close": 308.2
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-09T03:17:17.651135+00:00",
+  "price_updated_at": "2026-10-10T18:17:42.278254+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "GE",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-09T03:17:16.701459+00:00",
+    "checked_at": "2026-10-10T18:17:40.867243+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
