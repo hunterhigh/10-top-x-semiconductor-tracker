@@ -2285,17 +2285,18 @@
       "close": 14.2
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-10-10T00:18:47.855539+00:00",
+  "price_updated_at": "2026-10-10T21:17:55.723184+00:00",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "LPK.DE",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-10T00:18:47.589348+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "provider_symbol": "LPK.XETRA",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-10T21:17:55.647200+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-10-11T00:17:55.647200+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

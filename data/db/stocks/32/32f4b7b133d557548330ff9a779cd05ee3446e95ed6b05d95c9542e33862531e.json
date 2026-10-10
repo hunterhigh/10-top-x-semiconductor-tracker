@@ -1,6 +1,6 @@
 {
   "ticker": "AVGO",
-  "cashtag": "$AVGO",
+  "cashtag": "博通",
   "instrument": {
     "instrument_id": "US:AVGO",
     "display_code": "AVGO",
@@ -25,12 +25,12 @@
   "thesis_summary": null,
   "first_mention": "2025-09-09",
   "last_mention": "2026-10-10",
-  "total_mentions": 288,
+  "total_mentions": 290,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 162,
-    "StockMKTNewz": 34,
+    "StockMKTNewz": 35,
     "jukan05": 27,
-    "balder": 26,
+    "balder": 27,
     "octopusycc": 8,
     "KawzInvests": 7,
     "zephyr_z9": 6,
@@ -42,8 +42,8 @@
     "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 246,
-    "news": 34,
+    "opinion": 247,
+    "news": 35,
     "flow": 4,
     "disclosure": 4
   },
@@ -6856,6 +6856,58 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2108991947939414499",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-10",
+      "created_at": "2026-10-10T14:43:58-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "@KrisPatel99 I gave my AI some of my money to test if it was a better investor than me, it made Broadcom $AVGO the 3rd biggest holding in that port",
+      "url": "https://x.com/StockMKTNewz/status/2108991947939414499",
+      "kind": "reply",
+      "engagement": {
+        "views": 2178,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109005088115273880",
+      "blogger_id": "balder",
+      "date": "2026-10-10",
+      "created_at": "2026-10-10T15:36:11-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "hyperscalers pay Broadcom a toll even when designing their own chips",
+        "Google TPU relies on Broadcom for physical design and packaging",
+        "Hock Tan extracts maximum free cash flow via extreme pricing power",
+        "VMware acquisition shows ability to force subscription model and double prices on captive enterprise customers",
+        "selling shovels to hyperscalers pursuing de-Nvidia strategies"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "博通",
+      "text": "每次英伟达一有波动，市场就开始炒巨头自研芯片的逻辑，指望大厂能把老黄的定价权给掀了。说实话，这算盘打得太天真。\n\n你想摆脱老黄60%的毛利剥削？可以，转身先去给博通交过路费。Google 的 TPU 搞了这么多年，底层的物理设计和封装全靠博通在兜底。真以为大厂的自研芯片是凭空捏出来的？\n\nHock Tan 这哥们跟硅谷那帮天天把「改变世界」挂在嘴边的 founder 完全不一样。他骨子里就是个极致的 PE 玩家。你看他收了 VMware 之后的狠活：直接暴力改订阅制，砍掉冗余销售，死盯住那几百个根本跑不掉的大客户，价格翻倍往上逼。企业 CIO 们在网上骂翻了天，最后还不是咬牙交钱。\n\n一边在企业软件里极限收割，一边给 hyperscaler 的「去英伟达化」卖铲子。你们在卷模型、谈信仰，他在算怎么榨干每一滴 Free Cash Flow。\n\n假设你是某巨头的 CFO，好不容易下定决心砸几百亿搞自研，准备彻底甩开老黄。推开会议室的门，发现 Hock Tan 早就拿着计算器坐在里面等你了。",
+      "url": "https://x.com/Balder13946731/status/2109005088115273880",
+      "kind": "post",
+      "engagement": {
+        "views": 1892,
+        "likes": 3,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8094,11 +8146,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-10T18:17:14.356808+00:00",
+  "price_updated_at": "2026-10-10T21:16:36.670741+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-11",
     "asof": "2026-10-10",
-    "attempted_at": "2026-10-10T18:17:13.545496+00:00",
+    "attempted_at": "2026-10-10T21:16:35.511038+00:00",
     "status": "ok",
     "first_available_date": "2025-10-13",
     "last_available_date": "2026-10-09",
@@ -8109,7 +8161,7 @@
     "provider_symbol": "AVGO",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-10T18:17:13.545496+00:00",
+    "checked_at": "2026-10-10T21:16:35.511038+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
