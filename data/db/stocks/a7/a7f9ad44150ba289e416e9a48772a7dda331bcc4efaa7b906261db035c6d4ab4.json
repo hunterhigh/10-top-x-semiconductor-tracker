@@ -1840,17 +1840,18 @@
       "close": 6.155
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-10-11T00:17:28.254327+00:00",
+  "price_updated_at": "2026-10-11T21:18:03.225176+00:00",
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "XFAB.PA",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-11T00:17:28.105291+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-11T21:18:02.945694+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-10-12T00:18:02.945694+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
