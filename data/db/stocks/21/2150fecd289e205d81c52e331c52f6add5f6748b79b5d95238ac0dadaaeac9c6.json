@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-10-09",
-  "total_mentions": 334,
+  "last_mention": "2026-10-10",
+  "total_mentions": 335,
   "total_mentions_by_blogger": {
-    "jukan05": 170,
+    "jukan05": 171,
     "aleabitoreddit": 90,
     "zephyr_z9": 22,
     "StockMKTNewz": 19,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 306,
+    "opinion": 307,
     "flow": 9,
     "news": 19
   },
@@ -7947,6 +7947,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109077117304807722",
+      "blogger_id": "jukan05",
+      "date": "2026-10-10",
+      "created_at": "2026-10-10T20:22:24-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "Elon, this really doesn’t make sense… Why would equipment makers build custom tools specifically for Terafab? They can simply keep selling the tools they already make to Intel, TSMC, and Samsung. Why would they spend extra on R&D to develop tools exclusively for Terafab?\n\nIf Terafab really wants equipment makers to build these custom tools, it’ll have to put up an enormous amount of money. The number of tools required and the amount you’d have to spend on them would be on a completely different scale from manufacturing EVs or rockets.",
+      "url": "https://x.com/jukan05/status/2109077117304807722",
+      "kind": "post",
+      "engagement": {
+        "views": 31020,
+        "likes": 173,
+        "reposts": 7,
+        "replies": 30
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9135,13 +9158,13 @@
       "close": 262000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-11T00:16:41.758895+00:00",
+  "price_updated_at": "2026-10-11T03:16:27.169194+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-11",
     "asof": "2026-10-10",
-    "attempted_at": "2026-10-11T00:16:41.248411+00:00",
+    "attempted_at": "2026-10-11T03:16:27.017955+00:00",
     "status": "ok",
     "first_available_date": "2025-10-13",
     "last_available_date": "2026-10-08",
@@ -9149,12 +9172,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-11T00:16:41.248411+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "005930.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-11T03:16:27.017955+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-10-11T06:16:27.017955+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
