@@ -1,6 +1,6 @@
 {
   "ticker": "GOOG",
-  "cashtag": "$GOOG",
+  "cashtag": "GOOG",
   "instrument": {
     "instrument_id": "US:GOOG",
     "display_code": "GOOG",
@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-10",
-  "last_mention": "2026-10-08",
-  "total_mentions": 66,
+  "last_mention": "2026-10-13",
+  "total_mentions": 67,
   "total_mentions_by_blogger": {
+    "octopusycc": 17,
     "balder": 17,
-    "octopusycc": 16,
     "michaelsikand": 13,
     "KawzInvests": 10,
     "StockMKTNewz": 4,
@@ -38,7 +38,7 @@
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 61,
+    "opinion": 62,
     "news": 4,
     "flow": 1
   },
@@ -1646,6 +1646,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110001081329852679",
+      "blogger_id": "octopusycc",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T09:33:54-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "buying interest not sustained at open"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "GOOG",
+      "text": "开盘  GOOG UNH 买盘并不持续 市场资金还是属于打一炮就走\n\n敏捷交易",
+      "url": "https://x.com/octopusycc/status/2110001081329852679",
+      "kind": "post",
+      "engagement": {
+        "views": 2425,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2880,11 +2905,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-13T12:18:07.987374+00:00",
+  "price_updated_at": "2026-10-13T15:19:32.418197+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-14",
     "asof": "2026-10-13",
-    "attempted_at": "2026-10-13T12:18:06.887898+00:00",
+    "attempted_at": "2026-10-13T15:19:31.960072+00:00",
     "status": "ok",
     "first_available_date": "2025-10-14",
     "last_available_date": "2026-10-12",
@@ -2895,7 +2920,7 @@
     "provider_symbol": "GOOG",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-13T12:18:06.887898+00:00",
+    "checked_at": "2026-10-13T15:19:31.960072+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

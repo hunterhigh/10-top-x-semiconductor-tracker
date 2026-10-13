@@ -1,6 +1,6 @@
 {
   "ticker": "UNH",
-  "cashtag": "$UNH",
+  "cashtag": "UNH",
   "instrument": {
     "instrument_id": "US:UNH",
     "display_code": "UNH",
@@ -25,17 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2025-07-02",
   "last_mention": "2026-10-13",
-  "total_mentions": 49,
+  "total_mentions": 52,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 25,
-    "StockMKTNewz": 12,
-    "balder": 7,
-    "octopusycc": 3,
+    "StockMKTNewz": 13,
+    "balder": 8,
+    "octopusycc": 4,
     "asklivermore": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 37,
-    "news": 12
+    "opinion": 39,
+    "news": 13
   },
   "mentions": [
     {
@@ -1221,6 +1221,79 @@
         "likes": 6,
         "reposts": 0,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109986095144538418",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T08:34:21-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "stock up 5% in pre-market following earnings"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$UNH",
+      "text": "Unitedhealth $UNH stock is up by 5% in pre market trading following its earnings\n\n🟢🟢🟢🟢🟢 https://t.co/kwvsuyS8lq",
+      "url": "https://x.com/StockMKTNewz/status/2109986095144538418",
+      "kind": "post",
+      "engagement": {
+        "views": 25480,
+        "likes": 111,
+        "reposts": 10,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109993741381771422",
+      "blogger_id": "balder",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T09:04:44-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$UNH",
+      "text": "$UNH +4.36% $GS +3.84% $JPM +0.94% 全部命中🥰🥰 3/3 这就是earnings radar的准确性。\n\n快来订阅解锁Earnings Radar吧。",
+      "url": "https://x.com/Balder13946731/status/2109993741381771422",
+      "kind": "post",
+      "engagement": {
+        "views": 3710,
+        "likes": 12,
+        "reposts": 1,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110001081329852679",
+      "blogger_id": "octopusycc",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T09:33:54-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "buying interest not sustained at open"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "UNH",
+      "text": "开盘  GOOG UNH 买盘并不持续 市场资金还是属于打一炮就走\n\n敏捷交易",
+      "url": "https://x.com/octopusycc/status/2110001081329852679",
+      "kind": "post",
+      "engagement": {
+        "views": 2425,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -2518,24 +2591,24 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-13T12:18:19.604988+00:00",
+  "price_updated_at": "2026-10-13T15:19:41.893505+00:00",
+  "price_history_52w": {
+    "requested_start": "2025-10-14",
+    "asof": "2026-10-13",
+    "attempted_at": "2026-10-13T15:19:40.849410+00:00",
+    "status": "ok",
+    "first_available_date": "2025-10-14",
+    "last_available_date": "2026-10-12",
+    "reason": null
+  },
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "UNH",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-13T12:18:18.612951+00:00",
+    "checked_at": "2026-10-13T15:19:40.849410+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  },
-  "price_history_52w": {
-    "requested_start": "2025-10-14",
-    "asof": "2026-10-13",
-    "attempted_at": "2026-10-13T12:18:18.612951+00:00",
-    "status": "ok",
-    "first_available_date": "2025-10-14",
-    "last_available_date": "2026-10-12",
-    "reason": null
   }
 }
