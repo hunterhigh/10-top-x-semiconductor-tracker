@@ -1,6 +1,6 @@
 {
   "ticker": "GS",
-  "cashtag": "GS",
+  "cashtag": "$GS",
   "instrument": {
     "instrument_id": "US:GS",
     "display_code": "GS",
@@ -25,15 +25,15 @@
   "thesis_summary": null,
   "first_mention": "2026-06-17",
   "last_mention": "2026-10-12",
-  "total_mentions": 29,
+  "total_mentions": 30,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 18,
+    "StockMKTNewz": 19,
     "balder": 6,
     "unusual_whales": 4,
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 18,
+    "news": 19,
     "flow": 4,
     "opinion": 7
   },
@@ -709,6 +709,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109781337733566934",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-12",
+      "created_at": "2026-10-12T19:00:43-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GS",
+      "text": "EARNINGS SEASON is back starting tomorrow morning\n\nAll of these companies will report earnings before the market opens tomorrow\n\nJPMorgan $JPM \nUnitedHealth $UNH \nJohnson &amp; Johnson $JNJ \nGoldman Sachs $GS \nCiti $C\nWells Fargo $WFC \nDomino's Pizza $DPZ https://t.co/rhL5zudNm3",
+      "url": "https://x.com/StockMKTNewz/status/2109781337733566934",
+      "kind": "post",
+      "engagement": {
+        "views": 18122,
+        "likes": 59,
+        "reposts": 8,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -1031,17 +1054,21 @@
     {
       "date": "2026-10-09",
       "close": 895.32
+    },
+    {
+      "date": "2026-10-12",
+      "close": 893.95
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-12T03:17:47.009001+00:00",
+  "price_updated_at": "2026-10-13T00:19:03.516445+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "GS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-12T03:17:45.863965+00:00",
+    "checked_at": "2026-10-13T00:19:02.121134+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

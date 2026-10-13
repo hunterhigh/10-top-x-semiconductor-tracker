@@ -1,6 +1,6 @@
 {
   "ticker": "SPX",
-  "cashtag": "S&P 500",
+  "cashtag": "US stocks",
   "instrument": {
     "instrument_id": "UNVERIFIED:SPX",
     "display_code": "SPX",
@@ -25,10 +25,10 @@
   "thesis_summary": null,
   "first_mention": "2025-10-01",
   "last_mention": "2026-10-12",
-  "total_mentions": 142,
+  "total_mentions": 143,
   "total_mentions_by_blogger": {
     "balder": 48,
-    "StockMKTNewz": 34,
+    "StockMKTNewz": 35,
     "unusual_whales": 28,
     "octopusycc": 14,
     "michaelsikand": 5,
@@ -40,7 +40,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 80,
-    "news": 34,
+    "news": 35,
     "flow": 28
   },
   "mentions": [
@@ -3475,6 +3475,29 @@
         "likes": 39,
         "reposts": 5,
         "replies": 25
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109763150476157300",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-12",
+      "created_at": "2026-10-12T17:48:27-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "US stocks",
+      "text": "BLACKROCK JUST CUT US STOCKS TO NEUTRAL AND TURNED BULLISH ON TREASURIES\n\nThe shift comes from a note by the BlackRock Investment Institute and CIO Rick Rieder.\n\n- Short-term Treasuries: up to overweight\n- Long-term Treasuries: up to neutral from underweight\n- US stocks: down to neutral from a long-held overweight\n\nBlackRock says it is still bullish on AI and calls the stock cut short-term risk management: \"We are managing near-term risk, not changing our core convictions.\"",
+      "url": "https://x.com/StockMKTNewz/status/2109763150476157300",
+      "kind": "post",
+      "engagement": {
+        "views": 41002,
+        "likes": 245,
+        "reposts": 45,
+        "replies": 35
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

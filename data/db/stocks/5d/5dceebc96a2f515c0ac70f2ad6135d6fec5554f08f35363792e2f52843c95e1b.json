@@ -1,6 +1,6 @@
 {
   "ticker": "AMD",
-  "cashtag": "$AMD",
+  "cashtag": "AMD",
   "instrument": {
     "instrument_id": "US:AMD",
     "display_code": "AMD",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-09-11",
   "last_mention": "2026-10-12",
-  "total_mentions": 413,
+  "total_mentions": 415,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 189,
     "StockMKTNewz": 77,
@@ -34,14 +34,14 @@
     "balder": 19,
     "zephyr_z9": 14,
     "octopusycc": 13,
+    "michaelsikand": 7,
     "unusual_whales": 7,
-    "michaelsikand": 5,
     "KawzInvests": 5,
     "asklivermore": 4,
     "DJTRadar": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 327,
+    "opinion": 329,
     "news": 77,
     "disclosure": 2,
     "flow": 7
@@ -9871,6 +9871,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109788406729576795",
+      "blogger_id": "michaelsikand",
+      "date": "2026-10-12",
+      "created_at": "2026-10-12T19:28:48-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AMD",
+      "text": "LISA SU ON CPU TAM \n\n\"Even a year ago people would have said the CPU market is probably a $20B market growing single digits over the next few years\" \n\n\"We have actually raised the TAM on this three times in the last nine months because we've seen that much growth in the overall CPU demand, which now will grow at approximately 50% CAGR over the next four or five years to over a $200B\"",
+      "url": "https://x.com/michaelsikand/status/2109788406729576795",
+      "kind": "post",
+      "engagement": {
+        "views": 7199,
+        "likes": 25,
+        "reposts": 0,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2109796429464285434",
+      "blogger_id": "michaelsikand",
+      "date": "2026-10-12",
+      "created_at": "2026-10-12T20:00:41-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AMD",
+      "text": "AMD’s new Verano CPU targets better power efficiency in data centers. \n\nEntering production in H1 2027, Verano is designed to improve CPU to GPU communication, helping keep expensive AI accelerators fully utilized. https://t.co/8v0QPvD73i",
+      "url": "https://x.com/michaelsikand/status/2109796429464285434",
+      "kind": "post",
+      "engagement": {
+        "views": 3193,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -11105,18 +11151,22 @@
     {
       "date": "2026-10-09",
       "close": 608.1
+    },
+    {
+      "date": "2026-10-12",
+      "close": 594.24
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-12T21:17:49.105636+00:00",
+  "price_updated_at": "2026-10-13T00:18:11.283579+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-13",
     "asof": "2026-10-12",
-    "attempted_at": "2026-10-12T21:17:48.314517+00:00",
+    "attempted_at": "2026-10-13T00:18:10.339462+00:00",
     "status": "ok",
     "first_available_date": "2025-10-13",
-    "last_available_date": "2026-10-09",
+    "last_available_date": "2026-10-12",
     "reason": null
   },
   "price_source_state": {
@@ -11124,7 +11174,7 @@
     "provider_symbol": "AMD",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-12T21:17:48.314517+00:00",
+    "checked_at": "2026-10-13T00:18:10.339462+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
