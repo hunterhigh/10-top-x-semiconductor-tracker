@@ -1,6 +1,6 @@
 {
   "ticker": "CBRS",
-  "cashtag": "$CBRS",
+  "cashtag": "it",
   "instrument": {
     "instrument_id": "US:CBRS",
     "display_code": "CBRS",
@@ -25,13 +25,13 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-16",
-  "last_mention": "2026-10-12",
-  "total_mentions": 60,
+  "last_mention": "2026-10-13",
+  "total_mentions": 62,
   "total_mentions_by_blogger": {
+    "ren_stocks": 13,
     "aleabitoreddit": 12,
     "octopusycc": 12,
     "StockMKTNewz": 12,
-    "ren_stocks": 11,
     "jukan05": 6,
     "balder": 3,
     "zephyr_z9": 2,
@@ -39,7 +39,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 48,
+    "opinion": 50,
     "news": 12
   },
   "mentions": [
@@ -1504,6 +1504,64 @@
         "likes": 173,
         "reposts": 20,
         "replies": 62
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110087774120317119",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T15:18:23-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "trading more than 50% below where it opened on its first day",
+        "UBS sees revenue going ~25x by 2030 at 46% margins",
+        "stock trades at about 20x 2028 earnings",
+        "AI growth story is inference, a bill that never stops",
+        "agentic shift makes inference bill much bigger",
+        "wafer-scale chip with 44GB on-wafer memory reduces memory latency versus GPU HBM",
+        "more tokens per second for each user, critical for agent loops",
+        "specialist tool for fast inference, one of the fastest-growing jobs in AI"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$CBRS",
+      "text": "I'm long $CBRS\n\nCerebras is trading more than 50% below where it opened on its first day, and I just couldn’t pass up this opportunity.\n\nUBS sees revenue going ~25x by 2030 at 46% margins, and the stock trades at about 20x 2028 earnings. \n\nI keep saying this: the growth story for AI is inference.\n\nTraining a model is a big upfront project. Running it, every time someone asks a question or an agent takes a step, is a bill that never stops, and the agentic shift makes that bill much bigger. A single agent task can fire off dozens of model calls, and every one of them waits on the one before it. A few seconds of waiting per call turns into minutes per task.\n\nCerebras attacks that wait directly. \n\nA GPU keeps the model’s weights in HBM next to the chip and has to pull them across for every token it generates. Cerebras builds one chip out of an entire silicon wafer, about 46,000 mm² and 4 trillion transistors against roughly 1,600 mm² and 208 billion for NVIDIA’s two-die B200, and keeps 44GB of memory on the wafer itself. \n\nLess waiting on memory means more tokens per second for each user, which is exactly what an agent stuck in a loop of model calls needs.\n\nGPUs are the best general-purpose factory ever built. \n\nCerebras is a specialist tool for one job, fast inference, and that’s one of the fastest-growing jobs in AI.\n\nThe stock is still richly priced and could go lower, but this is a long bet I’m willing to take.\n\nCheck out the full article I made about it on Substack:\n\nhttps://t.co/sIo6caKNrw\n\nBullish $CBRS ⚡️",
+      "url": "https://x.com/ren_stocks/status/2110087774120317119",
+      "kind": "post",
+      "engagement": {
+        "views": 6359,
+        "likes": 56,
+        "reposts": 5,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110091485530198384",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T15:33:08-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "small initial position before lockup expiry",
+        "plans to buy more if it takes a huge hit"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "it",
+      "text": "@gannoncapital I went in just a tiny bit before the lockup expiry; if it takes a huge hit, I'll buy some more.",
+      "url": "https://x.com/ren_stocks/status/2110091485530198384",
+      "kind": "reply",
+      "engagement": {
+        "views": 232,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
