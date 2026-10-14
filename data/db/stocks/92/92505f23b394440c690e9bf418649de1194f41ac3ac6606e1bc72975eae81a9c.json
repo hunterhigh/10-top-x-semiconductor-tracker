@@ -1,6 +1,6 @@
 {
   "ticker": "NBIS",
-  "cashtag": "NBIS",
+  "cashtag": "implicit (context from prior tweet)",
   "instrument": {
     "instrument_id": "US:NBIS",
     "display_code": "NBIS",
@@ -24,12 +24,12 @@
   "industry": "AI Cloud/GPU",
   "thesis_summary": null,
   "first_mention": "2025-07-21",
-  "last_mention": "2026-10-13",
-  "total_mentions": 1137,
+  "last_mention": "2026-10-14",
+  "total_mentions": 1140,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 828,
-    "ren_stocks": 205,
-    "StockMKTNewz": 42,
+    "ren_stocks": 207,
+    "StockMKTNewz": 43,
     "balder": 16,
     "michaelsikand": 15,
     "KawzInvests": 14,
@@ -40,9 +40,9 @@
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1092,
+    "opinion": 1094,
     "flow": 3,
-    "news": 42
+    "news": 43
   },
   "mentions": [
     {
@@ -29294,6 +29294,79 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110359511823417723",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T09:18:10-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NBIS",
+      "text": "$NBIS oh boy… here we go again. https://t.co/SiPon0v1FL",
+      "url": "https://x.com/ren_stocks/status/2110359511823417723",
+      "kind": "post",
+      "engagement": {
+        "views": 21808,
+        "likes": 171,
+        "reposts": 1,
+        "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110363219651133443",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T09:32:54-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "bought position"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "NBIS",
+      "text": "@VestExchange I in the last couple of weeks sold my CRWV and bought NBIS\n\nLets see if im dumb",
+      "url": "https://x.com/StockMKTNewz/status/2110363219651133443",
+      "kind": "reply",
+      "engagement": {
+        "views": 1147,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110365121029800410",
+      "blogger_id": "ren_stocks",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T09:40:28-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "holding until clear macro trend reversal"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "implicit (context from prior tweet)",
+      "text": "@AL29palms Holding until I see a clear macro trend reversal",
+      "url": "https://x.com/ren_stocks/status/2110365121029800410",
+      "kind": "reply",
+      "engagement": {
+        "views": 1182,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -30544,11 +30617,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-14T12:16:15.451825+00:00",
+  "price_updated_at": "2026-10-14T15:18:51.153829+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-15",
     "asof": "2026-10-14",
-    "attempted_at": "2026-10-14T12:16:15.027295+00:00",
+    "attempted_at": "2026-10-14T15:18:50.599178+00:00",
     "status": "ok",
     "first_available_date": "2025-10-15",
     "last_available_date": "2026-10-13",
@@ -30559,7 +30632,7 @@
     "provider_symbol": "NBIS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-14T12:16:15.027295+00:00",
+    "checked_at": "2026-10-14T15:18:50.599178+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
