@@ -1,6 +1,6 @@
 {
   "ticker": "SMH",
-  "cashtag": "$SMH",
+  "cashtag": "smh",
   "instrument": {
     "instrument_id": "UNVERIFIED:SMH",
     "display_code": "SMH",
@@ -24,20 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-08",
-  "last_mention": "2026-10-12",
-  "total_mentions": 28,
+  "last_mention": "2026-10-14",
+  "total_mentions": 29,
   "total_mentions_by_blogger": {
     "asklivermore": 17,
     "ren_stocks": 3,
     "StockMKTNewz": 3,
+    "frank_trading": 2,
     "aleabitoreddit": 1,
     "zephyr_z9": 1,
-    "frank_trading": 1,
     "KawzInvests": 1,
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 25,
+    "opinion": 26,
     "news": 3
   },
   "mentions": [
@@ -705,6 +705,33 @@
         "likes": 101,
         "reposts": 8,
         "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110451979168436450",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T15:25:36-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "buying puts on SMH for tomorrow/next week",
+        "after closing large SOXS short position",
+        "Anthropic news is complex, not betting big"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "smh",
+      "text": "大仓位soxs空头平仓，拿一点利润买一些smh和qqq的明天/下周put。 盘后Anthropic信息还是比较复杂，不拿大仓位赌了。\n谢谢大家，从nq 31250做空到现在整整一千点。",
+      "url": "https://x.com/Franktradinglog/status/2110451979168436450",
+      "kind": "post",
+      "engagement": {
+        "views": 4197,
+        "likes": 28,
+        "reposts": 1,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
