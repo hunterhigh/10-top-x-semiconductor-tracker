@@ -24,18 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-05-17",
-  "last_mention": "2026-10-06",
-  "total_mentions": 24,
+  "last_mention": "2026-10-13",
+  "total_mentions": 26,
   "total_mentions_by_blogger": {
     "ren_stocks": 11,
-    "KawzInvests": 5,
+    "KawzInvests": 6,
     "michaelsikand": 5,
     "aleabitoreddit": 2,
-    "DJTRadar": 1
+    "DJTRadar": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 23,
-    "disclosure": 1
+    "opinion": 24,
+    "disclosure": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -676,6 +678,52 @@
         "likes": 80,
         "reposts": 2,
         "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110176338653118515",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T21:10:18-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$PENG",
+      "text": "Little Easter egg at the SK Hynix booth at OCP 🐧\n\n$PENG brought their smallest engineer to supervise the memory racks. https://t.co/1K2deRFFA4",
+      "url": "https://x.com/KawzInvests/status/2110176338653118515",
+      "kind": "post",
+      "engagement": {
+        "views": 6540,
+        "likes": 30,
+        "reposts": 0,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110195055290130452",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-13",
+      "created_at": "2026-10-13T22:24:41-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$PENG",
+      "text": "Jim Cramer was just asked about Penguin Solutions $PENG stock\n\n“I kind of like Penguin Solutions. I know it’s kind of a meme stock, but I have to tell you, it’s got real business. I’m going to say you can buy it.” https://t.co/tphYvqTGE9",
+      "url": "https://x.com/StockMKTNewz/status/2110195055290130452",
+      "kind": "post",
+      "engagement": {
+        "views": 12734,
+        "likes": 24,
+        "reposts": 0,
+        "replies": 13
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
