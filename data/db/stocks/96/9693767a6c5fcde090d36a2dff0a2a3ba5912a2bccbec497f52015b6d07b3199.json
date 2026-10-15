@@ -1,6 +1,6 @@
 {
   "ticker": "MCK",
-  "cashtag": "McKesson",
+  "cashtag": "$MCK",
   "instrument": {
     "instrument_id": "US:MCK",
     "display_code": "MCK",
@@ -24,15 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-15",
-  "last_mention": "2026-08-25",
-  "total_mentions": 12,
+  "last_mention": "2026-10-15",
+  "total_mentions": 13,
   "total_mentions_by_blogger": {
     "DJTRadar": 11,
-    "asklivermore": 1
+    "asklivermore": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
     "disclosure": 11,
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -348,6 +350,29 @@
         "likes": 336,
         "reposts": 14,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110817823991959907",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-15",
+      "created_at": "2026-10-15T15:39:20-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MCK",
+      "text": "All these stocks hit new 52 WEEK HIGHS at some point today\n\nCoca-Cola $KO \nModerna $MRNA\nExxon Mobil $XOM \nVisa $V\nPfizer $PFE\nMastercard $MA\nKeurig Dr Pepper $KDP\nBP $BP\nShell $SHEL\neBay $EBAY\nEtsy $ETSY\nChevron $CVX\nAbbVie $ABBV\nGilead $GILD\nPhilip Morris $PM\nConocoPhillips $COP\nTakeda $TAK\nCentene $CNC\nDocuSign $DOCU\nSuncor Energy $SU\nThermo Fisher $TMO\nBJ's Wholesale $BJ\nVeeva $VEEV\nExelixis $EXEL\nBox $BOX\nHalozyme $HALO\nEOG Resources $EOG\nBecton Dickinson $BDX\nSasol $SSL\nAbercrombie & Fitch $ANF\nBiogen $BIIB\nPearson $PSO\nADP $ADP\nSharkNinja $SN\nUrban Outfitters $URBN\nExpeditors $EXPD\nHonda $HMC\nPaycom $PAYC\nPaylocity $PCTY\nMcKesson $MCK",
+      "url": "https://x.com/StockMKTNewz/status/2110817823991959907",
+      "kind": "post",
+      "engagement": {
+        "views": 25382,
+        "likes": 116,
+        "reposts": 17,
+        "replies": 22
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1533,11 +1558,71 @@
     {
       "date": "2026-09-23",
       "close": 880.5
+    },
+    {
+      "date": "2026-09-24",
+      "close": 869.36
+    },
+    {
+      "date": "2026-09-25",
+      "close": 866.64
+    },
+    {
+      "date": "2026-09-28",
+      "close": 856.29
+    },
+    {
+      "date": "2026-09-29",
+      "close": 864.82
+    },
+    {
+      "date": "2026-09-30",
+      "close": 853.81
+    },
+    {
+      "date": "2026-10-01",
+      "close": 898.82
+    },
+    {
+      "date": "2026-10-02",
+      "close": 902.28
+    },
+    {
+      "date": "2026-10-05",
+      "close": 915.45
+    },
+    {
+      "date": "2026-10-06",
+      "close": 921.67
+    },
+    {
+      "date": "2026-10-07",
+      "close": 910.33
+    },
+    {
+      "date": "2026-10-08",
+      "close": 930.25
+    },
+    {
+      "date": "2026-10-09",
+      "close": 938.84
+    },
+    {
+      "date": "2026-10-12",
+      "close": 955.76
+    },
+    {
+      "date": "2026-10-13",
+      "close": 961.88
+    },
+    {
+      "date": "2026-10-14",
+      "close": 976.57
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-24T09:18:00.295757+00:00",
+  "price_updated_at": "2026-10-15T21:18:56.253075+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-12",
     "asof": "2026-08-11",
@@ -1552,7 +1637,7 @@
     "provider_symbol": "MCK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-24T09:17:59.333942+00:00",
+    "checked_at": "2026-10-15T21:18:55.531479+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
