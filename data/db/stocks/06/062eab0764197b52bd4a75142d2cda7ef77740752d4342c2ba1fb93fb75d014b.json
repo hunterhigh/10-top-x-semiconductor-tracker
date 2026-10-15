@@ -1,6 +1,6 @@
 {
   "ticker": "QQQ",
-  "cashtag": "qqq 2028 300put",
+  "cashtag": "$QQQ",
   "instrument": {
     "instrument_id": "US:QQQ",
     "display_code": "QQQ",
@@ -25,21 +25,21 @@
   "thesis_summary": null,
   "first_mention": "2025-11-23",
   "last_mention": "2026-10-14",
-  "total_mentions": 114,
+  "total_mentions": 117,
   "total_mentions_by_blogger": {
     "balder": 34,
-    "StockMKTNewz": 32,
+    "StockMKTNewz": 33,
     "ren_stocks": 14,
     "asklivermore": 12,
-    "frank_trading": 8,
+    "frank_trading": 10,
     "aleabitoreddit": 5,
     "octopusycc": 5,
     "unusual_whales": 3,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 79,
-    "news": 32,
+    "opinion": 81,
+    "news": 33,
     "flow": 3
   },
   "mentions": [
@@ -2721,6 +2721,82 @@
         "likes": 56,
         "reposts": 7,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110534914986889616",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T20:55:10-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "has dropped 50%+ from highs historically",
+        "exponential growth is unsustainable; any industry's growth eventually reverts to GDP-level",
+        "when growth slows, high valuations cannot be justified",
+        "potential accompanying recession could trigger extreme pessimism and further valuation compression"
+      ],
+      "is_risk": true,
+      "conviction": "high",
+      "raw_mention": "qqq",
+      "text": "我非常坚信的一点就是，做好投资首先要学的是历史。这种人就是典型的没有学过历史。\nqqq从高位跌50%以上历史上又不是没有过，又如何？\n历次工业革命，都伴随着一开始的极度乐观，认为增速可以永远维持下去，然而指数增长是不存在的，任何一个行业最后的增速都会回归GDP增速这样一个均值区间，如果增速不在，凭什么给你如此高的估值？更别说到时候可能伴随的衰退，使得大量的人又会极度悲观使得估值被疯狂压缩。",
+      "url": "https://x.com/Franktradinglog/status/2110534914986889616",
+      "kind": "post",
+      "engagement": {
+        "views": 12532,
+        "likes": 56,
+        "reposts": 1,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110537034544926946",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T21:03:35-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "holding 2028 June 300 put to profit from delta and vega during a sharp decline"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "2028 june 300 put",
+      "text": "@BigbirdflyChan 我不觉得一定去300，但是在暴跌的过程中，我可以赚delta，vega的钱。不如pike老师你直接去交易所sell张put就当我们赌注了吧哈哈，我是2028 june 300 put。",
+      "url": "https://x.com/Franktradinglog/status/2110537034544926946",
+      "kind": "reply",
+      "engagement": {
+        "views": 1744,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110557976792809822",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-14",
+      "created_at": "2026-10-14T22:26:48-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$QQQ",
+      "text": "When you buy $10,000 of the Nasdaq 100 $QQQ this is how much of each stock you're buying\n\n$831 of Nvidia $NVDA \n$751 of Apple $AAPL \n$609 of Microsoft $MSFT \n$604 of Google $GOOGL \n$448 of Micron $MU \n\n(The full list is below)",
+      "url": "https://x.com/StockMKTNewz/status/2110557976792809822",
+      "kind": "post",
+      "engagement": {
+        "views": 16392,
+        "likes": 33,
+        "reposts": 4,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
