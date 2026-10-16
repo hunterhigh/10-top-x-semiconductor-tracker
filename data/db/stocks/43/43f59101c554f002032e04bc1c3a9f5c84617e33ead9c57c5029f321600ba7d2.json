@@ -1,6 +1,6 @@
 {
   "ticker": "QCOM",
-  "cashtag": "Qualcomm",
+  "cashtag": "$QCOM",
   "instrument": {
     "instrument_id": "US:QCOM",
     "display_code": "QCOM",
@@ -24,10 +24,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-12",
-  "last_mention": "2026-10-11",
-  "total_mentions": 109,
+  "last_mention": "2026-10-15",
+  "total_mentions": 110,
   "total_mentions_by_blogger": {
-    "jukan05": 24,
+    "jukan05": 25,
     "michaelsikand": 19,
     "StockMKTNewz": 16,
     "balder": 16,
@@ -40,7 +40,7 @@
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 91,
+    "opinion": 92,
     "flow": 2,
     "news": 16
   },
@@ -2636,6 +2636,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2110918360779333676",
+      "blogger_id": "jukan05",
+      "date": "2026-10-15",
+      "created_at": "2026-10-15T22:18:50-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "Snapdragon 8 Elite Extreme Gen 6 showing thermal issues in internal testing",
+        "processing speed drops under sustained heavy workloads",
+        "Samsung may replace Qualcomm chip with Exynos in Galaxy S27 Ultra if issue not resolved"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$QCOM",
+      "text": "According to Korean media reports, Qualcomm's Snapdragon 8 Elite Extreme Gen 6, which was slated for the Galaxy S27 Ultra, has shown performance degradation in recent internal testing. The chip's temperature repeatedly exceeded the threshold, and processing speed dropped during sustained heavy workloads. Samsung has asked Qualcomm to resolve the thermal issues by the middle of this month. If the problem is not fixed, there is also talk that Samsung's own Exynos could be adopted for its top model for the first time in five years, since the Galaxy S22 Ultra.\n\n$QCOM \nhttps://t.co/v88nIN4Lez",
+      "url": "https://x.com/jukan05/status/2110918360779333676",
+      "kind": "post",
+      "engagement": {
+        "views": 18688,
+        "likes": 90,
+        "reposts": 6,
+        "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3890,14 +3917,14 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-16T00:19:24.801282+00:00",
+  "price_updated_at": "2026-10-16T03:16:26.884230+00:00",
   "price_history_52w": {
-    "requested_start": "2025-10-06",
-    "asof": "2026-10-05",
-    "attempted_at": "2026-10-06T03:16:58.610254+00:00",
+    "requested_start": "2025-10-16",
+    "asof": "2026-10-15",
+    "attempted_at": "2026-10-16T03:16:26.829358+00:00",
     "status": "ok",
-    "first_available_date": "2025-10-06",
-    "last_available_date": "2026-10-05",
+    "first_available_date": "2025-10-16",
+    "last_available_date": "2026-10-15",
     "reason": null
   },
   "price_source_state": {
@@ -3905,7 +3932,7 @@
     "provider_symbol": "QCOM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-16T00:19:23.479206+00:00",
+    "checked_at": "2026-10-16T03:16:26.829358+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
