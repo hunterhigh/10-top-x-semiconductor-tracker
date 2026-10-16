@@ -24,19 +24,21 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-07",
-  "last_mention": "2026-09-14",
-  "total_mentions": 150,
+  "last_mention": "2026-10-16",
+  "total_mentions": 151,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 144,
     "StockMKTNewz": 3,
     "unusual_whales": 1,
     "octopusycc": 1,
-    "balder": 1
+    "balder": 1,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 146,
     "news": 3,
-    "flow": 1
+    "flow": 1,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -3927,6 +3929,32 @@
         "likes": 0,
         "reposts": 1,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111055144125182271",
+      "blogger_id": "DJTRadar",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T07:22:22-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "FDA proposal could ease compounding of certain peptides, opening new business",
+        "Hims has already expressed intent to offer peptides if rules allow"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$HIMS",
+      "text": "A policy change in Washington could open a new business for $HIMS.\n\nThe FDA has sent the White House a proposal that could ease compounding of certain peptides.\n\nHims has already said it wants to offer them if the rules allow.\n\nThe proposal is still under review. These peptides aren’t FDA-approved as safe or effective.\n\nThe opportunity depends on what the final policy actually permits.",
+      "url": "https://x.com/DJTRadar/status/2111055144125182271",
+      "kind": "post",
+      "engagement": {
+        "views": 14471,
+        "likes": 38,
+        "reposts": 1,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
