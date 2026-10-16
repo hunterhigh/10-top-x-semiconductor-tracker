@@ -1,10 +1,10 @@
 {
   "ticker": "NEOCLOUD",
-  "cashtag": "neoclouds",
+  "cashtag": "Neocloud",
   "instrument": {
     "instrument_id": "UNVERIFIED:NEOCLOUD",
     "display_code": "NEOCLOUD",
-    "display_name": "Name unverified",
+    "display_name": "Neocloud (generic reference to neocloud companies)",
     "display_market": "Market unverified",
     "aliases": [
       "NEOCLOUD"
@@ -20,17 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "Neocloud (generic reference to neocloud companies)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-29",
-  "last_mention": "2026-07-29",
-  "total_mentions": 1,
+  "last_mention": "2026-10-16",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
+    "frank_trading": 2,
     "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 3
   },
   "mentions": [
     {
@@ -57,20 +58,70 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111190331060527475",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T16:19:33-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Neocloud",
+      "text": "@funnyfish88 那请问你如何解释这几天Neocloud狂跌呢？是因为市场真的都是傻子吗",
+      "url": "https://x.com/Franktradinglog/status/2111190331060527475",
+      "kind": "reply",
+      "engagement": {
+        "views": 568,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111198451354816921",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T16:51:49-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "neocloud bonds are crashing",
+        "high financing costs to purchase rapidly depreciating assets",
+        "uncertain whether returns will exceed cost of capital"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Neocloud",
+      "text": "@funnyfish88 你其实混淆了三个完全不同的概念：AI 创造的经济价值、算力需求，以及算力供应商最终能够获得的资本回报。\n\n即使未来 Agent 数量指数增长，算力需求持续扩张，也不代表所有算力供应商都能持续获得超额利润。技术进步带来的生产率提升，最终由谁捕获？是模型公司、应用层、消费者，还是承担巨额 CapEx 的基础设施供应商？这才是问题的核心。\n\n互联网革命同样深刻改变了整个世界，但这并不妨碍当年大量电信基础设施公司破产。需求长期增长与供给阶段性过剩、资本回报率下降完全可以同时发生。\n\n至于你说华尔街不理解 AI，我觉得这解释不了为什么这次连 Neocloud 的债券都在暴跌。市场担心的不是 AI 有没有未来，而是这些企业用高昂的融资成本购买快速折旧的资产，最终能否获得高于资本成本的回报。\n\n你提出 Agent 可以无限放大生产率，但没有证明这种生产率增长必然转化为算力租赁商的利润，更没有证明算力需求增速将长期超过供给增速。\n\n技术革命可以是无限广阔的，但投资回报永远受到竞争、资本成本和供需关系的约束。你在讨论技术的终局，我在讨论资本回报的周期。这根本不是同一个问题。",
+      "url": "https://x.com/Franktradinglog/status/2111198451354816921",
+      "kind": "reply",
+      "engagement": {
+        "views": 266,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-08-29T03:17:08.502153+00:00",
+  "price_updated_at": "2026-10-16T21:19:16.173959+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-08-29T03:17:08.502128+00:00",
-    "attempts": 26,
+    "checked_at": "2026-10-16T21:19:16.173944+00:00",
+    "attempts": 27,
     "next_retry_at": null,
     "http_status": null
   }

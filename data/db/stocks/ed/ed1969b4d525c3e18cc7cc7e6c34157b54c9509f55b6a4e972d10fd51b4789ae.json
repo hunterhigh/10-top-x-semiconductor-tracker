@@ -1,6 +1,6 @@
 {
   "ticker": "TSM",
-  "cashtag": "$TSM",
+  "cashtag": "tsm",
   "instrument": {
     "instrument_id": "US:TSM",
     "display_code": "TSM",
@@ -24,23 +24,24 @@
   "industry": "Wafer Foundry",
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-10-15",
-  "total_mentions": 446,
+  "last_mention": "2026-10-16",
+  "total_mentions": 450,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 248,
     "jukan05": 88,
     "StockMKTNewz": 46,
-    "balder": 22,
+    "balder": 23,
     "zephyr_z9": 16,
     "ren_stocks": 9,
     "unusual_whales": 7,
     "michaelsikand": 3,
     "asklivermore": 3,
+    "frank_trading": 3,
     "KawzInvests": 2,
     "octopusycc": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 393,
+    "opinion": 397,
     "news": 46,
     "flow": 7
   },
@@ -10687,6 +10688,105 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111181087284314369",
+      "blogger_id": "balder",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T15:42:49-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "台积电",
+      "text": "每次看到有人说内存不就是个周期股、给几倍 PE 都算客气，我就想起 H100 的料单。三千多美元的 BOM，里面最贵的一块不是台积电那颗逻辑 die，是旁边那几摞 HBM，占到一半上下，台积电那部分连它一半都不到。\n\n也就是说英伟达每卖一张卡，付给内存厂的钱比付给代工厂的多。它这两年那么卖力地把三星往第三家供应商的位子上推，就是因为 75% 的毛利率只能从这最大的一行成本里抠。\n\n假设你是英伟达的采购：一年里最大的一笔钱，付给的是一个你换不掉、还在涨价的人。",
+      "url": "https://x.com/Balder13946731/status/2111181087284314369",
+      "kind": "post",
+      "engagement": {
+        "views": 4120,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111182327586201708",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T15:47:45-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "anti-bottleneck pair trade long leg"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "tsm",
+      "text": "如果你不敢全力做空，做anti-bottleneck pair trade也是很好的主意。\n比如long lite/short aaoi; long tsm short intc;long nvda short amd/avgo",
+      "url": "https://x.com/Franktradinglog/status/2111182327586201708",
+      "kind": "post",
+      "engagement": {
+        "views": 4801,
+        "likes": 32,
+        "reposts": 1,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111183678621770007",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T15:53:07-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "pair trade long leg against INTC short",
+        "wins orders on competitiveness as supply becomes plentiful"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSM",
+      "text": "The selloff continues. Next, I’m shifting from shorting beta to shorting alpha. I call it the “reverse bottleneck trade”—the counterpart to the earlier bottleneck trade.\n\nThe logic is simple: AI demand will keep growing, but that growth may slow, while upstream suppliers keep expanding capacity in response to shortages and fat margins. Once effective supply catches up with demand, bargaining power shifts back downstream. During a shortage, customers care first about availability. Good enough will do. Once supply is plentiful, they start comparing performance, cost, power consumption, and reliability again. That’s when we find out who wins orders on competitiveness and who was simply picking up overflow because the leaders couldn’t supply enough.\n\nMy watchlist includes memory runner-up MU, second- and third-tier optical players COHR and AAOI, and foundry runner-up INTC.\n\nThis trade doesn’t even require the AI bubble to burst. Supply growth just needs to start outpacing demand growth. I think there’s a very high probability these stocks put in an “Everest chart” over the next year—a towering peak followed by a collapse back down. If you don’t have the stomach to go all-in on outright shorts, anti-bottleneck pair trades are another good way to express the view: long LITE / short AAOI; long TSM / short INTC; long NVDA / short AMD or AVGO.\n@labubu_trader  leave your comments please.",
+      "url": "https://x.com/Franktradinglog/status/2111183678621770007",
+      "kind": "post",
+      "engagement": {
+        "views": 4690,
+        "likes": 23,
+        "reposts": 1,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111188406604804401",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T16:11:54-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "can recover / hold long — able to recover losses (扛单能回本)"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "tsm",
+      "text": "@peterparkergo1 我觉得tsm，nvda属于扛单能回本的股票，但是aaoi，intc不是，你可以仔细思考一下",
+      "url": "https://x.com/Franktradinglog/status/2111188406604804401",
+      "kind": "reply",
+      "engagement": {
+        "views": 338,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -11805,14 +11905,14 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-16T03:17:08.254993+00:00",
+  "price_updated_at": "2026-10-16T21:18:54.825774+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-24",
-    "asof": "2026-09-23",
-    "attempted_at": "2026-09-24T06:16:38.623218+00:00",
+    "requested_start": "2025-10-17",
+    "asof": "2026-10-16",
+    "attempted_at": "2026-10-16T21:18:54.068902+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-24",
-    "last_available_date": "2026-09-23",
+    "first_available_date": "2025-10-17",
+    "last_available_date": "2026-10-15",
     "reason": null
   },
   "price_source_state": {
@@ -11820,7 +11920,7 @@
     "provider_symbol": "TSM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-16T03:17:07.326071+00:00",
+    "checked_at": "2026-10-16T21:18:54.068902+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
