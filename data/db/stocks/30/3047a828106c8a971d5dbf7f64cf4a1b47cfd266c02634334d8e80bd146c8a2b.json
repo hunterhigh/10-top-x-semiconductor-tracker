@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "nvda",
+  "cashtag": "英伟达",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -25,10 +25,10 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-10-16",
-  "total_mentions": 1400,
+  "total_mentions": 1402,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 588,
-    "StockMKTNewz": 268,
+    "StockMKTNewz": 269,
     "jukan05": 147,
     "balder": 74,
     "zephyr_z9": 70,
@@ -37,13 +37,13 @@
     "KawzInvests": 36,
     "octopusycc": 36,
     "michaelsikand": 33,
+    "frank_trading": 8,
     "asklivermore": 8,
-    "frank_trading": 7,
     "DJTRadar": 6
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1056,
-    "news": 268,
+    "opinion": 1057,
+    "news": 269,
     "flow": 70,
     "disclosure": 6
   },
@@ -32952,6 +32952,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111204784724221952",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T17:16:59-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "Nvidia $NVDA CEO Jensen Huang just said this about the recent moves in the stock market \n\n“ALL OF THIS IS GOING TO PASS”",
+      "url": "https://x.com/StockMKTNewz/status/2111204784724221952",
+      "kind": "post",
+      "engagement": {
+        "views": 49974,
+        "likes": 818,
+        "reposts": 53,
+        "replies": 66
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111208115777814632",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T17:30:13-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "英伟达",
+      "text": "@X7889124067108 供需逐渐趋近平衡，大家可以买到便宜的英伟达就没有必要买这些替代品了",
+      "url": "https://x.com/Franktradinglog/status/2111208115777814632",
+      "kind": "reply",
+      "engagement": {
+        "views": 232,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -34206,18 +34252,22 @@
     {
       "date": "2026-10-15",
       "close": 217.23
+    },
+    {
+      "date": "2026-10-16",
+      "close": 214.13
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-16T21:18:52.273990+00:00",
+  "price_updated_at": "2026-10-17T00:17:10.130301+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-17",
     "asof": "2026-10-16",
-    "attempted_at": "2026-10-16T21:18:51.530892+00:00",
+    "attempted_at": "2026-10-17T00:17:09.276622+00:00",
     "status": "ok",
     "first_available_date": "2025-10-17",
-    "last_available_date": "2026-10-15",
+    "last_available_date": "2026-10-16",
     "reason": null
   },
   "price_source_state": {
@@ -34225,7 +34275,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-16T21:18:51.530892+00:00",
+    "checked_at": "2026-10-17T00:17:09.276622+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

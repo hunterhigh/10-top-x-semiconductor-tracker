@@ -1,6 +1,6 @@
 {
   "ticker": "000660",
-  "cashtag": "SK hynix",
+  "cashtag": "SK Hynix",
   "instrument": {
     "instrument_id": "KRX:000660",
     "display_code": "000660",
@@ -27,11 +27,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-10-14",
-  "total_mentions": 382,
+  "last_mention": "2026-10-16",
+  "total_mentions": 383,
   "total_mentions_by_blogger": {
     "jukan05": 135,
-    "aleabitoreddit": 119,
+    "aleabitoreddit": 120,
     "StockMKTNewz": 43,
     "ren_stocks": 28,
     "zephyr_z9": 21,
@@ -42,7 +42,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 326,
+    "opinion": 327,
     "news": 43,
     "flow": 13
   },
@@ -9204,6 +9204,35 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2111206827790885288",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-10-16",
+      "created_at": "2026-10-16T17:25:06-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "DELL CEO says not enough memory supply — a 4 year problem",
+        "new production would only emerge 2029 or 2030",
+        "shortages could worsen in 2027",
+        "unprecedented forward visibility with memory",
+        "hyperscalers like GOOGL seeking LTAs into 2035"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK Hynix",
+      "text": "Just some words of emotional support for your SK Hynix, $SNDK, $MU fanclub. \n\n$DELL CEO on memory, suggested: \"It's a 4 year problem because there's just not enough supply\"\n\nFactories take about 4 years to build, meaning new production would emerge 2029 or 2030.\n\nand that semiconductor shortages could worsen in 2027 stating:\n\n\"I do think it gets worse next year in terms of demand and supply\". \n\nI think it's strange we're getting unprecedented forward visibility with memory... as $GOOGL and richest hyperscalers seek LTAs into 2035. \n\nAnd a major sector crash as well over durability/financing concerns.",
+      "url": "https://x.com/aleabitoreddit/status/2111206827790885288",
+      "kind": "post",
+      "engagement": {
+        "views": 118475,
+        "likes": 775,
+        "reposts": 47,
+        "replies": 79
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10406,29 +10435,32 @@
     {
       "date": "2026-10-15",
       "close": 1262000.0
+    },
+    {
+      "date": "2026-10-16",
+      "close": 1272000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-16T18:19:20.027882+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-10-17T00:17:15.629873+00:00",
   "price_history_52w": {
-    "requested_start": "2025-09-04",
-    "asof": "2026-09-03",
-    "attempted_at": "2026-09-04T03:16:50.461745+00:00",
+    "requested_start": "2025-10-17",
+    "asof": "2026-10-16",
+    "attempted_at": "2026-10-17T00:17:15.102859+00:00",
     "status": "ok",
-    "first_available_date": "2025-09-04",
-    "last_available_date": "2026-09-03",
+    "first_available_date": "2025-10-17",
+    "last_available_date": "2026-10-16",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-10-16T18:19:19.767178+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-10-16T21:19:19.767178+00:00",
+    "provider_symbol": "000660.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-10-17T00:17:15.102859+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }
