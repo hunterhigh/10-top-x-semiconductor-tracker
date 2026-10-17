@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-17T06:16:15.250860+00:00",
+  "generated_at": "2026-10-17T09:16:45.990075+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -16,18 +16,18 @@
       "StockMKTNewz",
       "DJTRadar"
     ],
-    "total_tickers": 2522,
-    "total_mentions": 32929,
+    "total_tickers": 2523,
+    "total_mentions": 32931,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
-      "files": 2522,
+      "files": 2523,
       "shards": 256,
       "max_shard_width": 20,
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-17T06:17:02.934234+00:00"
+    "prices_updated_at": "2026-10-17T09:17:58.984592+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -509,7 +509,7 @@
         "price_symbol": "MSFT",
         "verification_status": "verified"
       },
-      "cashtag": "$MSFT",
+      "cashtag": "MSFT",
       "price_symbol": "MSFT",
       "exchange": "US",
       "currency": "USD",
@@ -518,14 +518,14 @@
       "company": "MICROSOFT CORP",
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
-      "last_mention": "2026-10-16",
-      "total_mentions": 512,
+      "last_mention": "2026-10-17",
+      "total_mentions": 513,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 303,
         "StockMKTNewz": 109,
         "unusual_whales": 23,
-        "balder": 18,
+        "balder": 19,
         "octopusycc": 14,
         "KawzInvests": 10,
         "DJTRadar": 8,
@@ -1018,7 +1018,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1067,7 +1067,8 @@
       "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
-      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json"
+      "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
+      "price_history_52w_status": "ok"
     },
     "US:CRWV": {
       "ticker": "CRWV",
@@ -3594,8 +3595,7 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
-      "price_history_52w_status": "unverified_symbol"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:AMAT": {
       "ticker": "AMAT",
@@ -3682,7 +3682,8 @@
       "price_status": "ok",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "TSE:285A": {
       "ticker": "285A",
@@ -5248,8 +5249,7 @@
       "price_status": "ok",
       "instrument_id": "US:MP",
       "hash": "f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706",
-      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/f7/f7bc2c4177dbaf245f5b395a8e648602b09f0c373cfe757d11548eb075bd4706.json"
     },
     "US:SOFI": {
       "ticker": "SOFI",
@@ -5842,8 +5842,7 @@
       "price_status": "ok",
       "instrument_id": "US:VIAV",
       "hash": "7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b",
-      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json"
     },
     "KRX:009150": {
       "ticker": "009150",
@@ -6901,8 +6900,7 @@
       "price_status": "ok",
       "instrument_id": "US:DJT",
       "hash": "27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8",
-      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json"
     },
     "US:NVTS": {
       "ticker": "NVTS",
@@ -12702,7 +12700,8 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
+      "price_history_52w_status": "unavailable"
     },
     "UNVERIFIED:AGLT": {
       "ticker": "AGLT",
@@ -84331,6 +84330,42 @@
       "hash": "be2ad607cd53504760ecd8df3d72680a9afae01154271fc74cef2a1212e7697e",
       "path": "stocks/be/be2ad607cd53504760ecd8df3d72680a9afae01154271fc74cef2a1212e7697e.json"
     },
+    "UNVERIFIED:VARA": {
+      "ticker": "VARA",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:VARA",
+        "display_code": "VARA",
+        "display_name": "Vara",
+        "display_market": "Market unverified",
+        "aliases": [
+          "VARA"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "VARA",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Vara",
+      "industry": null,
+      "first_mention": "2026-10-17",
+      "last_mention": "2026-10-17",
+      "total_mentions": 1,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "KawzInvests": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:VARA",
+      "hash": "33643884e6109fb775734275062e52bcc6391387326cbe81b905ff077751f976",
+      "path": "stocks/33/33643884e6109fb775734275062e52bcc6391387326cbe81b905ff077751f976.json"
+    },
     "UNVERIFIED:VEA": {
       "ticker": "VEA",
       "instrument": {
@@ -99779,6 +99814,9 @@
     ],
     "$VANTAGE": [
       "UNVERIFIED:VANTAGE"
+    ],
+    "$VARA": [
+      "UNVERIFIED:VARA"
     ],
     "$VCTR": [
       "US:VCTR"
@@ -118619,6 +118657,9 @@
     "UNVERIFIED:VANTAGE": [
       "UNVERIFIED:VANTAGE"
     ],
+    "UNVERIFIED:VARA": [
+      "UNVERIFIED:VARA"
+    ],
     "UNVERIFIED:VDE": [
       "UNVERIFIED:VDE"
     ],
@@ -121933,6 +121974,9 @@
     ],
     "VANTAGE DATA CENTERS": [
       "UNVERIFIED:VANTAGE"
+    ],
+    "VARA": [
+      "UNVERIFIED:VARA"
     ],
     "VAREX IMAGING CORP": [
       "US:VREX"
@@ -125481,6 +125525,7 @@
     "stocks/86/861278ce130bedd062ec4dbf8bb1085988f05d2897385662717181b84ef4fb1d.json",
     "stocks/e4/e469d9d05f8cd0b024a99668bea9550e868b53d298b4ed393aa7173cfe568384.json",
     "stocks/be/be2ad607cd53504760ecd8df3d72680a9afae01154271fc74cef2a1212e7697e.json",
+    "stocks/33/33643884e6109fb775734275062e52bcc6391387326cbe81b905ff077751f976.json",
     "stocks/3f/3fb95375aa1e1136311af67786ef99b1fc2d72393abe63cb711ebb0b67683fc4.json",
     "stocks/21/210394e0efd6018d52ccf3099459743d66c1fdccb561f1ea987d3755cfd441b6.json",
     "stocks/b7/b79111dc4811b21b66aa7dce0b222b711ffa7b656edfaa444773384bc4d9f1fc.json",
