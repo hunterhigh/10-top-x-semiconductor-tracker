@@ -4,7 +4,7 @@
   "instrument": {
     "instrument_id": "UNVERIFIED:AI_SECTOR",
     "display_code": "AI_SECTOR",
-    "display_name": "Name unverified",
+    "display_name": "AI sector (broad)",
     "display_market": "Market unverified",
     "aliases": [
       "AI_SECTOR"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "AI sector (broad)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-10-16",
-  "last_mention": "2026-10-16",
-  "total_mentions": 1,
+  "last_mention": "2026-10-20",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -54,6 +56,29 @@
         "likes": 219,
         "reposts": 7,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2112602865399402755",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-20",
+      "created_at": "2026-10-20T13:52:28-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "AI stocks",
+      "text": "CITADEL SECURITIES' SCOTT RUBNER SAYS AI STOCKS CAN OUTPERFORM AGAIN ONCE THE MIDTERMS ARE OVER\n\nHis clients are waiting out the election before buying back in. Their message to him: \"Happy to buy higher, but not buy now into a major political event.\" - Bloomberg https://t.co/yL2tYoZdWw",
+      "url": "https://x.com/StockMKTNewz/status/2112602865399402755",
+      "kind": "post",
+      "engagement": {
+        "views": 12815,
+        "likes": 72,
+        "reposts": 12,
+        "replies": 28
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
