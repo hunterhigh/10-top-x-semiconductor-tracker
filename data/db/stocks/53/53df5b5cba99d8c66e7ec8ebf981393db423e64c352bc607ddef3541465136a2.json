@@ -27,14 +27,14 @@
   "thesis_summary": null,
   "first_mention": "2025-12-02",
   "last_mention": "2026-10-19",
-  "total_mentions": 453,
+  "total_mentions": 454,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 214,
     "unusual_whales": 81,
     "aleabitoreddit": 53,
     "balder": 26,
     "michaelsikand": 23,
-    "octopusycc": 21,
+    "octopusycc": 22,
     "jukan05": 12,
     "ren_stocks": 9,
     "asklivermore": 7,
@@ -42,7 +42,7 @@
     "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 158,
+    "opinion": 159,
     "news": 214,
     "flow": 81
   },
@@ -10634,6 +10634,35 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2112292490309161212",
+      "blogger_id": "octopusycc",
+      "date": "2026-10-19",
+      "created_at": "2026-10-19T17:19:08-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "earnings likely to slightly miss market expectations, insufficient to drive significant upside",
+        "highly speculative options activity (0DTE gamblers, strong options speculation) makes prediction difficult",
+        "price pinned at 148–149 range with large Sell Put/Sell Call positions",
+        "expects slow decline to grind down time value of 10/21 expiry options before finding true direction downward",
+        "stock resembles crypto altcoin in speculative character"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$SPCX",
+      "text": "Spacex $SPCX  财报预测：偏空，但我更倾向于先磨时间价值，再决定方向。\n\n这只股票在我看来，越来越像币圈的山寨币。\n\n大量 0DTE 赌徒聚集，期权投机属性非常强，这也让财报预测的难度明显增加。\n\n目前我有几个判断：\n\n当前价格被 Pin 在 148–149 美元区间，大量 Sell Put / Sell Call 的仓位在今天获益。\n\n我认为本次财报可能略微偏离市场预期，但未必足以推动股价大幅上涨。\n\n如果财报没有明显超预期，我不认为股价能够直接向上突破。反而更可能缓慢下跌，先磨掉 10/21 到期期权的时间价值。\n\n等短期期权到期、仓位结构重新调整之后，再走出真正的方向。\n\n我的最终判断：$SPCX 财报后偏空，更倾向于先震荡消耗时间价值，再向下寻找方向。\n\n这只股票的投机属性太强，预测难度明显高于一般科技股，但我依然倾向于看跌。\n\n财报后再来验证。\n\n#OKX美股财报季",
+      "url": "https://x.com/octopusycc/status/2112292490309161212",
+      "kind": "post",
+      "engagement": {
+        "views": 2164,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10988,18 +11017,22 @@
     {
       "date": "2026-10-16",
       "close": 146.03
+    },
+    {
+      "date": "2026-10-19",
+      "close": 147.96
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-19T21:18:33.013684+00:00",
+  "price_updated_at": "2026-10-20T00:18:21.763925+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-20",
     "asof": "2026-10-19",
-    "attempted_at": "2026-10-19T21:18:32.605867+00:00",
+    "attempted_at": "2026-10-20T00:18:21.656746+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-06-12",
-    "last_available_date": "2026-10-16",
+    "last_available_date": "2026-10-19",
     "reason": "first_available_close=2026-06-12"
   },
   "price_source_state": {
@@ -11007,7 +11040,7 @@
     "provider_symbol": "SPCX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-19T21:18:32.605867+00:00",
+    "checked_at": "2026-10-20T00:18:21.656746+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
