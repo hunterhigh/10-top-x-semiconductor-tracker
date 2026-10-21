@@ -25,11 +25,11 @@
   "thesis_summary": null,
   "first_mention": "2025-07-21",
   "last_mention": "2026-10-20",
-  "total_mentions": 129,
+  "total_mentions": 131,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 63,
-    "KawzInvests": 20,
-    "michaelsikand": 14,
+    "KawzInvests": 21,
+    "michaelsikand": 15,
     "StockMKTNewz": 12,
     "ren_stocks": 8,
     "octopusycc": 7,
@@ -37,7 +37,7 @@
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 117,
+    "opinion": 119,
     "news": 12
   },
   "mentions": [
@@ -3297,6 +3297,56 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2112666353115283801",
+      "blogger_id": "michaelsikand",
+      "date": "2026-10-20",
+      "created_at": "2026-10-20T18:04:44-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "surging after strong SPCX earnings",
+        "SPCX estimated to be CRDO's largest customer",
+        "SPCX SI revenue up 830% and compute projected to scale from 1.7 GW to 3 GW by year end"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "$CRDO is surging after strong $SPCX earnings.\n\nSpaceX SI revenue is up 830%, now larger than Starlink, with compute projected to scale nearly 2x from 1.7 GW today to potentially 3 GW by year end.\n\n$SPCX is estimated by some analysts to be $CRDO's largest customer. https://t.co/KTgO1thSsi",
+      "url": "https://x.com/michaelsikand/status/2112666353115283801",
+      "kind": "post",
+      "engagement": {
+        "views": 12770,
+        "likes": 63,
+        "reposts": 8,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2112666439413010923",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-20",
+      "created_at": "2026-10-20T18:05:05-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CRDO",
+      "text": "RT @michaelsikand: $CRDO is surging after strong $SPCX earnings.\n\nSpaceX SI revenue is up 830%, now larger than Starlink, with compute proj…",
+      "url": "https://x.com/KawzInvests/status/2112666439413010923",
+      "kind": "post",
+      "engagement": {
+        "views": 12743,
+        "likes": 63,
+        "reposts": 8,
+        "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -4559,18 +4609,22 @@
     {
       "date": "2026-10-19",
       "close": 172.81
+    },
+    {
+      "date": "2026-10-20",
+      "close": 171.51
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-20T21:19:11.159933+00:00",
+  "price_updated_at": "2026-10-21T00:18:02.175016+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-21",
     "asof": "2026-10-20",
-    "attempted_at": "2026-10-20T21:19:10.778223+00:00",
+    "attempted_at": "2026-10-21T00:18:00.795205+00:00",
     "status": "ok",
     "first_available_date": "2025-10-21",
-    "last_available_date": "2026-10-19",
+    "last_available_date": "2026-10-20",
     "reason": null
   },
   "price_source_state": {
@@ -4578,7 +4632,7 @@
     "provider_symbol": "CRDO",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-20T21:19:10.778223+00:00",
+    "checked_at": "2026-10-21T00:18:00.795205+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
