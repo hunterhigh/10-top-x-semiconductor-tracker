@@ -1,6 +1,6 @@
 {
   "ticker": "TSLA",
-  "cashtag": "Tesla",
+  "cashtag": "$TSLA",
   "instrument": {
     "instrument_id": "US:TSLA",
     "display_code": "TSLA",
@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-08-25",
-  "last_mention": "2026-10-22",
-  "total_mentions": 366,
+  "last_mention": "2026-10-23",
+  "total_mentions": 367,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 123,
-    "StockMKTNewz": 121,
+    "StockMKTNewz": 122,
     "balder": 51,
     "octopusycc": 25,
     "jukan05": 17,
@@ -40,7 +40,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 232,
-    "news": 121,
+    "news": 122,
     "flow": 13
   },
   "mentions": [
@@ -8652,6 +8652,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2113747604920062105",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-23",
+      "created_at": "2026-10-23T17:41:15-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$TSLA",
+      "text": "Tesla $TSLA just posted this today:\n\n“Inspired by fighter jet cockpits, Roadster’s interface was designed around the pilot” https://t.co/h6qQp1m4Fn",
+      "url": "https://x.com/StockMKTNewz/status/2113747604920062105",
+      "kind": "post",
+      "engagement": {
+        "views": 24907,
+        "likes": 165,
+        "reposts": 12,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9914,18 +9937,22 @@
     {
       "date": "2026-10-22",
       "close": 374.58
+    },
+    {
+      "date": "2026-10-23",
+      "close": 372.22
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-23T21:18:36.242145+00:00",
+  "price_updated_at": "2026-10-24T00:18:12.123457+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-24",
     "asof": "2026-10-23",
-    "attempted_at": "2026-10-23T21:18:35.383777+00:00",
+    "attempted_at": "2026-10-24T00:18:11.550732+00:00",
     "status": "ok",
     "first_available_date": "2025-10-24",
-    "last_available_date": "2026-10-22",
+    "last_available_date": "2026-10-23",
     "reason": null
   },
   "price_source_state": {
@@ -9933,7 +9960,7 @@
     "provider_symbol": "TSLA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-23T21:18:35.383777+00:00",
+    "checked_at": "2026-10-24T00:18:11.550732+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
