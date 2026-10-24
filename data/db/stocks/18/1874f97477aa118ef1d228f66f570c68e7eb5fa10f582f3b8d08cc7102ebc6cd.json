@@ -1,6 +1,6 @@
 {
   "ticker": "AMAT",
-  "cashtag": "Applied Materials",
+  "cashtag": "应用材料",
   "instrument": {
     "instrument_id": "US:AMAT",
     "display_code": "AMAT",
@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-12",
-  "last_mention": "2026-10-20",
-  "total_mentions": 57,
+  "last_mention": "2026-10-24",
+  "total_mentions": 58,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 21,
     "aleabitoreddit": 12,
-    "balder": 11,
+    "balder": 12,
     "jukan05": 7,
     "octopusycc": 2,
     "unusual_whales": 2,
@@ -37,7 +37,7 @@
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 34,
+    "opinion": 35,
     "news": 21,
     "flow": 2
   },
@@ -1376,6 +1376,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2113943107469443326",
+      "blogger_id": "balder",
+      "date": "2026-10-24",
+      "created_at": "2026-10-24T06:38:06-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "held investor day with no numerical guidance, only 'tremendous confidence'",
+        "stock fell 17% in a week",
+        "cannot model revenue due to export license uncertainty on signed orders"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "应用材料",
+      "text": "应用材料上周开了场投资者日，整场没给一个数字，只留下一句 tremendous confidence。一周跌 17%（TIKR 的数）。\n\n我的理解是它真算不出来。存储厂现在能把 2027 年的量签成合同，设备商的货得先拿到批文——订单在自己手上，许可证在别人手上，这种收入怎么建模型。\n\n假设你是它的 CFO：出货量你能估，批文你估不了。",
+      "url": "https://x.com/Balder13946731/status/2113943107469443326",
+      "kind": "post",
+      "engagement": {
+        "views": 2914,
+        "likes": 7,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2570,11 +2597,15 @@
     {
       "date": "2026-10-22",
       "close": 375.58
+    },
+    {
+      "date": "2026-10-23",
+      "close": 377.24
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-23T15:19:31.366023+00:00",
+  "price_updated_at": "2026-10-24T12:17:43.177367+00:00",
   "price_history_52w": {
     "requested_start": "2025-08-21",
     "asof": "2026-08-20",
@@ -2589,7 +2620,7 @@
     "provider_symbol": "AMAT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-23T15:19:30.294634+00:00",
+    "checked_at": "2026-10-24T12:17:41.807952+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
