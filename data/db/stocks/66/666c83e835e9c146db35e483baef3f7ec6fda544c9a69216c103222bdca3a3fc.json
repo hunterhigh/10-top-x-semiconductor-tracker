@@ -1,6 +1,6 @@
 {
   "ticker": "T",
-  "cashtag": "$T",
+  "cashtag": "AT&T",
   "instrument": {
     "instrument_id": "US:T",
     "display_code": "T",
@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-21",
-  "last_mention": "2026-10-21",
-  "total_mentions": 10,
+  "last_mention": "2026-10-25",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 8,
     "aleabitoreddit": 1,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1,
+    "opinion": 2,
     "news": 8,
     "flow": 1
   },
@@ -267,6 +268,33 @@
         "likes": 75,
         "reposts": 7,
         "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114366814834860382",
+      "blogger_id": "balder",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T10:41:46-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "C-band spectrum licenses recorded as intangible assets at auction prices",
+        "those valuations depend on ground-tower delivery model",
+        "a tower-free Starlink network by 2028 would impair those asset values on the balance sheet"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "AT&T",
+      "text": "AT&T、Verizon、T-Mobile 一起给 FCC 递话，说 Musk 计划 2028 年前自己做一张全美手机网络，会有 real consequences。\n\n递话的三家里有 T-Mobile，它自己卖的那个卫星短信服务，背后供货的就是 Starlink。\n\n光 C 波段那一轮拍卖就拍出八百多亿美元，大头是这三家。这笔钱在表上记成无形资产，底下压着那堆债，而它能按这个价记在表上，前提是信号必须从地面铁塔来。\n\n假设你是 Verizon 的 CFO，2028 年真跑起来一张不用铁塔的网络，你手里那张牌照该按什么价记。",
+      "url": "https://x.com/Balder13946731/status/2114366814834860382",
+      "kind": "post",
+      "engagement": {
+        "views": 1539,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 4
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
