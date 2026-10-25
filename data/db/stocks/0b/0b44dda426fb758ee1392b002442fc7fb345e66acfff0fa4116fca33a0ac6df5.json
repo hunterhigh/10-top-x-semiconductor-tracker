@@ -1,10 +1,10 @@
 {
   "ticker": "2498",
-  "cashtag": "Robosense (2498)",
+  "cashtag": "RoboSense",
   "instrument": {
     "instrument_id": "UNVERIFIED:2498",
     "display_code": "2498",
-    "display_name": "Name unverified",
+    "display_name": "RoboSense Technology",
     "display_market": "Market unverified",
     "aliases": [
       "2498"
@@ -20,17 +20,19 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "RoboSense Technology",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-05-12",
-  "last_mention": "2026-05-12",
-  "total_mentions": 1,
+  "last_mention": "2026-10-24",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 1,
+    "news": 1
   },
   "mentions": [
     {
@@ -55,8 +57,44 @@
       },
       "extractor_model": "claude-opus-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114121900905377833",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-24",
+      "created_at": "2026-10-24T18:28:34-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "RoboSense",
+      "text": "Here are some of the companies building humanoid robot parts according to UBS\n\nRobot makers:\n- China: Unitree, UBTech, AgiBot\n- Overseas: Tesla, Boston Dynamics (Hyundai), Figure AI, Agility Robotics\n\nThe brain (computing):\n- Nvidia, Qualcomm, AMD, Intel\n- China: Horizon Robotics, Cambricon, Huawei\n\nThe eyes (sensors):\n- Sony, Cognex, Keyence\n- China: Hesai, RoboSense\n\nThe body (batteries):\n- CATL, LG Energy Solution, Samsung SDI, Panasonic\n\nThe joints (motors and gears):\n- Harmonic Drive Systems, Nabtesco, Schaeffler, Nidec\n\nIf you're seeing this im sure you're interested in Robotics\n\nMy sponsors below at Krane Shares are doing a webinar on the topic ... the link to register is below",
+      "url": "https://x.com/StockMKTNewz/status/2114121900905377833",
+      "kind": "post",
+      "engagement": {
+        "views": 17958,
+        "likes": 59,
+        "reposts": 6,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
-  "price_status": "pending"
+  "price_status": "unverified_symbol",
+  "price_unit": "",
+  "price_reason": "unverified_instrument_identity",
+  "price_source_state": {
+    "provider": null,
+    "provider_symbol": null,
+    "status": "symbol_unresolved",
+    "reason": "unverified_instrument_identity",
+    "checked_at": "2026-10-25T00:18:20.436865+00:00",
+    "attempts": 1,
+    "next_retry_at": null,
+    "http_status": null
+  },
+  "price_updated_at": "2026-10-25T00:18:20.436878+00:00"
 }

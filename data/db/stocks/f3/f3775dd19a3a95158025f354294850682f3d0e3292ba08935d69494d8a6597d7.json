@@ -1,6 +1,6 @@
 {
   "ticker": "APO",
-  "cashtag": "$APO",
+  "cashtag": "Apollo",
   "instrument": {
     "instrument_id": "US:APO",
     "display_code": "APO",
@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-03-23",
-  "last_mention": "2026-10-01",
-  "total_mentions": 10,
+  "last_mention": "2026-10-24",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 8,
     "aleabitoreddit": 1,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1,
+    "opinion": 2,
     "news": 8,
     "flow": 1
   },
@@ -263,6 +264,29 @@
         "likes": 37,
         "reposts": 5,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114132968390414655",
+      "blogger_id": "balder",
+      "date": "2026-10-24",
+      "created_at": "2026-10-24T19:12:33-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Apollo",
+      "text": "我觉得AI泡沫这事大家吵错了对象。股票真崩了你一秒就卖出去，跑不掉的在另一头。\n\n这两年最重的那块capex已经挪到表外了——Meta在路易斯安那那个机房就是跟Blue Owl搞的JV，两百多亿美元。钱从私募信贷来，私募信贷的钱从保险来：Apollo下面是Athene，KKR下面是Global Atlantic，收的全是年金和寿险的保费。所以你爸妈那份固定年金，最后落在路易斯安那一片玉米地里的机房上，评级机构看一眼租客写着Meta，投资级，签了🙂\n\n那栋楼的残值整个押在一个租客身上。机器五六年折旧干净，租约签的是十五二十年，真到那天不续租，那片地上的水泥和钢筋在当地能卖几个钱。\n\n而且年金合同锁十年，提前退要交退保费。股票持有人想走就走，这批人只能坐着。\n\n假设你是一家保险公司的CIO，监管只让你买投资级，而眼下收益最高的投资级就是这些机房的优先级债券。你会不买吗？",
+      "url": "https://x.com/Balder13946731/status/2114132968390414655",
+      "kind": "post",
+      "engagement": {
+        "views": 2723,
+        "likes": 14,
+        "reposts": 0,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
