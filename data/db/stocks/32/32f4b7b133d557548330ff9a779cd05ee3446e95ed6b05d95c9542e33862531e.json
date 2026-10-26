@@ -1,6 +1,6 @@
 {
   "ticker": "AVGO",
-  "cashtag": "AVGO.O",
+  "cashtag": "$AVGO",
   "instrument": {
     "instrument_id": "US:AVGO",
     "display_code": "AVGO",
@@ -25,14 +25,14 @@
   "thesis_summary": null,
   "first_mention": "2025-09-09",
   "last_mention": "2026-10-26",
-  "total_mentions": 314,
+  "total_mentions": 316,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 168,
-    "StockMKTNewz": 39,
+    "StockMKTNewz": 40,
     "balder": 31,
     "jukan05": 28,
+    "KawzInvests": 10,
     "octopusycc": 10,
-    "KawzInvests": 9,
     "zephyr_z9": 6,
     "asklivermore": 5,
     "unusual_whales": 4,
@@ -42,8 +42,8 @@
     "frank_trading": 3
   },
   "total_mentions_by_signal_type": {
-    "opinion": 267,
-    "news": 39,
+    "opinion": 268,
+    "news": 40,
     "flow": 4,
     "disclosure": 4
   },
@@ -7481,6 +7481,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114696634240049243",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-26",
+      "created_at": "2026-10-26T08:32:21-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Broadcom",
+      "text": "META $META JUST ANNOUNCED PLANS TO RAISE ~$95B BY SELLING NEW STOCK\n\nIt's starting with about $35B now: $22.5B of common stock and $12.5B of convertible preferred stock. Then it plans a separate $60B program to sell its new non-voting Class C shares once they start trading, likely in Q1 2027.\n\nNvidia, AMD, and Broadcom have indicated interest in buying up to $5B of the stock.\n\nMeta says the money will help fund its AI buildout.",
+      "url": "https://x.com/StockMKTNewz/status/2114696634240049243",
+      "kind": "post",
+      "engagement": {
+        "views": 28730,
+        "likes": 145,
+        "reposts": 10,
+        "replies": 45
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114724545428853193",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-26",
+      "created_at": "2026-10-26T10:23:15-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AVGO",
+      "text": "The numbers in Anthropic’s S-1 are hard to ignore. $ANT\n\nThe S-1 went public this morning. Everything below is quoted straight from it.\n\nOn demand vs supply:\n“we have historically operated in a compute-constrained environment in which demand for compute has exceeded the supply available to us.”\n\nOn $TSM:\n“we have not always been able to obtain sufficient quantities of chips on a timely basis.”\n\nOn memory, HBM is “largely manufactured by SK hynix Inc., Samsung Electronics Co., and Micron Technology, Inc.” $SKHY $MU \n\nOn data center equipment:\nPower, cooling, generators and networking gear “must be ordered years in advance” and “require substantial pre-delivery payments that we may not recover if our plans change.”\n\nThen look at the disclosed compute agreements:\n\n> $AVGO ~$161.2B in five-year leases for TPU capacity\n> $GOOGL at least $114.5B through 2033\n> $AMZN at least $110.0B through 2036\n> $MSFT at least $44.9B through 2033\n> $NVDA GPUs through SpaceXAI (up to $120.5B), Nscale (~$44.6B) and Lambda (~$41.3B)\n> $AMD Helios racks, over $20B if fully procured\n\nRevenue grew 1,368% YoY in Q2. Compute and infrastructure expense grew 300%. Net revenue retention is ~900%.",
+      "url": "https://x.com/KawzInvests/status/2114724545428853193",
+      "kind": "post",
+      "engagement": {
+        "views": 6675,
+        "likes": 21,
+        "reposts": 1,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -8759,11 +8805,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-26T12:17:29.764473+00:00",
+  "price_updated_at": "2026-10-26T15:20:45.120426+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-27",
     "asof": "2026-10-26",
-    "attempted_at": "2026-10-26T12:17:29.465613+00:00",
+    "attempted_at": "2026-10-26T15:20:44.707865+00:00",
     "status": "ok",
     "first_available_date": "2025-10-27",
     "last_available_date": "2026-10-23",
@@ -8774,7 +8820,7 @@
     "provider_symbol": "AVGO",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-26T12:17:29.465613+00:00",
+    "checked_at": "2026-10-26T15:20:44.707865+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
