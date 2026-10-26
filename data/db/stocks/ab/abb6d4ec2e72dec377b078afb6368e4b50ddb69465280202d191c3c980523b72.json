@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-24",
-  "last_mention": "2026-10-23",
-  "total_mentions": 37,
+  "last_mention": "2026-10-25",
+  "total_mentions": 38,
   "total_mentions_by_blogger": {
+    "jukan05": 10,
     "StockMKTNewz": 10,
-    "jukan05": 9,
     "aleabitoreddit": 5,
     "balder": 5,
     "unusual_whales": 2,
@@ -39,7 +39,7 @@
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 25,
+    "opinion": 26,
     "news": 10,
     "flow": 2
   },
@@ -903,6 +903,29 @@
         "likes": 2,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114499959563370930",
+      "blogger_id": "jukan05",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T19:30:50-04:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "OpenAI",
+      "text": "Daishin Securities\n\nCSPs and AI labs: CSPs and AI labs had requested the development of lower-stack HBM products, such as 4-high and 6-high configurations, for use in low-end inference products. Those plans now appear to have been shelved, with 8-high once again emerging as the minimum stack height.\n\nNVIDIA: Rubin’s specifications have changed amid base die supply constraints and requests from customers prioritizing bandwidth over cost efficiency. The original plan called for a mix of 8-high and 12-high HBM, but the 8-high option appears to have been dropped. For Rubin Ultra, scheduled for release in 2027, multiple architectural variants are currently undergoing tape-out. Initial versions are expected to use the highest-specification 8-high HBM4, while subsequent versions are expected to adopt either 8-high or 12-high HBM4E.\n\nAMD: AMD is expected to use a mix of 8-high and 12-high HBM4 in its 2027 products. One notable development is the upcoming MI450, which is expected to increase the number of HBM stacks within the CoWoS package to 12, delivering 288GB of HBM4. The increase from eight to 12 HBM stacks per CoWoS package is a positive development for HBM content over the medium to long term.\n\nOpenAI and Anthropic: OpenAI is expected to adopt 12-high HBM4, while Anthropic is expected to use 8-high HBM4.",
+      "url": "https://x.com/jukan05/status/2114499959563370930",
+      "kind": "post",
+      "engagement": {
+        "views": 26399,
+        "likes": 95,
+        "reposts": 8,
+        "replies": 18
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

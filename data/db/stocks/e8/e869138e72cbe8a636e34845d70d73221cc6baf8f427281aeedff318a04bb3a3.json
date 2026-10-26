@@ -1,6 +1,6 @@
 {
   "ticker": "000660",
-  "cashtag": "SK hynix",
+  "cashtag": "SK Hynix",
   "instrument": {
     "instrument_id": "KRX:000660",
     "display_code": "000660",
@@ -27,10 +27,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-10-24",
-  "total_mentions": 392,
+  "last_mention": "2026-10-25",
+  "total_mentions": 394,
   "total_mentions_by_blogger": {
-    "jukan05": 141,
+    "jukan05": 143,
     "aleabitoreddit": 121,
     "StockMKTNewz": 44,
     "ren_stocks": 28,
@@ -42,7 +42,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 335,
+    "opinion": 337,
     "news": 44,
     "flow": 13
   },
@@ -9442,6 +9442,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114482386914415096",
+      "blogger_id": "jukan05",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T18:21:00-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK HYNIX",
+      "text": "SK HYNIX PLANS TO PAY A $12 BILLION SPECIAL DIVIDEND, EQUIVALENT TO 80% OF THE GAINS FROM ITS KIOXIA STAKE SALE — LOCAL KOREAN MEDIA REPORTS",
+      "url": "https://x.com/jukan05/status/2114482386914415096",
+      "kind": "post",
+      "engagement": {
+        "views": 56117,
+        "likes": 557,
+        "reposts": 43,
+        "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114483075623289014",
+      "blogger_id": "jukan05",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T18:23:45-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK Hynix",
+      "text": "@TShirtnJeans2 There’s been some talk among local Korean sell-side analysts over the past few weeks that SK Hynix is looking to increase dividends rather than buy back shares... I’m not sure why either.",
+      "url": "https://x.com/jukan05/status/2114483075623289014",
+      "kind": "reply",
+      "engagement": {
+        "views": 4888,
+        "likes": 26,
+        "reposts": 1,
+        "replies": 9
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10670,14 +10716,13 @@
       "close": 1277000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-25T21:17:46.895819+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-10-26T00:19:22.660950+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-26",
     "asof": "2026-10-25",
-    "attempted_at": "2026-10-25T21:17:46.683507+00:00",
+    "attempted_at": "2026-10-26T00:19:21.704461+00:00",
     "status": "ok",
     "first_available_date": "2025-10-27",
     "last_available_date": "2026-10-23",
@@ -10685,12 +10730,12 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-10-25T21:17:46.683507+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-10-26T00:17:46.683507+00:00",
+    "provider_symbol": "000660.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-10-26T00:19:21.704461+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }

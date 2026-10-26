@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-25T21:17:13.575913+00:00",
+  "generated_at": "2026-10-26T00:18:48.946703+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2571,
-    "total_mentions": 34308,
+    "total_mentions": 34333,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-25T21:18:19.542276+00:00"
+    "prices_updated_at": "2026-10-26T00:20:08.686417+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -46,7 +46,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "$NVDA",
+      "cashtag": "NVIDIA",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -56,12 +56,12 @@
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
       "last_mention": "2026-10-25",
-      "total_mentions": 1458,
+      "total_mentions": 1461,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 593,
+        "aleabitoreddit": 594,
         "StockMKTNewz": 289,
-        "jukan05": 153,
+        "jukan05": 155,
         "balder": 88,
         "zephyr_z9": 70,
         "unusual_whales": 70,
@@ -105,10 +105,10 @@
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
       "last_mention": "2026-10-25",
-      "total_mentions": 1197,
+      "total_mentions": 1198,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 835,
+        "aleabitoreddit": 836,
         "ren_stocks": 246,
         "StockMKTNewz": 44,
         "michaelsikand": 20,
@@ -162,7 +162,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -287,13 +287,13 @@
       "company": "Micron",
       "industry": "Memory/HBM",
       "first_mention": "2025-09-25",
-      "last_mention": "2026-10-24",
-      "total_mentions": 735,
+      "last_mention": "2026-10-25",
+      "total_mentions": 736,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 236,
         "StockMKTNewz": 121,
-        "ren_stocks": 119,
+        "ren_stocks": 120,
         "jukan05": 74,
         "octopusycc": 55,
         "balder": 36,
@@ -337,10 +337,10 @@
       "industry": "Hyperscaler",
       "first_mention": "2025-07-28",
       "last_mention": "2026-10-25",
-      "total_mentions": 729,
+      "total_mentions": 730,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 300,
+        "aleabitoreddit": 301,
         "StockMKTNewz": 189,
         "balder": 60,
         "michaelsikand": 50,
@@ -545,6 +545,55 @@
       "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
       "price_history_52w_status": "ok"
     },
+    "US:SPCX": {
+      "ticker": "SPCX",
+      "instrument": {
+        "instrument_id": "US:SPCX",
+        "display_code": "SPCX",
+        "display_name": "Space Exploration Technologies Corp",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SPACEX",
+          "SPCE",
+          "SPCX"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SPCX",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SPCX",
+      "price_symbol": "SPCX",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Space Exploration Technologies Corp",
+      "industry": null,
+      "first_mention": "2025-12-02",
+      "last_mention": "2026-10-25",
+      "total_mentions": 526,
+      "blogger_count": 11,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 241,
+        "unusual_whales": 81,
+        "aleabitoreddit": 59,
+        "michaelsikand": 36,
+        "balder": 32,
+        "octopusycc": 31,
+        "jukan05": 16,
+        "ren_stocks": 11,
+        "asklivermore": 10,
+        "KawzInvests": 8,
+        "frank_trading": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SPCX",
+      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
+      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+      "price_history_52w_status": "insufficient_history"
+    },
     "US:AMZN": {
       "ticker": "AMZN",
       "instrument": {
@@ -594,55 +643,6 @@
       "path": "stocks/1a/1abfdf6ed893021c20c87f30c55ee285c684bfe175359d2e53c14494055660c3.json",
       "price_history_52w_status": "ok"
     },
-    "US:SPCX": {
-      "ticker": "SPCX",
-      "instrument": {
-        "instrument_id": "US:SPCX",
-        "display_code": "SPCX",
-        "display_name": "Space Exploration Technologies Corp",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SPACEX",
-          "SPCE",
-          "SPCX"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SPCX",
-        "verification_status": "verified"
-      },
-      "cashtag": "SPCX",
-      "price_symbol": "SPCX",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Space Exploration Technologies Corp",
-      "industry": null,
-      "first_mention": "2025-12-02",
-      "last_mention": "2026-10-25",
-      "total_mentions": 523,
-      "blogger_count": 11,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 241,
-        "unusual_whales": 81,
-        "aleabitoreddit": 56,
-        "michaelsikand": 36,
-        "balder": 32,
-        "octopusycc": 31,
-        "jukan05": 16,
-        "ren_stocks": 11,
-        "asklivermore": 10,
-        "KawzInvests": 8,
-        "frank_trading": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SPCX",
-      "hash": "53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2",
-      "path": "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
-      "price_history_52w_status": "insufficient_history"
-    },
     "US:AAPL": {
       "ticker": "AAPL",
       "instrument": {
@@ -670,12 +670,12 @@
       "industry": null,
       "first_mention": "2025-07-28",
       "last_mention": "2026-10-25",
-      "total_mentions": 514,
+      "total_mentions": 516,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
-        "StockMKTNewz": 218,
+        "StockMKTNewz": 219,
         "aleabitoreddit": 109,
-        "jukan05": 54,
+        "jukan05": 55,
         "unusual_whales": 52,
         "balder": 31,
         "zephyr_z9": 11,
@@ -719,11 +719,11 @@
       "industry": "Memory",
       "first_mention": "2025-11-25",
       "last_mention": "2026-10-25",
-      "total_mentions": 494,
+      "total_mentions": 495,
       "blogger_count": 12,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 203,
-        "ren_stocks": 152,
+        "ren_stocks": 153,
         "StockMKTNewz": 36,
         "balder": 20,
         "KawzInvests": 17,
@@ -862,13 +862,13 @@
       "company": "AMD",
       "industry": "GPU/AI Chips",
       "first_mention": "2025-09-11",
-      "last_mention": "2026-10-24",
-      "total_mentions": 434,
+      "last_mention": "2026-10-25",
+      "total_mentions": 435,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 191,
         "StockMKTNewz": 81,
-        "jukan05": 41,
+        "jukan05": 42,
         "ren_stocks": 41,
         "balder": 21,
         "zephyr_z9": 14,
@@ -999,7 +999,7 @@
         "price_symbol": "000660.KS",
         "verification_status": "verified"
       },
-      "cashtag": "SK hynix",
+      "cashtag": "SK Hynix",
       "price_symbol": "000660.KS",
       "exchange": "KRX",
       "currency": "KRW",
@@ -1008,11 +1008,11 @@
       "company": "SK hynix Inc.",
       "industry": null,
       "first_mention": "2025-11-04",
-      "last_mention": "2026-10-24",
-      "total_mentions": 392,
+      "last_mention": "2026-10-25",
+      "total_mentions": 394,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "jukan05": 141,
+        "jukan05": 143,
         "aleabitoreddit": 121,
         "StockMKTNewz": 44,
         "ren_stocks": 28,
@@ -1023,7 +1023,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1045,7 +1045,7 @@
         "price_symbol": "TSLA",
         "verification_status": "verified"
       },
-      "cashtag": "Tesla",
+      "cashtag": "$TSLA",
       "price_symbol": "TSLA",
       "exchange": "US",
       "currency": "USD",
@@ -1054,12 +1054,12 @@
       "company": "Tesla, Inc.",
       "industry": null,
       "first_mention": "2025-08-25",
-      "last_mention": "2026-10-24",
-      "total_mentions": 369,
+      "last_mention": "2026-10-25",
+      "total_mentions": 371,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
+        "aleabitoreddit": 125,
         "StockMKTNewz": 124,
-        "aleabitoreddit": 123,
         "balder": 51,
         "octopusycc": 25,
         "jukan05": 17,
@@ -1115,7 +1115,7 @@
         "balder": 4,
         "michaelsikand": 1
       },
-      "price_status": "partial",
+      "price_status": "ok",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -1147,10 +1147,10 @@
       "industry": "GPU Cloud/Neocloud",
       "first_mention": "2025-07-21",
       "last_mention": "2026-10-25",
-      "total_mentions": 354,
+      "total_mentions": 355,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 207,
+        "aleabitoreddit": 208,
         "StockMKTNewz": 58,
         "balder": 27,
         "ren_stocks": 22,
@@ -1192,11 +1192,11 @@
       "company": "Broadcom",
       "industry": "AI ASIC/Networking Chips",
       "first_mention": "2025-09-09",
-      "last_mention": "2026-10-21",
-      "total_mentions": 312,
+      "last_mention": "2026-10-25",
+      "total_mentions": 313,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 167,
+        "aleabitoreddit": 168,
         "StockMKTNewz": 39,
         "balder": 31,
         "jukan05": 28,
@@ -1632,7 +1632,8 @@
       "price_status": "ok",
       "instrument_id": "US:AEHR",
       "hash": "6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d",
-      "path": "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json"
+      "path": "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
+      "price_history_52w_status": "ok"
     },
     "US:TSEM": {
       "ticker": "TSEM",
@@ -1718,6 +1719,52 @@
       "hash": "d109b81e630da934747fbbbb58102276d25b19e31b19c5a63542878c516cda18",
       "path": "stocks/d1/d109b81e630da934747fbbbb58102276d25b19e31b19c5a63542878c516cda18.json"
     },
+    "US:SKHY": {
+      "ticker": "SKHY",
+      "instrument": {
+        "instrument_id": "US:SKHY",
+        "display_code": "SKHY",
+        "display_name": "SK hynix Inc.",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SKHY"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SKHY",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SKHY",
+      "price_symbol": "SKHY",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "SK hynix Inc.",
+      "industry": null,
+      "first_mention": "2026-06-30",
+      "last_mention": "2026-10-25",
+      "total_mentions": 150,
+      "blogger_count": 10,
+      "total_mentions_by_blogger": {
+        "ren_stocks": 42,
+        "aleabitoreddit": 28,
+        "StockMKTNewz": 19,
+        "jukan05": 18,
+        "balder": 18,
+        "KawzInvests": 9,
+        "unusual_whales": 6,
+        "frank_trading": 4,
+        "octopusycc": 3,
+        "michaelsikand": 3
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SKHY",
+      "hash": "f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474",
+      "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
+      "price_history_52w_status": "insufficient_history"
+    },
     "UNVERIFIED:SPX": {
       "ticker": "SPX",
       "instrument": {
@@ -1762,51 +1809,6 @@
       "instrument_id": "UNVERIFIED:SPX",
       "hash": "3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3",
       "path": "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json"
-    },
-    "US:SKHY": {
-      "ticker": "SKHY",
-      "instrument": {
-        "instrument_id": "US:SKHY",
-        "display_code": "SKHY",
-        "display_name": "SK hynix Inc.",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SKHY"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SKHY",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SKHY",
-      "price_symbol": "SKHY",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "SK hynix Inc.",
-      "industry": null,
-      "first_mention": "2026-06-30",
-      "last_mention": "2026-10-22",
-      "total_mentions": 149,
-      "blogger_count": 10,
-      "total_mentions_by_blogger": {
-        "ren_stocks": 42,
-        "aleabitoreddit": 28,
-        "StockMKTNewz": 19,
-        "jukan05": 18,
-        "balder": 18,
-        "KawzInvests": 9,
-        "unusual_whales": 6,
-        "frank_trading": 4,
-        "octopusycc": 3,
-        "michaelsikand": 2
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SKHY",
-      "hash": "f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474",
-      "path": "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json"
     },
     "UNVERIFIED:CXMT": {
       "ticker": "CXMT",
@@ -2026,8 +2028,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
     },
     "US:QQQ": {
       "ticker": "QQQ",
@@ -2541,8 +2542,7 @@
       "price_status": "ok",
       "instrument_id": "US:DELL",
       "hash": "a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b",
-      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json"
     },
     "UNVERIFIED:ANTHROPIC": {
       "ticker": "ANTHROPIC",
@@ -2569,12 +2569,12 @@
       "company": "Anthropic PBC",
       "industry": null,
       "first_mention": "2026-06-10",
-      "last_mention": "2026-10-23",
-      "total_mentions": 94,
+      "last_mention": "2026-10-25",
+      "total_mentions": 95,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "StockMKTNewz": 35,
-        "jukan05": 15,
+        "jukan05": 16,
         "unusual_whales": 11,
         "michaelsikand": 9,
         "balder": 6,
@@ -3614,6 +3614,51 @@
       "hash": "d2d76618ad57717246f762e870beaa14f4ea84fc449b9dbb104541bebf4b1d89",
       "path": "stocks/d2/d2d76618ad57717246f762e870beaa14f4ea84fc449b9dbb104541bebf4b1d89.json"
     },
+    "UNVERIFIED:DRAM": {
+      "ticker": "DRAM",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:DRAM",
+        "display_code": "DRAM",
+        "display_name": "Advantage Data Centers REIT (or DRAM ETF)",
+        "display_market": "Market unverified",
+        "aliases": [
+          "DRAM"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "$DRAM",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Advantage Data Centers REIT (or DRAM ETF)",
+      "industry": null,
+      "first_mention": "2026-04-02",
+      "last_mention": "2026-10-25",
+      "total_mentions": 59,
+      "blogger_count": 9,
+      "total_mentions_by_blogger": {
+        "jukan05": 17,
+        "aleabitoreddit": 11,
+        "octopusycc": 9,
+        "KawzInvests": 6,
+        "ren_stocks": 6,
+        "michaelsikand": 5,
+        "asklivermore": 2,
+        "zephyr_z9": 2,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:DRAM",
+      "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
+    },
     "US:MRNA": {
       "ticker": "MRNA",
       "instrument": {
@@ -3691,50 +3736,6 @@
       "instrument_id": "US:OSS",
       "hash": "c99003b5b2daf205169a1e83674b4b24c955c67e0a4a2c15fd6f41aa87f63bd2",
       "path": "stocks/c9/c99003b5b2daf205169a1e83674b4b24c955c67e0a4a2c15fd6f41aa87f63bd2.json"
-    },
-    "UNVERIFIED:DRAM": {
-      "ticker": "DRAM",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:DRAM",
-        "display_code": "DRAM",
-        "display_name": "Advantage Data Centers REIT (or DRAM ETF)",
-        "display_market": "Market unverified",
-        "aliases": [
-          "DRAM"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "$DRAM",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Advantage Data Centers REIT (or DRAM ETF)",
-      "industry": null,
-      "first_mention": "2026-04-02",
-      "last_mention": "2026-10-12",
-      "total_mentions": 58,
-      "blogger_count": 9,
-      "total_mentions_by_blogger": {
-        "jukan05": 17,
-        "aleabitoreddit": 11,
-        "octopusycc": 9,
-        "KawzInvests": 6,
-        "ren_stocks": 6,
-        "michaelsikand": 4,
-        "asklivermore": 2,
-        "zephyr_z9": 2,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:DRAM",
-      "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
     },
     "US:AMAT": {
       "ticker": "AMAT",
@@ -5157,7 +5158,8 @@
       "price_status": "ok",
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
-      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
+      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
+      "price_history_52w_status": "ok"
     },
     "US:RGTI": {
       "ticker": "RGTI",
@@ -5665,6 +5667,51 @@
       "hash": "14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc",
       "path": "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json"
     },
+    "UNVERIFIED:OPENAI": {
+      "ticker": "OPENAI",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:OPENAI",
+        "display_code": "OPENAI",
+        "display_name": "OpenAI",
+        "display_market": "Market unverified",
+        "aliases": [
+          "OPENAI"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "OpenAI",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "OpenAI",
+      "industry": null,
+      "first_mention": "2026-01-24",
+      "last_mention": "2026-10-25",
+      "total_mentions": 38,
+      "blogger_count": 10,
+      "total_mentions_by_blogger": {
+        "jukan05": 10,
+        "StockMKTNewz": 10,
+        "aleabitoreddit": 5,
+        "balder": 5,
+        "unusual_whales": 2,
+        "zephyr_z9": 2,
+        "KawzInvests": 1,
+        "octopusycc": 1,
+        "michaelsikand": 1,
+        "ren_stocks": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:OPENAI",
+      "hash": "abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72",
+      "path": "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json"
+    },
     "US:BKKT": {
       "ticker": "BKKT",
       "instrument": {
@@ -5818,51 +5865,6 @@
       "instrument_id": "TWSE:2454",
       "hash": "da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570",
       "path": "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json"
-    },
-    "UNVERIFIED:OPENAI": {
-      "ticker": "OPENAI",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:OPENAI",
-        "display_code": "OPENAI",
-        "display_name": "OpenAI",
-        "display_market": "Market unverified",
-        "aliases": [
-          "OPENAI"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "OpenAI",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "OpenAI",
-      "industry": null,
-      "first_mention": "2026-01-24",
-      "last_mention": "2026-10-23",
-      "total_mentions": 37,
-      "blogger_count": 10,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 10,
-        "jukan05": 9,
-        "aleabitoreddit": 5,
-        "balder": 5,
-        "unusual_whales": 2,
-        "zephyr_z9": 2,
-        "KawzInvests": 1,
-        "octopusycc": 1,
-        "michaelsikand": 1,
-        "ren_stocks": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:OPENAI",
-      "hash": "abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72",
-      "path": "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json"
     },
     "US:ADBE": {
       "ticker": "ADBE",
@@ -6494,6 +6496,43 @@
       "hash": "0b679089cff3bb94a92a86ed42b0dd978f7e49d56ac8ba03f890a80262d49cf1",
       "path": "stocks/0b/0b679089cff3bb94a92a86ed42b0dd978f7e49d56ac8ba03f890a80262d49cf1.json"
     },
+    "US:SLNH": {
+      "ticker": "SLNH",
+      "instrument": {
+        "instrument_id": "US:SLNH",
+        "display_code": "SLNH",
+        "display_name": "Soluna Holdings, Inc",
+        "display_market": "NASDAQ",
+        "aliases": [
+          "SLNH"
+        ],
+        "market": "NASDAQ",
+        "country": "US",
+        "currency": "USD",
+        "price_symbol": "SLNH",
+        "verification_status": "verified"
+      },
+      "cashtag": "$SLNH",
+      "price_symbol": "SLNH",
+      "exchange": "US",
+      "currency": "USD",
+      "ticker_mapped": true,
+      "verification_status": "verified",
+      "company": "Soluna Holdings, Inc",
+      "industry": null,
+      "first_mention": "2025-09-27",
+      "last_mention": "2026-10-25",
+      "total_mentions": 33,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 32,
+        "KawzInvests": 1
+      },
+      "price_status": "ok",
+      "instrument_id": "US:SLNH",
+      "hash": "698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e",
+      "path": "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json"
+    },
     "UNVERIFIED:FOCI": {
       "ticker": "FOCI",
       "instrument": {
@@ -6645,43 +6684,6 @@
       "instrument_id": "US:MA",
       "hash": "690e79124db1cdfe02943f7aba90849bd8fc28d4f53776e1b339714ef144c607",
       "path": "stocks/69/690e79124db1cdfe02943f7aba90849bd8fc28d4f53776e1b339714ef144c607.json"
-    },
-    "US:SLNH": {
-      "ticker": "SLNH",
-      "instrument": {
-        "instrument_id": "US:SLNH",
-        "display_code": "SLNH",
-        "display_name": "Soluna Holdings, Inc",
-        "display_market": "NASDAQ",
-        "aliases": [
-          "SLNH"
-        ],
-        "market": "NASDAQ",
-        "country": "US",
-        "currency": "USD",
-        "price_symbol": "SLNH",
-        "verification_status": "verified"
-      },
-      "cashtag": "$SLNH",
-      "price_symbol": "SLNH",
-      "exchange": "US",
-      "currency": "USD",
-      "ticker_mapped": true,
-      "verification_status": "verified",
-      "company": "Soluna Holdings, Inc",
-      "industry": null,
-      "first_mention": "2025-09-27",
-      "last_mention": "2026-08-19",
-      "total_mentions": 32,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 31,
-        "KawzInvests": 1
-      },
-      "price_status": "ok",
-      "instrument_id": "US:SLNH",
-      "hash": "698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e",
-      "path": "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json"
     },
     "UNVERIFIED:SMH": {
       "ticker": "SMH",
@@ -6959,7 +6961,8 @@
       "price_status": "ok",
       "instrument_id": "US:DJT",
       "hash": "27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8",
-      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json"
+      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
+      "price_history_52w_status": "ok"
     },
     "US:NVTS": {
       "ticker": "NVTS",
@@ -25505,6 +25508,43 @@
       "hash": "405c05b5c0e6d3a9b7d31e6a55f3eed297875fee2c8d74ec811019e48738a381",
       "path": "stocks/40/405c05b5c0e6d3a9b7d31e6a55f3eed297875fee2c8d74ec811019e48738a381.json"
     },
+    "UNVERIFIED:EWZ": {
+      "ticker": "EWZ",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:EWZ",
+        "display_code": "EWZ",
+        "display_name": "iShares MSCI Brazil ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "EWZ"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "ewz",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "iShares MSCI Brazil ETF",
+      "industry": null,
+      "first_mention": "2026-08-14",
+      "last_mention": "2026-10-25",
+      "total_mentions": 5,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "frank_trading": 4,
+        "StockMKTNewz": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:EWZ",
+      "hash": "234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76",
+      "path": "stocks/23/234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76.json"
+    },
     "UNVERIFIED:FI": {
       "ticker": "FI",
       "instrument": {
@@ -29919,43 +29959,6 @@
       "instrument_id": "UNVERIFIED:DGX",
       "hash": "dddf4febc3252f90f4ef31203e07267aa9d4c111cca5ade5d1eefa36e7220017",
       "path": "stocks/dd/dddf4febc3252f90f4ef31203e07267aa9d4c111cca5ade5d1eefa36e7220017.json"
-    },
-    "UNVERIFIED:EWZ": {
-      "ticker": "EWZ",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:EWZ",
-        "display_code": "EWZ",
-        "display_name": "iShares MSCI Brazil ETF",
-        "display_market": "Market unverified",
-        "aliases": [
-          "EWZ"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "ewz",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "iShares MSCI Brazil ETF",
-      "industry": null,
-      "first_mention": "2026-08-14",
-      "last_mention": "2026-10-15",
-      "total_mentions": 4,
-      "blogger_count": 2,
-      "total_mentions_by_blogger": {
-        "frank_trading": 3,
-        "StockMKTNewz": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:EWZ",
-      "hash": "234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76",
-      "path": "stocks/23/234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76.json"
     },
     "UNVERIFIED:EXC": {
       "ticker": "EXC",
@@ -115861,9 +115864,6 @@
     "TERRESTRIAL ENERGY INC. /DE/": [
       "US:IMSR"
     ],
-    "TESLA": [
-      "US:TSLA"
-    ],
     "TESLA, INC.": [
       "US:TSLA"
     ],
@@ -125661,8 +125661,8 @@
     "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
     "stocks/8a/8aecf166a3183ec38590d5d3185613aa0547fb592a15d6fde0d51bb5c3b9ffdb.json",
     "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
-    "stocks/1a/1abfdf6ed893021c20c87f30c55ee285c684bfe175359d2e53c14494055660c3.json",
     "stocks/53/53df5b5cba99d8c66e7ec8ebf981393db423e64c352bc607ddef3541465136a2.json",
+    "stocks/1a/1abfdf6ed893021c20c87f30c55ee285c684bfe175359d2e53c14494055660c3.json",
     "stocks/1e/1ed11c3d73eb5139fadbf6c51f5b3ea6242ffb98b7e9f528995ea09703679ac5.json",
     "stocks/61/61175ec03cb643b4ee3de7550aa5c922454f741ed2f8a4e5dad4a350e3578e22.json",
     "stocks/ed/ed1969b4d525c3e18cc7cc7e6c34157b54c9509f55b6a4e972d10fd51b4789ae.json",
@@ -125687,8 +125687,8 @@
     "stocks/6a/6ab210fcb7edaa5e2df712d5807ee78f181c134660bd9cdfbc43c5c2ba0ab05d.json",
     "stocks/a6/a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f.json",
     "stocks/d1/d109b81e630da934747fbbbb58102276d25b19e31b19c5a63542878c516cda18.json",
-    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/f7/f79bded3cffd4ec16fe17d3c7915a80ff691e22cfaa1efce2de174d911db8474.json",
+    "stocks/38/3850574a1b1af02d79d3710aabe19a8c79f290a102f337be2ba0559732effbf3.json",
     "stocks/cd/cd2d9cef1e9f20cfa5bd5f33beb168e7748a9dc1e35bae2048e1c0a41e8cd971.json",
     "stocks/79/7975b048cebb671d4544f3cbfa004b0023157678e8f83249abbc5d63b9d68b49.json",
     "stocks/4f/4fef2cdb4b77220b21fbc17314cf6ced1fdcdc89cd67388e549cc95252bce0d1.json",
@@ -125732,9 +125732,9 @@
     "stocks/fb/fb9d8e52e152f353f80d619c1172a25d8c5579bc92d6aef4a05f0fe68345587f.json",
     "stocks/e5/e53c73e0a13bf2118e96948a0b7cd3b2a2043263ea7f31bd9edd5f4ae460b281.json",
     "stocks/d2/d2d76618ad57717246f762e870beaa14f4ea84fc449b9dbb104541bebf4b1d89.json",
+    "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/54/54eeac269c5951222ea9cfff2cf58ccbfad751572c1b13dc5c27a9782815eebc.json",
     "stocks/c9/c99003b5b2daf205169a1e83674b4b24c955c67e0a4a2c15fd6f41aa87f63bd2.json",
-    "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
     "stocks/18/1874f97477aa118ef1d228f66f570c68e7eb5fa10f582f3b8d08cc7102ebc6cd.json",
     "stocks/c0/c0fd42cdf9c75e0ca630720ebc9fbd28918292d872218c3d82d44e7fa89de7f7.json",
     "stocks/d1/d12dd1a315c81eac1f9ff094432aed811f9790f0c07247d5227c3eafa27c061f.json",
@@ -125783,11 +125783,11 @@
     "stocks/07/07f1fb6a47731929df958c2b1210ad65527de6777e225fa29525143dd6aacb8d.json",
     "stocks/7d/7d87b50922cdf92a2a0504316773d0a718be353f2be0a62434ad0180b8e73f75.json",
     "stocks/14/14e55ddb845ddba42b38f0e303c84c014791948bcb493de1271f768ce59921bc.json",
+    "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
     "stocks/a7/a79a3d0d677e4415296fd8002f78fb73693628d23b38393374c0de2b72fdfb3c.json",
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
     "stocks/16/16f4683cd99bcfc6b14b61a881643b09e9b0cb8ec2ec85a3b66659a901de18ae.json",
     "stocks/da/da1d7f50266cd63e0e17424bc79354ce67feade0c732d1b44df228444506b570.json",
-    "stocks/ab/abb6d4ec2e72dec377b078afb6368e4b50ddb69465280202d191c3c980523b72.json",
     "stocks/ed/ed0d536720e2fb08201870f4f8015353d7c31e297e818a9d1c934daccea2937a.json",
     "stocks/e1/e1138edef1058316eb4439a7f263a0c82f0758bcc5d6d9c7a27f8c62e9d50e1d.json",
     "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
@@ -125804,11 +125804,11 @@
     "stocks/6b/6beadde7bf8df963704d81852a35250c05327b5b89890c35fddb4e0ffea6addf.json",
     "stocks/f5/f57c3f3014d6fbedb6b8f3a5812247e37236f9273477eac8e87680db6e0f4f00.json",
     "stocks/0b/0b679089cff3bb94a92a86ed42b0dd978f7e49d56ac8ba03f890a80262d49cf1.json",
+    "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/8d/8d1b25cb8d3b65372b3eaf563a9582135136820ed769b9d66f088c1a6129c918.json",
     "stocks/e1/e1324e791d92398b6e6669154050c2afb832bd694ebb99fd71cff25b24fe8fe3.json",
     "stocks/7b/7bd1c02aef39518ead1142a61de045499f651cb4634d2af3fd879a6e131622ba.json",
     "stocks/69/690e79124db1cdfe02943f7aba90849bd8fc28d4f53776e1b339714ef144c607.json",
-    "stocks/69/698261cd654e22a33e7ffac2506e3f1dcf8f7743878bce50983e1531cbd6ac7e.json",
     "stocks/50/50621f799263a8aea3f2457452e78d03a6abf6668b703d92eb0f2aa7b38fe446.json",
     "stocks/c7/c7b70b6ae9993ee21f3ca85fb8b3faf91a3e7df04f8ed4783a7dfadc65effac5.json",
     "stocks/28/289f3d8f3d8d2b13fa50618e1a05d1b784e9f26ce70dc59e2cd4ff4440724281.json",
@@ -126310,6 +126310,7 @@
     "stocks/68/68987411a383ab3ee052461a3b4fec37b40fbc04ce059a494ba730063f2afdbd.json",
     "stocks/3f/3f84c3e0b87864143e1b1c7f1f37d700a4bb07a09d757e0b362e190af3875080.json",
     "stocks/40/405c05b5c0e6d3a9b7d31e6a55f3eed297875fee2c8d74ec811019e48738a381.json",
+    "stocks/23/234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76.json",
     "stocks/de/ded79d9ab0964464adf9e4c95d332461f9b4b4a59b1c13486db66137c09315ec.json",
     "stocks/2a/2a99f8b1b7e2dbe486ccd5b28e8a7856cba21494c21a8deea52865d018deca56.json",
     "stocks/12/122b8e99426f31abf8f389e66a83c37615d8a401c12d2c6bfabba193dfc7db1b.json",
@@ -126430,7 +126431,6 @@
     "stocks/fb/fb0486f673dff66c962cc60c470aa62e6d75410cbe5f18f55fe04445593d360b.json",
     "stocks/bd/bd40152524fd2965dbc49cd0c8c432f39f919c38401106dd05d738d18f92ab6e.json",
     "stocks/dd/dddf4febc3252f90f4ef31203e07267aa9d4c111cca5ade5d1eefa36e7220017.json",
-    "stocks/23/234ac0ce2b42563d18d0c8ebbee035ab1c93548ab883a4203d0f54fcad36ec76.json",
     "stocks/f9/f97f8e442b6767c4b4adb8adc2c7ec86add9f99b69404365be51358c71dbec45.json",
     "stocks/52/52d53bb9bcf71e5d67823788561ee04a107b3a52020de0957111682dc667c570.json",
     "stocks/c6/c65143e6656f27b4a2ab6115c362ca69298e9bb8f445c71c06f6f655a79cdcc1.json",
