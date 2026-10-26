@@ -28,11 +28,11 @@
   "thesis_summary": null,
   "first_mention": "2025-11-04",
   "last_mention": "2026-10-25",
-  "total_mentions": 394,
+  "total_mentions": 395,
   "total_mentions_by_blogger": {
     "jukan05": 143,
     "aleabitoreddit": 121,
-    "StockMKTNewz": 44,
+    "StockMKTNewz": 45,
     "ren_stocks": 28,
     "zephyr_z9": 21,
     "octopusycc": 14,
@@ -43,7 +43,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 337,
-    "news": 44,
+    "news": 45,
     "flow": 13
   },
   "mentions": [
@@ -9488,6 +9488,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114518381709922531",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T20:44:02-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK Hynix",
+      "text": "SK Hynix reportedly plans to return ~80% of the gains from selling down its stake in Japan’s Kioxia to shareholders through a special dividend of ~$12 Billion - Bloomberg https://t.co/pksYFvIlyJ",
+      "url": "https://x.com/StockMKTNewz/status/2114518381709922531",
+      "kind": "post",
+      "engagement": {
+        "views": 31039,
+        "likes": 260,
+        "reposts": 25,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10716,13 +10739,13 @@
       "close": 1277000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-26T00:19:22.660950+00:00",
+  "price_updated_at": "2026-10-26T03:17:52.846762+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-26",
     "asof": "2026-10-25",
-    "attempted_at": "2026-10-26T00:19:21.704461+00:00",
+    "attempted_at": "2026-10-26T03:17:52.726099+00:00",
     "status": "ok",
     "first_available_date": "2025-10-27",
     "last_available_date": "2026-10-23",
@@ -10730,12 +10753,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-26T00:19:21.704461+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "000660.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-26T03:17:52.726099+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-10-26T06:17:52.726099+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

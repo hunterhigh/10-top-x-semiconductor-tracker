@@ -1,6 +1,6 @@
 {
   "ticker": "EWZ",
-  "cashtag": "ewz",
+  "cashtag": "$EWZ",
   "instrument": {
     "instrument_id": "UNVERIFIED:EWZ",
     "display_code": "EWZ",
@@ -25,14 +25,15 @@
   "thesis_summary": null,
   "first_mention": "2026-08-14",
   "last_mention": "2026-10-25",
-  "total_mentions": 5,
+  "total_mentions": 7,
   "total_mentions_by_blogger": {
     "frank_trading": 4,
-    "StockMKTNewz": 1
+    "StockMKTNewz": 2,
+    "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 1,
-    "opinion": 4
+    "news": 2,
+    "opinion": 5
   },
   "mentions": [
     {
@@ -163,6 +164,57 @@
         "likes": 4,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114513872619286636",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T20:26:07-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "opened overnight trading down by almost 20%"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$EWZ",
+      "text": "The Brazil 🇧🇷 ETF $EWZ just opened overnight trading down by almost 20% 🔴 https://t.co/6v5Yhbim6R",
+      "url": "https://x.com/StockMKTNewz/status/2114513872619286636",
+      "kind": "post",
+      "engagement": {
+        "views": 120546,
+        "likes": 1188,
+        "reposts": 105,
+        "replies": 54
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114526395690881329",
+      "blogger_id": "KawzInvests",
+      "date": "2026-10-25",
+      "created_at": "2026-10-25T21:15:53-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "plunged nearly 20% in overnight trading",
+        "trading like a memecoin"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$EWZ",
+      "text": "WOW. Brazil’s ETF $EWZ just plunged nearly 20% in overnight trading.\n\nLula wins a fourth term after beating Flávio Bolsonaro.\n\nAn entire country ETF trading like a memecoin. https://t.co/ATQEn6uR5M",
+      "url": "https://x.com/KawzInvests/status/2114526395690881329",
+      "kind": "post",
+      "engagement": {
+        "views": 9014,
+        "likes": 28,
+        "reposts": 4,
+        "replies": 14
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
