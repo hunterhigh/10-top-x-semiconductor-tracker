@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-10-26",
-  "total_mentions": 357,
+  "last_mention": "2026-10-27",
+  "total_mentions": 359,
   "total_mentions_by_blogger": {
-    "jukan05": 187,
+    "jukan05": 189,
     "aleabitoreddit": 91,
     "zephyr_z9": 22,
     "StockMKTNewz": 19,
@@ -39,7 +39,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 329,
+    "opinion": 331,
     "flow": 9,
     "news": 19
   },
@@ -8483,6 +8483,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114979317977665829",
+      "blogger_id": "jukan05",
+      "date": "2026-10-27",
+      "created_at": "2026-10-27T03:15:38-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "KOREAN MEDIA: MAJOR CHINESE CLOUD SERVICE PROVIDERS (CSPS), INCLUDING ALIBABA, TENCENT, AND BYTEDANCE, HAVE REQUESTED LONG-TERM SUPPLY AGREEMENTS (LTAS) FOR SERVER MEMORY FROM SAMSUNG ELECTRONICS AND SK HYNIX.\n\nBEYOND THE TYPICAL THREE-TO-FIVE-YEAR TERM, SOME CUSTOMERS ARE SEEKING ULTRA-LONG-TERM CONTRACTS SECURING MEMORY SUPPLIES FOR 10 YEARS THROUGH 2035. THE REQUESTED LTAS COVER DDR5 AND LPDDR5.",
+      "url": "https://x.com/jukan05/status/2114979317977665829",
+      "kind": "post",
+      "engagement": {
+        "views": 51917,
+        "likes": 620,
+        "reposts": 94,
+        "replies": 37
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115003975611408820",
+      "blogger_id": "jukan05",
+      "date": "2026-10-27",
+      "created_at": "2026-10-27T04:53:37-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung",
+      "text": "According to Korean media reports, SK hynix plans to announce a KRW 60 trillion (US$46.2 billion) shareholder return package at its third-quarter earnings announcement on October 28.\n\nThe package would include KRW 30 trillion in share buybacks and KRW 30 trillion in dividends.\n\nSamsung is reportedly also pursuing a shareholder return plan totaling KRW 110 trillion (US$82.9 billion).\n\nhttps://t.co/SdM0o2eo11",
+      "url": "https://x.com/jukan05/status/2115003975611408820",
+      "kind": "post",
+      "engagement": {
+        "views": 6925,
+        "likes": 48,
+        "reposts": 1,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9715,26 +9761,27 @@
       "close": 213000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-27T06:16:52.997387+00:00",
+  "price_updated_at": "2026-10-27T09:18:03.472325+00:00",
   "price_history_52w": {
-    "requested_start": "2025-10-27",
-    "asof": "2026-10-26",
-    "attempted_at": "2026-10-27T06:16:52.955674+00:00",
+    "requested_start": "2025-10-28",
+    "asof": "2026-10-27",
+    "attempted_at": "2026-10-27T09:18:03.227271+00:00",
     "status": "ok",
-    "first_available_date": "2025-10-27",
+    "first_available_date": "2025-10-28",
     "last_available_date": "2026-10-26",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-27T06:16:52.955674+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-27T09:18:03.227271+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-10-27T12:18:03.227271+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

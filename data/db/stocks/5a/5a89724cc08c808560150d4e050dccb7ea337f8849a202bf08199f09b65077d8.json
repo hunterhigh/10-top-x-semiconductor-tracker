@@ -1,6 +1,6 @@
 {
   "ticker": "BDNCE",
-  "cashtag": "Bytedance",
+  "cashtag": "ByteDance",
   "instrument": {
     "instrument_id": "UNVERIFIED:BDNCE",
     "display_code": "BDNCE",
@@ -24,13 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-06",
-  "last_mention": "2026-07-06",
-  "total_mentions": 1,
+  "last_mention": "2026-10-27",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "zephyr_z9": 1
+    "zephyr_z9": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -55,20 +56,43 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2114979317977665829",
+      "blogger_id": "jukan05",
+      "date": "2026-10-27",
+      "created_at": "2026-10-27T03:15:38-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "ByteDance",
+      "text": "KOREAN MEDIA: MAJOR CHINESE CLOUD SERVICE PROVIDERS (CSPS), INCLUDING ALIBABA, TENCENT, AND BYTEDANCE, HAVE REQUESTED LONG-TERM SUPPLY AGREEMENTS (LTAS) FOR SERVER MEMORY FROM SAMSUNG ELECTRONICS AND SK HYNIX.\n\nBEYOND THE TYPICAL THREE-TO-FIVE-YEAR TERM, SOME CUSTOMERS ARE SEEKING ULTRA-LONG-TERM CONTRACTS SECURING MEMORY SUPPLIES FOR 10 YEARS THROUGH 2035. THE REQUESTED LTAS COVER DDR5 AND LPDDR5.",
+      "url": "https://x.com/jukan05/status/2114979317977665829",
+      "kind": "post",
+      "engagement": {
+        "views": 51917,
+        "likes": 620,
+        "reposts": 94,
+        "replies": 37
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-08-05T12:20:07.417237+00:00",
+  "price_updated_at": "2026-10-27T09:18:04.626678+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-08-05T12:20:07.417222+00:00",
-    "attempts": 14,
+    "checked_at": "2026-10-27T09:18:04.626661+00:00",
+    "attempts": 15,
     "next_retry_at": null,
     "http_status": null
   }
