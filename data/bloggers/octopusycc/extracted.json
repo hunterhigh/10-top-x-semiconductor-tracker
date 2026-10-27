@@ -23165,5 +23165,66 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-10-27T15:12:45.714387+00:00"
+  },
+  "2115108422278660504": {
+    "tweet_id": "2115108422278660504",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.95,
+    "blogger_id": "octopusycc",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-10-27T18:12:00.547873+00:00"
+  },
+  "2115106352028848319": {
+    "tweet_id": "2115106352028848319",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "Anthropic",
+        "symbol": "ANTHROPIC",
+        "company_name": "Anthropic",
+        "stance": "neutral",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "short bullish before IPO, strict risk control",
+          "post-IPO valuation reckoning may challenge entire AI and semiconductor sector",
+          "if sentiment heats enough, valuation could reach ~$2.5T then revert to $1.5-2T",
+          "will look for opportunities to go short after listing"
+        ],
+        "is_risk": false,
+        "conviction_signal": "medium"
+      },
+      {
+        "raw_mention": "AI板块",
+        "symbol": "AI_SECTOR",
+        "company_name": "AI Sector (general)",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "post-IPO market will reassess valuations",
+          "entire AI and semiconductor sector may face significant valuation pressure after Anthropic lists"
+        ],
+        "is_risk": true,
+        "conviction_signal": "medium"
+      },
+      {
+        "raw_mention": "半导体",
+        "symbol": "SEMI_SECTOR",
+        "company_name": "Semiconductor Sector (general)",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "post-IPO valuation reckoning may challenge semiconductor sector valuations"
+        ],
+        "is_risk": true,
+        "conviction_signal": "medium"
+      }
+    ],
+    "confidence": 0.72,
+    "blogger_id": "octopusycc",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-10-27T18:12:00.547873+00:00"
   }
 }

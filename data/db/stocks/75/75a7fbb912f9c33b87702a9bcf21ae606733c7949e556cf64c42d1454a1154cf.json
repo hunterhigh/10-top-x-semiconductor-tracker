@@ -25,13 +25,13 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-16",
-  "last_mention": "2026-10-19",
-  "total_mentions": 63,
+  "last_mention": "2026-10-27",
+  "total_mentions": 65,
   "total_mentions_by_blogger": {
+    "aleabitoreddit": 13,
+    "StockMKTNewz": 13,
     "ren_stocks": 13,
-    "aleabitoreddit": 12,
     "octopusycc": 12,
-    "StockMKTNewz": 12,
     "jukan05": 6,
     "balder": 3,
     "KawzInvests": 2,
@@ -39,8 +39,8 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 51,
-    "news": 12
+    "opinion": 52,
+    "news": 13
   },
   "mentions": [
     {
@@ -1587,6 +1587,55 @@
         "likes": 3,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115099588218814674",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-10-27",
+      "created_at": "2026-10-27T11:13:33-04:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "IPO lockups affecting price action",
+        "chart passes their screening criteria for the basket"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$CBRS",
+      "text": "@ryY1436253 Pretty sure there’s a lot going on with $CBRS from IPO lockups.\n\nBut the chart looks like this so it passes https://t.co/nL6JLsC9ZK",
+      "url": "https://x.com/aleabitoreddit/status/2115099588218814674",
+      "kind": "reply",
+      "engagement": {
+        "views": 10463,
+        "likes": 24,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115120415987106120",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-27",
+      "created_at": "2026-10-27T12:36:18-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CBRS",
+      "text": "Oracle $ORCL will offer cloud services based on Cerebras Systems’s $CBRS computers in its data centers - Bloomberg https://t.co/HserM9Vzsn",
+      "url": "https://x.com/StockMKTNewz/status/2115120415987106120",
+      "kind": "post",
+      "engagement": {
+        "views": 23537,
+        "likes": 124,
+        "reposts": 20,
+        "replies": 32
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
