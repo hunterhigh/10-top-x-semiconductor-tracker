@@ -1,6 +1,6 @@
 {
   "ticker": "FTNT",
-  "cashtag": "$FTNT",
+  "cashtag": "ftnt",
   "instrument": {
     "instrument_id": "US:FTNT",
     "display_code": "FTNT",
@@ -24,16 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-25",
-  "last_mention": "2026-10-25",
-  "total_mentions": 24,
+  "last_mention": "2026-10-28",
+  "total_mentions": 25,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 21,
     "asklivermore": 2,
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
     "news": 21,
-    "opinion": 3
+    "opinion": 4
   },
   "mentions": [
     {
@@ -595,6 +596,29 @@
         "likes": 44,
         "reposts": 3,
         "replies": 19
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115526132871410024",
+      "blogger_id": "frank_trading",
+      "date": "2026-10-28",
+      "created_at": "2026-10-28T15:28:29-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "ftnt",
+      "text": "我对记者会的理解是偏hawkish一点点：Warsh说，美联储已经明确展示了“随时采取行动的准备和意愿”——即后续加息仍在桌面上。但他同时说，Fed已经开始看到“金融条件发生变化”。这里大概率就是指向近期长端美债收益率、信用融资成本和AI相关资产波动已经自行收紧。企业投资仍可能以两位数速度增长，因此暂停不是因为经济衰退或需求崩塌。\n\n之后他继续没有直接回答12月会不会加息，仍拒绝传统forward guidance。但是他说，经济和通胀本来支持继续加息，但债券市场与金融条件已经替Fed踩了一部分刹车，因此Fed可以先等数据，而不是今天机械加息。\n\n这相当于给出了一个新的reaction function：\n\n如果股市继续涨、信用利差收窄、长端收益率回落，金融条件重新放松，12月加息概率上升。\n\n如果长端利率继续维持高位、信用市场恶化、AI融资链条继续去杠杆，市场本身的收紧可以替代部分Fed加息。可能后续就不会加息。\n\nfed的意思是，金融风险已经非常大了，所以不能加息，我无法把这个话理解成鸽。\n\n说实话，有一点点恶心。\n\n今天非常混乱，fomc，orcl调capex，msft，googl，ftnt，sndk，非常混乱，这个局，非常难赚钱。\n\n之后我认为，orcl这个事情对soxx来说并不是利好，是一个巨大的利空，我们认为的capex见顶第一次出现在云的话语里。\n\n我nuke了大半仓。\n\n我留intu put，xlp put，bkng put，ms put，inda，一点点qqq put，其他都不要了，等局势清晰再入场。",
+      "url": "https://x.com/Franktradinglog/status/2115526132871410024",
+      "kind": "post",
+      "engagement": {
+        "views": 7133,
+        "likes": 29,
+        "reposts": 3,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
