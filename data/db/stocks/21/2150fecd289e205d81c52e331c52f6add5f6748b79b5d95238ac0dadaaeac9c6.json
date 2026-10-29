@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "SAMSUNG",
+  "cashtag": "Samsung",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,10 +25,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-10-28",
-  "total_mentions": 364,
+  "last_mention": "2026-10-29",
+  "total_mentions": 365,
   "total_mentions_by_blogger": {
-    "jukan05": 193,
+    "jukan05": 194,
     "aleabitoreddit": 91,
     "zephyr_z9": 22,
     "StockMKTNewz": 20,
@@ -39,7 +39,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 335,
+    "opinion": 336,
     "flow": 9,
     "news": 20
   },
@@ -8644,6 +8644,34 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115660598470222036",
+      "blogger_id": "jukan05",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T00:22:48-04:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "HBM supply for next year already sold out with pricing at target levels",
+        "additional volume requests continue to come in",
+        "selling HBM4 at highest price among Big Three memory makers",
+        "Rubin variants with Samsung HBM4 expected to command a premium as higher-priced SKU"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "Samsung",
+      "text": "Samsung’s earnings next year are going to be phenomenal...\n\nTake a look at this comment from Samsung’s earnings call today.\n\nJaejune Kim, Executive Vice President of the Memory Business in Samsung Electronics’ Device Solutions (DS) division, said on the conference call following the company’s third-quarter earnings release on the 29th: “Next year’s HBM supply is already sold out, with pricing negotiations concluded at our target levels,” adding that “requests for additional volume continue to come in.”\n\n“At our target levels”... Do you realize what that means?\n\nKorean media previously reported that Samsung had quoted HBM4 prices in the mid-to-high $4 range per gigabit (Gb). \n\n(Reference: https://t.co/fBzt5CPyBu)\n\nThere were also rumors that NVIDIA was pushing back because it did not want to pay those prices. But judging by Samsung’s comments today, it looks like NVIDIA has ultimately accepted Samsung’s asking price.\n\nIt now appears confirmed that Samsung will be selling HBM4 at the highest price among the Big Three memory makers.\n\nWe believe Rubin variants equipped with Samsung’s HBM4 will be sold as a separate, higher-priced SKU compared with those using SK hynix or Micron memory.\n\nIn effect, they would command a premium.",
+      "url": "https://x.com/jukan05/status/2115660598470222036",
+      "kind": "post",
+      "engagement": {
+        "views": 20096,
+        "likes": 215,
+        "reposts": 22,
+        "replies": 20
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -9884,26 +9912,27 @@
       "close": 242000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-10-29T03:16:53.462363+00:00",
+  "price_updated_at": "2026-10-29T06:17:03.586581+00:00",
   "price_history_52w": {
-    "requested_start": "2025-10-29",
-    "asof": "2026-10-28",
-    "attempted_at": "2026-10-29T03:16:53.426190+00:00",
+    "requested_start": "2025-10-30",
+    "asof": "2026-10-29",
+    "attempted_at": "2026-10-29T06:17:03.246563+00:00",
     "status": "ok",
-    "first_available_date": "2025-10-29",
+    "first_available_date": "2025-10-30",
     "last_available_date": "2026-10-28",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-10-29T03:16:53.426190+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-10-29T06:17:03.246563+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-10-29T09:17:03.246563+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
