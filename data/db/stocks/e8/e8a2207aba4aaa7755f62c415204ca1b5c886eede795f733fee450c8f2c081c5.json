@@ -1,6 +1,6 @@
 {
   "ticker": "NOW",
-  "cashtag": "now",
+  "cashtag": "$NOW",
   "instrument": {
     "instrument_id": "US:NOW",
     "display_code": "NOW",
@@ -25,9 +25,9 @@
   "thesis_summary": null,
   "first_mention": "2025-12-05",
   "last_mention": "2026-10-29",
-  "total_mentions": 22,
+  "total_mentions": 24,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 11,
+    "StockMKTNewz": 13,
     "octopusycc": 5,
     "aleabitoreddit": 1,
     "unusual_whales": 1,
@@ -38,7 +38,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 9,
-    "news": 11,
+    "news": 13,
     "flow": 1,
     "disclosure": 1
   },
@@ -559,6 +559,55 @@
         "likes": 5,
         "reposts": 0,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115800504429154351",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T09:38:44-04:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "down ~25% on the day",
+        "biggest single-day drop in a decade"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$NOW",
+      "text": "ServiceNow $NOW stock is starting out trading today down by ~25% 🔴\n\nServiceNow stock is currently on pace for its biggest single-day drop in a decade https://t.co/TVUw1IV6Xl",
+      "url": "https://x.com/StockMKTNewz/status/2115800504429154351",
+      "kind": "post",
+      "engagement": {
+        "views": 36764,
+        "likes": 296,
+        "reposts": 28,
+        "replies": 47
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115807243836731522",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T10:05:31-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NOW",
+      "text": "Describe your thoughts on ServiceNow $NOW stock at $115 per share using JUST 1 word",
+      "url": "https://x.com/StockMKTNewz/status/2115807243836731522",
+      "kind": "post",
+      "engagement": {
+        "views": 32011,
+        "likes": 53,
+        "reposts": 2,
+        "replies": 90
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
