@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-29T21:19:58.084564+00:00",
+    "generated_at": "2026-10-30T00:18:03.586116+00:00",
     "note": "Automatic coverage statistics for the tracked public-post sample. They are not source-quality or performance scores."
   },
   "profiles": [
@@ -312,13 +312,13 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-10-29",
-        "mentions": 1669,
-        "unique_original_posts": 893,
+        "mentions": 1675,
+        "unique_original_posts": 897,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 162,
-          "bearish": 73,
-          "neutral": 38
+          "bearish": 74,
+          "neutral": 40
         },
         "top_tickers": [
           {
@@ -327,7 +327,7 @@
           },
           {
             "ticker": "NVDA",
-            "mentions": 159
+            "mentions": 160
           },
           {
             "ticker": "000660",
@@ -335,11 +335,11 @@
           },
           {
             "ticker": "TSM",
-            "mentions": 93
+            "mentions": 94
           },
           {
             "ticker": "INTC",
-            "mentions": 82
+            "mentions": 85
           },
           {
             "ticker": "MU",
@@ -357,15 +357,15 @@
         "top_industries": [
           {
             "industry": "AI Chips",
-            "mentions": 159
+            "mentions": 160
           },
           {
             "industry": "Wafer Foundry",
-            "mentions": 93
+            "mentions": 94
           },
           {
             "industry": "CPU/Foundry/Glass Substrate",
-            "mentions": 82
+            "mentions": 85
           },
           {
             "industry": "Memory/HBM",
@@ -381,6 +381,30 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/jukan05/status/2115940707043340432",
+            "text": "@rennyzucker I really wish Intel would explain why it can’t shift more production capacity from consumer products to data center products.",
+            "ticker": "INTC"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/jukan05/status/2115939657435500552",
+            "text": "Taiwanese wafer testing company KYEC reportedly plans to build a new fab in “Texas,” backed by a $1.1 billion prepayment from NVIDIA.\n\nCould TSMC be heading to Texas too…?\n\nhttps://t.co/WCUpDkyEBM",
+            "ticker": "KYEC"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/jukan05/status/2115937362488471561",
+            "text": "I think Intel badly underestimated how quickly higher memory prices would hit PC demand and trigger an inventory correction.\n\nThose risks were already visible by the Q2 earnings call. Management acknowledged them, but still expected client revenue to hold roughly flat in Q3, supported by CPU inventory replenishment. That assumption now looks too optimistic. They should have set more conservative expectations for the client business.\n\nStill, Lip-Bu did make some encouraging comments.\n\n“We expect the industry to remain supply constrained throughout 2027 and into 2028.”\n\n“We now expect industry server CPU units to grow more than 30% in both 2026 and 2027.”\n\n“Growth would be higher in both years if additional industry supply were available.”",
+            "ticker": "INTC"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/jukan05/status/2115931097993507016",
+            "text": "Wow… Intel’s earnings are absolute dogshit.",
+            "ticker": "INTC"
+          },
           {
             "date": "2026-10-29",
             "url": "https://x.com/jukan05/status/2115679858269593713",
@@ -428,30 +452,6 @@
             "url": "https://x.com/jukan05/status/2115606985219666002",
             "text": "Samsung: The company is aware of the market’s interest in the price gap between its common and preferred shares. When conducting share buybacks and cancellations, it plans to actively review and adjust the proportion of preferred shares repurchased, taking market conditions into account.",
             "ticker": "005930"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/jukan05/status/2115605838656352630",
-            "text": "SAMSUNG: THE MEMORY SHORTAGE WILL WORSEN IN 2027 COMPARED WITH THIS YEAR.",
-            "ticker": "005930"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/jukan05/status/2115480236745974000",
-            "text": "A very sharp friend of mine sent me a take arguing that Cerebras chips could depreciate extremely quickly. I thought I’d share it here.\n\nCerebras’ wafer-scale engine (WSE) and routing architecture do seem fully capable of solving the yield problem, as the company claims. The uncertainty is around how long the wafer will actually last in operation.\n\nCerebras’ design requires a large number of redundant interconnects to accommodate manufacturing defects. But all that BEOL wiring significantly increases the effective area susceptible to TDDB (time-dependent dielectric breakdown), potentially creating much greater long-term reliability risks. TDDB can cause shorts, which are more dangerous than opens in this design.\n\nDielectric thickness determines the probability of TDDB, and variations in that thickness can be spatially correlated across a wafer. That makes it highly likely that many interconnect failures would cluster in a particular region. It is unclear how Cerebras detects these shorts and avoids using the failed interconnects.\n\nUltimately, the argument is that you have a design that is expensive to begin with and also ages extremely quickly.",
-            "ticker": "CBRS"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/jukan05/status/2115459526199763131",
-            "text": "Aletheia is the best research house. Their industry intelligence is truly impressive.\n\nAletheia: Anthropic has increased its AMD GPU orders for 2028 to 3 GW—three times its original deployment target of 1 GW.\n\nAletheia: OpenAI has increased its total planned AMD GPU deployments over 2026–2028 from 6 GW to 8–9 GW.",
-            "ticker": "AMD"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/jukan05/status/2115307540494098601",
-            "text": "RTRS: ACCORDING TO SOURCES, CXMT PLANS TO BEGIN SMALL-SCALE PRODUCTION OF HBM3E WITHIN THE NEXT TWO MONTHS.\n\nRTRS: CXMT’S CURRENT HBM3E YIELD IS 20%.\n\nRTRS: CXMT’S TEST RESULTS SHOWED THAT ITS HBM3E PERFORMANCE WAS CLOSER TO SK HYNIX’S PREVIOUS-GENERATION HBM3 AND FELL SHORT OF SK HYNIX’S HBM3E.",
-            "ticker": "000660"
           }
         ]
       },
@@ -463,8 +463,8 @@
       "sample": {
         "first_date": "2026-06-11",
         "last_date": "2026-10-29",
-        "mentions": 720,
-        "unique_original_posts": 304,
+        "mentions": 721,
+        "unique_original_posts": 305,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 240,
@@ -534,6 +534,12 @@
         "recent_posts": [
           {
             "date": "2026-10-29",
+            "url": "https://x.com/KawzInvests/status/2115935913914077399",
+            "text": "$INTC https://t.co/L3wcVGbj0G",
+            "ticker": "INTC"
+          },
+          {
+            "date": "2026-10-29",
             "url": "https://x.com/KawzInvests/status/2115902660196835620",
             "text": "My identity security report goes out tomorrow. Tonight one of my five picks reported.\n\n$OSPN up 20% after hours on a beat and raise.\n\n> Revenue $63.9M vs $57.4M expected (+12% YoY)\n> Subscription revenue +16%\n> ARR +9% to $195.5M\n> Net retention 105%\n> FY guide raised on revenue, ARR and adjusted EBITDA\n\nThis month hackers hit 16 Korean financial institutions and India's largest bank. \n\n$OSPN says more than 60% of the world's 100 largest banks use its products.\n\nOneSpan is one of five picks in my identity security report, out tomorrow. Keep an eye out for this one, the other four are just as interesting. $OSPN",
             "ticker": "OSPN"
@@ -597,12 +603,6 @@
             "url": "https://x.com/KawzInvests/status/2115521824180117923",
             "text": "$ORCL up 13%\n\nAfter saying it expects to generate $30B+ in free cash flow in FY29 and fund its own growth from that point.\n\nCapex is expected to peak in FY27 to FY28, then fall in FY29. Free cash flow should turn positive in the second half of FY28 as Oracle gets through the heaviest spending on its buildout.\n\nOracle says it will limit additional capital raises through FY30 to $20B, split $10B equity and $10B debt, excluding refinancing. That comes after the $20B equity raise already completed.\n\nVendor financing, customer prepayments and customer-supplied hardware should reduce the cash needed upfront.\n\nLast week’s financing fears look completely overdone. $CRWV $NBIS $IREN $ORCL",
             "ticker": "CRWV"
-          },
-          {
-            "date": "2026-10-27",
-            "url": "https://x.com/KawzInvests/status/2115233651734782426",
-            "text": "$SKHY\n\nSK hynix just did $78.8B revenue and $62.8B operating profit in Q3. Street was at $74B / $58B. First quarter ever over ₩100T, ~80% margins.\n\nGuiding ~₩100T ($75B) in shareholder returns for FY26. ₩20,000 Q3 dividend, half of it a one-off Kioxia special.\n\nLTAs with 14 major customers now cover 50%+ of 2027 and 2028 capacity. They expect demand to beat supply through 2030.\n\nHard not to like this print. $SKHY $MU $SNDK",
-            "ticker": "MU"
           }
         ]
       },
@@ -765,8 +765,8 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-10-29",
-        "mentions": 1953,
-        "unique_original_posts": 782,
+        "mentions": 1956,
+        "unique_original_posts": 783,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 1102,
@@ -780,11 +780,11 @@
           },
           {
             "ticker": "SNDK",
-            "mentions": 155
+            "mentions": 156
           },
           {
             "ticker": "MU",
-            "mentions": 125
+            "mentions": 126
           },
           {
             "ticker": "AAOI",
@@ -814,11 +814,11 @@
           },
           {
             "industry": "Memory",
-            "mentions": 155
+            "mentions": 156
           },
           {
             "industry": "Memory/HBM",
-            "mentions": 125
+            "mentions": 126
           },
           {
             "industry": "Optical Modules",
@@ -834,6 +834,12 @@
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/ren_stocks/status/2115938078644953443",
+            "text": "@Berlinergy MU\nSNDK\nKioxia\n\nUntil further guidance",
+            "ticker": "285A"
+          },
           {
             "date": "2026-10-29",
             "url": "https://x.com/ren_stocks/status/2115903087177298360",
@@ -899,12 +905,6 @@
             "url": "https://x.com/ren_stocks/status/2115517310345589015",
             "text": "$ORCL Oh my God, Oracle +14%⚡\n\nOracle IS the company the credit market fears most, and today it laid out a clean plan forward.\n\nRevenue of $225B+ by FY30, growing 35%+ a year\nFree cash flow positive in the second half of FY28, then $30B+ in FY29\nCapex peaks in FY27–28, and growth funds itself from FY29\nOnly $20B more in outside capital through FY30, half equity and half debt, with net debt under 3.5x EBITDA by FY29\n\nIts credit default swaps hit records this month on exactly this question: can Oracle fund the AI buildout without drowning in debt?\n\nNow it has dates and numbers for when the cash comes back.\n\nThis is my favorite kind of comeback, when even the weakest player is pulling it off.\n\nBullish for ALL the AI clouds ⚡",
             "ticker": "ORCL"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/ren_stocks/status/2115457314752737557",
-            "text": "$NBIS $CRWV $META $MSFT\n\nAI credit is starting to heal \n\nOver the last few weeks we lived through the first real crack in credit, and I'm going to keep a close eye on it as a read on the overall health of the buildout.\n\nCDS on the AI builders just turned lower. \n\nCoreWeave is back to ~1,040bp from above 1,100, Oracle is under 300, and Meta and Microsoft are off their highs.\n\nIf the cost of insuring AI debt keeps falling, funding reopens, multiples come back, and we might see the best rally of this cycle.\n\nWe're not there yet, but it sure is encouraging⚡",
-            "ticker": "CRWV"
           }
         ]
       },
@@ -916,11 +916,11 @@
       "sample": {
         "first_date": "2026-06-11",
         "last_date": "2026-10-29",
-        "mentions": 905,
-        "unique_original_posts": 450,
+        "mentions": 908,
+        "unique_original_posts": 451,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
-          "bullish": 244,
+          "bullish": 247,
           "bearish": 133,
           "neutral": 66
         },
@@ -961,7 +961,7 @@
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 75
+            "mentions": 76
           },
           {
             "industry": "Memory/HBM",
@@ -973,18 +973,24 @@
           },
           {
             "industry": "Memory",
+            "mentions": 19
+          },
+          {
+            "industry": "CPU/Foundry/Glass Substrate",
             "mentions": 18
           },
           {
             "industry": "AI Semis/CPO",
             "mentions": 17
-          },
-          {
-            "industry": "CPU/Foundry/Glass Substrate",
-            "mentions": 17
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/octopusycc/status/2115920162767708310",
+            "text": "今日财报直播总结：\n\n还是很有感触的\n\n财报分析基本上进入下一阶段了\n\n框架交易在今日财报预测中发力明显\n\n无论是 $AMZN  215的抄底 还是 $INTC  71的抄底\n还是 $SNDK  1380 1260的框架，几乎完美匹配了我们的交易系统\n\n感谢大家的支持。\n\n顶级财报预测分析，尽在币安广场，明天再见！\n\n@heyibinance @binancezh @yingbinance @Yuki27__ @sisibinance @pearbinance @ethpopoki @CYZhang01",
+            "ticker": "AMZN"
+          },
           {
             "date": "2026-10-29",
             "url": "https://x.com/octopusycc/status/2115896007162745208",
@@ -1050,12 +1056,6 @@
             "url": "https://x.com/octopusycc/status/2115453392894284090",
             "text": "今年跑赢QQQ的产品—03441，你需要知道的一切\n\n最近开始关注一只比较有意思的ETF，南方东英的03441。\n\n过去两年，美股市场最重要的投资逻辑之一就是AI带来的增长预期。\n\n但我认为，这套逻辑正在发生变化。\n\n随着AI行业逐步进入商业化验证阶段，企业收入增速开始出现分化，而微软、Meta、Google等科技巨头的资本开支仍然维持在非常高的位置。\n\n当收入增长无法持续加速，资本开支却居高不下的时候，市场自然会从关注增长，转向关注增长的质量。\n\n这意味着未来投资者可能不再只愿意为营收和EPS增长支付高估值，而是更加关注企业真正能够创造多少自由现金流。\n\n也是基于这个判断，我认为03441采用的自由现金流因子选股，是一种非常先进，而且符合当前市场变化的投资方式。\n\n下面详细讲讲。\n\n1. 03441到底是什么？\n\n03441全称是南方东英富时东西股票精选ETF，2025年3月31日在港交所上市。\n\n它跟踪的是富时ETF通东西传承股票精选指数。\n\n目前指数的核心结构是：\n60%：港股高股息股票，约23家公司\n40%：美股自由现金流策略，约100家公司\n\n两部分资产的逻辑并不相同。\n\n港股部分主要寻找股息回报相对突出的成熟企业，美股部分则从美国大型企业中筛选现金创造能力较强、符合质量与风险标准的公司。\n\n它不是单纯的港股红利ETF，也不是把纳斯达克100换一个名字。\n\n我更愿意把它理解为一种跨市场的现金流配置策略。\n\n2. 它究竟买了哪些股票？\n\n先看港股的60%。\n\n主要持仓包括：\n中电控股、电能实业、香港中华煤气、中银香港、海丰国际、港铁等。\n这些企业覆盖公用事业、金融、运输等领域，很多企业经营模式相对成熟，能够通过股息向股东分配现金。\n\n美股的40%则完全是另一套逻辑。\n截至2026年10月26日，具有代表性的持仓包括：\n\nMSFT 微软\nAAPL 苹果\nMETA Meta\nAVGO 博通\nGOOGL / GOOG Alphabet\nBRK.B 伯克希尔\nLLY 礼来\n\n可以看出来，科技股依然占据重要位置。\n但这里有个非常重要的区别：\n03441并不是直接购买市值最大的七家科技公司，而是利用自由现金流因子，在美国大型企业中进行筛选。\n\n这意味着它不会因为一家公司拥有很高的AI热度，就必然把它纳入投资组合。\n\n3. 为什么我认为自由现金流因子是一种非常先进的选股方式？\n\n先解释一下自由现金流。\n\nFCF = 经营现金流 - 资本开支（Capex）\n\n假设一家企业一年创造100亿美元经营现金流，但为了扩张业务投入了80亿美元资本开支，那么它剩余的自由现金流只有20亿美元。\n\n这跟利润表展示出来的增长，是两回事。\n\n尤其是今天的AI行业。\n\n过去几年，市场给AI公司估值，主要看的是收入增长、市场空间，以及未来可能实现的利润。\n\n只要增长足够快，即使估值很贵，市场也愿意买单。\n\n但当收入增速边际放缓，而资本开支又无法同步下降时，这套估值逻辑就会面临挑战。\n\n例如Meta，2026年第三季度营收仍然同比增长26%，但当季自由现金流已经转为负21.2亿美元。\n\n这不代表Meta的AI投资没有价值，而是说明，即使一家公司的收入增长非常强劲，也不意味着它的自由现金流能够同步增长。\n\n我认为，未来市场会越来越重视三个问题：\n企业收入增长的速度，是否足以覆盖不断扩大的资本开支？\n过去投入的大量AI基础设施，最终能否转化成真正的现金回报？\n当行业增长放缓时，哪些企业仍然拥有持续创造自由现金流的能力？\n\n而03441的美股自由现金流策略，恰好为这些问题提供了一种量化选股框架。\n\n具体来说，它所使用的罗素1000自由现金流聚焦指数，会先对企业质量、风险和现金流进行筛选，再根据过去12个月的自由现金流绝对金额进行排名，选取约100家公司，最终按流通市值配置权重，并设置单家公司权重上限。\n它并不是简单地购买自由现金流收益率最高的100只股票。\n\n我尤其欣赏这种方式的原因在于：\n\n它不是完全依赖对未来增长的主观预测，而是试图通过已经产生的现金流，筛选真正具备现金创造能力的企业。\n而且指数会定期调整。\n\n随着企业经营情况变化，现金流表现也会影响其未来是否符合选股标准。\n\n当然，这是一种基于历史财务数据的规则化筛选，并不能提前预测所有行业转折，也无法保证未来回报。\n\n但在AI行业逐渐从讲增长故事，转向验证投资回报的阶段，我认为这种选股方式具有很强的现实意义。\n\n4. 一个很多人不知道的细节：03441的策略发生过改变\n这点非常值得关注。\n\n03441刚推出时，美股部分实际上采用的是美股七巨头等权策略。\n\n2025年9月22日，指数正式把这一部分切换为罗素1000自由现金流聚焦指数。\n\n2026年9月21日，港股与美股的目标配置又从原来的65%/35%，调整为60%/40%。\n\n也就是说，这不是一只上市以来就完全保持相同投资策略的ETF。\n\n在我看来，这两次调整都值得研究。\n第一次，改变了美股部分的选股逻辑。\n第二次，增加了美股自由现金流资产的配置比例。\n\n从原本直接配置美股七巨头，到引入更系统的现金流因子筛选，我认为这是产品策略上一次很有意义的变化。\n\n尤其是在市场逐渐从追求增长，转向关注企业资本效率的过程中。\n\n但增加美股权重，也意味着组合仍然会受到美国科技股估值和市场波动的影响。\n\n5. 03441的历史表现怎么样？\n\n直接见图吧\n\n真正应该研究的，是它在不同市场环境中的回撤、波动率，以及与纳斯达克100和传统港股高息指数的相关性。\n跨市场配置可以分散部分风险，但并不代表港股与美股不会同时下跌。\n\n附：这一支也是南向通合资格ETF，因此境内投资者也可以在港股通渠道里找到这只没额度限制的海外资产。\n\n————————————————\n\n最后，说说我的看法\n\n我始终觉得，过去几年美股市场一个很大的特点，是投资者愿意为非常遥远的增长预期支付很高的估值。\n\n尤其是AI。\n\n但这种估值逻辑并不是永远有效的。\n\n当AI行业从高速增长阶段逐步进入商业化和投资回报验证阶段，收入增速一旦放缓，市场就会开始重新审视企业的资本开支、经营现金流和实际盈利质量。\n\n过去市场关注的是AI能够创造多少收入，未来市场可能更加关注的是，AI最终能够为股东留下多少现金。\n\n这也是为什么我认为，03441的自由现金流因子选股思路非常先进。\n\n它不是试图通过预测下一个技术热点获得收益，而是把现金创造能力作为选股的核心标准。\n\n再结合港股高股息资产，形成一种同时考虑股东现金回报与企业增长能力的配置方式。\n\n我认为，对于未来可能更加重视资本效率、现金流和股东回报的市场环境，这套选股框架值得研究。\n\n关注03441，不是因为它已经涨了多少，而是因为我认为市场正在发生变化。\n\n投资不能只看企业未来能赚多少钱，也应该看赚到的钱，最终有多少真正属于股东。\n\n@CSOPAsset_ETF",
             "ticker": "03441"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/octopusycc/status/2115449885956968546",
-            "text": "今晚接着啃 $GOOG $MSFT \n\n伴随FOMC的结果，这可能是很难分析的两张票了\n\n同样也是 对整个AI股市 影响最大的票了\n\nAI Capex到底能不能转化成利润\n\n是今天的重点 咱们拭目以待\n\n@okxchinese @Jiajia_OKX",
-            "ticker": "GOOG"
           }
         ]
       },
@@ -1369,12 +1369,12 @@
       "sample": {
         "first_date": "2026-08-11",
         "last_date": "2026-10-29",
-        "mentions": 2072,
-        "unique_original_posts": 646,
+        "mentions": 2101,
+        "unique_original_posts": 648,
         "original_link_rate": 1.0,
         "explicit_stance_counts": {
           "bullish": 176,
-          "bearish": 80,
+          "bearish": 81,
           "neutral": 43
         },
         "top_tickers": [
@@ -1396,25 +1396,25 @@
           },
           {
             "ticker": "QQQ",
-            "mentions": 45
+            "mentions": 46
           },
           {
             "ticker": "SPY",
-            "mentions": 40
+            "mentions": 41
           },
           {
             "ticker": "IWM",
-            "mentions": 39
+            "mentions": 40
           },
           {
             "ticker": "DIA",
-            "mentions": 38
+            "mentions": 39
           }
         ],
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 157
+            "mentions": 161
           },
           {
             "industry": "AI Chips",
@@ -1422,11 +1422,11 @@
           },
           {
             "industry": "Memory/HBM",
-            "mentions": 37
+            "mentions": 38
           },
           {
             "industry": "AI Semis/CPO",
-            "mentions": 35
+            "mentions": 36
           },
           {
             "industry": "AI ASIC/Networking Chips",
@@ -1434,10 +1434,22 @@
           },
           {
             "industry": "GPU Cloud/Neocloud",
-            "mentions": 29
+            "mentions": 30
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/Balder13946731/status/2115943174585868790",
+            "text": "Jassy 在电话会上说 AWS 的 backlog 已经 5780 亿，还在三位数增长。股价今天跌了 15%。\n\n我觉得大家把这个数字读反了。这么多 backlog 摆在那儿，capex 就不再是一个可以挑时机的事了——签了合同的算力你得交出来，不是想建就建、不想建就停。\n\n2022 年那套剧本：需求一软就砍 capex，自由现金流立刻弹回来，股价修复。这次用不了了，这个季度 FCF 已经转负。\n\n所以「反正他们随时能踩刹车」这个前提，这回不太成立。",
+            "ticker": "AMZN"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/Balder13946731/status/2115919393649787188",
+            "text": "【美股复盘 · 10月29日】\n\n**大市**\n\n三大指数收跌，小型股逆势上涨。标普500ETF（ $SPY ）收于769.36，跌0.38%；纳指ETF（QQQ）收于715.34，跌1.42%；道指ETF（DIA）收于522.73，跌0.37%。罗素2000ETF（IWM）收于284.01，涨0.97%。107只观察股中47只上涨、60只下跌，市宽偏弱。指数整体跌幅有限，抛压集中在成长一端，纳指明显领跌。\n\n**板块**\n\n资金从科技转向医药与内需消费。医药表现最强，LLY 涨6.63%，MRNA 涨4.01%，MRK 涨3.83%。零售与汽车同步走强，LOW 涨4.48%，HD 涨3.60%，GM 涨3.93%，F 涨3.43%，支付端 MA 涨4.16%。另一端是AI算力链自上而下的全面走弱：网络芯片 MRVL 跌13.24%，存储 MU 跌4.98%，半导体设备 AEHR 跌5.16%，算力租赁环节 CRWV 跌4.99%、NBIS 跌5.68%、IREN 跌8.98%。存储本是AI投入中定价权最集中的一段，高端HBM供给高度集中、毛利率显著高于代工，但 MU 今日同样下跌，说明这一轮抛压并不区分环节。做空类产品大涨，半导体三倍做空ETF SOXS 涨4.80%，纳指三倍做空ETF SQQQ 涨4.27%，可作为抛压强度的侧面印证。\n\n**焦点**\n\nNOW 跌26.95%，为今日跌幅最大的个股，主因是前一交易日盘后发布的财报。GOOGL 跌12.64%，同样由前一交易日盘后的财报驱动，UBS在财报后将目标价从380美元下调至332美元，下调幅度12.6%。市场对谷歌的讨论已不只是股价：有报道提到，财报之后Alphabet的信用违约保护成本走阔。对一家净现金、AA评级的公司，CDS与单季每股收益本属两套逻辑，平时并不同步，这一变化值得留意；基差、对冲盘与发行预期都能解释一部分。F 涨3.43%，是同批财报中少数收涨的权重股。MSFT 亦在前一交易日盘后发布财报，未进入今日涨跌幅前十。CAT 跌9.25%，工程机械是数据中心配套需求的代表环节之一，与算力链同步回落。\n\n**小结**\n\n今日下跌集中在AI链条自身的重新定价，而非全市场转弱：医药、零售、汽车承接了流出的资金，小型股收涨，指数层面的跌幅远小于个股分化。盘后 AMZN、INTC、COIN、SNDK 公布财报，其中 SNDK 今日已跌5.32%，相关影响将在下一个交易日体现。",
+            "ticker": "AEHR"
+          },
           {
             "date": "2026-10-29",
             "url": "https://x.com/Balder13946731/status/2115904792115683632",
@@ -1497,18 +1509,6 @@
             "url": "https://x.com/Balder13946731/status/2115604179016397139",
             "text": "Alphabet 盘后跌10%，自由现金流连续两个季度为负。同一份财报里，这季度 Capex 513.6亿，一致预期 557.8亿，少花了44亿。微软那边差得更多，383.7亿对459.3亿，少了75亿。\n\n两家一个季度合起来少花120亿，现金流照样是负的。少花这么多都没把它填平，省钱这条线就解释不了负现金流，更像是钱想花，货排不上队。机柜、电、HBM，这季度没排上的那部分不会蒸发，只会往后挪一个季度。\n\n我想知道的是，这120亿卡在谁手里。",
             "ticker": "GOOGL"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/Balder13946731/status/2115566028222775355",
-            "text": "$MRVL 宣布要收购 $LITE https://t.co/WVdJBtTCx2",
-            "ticker": "LITE"
-          },
-          {
-            "date": "2026-10-28",
-            "url": "https://x.com/Balder13946731/status/2115556972728815838",
-            "text": "【美股复盘 · 10月28日】\n\n**大市**\n四大指数全线上涨。标普 $SPY 收于772.31，涨0.34%；纳指 QQQ 收于725.61，涨0.60%；道指 DIA 收于524.68，涨0.27%；罗素小型股 IWM 收于281.36，涨0.42%。纳指领涨，大小盘差距不大。市宽配合上涨，107只观察股中69只上升、38只下跌。两只反向ETF同步走弱，三倍做空纳指的 SQQQ 跌1.76%，三倍做空半导体的 SOXS 跌6.40%，后者的跌幅说明半导体是今天真正的发动机。\n\n**板块**\n涨幅榜几乎被AI算力链包揽。电源与散热的 VRT 涨16.48%，表现最强。云厂商 ORCL 涨10.73%。算力租赁的 CRWV 涨7.32%、 NBIS 涨6.96%。存储端 SNDK 涨7.66%、 MU 涨5.86%。设备端 LRCX 涨5.39%。光互联的 AAOI 涨6.85%、 LITE 涨5.52%。从电力、机柜到存储、光模块，上涨是沿着数据中心的物料清单逐项推进的，不是集中在少数几只名字上。\n\n软件股方向相反。 NOW 跌3.00%， NET 跌2.77%， PANW 跌1.79%。资金在同一天里买硬件、卖软件。一个被反复讨论的理由是，大模型每隔几个月一次的强制迁移，等于给客户安排了一次免费的重新比价——应用层的锁定效应比上一代软件弱得多，而算力的需求是确定的。\n\n**焦点**\nSKHY 涨13.30%，位列涨幅榜第二，主因是前一交易日盘后的财报。 HOOD 跌3.31%，同样来自前一交易日盘后的财报，是跌幅榜上为数不多的高关注度品种。 STX 与 V 的财报也在前一交易日盘后公布。其余跌幅居前的是 ON 跌3.86%、 NU 跌3.47%、 QBTS 跌2.97%，半导体内部同样出现分化，设备与存储上涨，模拟与功率走弱。\n\n**小结**\n指数涨幅温和，结构却不温和：AI基础设施全线走强，软件和部分成长股被抛售，钱从应用端挪向了供给端。 F 、 GOOGL 、 MSFT 、 NOW 的财报在今日盘后公布，其中 NOW 今天已先行下跌。这批数字决定的是下一个交易日，而不是今天这根阳线。",
-            "ticker": "AAOI"
           }
         ]
       },
@@ -1667,14 +1667,14 @@
       "sample": {
         "first_date": "2026-06-10",
         "last_date": "2026-10-29",
-        "mentions": 8048,
-        "unique_original_posts": 3089,
+        "mentions": 8054,
+        "unique_original_posts": 3095,
         "original_link_rate": 1.0,
         "explicit_stance_counts": null,
         "top_tickers": [
           {
             "ticker": "NVDA",
-            "mentions": 295
+            "mentions": 296
           },
           {
             "ticker": "SPCX",
@@ -1682,7 +1682,7 @@
           },
           {
             "ticker": "AAPL",
-            "mentions": 223
+            "mentions": 224
           },
           {
             "ticker": "GOOGL",
@@ -1694,7 +1694,7 @@
           },
           {
             "ticker": "AMZN",
-            "mentions": 144
+            "mentions": 145
           },
           {
             "ticker": "TSLA",
@@ -1708,11 +1708,11 @@
         "top_industries": [
           {
             "industry": "Hyperscaler",
-            "mentions": 671
+            "mentions": 672
           },
           {
             "industry": "AI Chips",
-            "mentions": 295
+            "mentions": 296
           },
           {
             "industry": "Memory/HBM",
@@ -1728,10 +1728,46 @@
           },
           {
             "industry": "CPU/Foundry/Glass Substrate",
-            "mentions": 57
+            "mentions": 58
           }
         ],
         "recent_posts": [
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115960092537610540",
+            "text": "PALANTIR $PLTR ALEX KARP SAID:\n\n\"We cannot have a society where all the value goes to 2,500 people sitting in Silicon Valley. That just will not work, and no one's gonna put up with it\"",
+            "ticker": "PLTR"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115957362733248826",
+            "text": "STARBUCKS $SBUX IS PREPARING TO TEST AI IN ITS DRIVE-THRUS\n\nThe AI would run in the background to help baristas enter orders faster and more accurately, CEO Brian Niccol said on Thursday's earnings call, per Bloomberg.\n\nStarbucks is also exploring technology that recognizes participating customers when they arrive, then shows them personalized menus and makes paying easier.\n\n\"We're early in this work and we'll test, learn and scale what works.\"",
+            "ticker": "SBUX"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115953307512664171",
+            "text": "Amazon Web Services $AMZN is now a $184 Billion Revenue Run Rate business https://t.co/xMY1ErAqlO",
+            "ticker": "AMZN"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115949930497933342",
+            "text": "APPLE $AAPL'S MAIN IPHONE MAKER SAYS IT CAN KEEP UP WITH DEMAND FOR THE IPHONE DUO\n\nFoxconn has more than 240 sites in 24 countries, and its CEO says that will help it meet holiday orders, per Bloomberg. The $2,000 foldable sold out fast, with some online orders not arriving until the end of January.\n\nFoxconn's business has also shifted. Apple once made up more than half of its revenue. Now its AI-driven cloud and networking unit makes up 51% of sales.",
+            "ticker": "AAPL"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115944128831979922",
+            "text": "NVIDIA $NVDA IS IN TALKS TO BACK BILLIONS OF DOLLARS OF DEBT FOR AI CLOUD STARTUP NSCALE\n\nThe credit guarantees would help Nscale build a 460-megawatt data center that Anthropic plans to use, per The Information.\n\nThe deal isn't signed yet, and terms could change. https://t.co/Nl49UjEaUy",
+            "ticker": "NVDA"
+          },
+          {
+            "date": "2026-10-29",
+            "url": "https://x.com/StockMKTNewz/status/2115917476818977056",
+            "text": "The US Government bought 433.3 million shares of Intel stock at $20.47 on August 22nd, 2025 spending ~$8.9B\n\nIntel $INTC stock closed trading at $92.08 per share ... the stock is currently down by ~20% in after hours following its earnings\n\nINTC stock is currently trading at ~$74 per share in after hours\n\nThat means the 🇺🇸 Government's stake in Intel was worth $39.9 Billion as of today's close\n\nAnd is currently worth $32.1 Billion in after hours",
+            "ticker": "INTC"
+          },
           {
             "date": "2026-10-29",
             "url": "https://x.com/StockMKTNewz/status/2115913006269812741",
@@ -1767,42 +1803,6 @@
             "url": "https://x.com/StockMKTNewz/status/2115900880801444051",
             "text": "RT @WOLF_Financial: COINBASE $COIN JUST REPORTED Q3 EARNINGS\n\n- Revenue: $1.22B, missing expectations of $1.23B 🔴\n- EPS: $2.51, beating exp…",
             "ticker": "COIN"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115900823385555290",
-            "text": "Amazon $AMZN CEO Andy Jassy just said Amazon Web Services expects to grow revenue at a growth rate of over 40% for both 2027 and 2028 https://t.co/Uhh3XA88xg",
-            "ticker": "AMZN"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115900344760705108",
-            "text": "Amazon $AMZN CEO Andy Jassy just said\n\n\"There has never been a trillion dollar revenue business, and we may have two of them in the next  5-10 years.\" https://t.co/rIDNCJx3Bj",
-            "ticker": "AMZN"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115899550976319663",
-            "text": "Reddit $RDDT stock is initially down by 12% in after-hours following its earnings 🔴 https://t.co/eamNoiOVy6",
-            "ticker": "RDDT"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115899222881137050",
-            "text": "Twilio $TWLO stock is down by 15% in after-hours following its earnings https://t.co/WM3BWgIJmt",
-            "ticker": "TWLO"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115898679639085442",
-            "text": "Amazon $AMZN stock is initially down by 6.69% in after-hours following its earnings\n\n🔴 https://t.co/FdsG6s78dV",
-            "ticker": "AMZN"
-          },
-          {
-            "date": "2026-10-29",
-            "url": "https://x.com/StockMKTNewz/status/2115898454623060124",
-            "text": "Intel $INTC stock is down by more than 20% in after hours 🔴 https://t.co/Z6irpfIfI2",
-            "ticker": "INTC"
           }
         ]
       },

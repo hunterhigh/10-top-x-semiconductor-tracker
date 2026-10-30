@@ -1,6 +1,6 @@
 {
   "ticker": "MA",
-  "cashtag": "$MA",
+  "cashtag": "MA",
   "instrument": {
     "instrument_id": "US:MA",
     "display_code": "MA",
@@ -25,17 +25,17 @@
   "thesis_summary": null,
   "first_mention": "2026-03-19",
   "last_mention": "2026-10-29",
-  "total_mentions": 36,
+  "total_mentions": 37,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 26,
-    "balder": 4,
+    "balder": 5,
     "unusual_whales": 2,
     "michaelsikand": 2,
     "aleabitoreddit": 1,
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 8,
+    "opinion": 9,
     "news": 26,
     "flow": 2
   },
@@ -876,6 +876,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115919393649787188",
+      "blogger_id": "balder",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T17:31:09-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MA",
+      "text": "【美股复盘 · 10月29日】\n\n**大市**\n\n三大指数收跌，小型股逆势上涨。标普500ETF（ $SPY ）收于769.36，跌0.38%；纳指ETF（QQQ）收于715.34，跌1.42%；道指ETF（DIA）收于522.73，跌0.37%。罗素2000ETF（IWM）收于284.01，涨0.97%。107只观察股中47只上涨、60只下跌，市宽偏弱。指数整体跌幅有限，抛压集中在成长一端，纳指明显领跌。\n\n**板块**\n\n资金从科技转向医药与内需消费。医药表现最强，LLY 涨6.63%，MRNA 涨4.01%，MRK 涨3.83%。零售与汽车同步走强，LOW 涨4.48%，HD 涨3.60%，GM 涨3.93%，F 涨3.43%，支付端 MA 涨4.16%。另一端是AI算力链自上而下的全面走弱：网络芯片 MRVL 跌13.24%，存储 MU 跌4.98%，半导体设备 AEHR 跌5.16%，算力租赁环节 CRWV 跌4.99%、NBIS 跌5.68%、IREN 跌8.98%。存储本是AI投入中定价权最集中的一段，高端HBM供给高度集中、毛利率显著高于代工，但 MU 今日同样下跌，说明这一轮抛压并不区分环节。做空类产品大涨，半导体三倍做空ETF SOXS 涨4.80%，纳指三倍做空ETF SQQQ 涨4.27%，可作为抛压强度的侧面印证。\n\n**焦点**\n\nNOW 跌26.95%，为今日跌幅最大的个股，主因是前一交易日盘后发布的财报。GOOGL 跌12.64%，同样由前一交易日盘后的财报驱动，UBS在财报后将目标价从380美元下调至332美元，下调幅度12.6%。市场对谷歌的讨论已不只是股价：有报道提到，财报之后Alphabet的信用违约保护成本走阔。对一家净现金、AA评级的公司，CDS与单季每股收益本属两套逻辑，平时并不同步，这一变化值得留意；基差、对冲盘与发行预期都能解释一部分。F 涨3.43%，是同批财报中少数收涨的权重股。MSFT 亦在前一交易日盘后发布财报，未进入今日涨跌幅前十。CAT 跌9.25%，工程机械是数据中心配套需求的代表环节之一，与算力链同步回落。\n\n**小结**\n\n今日下跌集中在AI链条自身的重新定价，而非全市场转弱：医药、零售、汽车承接了流出的资金，小型股收涨，指数层面的跌幅远小于个股分化。盘后 AMZN、INTC、COIN、SNDK 公布财报，其中 SNDK 今日已跌5.32%，相关影响将在下一个交易日体现。",
+      "url": "https://x.com/Balder13946731/status/2115919393649787188",
+      "kind": "post",
+      "engagement": {
+        "views": 2942,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -1498,17 +1521,21 @@
     {
       "date": "2026-10-28",
       "close": 610.31
+    },
+    {
+      "date": "2026-10-29",
+      "close": 635.7
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-29T00:19:33.232457+00:00",
+  "price_updated_at": "2026-10-30T00:19:17.664116+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "MA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-29T00:19:32.558719+00:00",
+    "checked_at": "2026-10-30T00:19:16.574949+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

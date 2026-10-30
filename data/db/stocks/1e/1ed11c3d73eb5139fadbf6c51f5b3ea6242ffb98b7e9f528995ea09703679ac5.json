@@ -1,6 +1,6 @@
 {
   "ticker": "AAPL",
-  "cashtag": "it",
+  "cashtag": "$AAPL",
   "instrument": {
     "instrument_id": "US:AAPL",
     "display_code": "AAPL",
@@ -26,9 +26,9 @@
   "thesis_summary": null,
   "first_mention": "2025-07-28",
   "last_mention": "2026-10-29",
-  "total_mentions": 525,
+  "total_mentions": 526,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 223,
+    "StockMKTNewz": 224,
     "aleabitoreddit": 109,
     "jukan05": 57,
     "unusual_whales": 52,
@@ -44,7 +44,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 248,
-    "news": 223,
+    "news": 224,
     "flow": 52,
     "disclosure": 2
   },
@@ -12292,6 +12292,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2115949930497933342",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T19:32:30-04:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AAPL",
+      "text": "APPLE $AAPL'S MAIN IPHONE MAKER SAYS IT CAN KEEP UP WITH DEMAND FOR THE IPHONE DUO\n\nFoxconn has more than 240 sites in 24 countries, and its CEO says that will help it meet holiday orders, per Bloomberg. The $2,000 foldable sold out fast, with some online orders not arriving until the end of January.\n\nFoxconn's business has also shifted. Apple once made up more than half of its revenue. Now its AI-driven cloud and networking unit makes up 51% of sales.",
+      "url": "https://x.com/StockMKTNewz/status/2115949930497933342",
+      "kind": "post",
+      "engagement": {
+        "views": 13848,
+        "likes": 30,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -13578,18 +13601,22 @@
     {
       "date": "2026-10-28",
       "close": 343.83
+    },
+    {
+      "date": "2026-10-29",
+      "close": 348.91
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-29T21:20:05.592416+00:00",
+  "price_updated_at": "2026-10-30T00:18:14.296570+00:00",
   "price_history_52w": {
     "requested_start": "2025-10-30",
     "asof": "2026-10-29",
-    "attempted_at": "2026-10-29T21:20:04.574705+00:00",
+    "attempted_at": "2026-10-30T00:18:12.868964+00:00",
     "status": "ok",
     "first_available_date": "2025-10-30",
-    "last_available_date": "2026-10-28",
+    "last_available_date": "2026-10-29",
     "reason": null
   },
   "price_source_state": {
@@ -13597,7 +13624,7 @@
     "provider_symbol": "AAPL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-29T21:20:04.574705+00:00",
+    "checked_at": "2026-10-30T00:18:12.868964+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
