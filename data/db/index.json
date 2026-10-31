@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-10-31T18:17:15.144547+00:00",
+  "generated_at": "2026-10-31T21:17:00.991701+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2619,
-    "total_mentions": 35610,
+    "total_mentions": 35612,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-10-31T18:18:36.941417+00:00"
+    "prices_updated_at": "2026-10-31T21:18:25.559036+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -1677,8 +1677,7 @@
       "price_status": "ok",
       "instrument_id": "US:TSEM",
       "hash": "a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f",
-      "path": "stocks/a6/a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a6/a6194ed200af49baa66eff1dfd65fe418322e38e2e57b52308753698a949751f.json"
     },
     "US:SKHY": {
       "ticker": "SKHY",
@@ -2075,8 +2074,7 @@
       "price_status": "ok",
       "instrument_id": "US:CRCL",
       "hash": "bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe",
-      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bf/bf9e3e8910b4ace38ab9122a48d4198cc70d4690806754b5fe2a283af76576fe.json"
     },
     "US:BE": {
       "ticker": "BE",
@@ -2590,8 +2588,7 @@
       "price_status": "ok",
       "instrument_id": "US:DELL",
       "hash": "a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b",
-      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a9/a932846b52e5aad229cdde26bfe032ef9e60ff64dc552b3f41c300165a20b17b.json"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -3742,7 +3739,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:DRAM",
       "hash": "c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e",
-      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json"
+      "path": "stocks/c0/c00c3a9f9670ce37adcbd54e5c4c3722f614433275dfef54fbca895357c4de5e.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:LLY": {
       "ticker": "LLY",
@@ -3906,8 +3904,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:285A",
       "hash": "44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4",
-      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/44/44bfb3f193530753efe2664cfb33e8ec4352784c79808a4257232e12902fabe4.json"
     },
     "US:AMAT": {
       "ticker": "AMAT",
@@ -7166,7 +7163,8 @@
       "price_status": "ok",
       "instrument_id": "US:DJT",
       "hash": "27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8",
-      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json"
+      "path": "stocks/27/27203a13869d903b5eb19a7c1d2e21f7a23551af2abc791753e70fc0a9465be8.json",
+      "price_history_52w_status": "ok"
     },
     "US:MDB": {
       "ticker": "MDB",
@@ -7720,6 +7718,48 @@
       "hash": "44a82eb1f652af042c03699a034bf7cbe5519a0d996444ace760c0a97c7f3bf5",
       "path": "stocks/44/44a82eb1f652af042c03699a034bf7cbe5519a0d996444ace760c0a97c7f3bf5.json"
     },
+    "UNVERIFIED:ANT": {
+      "ticker": "ANT",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:ANT",
+        "display_code": "ANT",
+        "display_name": "Anthropic",
+        "display_market": "Market unverified",
+        "aliases": [
+          "ANT"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$ANT",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Anthropic",
+      "industry": null,
+      "first_mention": "2026-07-31",
+      "last_mention": "2026-10-31",
+      "total_mentions": 25,
+      "blogger_count": 7,
+      "total_mentions_by_blogger": {
+        "michaelsikand": 10,
+        "StockMKTNewz": 7,
+        "ren_stocks": 3,
+        "KawzInvests": 2,
+        "zephyr_z9": 1,
+        "balder": 1,
+        "aleabitoreddit": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:ANT",
+      "hash": "97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e",
+      "path": "stocks/97/97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e.json"
+    },
     "US:BITF": {
       "ticker": "BITF",
       "instrument": {
@@ -7957,48 +7997,6 @@
       "instrument_id": "US:WOLF",
       "hash": "b666fb446ea3996368e0c779e40b2956eb34e45bc973fe0c3a88c30aa0ab0243",
       "path": "stocks/b6/b666fb446ea3996368e0c779e40b2956eb34e45bc973fe0c3a88c30aa0ab0243.json"
-    },
-    "UNVERIFIED:ANT": {
-      "ticker": "ANT",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:ANT",
-        "display_code": "ANT",
-        "display_name": "Anthropic",
-        "display_market": "Market unverified",
-        "aliases": [
-          "ANT"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "$ANT",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Anthropic",
-      "industry": null,
-      "first_mention": "2026-07-31",
-      "last_mention": "2026-10-30",
-      "total_mentions": 24,
-      "blogger_count": 7,
-      "total_mentions_by_blogger": {
-        "michaelsikand": 10,
-        "StockMKTNewz": 6,
-        "ren_stocks": 3,
-        "KawzInvests": 2,
-        "zephyr_z9": 1,
-        "balder": 1,
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:ANT",
-      "hash": "97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e",
-      "path": "stocks/97/97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e.json"
     },
     "UNVERIFIED:UNITREE": {
       "ticker": "UNITREE",
@@ -13051,8 +13049,7 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
     },
     "UNVERIFIED:P": {
       "ticker": "P",
@@ -27211,6 +27208,42 @@
       "hash": "1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f",
       "path": "stocks/12/1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f.json"
     },
+    "UNVERIFIED:QTOP": {
+      "ticker": "QTOP",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:QTOP",
+        "display_code": "QTOP",
+        "display_name": "Global X NASDAQ 100 Covered Call & Growth ETF",
+        "display_market": "Market unverified",
+        "aliases": [
+          "QTOP"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "$QTOP",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "Global X NASDAQ 100 Covered Call & Growth ETF",
+      "industry": null,
+      "first_mention": "2026-10-11",
+      "last_mention": "2026-10-31",
+      "total_mentions": 5,
+      "blogger_count": 1,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 5
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:QTOP",
+      "hash": "bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000",
+      "path": "stocks/bc/bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000.json"
+    },
     "UNVERIFIED:RCL": {
       "ticker": "RCL",
       "instrument": {
@@ -32571,42 +32604,6 @@
       "instrument_id": "UNVERIFIED:QLYS",
       "hash": "1c3f83062cc6d362803288d09bf6d373b5748fce7a3274e874b1d13c022d4048",
       "path": "stocks/1c/1c3f83062cc6d362803288d09bf6d373b5748fce7a3274e874b1d13c022d4048.json"
-    },
-    "UNVERIFIED:QTOP": {
-      "ticker": "QTOP",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:QTOP",
-        "display_code": "QTOP",
-        "display_name": "Horizon Kinetics NASDAQ-100 Covered Call ETF",
-        "display_market": "Market unverified",
-        "aliases": [
-          "QTOP"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "$QTOP",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "Horizon Kinetics NASDAQ-100 Covered Call ETF",
-      "industry": null,
-      "first_mention": "2026-10-11",
-      "last_mention": "2026-10-30",
-      "total_mentions": 4,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 4
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:QTOP",
-      "hash": "bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000",
-      "path": "stocks/bc/bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000.json"
     },
     "UNVERIFIED:RBLX": {
       "ticker": "RBLX",
@@ -110254,6 +110251,9 @@
     "GLOBAL PAYMENTS INC": [
       "US:GPN"
     ],
+    "GLOBAL X NASDAQ 100 COVERED CALL & GROWTH ETF": [
+      "UNVERIFIED:QTOP"
+    ],
     "GLOBAL X URANIUM ETF": [
       "UNVERIFIED:URA"
     ],
@@ -110835,9 +110835,6 @@
     ],
     "HOOD": [
       "US:HOOD"
-    ],
-    "HORIZON KINETICS NASDAQ-100 COVERED CALL ETF": [
-      "UNVERIFIED:QTOP"
     ],
     "HORIZON ROBOTICS": [
       "UNVERIFIED:9660"
@@ -128171,13 +128168,13 @@
     "stocks/25/25192cc63296f6df87fe69c6bd75e9e082751f909f8bc0e2b4237da411707482.json",
     "stocks/f2/f240cd028df2c17e6823aec875fc4352b3fa8893c83b3fd3e4a31ce59787125a.json",
     "stocks/44/44a82eb1f652af042c03699a034bf7cbe5519a0d996444ace760c0a97c7f3bf5.json",
+    "stocks/97/97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e.json",
     "stocks/5e/5e3cc6bf291b31caa763ba6b73d2373f8e26022dfce8af960f7d2d22267071cb.json",
     "stocks/4b/4bf9fbdbf7be8d3d154cd4351564aa3db51e425cdc9f55943da9aeb5c4296371.json",
     "stocks/6b/6b7e7c43d563fa10664237acbd2d4e6233b8e207c83be7283b41c596a44292f7.json",
     "stocks/e3/e3236e5c996f78adaeeb8b2f8e30b58682e6455cf05c257f55ee24e1856486fc.json",
     "stocks/e8/e8a2207aba4aaa7755f62c415204ca1b5c886eede795f733fee450c8f2c081c5.json",
     "stocks/b6/b666fb446ea3996368e0c779e40b2956eb34e45bc973fe0c3a88c30aa0ab0243.json",
-    "stocks/97/97bcb494d823b0f2927a4e73347ff2a3f37d283401cc4a27d9af49a1efb85a1e.json",
     "stocks/96/96804659b20af3a32cc7e3911d98863c29c0ec101f305ba5f9ec6a336939e346.json",
     "stocks/71/71cadc4f1c9f555289a89cedcec5c39c778e9bff33eda560894dd1ee3e206ca2.json",
     "stocks/a1/a1f2f4c3882094ac3f6e1c16da113684eebe9d74408e361e9de3fc5eb02716ed.json",
@@ -128692,6 +128689,7 @@
     "stocks/56/56aee005b25bb605826bb8d47b9c279f9e2787f6182903afcded4f99746d6bee.json",
     "stocks/41/411c50bd20873145c42e0181afc71ea8062919556c4c4dd6023a065cda56a1f5.json",
     "stocks/12/1246d3781652ff90f6d17478cf2a1c3fe6d29376257162aaa58c4e674eca959f.json",
+    "stocks/bc/bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000.json",
     "stocks/db/db9fd766dc4176cf405c1943903cb05c17a1ce7941cf0e65284c5baf8557fd20.json",
     "stocks/6f/6f651379601bc245f36550766b386338e365f71123005eb49aea4f4ccd99ed56.json",
     "stocks/e3/e3f0742c3aab8b87790884b1f2a4e55be42605bdb399eab05a47184e7c2bb1db.json",
@@ -128838,7 +128836,6 @@
     "stocks/35/35abd47e038ae70943a4bafaa2fb9afcb7db6a849a6dc8ff227078a54233c046.json",
     "stocks/56/56e9dcf3e5367efa2a7ff6a1c380b49abb2054ca25cdf6e89461a980f22550f5.json",
     "stocks/1c/1c3f83062cc6d362803288d09bf6d373b5748fce7a3274e874b1d13c022d4048.json",
-    "stocks/bc/bc7426b4156152c913830d3502e9c47f1bfff08514c2fe6e3c4da5be01a26000.json",
     "stocks/01/017e6babf242dfef26a7b47abd0aeaa6068af277dc6b9388a0a9e826684958fe.json",
     "stocks/85/85b186001aea975015029436b4c5c91756b1aa3cfeac2eb2d5bde202264634cd.json",
     "stocks/31/31b444b140ed0dcb15491276c68b361c762e46abc3678815610fe9b8a8cc6f74.json",
