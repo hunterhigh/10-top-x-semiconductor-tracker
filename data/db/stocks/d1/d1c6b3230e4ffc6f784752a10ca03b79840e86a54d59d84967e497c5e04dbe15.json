@@ -1,6 +1,6 @@
 {
   "ticker": "SOXL",
-  "cashtag": "SOXL",
+  "cashtag": "$SOXL",
   "instrument": {
     "instrument_id": "UNVERIFIED:SOXL",
     "display_code": "SOXL",
@@ -24,16 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-18",
-  "last_mention": "2026-10-24",
-  "total_mentions": 10,
+  "last_mention": "2026-11-01",
+  "total_mentions": 11,
   "total_mentions_by_blogger": {
     "octopusycc": 5,
     "StockMKTNewz": 3,
     "aleabitoreddit": 1,
-    "jukan05": 1
+    "jukan05": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 7,
+    "opinion": 8,
     "news": 3
   },
   "mentions": [
@@ -267,6 +268,34 @@
         "likes": 69,
         "reposts": 4,
         "replies": 15
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117081994848792969",
+      "blogger_id": "ren_stocks",
+      "date": "2026-11-01",
+      "created_at": "2026-11-01T21:30:55-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "massively oversold on Friday",
+        "taking the opposite trade into Monday",
+        "technical bounce expected",
+        "AH looks green"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$SOXL",
+      "text": "$SOXX $SOXL was massively oversold on Friday, between Intel's guide and the market punishing the hyperscalers for burning cash on capex\n\nI'm taking the opposite trade into Monday, even if it's just a technical bounce.\n\nAH looks green. Let's see how it holds. https://t.co/qq5ZD9GHG7",
+      "url": "https://x.com/ren_stocks/status/2117081994848792969",
+      "kind": "post",
+      "engagement": {
+        "views": 3000,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
