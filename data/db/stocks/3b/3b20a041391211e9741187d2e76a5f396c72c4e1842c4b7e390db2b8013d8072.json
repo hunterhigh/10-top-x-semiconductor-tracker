@@ -1,6 +1,6 @@
 {
   "ticker": "NDX",
-  "cashtag": "Nasdaq 100",
+  "cashtag": "纳斯达克 100",
   "instrument": {
     "instrument_id": "UNVERIFIED:NDX",
     "display_code": "NDX",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-14",
-  "last_mention": "2026-10-30",
-  "total_mentions": 53,
+  "last_mention": "2026-11-02",
+  "total_mentions": 54,
   "total_mentions_by_blogger": {
-    "balder": 37,
+    "balder": 38,
     "StockMKTNewz": 14,
     "octopusycc": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "news": 14,
-    "opinion": 38,
+    "opinion": 39,
     "flow": 1
   },
   "mentions": [
@@ -1366,6 +1366,36 @@
         "likes": 27,
         "reposts": 4,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117270902375395805",
+      "blogger_id": "balder",
+      "date": "2026-11-02",
+      "created_at": "2026-11-02T10:01:34-05:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "current level 28,568, down 133 from prior period, -8.51% from recent high of 31,224",
+        "20-day probability of touching back to high: 28%, base case 55%",
+        "probability of no deep drop: 1%, deep drop: 48%, drop then recover: 51%",
+        "probability of another 5% drop: 33% vs base 27%",
+        "today's expected range 28,367 to 28,768",
+        "next major catalyst: CPI on November 10"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "纳斯达克 100",
+      "text": "上周五的判断偏了：给的区间 28,522 到 28,878，收盘 28,385，低出下沿 137 点。纳斯达克 100 今天现报 28,568，比上一期低 133 点，距近期高点 31,224 为 -8.51%。\n\n价格又退了一步，概率没有跟着动：20 天内摸回高点 28%，基准 55%；不深跌的路径合计 1%，深跌 48%，先跌更深再回来 51%。再跌 5% 的概率 33%，基准 27%。\n\n今日预期区间 28,367 到 28,768。今天苹果财报落地，下一个大日程是 11 月 10 日的 CPI。在那之前，区间内的来回不改变剧本。要改判，先看不深跌那一格会不会从 1% 往上挪。\n\nhttps://t.co/hzrdMzUyd6",
+      "url": "https://x.com/Balder13946731/status/2117270902375395805",
+      "kind": "post",
+      "engagement": {
+        "views": 1470,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
