@@ -1,6 +1,6 @@
 {
   "ticker": "ONDO",
-  "cashtag": "Ondo",
+  "cashtag": "Ondo Perps",
   "instrument": {
     "instrument_id": "UNVERIFIED:ONDO",
     "display_code": "ONDO",
@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-23",
-  "last_mention": "2026-10-28",
-  "total_mentions": 8,
+  "last_mention": "2026-11-03",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 4,
-    "octopusycc": 4
+    "octopusycc": 5,
+    "StockMKTNewz": 4
   },
   "total_mentions_by_signal_type": {
     "news": 4,
-    "opinion": 4
+    "opinion": 5
   },
   "mentions": [
     {
@@ -235,20 +235,48 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117525211570733454",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-03",
+      "created_at": "2026-11-03T02:52:06-05:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "collateral and capital efficiency worth continued research",
+        "tokenized spot assets usable as collateral could reduce margin requirements",
+        "extended trading hours are a real practical need for stock perps",
+        "questions remain about pricing after market close, market maker hedging, and order book depth"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "Ondo Perps",
+      "text": "上周三在币安广场，和 Ondo DeFi 负责人 Matt @fullportmatt⁠ 聊了一场。\n\n从股票永续、资金费率，一直聊到 AI 的资本开支和估值。几个观点，再总结一下。\n\n我觉得 Ondo Perps 最值得继续研究的，还是抵押品和资金效率。这笔账，对做交易的人很重要。\n\n1. 同一笔钱，能不能多干几件事？\n\n比如买现货，再开一个对应的永续空单做对冲。\n\n现货放一边，合约保证金放另一边，两边各占一笔资金。同样一笔资金费率收入，摊到全部本金上，收益率就下来了。\n\n如果手里的代币化现货本身就能参与抵押，额外保证金的占用就有机会降下来。\n\n持有现货、安排对冲，再看资金费率能不能吃。一鱼多吃呗。\n\n这也是我当时和 Matt 讨论得比较细的地方。股票、ETF 上链之后，能继续拿来做什么，会直接影响它对交易者的价值。\n\n当然，抵押率多少、费率会不会转负、手续费扣完还剩多少、清算线在哪里，这些都得算。资金效率提高了，也要看增加了哪些风险。\n\n2. 股票永续的需求，我觉得是成立的。\n\n我自己天天盯美股财报，对这个还是有感受的。\n\n很多大波动就在盘前盘后，消息也不会等到开盘再出来。你有判断，还得有合适的工具去开仓、减仓或者对冲。\n\n所以，更长的交易时间，对我来说是一个很实际的需求。\n\n但往下就要问：美股休市以后，价格怎么来？做市商怎么对冲？行情真动起来，盘口有没有足够的深度？\n\nMatt也聊到了参考价格、移动平均和资金费率这些机制。\n\n这部分值得听。最后落到交易上，你关心的就是能不能以合理的价格进去，再正常出来。\n\n3. AI 这边，我的观点还是偏谨慎。\n\n我的问题很直接：capex 砸下去了，什么时候能赚回来？\n\n买芯片、建数据中心，都是实打实的投入。收入能不能兑现，现金流能不能跟上，最后都要算账。\n\n我担心的是，投入还在往上走，但市场对未来回报的预期已经给得太满。如果兑现慢下来，高资本开支公司的估值就有重新定价的压力。\n\n这个逻辑，也是我最近一直在关注 AI 和半导体的原因。\n\n你认为贵，市场还可以继续涨；你看空，也不代表明天就跌。\n\n基本面的判断要做，入场时点和仓位也得管好，不能跟市场硬耗。\n\n长期看好 AI，和对当下部分公司的估值保持谨慎，这两个判断完全可以同时成立。\n\n最后夸一句，Matt的中文确实很好。永续、资金费率、抵押品，都能用中文聊得很细，遇到不熟悉的词也会直接问。\n\n而且愿意把自己亏过的钱、做错的判断拿出来聊，这点我挺喜欢，交流起来也舒服。\n\n感谢 Matt，也谢谢上周来听直播的朋友。\n\n@Ondo @OndoPerps",
+      "url": "https://x.com/octopusycc/status/2117525211570733454",
+      "kind": "post",
+      "engagement": {
+        "views": 2130,
+        "likes": 5,
+        "reposts": 1,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-11-02T09:19:03.407561+00:00",
+  "price_updated_at": "2026-11-03T09:17:59.030472+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-11-02T09:19:03.407546+00:00",
-    "attempts": 83,
+    "checked_at": "2026-11-03T09:17:59.030457+00:00",
+    "attempts": 84,
     "next_retry_at": null,
     "http_status": null
   }
