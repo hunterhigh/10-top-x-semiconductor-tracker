@@ -1,6 +1,6 @@
 {
   "ticker": "AAPL",
-  "cashtag": "aapl",
+  "cashtag": "$AAPL",
   "instrument": {
     "instrument_id": "US:AAPL",
     "display_code": "AAPL",
@@ -26,13 +26,13 @@
   "thesis_summary": null,
   "first_mention": "2025-07-28",
   "last_mention": "2026-11-02",
-  "total_mentions": 555,
+  "total_mentions": 557,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 236,
+    "StockMKTNewz": 237,
     "aleabitoreddit": 109,
     "jukan05": 57,
     "unusual_whales": 52,
-    "balder": 39,
+    "balder": 40,
     "octopusycc": 21,
     "zephyr_z9": 11,
     "michaelsikand": 8,
@@ -43,8 +43,8 @@
     "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 265,
-    "news": 236,
+    "opinion": 266,
+    "news": 237,
     "flow": 52,
     "disclosure": 2
   },
@@ -12992,6 +12992,55 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117410318280425704",
+      "blogger_id": "balder",
+      "date": "2026-11-02",
+      "created_at": "2026-11-02T19:15:34-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "claimed privacy differentiation contradicts decade of locking away data that cannot be used for AI training",
+        "paying Google $1B/year to run Gemini for Siri, undermining independent AI capability"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "苹果",
+      "text": "苹果这两天的口风是：隐私才是我们AI的差异化，iPhone上的数据是我们的筹码。\n\n可这十年苹果真正干的事，是把那些数据做成自己也读不了的东西——端侧处理、差分隐私、Private Cloud Compute，一层层锁上，连自己都没留钥匙。全世界最肥的行为数据，到训练的时候一点都用不上。\n\n谷歌当年为了iPhone上默认搜索那个位置，一年给苹果两百亿美元（反垄断庭审里的数字）。现在据彭博，苹果每年付十亿美元租谷歌的Gemini来跑Siri。",
+      "url": "https://x.com/Balder13946731/status/2117410318280425704",
+      "kind": "post",
+      "engagement": {
+        "views": 5845,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117437941358252241",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-02",
+      "created_at": "2026-11-02T21:05:19-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AAPL",
+      "text": "HERE'S A RECAP OF APPLE'S $AAPL EARNINGS FROM TODAY\n\n- EPS of $2.10 beating expectations of $1.99 🟢\n- Revenue of $114.5B beating expectations of $113.4B 🟢\n- Gross margin of 47.9% beating expectations of 47.5% 🟢\n\n- iPhone revenue of $57.6B up +17.5% 🟢\n- Services revenue of $31.6B up +9.8% 🟢\n- Mac revenue of $10.8B up +23.7% 🟢\n- Wearables revenue of $8.3B down -7.9% 🔴\n- iPad revenue of $6.2B down -10.4% 🔴\n- Greater China revenue of $17.5B up +21.0% 🟢\n\nQ1 revenue growth guidance of 7% to 10% beating expectations of 6.1% 🟢",
+      "url": "https://x.com/StockMKTNewz/status/2117437941358252241",
+      "kind": "post",
+      "engagement": {
+        "views": 19652,
+        "likes": 78,
+        "reposts": 10,
+        "replies": 12
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -14294,11 +14343,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-03T00:18:55.648315+00:00",
+  "price_updated_at": "2026-11-03T03:18:55.737283+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-03",
     "asof": "2026-11-02",
-    "attempted_at": "2026-11-03T00:18:54.486227+00:00",
+    "attempted_at": "2026-11-03T03:18:55.677330+00:00",
     "status": "ok",
     "first_available_date": "2025-11-03",
     "last_available_date": "2026-11-02",
@@ -14309,7 +14358,7 @@
     "provider_symbol": "AAPL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-03T00:18:54.486227+00:00",
+    "checked_at": "2026-11-03T03:18:55.677330+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
