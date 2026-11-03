@@ -1,6 +1,6 @@
 {
   "ticker": "TSLA",
-  "cashtag": "TSLA",
+  "cashtag": "$TSLA",
   "instrument": {
     "instrument_id": "US:TSLA",
     "display_code": "TSLA",
@@ -25,7 +25,7 @@
   "thesis_summary": null,
   "first_mention": "2025-08-25",
   "last_mention": "2026-11-02",
-  "total_mentions": 387,
+  "total_mentions": 388,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 127,
     "aleabitoreddit": 125,
@@ -33,13 +33,13 @@
     "octopusycc": 30,
     "jukan05": 18,
     "unusual_whales": 13,
+    "asklivermore": 8,
     "michaelsikand": 7,
-    "asklivermore": 7,
     "ren_stocks": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 247,
+    "opinion": 248,
     "news": 127,
     "flow": 13
   },
@@ -9142,6 +9142,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117395071846822365",
+      "blogger_id": "asklivermore",
+      "date": "2026-11-02",
+      "created_at": "2026-11-02T18:14:59-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "personally experienced FSD for the first time and was impressed",
+        "told wife to buy more shares"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$TSLA",
+      "text": "Today, I experienced FULL-self driving (FSD) from $TSLA for the very first time today.\n\nAbsolutely mind-blown and amazed.\n\nI told my wife to buy more $TSLA shares tomorrow.",
+      "url": "https://x.com/asklivermore/status/2117395071846822365",
+      "kind": "post",
+      "engagement": {
+        "views": 18544,
+        "likes": 212,
+        "reposts": 5,
+        "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10428,18 +10454,22 @@
     {
       "date": "2026-10-30",
       "close": 399.81
+    },
+    {
+      "date": "2026-11-02",
+      "close": 403.82
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-02T21:26:04.779037+00:00",
+  "price_updated_at": "2026-11-03T00:19:22.601798+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-03",
     "asof": "2026-11-02",
-    "attempted_at": "2026-11-02T21:26:04.319557+00:00",
+    "attempted_at": "2026-11-03T00:19:21.889867+00:00",
     "status": "ok",
     "first_available_date": "2025-11-03",
-    "last_available_date": "2026-10-30",
+    "last_available_date": "2026-11-02",
     "reason": null
   },
   "price_source_state": {
@@ -10447,7 +10477,7 @@
     "provider_symbol": "TSLA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-02T21:26:04.319557+00:00",
+    "checked_at": "2026-11-03T00:19:21.889867+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
