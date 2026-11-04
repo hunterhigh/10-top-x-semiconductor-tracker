@@ -1,6 +1,6 @@
 {
   "ticker": "ANET",
-  "cashtag": "ANET",
+  "cashtag": "Arista",
   "instrument": {
     "instrument_id": "US:ANET",
     "display_code": "ANET",
@@ -25,16 +25,16 @@
   "thesis_summary": null,
   "first_mention": "2025-12-01",
   "last_mention": "2026-11-03",
-  "total_mentions": 17,
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
-    "balder": 8,
+    "balder": 9,
     "aleabitoreddit": 4,
     "StockMKTNewz": 3,
     "ren_stocks": 1,
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 14,
+    "opinion": 15,
     "news": 3
   },
   "mentions": [
@@ -433,6 +433,32 @@
         "likes": 4,
         "reposts": 0,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2117812749921374364",
+      "blogger_id": "balder",
+      "date": "2026-11-03",
+      "created_at": "2026-11-03T21:54:41-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "财报卡倾向看多",
+        "盘后一度 +18%"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Arista",
+      "text": "11.3 美股复盘视频：AI 链一天被买回、零售集体跌 2%，Aehr +26.5%。来回的轮动，方向看 AMD（盘后 +5%）· Arista 财报卡倾向看多，盘后一度 +18% · 标普区间命中 · 接下来看选举结果和周五非农 👉 https://t.co/c9YacM8zqy",
+      "url": "https://x.com/Balder13946731/status/2117812749921374364",
+      "kind": "post",
+      "engagement": {
+        "views": 2152,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1366,17 +1392,21 @@
     {
       "date": "2026-11-02",
       "close": 164.14
+    },
+    {
+      "date": "2026-11-03",
+      "close": 169.91
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-03T03:19:05.308978+00:00",
+  "price_updated_at": "2026-11-04T03:18:10.222583+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ANET",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-03T03:19:04.416452+00:00",
+    "checked_at": "2026-11-04T03:18:09.118109+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
