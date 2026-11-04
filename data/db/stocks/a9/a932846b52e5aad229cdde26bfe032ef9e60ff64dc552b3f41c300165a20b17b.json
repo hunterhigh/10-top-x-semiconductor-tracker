@@ -1,6 +1,6 @@
 {
   "ticker": "DELL",
-  "cashtag": "$DELL",
+  "cashtag": "DELL",
   "instrument": {
     "instrument_id": "US:DELL",
     "display_code": "DELL",
@@ -24,10 +24,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-16",
-  "last_mention": "2026-11-03",
-  "total_mentions": 102,
+  "last_mention": "2026-11-04",
+  "total_mentions": 103,
   "total_mentions_by_blogger": {
-    "balder": 25,
+    "balder": 26,
     "StockMKTNewz": 24,
     "aleabitoreddit": 17,
     "ren_stocks": 11,
@@ -38,7 +38,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 66,
+    "opinion": 67,
     "news": 24,
     "flow": 4,
     "disclosure": 8
@@ -2468,6 +2468,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118040979852890557",
+      "blogger_id": "balder",
+      "date": "2026-11-04",
+      "created_at": "2026-11-04T13:01:35-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "revenue only recognized when rack is powered on and accepted by customer",
+        "long cycle time — any bottleneck delays recognition"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "DELL",
+      "text": "今天标普期货 +1.8%、VIX 砍掉 18%。同一天里：VRT -13%、SMTC -12.3%、CRDO -10.5%、LITE -10.2%、IREN -9.6%、CRWV -9.1%、DELL -8.6%。\n\n挨刀的清一色是「机房通电才算得上收入」的那一环——电源散热、光模块、整机柜、租GPU的。这帮人的收入要等机柜上电、客户验收才落地，周期长，中间任何一环卡住都往后拖。\n\n再叠一条：AMD 给数据中心客户背的担保已经到 85 亿美金（Benzinga）。客户要靠芯片厂替他签字才借得到钱。假设你是 Vertiv 的 CFO，手上那堆 backlog，你现在敢照着它排产能吗？",
+      "url": "https://x.com/Balder13946731/status/2118040979852890557",
+      "kind": "post",
+      "engagement": {
+        "views": 1088,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3650,11 +3676,15 @@
     {
       "date": "2026-11-02",
       "close": 392.78
+    },
+    {
+      "date": "2026-11-03",
+      "close": 408.4
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-03T18:21:31.544868+00:00",
+  "price_updated_at": "2026-11-04T18:21:23.516558+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-29",
     "asof": "2026-09-28",
@@ -3669,7 +3699,7 @@
     "provider_symbol": "DELL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-03T18:21:30.909459+00:00",
+    "checked_at": "2026-11-04T18:21:23.135238+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
