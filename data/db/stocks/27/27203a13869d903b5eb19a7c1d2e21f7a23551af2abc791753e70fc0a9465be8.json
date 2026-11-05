@@ -1,6 +1,6 @@
 {
   "ticker": "DJT",
-  "cashtag": "this stock",
+  "cashtag": "Trump Media",
   "instrument": {
     "instrument_id": "US:DJT",
     "display_code": "DJT",
@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-28",
-  "last_mention": "2026-10-09",
-  "total_mentions": 28,
+  "last_mention": "2026-11-05",
+  "total_mentions": 29,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 12,
-    "DJTRadar": 8,
+    "DJTRadar": 9,
     "unusual_whales": 7,
     "StockMKTNewz": 1
   },
@@ -36,7 +36,7 @@
     "opinion": 12,
     "flow": 7,
     "news": 1,
-    "disclosure": 8
+    "disclosure": 9
   },
   "mentions": [
     {
@@ -719,6 +719,35 @@
         "likes": 120,
         "reposts": 5,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118284885462753659",
+      "blogger_id": "DJTRadar",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T05:10:47-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "moved $344 million of Bitcoin to an exchange",
+        "noteholders can demand ~$1 billion in cash on November 30",
+        "may have to sell Bitcoin to pay noteholders",
+        "stock is at a record low",
+        "three weeks to find $1 billion"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "Trump Media",
+      "text": "BREAKING: Trump Media just moved $344 million of Bitcoin to an exchange.\n\nOn November 2 the company told the SEC that noteholders can demand about $1 billion in cash on November 30, and that it may have to sell its Bitcoin to pay.\n\nThe stock is at a record low. Three weeks to find $1 billion.",
+      "url": "https://x.com/DJTRadar/status/2118284885462753659",
+      "kind": "post",
+      "engagement": {
+        "views": 27165,
+        "likes": 142,
+        "reposts": 30,
+        "replies": 9
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

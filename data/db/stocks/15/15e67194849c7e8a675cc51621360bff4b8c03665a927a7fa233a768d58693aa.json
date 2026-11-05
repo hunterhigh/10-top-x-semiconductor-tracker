@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-09",
-  "last_mention": "2026-10-07",
-  "total_mentions": 13,
+  "last_mention": "2026-11-05",
+  "total_mentions": 14,
   "total_mentions_by_blogger": {
+    "StockMKTNewz": 6,
     "aleabitoreddit": 5,
-    "StockMKTNewz": 5,
     "michaelsikand": 2,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 8,
-    "news": 5
+    "news": 6
   },
   "mentions": [
     {
@@ -353,6 +353,33 @@
         "likes": 135,
         "reposts": 15,
         "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118313397381140715",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T07:04:04-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "EPS of $0.25 beating expectations of $0.05",
+        "Revenue of $622M beating expectations of $567M",
+        "first move following earnings is up by more than 20%"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$U",
+      "text": "UNITY SOFTWARE $U JUST REPORTED EARNINGS\n\nEPS of $0.25 beating expectations of $0.05 🟢\nRevenue of $622M beating expectations of $567M 🟢\n\n$U's first move following its earnings is up by more than 20% https://t.co/hkoN22p6bv",
+      "url": "https://x.com/StockMKTNewz/status/2118313397381140715",
+      "kind": "post",
+      "engagement": {
+        "views": 7480,
+        "likes": 13,
+        "reposts": 1,
+        "replies": 7
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1102,17 +1129,21 @@
     {
       "date": "2026-11-03",
       "close": 40.48
+    },
+    {
+      "date": "2026-11-04",
+      "close": 42.46
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-04T09:16:46.221682+00:00",
+  "price_updated_at": "2026-11-05T12:20:11.363889+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "U",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-04T09:16:45.399436+00:00",
+    "checked_at": "2026-11-05T12:20:10.584079+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
