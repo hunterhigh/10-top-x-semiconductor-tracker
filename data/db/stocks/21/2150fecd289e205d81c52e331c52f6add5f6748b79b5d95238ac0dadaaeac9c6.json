@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "三星",
+  "cashtag": "Samsung Electronics",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -26,9 +26,9 @@
   "thesis_summary": null,
   "first_mention": "2025-12-28",
   "last_mention": "2026-11-04",
-  "total_mentions": 373,
+  "total_mentions": 374,
   "total_mentions_by_blogger": {
-    "jukan05": 200,
+    "jukan05": 201,
     "aleabitoreddit": 91,
     "zephyr_z9": 22,
     "StockMKTNewz": 21,
@@ -39,7 +39,7 @@
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 343,
+    "opinion": 344,
     "flow": 9,
     "news": 21
   },
@@ -8856,6 +8856,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118176254956544132",
+      "blogger_id": "jukan05",
+      "date": "2026-11-04",
+      "created_at": "2026-11-04T21:59:07-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Samsung Electronics",
+      "text": "Meritz Securities (South Korea):\n\nGenuine demand reflected in orders received by memory chipmakers for 2027 and 2028 far exceeds their supply capacity. Even if the Democrats’ blue wave leads to some delays and adjustments, the supply shortage is unlikely to change materially.\n\nThis year, the memory order fulfillment rate—available supply capacity relative to order volume—has remained in the low-to-mid 80% range, driving sharp increases in selling prices. The shortage is expected to worsen in 2027, with the fulfillment rate falling to around 80%.\n\nMeanwhile, during a recent visit to South Korea, OpenAI CEO Sam Altman asked SK hynix and Samsung Electronics to supply specialty memory, including HBM, for 2027–2030 in volumes beyond what they can accommodate.",
+      "url": "https://x.com/jukan05/status/2118176254956544132",
+      "kind": "post",
+      "engagement": {
+        "views": 7250,
+        "likes": 56,
+        "reposts": 9,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10112,9 +10135,9 @@
       "close": 219500.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-11-04T03:18:07.020914+00:00",
+  "price_updated_at": "2026-11-05T03:18:34.608749+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-04",
     "asof": "2026-11-03",
@@ -10127,11 +10150,12 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "005930.KS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-11-04T03:18:06.969397+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-11-05T03:18:34.376083+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-11-05T06:18:34.376083+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
