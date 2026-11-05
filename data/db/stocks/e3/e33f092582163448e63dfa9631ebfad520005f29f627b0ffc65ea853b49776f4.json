@@ -1,6 +1,6 @@
 {
   "ticker": "CORZ",
-  "cashtag": "$CORZ",
+  "cashtag": "CORZ",
   "instrument": {
     "instrument_id": "US:CORZ",
     "display_code": "CORZ",
@@ -25,18 +25,18 @@
   "thesis_summary": null,
   "first_mention": "2025-11-04",
   "last_mention": "2026-11-05",
-  "total_mentions": 23,
+  "total_mentions": 24,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 14,
     "StockMKTNewz": 3,
+    "octopusycc": 2,
     "ren_stocks": 2,
-    "octopusycc": 1,
     "michaelsikand": 1,
     "asklivermore": 1,
     "KawzInvests": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 20,
+    "opinion": 21,
     "news": 3
   },
   "mentions": [
@@ -605,6 +605,31 @@
         "likes": 65,
         "reposts": 5,
         "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118411283292897654",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T13:33:02-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "customer concentration too high — only has CRWV as a customer"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "CORZ",
+      "text": "比如CRWV就非常接近这个状态\n\nCORZ也仅有CRWV这个客户 客户集中度过高…",
+      "url": "https://x.com/octopusycc/status/2118411283292897654",
+      "kind": "post",
+      "engagement": {
+        "views": 3384,
+        "likes": 4,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1614,17 +1639,21 @@
     {
       "date": "2026-11-03",
       "close": 14.24
+    },
+    {
+      "date": "2026-11-04",
+      "close": 12.76
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-04T21:19:50.003067+00:00",
+  "price_updated_at": "2026-11-05T21:19:22.093195+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "CORZ",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-04T21:19:49.160941+00:00",
+    "checked_at": "2026-11-05T21:19:21.243947+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

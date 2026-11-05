@@ -1,5 +1,264 @@
 [
   {
+    "tweet_id": "2118435136341692423",
+    "kind": "post",
+    "url": "https://x.com/ren_stocks/status/2118435136341692423",
+    "created_at": "Thu Nov 05 20:07:49 +0000 2026",
+    "text": "$NVDA $SNDK\n\nThis is a really cool way Nvidia is handling the memory wall.\n\nHBM is the scarcest, priciest thing in an AI factory, so Nvidia is squeezing way more work out of every byte:\n\n+ Shrink it: 4-bit NVFP4 cuts the KV cache up to 50% vs FP8, so about 2x more context stays on the GPU\n\n+ Stop recomputing: Dynamo reuses context and moves it from GPU to CPU to storage\n\n+ Park it: when an agent waits on a tool call, the Vera CPU holds its context in up to 1.5TB of memory\n\n+ Share it: CMX lets the whole pod reuse context from flash\n\nVera Rubin does up to 30x the throughput per megawatt of GB300 on agentic workloads, with the same HBM per GPU.\n\nThe overflow goes to CPU memory and flash 👀\n\nCMX adds a brand-new flash tier to every pod, built just to hold AI context. More agents running longer tasks means more context to store, and more context means more SSDs\n\nCool to have 30x the work out of the same memory",
+    "lang": "en",
+    "like_count": 11,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "quote_count": 0,
+    "view_count": 5166,
+    "bookmark_count": 3,
+    "conversation_id": "2118435136341692423",
+    "is_reply": false,
+    "in_reply_to_id": null,
+    "in_reply_to_username": null,
+    "author_username": "ren_stocks",
+    "is_retweet": false,
+    "is_quote": true,
+    "quoted_tweet_id": "2118373611408945493",
+    "retweeted_tweet_id": null,
+    "entities": {
+      "hashtags": [],
+      "symbols": [
+        {
+          "indices": [
+            0,
+            5
+          ],
+          "text": "NVDA"
+        },
+        {
+          "indices": [
+            6,
+            11
+          ],
+          "text": "SNDK"
+        }
+      ],
+      "urls": [],
+      "user_mentions": []
+    },
+    "cashtags": [
+      "NVDA",
+      "SNDK"
+    ]
+  },
+  {
+    "tweet_id": "2118419402622115878",
+    "kind": "reply",
+    "url": "https://x.com/ren_stocks/status/2118419402622115878",
+    "created_at": "Thu Nov 05 19:05:18 +0000 2026",
+    "text": "@WealthyReadings So you are a pussy then. K.",
+    "lang": "en",
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "quote_count": 0,
+    "view_count": 810,
+    "bookmark_count": 0,
+    "conversation_id": "2118417779938468246",
+    "is_reply": true,
+    "in_reply_to_id": "2118417779938468246",
+    "in_reply_to_username": "WealthyReadings",
+    "author_username": "ren_stocks",
+    "is_retweet": false,
+    "is_quote": false,
+    "quoted_tweet_id": null,
+    "retweeted_tweet_id": null,
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "1673604674392412160",
+          "indices": [
+            0,
+            16
+          ],
+          "name": "The Few Bets That Matter",
+          "screen_name": "WealthyReadings"
+        }
+      ]
+    },
+    "cashtags": []
+  },
+  {
+    "tweet_id": "2118419202466083248",
+    "kind": "reply",
+    "url": "https://x.com/ren_stocks/status/2118419202466083248",
+    "created_at": "Thu Nov 05 19:04:30 +0000 2026",
+    "text": "@DDo63055 It was my turn now.\n\nhttps://t.co/kUzvCrOzrw",
+    "lang": "en",
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "quote_count": 0,
+    "view_count": 192,
+    "bookmark_count": 0,
+    "conversation_id": "2118401542390939884",
+    "is_reply": true,
+    "in_reply_to_id": "2118418558610759831",
+    "in_reply_to_username": "DDo63055",
+    "author_username": "ren_stocks",
+    "is_retweet": false,
+    "is_quote": true,
+    "quoted_tweet_id": "2117744896215846928",
+    "retweeted_tweet_id": null,
+    "entities": {
+      "urls": [
+        {
+          "display_url": "x.com/ren_stocks/sta…",
+          "expanded_url": "https://x.com/ren_stocks/status/2117744896215846928?a=IfMUmJPfkLHcxhXJ2GU&s=46",
+          "indices": [
+            31,
+            54
+          ],
+          "url": "https://t.co/kUzvCrOzrw"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1908564309904392192",
+          "indices": [
+            0,
+            9
+          ],
+          "name": "Dominik Panufnik",
+          "screen_name": "DDo63055"
+        }
+      ]
+    },
+    "cashtags": []
+  },
+  {
+    "tweet_id": "2118415371434672327",
+    "kind": "post",
+    "url": "https://x.com/ren_stocks/status/2118415371434672327",
+    "created_at": "Thu Nov 05 18:49:17 +0000 2026",
+    "text": "Guess who is calling? https://t.co/4LxTNEgWJX",
+    "lang": "en",
+    "like_count": 67,
+    "retweet_count": 3,
+    "reply_count": 6,
+    "quote_count": 0,
+    "view_count": 5670,
+    "bookmark_count": 3,
+    "conversation_id": "2118415371434672327",
+    "is_reply": false,
+    "in_reply_to_id": null,
+    "in_reply_to_username": null,
+    "author_username": "ren_stocks",
+    "is_retweet": false,
+    "is_quote": false,
+    "quoted_tweet_id": null,
+    "retweeted_tweet_id": null,
+    "entities": {},
+    "cashtags": []
+  },
+  {
+    "tweet_id": "2118411035011121586",
+    "kind": "post",
+    "url": "https://x.com/ren_stocks/status/2118411035011121586",
+    "created_at": "Thu Nov 05 18:32:03 +0000 2026",
+    "text": "It’s like Black Friday on a Wednesday.\n\nAll I can think of is all the names I want to buy.\n\n$NBIS $MU $SNDK $AMD $DELL $BE \n\nEven hyperscalers are on sale.\n\n$GOOGL $META $MSFT",
+    "lang": "en",
+    "like_count": 81,
+    "retweet_count": 1,
+    "reply_count": 7,
+    "quote_count": 0,
+    "view_count": 8019,
+    "bookmark_count": 10,
+    "conversation_id": "2118411035011121586",
+    "is_reply": false,
+    "in_reply_to_id": null,
+    "in_reply_to_username": null,
+    "author_username": "ren_stocks",
+    "is_retweet": false,
+    "is_quote": true,
+    "quoted_tweet_id": "2118391585956299102",
+    "retweeted_tweet_id": null,
+    "entities": {
+      "symbols": [
+        {
+          "indices": [
+            92,
+            97
+          ],
+          "text": "NBIS"
+        },
+        {
+          "indices": [
+            98,
+            101
+          ],
+          "text": "MU"
+        },
+        {
+          "indices": [
+            102,
+            107
+          ],
+          "text": "SNDK"
+        },
+        {
+          "indices": [
+            108,
+            112
+          ],
+          "text": "AMD"
+        },
+        {
+          "indices": [
+            113,
+            118
+          ],
+          "text": "DELL"
+        },
+        {
+          "indices": [
+            119,
+            122
+          ],
+          "text": "BE"
+        },
+        {
+          "indices": [
+            157,
+            163
+          ],
+          "text": "GOOGL"
+        },
+        {
+          "indices": [
+            164,
+            169
+          ],
+          "text": "META"
+        },
+        {
+          "indices": [
+            170,
+            175
+          ],
+          "text": "MSFT"
+        }
+      ]
+    },
+    "cashtags": [
+      "NBIS",
+      "MU",
+      "SNDK",
+      "AMD",
+      "DELL",
+      "BE",
+      "GOOGL",
+      "META",
+      "MSFT"
+    ]
+  },
+  {
     "tweet_id": "2118401542390939884",
     "kind": "post",
     "url": "https://x.com/ren_stocks/status/2118401542390939884",

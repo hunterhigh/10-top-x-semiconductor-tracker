@@ -24,14 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-22",
-  "last_mention": "2026-09-29",
-  "total_mentions": 3,
+  "last_mention": "2026-11-05",
+  "total_mentions": 4,
   "total_mentions_by_blogger": {
     "ren_stocks": 2,
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3
+    "opinion": 3,
+    "news": 1
   },
   "mentions": [
     {
@@ -102,6 +104,29 @@
         "likes": 12,
         "reposts": 4,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118438044915155200",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T15:19:23-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AEIS",
+      "text": "All these stocks hit new 52 WEEK LOWS at some point today\n\nOracle $ORCL\nCoreWeave $CRWV\nMercadoLibre $MELI\nCoinbase $COIN\nCameco $CCJ\nAST SpaceMobile $ASTS\nIREN $IREN\nTeraWulf $WULF\nApplied Digital $APLD\nNIO $NIO\nIonQ $IONQ\nFIS $FIS\nMP Materials $MP\nGalaxy Digital $GLXY\nVistra $VST\nDutch Bros $BROS\nGildan Activewear $GIL\nKratos $KTOS\nNRG Energy $NRG\nCelestica $CLS\nCytokinetics $CYTK\nModine $MOD\nAptiv $APTV\nMasTec $MTZ\nCummins $CMI\nBWX $BWXT\nRambus $RMBS\nSymbotic $SYM\nAdvanced Drainage Systems $WMS\nNational Fuel Gas $NFG\nAeroVironment $AVAV\nConstruction Partners $ROAD\nSterling Infrastructure $STRL\nFabrinet $FN\nIngredion $INGR\nIonis $IONS\nCarpenter $CRS\nAdvanced Energy $AEIS\nFirst Industrial Realty Trust $FR\nIES Holdings $IESC\nSPX $SPXC\nRed Rock Resorts $RRR\nCurtiss-Wright $CW\nDycom $DY\nPOSCO $PKX",
+      "url": "https://x.com/StockMKTNewz/status/2118438044915155200",
+      "kind": "post",
+      "engagement": {
+        "views": 23468,
+        "likes": 58,
+        "reposts": 9,
+        "replies": 23
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -635,17 +660,37 @@
     {
       "date": "2026-10-28",
       "close": 242.32
+    },
+    {
+      "date": "2026-10-29",
+      "close": 239.75
+    },
+    {
+      "date": "2026-10-30",
+      "close": 222.06
+    },
+    {
+      "date": "2026-11-02",
+      "close": 217.19
+    },
+    {
+      "date": "2026-11-03",
+      "close": 238.1
+    },
+    {
+      "date": "2026-11-04",
+      "close": 211.56
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-29T15:20:08.775876+00:00",
+  "price_updated_at": "2026-11-05T21:19:17.444263+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "AEIS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-29T15:20:07.564584+00:00",
+    "checked_at": "2026-11-05T21:19:15.982102+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

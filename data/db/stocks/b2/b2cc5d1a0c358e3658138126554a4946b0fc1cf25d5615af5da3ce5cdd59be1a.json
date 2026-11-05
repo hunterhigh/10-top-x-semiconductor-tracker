@@ -1,6 +1,6 @@
 {
   "ticker": "SMR",
-  "cashtag": "SMR",
+  "cashtag": "$SMR",
   "instrument": {
     "instrument_id": "US:SMR",
     "display_code": "SMR",
@@ -24,14 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-15",
-  "last_mention": "2026-10-08",
-  "total_mentions": 5,
+  "last_mention": "2026-11-05",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
     "asklivermore": 3,
-    "aleabitoreddit": 2
+    "aleabitoreddit": 2,
+    "StockMKTNewz": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 5
+    "opinion": 5,
+    "news": 1
   },
   "mentions": [
     {
@@ -154,6 +156,29 @@
         "likes": 1,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118444012424343600",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T15:43:06-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SMR",
+      "text": "We have a bunch of names reporting earnings today after the stock markets close\n\nAirbnb $ABNB\nDraftKings $DKNG\nIonQ $IONQ\nIREN $IREN\nSoundHound $SOUN\nCloudflare $NET\nMP Materials $MP\nNuScale $SMR\nAxon $AXON\nKratos $KTOS\nApplied Optoelectronics $AAOI\nTransMedics $TMDX\nOpendoor $OPEN\nAffirm $AFRM\nLyft $LYFT\nAtlassian $TEAM\nMonster Beverage $MNST",
+      "url": "https://x.com/StockMKTNewz/status/2118444012424343600",
+      "kind": "post",
+      "engagement": {
+        "views": 18185,
+        "likes": 30,
+        "reposts": 6,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1219,17 +1244,21 @@
     {
       "date": "2026-11-03",
       "close": 5.37
+    },
+    {
+      "date": "2026-11-04",
+      "close": 5.13
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-04T18:21:44.049186+00:00",
+  "price_updated_at": "2026-11-05T21:19:44.659996+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "SMR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-04T18:21:43.144014+00:00",
+    "checked_at": "2026-11-05T21:19:43.803345+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

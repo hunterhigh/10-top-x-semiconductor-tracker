@@ -1,6 +1,6 @@
 {
   "ticker": "NVDA",
-  "cashtag": "英伟达",
+  "cashtag": "$NVDA",
   "instrument": {
     "instrument_id": "US:NVDA",
     "display_code": "NVDA",
@@ -25,16 +25,16 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-21",
   "last_mention": "2026-11-05",
-  "total_mentions": 1510,
+  "total_mentions": 1513,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 602,
-    "StockMKTNewz": 303,
+    "StockMKTNewz": 304,
     "jukan05": 163,
     "balder": 95,
-    "ren_stocks": 71,
+    "ren_stocks": 72,
     "zephyr_z9": 70,
     "unusual_whales": 70,
-    "octopusycc": 39,
+    "octopusycc": 40,
     "KawzInvests": 38,
     "michaelsikand": 35,
     "frank_trading": 9,
@@ -42,8 +42,8 @@
     "DJTRadar": 7
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1130,
-    "news": 303,
+    "opinion": 1132,
+    "news": 304,
     "flow": 70,
     "disclosure": 7
   },
@@ -35537,6 +35537,75 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118409574458040612",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T13:26:15-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "英伟达",
+      "text": "但是我觉得…如果真的fcf出现重大问题，公司债也发行困难的话\n\n这个钱 也可以不要\n\n当然 美光海力士英伟达可能会帮助自己的客户度过难关\n\n但，我们最看重的其实是股价波动\n\n我一切所想说的，就是会威胁股价。\n\n这是对这些公司再定价的大波交易机会。",
+      "url": "https://x.com/octopusycc/status/2118409574458040612",
+      "kind": "post",
+      "engagement": {
+        "views": 5594,
+        "likes": 5,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118431141677961446",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T14:51:57-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "NVIDIA $NVDA WANTS TO TURN OLD TELEPHONE BUILDINGS INTO AI DATA CENTERS\n\nNvidia has approached Apollo $APO about building a network of small AI data centers in existing buildings owned by a struggling telecom company, per The Information. https://t.co/YT3shGxcoY",
+      "url": "https://x.com/StockMKTNewz/status/2118431141677961446",
+      "kind": "post",
+      "engagement": {
+        "views": 25436,
+        "likes": 186,
+        "reposts": 21,
+        "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118435136341692423",
+      "blogger_id": "ren_stocks",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T15:07:49-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$NVDA",
+      "text": "$NVDA $SNDK\n\nThis is a really cool way Nvidia is handling the memory wall.\n\nHBM is the scarcest, priciest thing in an AI factory, so Nvidia is squeezing way more work out of every byte:\n\n+ Shrink it: 4-bit NVFP4 cuts the KV cache up to 50% vs FP8, so about 2x more context stays on the GPU\n\n+ Stop recomputing: Dynamo reuses context and moves it from GPU to CPU to storage\n\n+ Park it: when an agent waits on a tool call, the Vera CPU holds its context in up to 1.5TB of memory\n\n+ Share it: CMX lets the whole pod reuse context from flash\n\nVera Rubin does up to 30x the throughput per megawatt of GB300 on agentic workloads, with the same HBM per GPU.\n\nThe overflow goes to CPU memory and flash 👀\n\nCMX adds a brand-new flash tier to every pod, built just to hold AI context. More agents running longer tasks means more context to store, and more context means more SSDs\n\nCool to have 30x the work out of the same memory",
+      "url": "https://x.com/ren_stocks/status/2118435136341692423",
+      "kind": "post",
+      "engagement": {
+        "views": 5166,
+        "likes": 11,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -36851,11 +36920,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-05T18:20:11.701328+00:00",
+  "price_updated_at": "2026-11-05T21:19:09.159085+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-06",
     "asof": "2026-11-05",
-    "attempted_at": "2026-11-05T18:20:10.629464+00:00",
+    "attempted_at": "2026-11-05T21:19:08.461622+00:00",
     "status": "ok",
     "first_available_date": "2025-11-06",
     "last_available_date": "2026-11-04",
@@ -36866,7 +36935,7 @@
     "provider_symbol": "NVDA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-05T18:20:10.629464+00:00",
+    "checked_at": "2026-11-05T21:19:08.461622+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
