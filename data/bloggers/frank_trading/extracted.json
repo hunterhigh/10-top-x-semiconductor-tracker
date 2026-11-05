@@ -4457,5 +4457,69 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-11-05T03:12:47.063418+00:00"
+  },
+  "2118403230812209591": {
+    "tweet_id": "2118403230812209591",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "crwv",
+        "symbol": "CRWV",
+        "company_name": "CoreWeave",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "dropped 60% in one month",
+          "credit crisis risk — pension funds and private credit PMs unwilling to buy CRWV debt",
+          "credit contagion spreading, no floor in sight",
+          "likened to Evergrande — too far gone to slow down or stop borrowing",
+          "nothing can save it at this stage",
+          "fear will keep spreading until full liquidation"
+        ],
+        "is_risk": true,
+        "conviction_signal": "high"
+      },
+      {
+        "raw_mention": "英伟达",
+        "symbol": "NVDA",
+        "company_name": "Nvidia",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "if Nvidia bails out CRWV, Nvidia itself will be dragged down"
+        ],
+        "is_risk": true,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "QQQ",
+        "symbol": "QQQ",
+        "company_name": "Invesco QQQ Trust",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "sees QQQ falling to 500, 300 as within their macro view",
+          "credit crisis driven by CRWV-style contagion",
+          "recommends shorting here"
+        ],
+        "is_risk": false,
+        "conviction_signal": "high"
+      }
+    ],
+    "confidence": 0.85,
+    "blogger_id": "frank_trading",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-05T18:13:10.612940+00:00"
+  },
+  "2118371165530112504": {
+    "tweet_id": "2118371165530112504",
+    "has_investment_content": false,
+    "tickers": [],
+    "confidence": 0.7,
+    "blogger_id": "frank_trading",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-05T18:13:10.612940+00:00"
   }
 }

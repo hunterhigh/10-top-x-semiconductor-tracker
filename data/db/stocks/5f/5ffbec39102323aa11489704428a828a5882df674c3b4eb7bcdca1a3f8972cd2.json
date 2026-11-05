@@ -1,6 +1,6 @@
 {
   "ticker": "MU",
-  "cashtag": "$MU",
+  "cashtag": "MU",
   "instrument": {
     "instrument_id": "US:MU",
     "display_code": "MU",
@@ -25,27 +25,27 @@
   "thesis_summary": null,
   "first_mention": "2025-09-25",
   "last_mention": "2026-11-05",
-  "total_mentions": 767,
+  "total_mentions": 769,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 241,
     "ren_stocks": 129,
     "StockMKTNewz": 127,
     "jukan05": 78,
-    "octopusycc": 55,
+    "octopusycc": 56,
     "balder": 39,
     "michaelsikand": 27,
     "KawzInvests": 23,
     "unusual_whales": 17,
     "asklivermore": 17,
     "zephyr_z9": 10,
-    "DJTRadar": 2,
+    "DJTRadar": 3,
     "frank_trading": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 621,
+    "opinion": 622,
     "news": 127,
     "flow": 17,
-    "disclosure": 2
+    "disclosure": 3
   },
   "mentions": [
     {
@@ -18771,6 +18771,55 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118374099550437613",
+      "blogger_id": "DJTRadar",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T11:05:17-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Micron",
+      "text": "The post-election rally lasted exactly one session.\n\nWednesday the Dow rose over 1,000 points. Thursday the S&P 500 is down 2.7% and has erased every point of it, with over $2 trillion gone in the first hour.\n\nNvidia -7%. Tesla -9%. AMD -12.5%. Micron -10%. Broadcom -5.5%.\n\nThe AI unwind that started in October didn't stop for the election. It paused for a day.",
+      "url": "https://x.com/DJTRadar/status/2118374099550437613",
+      "kind": "post",
+      "engagement": {
+        "views": 28430,
+        "likes": 51,
+        "reposts": 0,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118374999396691970",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T11:08:52-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "customers' LTAs (long-term purchase agreements) may be cancelled at any time due to FCF issues",
+        "cancellations will further destroy revenue guidance"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "MU",
+      "text": "我认为MU 三星 海力士的客户公司之前所定的LTA（长期订购协议）会因为FCF（自由现金流）的问题，随时取消LTA\n\n这将会进一步干爆MU 三星 海力士的 收入指引",
+      "url": "https://x.com/octopusycc/status/2118374999396691970",
+      "kind": "post",
+      "engagement": {
+        "views": 20818,
+        "likes": 35,
+        "reposts": 2,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -20081,11 +20130,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-05T15:20:30.503306+00:00",
+  "price_updated_at": "2026-11-05T18:20:08.951547+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-06",
     "asof": "2026-11-05",
-    "attempted_at": "2026-11-05T15:20:29.564511+00:00",
+    "attempted_at": "2026-11-05T18:20:07.978207+00:00",
     "status": "ok",
     "first_available_date": "2025-11-06",
     "last_available_date": "2026-11-04",
@@ -20096,7 +20145,7 @@
     "provider_symbol": "MU",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-05T15:20:29.564511+00:00",
+    "checked_at": "2026-11-05T18:20:07.978207+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
