@@ -24,8 +24,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-30",
-  "last_mention": "2026-11-04",
-  "total_mentions": 169,
+  "last_mention": "2026-11-05",
+  "total_mentions": 170,
   "total_mentions_by_blogger": {
     "ren_stocks": 47,
     "aleabitoreddit": 31,
@@ -34,13 +34,13 @@
     "jukan05": 20,
     "KawzInvests": 12,
     "unusual_whales": 6,
+    "frank_trading": 5,
     "octopusycc": 4,
-    "frank_trading": 4,
     "michaelsikand": 3
   },
   "total_mentions_by_signal_type": {
     "flow": 6,
-    "opinion": 142,
+    "opinion": 143,
     "news": 21
   },
   "mentions": [
@@ -4154,6 +4154,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118494365035467102",
+      "blogger_id": "frank_trading",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T19:03:11-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "shorting alongside QQQ decline"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$SKHY",
+      "text": "虽然不想装逼但是最近真的已经超神了\n用无敌的conviction\n做空 $CRWV  $AAOI  $OKTA $PLTR $CRWD $SKHY \n跟随 $QQQ 一起 \n飞流直下！ https://t.co/YmwSoNVQrJ",
+      "url": "https://x.com/Franktradinglog/status/2118494365035467102",
+      "kind": "post",
+      "engagement": {
+        "views": 1705,
+        "likes": 14,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -4484,18 +4509,22 @@
     {
       "date": "2026-11-04",
       "close": 143.07
+    },
+    {
+      "date": "2026-11-05",
+      "close": 123.9
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-05T21:19:12.429112+00:00",
+  "price_updated_at": "2026-11-06T00:18:27.940113+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-06",
     "asof": "2026-11-05",
-    "attempted_at": "2026-11-05T21:19:11.884632+00:00",
+    "attempted_at": "2026-11-06T00:18:27.034116+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-07-13",
-    "last_available_date": "2026-11-04",
+    "last_available_date": "2026-11-05",
     "reason": "first_available_close=2026-07-13"
   },
   "price_source_state": {
@@ -4503,7 +4532,7 @@
     "provider_symbol": "SKHY",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-05T21:19:11.884632+00:00",
+    "checked_at": "2026-11-06T00:18:27.034116+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
