@@ -1,10 +1,10 @@
 {
   "ticker": "HYPERSCALERS",
-  "cashtag": "hyperscalers",
+  "cashtag": "hyperscaler",
   "instrument": {
     "instrument_id": "UNVERIFIED:HYPERSCALERS",
     "display_code": "HYPERSCALERS",
-    "display_name": "Name unverified",
+    "display_name": "Hyperscalers (large cloud/tech companies collectively)",
     "display_market": "Market unverified",
     "aliases": [
       "HYPERSCALERS"
@@ -20,17 +20,18 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": null,
+  "company": "Hyperscalers (large cloud/tech companies collectively)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-09-03",
-  "last_mention": "2026-09-03",
-  "total_mentions": 1,
+  "last_mention": "2026-11-05",
+  "total_mentions": 2,
   "total_mentions_by_blogger": {
-    "michaelsikand": 1
+    "michaelsikand": 1,
+    "balder": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -57,20 +58,46 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2118556859275887021",
+      "blogger_id": "balder",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T23:11:30-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "偏多下半年",
+        "但需靠真业务增长而非回购驱动EPS"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "hyperscaler",
+      "text": "我发现聊Capex的人全在算毛利率和折旧年限，没人算股本。\n\n过去十来年美股大厂的每股收益，很大一块是回购撑出来的——苹果十几年回购把股本砍掉了四成多，分母一直在缩，每股赚多少自然好看。顺带一句，这些公司常年是自家股票最大的买家，盘口底下那层托，就是它们自己真金白银铺的。\n\n现在这笔钱改道去买GPU了。回购注销掉的股票是永久少掉的分母，GPU五年就折旧干净。所以少回购不只是少了个买家，是把过去十年EPS增长的那台发动机顺手拆了。\n\n我对hyperscaler下半年还是偏多，但这轮得靠真业务涨，回购这根拐杖越来越短了。假设你是其中一家的CFO，董事会问你明年EPS凭什么涨，你总不能说靠折旧表排得漂亮。",
+      "url": "https://x.com/Balder13946731/status/2118556859275887021",
+      "kind": "post",
+      "engagement": {
+        "views": 3941,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-10-03T21:16:46.425551+00:00",
+  "price_updated_at": "2026-11-06T06:20:38.926111+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-10-03T21:16:46.425539+00:00",
-    "attempts": 24,
+    "checked_at": "2026-11-06T06:20:38.926100+00:00",
+    "attempts": 25,
     "next_retry_at": null,
     "http_status": null
   }
