@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-24",
-  "last_mention": "2026-10-06",
-  "total_mentions": 16,
+  "last_mention": "2026-11-07",
+  "total_mentions": 17,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 14,
-    "octopusycc": 2
+    "octopusycc": 2,
+    "aleabitoreddit": 1
   },
   "total_mentions_by_signal_type": {
     "news": 14,
-    "opinion": 2
+    "opinion": 3
   },
   "mentions": [
     {
@@ -401,6 +402,33 @@
         "likes": 139,
         "reposts": 15,
         "replies": 28
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2119080107319206219",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-11-07",
+      "created_at": "2026-11-07T09:50:42-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "100%+ Y/Y growth from AI testing segment with Anthropic seems relatively slow compared to AI supply chains growing hundreds to 1000% Y/Y",
+        "company overall revenue projections only call for double revenue growth by 2031 implying 15% annual growth",
+        "not all bottlenecks have the same economic impact the way hyperscaler capex in AI supply chains does"
+      ],
+      "is_risk": false,
+      "conviction": "low",
+      "raw_mention": "$TWST",
+      "text": "@100puhcent Even with current narratives like biotech eg. $TWST, there's 100%+ Y/Y growth from their AI testing segment with Anthropic. \n\nBut if you look at company overall revenue projections, they're only calling for double revenue growth by 2031 (implying 15% annual growth). \n\nI'm sure they can beat, but this seems relatively slow compared to AI supply chains growing hundreds to 1000% Y/Y and seeing record levels of net income growth Q/Q.  \n\nNot all bottlenecks have the same economic impact the way hyperscaler capex in AI supply chains does.",
+      "url": "https://x.com/aleabitoreddit/status/2119080107319206219",
+      "kind": "reply",
+      "engagement": {
+        "views": 2633,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 1
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -782,17 +810,25 @@
     {
       "date": "2026-11-04",
       "close": 142.58
+    },
+    {
+      "date": "2026-11-05",
+      "close": 120.61
+    },
+    {
+      "date": "2026-11-06",
+      "close": 120.79
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-05T09:18:51.808936+00:00",
+  "price_updated_at": "2026-11-07T15:19:16.211991+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "TWST",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-05T09:18:50.841545+00:00",
+    "checked_at": "2026-11-07T15:19:14.986538+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
