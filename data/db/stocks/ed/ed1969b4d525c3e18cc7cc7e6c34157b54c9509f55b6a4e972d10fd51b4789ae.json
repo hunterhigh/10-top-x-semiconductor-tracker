@@ -1,6 +1,6 @@
 {
   "ticker": "TSM",
-  "cashtag": "TSM",
+  "cashtag": "TSMC",
   "instrument": {
     "instrument_id": "US:TSM",
     "display_code": "TSM",
@@ -24,11 +24,11 @@
   "industry": "Wafer Foundry",
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-11-06",
-  "total_mentions": 470,
+  "last_mention": "2026-11-07",
+  "total_mentions": 472,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 252,
-    "jukan05": 98,
+    "jukan05": 100,
     "StockMKTNewz": 48,
     "balder": 25,
     "zephyr_z9": 16,
@@ -41,7 +41,7 @@
     "octopusycc": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 415,
+    "opinion": 417,
     "news": 48,
     "flow": 7
   },
@@ -11247,6 +11247,52 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2119026338522869863",
+      "blogger_id": "jukan05",
+      "date": "2026-11-07",
+      "created_at": "2026-11-07T06:17:03-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSMC",
+      "text": "RE: The claim that TSMC will enter memory and disrupt the big three memory makers\n\nThis doesn't make sense. As far as I know, TSMC has been working on this project for more than five years, but it would be a mistake to assume what they're building is commodity DRAM. TSMC has no DRAM IP, no DRAM patents, and none of the relevant technology.\n\nI think the term \"3D DRAM\" is what's causing the misunderstanding.\n\nAfter talking with industry experts, I believe this is the correct way to read the reports of TSMC entering DRAM.\n\nTSMC's earlier published research gives a good sense of the direction.\n\nAt the 2025 VLSI Symposium, TSMC presented a memory technology based on oxide semiconductors, using a cell made of one transistor and one capacitor (1T1C). The goal was to integrate this memory into advanced logic chips and give processors a cache with low power and low latency.\n\nThe key feature of the design is that the memory array is built directly into the back end of line (BEOL) interconnect layers of the logic chip. Conventional DRAM is manufactured as a separate chip.\n\nTo build the memory array in the interconnect layers of an advanced logic chip, TSMC used select transistors with an oxide semiconductor channel and capacitors fabricated with a low temperature process.\n\nAccording to TSMC, the test chip, which integrates memory and logic on a single die, operated at 0.75V. Data retention exceeded 128ms, random read/write cycle time was under 8ns, and endurance was above 10¹⁴ cycles. TSMC positioned the technology as a processor cache that offers higher density than SRAM while keeping power consumption and latency low.\n\nSo TSMC would be producing 3D DRAM as a next generation technology to replace SRAM. And not in large volumes, either.\n\nAnyone saying TSMC will make DDR or LPDDR has no idea what they're talking about.",
+      "url": "https://x.com/jukan05/status/2119026338522869863",
+      "kind": "post",
+      "engagement": {
+        "views": 19363,
+        "likes": 169,
+        "reposts": 21,
+        "replies": 17
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2119037512828235908",
+      "blogger_id": "jukan05",
+      "date": "2026-11-07",
+      "created_at": "2026-11-07T07:01:27-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSMC",
+      "text": "@paurooteri @racetrack275 But given the reports that Samsung has agreed to have TSMC make the base die for NVHBM, I’m afraid NVIDIA may have already won that tug-of-war.",
+      "url": "https://x.com/jukan05/status/2119037512828235908",
+      "kind": "reply",
+      "engagement": {
+        "views": 384,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -12429,11 +12475,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-07T09:16:55.945527+00:00",
+  "price_updated_at": "2026-11-07T12:18:13.545048+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-08",
     "asof": "2026-11-07",
-    "attempted_at": "2026-11-07T09:16:54.992737+00:00",
+    "attempted_at": "2026-11-07T12:18:12.603383+00:00",
     "status": "ok",
     "first_available_date": "2025-11-10",
     "last_available_date": "2026-11-06",
@@ -12444,7 +12490,7 @@
     "provider_symbol": "TSM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-07T09:16:54.992737+00:00",
+    "checked_at": "2026-11-07T12:18:12.603383+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

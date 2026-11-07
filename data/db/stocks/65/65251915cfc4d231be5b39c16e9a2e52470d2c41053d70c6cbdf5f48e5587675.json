@@ -1,6 +1,6 @@
 {
   "ticker": "ON",
-  "cashtag": "ON",
+  "cashtag": "onsemi",
   "instrument": {
     "instrument_id": "US:ON",
     "display_code": "ON",
@@ -24,18 +24,19 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-07",
-  "last_mention": "2026-11-03",
-  "total_mentions": 22,
+  "last_mention": "2026-11-07",
+  "total_mentions": 23,
   "total_mentions_by_blogger": {
     "balder": 8,
     "aleabitoreddit": 5,
     "ren_stocks": 5,
     "StockMKTNewz": 2,
     "KawzInvests": 1,
-    "unusual_whales": 1
+    "unusual_whales": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 19,
+    "opinion": 20,
     "news": 2,
     "flow": 1
   },
@@ -552,6 +553,29 @@
         "likes": 4,
         "reposts": 0,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2119010267853881618",
+      "blogger_id": "jukan05",
+      "date": "2026-11-07",
+      "created_at": "2026-11-07T05:13:11-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "onsemi",
+      "text": "I'd like to believe LTAs are durable too. But take one example.\n\nAnalog chipmaker onsemi said this in 2023.\nOn January 5, 2023, at JPMorgan's CES forum, CEO Hassane El-Khoury was asked how much LTSAs would still hold once the shortage eased. His answer: “They are a legally binding agreement ’cause they’re a liability for the customer because they’re take or pay.” He also said he would not accept a customer reopening price talks just because it could get the same parts 10% cheaper elsewhere.\n\nOn October 30, 2023, on the Q3 earnings call, onsemi cut its SiC shipment forecast for the year from $1 billion to more than $800 million after one automotive OEM reduced demand. An analyst asked how this could happen when the company had been saying its LTSAs were legally binding. The same CEO reaffirmed that they were binding, but said he did not want to enforce the contracts just to push inventory onto a customer whose demand had dropped. If it worked for both sides, terms could be adjusted customer by customer, whether by a quarter, a year, or longer.\n\nIn its 10-K filings, onsemi also states that it amended LTSAs with some strategic customers by mutual agreement in 2024, and changed delivery schedules and committed volumes on some LTSAs in 2025 as demand shifted.\n\nMicrochip is another case. Customers in its Preferred Supply Program (PSP) originally had to place 12 months of orders and could not cancel or reschedule them unless Microchip raised prices. On its November 2025 earnings call, however, the CEO said the company had accepted some cancellations and pushouts so customers could adjust their backlog. On the same call, the CFO separately addressed the multiyear LTSAs the company had signed. Some of those contracts were still in effect, he said, but customers had been allowed to defer taking delivery of committed volumes by one to two years if they needed to.\n\nEvery time I see cases like these, I doubt how much memory makers' LTAs will protect earnings in a downcycle. Right now the most reliable thing is the prepayments and deposits themselves. That cash can go into capacity expansion today.\n\nI can picture hyperscalers with no DRAM inventory continuing to buy at current prices. But once inventory has piled up, will they keep taking every committed unit at the same price? I have a hard time picturing memory makers holding customers to the high contract price all the way through.\n\nThe LTA itself may never be broken and may stay in place. But if both sides agree to push this year's volumes into next year or two years out, this year's earnings estimates come down. If price gets renegotiated too, margin estimates have to come down as well.\n\nAgain, I agree LTAs are sturdier than they used to be. What I question is whether, after demand turns, memory makers can still earn 80% margins on contracts signed during the upturn and keep collecting hundreds of billions of dollars in profit because of those LTAs.",
+      "url": "https://x.com/jukan05/status/2119010267853881618",
+      "kind": "post",
+      "engagement": {
+        "views": 47879,
+        "likes": 197,
+        "reposts": 17,
+        "replies": 50
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
