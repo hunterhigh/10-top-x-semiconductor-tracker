@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-11-08T00:17:14.208032+00:00",
+  "generated_at": "2026-11-08T03:17:59.937178+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2664,
-    "total_mentions": 37028,
+    "total_mentions": 37031,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-11-08T00:18:26.253368+00:00"
+    "prices_updated_at": "2026-11-08T03:19:25.122771+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -105,11 +105,11 @@
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
       "last_mention": "2026-11-07",
-      "total_mentions": 1274,
+      "total_mentions": 1275,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 843,
-        "ren_stocks": 297,
+        "ren_stocks": 298,
         "StockMKTNewz": 45,
         "michaelsikand": 28,
         "balder": 28,
@@ -162,7 +162,7 @@
         "KawzInvests": 2,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -449,8 +449,7 @@
       "price_status": "ok",
       "instrument_id": "US:AXTI",
       "hash": "d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b",
-      "path": "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/d1/d15698ef10447e538b3b6fda5a101fa5acde53df3b7d7e3a86bbff2583bdf79b.json"
     },
     "US:MSFT": {
       "ticker": "MSFT",
@@ -1025,7 +1024,7 @@
         "KawzInvests": 2,
         "michaelsikand": 2
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:000660",
       "hash": "e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3",
       "path": "stocks/e8/e869138e72cbe8a636e34845d70d73221cc6baf8f427281aeedff318a04bb3a3.json",
@@ -1104,12 +1103,12 @@
       "industry": "GPU Cloud/Neocloud",
       "first_mention": "2025-07-21",
       "last_mention": "2026-11-07",
-      "total_mentions": 381,
+      "total_mentions": 383,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 211,
-        "StockMKTNewz": 62,
-        "balder": 34,
+        "StockMKTNewz": 63,
+        "balder": 35,
         "ren_stocks": 28,
         "KawzInvests": 14,
         "michaelsikand": 10,
@@ -1165,7 +1164,7 @@
         "balder": 6,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -2219,8 +2218,7 @@
       "price_status": "ok",
       "instrument_id": "US:SMCI",
       "hash": "dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece",
-      "path": "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json"
     },
     "US:ARM": {
       "ticker": "ARM",
@@ -2350,8 +2348,7 @@
       "price_status": "ok",
       "instrument_id": "US:WULF",
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
-      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
     },
     "US:MTSI": {
       "ticker": "MTSI",
@@ -2599,7 +2596,8 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
+      "price_history_52w_status": "ok"
     },
     "US:GOOG": {
       "ticker": "GOOG",
@@ -2684,7 +2682,8 @@
       "price_status": "ok",
       "instrument_id": "US:SONY",
       "hash": "a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818",
-      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json"
+      "path": "stocks/a4/a42019d8502379f1644033f49404b389723e635bc1ac46616940e25d929d6818.json",
+      "price_history_52w_status": "ok"
     },
     "US:ASTS": {
       "ticker": "ASTS",
@@ -2769,7 +2768,8 @@
       "price_status": "ok",
       "instrument_id": "US:COIN",
       "hash": "bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a",
-      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json"
+      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json",
+      "price_history_52w_status": "ok"
     },
     "US:JPM": {
       "ticker": "JPM",
@@ -3109,7 +3109,8 @@
       "price_status": "ok",
       "instrument_id": "US:GLW",
       "hash": "4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce",
-      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json"
+      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
+      "price_history_52w_status": "ok"
     },
     "US:BRK.B": {
       "ticker": "BRK.B",
@@ -5259,7 +5260,8 @@
       "price_status": "ok",
       "instrument_id": "US:SMTC",
       "hash": "e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9",
-      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json"
+      "path": "stocks/e8/e8378d17a3412fe42a4aaa0bbad9105fab0bc28143dabe7c7810f7107d0efbc9.json",
+      "price_history_52w_status": "ok"
     },
     "US:AEVA": {
       "ticker": "AEVA",
@@ -5417,7 +5419,8 @@
       "price_status": "ok",
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
-      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
+      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
+      "price_history_52w_status": "ok"
     },
     "US:MA": {
       "ticker": "MA",
@@ -12562,8 +12565,7 @@
       "price_status": "unavailable",
       "instrument_id": "TSE:4062",
       "hash": "ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8",
-      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json",
-      "price_history_52w_status": "unavailable"
+      "path": "stocks/ee/ee71f9c6ced1767d309ea267ed4889f6f2eef952913b89dfd60041a3445d9ab8.json"
     },
     "UNVERIFIED:GPRO": {
       "ticker": "GPRO",
@@ -15915,8 +15917,7 @@
       "price_status": "ok",
       "instrument_id": "US:FCX",
       "hash": "1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315",
-      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/1c/1c20c23269916b92b73bed0a6a19061019f15da087349c1614f9e2272730e315.json"
     },
     "US:HUM": {
       "ticker": "HUM",
