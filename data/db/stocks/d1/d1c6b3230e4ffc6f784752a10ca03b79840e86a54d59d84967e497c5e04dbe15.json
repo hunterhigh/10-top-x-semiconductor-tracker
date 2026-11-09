@@ -1,6 +1,6 @@
 {
   "ticker": "SOXL",
-  "cashtag": "SOXL",
+  "cashtag": "$SOXL",
   "instrument": {
     "instrument_id": "UNVERIFIED:SOXL",
     "display_code": "SOXL",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-18",
-  "last_mention": "2026-11-06",
-  "total_mentions": 15,
+  "last_mention": "2026-11-09",
+  "total_mentions": 16,
   "total_mentions_by_blogger": {
+    "ren_stocks": 6,
     "octopusycc": 5,
-    "ren_stocks": 5,
     "StockMKTNewz": 3,
     "aleabitoreddit": 1,
     "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 12,
+    "opinion": 13,
     "news": 3
   },
   "mentions": [
@@ -403,20 +403,46 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2119738396297842918",
+      "blogger_id": "ren_stocks",
+      "date": "2026-11-09",
+      "created_at": "2026-11-09T05:26:31-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "up 300% today from trading sentiment in semis",
+        "up 1000% in a month from understanding sentiment around semis"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "$SOXL",
+      "text": "$SOXL $NBIS $AMD\n\nOk, I might be onto something here…\n\nI’m up 1,000% in a month just from understanding the sentiment around semis. I’m up 300% today alone.\n\nThere’s definitely something to be said about trading sentiment in an industry you know inside and out.\n\nYou can follow me for my nightly dose of fun on Liquid, same handle as on X, or use my code RENSTOCKS to join the weekly tournaments I host or copy trade my action.",
+      "url": "https://x.com/ren_stocks/status/2119738396297842918",
+      "kind": "post",
+      "engagement": {
+        "views": 7254,
+        "likes": 21,
+        "reposts": 1,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unverified_symbol",
   "price_unit": "",
-  "price_updated_at": "2026-11-08T09:18:09.655388+00:00",
+  "price_updated_at": "2026-11-09T12:18:52.020358+00:00",
   "price_reason": "unverified_instrument_identity",
   "price_source_state": {
     "provider": null,
     "provider_symbol": null,
     "status": "symbol_unresolved",
     "reason": "unverified_instrument_identity",
-    "checked_at": "2026-11-08T09:18:09.655375+00:00",
-    "attempts": 68,
+    "checked_at": "2026-11-09T12:18:52.020344+00:00",
+    "attempts": 69,
     "next_retry_at": null,
     "http_status": null
   }
