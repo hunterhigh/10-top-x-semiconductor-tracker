@@ -1477,17 +1477,18 @@
       "close": 448.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "CNY",
-  "price_updated_at": "2026-11-08T00:18:25.588039+00:00",
+  "price_updated_at": "2026-11-09T03:18:53.923309+00:00",
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "300308.SHE",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-11-08T00:18:24.761236+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "300308.SZ",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-11-09T03:18:53.364711+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-11-09T06:18:53.364711+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

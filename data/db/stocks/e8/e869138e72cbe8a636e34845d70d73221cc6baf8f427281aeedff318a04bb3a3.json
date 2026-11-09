@@ -11399,13 +11399,13 @@
       "close": 1132000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-11-09T00:18:49.785853+00:00",
+  "price_updated_at": "2026-11-09T03:17:59.977824+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-09",
     "asof": "2026-11-08",
-    "attempted_at": "2026-11-09T00:18:49.096046+00:00",
+    "attempted_at": "2026-11-09T03:17:59.704908+00:00",
     "status": "ok",
     "first_available_date": "2025-11-10",
     "last_available_date": "2026-11-06",
@@ -11413,12 +11413,13 @@
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "000660.KO",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-11-09T00:18:49.096046+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "provider_symbol": "000660.KS",
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-11-09T03:17:59.704908+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-11-09T06:17:59.704908+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
