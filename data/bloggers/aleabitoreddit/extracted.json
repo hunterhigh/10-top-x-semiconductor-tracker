@@ -263123,5 +263123,42 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-11-10T12:06:40.781039+00:00"
+  },
+  "2120198265346081174": {
+    "tweet_id": "2120198265346081174",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$NVDA",
+        "symbol": "NVDA",
+        "company_name": "Nvidia",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "crashed -25% losing close to $2T in valuation",
+          "projected 70% supply-constrained growth FY2028 yet market punished it severely"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "$ANT",
+        "symbol": "ANT",
+        "company_name": "Ant Group",
+        "stance": "bearish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "IPO at $1.4T valuation described as probably one of the worst times",
+          "questions whether buyers exist at that price"
+        ],
+        "is_risk": true,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.75,
+    "blogger_id": "aleabitoreddit",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-10T18:08:48.115731+00:00"
   }
 }
