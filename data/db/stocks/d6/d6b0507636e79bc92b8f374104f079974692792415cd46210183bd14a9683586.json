@@ -7666,9 +7666,9 @@
       "close": 94.34
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "EUR",
-  "price_updated_at": "2026-11-09T00:19:31.314835+00:00",
+  "price_updated_at": "2026-11-10T06:18:42.265539+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-14",
     "asof": "2026-09-13",
@@ -7681,11 +7681,12 @@
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "SOI.PA",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-11-09T00:19:31.076596+00:00",
-    "attempts": 1,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-11-10T06:18:42.145308+00:00",
+    "attempts": 2,
+    "next_retry_at": "2026-11-10T09:18:42.145308+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }
