@@ -2,14 +2,14 @@
   "_note": "Symbols without a verified instrument-registry entry are never defaulted to US/USD. They remain publishable as explicitly unverified entities and require review. Run ticker_map_suggest.py to auto-draft company/exchange/currency suggestions for human review (writes to ticker_map_suggestions.json; never auto-applied).",
   "unmapped": [
     {
+      "symbol": "ANT",
+      "mentions": 51,
+      "company_name_hint": "Anthropic"
+    },
+    {
       "symbol": "DIA",
       "mentions": 50,
       "company_name_hint": "SPDR Dow Jones Industrial Average ETF"
-    },
-    {
-      "symbol": "ANT",
-      "mentions": 49,
-      "company_name_hint": "Anthropic"
     },
     {
       "symbol": "ESMT",
@@ -102,6 +102,11 @@
       "company_name_hint": "Wynn Resorts"
     },
     {
+      "symbol": "XLV",
+      "mentions": 10,
+      "company_name_hint": "Health Care Select Sector SPDR Fund"
+    },
+    {
       "symbol": "LEN",
       "mentions": 10,
       "company_name_hint": "Lennar Corporation"
@@ -115,11 +120,6 @@
       "symbol": "VTRS",
       "mentions": 10,
       "company_name_hint": "Viatris"
-    },
-    {
-      "symbol": "XLV",
-      "mentions": 9,
-      "company_name_hint": "Health Care Select Sector SPDR Fund"
     },
     {
       "symbol": "LVS",
@@ -1092,6 +1092,11 @@
       "company_name_hint": "Caris Life Sciences"
     },
     {
+      "symbol": "URA",
+      "mentions": 3,
+      "company_name_hint": "Global X Uranium ETF"
+    },
+    {
       "symbol": "INDA",
       "mentions": 3,
       "company_name_hint": "iShares MSCI India ETF"
@@ -1125,6 +1130,11 @@
       "symbol": "GRMN",
       "mentions": 3,
       "company_name_hint": "Garmin"
+    },
+    {
+      "symbol": "XHB",
+      "mentions": 3,
+      "company_name_hint": "SPDR S&P Homebuilders ETF"
     },
     {
       "symbol": "ALLY",
@@ -1622,11 +1632,6 @@
       "company_name_hint": "BNB (Binance Coin)"
     },
     {
-      "symbol": "URA",
-      "mentions": 2,
-      "company_name_hint": "Global X Uranium ETF"
-    },
-    {
       "symbol": "XLF",
       "mentions": 2,
       "company_name_hint": "Financial Select Sector SPDR Fund"
@@ -1720,11 +1725,6 @@
       "symbol": "GDX",
       "mentions": 2,
       "company_name_hint": "VanEck Gold Miners ETF"
-    },
-    {
-      "symbol": "XHB",
-      "mentions": 2,
-      "company_name_hint": "SPDR S&P Homebuilders ETF"
     },
     {
       "symbol": "VKTX",
@@ -5311,7 +5311,7 @@
       "symbol": "ANTHROPIC",
       "instrument_id": "UNVERIFIED:ANTHROPIC",
       "company_name_hint": "Anthropic PBC",
-      "mentions": 109,
+      "mentions": 111,
       "verification_status": "identified"
     },
     {
@@ -5329,17 +5329,17 @@
       "verification_status": "identified"
     },
     {
-      "symbol": "TE",
-      "instrument_id": "UNVERIFIED:TE",
-      "company_name_hint": "Tronox Holdings",
+      "symbol": "NDX",
+      "instrument_id": "UNVERIFIED:NDX",
+      "company_name_hint": "Nasdaq-100 Index",
       "mentions": 59,
       "verification_status": "identified"
     },
     {
-      "symbol": "NDX",
-      "instrument_id": "UNVERIFIED:NDX",
-      "company_name_hint": "Nasdaq-100 Index",
-      "mentions": 58,
+      "symbol": "TE",
+      "instrument_id": "UNVERIFIED:TE",
+      "company_name_hint": "Tronox Holdings",
+      "mentions": 59,
       "verification_status": "identified"
     },
     {
@@ -5357,17 +5357,17 @@
       "verification_status": "identified"
     },
     {
+      "symbol": "ANT",
+      "instrument_id": "UNVERIFIED:ANT",
+      "company_name_hint": "Anthropic",
+      "mentions": 51,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "DIA",
       "instrument_id": "UNVERIFIED:DIA",
       "company_name_hint": "SPDR Dow Jones Industrial Average ETF",
       "mentions": 50,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "ANT",
-      "instrument_id": "UNVERIFIED:ANT",
-      "company_name_hint": "Anthropic",
-      "mentions": 49,
       "verification_status": "unverified"
     },
     {
@@ -5388,7 +5388,7 @@
       "symbol": "SMH",
       "instrument_id": "UNVERIFIED:SMH",
       "company_name_hint": "VanEck Semiconductor ETF",
-      "mentions": 42,
+      "mentions": 43,
       "verification_status": "identified"
     },
     {
@@ -5791,6 +5791,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "XLV",
+      "instrument_id": "UNVERIFIED:XLV",
+      "company_name_hint": "Health Care Select Sector SPDR Fund",
+      "mentions": 10,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "3037",
       "instrument_id": "UNVERIFIED:3037",
       "company_name_hint": "Unimicron Technology Corporation",
@@ -5894,13 +5901,6 @@
       "company_name_hint": "Win Semiconductors",
       "mentions": 9,
       "verification_status": "identified"
-    },
-    {
-      "symbol": "XLV",
-      "instrument_id": "UNVERIFIED:XLV",
-      "company_name_hint": "Health Care Select Sector SPDR Fund",
-      "mentions": 9,
-      "verification_status": "unverified"
     },
     {
       "symbol": "011070",
@@ -8836,6 +8836,13 @@
       "verification_status": "unverified"
     },
     {
+      "symbol": "URA",
+      "instrument_id": "UNVERIFIED:URA",
+      "company_name_hint": "Global X Uranium ETF",
+      "mentions": 3,
+      "verification_status": "unverified"
+    },
+    {
       "symbol": "VANGUARD",
       "instrument_id": "UNVERIFIED:VANGUARD",
       "company_name_hint": "Vanguard Group",
@@ -8925,6 +8932,13 @@
       "company_name_hint": "xAI (Elon Musk's AI company)",
       "mentions": 3,
       "verification_status": "identified"
+    },
+    {
+      "symbol": "XHB",
+      "instrument_id": "UNVERIFIED:XHB",
+      "company_name_hint": "SPDR S&P Homebuilders ETF",
+      "mentions": 3,
+      "verification_status": "unverified"
     },
     {
       "symbol": "XMTR",
@@ -10586,13 +10600,6 @@
       "verification_status": "unverified"
     },
     {
-      "symbol": "URA",
-      "instrument_id": "UNVERIFIED:URA",
-      "company_name_hint": "Global X Uranium ETF",
-      "mentions": 2,
-      "verification_status": "unverified"
-    },
-    {
       "symbol": "US10Y",
       "instrument_id": "UNVERIFIED:US10Y",
       "company_name_hint": "US 10-Year Treasury Yield",
@@ -10757,13 +10764,6 @@
       "symbol": "XEL",
       "instrument_id": "UNVERIFIED:XEL",
       "company_name_hint": "Xcel Energy",
-      "mentions": 2,
-      "verification_status": "unverified"
-    },
-    {
-      "symbol": "XHB",
-      "instrument_id": "UNVERIFIED:XHB",
-      "company_name_hint": "SPDR S&P Homebuilders ETF",
       "mentions": 2,
       "verification_status": "unverified"
     },

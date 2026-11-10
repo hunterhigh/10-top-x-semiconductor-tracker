@@ -1,6 +1,6 @@
 {
   "ticker": "NDX",
-  "cashtag": "NASDAQ 100",
+  "cashtag": "纳斯达克 100",
   "instrument": {
     "instrument_id": "UNVERIFIED:NDX",
     "display_code": "NDX",
@@ -24,17 +24,17 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-14",
-  "last_mention": "2026-11-07",
-  "total_mentions": 58,
+  "last_mention": "2026-11-10",
+  "total_mentions": 59,
   "total_mentions_by_blogger": {
-    "balder": 39,
+    "balder": 40,
     "StockMKTNewz": 17,
     "octopusycc": 1,
     "unusual_whales": 1
   },
   "total_mentions_by_signal_type": {
     "news": 17,
-    "opinion": 40,
+    "opinion": 41,
     "flow": 1
   },
   "mentions": [
@@ -1495,6 +1495,35 @@
         "likes": 72,
         "reposts": 9,
         "replies": 29
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120169978322362813",
+      "blogger_id": "balder",
+      "date": "2026-11-10",
+      "created_at": "2026-11-10T10:01:28-05:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "rebound is real but script hasn't changed",
+        "probability of no deep drop still 0%",
+        "deep drop probability 99%",
+        "probability of reclaiming recent high within 20 days is 28% vs 55% baseline",
+        "probability of another 5% drop is 33% vs 27% baseline"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "纳斯达克 100",
+      "text": "纳斯达克 100 今天现报 27,948，比上一期高 298 点，距近期高点 31,224 为 -10.49%，缺口收窄了 0.96 个百分点。反弹是真的，但剧本没有跟着改。\n\n不深跌的路径合计还是 0%，深跌 99%。20 天内摸回高点的概率 28%，基准 55%，一格没动。再跌 5% 的概率 33%，基准 27%。\n\n今日预期区间 27,754 到 28,142。今天 CPI 在 08:30 ET 公布，数据落地后波动可能超出这个区间。下一个大日程是 11 月 17 日的 NVDA 财报。\n\n要改判，先看不深跌那一格能不能从 0% 挪开。一天的反弹不够，概率没动就还是原来的剧本。\n\nhttps://t.co/hzrdMzUyd6",
+      "url": "https://x.com/Balder13946731/status/2120169978322362813",
+      "kind": "post",
+      "engagement": {
+        "views": 1267,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
