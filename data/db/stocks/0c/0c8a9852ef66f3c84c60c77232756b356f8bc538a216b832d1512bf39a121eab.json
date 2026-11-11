@@ -1,6 +1,6 @@
 {
   "ticker": "MSTR",
-  "cashtag": "mstr",
+  "cashtag": "MSTR (implied)",
   "instrument": {
     "instrument_id": "US:MSTR",
     "display_code": "MSTR",
@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-02",
-  "last_mention": "2026-11-10",
-  "total_mentions": 86,
+  "last_mention": "2026-11-11",
+  "total_mentions": 88,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 40,
-    "octopusycc": 17,
+    "octopusycc": 19,
     "StockMKTNewz": 14,
     "asklivermore": 10,
     "balder": 3,
@@ -36,7 +36,7 @@
     "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 70,
+    "opinion": 72,
     "news": 14,
     "flow": 1,
     "disclosure": 1
@@ -2140,6 +2140,56 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120537922881663146",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-11",
+      "created_at": "2026-11-11T10:23:33-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expects drop to 110-115 after after-hours announcement"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$MSTR",
+      "text": "截止23:23 判断，比较典型的看空\n\n$MSTR 在盘后公布决定之后，MSTR应当会下跌至110-115",
+      "url": "https://x.com/octopusycc/status/2120537922881663146",
+      "kind": "post",
+      "engagement": {
+        "views": 9126,
+        "likes": 18,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120575132301451588",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-11",
+      "created_at": "2026-11-11T12:51:24-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "maintaining prior bearish judgment as of 1:51"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "MSTR (implied)",
+      "text": "本条 娱乐向一点 需要长时间盯盘 但是我可能等不到收盘了\n1：51保持判断",
+      "url": "https://x.com/octopusycc/status/2120575132301451588",
+      "kind": "self_thread",
+      "engagement": {
+        "views": 379,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3510,11 +3560,15 @@
     {
       "date": "2026-11-09",
       "close": 125.59
+    },
+    {
+      "date": "2026-11-10",
+      "close": 121.07
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-10T12:18:48.404531+00:00",
+  "price_updated_at": "2026-11-11T18:22:11.776451+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-18",
     "asof": "2026-09-17",
@@ -3529,7 +3583,7 @@
     "provider_symbol": "MSTR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-10T12:18:47.935907+00:00",
+    "checked_at": "2026-11-11T18:22:10.873031+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
