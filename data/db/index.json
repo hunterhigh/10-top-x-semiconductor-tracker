@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-11-11T06:17:00.179098+00:00",
+  "generated_at": "2026-11-11T09:17:02.038831+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2671,
-    "total_mentions": 37530,
+    "total_mentions": 37536,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-11-11T06:18:54.740049+00:00"
+    "prices_updated_at": "2026-11-11T09:18:18.931332+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -46,7 +46,7 @@
         "price_symbol": "NVDA",
         "verification_status": "verified"
       },
-      "cashtag": "$NVDA",
+      "cashtag": "NVIDIA Rubin",
       "price_symbol": "NVDA",
       "exchange": "US",
       "currency": "USD",
@@ -55,13 +55,13 @@
       "company": "NVIDIA",
       "industry": "AI Chips",
       "first_mention": "2025-07-21",
-      "last_mention": "2026-11-10",
-      "total_mentions": 1605,
+      "last_mention": "2026-11-11",
+      "total_mentions": 1606,
       "blogger_count": 13,
       "total_mentions_by_blogger": {
         "aleabitoreddit": 611,
         "StockMKTNewz": 323,
-        "jukan05": 175,
+        "jukan05": 176,
         "balder": 114,
         "ren_stocks": 89,
         "zephyr_z9": 70,
@@ -105,10 +105,10 @@
       "industry": "AI Cloud/GPU",
       "first_mention": "2025-07-21",
       "last_mention": "2026-11-11",
-      "total_mentions": 1298,
+      "total_mentions": 1299,
       "blogger_count": 11,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 845,
+        "aleabitoreddit": 846,
         "ren_stocks": 312,
         "StockMKTNewz": 45,
         "balder": 32,
@@ -565,7 +565,7 @@
         "price_symbol": "IREN",
         "verification_status": "verified"
       },
-      "cashtag": "IREN",
+      "cashtag": "$IREN",
       "price_symbol": "IREN",
       "exchange": "US",
       "currency": "USD",
@@ -574,11 +574,11 @@
       "company": "IREN (Iris Energy)",
       "industry": "Bitcoin Miner→AI Datacenter (Neocloud)",
       "first_mention": "2025-08-31",
-      "last_mention": "2026-11-10",
-      "total_mentions": 583,
+      "last_mention": "2026-11-11",
+      "total_mentions": 584,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "aleabitoreddit": 482,
+        "aleabitoreddit": 483,
         "ren_stocks": 31,
         "StockMKTNewz": 25,
         "balder": 25,
@@ -1351,7 +1351,8 @@
       "price_status": "partial",
       "instrument_id": "Euronext Paris:SOI",
       "hash": "d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586",
-      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json"
+      "path": "stocks/d6/d6b0507636e79bc92b8f374104f079974692792415cd46210183bd14a9683586.json",
+      "price_history_52w_status": "ok"
     },
     "US:RKLB": {
       "ticker": "RKLB",
@@ -2308,6 +2309,52 @@
       "hash": "4c67ef37c4c0382001b47bf1a426aafb23df698b8811a38902b7146790f4dad6",
       "path": "stocks/4c/4c67ef37c4c0382001b47bf1a426aafb23df698b8811a38902b7146790f4dad6.json"
     },
+    "UNVERIFIED:ANTHROPIC": {
+      "ticker": "ANTHROPIC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:ANTHROPIC",
+        "display_code": "ANTHROPIC",
+        "display_name": "Anthropic PBC",
+        "display_market": "Market unverified",
+        "aliases": [
+          "ANTHROPIC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "Anthropic",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Anthropic PBC",
+      "industry": null,
+      "first_mention": "2026-06-10",
+      "last_mention": "2026-11-11",
+      "total_mentions": 114,
+      "blogger_count": 11,
+      "total_mentions_by_blogger": {
+        "StockMKTNewz": 42,
+        "jukan05": 19,
+        "unusual_whales": 11,
+        "michaelsikand": 9,
+        "balder": 9,
+        "octopusycc": 8,
+        "zephyr_z9": 5,
+        "aleabitoreddit": 4,
+        "ren_stocks": 4,
+        "KawzInvests": 2,
+        "frank_trading": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:ANTHROPIC",
+      "hash": "8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d",
+      "path": "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json"
+    },
     "US:WULF": {
       "ticker": "WULF",
       "instrument": {
@@ -2349,52 +2396,6 @@
       "instrument_id": "US:WULF",
       "hash": "4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd",
       "path": "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json"
-    },
-    "UNVERIFIED:ANTHROPIC": {
-      "ticker": "ANTHROPIC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:ANTHROPIC",
-        "display_code": "ANTHROPIC",
-        "display_name": "Anthropic PBC",
-        "display_market": "Market unverified",
-        "aliases": [
-          "ANTHROPIC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "Anthropic",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Anthropic PBC",
-      "industry": null,
-      "first_mention": "2026-06-10",
-      "last_mention": "2026-11-10",
-      "total_mentions": 111,
-      "blogger_count": 11,
-      "total_mentions_by_blogger": {
-        "StockMKTNewz": 42,
-        "jukan05": 16,
-        "unusual_whales": 11,
-        "michaelsikand": 9,
-        "balder": 9,
-        "octopusycc": 8,
-        "zephyr_z9": 5,
-        "aleabitoreddit": 4,
-        "ren_stocks": 4,
-        "KawzInvests": 2,
-        "frank_trading": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:ANTHROPIC",
-      "hash": "8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d",
-      "path": "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json"
     },
     "US:MTSI": {
       "ticker": "MTSI",
@@ -2516,8 +2517,7 @@
       "price_status": "ok",
       "instrument_id": "US:ASML",
       "hash": "d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065",
-      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json"
     },
     "US:DELL": {
       "ticker": "DELL",
@@ -2768,8 +2768,7 @@
       "price_status": "ok",
       "instrument_id": "US:COIN",
       "hash": "bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a",
-      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/bd/bd9a2cee2297812e3506f1706a97e5df75dfe1c8b4373533d18c0492ce6e8f4a.json"
     },
     "US:UBER": {
       "ticker": "UBER",
@@ -3109,8 +3108,7 @@
       "price_status": "ok",
       "instrument_id": "US:GLW",
       "hash": "4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce",
-      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json"
     },
     "US:BRK.B": {
       "ticker": "BRK.B",
@@ -4173,7 +4171,8 @@
       "price_status": "ok",
       "instrument_id": "US:BABA",
       "hash": "36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87",
-      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json"
+      "path": "stocks/36/36c3d32734c2ba527cd81d54a543d7a94b10c0ab5d14a331683024666bfa6e87.json",
+      "price_history_52w_status": "ok"
     },
     "US:OSS": {
       "ticker": "OSS",
@@ -5464,7 +5463,8 @@
       "price_status": "ok",
       "instrument_id": "US:LULU",
       "hash": "016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481",
-      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json"
+      "path": "stocks/01/016c6cb2829c8cd1f43bdfbdf996a92e8c082cdb02b0e244b67863bd29ec4481.json",
+      "price_history_52w_status": "ok"
     },
     "US:MP": {
       "ticker": "MP",
@@ -6535,7 +6535,8 @@
       "price_status": "ok",
       "instrument_id": "US:VIAV",
       "hash": "7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b",
-      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json"
+      "path": "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:SHUNSIN": {
       "ticker": "SHUNSIN",
@@ -11277,7 +11278,8 @@
       "price_status": "ok",
       "instrument_id": "US:MCK",
       "hash": "9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199",
-      "path": "stocks/96/9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199.json"
+      "path": "stocks/96/9693767a6c5fcde090d36a2dff0a2a3ba5912a2bccbec497f52015b6d07b3199.json",
+      "price_history_52w_status": "ok"
     },
     "US:OUST": {
       "ticker": "OUST",
@@ -116885,6 +116887,9 @@
     "NVIDIA NVL576 PLATFORM": [
       "UNVERIFIED:NVL576"
     ],
+    "NVIDIA RUBIN": [
+      "US:NVDA"
+    ],
     "NVL576": [
       "UNVERIFIED:NVL576"
     ],
@@ -130637,8 +130642,8 @@
     "stocks/dd/dd3df17f3b570f2b27a2e08c081872c585c79b86287f2f1e8f916abba42e3ece.json",
     "stocks/7e/7ead8e84e0b0782986a47c07d7ea5f308d1c80e1fc7a7a6f9ae5c9a54b9bf46c.json",
     "stocks/4c/4c67ef37c4c0382001b47bf1a426aafb23df698b8811a38902b7146790f4dad6.json",
-    "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
     "stocks/8d/8dc38dd60224e4b24ed067143aac90ae1d2f07c102bf857cb97ea41490eb909d.json",
+    "stocks/4b/4b52b6589dc659131d603f91a6773322dcee2f93d602d47f6d1daaeeb20be9fd.json",
     "stocks/77/775f9e6081cd591e9312df7d359b845d5020e7e7adc46c083975e2866a5f3dae.json",
     "stocks/0a/0a6a50b3e0798a170f5066f9d9394e43aa4458139aee1dee60f43eb4cf09cadf.json",
     "stocks/d8/d8d6001dbff6094362253aae2483390ded1903ea03c4b35e9cf3d1f419cca065.json",
