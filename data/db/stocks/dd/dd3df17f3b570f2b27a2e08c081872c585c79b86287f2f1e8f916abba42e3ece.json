@@ -1,6 +1,6 @@
 {
   "ticker": "SMCI",
-  "cashtag": "SMCI",
+  "cashtag": "$SMCI",
   "instrument": {
     "instrument_id": "US:SMCI",
     "display_code": "SMCI",
@@ -24,13 +24,13 @@
   "industry": "AI Servers",
   "thesis_summary": null,
   "first_mention": "2025-09-09",
-  "last_mention": "2026-11-04",
-  "total_mentions": 128,
+  "last_mention": "2026-11-12",
+  "total_mentions": 129,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 76,
     "balder": 22,
     "octopusycc": 11,
-    "StockMKTNewz": 7,
+    "StockMKTNewz": 8,
     "unusual_whales": 3,
     "michaelsikand": 3,
     "KawzInvests": 2,
@@ -40,7 +40,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 118,
-    "news": 7,
+    "news": 8,
     "flow": 3
   },
   "mentions": [
@@ -3206,6 +3206,31 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120927692849627535",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T12:12:21-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "DOJ investigating whether companies tied to Alice Huang helped smuggle Super Micro products to China"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "$SMCI",
+      "text": "THE 🇺🇸 JUSTICE DEPARTMENT IS INVESTIGATING WHETHER COMPANIES TIED TO ALICE HUANG THE WOMAN AT THE CENTER OF THE NVIDIA SCANDAL HELPED SMUGGLE SUPER MICRO $SMCI PRODUCTS TO CHINA\n\nThe probe is being led by the US attorney's office in Manhattan, per Bloomberg.\n\nIt's unclear whether it's tied to the chip smuggling cases prosecutors have already brought. Justice Department probes can end without any charges.\n\nJensen Huang is not a target of the US probes",
+      "url": "https://x.com/StockMKTNewz/status/2120927692849627535",
+      "kind": "post",
+      "engagement": {
+        "views": 27749,
+        "likes": 104,
+        "reposts": 19,
+        "replies": 14
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -4524,11 +4549,15 @@
     {
       "date": "2026-11-10",
       "close": 27.79
+    },
+    {
+      "date": "2026-11-11",
+      "close": 30.43
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-11T12:17:59.876456+00:00",
+  "price_updated_at": "2026-11-12T18:18:20.700714+00:00",
   "price_history_52w": {
     "requested_start": "2025-09-08",
     "asof": "2026-09-07",
@@ -4543,7 +4572,7 @@
     "provider_symbol": "SMCI",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-11T12:17:59.321122+00:00",
+    "checked_at": "2026-11-12T18:18:20.008457+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
