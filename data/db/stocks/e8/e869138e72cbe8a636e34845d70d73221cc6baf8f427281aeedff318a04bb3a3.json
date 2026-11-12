@@ -27,10 +27,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-11-04",
-  "last_mention": "2026-11-11",
-  "total_mentions": 424,
+  "last_mention": "2026-11-12",
+  "total_mentions": 425,
   "total_mentions_by_blogger": {
-    "jukan05": 163,
+    "jukan05": 164,
     "aleabitoreddit": 122,
     "StockMKTNewz": 47,
     "ren_stocks": 28,
@@ -42,7 +42,7 @@
     "michaelsikand": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 364,
+    "opinion": 365,
     "news": 47,
     "flow": 13
   },
@@ -10200,6 +10200,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120798532177125572",
+      "blogger_id": "jukan05",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T03:39:07-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SK hynix",
+      "text": "Re: the rumor that NVIDIA cut orders\n\nOne thing Iâ€™ve been able to confirm is that Rubin has been delayed again. Iâ€™m told motherboard warpage caused the latest delay and that the HBM issue was resolved in October. (As it happens, Korean media reported today that SK hynixâ€™s HBM4 yield had reached 70%.) As a result, volume shipments of Rubin have slipped to 2027, and Iâ€™m told NVIDIA has increased its Blackwell orders in the meantime.\n\nSince posting about the rumored order cuts, Iâ€™ve spoken with several funds and supply chain contacts. One rumor making the rounds is that CCL orders were cut by 30%. One source I spoke with said that claim was false.\n\nI hope this helps. Thanks.",
+      "url": "https://x.com/jukan05/status/2120798532177125572",
+      "kind": "post",
+      "engagement": {
+        "views": 26702,
+        "likes": 232,
+        "reposts": 20,
+        "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -11480,26 +11503,27 @@
       "close": 1277000.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "KRW",
-  "price_updated_at": "2026-11-12T06:17:53.261698+00:00",
+  "price_updated_at": "2026-11-12T09:18:12.950047+00:00",
   "price_history_52w": {
-    "requested_start": "2025-11-12",
-    "asof": "2026-11-11",
-    "attempted_at": "2026-11-12T06:17:53.205217+00:00",
+    "requested_start": "2025-11-13",
+    "asof": "2026-11-12",
+    "attempted_at": "2026-11-12T09:18:12.723256+00:00",
     "status": "ok",
-    "first_available_date": "2025-11-12",
+    "first_available_date": "2025-11-13",
     "last_available_date": "2026-11-11",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
     "provider_symbol": "000660.KS",
-    "status": "supported",
-    "reason": null,
-    "checked_at": "2026-11-12T06:17:53.205217+00:00",
-    "attempts": 0,
-    "next_retry_at": null,
+    "status": "deferred",
+    "reason": "EODHD 402 (account quota or subscription limit)",
+    "checked_at": "2026-11-12T09:18:12.723256+00:00",
+    "attempts": 1,
+    "next_retry_at": "2026-11-12T12:18:12.723256+00:00",
     "http_status": null
-  }
+  },
+  "price_reason": "EODHD 402 (account quota or subscription limit)"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "CCL",
-  "cashtag": "$CCL",
+  "cashtag": "CCL",
   "instrument": {
     "instrument_id": "US:CCL",
     "display_code": "CCL",
@@ -24,15 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-15",
-  "last_mention": "2026-10-05",
-  "total_mentions": 5,
+  "last_mention": "2026-11-12",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 2,
     "octopusycc": 2,
-    "zephyr_z9": 1
+    "zephyr_z9": 1,
+    "jukan05": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 3,
+    "opinion": 4,
     "news": 2
   },
   "mentions": [
@@ -151,6 +152,29 @@
         "likes": 1,
         "reposts": 0,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120798532177125572",
+      "blogger_id": "jukan05",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T03:39:07-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "CCL",
+      "text": "Re: the rumor that NVIDIA cut orders\n\nOne thing Iâ€™ve been able to confirm is that Rubin has been delayed again. Iâ€™m told motherboard warpage caused the latest delay and that the HBM issue was resolved in October. (As it happens, Korean media reported today that SK hynixâ€™s HBM4 yield had reached 70%.) As a result, volume shipments of Rubin have slipped to 2027, and Iâ€™m told NVIDIA has increased its Blackwell orders in the meantime.\n\nSince posting about the rumored order cuts, Iâ€™ve spoken with several funds and supply chain contacts. One rumor making the rounds is that CCL orders were cut by 30%. One source I spoke with said that claim was false.\n\nI hope this helps. Thanks.",
+      "url": "https://x.com/jukan05/status/2120798532177125572",
+      "kind": "post",
+      "engagement": {
+        "views": 26702,
+        "likes": 232,
+        "reposts": 20,
+        "replies": 10
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -552,17 +576,41 @@
     {
       "date": "2026-11-03",
       "close": 29.2
+    },
+    {
+      "date": "2026-11-04",
+      "close": 31.32
+    },
+    {
+      "date": "2026-11-05",
+      "close": 29.59
+    },
+    {
+      "date": "2026-11-06",
+      "close": 29.58
+    },
+    {
+      "date": "2026-11-09",
+      "close": 30.81
+    },
+    {
+      "date": "2026-11-10",
+      "close": 30.74
+    },
+    {
+      "date": "2026-11-11",
+      "close": 30.68
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-04T09:16:22.550736+00:00",
+  "price_updated_at": "2026-11-12T09:18:20.728544+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "CCL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-04T09:16:21.407606+00:00",
+    "checked_at": "2026-11-12T09:18:19.619601+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
