@@ -126,10 +126,15 @@ def get_user_profile(s: requests.Session, username: str) -> dict:
             r = s.get(f"{BASE_URL}/twitter/user/info",
                       params={"userName": username}, timeout=30)
         except requests.RequestException as exc:
+            if attempt <= RATE_LIMIT_RETRIES:
+                wait = RATE_LIMIT_BACKOFF_SEC * attempt
+                log(f"  user lookup network error; retry {attempt}/{RATE_LIMIT_RETRIES} in {wait}s")
+                time.sleep(wait)
+                continue
             raise FetchError(f"user lookup network error: {exc}") from exc
-        if r.status_code == 429 and attempt <= RATE_LIMIT_RETRIES:
+        if r.status_code in (429, 500, 502, 503, 504) and attempt <= RATE_LIMIT_RETRIES:
             wait = RATE_LIMIT_BACKOFF_SEC * attempt
-            log(f"  user lookup rate-limited; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
+            log(f"  user lookup HTTP {r.status_code}; backing off {wait}s (retry {attempt}/{RATE_LIMIT_RETRIES})")
             time.sleep(wait)
             continue
         if r.status_code != 200:
@@ -357,11 +362,12 @@ def fetch(username: str, backfill: bool, since_date=None, blogger_id: str | None
             except requests.RequestException as e:
                 log(f"  network error on page {page} (attempt {attempt}): {e}")
                 r = None
-            if r is not None and r.status_code == 429:
+            if r is None or r.status_code in (429, 500, 502, 503, 504):
                 if attempt > RATE_LIMIT_RETRIES:
                     break   # give up after RATE_LIMIT_RETRIES backoffs; handled below
                 wait = RATE_LIMIT_BACKOFF_SEC * attempt
-                log(f"  HTTP 429 (rate limited) on page {page}; backing off {wait}s "
+                reason = f"HTTP {r.status_code}" if r is not None else "network error"
+                log(f"  {reason} on page {page}; backing off {wait}s "
                     f"before retry {attempt}/{RATE_LIMIT_RETRIES}")
                 time.sleep(wait)
                 continue

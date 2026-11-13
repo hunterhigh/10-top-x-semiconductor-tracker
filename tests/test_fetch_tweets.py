@@ -103,7 +103,28 @@ class FetchIntegrityTests(unittest.TestCase):
         self.assert_failure_preserves_watermark(Response(402, text="insufficient credit"))
 
     def test_network_error_preserves_existing_raw_and_state(self):
-        self.assert_failure_preserves_watermark(requests.ConnectionError("offline"))
+        with self.assertRaises(SystemExit):
+            self.run_fetch([Response(200, {"data": {"id": "1"}})] + [requests.ConnectionError("offline")] * 5)
+        self.assertEqual(self.raw.read_bytes(), self.before_raw)
+        self.assertEqual(self.state.read_bytes(), self.before_state)
+
+    def test_transient_errors_recover(self):
+        for error in (Response(500), Response(502), Response(503), Response(504), requests.Timeout("timeout")):
+            with self.subTest(error=error):
+                self.run_fetch([Response(200, {"data": {"id": "1"}}), error, page([])])
+                self.assertEqual(len(self.last_session.calls), 3)
+
+    def test_profile_lookup_retries_502(self):
+        session = Session([Response(502), Response(200, {"data": {"id": "1"}})])
+        with patch.object(FETCH.time, "sleep"):
+            self.assertEqual(FETCH.get_user_profile(session, "tester")["id"], "1")
+
+    def test_exhausted_502_preserves_existing_raw_and_state(self):
+        with self.assertRaises(SystemExit):
+            self.run_fetch([Response(200, {"data": {"id": "1"}})] + [Response(502)] * 5)
+        self.assertEqual(len(self.last_session.calls), 6)
+        self.assertEqual(self.raw.read_bytes(), self.before_raw)
+        self.assertEqual(self.state.read_bytes(), self.before_state)
 
     def test_exhausted_429_preserves_existing_raw_and_state(self):
         with self.assertRaises(SystemExit) as exit_code:
