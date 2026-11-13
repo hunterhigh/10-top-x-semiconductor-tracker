@@ -1,6 +1,6 @@
 {
   "ticker": "CBRS",
-  "cashtag": "$CBRS",
+  "cashtag": "Cerebras",
   "instrument": {
     "instrument_id": "US:CBRS",
     "display_code": "CBRS",
@@ -25,14 +25,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-04-16",
-  "last_mention": "2026-11-09",
-  "total_mentions": 71,
+  "last_mention": "2026-11-12",
+  "total_mentions": 74,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 16,
-    "StockMKTNewz": 13,
-    "ren_stocks": 13,
+    "StockMKTNewz": 14,
+    "ren_stocks": 14,
     "octopusycc": 12,
-    "jukan05": 8,
+    "jukan05": 9,
     "balder": 3,
     "KawzInvests": 2,
     "zephyr_z9": 2,
@@ -40,8 +40,8 @@
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 58,
-    "news": 13
+    "opinion": 60,
+    "news": 14
   },
   "mentions": [
     {
@@ -1780,6 +1780,89 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120989145564688851",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T16:16:33-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$CBRS",
+      "text": "RT @WOLF_Financial: CEREBRAS $CBRS JUST REPORTED Q3 EARNINGS\n\n- Core Revenue: $230.9M , beating expectations of $214B 🟢\n- GAAP Revenue: $21…",
+      "url": "https://x.com/StockMKTNewz/status/2120989145564688851",
+      "kind": "post",
+      "engagement": {
+        "views": 17147,
+        "likes": 55,
+        "reposts": 10,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2120990756412293600",
+      "blogger_id": "ren_stocks",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T16:22:57-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "core revenue beat expectations at $230.9M, up 70% YoY",
+        "cloud and services revenue grew 265% to $141.9M, now ~2/3 of business",
+        "RPO of $26.1B, ~27x this year's guided revenue already under contract",
+        "raised FY26 core revenue guidance to $940M–$960M vs $887M expected",
+        "Q4 guided to $310M–$330M vs $271M expected",
+        "700 MW of capacity under contract for delivery by end of 2027",
+        "CEO expects revenue to triple next year",
+        "losses closing fast, Q4 core operating margin around breakeven",
+        "inference is where AI spend is heading and Cerebras built for exactly that",
+        "stock down 70% from IPO, may be forming a bottom"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "$CBRS",
+      "text": "$CBRS had a killer earnings! Up 15% AH.\n\nCerebras just put up the kind of quarter that makes me look at the name differently.\n\nCore revenue came in at $230.9M against ~$215M expected, up 70% from a year ago.\n\nThe real story is cloud. Cloud and services revenue grew 265% to $141.9M and is now about two-thirds of the business, while hardware sales fell 29%. Cerebras is turning into an inference cloud that also sells systems.\n\nRPO sits at $26.1B, roughly 27x this year’s guided revenue already under contract.\n\nThey raised FY26 core revenue to $940M–$960M against $887M expected, and guided Q4 to $310M–$330M against $271M.\n\nQ4 core gross margin is guided to 47%–49%, with core operating margin around breakeven. The losses are closing fast.\n\nThey have 700 MW of capacity under contract for delivery by the end of 2027, and the CEO said he expects revenue to triple next year.\n\nGAAP is still messy. Revenue of $210.8M came in a hair light and EPS was −$0.67. The headlines will focus on that, but the backlog and the guide are what move this stock.\n\nInference is where AI spend is heading, and Cerebras was built for exactly that.\n\nThe stock is now down 70% after it's IPO, but we could be finally seeing it form a bottom.\n\nBullish!",
+      "url": "https://x.com/ren_stocks/status/2120990756412293600",
+      "kind": "post",
+      "engagement": {
+        "views": 7640,
+        "likes": 27,
+        "reposts": 0,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2121014585734189144",
+      "blogger_id": "jukan05",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T17:57:38-05:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "sold too early and missed gains from short squeeze",
+        "Jensen Huang situation spooked them into selling"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Cerebras",
+      "text": "I saw the Cerebras short squeeze coming, but the whole Jensen Huang situation spooked me. I sold too early and missed out on the gains. That one stings. https://t.co/wgZ2RUJYIP",
+      "url": "https://x.com/jukan05/status/2121014585734189144",
+      "kind": "post",
+      "engagement": {
+        "views": 34430,
+        "likes": 188,
+        "reposts": 8,
+        "replies": 16
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -2286,18 +2369,22 @@
     {
       "date": "2026-11-11",
       "close": 101.08
+    },
+    {
+      "date": "2026-11-12",
+      "close": 97.75
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-12T06:18:11.752205+00:00",
+  "price_updated_at": "2026-11-13T03:18:28.486657+00:00",
   "price_history_52w": {
-    "requested_start": "2025-11-10",
-    "asof": "2026-11-09",
-    "attempted_at": "2026-11-10T03:17:45.493046+00:00",
+    "requested_start": "2025-11-13",
+    "asof": "2026-11-12",
+    "attempted_at": "2026-11-13T03:18:27.895498+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-05-14",
-    "last_available_date": "2026-11-09",
+    "last_available_date": "2026-11-12",
     "reason": "first_available_close=2026-05-14"
   },
   "price_source_state": {
@@ -2305,7 +2392,7 @@
     "provider_symbol": "CBRS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-12T06:18:11.104367+00:00",
+    "checked_at": "2026-11-13T03:18:27.895498+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

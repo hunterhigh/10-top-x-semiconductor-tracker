@@ -1,6 +1,6 @@
 {
   "ticker": "MSFT",
-  "cashtag": "$MSFT",
+  "cashtag": "微软",
   "instrument": {
     "instrument_id": "US:MSFT",
     "display_code": "MSFT",
@@ -25,11 +25,11 @@
   "thesis_summary": "当天主要在陈述供应链关系/背景,未明确表态。",
   "first_mention": "2025-07-28",
   "last_mention": "2026-11-12",
-  "total_mentions": 606,
+  "total_mentions": 607,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 310,
     "StockMKTNewz": 139,
-    "balder": 41,
+    "balder": 42,
     "octopusycc": 27,
     "unusual_whales": 23,
     "ren_stocks": 19,
@@ -42,7 +42,7 @@
     "frank_trading": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 436,
+    "opinion": 437,
     "flow": 23,
     "news": 139,
     "disclosure": 8
@@ -14188,6 +14188,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2121019081751150900",
+      "blogger_id": "balder",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T18:15:30-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "微软",
+      "text": "有件事想想挺细思极恐的。现在标普500前十大权重股加起来快占到四成，英伟达一只就好几个点。很多美国打工人的401k是每次发工资自动扣款，自动买指数基金或者target-date fund，具体买进去的是什么，不少人自己大概都没细看过。这样一来，一个客服、一个初级码农，每两周领一次工资，就自动加仓一次那几家正在用AI替掉他岗位的公司。等他被裁那天，工作没了，账户里的微软和英伟达说不定还在涨，401k今年搞不好还是他这辈子收益最好的一年。",
+      "url": "https://x.com/Balder13946731/status/2121019081751150900",
+      "kind": "post",
+      "engagement": {
+        "views": 8179,
+        "likes": 34,
+        "reposts": 1,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -15498,18 +15521,22 @@
     {
       "date": "2026-11-11",
       "close": 521.125
+    },
+    {
+      "date": "2026-11-12",
+      "close": 523.0
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-12T21:19:27.957653+00:00",
+  "price_updated_at": "2026-11-13T03:18:34.751579+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-13",
     "asof": "2026-11-12",
-    "attempted_at": "2026-11-12T21:19:26.406764+00:00",
+    "attempted_at": "2026-11-13T03:18:34.359524+00:00",
     "status": "ok",
     "first_available_date": "2025-11-13",
-    "last_available_date": "2026-11-11",
+    "last_available_date": "2026-11-12",
     "reason": null
   },
   "price_source_state": {
@@ -15517,7 +15544,7 @@
     "provider_symbol": "MSFT",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-12T21:19:26.406764+00:00",
+    "checked_at": "2026-11-13T03:18:34.359524+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
