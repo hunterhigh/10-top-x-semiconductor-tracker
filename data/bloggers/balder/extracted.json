@@ -46249,5 +46249,42 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-11-14T00:14:13.451062+00:00"
+  },
+  "2121435432215064884": {
+    "tweet_id": "2121435432215064884",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "Apple",
+        "symbol": "AAPL",
+        "company_name": "Apple Inc.",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "pays Google ~$1B/year for custom Gemini rather than building own AI",
+          "receives ~$20B/year from Google for default search engine placement",
+          "nets ~$19B/year advantage with minimal capex",
+          "capex is a rounding error while competitors borrow to buy GPUs",
+          "if models commoditize, no need to ever pay to build one"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "Google",
+        "symbol": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.75,
+    "blogger_id": "balder",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-14T03:13:38.048186+00:00"
   }
 }
