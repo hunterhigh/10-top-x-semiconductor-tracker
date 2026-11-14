@@ -1,6 +1,6 @@
 {
   "ticker": "TSLA",
-  "cashtag": "Tesla",
+  "cashtag": "$TSLA",
   "instrument": {
     "instrument_id": "US:TSLA",
     "display_code": "TSLA",
@@ -25,9 +25,9 @@
   "thesis_summary": null,
   "first_mention": "2025-08-25",
   "last_mention": "2026-11-13",
-  "total_mentions": 408,
+  "total_mentions": 409,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 136,
+    "StockMKTNewz": 137,
     "aleabitoreddit": 129,
     "balder": 61,
     "octopusycc": 30,
@@ -41,7 +41,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 258,
-    "news": 136,
+    "news": 137,
     "flow": 13,
     "disclosure": 1
   },
@@ -9643,6 +9643,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2121386070168191201",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-13",
+      "created_at": "2026-11-13T18:33:47-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$TSLA",
+      "text": "Tesla $TSLA just posted this:\n\n\"Select customers are now being invited to purchase Cybercab for personal use\"\n\nThe Image says the Cybercab starts at $29,990 https://t.co/rBbHPnUL87",
+      "url": "https://x.com/StockMKTNewz/status/2121386070168191201",
+      "kind": "post",
+      "engagement": {
+        "views": 23268,
+        "likes": 204,
+        "reposts": 22,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10965,18 +10988,22 @@
     {
       "date": "2026-11-12",
       "close": 397.45
+    },
+    {
+      "date": "2026-11-13",
+      "close": 390.22
     }
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-13T21:17:58.647469+00:00",
+  "price_updated_at": "2026-11-14T00:18:54.185231+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-14",
     "asof": "2026-11-13",
-    "attempted_at": "2026-11-13T21:17:57.935288+00:00",
+    "attempted_at": "2026-11-14T00:18:53.621711+00:00",
     "status": "ok",
     "first_available_date": "2025-11-14",
-    "last_available_date": "2026-11-12",
+    "last_available_date": "2026-11-13",
     "reason": null
   },
   "price_source_state": {
@@ -10984,7 +11011,7 @@
     "provider_symbol": "TSLA",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-13T21:17:57.935288+00:00",
+    "checked_at": "2026-11-14T00:18:53.621711+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

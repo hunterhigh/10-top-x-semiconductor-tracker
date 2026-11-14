@@ -1,6 +1,6 @@
 {
   "ticker": "005930",
-  "cashtag": "Samsung Electronics",
+  "cashtag": "三星",
   "instrument": {
     "instrument_id": "KRX:005930",
     "display_code": "005930",
@@ -25,8 +25,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-28",
-  "last_mention": "2026-11-11",
-  "total_mentions": 388,
+  "last_mention": "2026-11-13",
+  "total_mentions": 389,
   "total_mentions_by_blogger": {
     "jukan05": 212,
     "aleabitoreddit": 91,
@@ -35,11 +35,11 @@
     "ren_stocks": 13,
     "octopusycc": 12,
     "unusual_whales": 9,
-    "balder": 7,
+    "balder": 8,
     "michaelsikand": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 358,
+    "opinion": 359,
     "flow": 9,
     "news": 21
   },
@@ -9204,6 +9204,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2121352493099892792",
+      "blogger_id": "balder",
+      "date": "2026-11-13",
+      "created_at": "2026-11-13T16:20:21-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "三星",
+      "text": "我天天说存储是AI里最确定的钱，这钱有一部分是买手机、买电脑的人在掏。\n\nMicron自己说过，同样1个bit，HBM要吃掉差不多3倍于普通DRAM的晶圆。三星、海力士、美光一起把产能往HBM挪，留给手机和PC的内存就少了，价格只能往上走。\n\nGPU上多装的每颗HBM，背后都有一堆没造出来的手机内存。明年换手机要是发现同价位内存缩水，或者同配置贵了几百块，那几个G就是拿去喂数据中心了🌚",
+      "url": "https://x.com/Balder13946731/status/2121352493099892792",
+      "kind": "post",
+      "engagement": {
+        "views": 3122,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 5
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -10486,29 +10509,32 @@
     {
       "date": "2026-11-12",
       "close": 208000.0
+    },
+    {
+      "date": "2026-11-13",
+      "close": 206000.0
     }
   ],
-  "price_status": "partial",
+  "price_status": "ok",
   "price_unit": "KRW",
-  "price_updated_at": "2026-11-13T21:17:59.077178+00:00",
-  "price_reason": "EODHD 402 (account quota or subscription limit)",
+  "price_updated_at": "2026-11-14T00:18:55.790201+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-14",
     "asof": "2026-11-13",
-    "attempted_at": "2026-11-13T21:17:58.891532+00:00",
+    "attempted_at": "2026-11-14T00:18:55.021800+00:00",
     "status": "ok",
     "first_available_date": "2025-11-14",
-    "last_available_date": "2026-11-12",
+    "last_available_date": "2026-11-13",
     "reason": null
   },
   "price_source_state": {
     "provider": "eodhd",
-    "provider_symbol": "005930.KS",
-    "status": "deferred",
-    "reason": "EODHD 402 (account quota or subscription limit)",
-    "checked_at": "2026-11-13T21:17:58.891532+00:00",
-    "attempts": 1,
-    "next_retry_at": "2026-11-14T00:17:58.891532+00:00",
+    "provider_symbol": "005930.KO",
+    "status": "supported",
+    "reason": null,
+    "checked_at": "2026-11-14T00:18:55.021800+00:00",
+    "attempts": 0,
+    "next_retry_at": null,
     "http_status": null
   }
 }
