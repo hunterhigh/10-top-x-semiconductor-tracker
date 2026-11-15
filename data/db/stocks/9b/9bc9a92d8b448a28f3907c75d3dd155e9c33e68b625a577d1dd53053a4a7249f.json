@@ -1,6 +1,6 @@
 {
   "ticker": "ASTS",
-  "cashtag": "ASTS",
+  "cashtag": "$ASTS",
   "instrument": {
     "instrument_id": "US:ASTS",
     "display_code": "ASTS",
@@ -24,8 +24,8 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-10",
-  "last_mention": "2026-11-10",
-  "total_mentions": 102,
+  "last_mention": "2026-11-15",
+  "total_mentions": 103,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 34,
     "balder": 32,
@@ -33,10 +33,11 @@
     "michaelsikand": 10,
     "asklivermore": 4,
     "octopusycc": 2,
-    "KawzInvests": 1
+    "KawzInvests": 1,
+    "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 83,
+    "opinion": 84,
     "news": 19
   },
   "mentions": [
@@ -2493,6 +2494,33 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122045793276395645",
+      "blogger_id": "ren_stocks",
+      "date": "2026-11-15",
+      "created_at": "2026-11-15T14:15:17-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "people bought it as a proxy for SpaceX and dumped it once SpaceX listed",
+        "fell 36% over 47 days after SpaceX IPO",
+        "down ~60% from pre-IPO peaks"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ASTS",
+      "text": "$SPCX $ANT $RKLB $ASTS $NBIS\n\nLast time a $1T+ company went public, $RKLB and $ASTS got crushed.\n\nSpaceX listed on June 12. Over the next 47 days, $QQQ fell 8%, while $RKLB fell 43% and $ASTS 36%, more than 4x the market. From their pre-IPO peaks, both were down about 60%.\n\nPeople owned them as a way into SpaceX. The moment they could buy the real thing, they dumped them. I mean, why wouldn't they? Just remember that SpaceX itself had a massive drawdown after its inflated IPO.\n\nBitcoin got hit first, down 26% into the roadshow while the Nasdaq barely moved.\n\nSemis bottomed during the roadshow, ran 17% into the week after the listing, then fell 25% into the bottom. That bottom came 47 days after the first trade, and from there everything bounced.\n\nNow it's Anthropic's turn.\n\nIt launched its roadshow on November 10 and is reported to start trading on November 19, the exact same 9-day gap as SpaceX. Day 47 lands in early January.\n\nBitcoin is already down 25% from its October high. Last time it was down 23% at this exact point.\n\nThe difference is semis. \n\nAt this point before SpaceX listed, they were 6% off their high. Today they’re 23% off. A big chunk of the selling has already happened.\n\nSo who gets hit this time?\n\nAnything people bought as a way into Anthropic: $SKM, which owns a stake, and the high-beta AI names.\n\nJust because it happened before doesn’t mean it has to happen again. But there’s a consensus that Anthropic is sucking the living air out of high-beta AI names, and to an extent the hyperscalers too. \n\nIt won’t last forever, and we’re due for a rebound.\n\nThis time won’t play out exactly the same, but it’s worth keeping this timeline in mind.",
+      "url": "https://x.com/ren_stocks/status/2122045793276395645",
+      "kind": "post",
+      "engagement": {
+        "views": 4473,
+        "likes": 11,
+        "reposts": 1,
+        "replies": 4
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -3775,11 +3803,11 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-15T18:16:32.614599+00:00",
+  "price_updated_at": "2026-11-15T21:17:20.334050+00:00",
   "price_history_52w": {
     "requested_start": "2025-11-16",
     "asof": "2026-11-15",
-    "attempted_at": "2026-11-15T18:16:32.570396+00:00",
+    "attempted_at": "2026-11-15T21:17:20.277335+00:00",
     "status": "ok",
     "first_available_date": "2025-11-17",
     "last_available_date": "2026-11-13",
@@ -3790,7 +3818,7 @@
     "provider_symbol": "ASTS",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-15T18:16:32.570396+00:00",
+    "checked_at": "2026-11-15T21:17:20.277335+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
