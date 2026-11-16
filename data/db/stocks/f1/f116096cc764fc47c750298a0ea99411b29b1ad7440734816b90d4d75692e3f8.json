@@ -1,10 +1,10 @@
 {
   "ticker": "TECH",
-  "cashtag": "$TECH",
+  "cashtag": "Tech",
   "instrument": {
     "instrument_id": "UNVERIFIED:TECH",
     "display_code": "TECH",
-    "display_name": "Bio-Techne",
+    "display_name": "Technology sector (broad)",
     "display_market": "Market unverified",
     "aliases": [
       "TECH"
@@ -20,19 +20,20 @@
   "currency": null,
   "ticker_mapped": false,
   "verification_status": "unverified",
-  "company": "Bio-Techne",
+  "company": "Technology sector (broad)",
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-29",
-  "last_mention": "2026-11-09",
-  "total_mentions": 9,
+  "last_mention": "2026-11-16",
+  "total_mentions": 10,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 8,
-    "balder": 1
+    "balder": 1,
+    "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
     "news": 8,
-    "opinion": 1
+    "opinion": 2
   },
   "mentions": [
     {
@@ -242,6 +243,31 @@
         "likes": 43,
         "reposts": 9,
         "replies": 10
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122326410366976324",
+      "blogger_id": "frank_trading",
+      "date": "2026-11-16",
+      "created_at": "2026-11-16T08:50:21-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "expects Tech to bounce from this point"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Tech",
+      "text": "This Week’s Trading Review and Outlook\nI think Tech will bounce from this point:\nhttps://t.co/L0mtXurI3Z",
+      "url": "https://x.com/Franktradinglog/status/2122326410366976324",
+      "kind": "post",
+      "engagement": {
+        "views": 4501,
+        "likes": 9,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
