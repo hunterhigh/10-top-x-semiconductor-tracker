@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
-  "last_mention": "2026-10-12",
-  "total_mentions": 8,
+  "last_mention": "2026-11-16",
+  "total_mentions": 9,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 4,
+    "StockMKTNewz": 5,
     "unusual_whales": 2,
     "asklivermore": 2
   },
   "total_mentions_by_signal_type": {
-    "news": 4,
+    "news": 5,
     "flow": 2,
     "opinion": 2
   },
@@ -222,6 +222,29 @@
         "likes": 44,
         "reposts": 9,
         "replies": 36
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122435810121150845",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-16",
+      "created_at": "2026-11-16T16:05:04-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$KR",
+      "text": "BERKSHIRE HATHAWAY JUST UPDATED HIS PORTFOLIO  \n\nHere are some of the moves that Berkshire Hathaway made in Q3\n\nNew position:\n- Bending Spoons: 20.7M shares ($689M)\n\nAdded:\n- Lennar $LEN: up +98.6%, nearly doubling the stake\n- Delta Air Lines $DAL: up +12.4%\n- Macy's $M: up +2.6%\n\nTrimmed:\n- Capital One $COF: down -61.7%\n- VeriSign $VRSN: down -34.1%\n- Nucor $NUE: down -14.9%\n- Kroger $KR: down -10.3%\n- Bank of America $BAC: down -5.7%\n\nUntouched: Apple, American Express, Coca-Cola, Google, Chevron, Occidental, Chubb, and Moody's.",
+      "url": "https://x.com/StockMKTNewz/status/2122435810121150845",
+      "kind": "post",
+      "engagement": {
+        "views": 10090,
+        "likes": 23,
+        "reposts": 3,
+        "replies": 3
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -629,17 +652,18 @@
       "close": 68.6
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-11T06:18:29.789684+00:00",
+  "price_updated_at": "2026-11-16T21:19:59.418299+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "KR",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-11T06:18:28.358676+00:00",
+    "checked_at": "2026-11-16T21:19:59.367363+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-10"
 }
