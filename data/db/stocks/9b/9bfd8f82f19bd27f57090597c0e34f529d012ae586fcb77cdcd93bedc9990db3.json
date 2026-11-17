@@ -24,16 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-09-27",
-  "last_mention": "2026-10-05",
-  "total_mentions": 11,
+  "last_mention": "2026-11-16",
+  "total_mentions": 12,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 7,
+    "StockMKTNewz": 8,
     "aleabitoreddit": 3,
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 4,
-    "news": 7
+    "news": 8
   },
   "mentions": [
     {
@@ -289,6 +289,29 @@
         "likes": 1,
         "reposts": 0,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122464348744347689",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-16",
+      "created_at": "2026-11-16T17:58:28-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$AAL",
+      "text": "DAVID TEPPER'S APPALOOSA JUST UPDATED ITS STOCK PORTFOLIO\n\nThis is everything they owned as of the end Q3\n\n$1.33B of Micron $MU (added 28.21%)\n$1.11B of Amazon $AMZN (cut 10.50%)\n$718M of TSMC $TSM (cut 4.55%)\n$557M of SpaceX $SPCX (added 1,625.92%)\n$501M of Uber $UBER (cut 4.93%)\n$457M of Nvidia $NVDA (added 31.15%)\n$385M of iShares MSCI South Korea ETF $EWY (cut 13.15%)\n$381M of Meta $META (cut 22.22%)\n$341M of Google $GOOG (cut 45.95%)\n$293M of Vistra $VST (cut 4.51%)\n$205M of Lam Research $LRCX (added 63.40%)\n$199M of Alibaba $BABA (cut 7.50%)\n$172M of Oracle $ORCL (new)\n$141M of Boeing $BA (cut 5.00%)\n$136M of NRG Energy $NRG (cut 19.03%)\n$118M of ASML $ASML (added 30.00%)\n$115M of Applied Materials $AMAT (new)\n$106M of CoreWeave $CRWV (added 12.68%)\n$96M of Baidu $BIDU (cut 15.06%)\n$53M of Modine $MOD (new)\n$53M of American Airlines $AAL (cut 47.62%)\n$31M of PG&E $PCG (new)\n$30M of Energy Transfer $ET (cut 5.00%)\n$27M of MPLX $MPLX (cut 5.00%)",
+      "url": "https://x.com/StockMKTNewz/status/2122464348744347689",
+      "kind": "post",
+      "engagement": {
+        "views": 30191,
+        "likes": 143,
+        "reposts": 17,
+        "replies": 14
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1408,17 +1431,18 @@
       "close": 13.63
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-05T00:19:00.505215+00:00",
+  "price_updated_at": "2026-11-17T00:20:00.982759+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "AAL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-05T00:18:59.907312+00:00",
+    "checked_at": "2026-11-17T00:20:00.931732+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-04"
 }

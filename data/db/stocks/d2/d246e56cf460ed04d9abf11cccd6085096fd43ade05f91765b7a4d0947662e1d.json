@@ -1,6 +1,6 @@
 {
   "ticker": "ASX",
-  "cashtag": "$ASX",
+  "cashtag": "ASE",
   "instrument": {
     "instrument_id": "US:ASX",
     "display_code": "ASX",
@@ -24,16 +24,16 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-01-24",
-  "last_mention": "2026-09-23",
-  "total_mentions": 23,
+  "last_mention": "2026-11-16",
+  "total_mentions": 24,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 18,
-    "jukan05": 3,
+    "jukan05": 4,
     "StockMKTNewz": 1,
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 22,
+    "opinion": 23,
     "news": 1
   },
   "mentions": [
@@ -578,6 +578,29 @@
         "likes": 106,
         "reposts": 6,
         "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122459140622860670",
+      "blogger_id": "jukan05",
+      "date": "2026-11-16",
+      "created_at": "2026-11-16T17:37:47-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "ASE",
+      "text": "Re: The new BIS rule\n\nI missed a provision yesterday.\n\nUnder the new rule, chip designers in China and other restricted regions can no longer qualify for an exemption through the existing transistor-count verification process unless they have BIS status as an “approved” or “authorized” IC designer. Under the previous rule, a foundry or an outsourced semiconductor assembly and test (OSAT) provider could verify the transistor count to establish eligibility for an exemption. Now, BIS itself has to decide whether to grant one.\n\nAs a result, foundries such as TSMC and Samsung Electronics, as well as OSAT providers such as ASE and Amkor, will need to conduct more thorough background checks on their customers.",
+      "url": "https://x.com/jukan05/status/2122459140622860670",
+      "kind": "post",
+      "engagement": {
+        "views": 43078,
+        "likes": 154,
+        "reposts": 14,
+        "replies": 11
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1337,17 +1360,18 @@
       "close": 37.74
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-10-23T12:17:10.609194+00:00",
+  "price_updated_at": "2026-11-17T00:20:01.255801+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ASX",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-10-23T12:17:09.576461+00:00",
+    "checked_at": "2026-11-17T00:20:01.205761+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-10-22"
 }
