@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-18T03:16:34.149988+00:00",
+  "generated_at": "2026-11-18T06:16:34.751416+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2710,
-  "index_sha256": "aca0351054281c79a7c02eca9a049b3a055100079f752bd2006a98ef3a0099ae",
-  "blogger_profiles_sha256": "36c432ffe5660cec21dd1fda1d60056ce7d55b592b55702cbc5ef65b916d3109",
+  "index_sha256": "87630a6e53b4b0ddfa2c64622612a9cd8664d29f4f2fe66a0433638ccc1dc681",
+  "blogger_profiles_sha256": "f42650753ab689875f5ee9e900085de0adff8fb27f4d8043c47e68466affdac2",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "e36f74536ff6adf37bdfeb048a6d6567af25c7b5d7776c7e09c6da567528a368",
@@ -13,11 +13,11 @@
   "price_cache_index_sha256": "b237786df7b62f16bf1932ffaf6bed64739dfaed5b5c16c1b12befe1a8ba6ad3",
   "price_cache_root": "prices_cache",
   "tickers": 2710,
-  "total_mentions": 38665,
+  "total_mentions": 38670,
   "priced_tickers": 754,
   "date_range": [
     "2025-07-02",
-    "2026-11-17"
+    "2026-11-18"
   ],
   "size_mb": 67.9,
   "tracked_bloggers": 11,
@@ -26,8 +26,8 @@
     "zephyr_z9": 552,
     "StockMKTNewz": 9417,
     "KawzInvests": 792,
-    "ren_stocks": 2286,
-    "jukan05": 1856,
+    "ren_stocks": 2290,
+    "jukan05": 1857,
     "octopusycc": 1018,
     "unusual_whales": 887,
     "michaelsikand": 1170,
@@ -65,22 +65,24 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 929,
+    "tickers": 921,
     "status_counts": {
-      "ok": 358,
-      "partial": 27,
-      "unverified_symbol": 533,
-      "unavailable": 11
+      "ok": 310,
+      "partial": 74,
+      "unverified_symbol": 527,
+      "unavailable": 10
     },
     "pending": 0,
     "reason_counts": {
-      "EODHD 402 (account quota or subscription limit)": 10,
-      "unverified_instrument_identity": 533,
+      "EODHD 402 (account quota or subscription limit)": 13,
+      "unverified_instrument_identity": 527,
+      "stale_series_latest_close=2026-11-12": 43,
       "no_daily_closes_returned": 3,
       "EODHD 402 (search capacity unavailable)": 3,
-      "provider_symbol_not_found_after_search": 5,
+      "provider_symbol_not_found_after_search": 4,
       "stale_series_latest_close=2026-10-22": 2,
       "stale_series_latest_close=2026-10-30": 1,
+      "stale_series_latest_close=2026-11-11": 1,
       "stale_series_latest_close=2026-09-25": 2,
       "stale_series_latest_close=2026-10-05": 1,
       "stale_series_latest_close=2026-11-10": 2,
@@ -97,20 +99,21 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-11-17",
-    "target_start": "2025-11-18",
-    "tickers": 34,
+    "asof": "2026-11-18",
+    "target_start": "2025-11-19",
+    "tickers": 30,
     "status_counts": {
-      "ok": 32,
+      "ok": 28,
       "insufficient_history": 2
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 34
+      "supported": 27,
+      "deferred": 3
     },
     "retry_queue": 0,
     "scope_counts": {
-      "monthly_consensus": 32,
+      "monthly_consensus": 28,
       "top_pick_cards": 11,
       "top_pick_unique": 7,
       "overlap": 5
