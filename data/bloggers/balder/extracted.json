@@ -47952,5 +47952,71 @@
     "extractor_model": "claude-sonnet-4-6",
     "prompt_version": "extract-v2",
     "extracted_at": "2026-11-18T15:14:41.907197+00:00"
+  },
+  "2123105057902330288": {
+    "tweet_id": "2123105057902330288",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "$NVDA",
+        "symbol": "NVDA",
+        "company_name": "Nvidia",
+        "stance": "neutral",
+        "mention_type": "quote_or_other",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.55,
+    "blogger_id": "balder",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-18T18:15:51.658717+00:00"
+  },
+  "2123100159936791009": {
+    "tweet_id": "2123100159936791009",
+    "has_investment_content": true,
+    "tickers": [
+      {
+        "raw_mention": "Nvidia",
+        "symbol": "NVDA",
+        "company_name": "Nvidia",
+        "stance": "neutral",
+        "mention_type": "background",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "Broadcom",
+        "symbol": "AVGO",
+        "company_name": "Broadcom",
+        "stance": "bullish",
+        "mention_type": "explicit_stance",
+        "reasons": [
+          "Hock Tan has a history of finding customer lock-in and pricing aggressively at renewal",
+          "co-designing custom silicon for Google TPUs, Meta chips, and OpenAI 10GW deal",
+          "once model stacks are tuned to a custom chip only Broadcom can build, switching costs become as painful as leaving VMware"
+        ],
+        "is_risk": false,
+        "conviction_signal": null
+      },
+      {
+        "raw_mention": "VMware",
+        "symbol": "VMW",
+        "company_name": "VMware",
+        "stance": "neutral",
+        "mention_type": "comparison",
+        "reasons": [],
+        "is_risk": false,
+        "conviction_signal": null
+      }
+    ],
+    "confidence": 0.75,
+    "blogger_id": "balder",
+    "extractor_model": "claude-sonnet-4-6",
+    "prompt_version": "extract-v2",
+    "extracted_at": "2026-11-18T18:15:51.658717+00:00"
   }
 }
