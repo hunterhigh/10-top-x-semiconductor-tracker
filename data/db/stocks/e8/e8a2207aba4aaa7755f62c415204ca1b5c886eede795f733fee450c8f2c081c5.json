@@ -1,6 +1,6 @@
 {
   "ticker": "NOW",
-  "cashtag": "NOW",
+  "cashtag": "\\NOW",
   "instrument": {
     "instrument_id": "US:NOW",
     "display_code": "NOW",
@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-12-05",
-  "last_mention": "2026-11-13",
-  "total_mentions": 28,
+  "last_mention": "2026-11-17",
+  "total_mentions": 29,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 13,
     "octopusycc": 5,
-    "balder": 4,
+    "balder": 5,
     "aleabitoreddit": 2,
     "unusual_whales": 1,
     "DJTRadar": 1,
@@ -37,7 +37,7 @@
     "ren_stocks": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 13,
+    "opinion": 14,
     "news": 13,
     "flow": 1,
     "disclosure": 1
@@ -700,6 +700,29 @@
         "likes": 3,
         "reposts": 0,
         "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2122819702221336978",
+      "blogger_id": "balder",
+      "date": "2026-11-17",
+      "created_at": "2026-11-17T17:30:31-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "\\NOW",
+      "text": "【美股复盘 · 11月17日】\n\n**大市**\n美股三大指数全线收跌，道指跌幅最大。道指(\\ $DIA ) 收于 507.31，跌 1.62%。标普(\\SPY) 收于 732.44，跌 1.01%。纳指(\\QQQ) 收于 656.95，跌 0.73%，跌幅在三大指数中最小。小盘股同样走弱，罗素小型股(\\IWM) 收于 268.98，跌 1.45%。下跌个股明显多于上涨个股，107 只观察股中 30 只上涨、77 只下跌。做空类杠杆 ETF 走高，\\SPXU 涨 3.28%，\\SQQQ 涨 2.29%。\n\n**板块**\n半导体与光通信板块逆势走强，是全天表现最强的方向。\\ARM 涨 4.76%，在观察股中领涨。光通信方面，\\COHR 涨 3.65%，\\CIEN 涨 2.82%，\\LITE 涨 2.56%。互联芯片方面，\\CRDO 涨 2.68%，\\MRVL 涨 2.33%。\\AVGO 涨 2.46%。\\SPCX 涨 3.16%。\n企业软件板块承压。\\CRM 跌 9.45%，在观察股中领跌。\\NOW 跌 6.51%，\\MDB 跌 5.77%，\\IBM 跌 4.71%。\n量子计算板块集体大跌。\\QBTS 跌 6.81%，\\RGTI 跌 6.62%，\\IONQ 跌 6.09%。\n\n**焦点**\n\\UNH 跌 5.42%，是医疗板块中跌幅较大的权重股。\\CRCL 跌 5.24%。中概股 \\BABA 跌 4.38%。\n\\NVDA 将于今日盘后公布财报，对行情的影响要到下一个交易日才会体现。\n\n**小结**\n今日市场普遍下跌，道指和小盘股跌幅居前。资金集中流向芯片与光通信，软件和量子计算抛压较重。市场接下来关注 \\NVDA 财报。\n\n---\n\n几点说明：\n\n- **为什么没写涨跌原因：** 【财报·已反映在今日盘中】这一项今天是空的。所以 \\CRM、\\NOW、\\UNH 等个股的大幅波动，我只写了涨跌幅，没有写原因。\n- **没用的角度：** 三星遗产税、孙正义、JSR、挪威、爱尔兰这几条都是背景性的选题，跟今天的行情没有直接关系。Anthropic 定向增发那条也没用上。\n- **黄仁勋那条需要先核实：** 有一条角度提到 WSJ 标题称黄仁勋为「Former Nvidia CEO」。这条现在没法核实，而且帖子文字是截断的，所以没有写进正文。如果确认属实，可以加到「焦点」段，只写事件本身，不写行情数字。\n- **\\SPCX：** 这只标的我无法确认属于什么板块，所以只列了数字，没有归类。",
+      "url": "https://x.com/Balder13946731/status/2122819702221336978",
+      "kind": "post",
+      "engagement": {
+        "views": 2734,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -1653,13 +1676,13 @@
   ],
   "price_status": "ok",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-16T21:19:59.585050+00:00",
+  "price_updated_at": "2026-11-18T00:20:14.267045+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "NOW",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-16T21:19:59.533280+00:00",
+    "checked_at": "2026-11-18T00:20:14.228193+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
