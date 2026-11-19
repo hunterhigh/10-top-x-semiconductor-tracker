@@ -25,10 +25,10 @@
   "thesis_summary": null,
   "first_mention": "2025-07-03",
   "last_mention": "2026-11-18",
-  "total_mentions": 252,
+  "total_mentions": 253,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 175,
-    "StockMKTNewz": 27,
+    "StockMKTNewz": 28,
     "balder": 23,
     "michaelsikand": 9,
     "octopusycc": 7,
@@ -40,7 +40,7 @@
   "total_mentions_by_signal_type": {
     "opinion": 222,
     "flow": 3,
-    "news": 27
+    "news": 28
   },
   "mentions": [
     {
@@ -6211,6 +6211,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2123258543088234881",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-18",
+      "created_at": "2026-11-18T22:34:19-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$RKLB",
+      "text": "Jim Cramer was just asked about Rocket Lab $RKLB stock on CNBC:\n\n“Rocket Lab has gotten too cheap. I’ve kept my eye on it. I think you have a good one. It’s a spec.” https://t.co/BXVwxJQLFj",
+      "url": "https://x.com/StockMKTNewz/status/2123258543088234881",
+      "kind": "post",
+      "engagement": {
+        "views": 24956,
+        "likes": 83,
+        "reposts": 5,
+        "replies": 18
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -7595,15 +7618,15 @@
       "close": 61.53
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-19T03:17:59.541651+00:00",
+  "price_updated_at": "2026-11-19T06:17:26.214566+00:00",
   "price_history_52w": {
-    "requested_start": "2025-11-19",
-    "asof": "2026-11-18",
-    "attempted_at": "2026-11-19T03:17:59.487781+00:00",
+    "requested_start": "2025-11-20",
+    "asof": "2026-11-19",
+    "attempted_at": "2026-11-19T06:17:26.161809+00:00",
     "status": "ok",
-    "first_available_date": "2025-11-19",
+    "first_available_date": "2025-11-20",
     "last_available_date": "2026-11-13",
     "reason": null
   },
@@ -7612,9 +7635,10 @@
     "provider_symbol": "RKLB",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-19T03:17:59.487781+00:00",
+    "checked_at": "2026-11-19T06:17:26.161809+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-13"
 }

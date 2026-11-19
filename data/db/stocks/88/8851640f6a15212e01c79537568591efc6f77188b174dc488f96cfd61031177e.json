@@ -24,12 +24,12 @@
   "industry": "CPU/Foundry/Glass Substrate",
   "thesis_summary": null,
   "first_mention": "2025-09-23",
-  "last_mention": "2026-11-18",
-  "total_mentions": 454,
+  "last_mention": "2026-11-19",
+  "total_mentions": 455,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 166,
     "jukan05": 92,
-    "StockMKTNewz": 67,
+    "StockMKTNewz": 68,
     "balder": 33,
     "ren_stocks": 22,
     "octopusycc": 20,
@@ -43,7 +43,7 @@
   },
   "total_mentions_by_signal_type": {
     "opinion": 370,
-    "news": 67,
+    "news": 68,
     "flow": 11,
     "disclosure": 6
   },
@@ -10850,6 +10850,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2123287937047507068",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-19",
+      "created_at": "2026-11-19T00:31:07-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$INTC",
+      "text": "Intel $INTC CEO Lip-Bu Tan said today that the company has signed the first outside customer for its 18A chips - CNBC https://t.co/0XodnogYds",
+      "url": "https://x.com/StockMKTNewz/status/2123287937047507068",
+      "kind": "post",
+      "engagement": {
+        "views": 11760,
+        "likes": 42,
+        "reposts": 2,
+        "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -12186,15 +12209,15 @@
       "close": 59.66
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-19T03:17:58.793001+00:00",
+  "price_updated_at": "2026-11-19T06:17:25.481072+00:00",
   "price_history_52w": {
-    "requested_start": "2025-11-19",
-    "asof": "2026-11-18",
-    "attempted_at": "2026-11-19T03:17:58.739788+00:00",
+    "requested_start": "2025-11-20",
+    "asof": "2026-11-19",
+    "attempted_at": "2026-11-19T06:17:25.428644+00:00",
     "status": "ok",
-    "first_available_date": "2025-11-19",
+    "first_available_date": "2025-11-20",
     "last_available_date": "2026-11-13",
     "reason": null
   },
@@ -12203,9 +12226,10 @@
     "provider_symbol": "INTC",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-19T03:17:58.739788+00:00",
+    "checked_at": "2026-11-19T06:17:25.428644+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-13"
 }

@@ -4118,15 +4118,15 @@
       "close": 292.52
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-19T03:17:58.597762+00:00",
+  "price_updated_at": "2026-11-19T06:17:25.294514+00:00",
   "price_history_52w": {
-    "requested_start": "2025-11-19",
-    "asof": "2026-11-18",
-    "attempted_at": "2026-11-19T03:17:58.545141+00:00",
+    "requested_start": "2025-11-20",
+    "asof": "2026-11-19",
+    "attempted_at": "2026-11-19T06:17:25.242567+00:00",
     "status": "ok",
-    "first_available_date": "2025-11-19",
+    "first_available_date": "2025-11-20",
     "last_available_date": "2026-11-13",
     "reason": null
   },
@@ -4135,9 +4135,10 @@
     "provider_symbol": "GOOG",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-19T03:17:58.545141+00:00",
+    "checked_at": "2026-11-19T06:17:25.242567+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-13"
 }
