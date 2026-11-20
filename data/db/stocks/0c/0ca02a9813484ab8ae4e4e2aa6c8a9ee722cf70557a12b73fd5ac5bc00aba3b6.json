@@ -1,6 +1,6 @@
 {
   "ticker": "TQQQ",
-  "cashtag": "$TQQQ",
+  "cashtag": "tqqq",
   "instrument": {
     "instrument_id": "UNVERIFIED:TQQQ",
     "display_code": "TQQQ",
@@ -25,14 +25,14 @@
   "thesis_summary": null,
   "first_mention": "2026-07-04",
   "last_mention": "2026-11-19",
-  "total_mentions": 5,
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 3,
-    "octopusycc": 1,
-    "frank_trading": 1
+    "frank_trading": 2,
+    "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 2,
+    "opinion": 3,
     "news": 3
   },
   "mentions": [
@@ -152,6 +152,31 @@
         "likes": 63,
         "reposts": 4,
         "replies": 11
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2123557837389602834",
+      "blogger_id": "frank_trading",
+      "date": "2026-11-19",
+      "created_at": "2026-11-19T18:23:36-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "called full position/full margin in advance"
+      ],
+      "is_risk": false,
+      "conviction": "high",
+      "raw_mention": "tqqq",
+      "text": "@JessieZhou08 我这次喊tqqq满仓满融都是提前说的。。。",
+      "url": "https://x.com/Franktradinglog/status/2123557837389602834",
+      "kind": "reply",
+      "engagement": {
+        "views": 388,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"

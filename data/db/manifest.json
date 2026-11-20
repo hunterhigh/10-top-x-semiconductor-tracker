@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-19T21:18:47.010023+00:00",
+  "generated_at": "2026-11-20T00:19:45.022704+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
   "stock_count": 2723,
-  "index_sha256": "c1fb2b8ef5d3a85c2e533dfa4e78c9c1b2f7451ce931e35d5ba9d9df6b61ea8d",
-  "blogger_profiles_sha256": "2e950e8f937c0829b47be0a4cdbc0fdc4e37ff6095cd60802f4df57dda933229",
+  "index_sha256": "3c74046b10c2ee07be4f79f42a18adb128d90463979e87949e5137353970ef23",
+  "blogger_profiles_sha256": "15e994ed53382e9188adddb1179dcf0f4bebca5628683b5fe09a833d79f15748",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "e36f74536ff6adf37bdfeb048a6d6567af25c7b5d7776c7e09c6da567528a368",
@@ -13,35 +13,35 @@
   "price_cache_index_sha256": "b237786df7b62f16bf1932ffaf6bed64739dfaed5b5c16c1b12befe1a8ba6ad3",
   "price_cache_root": "prices_cache",
   "tickers": 2723,
-  "total_mentions": 38954,
+  "total_mentions": 38995,
   "priced_tickers": 754,
   "date_range": [
     "2025-07-02",
     "2026-11-19"
   ],
-  "size_mb": 68.3,
+  "size_mb": 68.4,
   "tracked_bloggers": 11,
   "mentions_by_blogger": {
-    "aleabitoreddit": 16936,
+    "aleabitoreddit": 16942,
     "zephyr_z9": 552,
-    "StockMKTNewz": 9520,
-    "KawzInvests": 804,
-    "ren_stocks": 2308,
+    "StockMKTNewz": 9525,
+    "KawzInvests": 806,
+    "ren_stocks": 2311,
     "jukan05": 1879,
     "octopusycc": 1025,
     "unusual_whales": 887,
     "michaelsikand": 1195,
     "DJTRadar": 262,
-    "balder": 2761,
-    "frank_trading": 192,
+    "balder": 2785,
+    "frank_trading": 193,
     "asklivermore": 633
   },
   "bloggers_missing_state_files": [],
   "instrument_coverage": {
-    "verified": 927,
+    "verified": 928,
     "identified": 336,
-    "unverified": 1460,
-    "market_pending_review": 1796,
+    "unverified": 1459,
+    "market_pending_review": 1795,
     "price_unavailable_or_unverified": 1509
   },
   "storage_stats": {
@@ -65,20 +65,20 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 920,
+    "tickers": 921,
     "status_counts": {
-      "partial": 360,
-      "unverified_symbol": 530,
-      "ok": 20,
-      "unavailable": 10
+      "partial": 363,
+      "ok": 18,
+      "unverified_symbol": 529,
+      "unavailable": 11
     },
     "pending": 0,
     "reason_counts": {
-      "stale_series_latest_close=2026-11-13": 163,
-      "EODHD 402 (account quota or subscription limit)": 14,
-      "stale_series_latest_close=2026-11-12": 165,
-      "unverified_instrument_identity": 530,
-      "no_daily_closes_returned": 3,
+      "stale_series_latest_close=2026-11-13": 168,
+      "stale_series_latest_close=2026-11-12": 166,
+      "EODHD 402 (account quota or subscription limit)": 11,
+      "unverified_instrument_identity": 529,
+      "no_daily_closes_returned": 4,
       "EODHD 402 (search capacity unavailable)": 3,
       "provider_symbol_not_found_after_search": 4,
       "stale_series_latest_close=2026-10-22": 2,
@@ -102,22 +102,23 @@
     "weeks": 52,
     "asof": "2026-11-19",
     "target_start": "2025-11-20",
-    "tickers": 31,
+    "tickers": 32,
     "status_counts": {
       "ok": 29,
-      "insufficient_history": 2
+      "insufficient_history": 2,
+      "unavailable": 1
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 28,
-      "deferred": 3
+      "supported": 31,
+      "unsupported": 1
     },
-    "retry_queue": 0,
+    "retry_queue": 1,
     "scope_counts": {
-      "monthly_consensus": 29,
+      "monthly_consensus": 30,
       "top_pick_cards": 11,
-      "top_pick_unique": 8,
-      "overlap": 6
+      "top_pick_unique": 9,
+      "overlap": 7
     }
   },
   "profile_coverage": {
