@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-11-23T08:50:23.495229+00:00",
+  "generated_at": "2026-11-23T09:15:33.677308+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2732,
-    "total_mentions": 39337,
+    "total_mentions": 39338,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-11-23T08:50:35.435362+00:00"
+    "prices_updated_at": "2026-11-23T09:15:46.245435+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -163,7 +163,7 @@
         "michaelsikand": 1,
         "asklivermore": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "Nasdaq Stockholm:SIVE",
       "hash": "09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25",
       "path": "stocks/09/09dccbba67e14017f5b260cd0cc6835ad74cec6ad467527b9edc1f3b5958fb25.json",
@@ -1121,7 +1121,8 @@
       "price_status": "partial",
       "instrument_id": "US:TSLA",
       "hash": "6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c",
-      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json"
+      "path": "stocks/6a/6ad205f5c66e93ef448f58d1dc11e9667f17a4fee9740ad40af06e5cb4307b8c.json",
+      "price_history_52w_status": "ok"
     },
     "KRX:005930": {
       "ticker": "005930",
@@ -1149,11 +1150,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-11-21",
-      "total_mentions": 400,
+      "last_mention": "2026-11-23",
+      "total_mentions": 401,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
-        "jukan05": 219,
+        "jukan05": 220,
         "aleabitoreddit": 92,
         "zephyr_z9": 22,
         "StockMKTNewz": 22,
@@ -1683,8 +1684,7 @@
       "price_status": "partial",
       "instrument_id": "US:RDDT",
       "hash": "568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b",
-      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/56/568644002db6771f0bca9eaf43d1d8c5d5d54de4b40f4670620d13727fff709b.json"
     },
     "UNVERIFIED:SPX": {
       "ticker": "SPX",
@@ -2898,7 +2898,8 @@
       "price_status": "partial",
       "instrument_id": "US:NFLX",
       "hash": "dc477484fe5fc6dc3a7b6046c6877009fe42155cb0f17022d93dbd1bf048ad0a",
-      "path": "stocks/dc/dc477484fe5fc6dc3a7b6046c6877009fe42155cb0f17022d93dbd1bf048ad0a.json"
+      "path": "stocks/dc/dc477484fe5fc6dc3a7b6046c6877009fe42155cb0f17022d93dbd1bf048ad0a.json",
+      "price_history_52w_status": "ok"
     },
     "US:JPM": {
       "ticker": "JPM",
@@ -3023,8 +3024,7 @@
       "price_status": "partial",
       "instrument_id": "US:NOK",
       "hash": "5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c",
-      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/5c/5c7a231c3a4701aa178803b3a07193e80612e3ec3293d4284de7121c52eabe5c.json"
     },
     "US:V": {
       "ticker": "V",
@@ -3365,7 +3365,8 @@
       "price_status": "partial",
       "instrument_id": "US:WDC",
       "hash": "ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d",
-      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json"
+      "path": "stocks/ea/ea2fb69915fa43ca92a72b3cb28c1ea8c9d93c5748f418e64159f357c9848f4d.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:NDX": {
       "ticker": "NDX",
@@ -3691,7 +3692,8 @@
       "price_status": "unverified_symbol",
       "instrument_id": "UNVERIFIED:CCXI",
       "hash": "3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c",
-      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json"
+      "path": "stocks/3a/3ad39c4ba51403dc49f1fc87552ecd6e7ce56354d13c5eb260509ff3047d091c.json",
+      "price_history_52w_status": "unverified_symbol"
     },
     "US:BABA": {
       "ticker": "BABA",
@@ -4148,7 +4150,8 @@
       "price_status": "partial",
       "instrument_id": "US:UNH",
       "hash": "c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef",
-      "path": "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json"
+      "path": "stocks/c9/c90e9466555db184f9e3c94eb0f018bb63c2d5c9b8313f3eceb4e78fb27304ef.json",
+      "price_history_52w_status": "ok"
     },
     "US:BMNR": {
       "ticker": "BMNR",
@@ -4383,7 +4386,8 @@
       "price_status": "partial",
       "instrument_id": "US:CIEN",
       "hash": "de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262",
-      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json"
+      "path": "stocks/de/de642df49dd628349276a20c9b748287048ea6706308fcb5d7e54f674b1dc262.json",
+      "price_history_52w_status": "ok"
     },
     "US:OSS": {
       "ticker": "OSS",
@@ -4630,7 +4634,8 @@
       "price_status": "partial",
       "instrument_id": "US:LRCX",
       "hash": "2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6",
-      "path": "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json"
+      "path": "stocks/2b/2b9958c8a5a65a4f671862cd688c1c2350039b861cf43b6dfe489200e182eac6.json",
+      "price_history_52w_status": "ok"
     },
     "US:NKE": {
       "ticker": "NKE",
@@ -4996,7 +5001,8 @@
       "price_status": "partial",
       "instrument_id": "US:PANW",
       "hash": "259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7",
-      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json"
+      "path": "stocks/25/259ab86a071ebfbcb863d62f81f8fc175010da86780175b610d571f14dfd74c7.json",
+      "price_history_52w_status": "ok"
     },
     "US:SNOW": {
       "ticker": "SNOW",
@@ -12322,7 +12328,8 @@
       "price_status": "partial",
       "instrument_id": "AMS:BESI",
       "hash": "a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3",
-      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json"
+      "path": "stocks/a2/a24e9ef5a11bb5b6856b806ef0bf608c9732c5f2d69af0543b29a95914840ea3.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:MSSCORP": {
       "ticker": "MSSCORP",
@@ -16243,7 +16250,7 @@
         "KawzInvests": 1,
         "asklivermore": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "US:ZM",
       "hash": "0274a31285020f2930bd67736c4d536616712e06936b8db29489b969ba5ae137",
       "path": "stocks/02/0274a31285020f2930bd67736c4d536616712e06936b8db29489b969ba5ae137.json"
@@ -24380,7 +24387,7 @@
         "aleabitoreddit": 1,
         "unusual_whales": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "US:XYZ",
       "hash": "01f24e745de7e21593785b7ef1d75dbee2ae600017b2facafe73e4a4cdeb9bfc",
       "path": "stocks/01/01f24e745de7e21593785b7ef1d75dbee2ae600017b2facafe73e4a4cdeb9bfc.json"
