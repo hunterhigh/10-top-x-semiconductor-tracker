@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-07-31",
-  "last_mention": "2026-11-22",
-  "total_mentions": 147,
+  "last_mention": "2026-11-23",
+  "total_mentions": 151,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 69,
-    "michaelsikand": 34,
+    "StockMKTNewz": 70,
+    "michaelsikand": 35,
     "ren_stocks": 14,
+    "KawzInvests": 10,
     "aleabitoreddit": 10,
-    "KawzInvests": 8,
     "balder": 7,
     "zephyr_z9": 1,
     "jukan05": 1,
@@ -40,8 +40,8 @@
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 78,
-    "news": 69
+    "opinion": 81,
+    "news": 70
   },
   "mentions": [
     {
@@ -3543,12 +3543,108 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124856927066968230",
+      "blogger_id": "michaelsikand",
+      "date": "2026-11-23",
+      "created_at": "2026-11-23T08:25:44-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ANT",
+      "text": "$AIL and $ANS, leveraged ETFs on $ANT, are expected to launch at the open.\n\nWorth understanding the risks as these ETFs are mainly short term trading vehicles. $AIL seeks 2x the daily move of $ANT and $ANS seeks -2x.\n\nSo if $ANT closes up 5%, $AIL aims for +10% and $ANS aims for -10%. A down day flips that.\n\nThe key word is daily. Both funds reset at the close and start fresh the next session. Because of that reset, returns over weeks or months won't equal 2x the stock. Say $ANT jumps 5% one day and falls right back the next. The stock is flat, yet both funds finish slightly down.\n\nThat's why the prospectus calls them short term trading vehicles for people who actively watch their positions.",
+      "url": "https://x.com/michaelsikand/status/2124856927066968230",
+      "kind": "post",
+      "engagement": {
+        "views": 11352,
+        "likes": 14,
+        "reposts": 5,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124868921853370828",
+      "blogger_id": "KawzInvests",
+      "date": "2026-11-23",
+      "created_at": "2026-11-23T09:13:23-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "only 6% float on first trading day",
+        "major strategic investors (Nvidia, AMD, Broadcom, Google, Micron, Microsoft, TSMC) investing $26B at IPO price without selling",
+        "retail shut out for five years with limited supply now opening"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ANT",
+      "text": "$ANT STARTS TRADING TODAY ON A 6% FLOAT\n\n825M of ~13.1B shares trade. That's it.\n\nNvidia, AMD, Broadcom, Google, Micron, Microsoft, and TSMC are putting in another $26B at the IPO price, and none of it hits the market. Board members want up to $303M more.\n\nRetail has been shut out of this name for five years. Today the door opens on a sliver.\n$ANTT and $ANTZ from @TradrETFs go live tomorrow. 👀\n\nRemember guys that leverage involves significant risk. Read more at https://t.co/10FGPIs9n2",
+      "url": "https://x.com/KawzInvests/status/2124868921853370828",
+      "kind": "post",
+      "engagement": {
+        "views": 9108,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 1
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124870631762096454",
+      "blogger_id": "KawzInvests",
+      "date": "2026-11-23",
+      "created_at": "2026-11-23T09:20:11-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ANT",
+      "text": "Correction to the title. $ANT did not begin trading today as originally stated. Apologies for the confusion.",
+      "url": "https://x.com/KawzInvests/status/2124870631762096454",
+      "kind": "reply",
+      "engagement": {
+        "views": 2434,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124879196870914341",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-23",
+      "created_at": "2026-11-23T09:54:13-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ANT",
+      "text": "RT @gurgavin: ANTHROPIC LEVERAGED ETFS ARE NOW LIVE\n\n$ANTT - 2X LONG ANTHROPIC\n$ANTZ - 2X SHORT ANTHROPIC\n\n$ANT\n\nALWAYS REMEMBER LEVERAGE I…",
+      "url": "https://x.com/StockMKTNewz/status/2124879196870914341",
+      "kind": "post",
+      "engagement": {
+        "views": 36915,
+        "likes": 70,
+        "reposts": 8,
+        "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [],
   "price_status": "unavailable",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-23T12:16:38.444951+00:00",
+  "price_updated_at": "2026-11-23T15:20:04.802192+00:00",
   "price_reason": "no_daily_closes_returned",
   "price_history_52w": {
     "requested_start": "2025-11-20",
