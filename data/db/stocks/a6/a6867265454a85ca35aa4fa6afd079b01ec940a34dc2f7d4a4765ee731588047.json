@@ -1,6 +1,6 @@
 {
   "ticker": "BLK",
-  "cashtag": "$BLK",
+  "cashtag": "iShares",
   "instrument": {
     "instrument_id": "US:BLK",
     "display_code": "BLK",
@@ -24,15 +24,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
-  "last_mention": "2026-10-14",
-  "total_mentions": 16,
+  "last_mention": "2026-11-21",
+  "total_mentions": 18,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 13,
+    "StockMKTNewz": 15,
     "unusual_whales": 3
   },
   "total_mentions_by_signal_type": {
     "flow": 3,
-    "news": 13
+    "news": 15
   },
   "mentions": [
     {
@@ -405,6 +405,52 @@
         "likes": 19,
         "reposts": 2,
         "replies": 13
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124134329940955192",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-21",
+      "created_at": "2026-11-21T08:34:23-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "Vanguard",
+      "text": "Vanguard has made investors who owns its ETFs an estimated $230 Billion over the last year \n\niShares has made investors who owns its ETFs an estimated $160 Billion over the last year",
+      "url": "https://x.com/StockMKTNewz/status/2124134329940955192",
+      "kind": "post",
+      "engagement": {
+        "views": 41460,
+        "likes": 56,
+        "reposts": 0,
+        "replies": 6
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2124134329940955192",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-21",
+      "created_at": "2026-11-21T08:34:23-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "iShares",
+      "text": "Vanguard has made investors who owns its ETFs an estimated $230 Billion over the last year \n\niShares has made investors who owns its ETFs an estimated $160 Billion over the last year",
+      "url": "https://x.com/StockMKTNewz/status/2124134329940955192",
+      "kind": "post",
+      "engagement": {
+        "views": 41460,
+        "likes": 56,
+        "reposts": 0,
+        "replies": 6
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -844,17 +890,18 @@
       "close": 1216.61
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-13T12:18:18.610127+00:00",
+  "price_updated_at": "2026-11-23T08:50:33.974302+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "BLK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-13T12:18:17.945642+00:00",
+    "checked_at": "2026-11-23T08:50:33.934414+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-12"
 }

@@ -24,18 +24,20 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-03",
-  "last_mention": "2026-10-14",
-  "total_mentions": 35,
+  "last_mention": "2026-11-19",
+  "total_mentions": 36,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 16,
     "unusual_whales": 9,
     "StockMKTNewz": 8,
-    "michaelsikand": 2
+    "michaelsikand": 2,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 18,
     "flow": 9,
-    "news": 8
+    "news": 8,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -861,6 +863,29 @@
         "likes": 89,
         "reposts": 10,
         "replies": 23
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2123628543154254160",
+      "blogger_id": "DJTRadar",
+      "date": "2026-11-19",
+      "created_at": "2026-11-19T23:04:34-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$GME",
+      "text": "JUST IN: President Trump just filed new stock trades, including his first-ever purchase of GameStop, $GME.\n\nGameStop rose about 2% after the filing came out and is up about 29% this year.",
+      "url": "https://x.com/DJTRadar/status/2123628543154254160",
+      "kind": "post",
+      "engagement": {
+        "views": 57521,
+        "likes": 271,
+        "reposts": 15,
+        "replies": 4
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -2244,17 +2269,18 @@
       "close": 25.62
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-13T21:18:16.744614+00:00",
+  "price_updated_at": "2026-11-23T08:50:34.339701+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "GME",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-13T21:18:15.282293+00:00",
+    "checked_at": "2026-11-23T08:50:34.300774+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-11-12"
 }
