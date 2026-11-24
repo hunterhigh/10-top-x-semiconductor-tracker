@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-24T03:17:57.533085+00:00",
+  "generated_at": "2026-11-24T06:16:32.178802+00:00",
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "stock_count": 2738,
-  "index_sha256": "23573f9801b57f792bf9383c82edecf47d116d9c4965fd693453a9cc0f2cbe48",
-  "blogger_profiles_sha256": "bae75815347e6b4bb3063a39bcd2740b747a6a09b57db209aa6e021440db55ec",
+  "stock_count": 2739,
+  "index_sha256": "3662eb2aead12bcf950ed9294cb3c2f9357714000c879718158ec8eaeccccf7f",
+  "blogger_profiles_sha256": "23321bcd42f79c4d9ff3b61964702d915e07ec64e4054b9d1b09fa80a40a1970",
   "blogger_roster_sha256": "cd992e935831fb9f906b9dd5ad9eedb8d36c3140efed380af118d54b841674a8",
   "profile_config_sha256": "ec90fb1c5e16de5a2e95a46cb242d51d97ca51aeeb0ff457382970274c470f40",
   "avatar_cache_sha256": "e36f74536ff6adf37bdfeb048a6d6567af25c7b5d7776c7e09c6da567528a368",
@@ -12,26 +12,26 @@
   "price_cache_count": 902,
   "price_cache_index_sha256": "b237786df7b62f16bf1932ffaf6bed64739dfaed5b5c16c1b12befe1a8ba6ad3",
   "price_cache_root": "prices_cache",
-  "tickers": 2738,
-  "total_mentions": 39502,
+  "tickers": 2739,
+  "total_mentions": 39515,
   "priced_tickers": 754,
   "date_range": [
     "2025-07-02",
-    "2026-11-23"
+    "2026-11-24"
   ],
   "size_mb": 69.0,
   "tracked_bloggers": 11,
   "mentions_by_blogger": {
-    "aleabitoreddit": 16983,
+    "aleabitoreddit": 16989,
     "zephyr_z9": 552,
     "StockMKTNewz": 9753,
     "KawzInvests": 838,
     "ren_stocks": 2366,
-    "jukan05": 1894,
+    "jukan05": 1899,
     "octopusycc": 1034,
     "unusual_whales": 887,
     "michaelsikand": 1220,
-    "DJTRadar": 265,
+    "DJTRadar": 267,
     "balder": 2873,
     "frank_trading": 197,
     "asklivermore": 640
@@ -40,15 +40,15 @@
   "instrument_coverage": {
     "verified": 928,
     "identified": 336,
-    "unverified": 1474,
-    "market_pending_review": 1810,
-    "price_unavailable_or_unverified": 1525
+    "unverified": 1475,
+    "market_pending_review": 1811,
+    "price_unavailable_or_unverified": 1526
   },
   "storage_stats": {
     "schema_version": 2,
     "storage_layout": "hash-sharded-v1",
     "stock_documents": {
-      "files": 2738,
+      "files": 2739,
       "shards": 256,
       "max_shard_width": 20,
       "warning": false,
@@ -65,22 +65,22 @@
   "price_scope": {
     "window_days": 30,
     "min_mentions": 50,
-    "tickers": 902,
+    "tickers": 878,
     "status_counts": {
-      "partial": 368,
-      "ok": 6,
-      "unverified_symbol": 518,
-      "unavailable": 10
+      "partial": 365,
+      "ok": 5,
+      "unverified_symbol": 499,
+      "unavailable": 9
     },
     "pending": 0,
     "reason_counts": {
-      "stale_series_latest_close=2026-11-13": 177,
-      "stale_series_latest_close=2026-11-12": 163,
-      "EODHD 402 (account quota or subscription limit)": 8,
-      "unverified_instrument_identity": 518,
+      "stale_series_latest_close=2026-11-13": 174,
+      "EODHD 402 (account quota or subscription limit)": 9,
+      "stale_series_latest_close=2026-11-12": 162,
+      "unverified_instrument_identity": 499,
       "no_daily_closes_returned": 5,
       "EODHD 404 (symbol not found: 285A.TSE)": 1,
-      "provider_symbol_not_found_after_search": 4,
+      "provider_symbol_not_found_after_search": 3,
       "stale_series_latest_close=2026-10-22": 1,
       "stale_series_latest_close=2026-10-30": 1,
       "stale_series_latest_close=2026-11-11": 1,
@@ -102,24 +102,25 @@
   "price_history_52w": {
     "report_window_days": 28,
     "weeks": 52,
-    "asof": "2026-11-23",
-    "target_start": "2025-11-24",
-    "tickers": 31,
+    "asof": "2026-11-24",
+    "target_start": "2025-11-25",
+    "tickers": 29,
     "status_counts": {
-      "ok": 28,
+      "ok": 26,
       "insufficient_history": 2,
       "unavailable": 1
     },
     "missing_reason": 0,
     "provider_state_counts": {
-      "supported": 30,
+      "supported": 27,
+      "deferred": 1,
       "unsupported": 1
     },
     "retry_queue": 1,
     "scope_counts": {
-      "monthly_consensus": 30,
+      "monthly_consensus": 29,
       "top_pick_cards": 11,
-      "top_pick_unique": 8,
+      "top_pick_unique": 7,
       "overlap": 7
     }
   },
