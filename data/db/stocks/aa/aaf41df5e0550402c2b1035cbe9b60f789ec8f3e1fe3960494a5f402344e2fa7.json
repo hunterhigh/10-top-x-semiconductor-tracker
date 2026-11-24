@@ -24,14 +24,14 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-11",
-  "last_mention": "2026-08-27",
-  "total_mentions": 5,
+  "last_mention": "2026-11-24",
+  "total_mentions": 6,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 4,
+    "StockMKTNewz": 5,
     "asklivermore": 1
   },
   "total_mentions_by_signal_type": {
-    "news": 4,
+    "news": 5,
     "opinion": 1
   },
   "mentions": [
@@ -148,6 +148,29 @@
         "likes": 19,
         "reposts": 3,
         "replies": 2
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2125334996882014291",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-24",
+      "created_at": "2026-11-24T16:05:24-05:00",
+      "stance": "neutral",
+      "mention_type": "quote_or_other",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$ADSK",
+      "text": "RT @WOLF_Financial: AUTODESK $ADSK JUST REPORTED Q3 EARNINGS\n\n- Revenue: $2.16B, beating expectations of $2.13B 🟢\n- Adj EPS: $3.20, beating…",
+      "url": "https://x.com/StockMKTNewz/status/2125334996882014291",
+      "kind": "post",
+      "engagement": {
+        "views": 3730,
+        "likes": 4,
+        "reposts": 4,
+        "replies": 0
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -451,17 +474,18 @@
       "close": 209.4
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-09-26T03:15:42.573910+00:00",
+  "price_updated_at": "2026-11-24T21:08:20.564631+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "ADSK",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-09-26T03:15:41.444895+00:00",
+    "checked_at": "2026-11-24T21:08:20.511003+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-09-25"
 }
