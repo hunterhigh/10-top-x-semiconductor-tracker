@@ -232,6 +232,16 @@ class GitHubHealthStoreTests(unittest.TestCase):
 
 
 class OutcomeClassificationTests(unittest.TestCase):
+    def test_account_failure_outranks_the_closed_gate(self):
+        result = health.classify_outcome(
+            {"FETCH_RESULT": "failure", "GATE_OUTCOME": "failure"},
+            avatar_report=None,
+        )
+        self.assertEqual(result["status"], "failed")
+        self.assertEqual(result["severity"], "P1")
+        self.assertEqual(result["stage"], "fetch-extract")
+        self.assertEqual(result["error_code"], "FETCH_ACCOUNT_FAILED")
+
     def test_core_failure_outranks_avatar_degradation(self):
         result = health.classify_outcome(
             {"DATA_VALIDATION_OUTCOME": "failure"},
