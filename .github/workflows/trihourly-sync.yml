@@ -24,197 +24,157 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  resolve-base:
+  sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
-    outputs:
-      base_sha: ${{ steps.base.outputs.sha }}
-      account_matrix: ${{ steps.roster.outputs.matrix }}
-      account_count: ${{ steps.roster.outputs.count }}
     steps:
-      # A queued workflow keeps the SHA from when it was dispatched. Resolve
-      # main only after this run owns the shared concurrency slot instead.
+      # Resolve main only after this run owns the shared concurrency slot.
       - uses: actions/checkout@v4
+        id: checkout
         with:
           ref: main
           fetch-depth: 1
-      - name: Record current main revision
+      - name: Record current main revision and trigger provenance
         id: base
-        run: |
-          sha=$(git rev-parse HEAD)
-          echo "sha=$sha" >> "$GITHUB_OUTPUT"
-          echo "## Trihourly source" >> "$GITHUB_STEP_SUMMARY"
-          echo "- locked main revision: $sha" >> "$GITHUB_STEP_SUMMARY"
-      - name: Validate active account roster
-        id: roster
-        run: |
-          echo "matrix=$(python scripts/roster.py --matrix)" >> "$GITHUB_OUTPUT"
-          echo "count=$(python scripts/roster.py --count)" >> "$GITHUB_OUTPUT"
-      - name: Record sync start
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/write_sync_health.py start --source-sha "${{ steps.base.outputs.sha }}"
-
-  fetch-extract:
-    needs: resolve-base
-    name: fetch-extract (${{ matrix.blogger_id }})
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      # twitterapi.io free-tier traffic is shared. Keep active accounts
-      # serial so a new run is reliable instead of concurrently rate-limited.
-      max-parallel: 1
-      matrix: ${{ fromJson(needs.resolve-base.outputs.account_matrix) }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.resolve-base.outputs.base_sha }}
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Record trigger provenance
         env:
           TRIGGER_EVENT: ${{ github.event_name }}
           CF_SLOT_UTC: ${{ github.event.client_payload.slot_utc || 'manual' }}
           CF_DISPATCHED_AT: ${{ github.event.client_payload.dispatched_at_utc || 'manual' }}
         run: |
+          sha=$(git rev-parse HEAD)
+          echo "BASE_SHA=$sha" >> "$GITHUB_ENV"
           {
+            echo "## Trihourly source"
+            echo "- locked main revision: $sha"
             echo "## Trihourly trigger"
             echo "- event: $TRIGGER_EVENT"
             echo "- Cloudflare slot UTC: $CF_SLOT_UTC"
             echo "- Cloudflare dispatched at UTC: $CF_DISPATCHED_AT"
           } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/setup-python@v5
+        id: setup_python
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
       - name: Install dependencies
+        id: install
         run: pip install -r requirements.txt
-      - name: Fetch incremental posts
+      - name: Validate active account roster
+        id: roster
+        shell: bash
+        run: |
+          count=$(python scripts/roster.py --count)
+          echo "- active accounts: $count" >> "$GITHUB_STEP_SUMMARY"
+          python scripts/roster.py --matrix |
+            jq -r '.include[] | [.blogger_id, .username] | @tsv' > "$RUNNER_TEMP/roster.tsv"
+      - name: Record sync start
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/write_sync_health.py start --source-sha "$BASE_SHA"
+      - name: Fetch incremental posts serially
         id: fetch
         shell: bash
         env:
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
         run: |
-          set -o pipefail
-          python scripts/fetch_tweets.py --user "${{ matrix.username }}" --blogger-id "${{ matrix.blogger_id }}" 2>&1 | tee "$RUNNER_TEMP/fetch-${{ matrix.blogger_id }}.log"
+          result=success
+          : > "$RUNNER_TEMP/fetch-results.tsv"
+          while IFS=$'\t' read -r account_id username; do
+            outcome=success
+            if ! python scripts/fetch_tweets.py --user "$username" --blogger-id "$account_id" 2>&1 |
+                tee "$RUNNER_TEMP/fetch-$account_id.log"; then
+              outcome=failure
+              result=failure
+            fi
+            printf '%s\t%s\t%s\n' "$account_id" "$username" "$outcome" >> "$RUNNER_TEMP/fetch-results.tsv"
+          done < "$RUNNER_TEMP/roster.tsv"
+          echo "result=$result" >> "$GITHUB_OUTPUT"
       - name: Extract new and overlap-day mentions
+        id: extract
+        continue-on-error: true
+        shell: bash
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           EXTRACT_PROVIDER: ${{ inputs.extraction_provider || 'auto' }}
           EXTRACT_MODEL: ${{ inputs.extraction_model || '' }}
         run: |
-          args=(--user "${{ matrix.blogger_id }}" --since "$(date -u -d '7 days ago' +%Y-%m-%d)")
-          if [ -n "$EXTRACT_MODEL" ]; then args+=(--model "$EXTRACT_MODEL"); fi
-          python scripts/extract.py "${args[@]}"
+          since=$(date -u -d '7 days ago' +%Y-%m-%d)
+          awk -F '\t' '$3 == "success" { print $1 }' "$RUNNER_TEMP/fetch-results.tsv" |
+            xargs -r -n 1 -P 4 bash -c '
+              args=(--user "$2" --since "$1")
+              if [ -n "$EXTRACT_MODEL" ]; then args+=(--model "$EXTRACT_MODEL"); fi
+              python scripts/extract.py "${args[@]}"
+            ' _ "$since"
       - name: Record account watermarks
-        if: always()
+        id: watermarks
+        shell: bash
         run: |
-          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import json
+          import os
           from email.utils import parsedate_to_datetime
           from pathlib import Path
           from zoneinfo import ZoneInfo
-          account_id = "${{ matrix.blogger_id }}"
-          username = "${{ matrix.username }}"
-          path = Path("data/bloggers") / account_id / "raw_tweets.json"
-          state_path = Path("data/bloggers") / account_id / "state.json"
-          rows = json.loads(path.read_text()) if path.exists() else []
-          state = json.loads(state_path.read_text()) if state_path.exists() else {}
-          dates = []
-          for row in rows:
-              try: dates.append(parsedate_to_datetime(row.get("created_at") or row.get("createdAt")).astimezone(ZoneInfo("America/New_York")))
-              except Exception: pass
-          print(f"### @{username} (`{account_id}`)")
-          print(f"- fetch outcome: ${{ steps.fetch.outcome }}")
-          print(f"- raw records: {len(rows)}")
-          print(f"- latest ET timestamp: {max(dates).isoformat() if dates else 'unavailable'}")
-          print(f"- last successful fetch UTC: {state.get('last_successful_fetch_utc', 'unavailable')}")
-          print(f"- API tweets returned: {state.get('last_api_tweets_seen', 'unavailable')}")
-          print(f"- new tweets added: {state.get('last_new_tweets_added', 'unavailable')}")
-          print(f"- pages fetched: {state.get('last_pages_fetched', 'unavailable')}")
-          print(f"- stop reason: {state.get('last_fetch_stop_reason', 'unavailable')}")
-          print(f"- exact anchor seen: {state.get('last_anchor_seen', 'unavailable')}")
-          PY
-          if [ "${{ steps.fetch.outcome }}" != "success" ]; then
-            echo "- failure detail:" >> "$GITHUB_STEP_SUMMARY"
-            echo '```text' >> "$GITHUB_STEP_SUMMARY"
-            tail -n 12 "$RUNNER_TEMP/fetch-${{ matrix.blogger_id }}.log" >> "$GITHUB_STEP_SUMMARY" || true
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-          fi
-      - name: Upload account snapshot
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: blogger-data-${{ matrix.blogger_id }}
-          path: data/bloggers/${{ matrix.blogger_id }}/
-          retention-days: 1
 
-  publish:
-    needs: [resolve-base, fetch-extract]
-    if: ${{ always() && !cancelled() && needs.resolve-base.result == 'success' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    env:
-      BASE_SHA: ${{ needs.resolve-base.outputs.base_sha }}
-    outputs:
-      health_status: ${{ steps.health_outcome.outputs.status }}
-      health_severity: ${{ steps.health_outcome.outputs.severity }}
-      health_stage: ${{ steps.health_outcome.outputs.stage }}
-      health_error_code: ${{ steps.health_outcome.outputs.error_code }}
-      health_summary: ${{ steps.health_outcome.outputs.summary }}
-    steps:
-      - uses: actions/checkout@v4
-        id: checkout
-        with:
-          ref: ${{ needs.resolve-base.outputs.base_sha }}
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        id: setup_python
-        with:
-          python-version: "3.12"
-      - name: Install dependencies
-        id: install
-        run: pip install -r requirements.txt
+          runner_temp = Path(os.environ["RUNNER_TEMP"])
+          for row in (runner_temp / "fetch-results.tsv").read_text().splitlines():
+              account_id, username, outcome = row.split("\t")
+              account_dir = Path("data/bloggers") / account_id
+              path = account_dir / "raw_tweets.json"
+              state_path = account_dir / "state.json"
+              rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+              state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+              dates = []
+              for tweet in rows:
+                  try:
+                      timestamp = parsedate_to_datetime(tweet.get("created_at") or tweet.get("createdAt"))
+                      dates.append(timestamp.astimezone(ZoneInfo("America/New_York")))
+                  except Exception:
+                      pass
+
+              print(f"### @{username} (`{account_id}`)")
+              print(f"- fetch outcome: {outcome}")
+              print(f"- raw records: {len(rows)}")
+              print(f"- latest ET timestamp: {max(dates).isoformat() if dates else 'unavailable'}")
+              print(f"- last successful fetch UTC: {state.get('last_successful_fetch_utc', 'unavailable')}")
+              print(f"- API tweets returned: {state.get('last_api_tweets_seen', 'unavailable')}")
+              print(f"- new tweets added: {state.get('last_new_tweets_added', 'unavailable')}")
+              print(f"- pages fetched: {state.get('last_pages_fetched', 'unavailable')}")
+              print(f"- stop reason: {state.get('last_fetch_stop_reason', 'unavailable')}")
+              print(f"- exact anchor seen: {state.get('last_anchor_seen', 'unavailable')}")
+              if outcome != "success":
+                  print("- failure detail:")
+                  print("```text")
+                  log = runner_temp / f"fetch-{account_id}.log"
+                  if log.exists():
+                      print("\n".join(log.read_text(encoding="utf-8", errors="replace").splitlines()[-12:]))
+                  print("```")
+          PY
       - name: Fail closed on incomplete account refresh
         id: gate
+        env:
+          FETCH_RESULT: ${{ steps.fetch.outputs.result }}
+          EXTRACT_OUTCOME: ${{ steps.extract.outcome }}
         run: |
           {
             echo "## Trihourly production gate"
-            echo "- fetch/extract matrix result: ${{ needs.fetch-extract.result }}"
+            echo "- fetch result: $FETCH_RESULT"
+            echo "- extract result: $EXTRACT_OUTCOME"
             echo "- source revision: $BASE_SHA"
           } >> "$GITHUB_STEP_SUMMARY"
           test "$(git rev-parse HEAD)" = "$BASE_SHA" || {
             echo "::error::Publish checkout does not match the locked main revision."
             exit 1
           }
-          test "${{ needs.fetch-extract.result }}" = "success" || {
+          if [ "$FETCH_RESULT" != "success" ] || [ "$EXTRACT_OUTCOME" != "success" ]; then
             echo "::error::One or more account refreshes failed; no database, dashboard, artifact, or commit was published."
             exit 1
-          }
-      - name: Download active account snapshots
-        id: download
-        uses: actions/download-artifact@v4
-        with:
-          pattern: blogger-data-*
-          path: data/bloggers
-          merge-multiple: false
-      - name: Require the exact active artifact set
-        id: artifacts
-        run: |
-          count=$(python scripts/roster.py --verify-artifacts data/bloggers)
-          echo "- account artifacts: $count/$count" >> "$GITHUB_STEP_SUMMARY"
-      - name: Flatten account snapshot directories
-        id: flatten
-        run: |
-          cd data/bloggers
-          for d in blogger-data-*; do
-            id="${d#blogger-data-}"
-            mkdir -p "$id"
-            mv "$d"/* "$id"/
-            rmdir "$d"
-          done
+          fi
       - name: Rebuild and resolve instrument identities
         id: database
         env:
@@ -263,8 +223,8 @@ jobs:
           python -m unittest tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
         id: dashboard
+        shell: bash
         run: |
-          python -m playwright install --with-deps chromium
           mkdir -p "$RUNNER_TEMP/dashboard"
           python skill/scripts/dashboard_payload.py "$REPORT_DATE" --output "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json"
           python skill/scripts/render_dashboard.py --input "$RUNNER_TEMP/dashboard/payload-$REPORT_DATE.json" --output "$RUNNER_TEMP/dashboard/dashboard-$REPORT_DATE-$BASE_SHA.html"
@@ -316,15 +276,15 @@ jobs:
         continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
-          name: dashboard-${{ needs.resolve-base.outputs.base_sha }}
+          name: dashboard-${{ env.BASE_SHA }}
           path: ${{ runner.temp }}/dashboard/
-          retention-days: 30
+          retention-days: 7
       - name: Publish artifact summary
         id: artifact_summary
         run: |
           {
             echo "## Published Dashboard"
-            echo "- Artifact: dashboard-$BASE_SHA (retention: 30 days)"
+            echo "- Artifact: dashboard-$BASE_SHA (retention: 7 days)"
             echo "- HTML: dashboard-$REPORT_DATE-$BASE_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."
           } >> "$GITHUB_STEP_SUMMARY"
@@ -332,14 +292,13 @@ jobs:
         id: health_outcome
         if: always()
         env:
-          FETCH_RESULT: ${{ needs.fetch-extract.result }}
+          FETCH_RESULT: >-
+            ${{ ((steps.extract.outcome == 'failure' || steps.watermarks.outcome == 'failure') && 'failure') ||
+              (steps.extract.outcome == 'cancelled' && 'cancelled') || steps.fetch.outputs.result || steps.fetch.outcome }}
           CHECKOUT_OUTCOME: ${{ steps.checkout.outcome }}
           SETUP_OUTCOME: ${{ steps.setup_python.outcome }}
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
           GATE_OUTCOME: ${{ steps.gate.outcome }}
-          DOWNLOAD_OUTCOME: ${{ steps.download.outcome }}
-          ARTIFACTS_OUTCOME: ${{ steps.artifacts.outcome }}
-          FLATTEN_OUTCOME: ${{ steps.flatten.outcome }}
           DATABASE_OUTCOME: ${{ steps.database.outcome }}
           DATA_VALIDATION_OUTCOME: ${{ steps.data_validation.outcome }}
           PRICES_OUTCOME: ${{ steps.prices.outcome }}
@@ -355,33 +314,19 @@ jobs:
           python scripts/write_sync_health.py classify
           --avatar-status "$RUNNER_TEMP/avatar-health.json"
           --publish-error-code "$RUNNER_TEMP/publish-error-code"
-
-  health-report:
-    needs: [resolve-base, fetch-extract, publish]
-    if: ${{ always() && needs.resolve-base.result == 'success' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
       - name: Record terminal sync health
+        if: always()
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HEALTH_STATUS: ${{ needs.publish.outputs.health_status }}
-          HEALTH_SEVERITY: ${{ needs.publish.outputs.health_severity }}
-          HEALTH_STAGE: ${{ needs.publish.outputs.health_stage }}
-          HEALTH_ERROR_CODE: ${{ needs.publish.outputs.health_error_code }}
-          HEALTH_SUMMARY: ${{ needs.publish.outputs.health_summary }}
-          BASE_SHA: ${{ needs.resolve-base.outputs.base_sha }}
+          HEALTH_STATUS: ${{ steps.health_outcome.outputs.status }}
+          HEALTH_SEVERITY: ${{ steps.health_outcome.outputs.severity }}
+          HEALTH_STAGE: ${{ steps.health_outcome.outputs.stage }}
+          HEALTH_ERROR_CODE: ${{ steps.health_outcome.outputs.error_code }}
+          HEALTH_SUMMARY: ${{ steps.health_outcome.outputs.summary }}
         shell: bash
         run: |
+          if [ -z "$BASE_SHA" ]; then exit 0; fi
           status="${HEALTH_STATUS:-failed}"
           severity="${HEALTH_SEVERITY:-P1}"
           stage="${HEALTH_STAGE:-unknown}"
