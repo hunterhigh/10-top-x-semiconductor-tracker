@@ -130,8 +130,7 @@ jobs:
           echo "- report cutoff (ET): $REPORT_DATE" >> "$GITHUB_STEP_SUMMARY"
       - name: Run approved rules and pipeline tests
         run: |
-          python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
+          python -m unittest tests.test_report_rules tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
         run: |
           python -m playwright install --with-deps chromium
@@ -178,12 +177,12 @@ jobs:
         with:
           name: dashboard-${{ github.sha }}
           path: ${{ runner.temp }}/dashboard/
-          retention-days: 30
+          retention-days: 3
       - name: Publish artifact summary
         run: |
           {
             echo "## Published Backfill Dashboard"
-            echo "- Artifact: dashboard-${{ github.sha }} (retention: 30 days)"
+            echo "- Artifact: dashboard-${{ github.sha }} (retention: 3 days)"
             echo "- HTML: dashboard-$REPORT_DATE-$GITHUB_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."
           } >> "$GITHUB_STEP_SUMMARY"

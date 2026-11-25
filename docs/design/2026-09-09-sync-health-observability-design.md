@@ -50,7 +50,7 @@ Production branch additions:
 ```text
 scripts/write_sync_health.py
 tests/test_write_sync_health.py
-docs/superpowers/specs/2026-09-09-sync-health-observability-design.md
+docs/design/2026-09-09-sync-health-observability-design.md
 .github/workflows/trihourly-sync.yml
 ```
 

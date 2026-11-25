@@ -219,8 +219,7 @@ jobs:
       - name: Run approved rules and pipeline tests
         id: tests
         run: |
-          python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
-          python -m unittest tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
+          python -m unittest tests.test_report_rules tests.test_roster tests.test_fetch_tweets tests.test_dashboard_payload tests.test_build_db_dates tests.test_price_history tests.test_price_history_status tests.test_report_scope tests.test_refresh_avatars tests.test_write_sync_health
       - name: Build and validate v2 dashboard
         id: dashboard
         shell: bash
@@ -278,13 +277,13 @@ jobs:
         with:
           name: dashboard-${{ env.BASE_SHA }}
           path: ${{ runner.temp }}/dashboard/
-          retention-days: 7
+          retention-days: 3
       - name: Publish artifact summary
         id: artifact_summary
         run: |
           {
             echo "## Published Dashboard"
-            echo "- Artifact: dashboard-$BASE_SHA (retention: 7 days)"
+            echo "- Artifact: dashboard-$BASE_SHA (retention: 3 days)"
             echo "- HTML: dashboard-$REPORT_DATE-$BASE_SHA.html"
             echo "- Payload, validation JSON, and SHA-256 are included in the artifact."
           } >> "$GITHUB_STEP_SUMMARY"
