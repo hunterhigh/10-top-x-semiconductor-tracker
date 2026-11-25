@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "storage_layout": "hash-sharded-v1",
-  "generated_at": "2026-11-25T06:07:30.000149+00:00",
+  "generated_at": "2026-11-25T09:07:21.381347+00:00",
   "meta": {
     "tracked_bloggers": [
       "aleabitoreddit",
@@ -17,7 +17,7 @@
       "DJTRadar"
     ],
     "total_tickers": 2747,
-    "total_mentions": 39715,
+    "total_mentions": 39719,
     "dates": "ET (US Eastern); matches render/pipeline.py",
     "note": "Data layer only; windowed aggregation is computed by payload builders.",
     "stock_shards": {
@@ -27,7 +27,7 @@
       "warning": false,
       "within_limit": true
     },
-    "prices_updated_at": "2026-11-25T06:07:43.488538+00:00"
+    "prices_updated_at": "2026-11-25T09:07:31.374283+00:00"
   },
   "stocks": {
     "US:NVDA": {
@@ -454,8 +454,7 @@
       "price_status": "partial",
       "instrument_id": "US:MSFT",
       "hash": "2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c",
-      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/2e/2e7827b421774394d2757dea67c5d04a5babbbade66883d611cf0554049a590c.json"
     },
     "US:AMZN": {
       "ticker": "AMZN",
@@ -1009,11 +1008,11 @@
       "company": "SK hynix Inc.",
       "industry": null,
       "first_mention": "2025-11-04",
-      "last_mention": "2026-11-23",
-      "total_mentions": 438,
+      "last_mention": "2026-11-25",
+      "total_mentions": 439,
       "blogger_count": 10,
       "total_mentions_by_blogger": {
-        "jukan05": 171,
+        "jukan05": 172,
         "aleabitoreddit": 123,
         "StockMKTNewz": 49,
         "ren_stocks": 28,
@@ -1148,11 +1147,11 @@
       "company": "Samsung Electronics Co., Ltd.",
       "industry": null,
       "first_mention": "2025-12-28",
-      "last_mention": "2026-11-24",
-      "total_mentions": 403,
+      "last_mention": "2026-11-25",
+      "total_mentions": 404,
       "blogger_count": 9,
       "total_mentions_by_blogger": {
-        "jukan05": 222,
+        "jukan05": 223,
         "aleabitoreddit": 92,
         "zephyr_z9": 22,
         "StockMKTNewz": 22,
@@ -1162,7 +1161,7 @@
         "unusual_whales": 9,
         "michaelsikand": 1
       },
-      "price_status": "ok",
+      "price_status": "partial",
       "instrument_id": "KRX:005930",
       "hash": "2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6",
       "path": "stocks/21/2150fecd289e205d81c52e331c52f6add5f6748b79b5d95238ac0dadaaeac9c6.json",
@@ -1640,7 +1639,8 @@
       "price_status": "partial",
       "instrument_id": "US:POET",
       "hash": "cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753",
-      "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json"
+      "path": "stocks/cf/cfa86c6d103d5de7055629614dfe549962007b6e01cc749aa7dfdad7f0dd7753.json",
+      "price_history_52w_status": "ok"
     },
     "US:RDDT": {
       "ticker": "RDDT",
@@ -2261,7 +2261,8 @@
       "price_status": "partial",
       "instrument_id": "US:QCOM",
       "hash": "43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2",
-      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json"
+      "path": "stocks/43/43f59101c554f002032e04bc1c3a9f5c84617e33ead9c57c5029f321600ba7d2.json",
+      "price_history_52w_status": "ok"
     },
     "UNVERIFIED:ANTHROPIC": {
       "ticker": "ANTHROPIC",
@@ -3191,7 +3192,8 @@
       "price_status": "partial",
       "instrument_id": "US:GLW",
       "hash": "4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce",
-      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json"
+      "path": "stocks/46/4659e27b2e8299e75e047cb0a3dd0ba9040e66efd7a88159b658358c58eefbce.json",
+      "price_history_52w_status": "ok"
     },
     "US:WMT": {
       "ticker": "WMT",
@@ -6620,6 +6622,44 @@
       "hash": "81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc",
       "path": "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json"
     },
+    "UNVERIFIED:YMTC": {
+      "ticker": "YMTC",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:YMTC",
+        "display_code": "YMTC",
+        "display_name": "Yangtze Memory Technologies Co.",
+        "display_market": "Market unverified",
+        "aliases": [
+          "YMTC"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "identified"
+      },
+      "cashtag": "YMTC",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "identified",
+      "company": "Yangtze Memory Technologies Co.",
+      "industry": null,
+      "first_mention": "2026-02-03",
+      "last_mention": "2026-11-25",
+      "total_mentions": 37,
+      "blogger_count": 3,
+      "total_mentions_by_blogger": {
+        "jukan05": 17,
+        "zephyr_z9": 14,
+        "aleabitoreddit": 6
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:YMTC",
+      "hash": "840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5",
+      "path": "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json"
+    },
     "US:TTD": {
       "ticker": "TTD",
       "instrument": {
@@ -6734,44 +6774,6 @@
       "instrument_id": "UNVERIFIED:SHUNSIN",
       "hash": "8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e",
       "path": "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json"
-    },
-    "UNVERIFIED:YMTC": {
-      "ticker": "YMTC",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:YMTC",
-        "display_code": "YMTC",
-        "display_name": "Yangtze Memory Technologies Co.",
-        "display_market": "Market unverified",
-        "aliases": [
-          "YMTC"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "identified"
-      },
-      "cashtag": "YMTC",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "identified",
-      "company": "Yangtze Memory Technologies Co.",
-      "industry": null,
-      "first_mention": "2026-02-03",
-      "last_mention": "2026-11-18",
-      "total_mentions": 36,
-      "blogger_count": 3,
-      "total_mentions_by_blogger": {
-        "jukan05": 16,
-        "zephyr_z9": 14,
-        "aleabitoreddit": 6
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:YMTC",
-      "hash": "840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5",
-      "path": "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json"
     },
     "US:GME": {
       "ticker": "GME",
@@ -7239,8 +7241,7 @@
       "price_status": "partial",
       "instrument_id": "US:GOLD",
       "hash": "fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8",
-      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json",
-      "price_history_52w_status": "ok"
+      "path": "stocks/fa/fa5850f65c756dd808b19bd1bbff2341dfa0581eae596cac16b455b67b4a55e8.json"
     },
     "US:HPE": {
       "ticker": "HPE",
@@ -9456,7 +9457,8 @@
       "price_status": "partial",
       "instrument_id": "US:DAL",
       "hash": "65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9",
-      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json"
+      "path": "stocks/65/65c8763a758768733ca378f569462ac3317378fecd56b73372a96ee07aa1dcd9.json",
+      "price_history_52w_status": "ok"
     },
     "US:SG": {
       "ticker": "SG",
@@ -49772,6 +49774,43 @@
       "hash": "a56e94f52794c012ca09625cbac2f6af7d492ea160814c601b80a705e2fa10c0",
       "path": "stocks/a5/a56e94f52794c012ca09625cbac2f6af7d492ea160814c601b80a705e2fa10c0.json"
     },
+    "UNVERIFIED:AMS": {
+      "ticker": "AMS",
+      "instrument": {
+        "instrument_id": "UNVERIFIED:AMS",
+        "display_code": "AMS",
+        "display_name": "ams OSRAM AG",
+        "display_market": "Market unverified",
+        "aliases": [
+          "AMS"
+        ],
+        "market": null,
+        "country": null,
+        "currency": null,
+        "price_symbol": null,
+        "verification_status": "unverified"
+      },
+      "cashtag": "ams OSRAM",
+      "price_symbol": null,
+      "exchange": null,
+      "currency": null,
+      "ticker_mapped": false,
+      "verification_status": "unverified",
+      "company": "ams OSRAM AG",
+      "industry": null,
+      "first_mention": "2026-08-21",
+      "last_mention": "2026-11-25",
+      "total_mentions": 2,
+      "blogger_count": 2,
+      "total_mentions_by_blogger": {
+        "aleabitoreddit": 1,
+        "jukan05": 1
+      },
+      "price_status": "unverified_symbol",
+      "instrument_id": "UNVERIFIED:AMS",
+      "hash": "345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802",
+      "path": "stocks/34/345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802.json"
+    },
     "UNVERIFIED:AMSAG": {
       "ticker": "AMSAG",
       "instrument": {
@@ -67811,42 +67850,6 @@
       "instrument_id": "UNVERIFIED:AMPX",
       "hash": "429ec33668611998e03776a5ef25a107c59c4df411d75dfac8088ef74fb986c5",
       "path": "stocks/42/429ec33668611998e03776a5ef25a107c59c4df411d75dfac8088ef74fb986c5.json"
-    },
-    "UNVERIFIED:AMS": {
-      "ticker": "AMS",
-      "instrument": {
-        "instrument_id": "UNVERIFIED:AMS",
-        "display_code": "AMS",
-        "display_name": "ams-OSRAM",
-        "display_market": "Market unverified",
-        "aliases": [
-          "AMS"
-        ],
-        "market": null,
-        "country": null,
-        "currency": null,
-        "price_symbol": null,
-        "verification_status": "unverified"
-      },
-      "cashtag": "AMS Osram",
-      "price_symbol": null,
-      "exchange": null,
-      "currency": null,
-      "ticker_mapped": false,
-      "verification_status": "unverified",
-      "company": "ams-OSRAM",
-      "industry": null,
-      "first_mention": "2026-08-21",
-      "last_mention": "2026-08-21",
-      "total_mentions": 1,
-      "blogger_count": 1,
-      "total_mentions_by_blogger": {
-        "aleabitoreddit": 1
-      },
-      "price_status": "unverified_symbol",
-      "instrument_id": "UNVERIFIED:AMS",
-      "hash": "345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802",
-      "path": "stocks/34/345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802.json"
     },
     "UNVERIFIED:AMS-OSRAM": {
       "ticker": "AMS-OSRAM",
@@ -110992,8 +110995,10 @@
       "UNVERIFIED:AMS",
       "UNVERIFIED:AMSAG"
     ],
+    "AMS OSRAM AG": [
+      "UNVERIFIED:AMS"
+    ],
     "AMS-OSRAM": [
-      "UNVERIFIED:AMS",
       "UNVERIFIED:AMS-OSRAM",
       "UNVERIFIED:AMSAG"
     ],
@@ -134396,10 +134401,10 @@
     "stocks/e4/e42e9b24c6141e989523d629a17b739e18ccfcf57805ca32fc6b225422138498.json",
     "stocks/fd/fdb1b54852997681948cadac924dd931d5c2f77460a74e57dbb05b6acdab53d2.json",
     "stocks/81/81e5e8f2390c4028d902e504195ca84ec4dca93387544949a988dfe253c765cc.json",
+    "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
     "stocks/3f/3fa9b223f5aaf5b036d1586b736f725970c8bcfc10cb31effdd7d845f34f81ec.json",
     "stocks/76/7636bc02e0cfb6da62af1f1dbf30cfc8af5982241cebb3416158a9ecd826513b.json",
     "stocks/8e/8e47db99702d2ae81c22e1c0fcd6bdabac695d24e1c053d2e0d32580d2f9ce8e.json",
-    "stocks/84/840ad50498feaa86762b561b54189bdfaaaa4357e904f84b39f66ea2110aa2c5.json",
     "stocks/15/15934c8eba8e809e2de8ddf72743c163eb1ea00a2e771e73e2cdb9f3d6108230.json",
     "stocks/8b/8bd42cfd3c8ce078abbe115d1588aed7dfb083fb7441766580713ed3bb78bdab.json",
     "stocks/6b/6beadde7bf8df963704d81852a35250c05327b5b89890c35fddb4e0ffea6addf.json",
@@ -135562,6 +135567,7 @@
     "stocks/35/354f2450bf60e3bc0de56b5c5d4504b54fe960f2c31fc28353279e37853b084d.json",
     "stocks/bd/bd5c69d7d6bc6a1e582df4aba17c34f81f68eed20b6eb40d242678c4a256e942.json",
     "stocks/a5/a56e94f52794c012ca09625cbac2f6af7d492ea160814c601b80a705e2fa10c0.json",
+    "stocks/34/345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802.json",
     "stocks/17/17f3432c12b82f12d1774cd99bfdbaa57631cf7606a6044cba9aa441205c454e.json",
     "stocks/ae/ae853e88f22e3e787e44e90007eb3fd5619467e0c1a237cc188063c1832275d0.json",
     "stocks/55/5593c7af8dddcabd0720e63a636b654c58ac4b12ec6179a6b0a41ec56a4b780f.json",
@@ -136061,7 +136067,6 @@
     "stocks/23/23c4765b56f48f5b0d5556f250c23ab163cfd57ec74260f765b6a9d42dd7cb74.json",
     "stocks/61/61350a092b3efd15b70608309669f99ab6c87355d1e2c4970c6c98b87e2a8c4a.json",
     "stocks/42/429ec33668611998e03776a5ef25a107c59c4df411d75dfac8088ef74fb986c5.json",
-    "stocks/34/345aa8ce6f72259b069f1e606cc924fb2e4fa47d3b228d471aec4bb21b596802.json",
     "stocks/8c/8ccb148f3e41e831c0c064be83017f4ced4cc9e8f2062aefe58b5d073d7b8e89.json",
     "stocks/04/047391e47303f59376fa01fd961f3747e9ca7d14815cb8f5f7f63c11f709b033.json",
     "stocks/58/5857b62e4fd7516ad265a6132d6eddcbbc23fcdb69e12f9f919077d009c769fe.json",
