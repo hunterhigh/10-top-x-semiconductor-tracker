@@ -40,7 +40,7 @@ on:
       - "tests/test_extract.py"
       - "tests/test_analyze_stock.py"
       - "tests/test_render_dashboard.py"
-      - "handoff/10V-dashboard-backend-handoff-final-2026-07-17/**"
+      - "tests/test_report_rules.py"
       - "requirements.txt"
       - ".github/workflows/smoke-test.yml"
 
@@ -59,7 +59,6 @@ jobs:
       - name: Validate v2 data model and approved aggregation rules
         run: |
           python -m unittest discover -s tests -p "test_*.py"
-          python handoff/10V-dashboard-backend-handoff-final-2026-07-17/03-rules-and-tests/test_report_rules.py
       - name: Build and browser-validate v2 dashboard
         run: |
           REPORT_DATE=$(python - <<'PY'

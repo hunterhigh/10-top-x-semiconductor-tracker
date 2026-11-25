@@ -31,6 +31,4 @@ The 2026-07-17 handoff package is the authoritative dashboard contract. Read its
 2. ET/DST, data-schema, evidence/source-binding, URL-deduplication, and dynamic person-state invariants pass.
 3. The full payload passes Draft 2020-12 Schema validation.
 4. `validate_dashboard.py <html> --browser required` derives the active count and passes at 320, 768, and 1440 px.
-5. Upload the HTML, payload, validation results, and SHA-256 as a 30-day Actions Artifact. Do not commit generated HTML.
-
-`serenity_render.py` and its static-page requirements are historical compatibility only and are not part of this contract.
+5. Upload the HTML, payload, validation results, and SHA-256 as a 3-day Actions Artifact. Do not commit generated HTML.

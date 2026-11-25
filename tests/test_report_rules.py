@@ -1,12 +1,6 @@
-import sys
 import unittest
-from pathlib import Path
 
-
-ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT))
-
-from report_rules import (  # noqa: E402
+from skill.references.report_rules import (
     account_change_states,
     classify_main_section,
     classify_weekly_change,

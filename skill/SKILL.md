@@ -29,16 +29,19 @@ Cloud `main` in `hunterhigh/10-top-x-semiconductor-tracker` is the only producti
 
 At the start of every new user request, retrieve `data/db/manifest.json` from remote `main`. If its `generated_at` differs from the local working copy, download a fresh copy of `data/db/`, `config/bloggers.json`, and `config/blogger_profiles.json` before analysis. Reuse that verified copy only within the same request.
 
+For a private repository, set `GITHUB_TOKEN` to a token with Contents read access before retrieving the manifest or snapshot.
+
 ```python
 import json, os, requests
 
 repo = "hunterhigh/10-top-x-semiconductor-tracker"
 token = os.environ.get("GITHUB_TOKEN", "")
-headers = {"Authorization": f"token {token}"} if token else {}
-manifest = requests.get(
-    f"https://raw.githubusercontent.com/{repo}/main/data/db/manifest.json",
-    headers=headers, timeout=30,
-).json()
+url = f"https://raw.githubusercontent.com/{repo}/main/data/db/manifest.json"
+headers = {}
+if token:
+    url = f"https://api.github.com/repos/{repo}/contents/data/db/manifest.json?ref=main"
+    headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.raw+json"}
+manifest = requests.get(url, headers=headers, timeout=30).json()
 ```
 
 State the actual ET cutoff (`manifest["date_range"][1]`) when a request is time-sensitive. If it is older than the current ET date, say so; never present stale data as current.
@@ -61,10 +64,9 @@ Before building or changing the dashboard, read these packaged required material
 2. `references/dashboard-render-contract.schema.json`
 3. `references/report_rules.py`
 
-In a repository checkout, the matching originals remain under the 7/17 handoff.
-CI verifies that the packaged final UI, Schema, and rules exactly match them.
+The July 2026 handoff originals are available at the `archive/handoff-2026-07` tag.
 
-The final UI reference is `01-final-ui/10-market-voices-complete.html`. It supplies layout and interaction only: its demonstration arrays, people, reasons, prices, and stock data are never production input.
+The final UI reference is `references/final-ui/10-market-voices-complete.html`. It supplies layout and interaction only: its demonstration arrays, people, reasons, prices, and stock data are never production input.
 
 The only production workflow is:
 
@@ -81,10 +83,8 @@ refresh → extract → build_db → EODHD identity resolution → build_db → 
 - The rolling 52-week price scope is the union of monthly report rows and active-account monthly top-pick instruments. Short listed histories use the available stored range and must carry `basis=available_history_fallback` and `history_status=insufficient_history`.
 - The delivered page is one self-contained HTML file, embeds each visible avatar, supports `#stock=<display_code>` drilldowns and the final sidebar interactions, and may use JavaScript as required by the approved final UI.
 - `skill/scripts/validate_dashboard.py` must pass with `--browser required` at 320, 768, and 1440 px before delivery; the expected account count is read from the payload.
-- Generated HTML is an Actions Artifact, never a Git-tracked production file. Retain the HTML, payload, validation JSON, and SHA-256 for 30 days.
+- Generated HTML is an Actions Artifact, never a Git-tracked production file. Retain the HTML, payload, validation JSON, and SHA-256 for 3 days.
 - Price enrichment is provider-aware. Global authentication or contract failures stop publication; a per-instrument unsupported, deferred, or retryable state may publish only with a machine-readable reason and scheduled retry in `data/price_enrichment_queue.json`. Never add ticker-specific exceptions to bypass this gate.
-
-`serenity_render.py` is historical compatibility material only. It is not a production entry point, is not a release criterion, and must not be called by workflows or this Skill.
 
 ### Dashboard commands
 
@@ -106,7 +106,7 @@ python skill/scripts/validate_dashboard.py dashboard.html --browser required
 
 For an installed local Skill without a repository checkout, these commands
 first synchronize a verified read-only cache from cloud `main`; it is stored
-outside the Skill directory and never uses production credentials:
+outside the Skill directory:
 
 ```powershell
 python scripts/snapshot_sync.py
@@ -117,10 +117,10 @@ python scripts/query_stock.py NVDA --blogger aleabitoreddit
 
 For production, GitHub Actions is the only publisher. Cloudflare Cron dispatches
 the one atomic three-hour workflow at `5 */3 * * *` UTC; GitHub's own
-`schedule` must remain absent. The workflow has a shared concurrency group,
-all active-account API fetches, and one remote rebase-and-publish job. A failure in any
-account stops extraction, database rebuild, prices, rendering, artifact upload,
-and data commit. The Cloudflare dispatcher records one idempotency key per UTC
+`schedule` must remain absent. A single job locks the `main` revision in the
+shared concurrency group and fetches accounts serially. A failed account
+refresh blocks database rebuild, artifact upload, and the data commit.
+The Cloudflare dispatcher records one idempotency key per UTC
 slot and GitHub records the trigger provenance in its Step Summary.
 
 ## Answering account and company questions
@@ -141,7 +141,7 @@ For every narrative, include the report date/window, original links, account att
 
 The package retains `agents/openai.yaml`, this `SKILL.md`, deterministic scripts, and its version-controlled final UI, Schema and aggregation-rule resources. It does not require a sibling repository checkout.
 
-CI runs the handoff aggregation tests, ET/DST tests, payload Schema and invariants, avatar and evidence checks, and browser validation. Record production changes and verification results in `handoff/IMPLEMENTATION-LOG.md`; retain the original handoff changelog without rewriting it.
+CI runs the packaged aggregation tests, ET/DST tests, payload Schema and invariants, avatar and evidence checks, and browser validation. Record production changes and verification results in the relevant pull request.
 
 ## Failure behavior
 

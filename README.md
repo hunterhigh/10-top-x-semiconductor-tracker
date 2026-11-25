@@ -1,6 +1,6 @@
 # X Traders Consensus data pipeline
 
-This repository supplies the public data used by the `x-traders-consensus` Skill. It aggregates public X posts; it does not provide investment advice or make independent market claims.
+This repository supplies the data used by the `x-traders-consensus` Skill. It aggregates public X posts; it does not provide investment advice or make independent market claims.
 
 ## What is tracked
 
@@ -35,11 +35,11 @@ keeps manual controls; Cloudflare Cron is the sole automatic trigger:
   hours at minute 05 UTC. GitHub's own `schedule` is deliberately absent, so
   two schedulers cannot create duplicate production runs.
 - `trihourly-sync` retains its manual dispatch entry and runs the complete
-  atomic pipeline: incremental fetch, extraction, database rebuild, prices,
+  atomic pipeline in a single job: incremental fetch, extraction, database rebuild, prices,
   avatar cache, validated Dashboard payload, browser-checked HTML artifact,
   and one data commit.
 - `manual-price-repair` is manual-only for exceptional price remediation. It never races the scheduled pipeline.
-- Each successful scheduled run uploads the validated Dashboard, payload, validation report, and SHA-256 as a 30-day Actions Artifact; generated HTML is never committed to Git history.
+- Each successful scheduled run uploads the validated Dashboard, payload, validation report, and SHA-256 as a 3-day Actions Artifact; generated HTML is never committed to Git history.
 
 The three-hour pipeline maintains rolling 52-week history for the union of current monthly rows and all active-account monthly favorite cards. Run the initial price backfill manually with the `require_price_scope` input enabled. It fails if any in-scope ticker remains `pending`; `unavailable` and `unverified_symbol` are explicit, reviewable outcomes rather than silent omissions.
 
@@ -54,4 +54,6 @@ python skill/scripts/render_dashboard.py --input payload.json --output dashboard
 python skill/scripts/validate_dashboard.py dashboard.html --browser required
 ```
 
-The data repository is public. Consumers may read its manifest and snapshot without a GitHub token; a token is optional for higher GitHub API rate limits. Extraction supports the existing Anthropic path and OpenAI's Responses API: configure `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then select the provider in the manual workflow when needed.
+To read the manifest and snapshot, configure a `GITHUB_TOKEN` with read access to this repository.
+
+Extraction supports the existing Anthropic path and OpenAI's Responses API: configure `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then select the provider in the manual workflow when needed.

@@ -2,7 +2,7 @@
 """Fetch a verified read-only production snapshot for an installed Skill.
 
 This intentionally has no credentials for X, GitHub Actions, or production
-publish.  It reads the public ``main`` manifest first, then atomically replaces
+publish.  It reads the ``main`` manifest first, then atomically replaces
 the local cache with the matching repository archive when the manifest changes.
 """
 from __future__ import annotations
@@ -66,7 +66,19 @@ def default_cache_dir() -> Path:
 
 
 def fetch(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "x-traders-consensus-skill/2"})
+    headers = {"User-Agent": "x-traders-consensus-skill/2"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        api_root = f"https://api.github.com/repos/{REPOSITORY}"
+        if url == ARCHIVE_URL:
+            url = f"{api_root}/zipball/main"
+        else:
+            path = url.removeprefix(f"{RAW_ROOT}/")
+            url = f"{api_root}/contents/{path}?ref=main"
+            headers["Accept"] = "application/vnd.github.raw+json"
+    request = urllib.request.Request(url, headers=headers)
+    if token:
+        request.add_unredirected_header("Authorization", f"token {token}")
     try:
         with urllib.request.urlopen(request, timeout=45) as response:
             if response.status != 200:

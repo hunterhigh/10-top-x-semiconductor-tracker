@@ -61,16 +61,18 @@ def stock(ticker, mentions, asset_type="equity", short_history=False):
 
 
 class DashboardPayloadTests(unittest.TestCase):
-    def test_packaged_contract_resources_match_the_final_handoff(self):
-        handoff = ROOT / "handoff" / "10V-dashboard-backend-handoff-final-2026-07-17"
-        pairs = [
-            (ROOT / "skill/references/final-ui/10-market-voices-complete.html", handoff / "01-final-ui/10-market-voices-complete.html"),
-            (ROOT / "skill/references/dashboard-render-contract.schema.json", handoff / "02-backend-contract/dashboard-render-contract.schema.json"),
-            (ROOT / "skill/references/report_rules.py", handoff / "03-rules-and-tests/report_rules.py"),
-        ]
-        for packaged, original in pairs:
-            self.assertTrue(packaged.is_file())
-            self.assertEqual(hashlib.sha256(packaged.read_bytes()).hexdigest(), hashlib.sha256(original.read_bytes()).hexdigest())
+    def test_packaged_contract_resources_match_the_approved_versions(self):
+        references = ROOT / "skill" / "references"
+        # SHA-256 of the approved resources at archive/handoff-2026-07, with LF endings.
+        expected = {
+            "final-ui/10-market-voices-complete.html": "070f261b2b832310be4eb7334b3f898cd46c2cb5ed2647efdd6d1e6ce08c3f8f",
+            "dashboard-render-contract.schema.json": "9f1d7d7fdabc2415f655e3eeac526f05245c1f212bf3c9641ffaad61807e963e",
+            "report_rules.py": "7682f346b7a3a575984fd2982606a582276e75ea5a3b82b528cf2795cb3cbeb9",
+        }
+        for filename, expected_hash in expected.items():
+            with self.subTest(filename=filename):
+                content = (references / filename).read_bytes().replace(b"\r\n", b"\n")
+                self.assertEqual(hashlib.sha256(content).hexdigest(), expected_hash)
 
     def test_payload_cardinality_tracks_registry_for_add_and_remove(self):
         for count in (8, 12):

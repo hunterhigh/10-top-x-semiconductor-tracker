@@ -7,6 +7,7 @@ secrets/
 __pycache__/
 *.py[cod]
 *.egg-info/
+.pytest_cache/
 
 # ===== IDE / OS =====
 .idea/
@@ -21,3 +22,9 @@ Thumbs.db
 
 # ===== Generated HTML (reproducible: run render on db/ to regenerate) =====
 *-tracker-*.html
+/payload.json
+/dashboard.html
+
+# Cloudflare local dependencies and state
+cloudflare/**/.wrangler/
+cloudflare/**/node_modules/

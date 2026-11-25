@@ -43,7 +43,7 @@ Key design decisions:
     to misreading metaphor/irony as a real stance than Opus (this is why the
     original single-blogger project used Opus). Spot-check extracted stances
     per blogger more carefully than you would with Opus, especially for
-    accounts with a sarcastic/ironic voice — see extract_all.py's --limit flag
+    accounts with a sarcastic/ironic voice. Use --limit N to process only the first N tweets.
     to sample a blogger's output before running the full backfill.
 
 Auth: reads ANTHROPIC_API_KEY or OPENAI_API_KEY from environment.

@@ -32,7 +32,7 @@ Run:
     python fetch_tweets.py --user aleabitoreddit --backfill   # full history
     python fetch_tweets.py --user zephyr_z9              # another tracked blogger
 
-To fetch all bloggers in config/bloggers.json in one go, use fetch_all.py.
+To refresh all active bloggers locally, run python scripts/incremental_refresh.py --execute.
 """
 
 import argparse
