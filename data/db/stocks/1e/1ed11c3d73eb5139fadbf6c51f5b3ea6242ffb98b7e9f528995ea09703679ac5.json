@@ -1,6 +1,6 @@
 {
   "ticker": "AAPL",
-  "cashtag": "Apple",
+  "cashtag": "aapl",
   "instrument": {
     "instrument_id": "US:AAPL",
     "display_code": "AAPL",
@@ -25,15 +25,15 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-07-28",
-  "last_mention": "2026-11-24",
-  "total_mentions": 601,
+  "last_mention": "2026-11-25",
+  "total_mentions": 602,
   "total_mentions_by_blogger": {
     "StockMKTNewz": 263,
     "aleabitoreddit": 112,
     "jukan05": 61,
     "unusual_whales": 52,
     "balder": 46,
-    "octopusycc": 23,
+    "octopusycc": 24,
     "zephyr_z9": 11,
     "ren_stocks": 9,
     "michaelsikand": 9,
@@ -43,7 +43,7 @@
     "frank_trading": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 284,
+    "opinion": 285,
     "news": 263,
     "flow": 52,
     "disclosure": 2
@@ -14077,6 +14077,32 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2125610305879511452",
+      "blogger_id": "octopusycc",
+      "date": "2026-11-25",
+      "created_at": "2026-11-25T10:19:23-05:00",
+      "stance": "bearish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "资金在从传统防御股里抽出 (money is being pulled out of traditional defensive stocks)",
+        "只等待一个催化剂 (only waiting for a catalyst)"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "aapl",
+      "text": "aapl今天非常不妙，资金在从传统防御股里抽出\n\n基本上只等待一个催化剂了。",
+      "url": "https://x.com/octopusycc/status/2125610305879511452",
+      "kind": "post",
+      "engagement": {
+        "views": 15780,
+        "likes": 52,
+        "reposts": 1,
+        "replies": 8
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -15415,12 +15441,12 @@
   ],
   "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-25T15:07:55.708999+00:00",
+  "price_updated_at": "2026-11-25T18:07:49.620880+00:00",
   "price_reason": "stale_series_latest_close=2026-11-13",
   "price_history_52w": {
     "requested_start": "2025-11-26",
     "asof": "2026-11-25",
-    "attempted_at": "2026-11-25T15:07:55.668469+00:00",
+    "attempted_at": "2026-11-25T18:07:49.584578+00:00",
     "status": "ok",
     "first_available_date": "2025-11-26",
     "last_available_date": "2026-11-13",
@@ -15431,7 +15457,7 @@
     "provider_symbol": "AAPL",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-25T15:07:55.668469+00:00",
+    "checked_at": "2026-11-25T18:07:49.584578+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

@@ -24,10 +24,10 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-14",
-  "last_mention": "2026-11-24",
-  "total_mentions": 74,
+  "last_mention": "2026-11-25",
+  "total_mentions": 75,
   "total_mentions_by_blogger": {
-    "balder": 48,
+    "balder": 49,
     "StockMKTNewz": 23,
     "octopusycc": 1,
     "unusual_whales": 1,
@@ -35,7 +35,7 @@
   },
   "total_mentions_by_signal_type": {
     "news": 23,
-    "opinion": 50,
+    "opinion": 51,
     "flow": 1
   },
   "mentions": [
@@ -1903,6 +1903,35 @@
         "likes": 1,
         "reposts": 0,
         "replies": 0
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2125608219896946898",
+      "blogger_id": "balder",
+      "date": "2026-11-25",
+      "created_at": "2026-11-25T10:11:06-05:00",
+      "stance": "neutral",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "volatility too high to give expected range",
+        "probability of hitting recent high 31,224 is 0%",
+        "probability of breaking below 24,088 is 45% vs normal 27%",
+        "probability of breaking below 22,820 is 19% and rising",
+        "downside break probabilities not yet converging back to normal"
+      ],
+      "is_risk": true,
+      "conviction": null,
+      "raw_mention": "纳斯达克 100",
+      "text": "纳斯达克 100 比上一期少了 974 点，现报 25,355，距近期高点 -18.8%。波动仍然太大，今天不给预期区间。\n\n下面的概率来自 2005 年以来 100 个和今天位置相近的交易日，说的是之后 20 个交易日内发生的比例。摸到近期高点 31,224 的概率 0%，所有交易日平均 55%。摸到 25,863 的概率 81%。跌破 24,088 的概率 45%，平常 27%；跌破 22,820 的概率 19%，比上一期多 4 个百分点，平常 8%。\n\n跌破 24,088 的概率比上一期少了 1 个百分点，但这不算修复：价格整体往下挪了，跌破 22,820 的概率反而在加。要等跌破下方价格的概率连续几期往平常靠，判断才会改。\n\nhttps://t.co/hzrdMzUyd6",
+      "url": "https://x.com/Balder13946731/status/2125608219896946898",
+      "kind": "post",
+      "engagement": {
+        "views": 3549,
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
