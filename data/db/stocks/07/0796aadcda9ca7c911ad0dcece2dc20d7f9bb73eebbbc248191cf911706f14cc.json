@@ -1,6 +1,6 @@
 {
   "ticker": "SAP",
-  "cashtag": "$SAP",
+  "cashtag": "SAP",
   "instrument": {
     "instrument_id": "US:SAP",
     "display_code": "SAP",
@@ -24,13 +24,13 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-22",
-  "last_mention": "2026-06-25",
-  "total_mentions": 2,
+  "last_mention": "2026-11-26",
+  "total_mentions": 3,
   "total_mentions_by_blogger": {
-    "StockMKTNewz": 2
+    "StockMKTNewz": 3
   },
   "total_mentions_by_signal_type": {
-    "news": 2
+    "news": 3
   },
   "mentions": [
     {
@@ -77,6 +77,29 @@
         "likes": 907,
         "reposts": 113,
         "replies": 43
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2125988280735047803",
+      "blogger_id": "StockMKTNewz",
+      "date": "2026-11-26",
+      "created_at": "2026-11-26T11:21:19-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "SAP",
+      "text": "SAP is reportedly preparing to get rid of at least 10,000 positions\n\nThe restructuring would affect at least 9% of its global workforce - Bloomberg https://t.co/56EhXaWd7W",
+      "url": "https://x.com/StockMKTNewz/status/2125988280735047803",
+      "kind": "post",
+      "engagement": {
+        "views": 26019,
+        "likes": 222,
+        "reposts": 23,
+        "replies": 12
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
@@ -180,17 +203,18 @@
       "close": 160.0
     }
   ],
-  "price_status": "ok",
+  "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-07-26T03:19:34.178295+00:00",
+  "price_updated_at": "2026-11-26T18:07:57.402445+00:00",
   "price_source_state": {
     "provider": "akshare_us",
     "provider_symbol": "SAP",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-07-26T03:19:33.314187+00:00",
+    "checked_at": "2026-11-26T18:07:57.351974+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
-  }
+  },
+  "price_reason": "stale_series_latest_close=2026-07-24"
 }
