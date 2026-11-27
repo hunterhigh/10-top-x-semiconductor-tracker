@@ -1,6 +1,6 @@
 {
   "ticker": "SKHY",
-  "cashtag": "SKHY",
+  "cashtag": "$SKHY",
   "instrument": {
     "instrument_id": "US:SKHY",
     "display_code": "SKHY",
@@ -24,11 +24,11 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-06-30",
-  "last_mention": "2026-11-23",
-  "total_mentions": 174,
+  "last_mention": "2026-11-27",
+  "total_mentions": 175,
   "total_mentions_by_blogger": {
     "ren_stocks": 48,
-    "aleabitoreddit": 32,
+    "aleabitoreddit": 33,
     "balder": 22,
     "StockMKTNewz": 21,
     "jukan05": 21,
@@ -40,7 +40,7 @@
   },
   "total_mentions_by_signal_type": {
     "flow": 6,
-    "opinion": 147,
+    "opinion": 148,
     "news": 21
   },
   "mentions": [
@@ -4277,6 +4277,34 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2126362821621690751",
+      "blogger_id": "aleabitoreddit",
+      "date": "2026-11-27",
+      "created_at": "2026-11-27T12:09:37-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "doubled daily buybacks citing undervaluation",
+        "likely has more information on durability and pricing remaining elevated",
+        "shares look increasingly undervalued",
+        "new price floor LTAs should change how we look at memory name durability"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "$SKHY",
+      "text": "Memory name buybacks + pricing projections:  \n\n- $SKHY doubled its daily buybacks from ~$290M -> $581M, after Korea relaxed its buyback rules, explicitly citing \"undervaluation\"\n- $MU Dec 9, 2026 marks the end of the first 2 under initial CHIPS act agreements (where there was restrictions on buybacks). \n\nMicron stated it expects to return 100% of excess cash to shareholders, and that they'll increase returns past Dec 9th. \n\nOn the supply/pricing side per Trendforce: \n\n- Conventional DRAM contract price increases are expected to narrow throughout 2027, with prices potentially leveling off in the H2 2027 before declining in 2028\n\nUnder the assumptions that: \n--- Consumer electronics manufacturers are facing mounting sales pressure\n--- Chinese CSPs scaling back DRAM demand in early 4Q26 (but absorbed by US CSPs)\n--- markets expect a cautious policy stance toward domestic DC development\n--- $NVDA scales back its financing support for neocloud providers.\n\nThey forecast conventional DRAM to increase 10%-15% Q4 2026, with further increases up 3%-8% Q1 2027. \n\nIn another bear case they give:\n--- server OEMs will further scale back procurement following downward revisions to demand\n--- widespread inventory reductions across the supply chain\n--- downside risks include reduced investment and potential consolidation among neocloud providers\n\n\"overall server shipment growth could begin decelerating as early as 2027, causing conventional DRAM contract prices to reverse course and begin declining in 4Q27, with price declines widening in 2028.\"\n\n___\n\n$MU CEO said earlier: \"we expect memory and storage supply demand conditions to be much tighter in 2027 and 2028 than they were in 2026\"...\n\nBut I think everyone is starting to price in a 2028 demand/pricing destruction already (which hasn't happened). Also I do think a lot of new price floor LTAs should change how we look at memory name durability.\n\nAs long as durability and pricing remains elevated for longer periods of time, which $SKHY likely has more information to, I'd agree with them shares look increasingly undervalued.",
+      "url": "https://x.com/aleabitoreddit/status/2126362821621690751",
+      "kind": "post",
+      "engagement": {
+        "views": 58374,
+        "likes": 294,
+        "reposts": 15,
+        "replies": 21
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -4639,12 +4667,12 @@
   ],
   "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-27T15:07:54.641032+00:00",
+  "price_updated_at": "2026-11-27T18:08:02.110547+00:00",
   "price_reason": "stale_series_latest_close=2026-11-13",
   "price_history_52w": {
     "requested_start": "2025-11-28",
     "asof": "2026-11-27",
-    "attempted_at": "2026-11-27T15:07:54.586050+00:00",
+    "attempted_at": "2026-11-27T18:08:02.056126+00:00",
     "status": "insufficient_history",
     "first_available_date": "2026-07-13",
     "last_available_date": "2026-11-13",
@@ -4655,7 +4683,7 @@
     "provider_symbol": "SKHY",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-27T15:07:54.586050+00:00",
+    "checked_at": "2026-11-27T18:08:02.056126+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null
