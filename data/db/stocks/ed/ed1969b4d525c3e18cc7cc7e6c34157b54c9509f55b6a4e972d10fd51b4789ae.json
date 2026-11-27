@@ -25,10 +25,10 @@
   "thesis_summary": null,
   "first_mention": "2025-09-09",
   "last_mention": "2026-11-26",
-  "total_mentions": 508,
+  "total_mentions": 509,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 256,
-    "jukan05": 109,
+    "jukan05": 110,
     "StockMKTNewz": 61,
     "balder": 32,
     "zephyr_z9": 16,
@@ -41,7 +41,7 @@
     "octopusycc": 2
   },
   "total_mentions_by_signal_type": {
-    "opinion": 440,
+    "opinion": 441,
     "news": 61,
     "flow": 7
   },
@@ -12142,6 +12142,29 @@
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2126160576342901213",
+      "blogger_id": "jukan05",
+      "date": "2026-11-26",
+      "created_at": "2026-11-26T22:45:58-05:00",
+      "stance": "neutral",
+      "mention_type": "background",
+      "reasons": [],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "TSMC",
+      "text": "A few thoughts on Huawei’s HBM work at ISSCC.\n\nI see it as Huawei’s Tau-style way around the EUV bottleneck. China is finally bypassing JEDEC and going its own way.\n\nIf this actually works, Huawei could get HBM4-class bandwidth per stack at HBM3-class pin speeds. Without EUV-class DRAM scaling, it’s hard to push HBM pin speeds higher. So Huawei is taking a different route altogether.\n\nWafer-scale hybrid bonding is also an area where China is strong. (YMTC uses wafer-to-wafer, or W2W, hybrid bonding too.)\n\nWhat I find especially interesting is that HBM makers in the Western ecosystem, including Samsung, use leading-edge foundry nodes like TSMC’s 3nm for their logic dies to hit high pin speeds. Huawei is constrained on both fronts. It can’t scale its DRAM as far, and it doesn’t have access to leading-edge foundry nodes. So it’s going wider to make up for those process limitations.\n\nOf course, if it were that simple, Samsung would have done it already. The big drawback with W2W is that you can’t exclude individual defective dies before stacking, so the yields of the individual layers multiply.\n\nSay each layer has a 95% yield. Stack five layers and the yield drops to 77%.\n\nAnd 95% is already a pretty optimistic assumption. At 70% per layer, the yield for a five-layer stack drops to just 17%. That’s a disaster.\n\nWhat makes this even more painful is that it eats into China’s already limited supply of DRAM wafers. Die-to-wafer (D2W) bonding lets you select known-good dies before stacking. For a five-layer stack, W2W uses 1/y⁴ times as many wafers per good stack as D2W, where y is the yield per layer. At a stack yield of 77%, W2W uses 1.23× as many wafers as D2W. At 17%, that jumps to a whopping 4.16×.\n\nIn other words, in that scenario, China would need more than four times as many wafers as SK hynix to make a single HBM stack. That would mean China needs more than four times the combined DRAM production capacity of South Korea and Micron to match U.S. AI accelerator shipments. (That’s the worst-case scenario.)\n\nStill, it’s a fascinating approach. It feels like Chinese and Western tech standards are gradually diverging, much like Soviet and Western standards did during the Cold War.",
+      "url": "https://x.com/jukan05/status/2126160576342901213",
+      "kind": "post",
+      "engagement": {
+        "views": 43277,
+        "likes": 274,
+        "reposts": 27,
+        "replies": 36
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
     }
   ],
   "price_series": [
@@ -13344,12 +13367,12 @@
   ],
   "price_status": "partial",
   "price_unit": "USD",
-  "price_updated_at": "2026-11-27T03:07:33.532958+00:00",
+  "price_updated_at": "2026-11-27T06:07:26.712680+00:00",
   "price_reason": "stale_series_latest_close=2026-11-13",
   "price_history_52w": {
-    "requested_start": "2025-11-27",
-    "asof": "2026-11-26",
-    "attempted_at": "2026-11-27T03:07:33.489181+00:00",
+    "requested_start": "2025-11-28",
+    "asof": "2026-11-27",
+    "attempted_at": "2026-11-27T06:07:26.670870+00:00",
     "status": "ok",
     "first_available_date": "2025-11-28",
     "last_available_date": "2026-11-13",
@@ -13360,7 +13383,7 @@
     "provider_symbol": "TSM",
     "status": "supported",
     "reason": null,
-    "checked_at": "2026-11-27T03:07:33.489181+00:00",
+    "checked_at": "2026-11-27T06:07:26.670870+00:00",
     "attempts": 0,
     "next_retry_at": null,
     "http_status": null

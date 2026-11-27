@@ -1,6 +1,6 @@
 {
   "ticker": "GOLD",
-  "cashtag": "金",
+  "cashtag": "gold",
   "instrument": {
     "instrument_id": "US:GOLD",
     "display_code": "GOLD",
@@ -24,20 +24,22 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2026-02-23",
-  "last_mention": "2026-10-28",
-  "total_mentions": 31,
+  "last_mention": "2026-11-26",
+  "total_mentions": 32,
   "total_mentions_by_blogger": {
     "unusual_whales": 14,
     "octopusycc": 5,
     "StockMKTNewz": 5,
     "balder": 4,
     "frank_trading": 2,
-    "aleabitoreddit": 1
+    "aleabitoreddit": 1,
+    "DJTRadar": 1
   },
   "total_mentions_by_signal_type": {
     "opinion": 12,
     "news": 5,
-    "flow": 14
+    "flow": 14,
+    "disclosure": 1
   },
   "mentions": [
     {
@@ -773,6 +775,32 @@
         "likes": 33,
         "reposts": 2,
         "replies": 3
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2126175080241934651",
+      "blogger_id": "DJTRadar",
+      "date": "2026-11-26",
+      "created_at": "2026-11-26T23:43:36-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "up almost 2%, back above $3,600",
+        "over $500 billion added to gold and silver"
+      ],
+      "is_risk": false,
+      "conviction": null,
+      "raw_mention": "gold",
+      "text": "BREAKING: Over $500 BILLION just got added to gold and silver.\n\nGold is up almost 2%, back above $3,600.\n\nSilver is up 5%. https://t.co/7RQ4nJR1Iw",
+      "url": "https://x.com/DJTRadar/status/2126175080241934651",
+      "kind": "post",
+      "engagement": {
+        "views": 17048,
+        "likes": 76,
+        "reposts": 9,
+        "replies": 2
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
