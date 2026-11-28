@@ -24,12 +24,12 @@
   "industry": null,
   "thesis_summary": null,
   "first_mention": "2025-10-06",
-  "last_mention": "2026-11-27",
-  "total_mentions": 110,
+  "last_mention": "2026-11-28",
+  "total_mentions": 111,
   "total_mentions_by_blogger": {
     "aleabitoreddit": 34,
     "StockMKTNewz": 23,
-    "jukan05": 21,
+    "jukan05": 22,
     "balder": 17,
     "zephyr_z9": 7,
     "unusual_whales": 3,
@@ -38,7 +38,7 @@
     "octopusycc": 1
   },
   "total_mentions_by_signal_type": {
-    "opinion": 84,
+    "opinion": 85,
     "news": 23,
     "flow": 3
   },
@@ -2624,6 +2624,36 @@
         "likes": 19,
         "reposts": 3,
         "replies": 7
+      },
+      "extractor_model": "claude-sonnet-4-6",
+      "prompt_version": "extract-v2"
+    },
+    {
+      "tweet_id": "2126679634452545752",
+      "blogger_id": "jukan05",
+      "date": "2026-11-28",
+      "created_at": "2026-11-28T09:08:31-05:00",
+      "stance": "bullish",
+      "mention_type": "explicit_stance",
+      "reasons": [
+        "tacit knowledge built over years of testing and failure cannot be easily reproduced or codified",
+        "verification of EUV yield takes months in real fabs, unlike software — slow and hard to replicate",
+        "knowledge is distributed across people, some never written down, making copying very difficult",
+        "superintelligence may actually widen ASML's moat by enhancing its own data advantage",
+        "ASML can automatically detect downtime, abnormal behavior, and dropped connections across its entire EUV fleet",
+        "physics is a bottleneck that protects incumbents in ways software cannot overcome"
+      ],
+      "is_risk": false,
+      "conviction": "medium",
+      "raw_mention": "ASML",
+      "text": "Thoughts after reading the SALP investor letter\n\nReading this letter, I was surprised by how strongly Leopold seems to believe that superintelligence can overcome the moat physics provides.\n\nI lean somewhat the other way.\n\nStart with how AI learns. It learns by reducing failures across the whole population.\n\nFor this to work, two conditions have to hold. One is training data. The other is a cheap, fast way to verify whether something failed.\n\nThat is why AI spread so quickly through coding and math. Compilers, tests, and proof checkers bring the cost of verification close to zero, and that verification can run in parallel without limit.\n\nNow take ASML's EUV.\n\nFor EUV, verification means seeing whether yield and stability hold after months of running in a real fab. There is no data, and verification is far slower than in coding. The conditions themselves are different.\n\nKnowledge that has never been recorded or codified as data is what we call tacit knowledge.\n\nMuch of ASML's expertise came out of years of testing, failure, and debugging, and no single person holds the knowledge needed to reproduce the whole system. Some of it was never even written down. One ASML engineer said they caught an early sign of failure by feeling a slight bend in a cooling hose with their hand.\n\nOf course, a new breed of traitors may show up to sell their tacit knowledge to Anthropic. I mean the people now selling their chip design knowledge to Anthropic for hundreds of thousands of dollars to help it build AI native EDA. But they don't know everything either. Hire dozens of them and you still won't reproduce the kind of radical progress we saw in coding.\n\nMy counterargument is that if superintelligence exists, it may help the side that already holds the physical data even more. Superintelligence could actually widen the gap between ASML and anyone trying to copy it or work around it. After all, ASML can automatically detect downtime, abnormal behavior, and dropped connections across its entire EUV fleet.\n\nFor Leopold's outlook to come true, the whole world would have to work like software and coding, where everything happens in an instant from a single keyboard. Reality doesn't work that way. Physics is a bottleneck in its own right, and most of human society runs on systems that are not automated and depend on people.",
+      "url": "https://x.com/jukan05/status/2126679634452545752",
+      "kind": "post",
+      "engagement": {
+        "views": 27077,
+        "likes": 262,
+        "reposts": 25,
+        "replies": 35
       },
       "extractor_model": "claude-sonnet-4-6",
       "prompt_version": "extract-v2"
